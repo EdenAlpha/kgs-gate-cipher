@@ -1,0 +1,10 @@
+cmd: exec sudo docker exec redroid iptables -t nat -L OUTPUT -n -v 2>/dev/null | head -6; tail -3 /tmp/kgs/flows.log
+at: 09:55:47
+$ sudo docker exec redroid iptables -t nat -L OUTPUT -n -v 2>/dev/null | head -6; tail -3 /tmp/kgs/flows.log
+Chain OUTPUT (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+    0     0 DNAT       tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp dpt:443 to:172.17.0.1:8080
+ADDON-READY targets=konami.net,konami.jp
+rc=0
+gamepid: 
+flows: 0

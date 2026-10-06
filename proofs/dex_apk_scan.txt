@@ -1,0 +1,91 @@
+==============================================================================
+1. DEX STRING TABLES
+==============================================================================
+
+classes.dex   7800424 bytes
+    HIT  SecretKeySpec              x1
+         ...erSpec;..Ljavax/crypto/spec/PBEKeySpec;.!Ljavax/crypto/spec/SecretKeySpec;..Ljavax/inject/Inject;..Ljavax/inject/Named;..Ljavax/injec...
+    transform-ish: b'AES/CBC/NoPadding'
+
+classes2.dex   7752296 bytes
+    HIT  AES/CBC/PKCS5Padding       x1
+         ...ize must be 16 or 32 bytes..AES-CMAC Parameters (variant: ..AES/CBC/PKCS5Padding..AES/CTR/NOPADDING..AES/CTR/NoPadding..AES/ECB/NOPADDING..A...
+    HIT  AES/GCM/NoPadding          x1
+         ...ES/ECB/NOPADDING..AES/ECB/NoPadding..AES/GCM-SIV/NoPadding..AES/GCM/NoPadding..AES128_CTR_HMAC_SHA256..AES128_CTR_HMAC_SHA256_RAW..AES128...
+    HIT  AES256                     x10
+         ...28_GCM..AES128_GCM_RAW..AES128_GCM_SIV..AES128_GCM_SIV_RAW..AES256_CMAC..AES256_CMAC_RAW..AES256_CTR_HMAC_SHA256..AES256_CTR_H...
+    HIT  SecretKeySpec              x1
+         ...erSpec;..Ljavax/crypto/spec/PBEKeySpec;.!Ljavax/crypto/spec/SecretKeySpec;..Ljavax/inject/Qualifier;.&Ljavax/microedition/khronos/egl...
+    transform-ish: b'AES/CBC/PKCS5Padding'
+    transform-ish: b'AES/CTR/NoPadding'
+    transform-ish: b'AES-CBC-BC'
+    transform-ish: b'AES-EAX in FIPS-mode.'
+    transform-ish: b'AES/ECB/NOPADDING'
+    transform-ish: b'AES/ECB/NoPadding'
+    transform-ish: b'AES/GCM/NoPadding'
+    transform-ish: b'AES-CTR crypto mode.'
+    transform-ish: b'AES-CMAC in FIPS-mode.'
+    transform-ish: b'AES-CTR in FIPS-mode, as BoringCrypto module'
+    transform-ish: b'AES/GCM-SIV/NoPadding'
+    transform-ish: b'AES/CTR/NOPADDING'
+    transform-ish: b'AES-GCM in FIPS-mode, as BoringCrypto module'
+    transform-ish: b'AES-CTR-HMAC in FIPS-mode, as BoringCrypto m'
+    transform-ish: b'AES-CMAC Parameters (variant: '
+
+classes3.dex   5491840 bytes
+    HIT  AES/ECB/PKCS5Padding       x1
+         ...W_NOT_READY..ADS_ID_KIND_MAX_NUM..ADS_ID_SLOT_MAX_NUM..AES..AES/ECB/PKCS5Padding..AES/GCM/NoPadding...AFF2058B2FFE7508E9CED98D-7AAC0CA375584...
+    HIT  AES/GCM/NoPadding          x1
+         ...ND_MAX_NUM..ADS_ID_SLOT_MAX_NUM..AES..AES/ECB/PKCS5Padding..AES/GCM/NoPadding...AFF2058B2FFE7508E9CED98D-7AAC0CA3755848C5036459A1283F0DFA...
+    HIT  SecretKeySpec              x1
+         ...c;.#Ljavax/crypto/spec/IvParameterSpec;.!Ljavax/crypto/spec/SecretKeySpec;..Ljavax/inject/Inject;..Ljavax/inject/Named;..Ljavax/injec...
+    transform-ish: b'AES/GCM/NoPadding'
+    transform-ish: b'AES/ECB/PKCS5Padding'
+
+==============================================================================
+2. NATIVE LIBRARIES INSIDE EACH APK
+==============================================================================
+
+base.apk   (361 entries)
+    no .so; top-level: AndroidManifest.xml, DebugProbesKt.bin, META-INF, app-update.properties, asset-delivery.properties, assets, billing.properties, classes.dex, classes2.dex, classes3.dex, client_analytics.proto, core-common.properties
+
+split_config.arm64_v8a.apk   (10 entries)
+    160822968  lib/arm64-v8a/libUE4.so
+      865608  lib/arm64-v8a/libcrashlytics-common.so
+      222400  lib/arm64-v8a/libcrashlytics-handler.so
+        9152  lib/arm64-v8a/libcrashlytics-trampoline.so
+      232384  lib/arm64-v8a/libcrashlytics.so
+        7112  lib/arm64-v8a/libdatastore_shared_counter.so
+     7232952  lib/arm64-v8a/libgadsme.so
+      574952  lib/arm64-v8a/libplaycore.so
+
+split_gpdeku.apk   (4 entries)
+    no .so; top-level: AndroidManifest.xml, classes.dex, classes2.dex, stamp-cert-sha256
+
+split_pad_it_0.apk   (51 entries)
+    no .so; top-level: AndroidManifest.xml, META-INF, assets, stamp-cert-sha256
+
+split_pad_it_1.apk   (10 entries)
+    no .so; top-level: AndroidManifest.xml, META-INF, assets, stamp-cert-sha256
+
+split_gpdeku.config.arm64_v8a.apk   (3 entries)
+      376904  lib/arm64-v8a/libgpdeku.so
+
+split_config.en.apk   (3 entries)
+    no .so; top-level: AndroidManifest.xml, resources.arsc, stamp-cert-sha256
+
+split_config.xhdpi.apk   (57 entries)
+    no .so; top-level: AndroidManifest.xml, res, resources.arsc, stamp-cert-sha256
+
+==============================================================================
+3. ANY .so IN THE ARCHIVES' LIB PATHS (all apks)
+==============================================================================
+  split_config.arm64_v8a.apk           : lib/arm64-v8a/libUE4.so
+  split_config.arm64_v8a.apk           : lib/arm64-v8a/libcrashlytics-common.so
+  split_config.arm64_v8a.apk           : lib/arm64-v8a/libcrashlytics-handler.so
+  split_config.arm64_v8a.apk           : lib/arm64-v8a/libcrashlytics-trampoline.so
+  split_config.arm64_v8a.apk           : lib/arm64-v8a/libcrashlytics.so
+  split_config.arm64_v8a.apk           : lib/arm64-v8a/libdatastore_shared_counter.so
+  split_config.arm64_v8a.apk           : lib/arm64-v8a/libgadsme.so
+  split_config.arm64_v8a.apk           : lib/arm64-v8a/libplaycore.so
+  split_gpdeku.config.arm64_v8a.apk    : lib/arm64-v8a/libgpdeku.so

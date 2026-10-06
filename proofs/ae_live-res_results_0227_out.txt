@@ -1,0 +1,7 @@
+cmd: exec bash -c true; echo D2; adb -s 127.0.0.1:5555 shell input keyevent 20; sleep 3; adb -s 127.0.0.1:5555 shell input keyevent 20; sleep 6; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+at: 07:38:22
+$ bash -c true; echo D2; adb -s 127.0.0.1:5555 shell input keyevent 20; sleep 3; adb -s 127.0.0.1:5555 shell input keyevent 20; sleep 6; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+D2
+rc=0
+gamepid: 8404
+flows: 0

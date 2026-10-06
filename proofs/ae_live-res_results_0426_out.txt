@@ -1,0 +1,8 @@
+cmd: exec bash -c true; echo H1; adb -s 127.0.0.1:5555 shell input swipe 1207 658 1207 658 250; sleep 7; adb -s 127.0.0.1:5555 shell input swipe 975 690 975 690 250; sleep 13; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo flows=$(grep -c "^### " /tmp/kgs/flows.log)
+at: 08:22:16
+$ bash -c true; echo H1; adb -s 127.0.0.1:5555 shell input swipe 1207 658 1207 658 250; sleep 7; adb -s 127.0.0.1:5555 shell input swipe 975 690 975 690 250; sleep 13; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo flows=$(grep -c "^### " /tmp/kgs/flows.log)
+H1
+flows=46
+rc=0
+gamepid: 18731
+flows: 46

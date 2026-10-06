@@ -1,0 +1,21 @@
+cmd: exec bash -c true; echo VQ; echo "== conscrypt apex store =="; adb -s 127.0.0.1:5555 shell su 0 ls /apex/com.android.conscrypt/cacerts 2>&1 | wc -l; adb -s 127.0.0.1:5555 shell su 0 ls /apex/com.android.conscrypt/cacerts/928a8368.0 2>&1; echo "== system store count =="; adb -s 127.0.0.1:5555 shell su 0 ls /system/etc/security/cacerts 2>&1 | wc -l; echo "== is system store a symlink? =="; adb -s 127.0.0.1:5555 shell su 0 ls -ld /system/etc/security/cacerts 2>&1; echo "== ca basic constraints =="; openssl x509 -in /tmp/kgs/ca/ca.crt -noout -text 2>/dev/null | grep -A2 "Basic Constraints"; echo "== ca validity =="; openssl x509 -in /tmp/kgs/ca/ca.crt -noout -dates 2>&1
+at: 00:15:31
+$ bash -c true; echo VQ; echo "== conscrypt apex store =="; adb -s 127.0.0.1:5555 shell su 0 ls /apex/com.android.conscrypt/cacerts 2>&1 | wc -l; adb -s 127.0.0.1:5555 shell su 0 ls /apex/com.android.conscrypt/cacerts/928a8368.0 2>&1; echo "== system store count =="; adb -s 127.0.0.1:5555 shell su 0 ls /system/etc/security/cacerts 2>&1 | wc -l; echo "== is system store a symlink? =="; adb -s 127.0.0.1:5555 shell su 0 ls -ld /system/etc/security/cacerts 2>&1; echo "== ca basic constraints =="; openssl x509 -in /tmp/kgs/ca/ca.crt -noout -text 2>/dev/null | grep -A2 "Basic Constraints"; echo "== ca validity =="; openssl x509 -in /tmp/kgs/ca/ca.crt -noout -dates 2>&1
+VQ
+== conscrypt apex store ==
+134
+ls: /apex/com.android.conscrypt/cacerts/928a8368.0: No such file or directory
+== system store count ==
+135
+== is system store a symlink? ==
+drwxr-xr-x 1 root root 4096 2026-09-30 19:21 /system/etc/security/cacerts
+== ca basic constraints ==
+            X509v3 Basic Constraints: critical
+                CA:TRUE
+            X509v3 Key Usage: critical
+== ca validity ==
+notBefore=Sep 30 23:21:53 2026 GMT
+notAfter=Sep 27 23:21:53 2036 GMT
+rc=0
+gamepid: 6484
+flows: 0

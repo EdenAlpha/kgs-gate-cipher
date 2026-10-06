@@ -1,0 +1,1 @@
+OTHER why=no_structure hueY=56.01896 yellowPx=9788.0 need=460.8 strict=0.008496528 1600x720 812ms

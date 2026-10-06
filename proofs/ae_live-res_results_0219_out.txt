@@ -1,0 +1,8 @@
+cmd: exec bash -c true; echo MARK9; sudo docker cp redroid:/data/local/tmp/m8.png /tmp/kgs/m8.png; ls -la /tmp/kgs/m8.png
+at: 19:57:02
+$ bash -c true; echo MARK9; sudo docker cp redroid:/data/local/tmp/m8.png /tmp/kgs/m8.png; ls -la /tmp/kgs/m8.png
+MARK9
+-rw-r--r-- 1 root root 377489 Sep 30 19:56 /tmp/kgs/m8.png
+rc=0
+gamepid: 
+flows: 0

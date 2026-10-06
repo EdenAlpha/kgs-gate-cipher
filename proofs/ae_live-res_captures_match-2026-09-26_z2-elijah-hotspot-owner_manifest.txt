@@ -1,0 +1,7 @@
+PeerLink match export
+Created: 2026-09-26 02:58:20
+Contents:
+- match_log.txt : full session log
+- udp_trace.csv : UDP timing trace
+- passthrough_capture.csv : full-byte internet-side (non-game) traffic with event markers
+- score_shots/  : 192 score capture shot(s)

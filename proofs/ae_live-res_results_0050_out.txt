@@ -1,0 +1,8 @@
+cmd: uidump 
+at: 15:10:11
+UIDUMP-MAC: dump is EMPTY
+Error response from daemon: Could not find the file /data/local/tmp/ui.xml in container redroid
+UIDUMP: pull failed
+uidump failed (see out)
+gamepid: 
+flows: 0

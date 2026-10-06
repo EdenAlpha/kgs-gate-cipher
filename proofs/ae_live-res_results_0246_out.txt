@@ -1,0 +1,11 @@
+cmd: exec bash -c true; echo D4; sleep 240; echo "== cpu after wait =="; adb -s 127.0.0.1:5555 shell top -b -n 1 -m 3 2>/dev/null | grep -i pesam; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== flows =="; grep -c "^### " /tmp/kgs/flows.log
+at: 07:41:14
+$ bash -c true; echo D4; sleep 240; echo "== cpu after wait =="; adb -s 127.0.0.1:5555 shell top -b -n 1 -m 3 2>/dev/null | grep -i pesam; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== flows =="; grep -c "^### " /tmp/kgs/flows.log
+D4
+== cpu after wait ==
+   8404 u0_a104      10 -10  19G 1.1G 282M S  300   7.2  47:56.64 jp.konami.pesam
+== flows ==
+0
+rc=1
+gamepid: 8404
+flows: 0

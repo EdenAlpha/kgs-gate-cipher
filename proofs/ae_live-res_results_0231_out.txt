@@ -1,0 +1,43 @@
+cmd: exec bash -c true; echo VM; echo "== flows.log =="; cat /tmp/kgs/flows.log 2>/dev/null | tail -12; echo "== mitm.log tail =="; tail -12 /tmp/kgs/mitm.log 2>/dev/null; echo "== CA in system store =="; adb -s 127.0.0.1:5555 shell su 0 ls /system/etc/security/cacerts 2>/dev/null | head -20; echo "== user store =="; adb -s 127.0.0.1:5555 shell su 0 ls /data/misc/user/0/cacerts-added 2>/dev/null
+at: 00:11:32
+$ bash -c true; echo VM; echo "== flows.log =="; cat /tmp/kgs/flows.log 2>/dev/null | tail -12; echo "== mitm.log tail =="; tail -12 /tmp/kgs/mitm.log 2>/dev/null; echo "== CA in system store =="; adb -s 127.0.0.1:5555 shell su 0 ls /system/etc/security/cacerts 2>/dev/null | head -20; echo "== user store =="; adb -s 127.0.0.1:5555 shell su 0 ls /data/misc/user/0/cacerts-added 2>/dev/null
+VM
+== flows.log ==
+ADDON-READY targets=konami.net,konami.jp
+== mitm.log tail ==
+[23:24:46.075][172.17.0.2:40510] client disconnect
+[23:24:46.075][172.17.0.2:40548] client disconnect
+[23:24:46.075][172.17.0.2:40532] client disconnect
+[23:24:46.075][172.17.0.2:40510] server disconnect 172.217.112.4:443
+[23:24:46.076][172.17.0.2:40548] server disconnect 172.217.112.4:443
+[23:24:46.076][172.17.0.2:40532] server disconnect 172.217.112.4:443
+[23:24:46.076][172.17.0.2:38046] server connect 172.217.119.4:443
+[23:24:46.077][172.17.0.2:38058] server connect 172.217.119.4:443
+[23:24:46.079][172.17.0.2:38062] server connect 172.217.119.4:443
+[23:24:46.080][172.17.0.2:38064] server connect 172.217.119.4:443
+[23:24:46.091][172.17.0.2:38046] Client TLS handshake failed. The client does not trust the proxy's certificate for geller-pa.googleapis.com (OpenSSL Error([('SSL routines', '', 'tls alert certificate unknown')]))
+[23:24:46.093][172.17.0.2:38058] Client TLS handshake failed. The client does not trust the proxy's certificate for geller-pa.googleapis.com (OpenSSL Error([('SSL routines', '', 'tls alert certificate unknown')]))== CA in system store ==
+01419da9.0
+04f60c28.0
+0d69c7e1.0
+10531352.0
+1ae85e5e.0
+1b0f7e5c.0
+1df5a75f.0
+1e1eab7c.0
+1e8e7201.0
+1ec40989.0
+1f58a078.0
+219d9499.0
+23f4c490.0
+252252d2.0
+2add47b6.0
+2d9dafe4.0
+302904dd.0
+304d27c3.0
+31188b5e.0
+33ee480d.0
+== user store ==
+rc=1
+gamepid: 6484
+flows: 0

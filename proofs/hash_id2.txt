@@ -1,0 +1,178 @@
+==============================================================================
+FINGERPRINT SCAN: 0x7b39a28  (the call that writes the MAC)
+ELF VA 0x7b39a28 .. 0x7b39e28   (1024 bytes)
+==============================================================================
+  (no known hash constants present in this range)
+
+==============================================================================
+0x7b39a28  -- the MAC / 'HMAC' call
+ELF VA 0x7b39a28   file 0x7b35a28
+==============================================================================
+  0x07b39a28  sub      sp, sp, #0x1f0
+  0x07b39a2c  stp      x29, x30, [sp, #0x1a0]
+  0x07b39a30  stp      x28, x25, [sp, #0x1b0]
+  0x07b39a34  stp      x24, x23, [sp, #0x1c0]
+  0x07b39a38  stp      x22, x21, [sp, #0x1d0]
+  0x07b39a3c  stp      x20, x19, [sp, #0x1e0]
+  0x07b39a40  add      x29, sp, #0x1a0
+  0x07b39a44  mrs      x25, tpidr_el0
+  0x07b39a48  mov      x19, x5
+  0x07b39a4c  mov      x23, x3
+  0x07b39a50  mov      w21, w2
+  0x07b39a54  mov      x22, x1
+  0x07b39a58  ldr      x8, [x25, #0x28]
+  0x07b39a5c  mov      x20, x0
+  0x07b39a60  cmp      w4, #0x41
+  0x07b39a64  stur     x8, [x29, #-8]
+  0x07b39a68  b.lt     #0x7b39a90
+  0x07b39a6c  ldr      x8, [x20]
+  0x07b39a70  mov      x3, sp
+  0x07b39a74  mov      x0, x20
+  0x07b39a78  mov      x1, x23
+  0x07b39a7c  mov      w2, w4
+  0x07b39a80  ldr      x8, [x8, #0x28]
+  0x07b39a84  blr      x8
+  0x07b39a88  ldr      w4, [x20, #8]
+  0x07b39a8c  mov      x23, sp
+  0x07b39a90  movi     v0.2d, #0000000000000000
+  0x07b39a94  sxtw     x24, w4
+  0x07b39a98  sub      x0, x29, #0x50
+  0x07b39a9c  mov      x1, x23
+  0x07b39aa0  mov      x2, x24
+  0x07b39aa4  mov      w3, #0x41
+  0x07b39aa8  sturb    wzr, [x29, #-0x10]
+  0x07b39aac  stp      q0, q0, [x29, #-0xa0]
+  0x07b39ab0  stp      q0, q0, [x29, #-0x80]
+  0x07b39ab4  stp      q0, q0, [x29, #-0x50]
+  0x07b39ab8  stp      q0, q0, [x29, #-0x30]
+  0x07b39abc  sturb    wzr, [x29, #-0x60]
+  0x07b39ac0  bl       #0x8b35400   <- PLT
+  0x07b39ac4  sub      x0, x29, #0xa0
+  0x07b39ac8  mov      x1, x23
+  0x07b39acc  mov      x2, x24
+  0x07b39ad0  mov      w3, #0x41
+  0x07b39ad4  bl       #0x8b35400   <- PLT
+  0x07b39ad8  ldp      q1, q3, [x29, #-0x50]
+  0x07b39adc  movi     v0.16b, #0x36
+  0x07b39ae0  mov      x0, x20
+  0x07b39ae4  movi     v2.16b, #0x5c
+  0x07b39ae8  eor      v1.16b, v1.16b, v0.16b
+  0x07b39aec  ldp      q4, q5, [x29, #-0xa0]
+  0x07b39af0  eor      v3.16b, v3.16b, v0.16b
+  0x07b39af4  stp      q1, q3, [x29, #-0x50]
+  0x07b39af8  eor      v4.16b, v4.16b, v2.16b
+  0x07b39afc  ldp      q1, q3, [x29, #-0x30]
+  0x07b39b00  eor      v5.16b, v5.16b, v2.16b
+  0x07b39b04  stp      q4, q5, [x29, #-0xa0]
+  0x07b39b08  eor      v1.16b, v1.16b, v0.16b
+  0x07b39b0c  eor      v0.16b, v3.16b, v0.16b
+  0x07b39b10  ldr      x8, [x20]
+  0x07b39b14  ldp      q3, q4, [x29, #-0x80]
+  0x07b39b18  stp      q1, q0, [x29, #-0x30]
+  0x07b39b1c  eor      v0.16b, v3.16b, v2.16b
+  0x07b39b20  eor      v1.16b, v4.16b, v2.16b
+  0x07b39b24  stp      q0, q1, [x29, #-0x80]
+  0x07b39b28  ldr      x8, [x8]
+  0x07b39b2c  blr      x8
+  0x07b39b30  ldr      x8, [x20]
+  0x07b39b34  sub      x1, x29, #0x50
+  0x07b39b38  mov      x0, x20
+  0x07b39b3c  mov      w2, #0x40
+  0x07b39b40  ldr      x8, [x8, #8]
+  0x07b39b44  blr      x8
+  0x07b39b48  ldr      x8, [x20]
+  0x07b39b4c  mov      x0, x20
+  0x07b39b50  mov      x1, x22
+  0x07b39b54  mov      w2, w21
+  0x07b39b58  ldr      x8, [x8, #8]
+  0x07b39b5c  blr      x8
+  0x07b39b60  ldr      x8, [x20]
+  0x07b39b64  mov      x0, x20
+  0x07b39b68  mov      x1, x19
+  0x07b39b6c  ldr      x8, [x8, #0x10]
+  0x07b39b70  blr      x8
+  0x07b39b74  ldr      x8, [x20]
+  0x07b39b78  mov      x0, x20
+  0x07b39b7c  ldr      x8, [x8]
+  0x07b39b80  blr      x8
+  0x07b39b84  ldr      x8, [x20]
+  0x07b39b88  sub      x1, x29, #0xa0
+  0x07b39b8c  mov      x0, x20
+  ... (90+ instructions)
+
+==============================================================================
+FINGERPRINT SCAN: 0x74b8d24 / 0x74b8d5c  (base64 helpers?)
+ELF VA 0x74b8d00 .. 0x74b9000   (768 bytes)
+==============================================================================
+  (no known hash constants present in this range)
+
+==============================================================================
+0x74b8d24  -- sized as malloc(len+1) input
+ELF VA 0x74b8d24   file 0x74b4d24
+==============================================================================
+  0x074b8d24  mov      x8, #-0x5555555555555556
+  0x074b8d28  add      x9, x0, #2
+  0x074b8d2c  movk     x8, #0xaaab
+  0x074b8d30  umulh    x8, x9, x8
+  0x074b8d34  mov      x9, #0x435f
+  0x074b8d38  movk     x9, #0xd79, lsl #16
+  0x074b8d3c  lsl      x8, x8, #1
+  0x074b8d40  movk     x9, #0x35e5, lsl #32
+  0x074b8d44  and      x8, x8, #0xfffffffffffffffc
+  0x074b8d48  movk     x9, #0xd794, lsl #48
+  0x074b8d4c  umulh    x9, x8, x9
+  0x074b8d50  lsr      x9, x9, #6
+  0x074b8d54  add      x0, x8, x9, lsl #1
+  0x074b8d58  ret      
+
+==============================================================================
+0x74b8d5c  -- called with w1=40, writes into that buffer
+ELF VA 0x74b8d5c   file 0x74b4d5c
+==============================================================================
+  0x074b8d5c  stp      x20, x19, [sp, #-0x10]!
+  0x074b8d60  cbz      x1, #0x74b8f00
+  0x074b8d64  mov      w13, #0x86bd
+  0x074b8d68  mov      x9, xzr
+  0x074b8d6c  mov      x10, xzr
+  0x074b8d70  mov      w8, wzr
+  0x074b8d74  add      x11, x0, #2
+  0x074b8d78  mov      w12, #4
+  0x074b8d7c  movk     w13, #0x1af2, lsl #16
+  0x074b8d80  mov      w14, #0x4c
+  0x074b8d84  mov      w15, #0x3d
+  0x074b8d88  mov      w16, #0xa0d
+  0x074b8d8c  mov      w17, #0x3d3d
+  0x074b8d90  mov      w0, #4
+  0x074b8d94  mov      x5, x1
+  0x074b8d98  adrp     x6, #0x995c000
+  0x074b8d9c  add      x6, x6, #0x370
+  0x074b8da0  b        #0x74b8de0
+  0x074b8da4  mov      x2, x7
+  0x074b8da8  sub      x9, x9, #4
+  0x074b8dac  sub      x5, x5, #3
+  0x074b8db0  add      w0, w0, #4
+  0x074b8db4  cmp      x10, x1
+  0x074b8db8  b.lo     #0x74b8de0
+
+==============================================================================
+0x31b542c  -- called twice on the stringbuf (assumed str())
+ELF VA 0x31b542c   file 0x31b142c
+==============================================================================
+  0x031b542c  stp      x29, x30, [sp, #-0x50]!
+  0x031b5430  str      x25, [sp, #0x10]
+  0x031b5434  stp      x24, x23, [sp, #0x20]
+  0x031b5438  stp      x22, x21, [sp, #0x30]
+  0x031b543c  stp      x20, x19, [sp, #0x40]
+  0x031b5440  mov      x29, sp
+  0x031b5444  ldr      w9, [x0, #0x60]
+  0x031b5448  mov      x19, x8
+  0x031b544c  tbnz     w9, #4, #0x31b5474
+  0x031b5450  tbnz     w9, #3, #0x31b54bc
+  0x031b5454  stp      xzr, xzr, [x19]
+  0x031b5458  str      xzr, [x19, #0x10]
+  0x031b545c  ldp      x20, x19, [sp, #0x40]
+  0x031b5460  ldp      x22, x21, [sp, #0x30]
+  0x031b5464  ldp      x24, x23, [sp, #0x20]
+  0x031b5468  ldr      x25, [sp, #0x10]
+  0x031b546c  ldp      x29, x30, [sp], #0x50
+  0x031b5470  ret      

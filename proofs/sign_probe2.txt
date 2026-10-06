@@ -1,0 +1,21 @@
+body1 = CMD_GET_SERVER_ENV (176 bytes)   body2 = CMD_GET_COUNTRY_LIST (144 bytes)
+sign1 len=56 head='ejLwFDyq'   sign2 len=56 head='IqjRr0yn'   random len=56
+
+==================================================================
+PROBES
+==================================================================
+  control(sign1)   -> 200 OK                      2400 bytes  0.29s
+  wrong-body       -> 500 Internal Server Error      0 bytes  0.23s
+  random           -> 500 Internal Server Error      0 bytes  0.23s
+  pair2-correct    -> 200 OK                      2352 bytes  0.24s
+
+==================================================================
+VERDICT
+==================================================================
+  control  = 200 (2400)
+  wrong-body = 500 (0)
+  random     = 500 (0)
+  pair2      = 200 (2352)
+
+  VERDICT: sign IS verified against the body. Wrong sign (real or
+           random, both 40 valid bytes) -> 500, correct -> 200.

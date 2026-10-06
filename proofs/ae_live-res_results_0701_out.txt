@@ -1,0 +1,9 @@
+cmd: exec bash -c true; echo T4; rm -f /tmp/kgs/tar.done /tmp/kgs/pesam-data.tar; nohup setsid bash -c "adb -s 127.0.0.1:5555 exec-out su 0 tar -C /data/data -cf - jp.konami.pesam > /tmp/kgs/pesam-data.tar 2>/tmp/kgs/tar.err; echo done > /tmp/kgs/tar.done" >/dev/null 2>&1 & sleep 25; ls -l /tmp/kgs/pesam-data.tar 2>&1; ls /tmp/kgs/tar.done 2>&1
+at: 01:44:13
+$ bash -c true; echo T4; rm -f /tmp/kgs/tar.done /tmp/kgs/pesam-data.tar; nohup setsid bash -c "adb -s 127.0.0.1:5555 exec-out su 0 tar -C /data/data -cf - jp.konami.pesam > /tmp/kgs/pesam-data.tar 2>/tmp/kgs/tar.err; echo done > /tmp/kgs/tar.done" >/dev/null 2>&1 & sleep 25; ls -l /tmp/kgs/pesam-data.tar 2>&1; ls /tmp/kgs/tar.done 2>&1
+T4
+-rw-r--r-- 1 runner runner 2134203392 Oct  1 01:44 /tmp/kgs/pesam-data.tar
+/tmp/kgs/tar.done
+rc=0
+gamepid: 
+flows: 22

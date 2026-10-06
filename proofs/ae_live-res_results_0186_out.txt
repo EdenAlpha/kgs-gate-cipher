@@ -1,0 +1,8 @@
+cmd: exec bash -c true; echo SS; adb -s 127.0.0.1:5555 shell am start -a android.intent.action.VIEW -d "https://play.google.com/store/account" 2>&1 | tail -1; sleep 13; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+at: 22:52:43
+$ bash -c true; echo SS; adb -s 127.0.0.1:5555 shell am start -a android.intent.action.VIEW -d "https://play.google.com/store/account" 2>&1 | tail -1; sleep 13; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+SS
+Warning: Activity not started, intent has been delivered to currently running top-most instance.
+rc=0
+gamepid: 
+flows: 0

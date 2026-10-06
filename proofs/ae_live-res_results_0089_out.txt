@@ -1,0 +1,10 @@
+cmd: exec sudo docker exec redroid sh -c "am start -W -n com.aurora.store/.ComposeActivity 2>&1 | head -3; sleep 6; dumpsys window | grep mCurrentFocus"
+at: 15:15:42
+$ sudo docker exec redroid sh -c "am start -W -n com.aurora.store/.ComposeActivity 2>&1 | head -3; sleep 6; dumpsys window | grep mCurrentFocus"
+Starting: Intent { cmp=com.aurora.store/.ComposeActivity }
+Status: ok
+LaunchState: COLD
+  mCurrentFocus=Window{f94809e u0 com.aurora.store/com.aurora.store.ComposeActivity}
+rc=0
+gamepid: 
+flows: 0

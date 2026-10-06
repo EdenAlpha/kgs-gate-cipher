@@ -1,0 +1,9 @@
+cmd: exec bash -c true; echo RECHECK; adb -s 127.0.0.1:5555 shell am force-stop com.android.vending; adb -s 127.0.0.1:5555 shell pm clear com.android.vending; sleep 6; adb -s 127.0.0.1:5555 shell am start -a android.intent.action.VIEW -d "market://details?id=jp.konami.pesam" 2>&1 | tail -1; sleep 25; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+at: 22:04:19
+$ bash -c true; echo RECHECK; adb -s 127.0.0.1:5555 shell am force-stop com.android.vending; adb -s 127.0.0.1:5555 shell pm clear com.android.vending; sleep 6; adb -s 127.0.0.1:5555 shell am start -a android.intent.action.VIEW -d "market://details?id=jp.konami.pesam" 2>&1 | tail -1; sleep 25; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+RECHECK
+Success
+Starting: Intent { act=android.intent.action.VIEW dat=market://details/... }
+rc=0
+gamepid: 
+flows: 0

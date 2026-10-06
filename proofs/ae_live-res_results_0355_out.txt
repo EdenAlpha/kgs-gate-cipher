@@ -1,0 +1,11 @@
+cmd: exec bash -c true; echo E6; sleep 22; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/step1.png; adb -s 127.0.0.1:5555 shell input swipe 1206 662 1206 662 250; sleep 14; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/step2.png; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo flows=$(grep -c "^### " /tmp/kgs/flows.log); grep "^### " /tmp/kgs/flows.log | tail -3
+at: 08:07:19
+$ bash -c true; echo E6; sleep 22; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/step1.png; adb -s 127.0.0.1:5555 shell input swipe 1206 662 1206 662 250; sleep 14; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/step2.png; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo flows=$(grep -c "^### " /tmp/kgs/flows.log); grep "^### " /tmp/kgs/flows.log | tail -3
+E6
+flows=18
+### RESP POST /pes22/gate/gate_CMD_GET_PRODUCT_LIST.php -> 200
+### REQ POST /pes22/gate/gate_CMD_SET_TRACKRECORD.php
+### RESP POST /pes22/gate/gate_CMD_SET_TRACKRECORD.php -> 200
+rc=0
+gamepid: 8404
+flows: 18

@@ -1,0 +1,10 @@
+cmd: exec sudo docker exec redroid sh -c "which uiautomator; uiautomator dump /sdcard/w.xml 2>&1; echo ---; ls -la /sdcard/w.xml 2>&1; uiautomator dump 2>&1 | head -5; ls -la /sdcard/window_dump.xml 2>&1"
+at: 15:22:55
+$ sudo docker exec redroid sh -c "which uiautomator; uiautomator dump /sdcard/w.xml 2>&1; echo ---; ls -la /sdcard/w.xml 2>&1; uiautomator dump 2>&1 | head -5; ls -la /sdcard/window_dump.xml 2>&1"
+/bin/uiautomator
+---
+ls: /sdcard/w.xml: No such file or directory
+ls: /sdcard/window_dump.xml: No such file or directory
+rc=1
+gamepid: 
+flows: 0

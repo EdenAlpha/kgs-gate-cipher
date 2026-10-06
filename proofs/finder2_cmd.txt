@@ -1,0 +1,1 @@
+exec pip install -q --break-system-packages pycryptodome msgpack && python3 /tmp/kgs/find_key.py --dir /tmp/kgs/sweep --flows /tmp/kgs/flows.log ; echo FINDER-RC:True; echo ---END---

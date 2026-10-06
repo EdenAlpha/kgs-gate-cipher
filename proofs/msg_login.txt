@@ -1,0 +1,26 @@
+captures: the gate login exchange, recovered from the lane a artifact
+
+The live loop's own 150 minute timeout killed the memory scan mid-flight at
+09:27 and took the region dumps with it, since they sit outside the paths step
+06 collects. That is fixed for future runs by writing the dumper report under
+/tmp/kgs. But the run artifact did carry flows.log, and it contains the thing
+the whole session has been after:
+
+    /pes22/gate/gate_CMD_LOGIN.php
+
+608 byte request, matching the size measured on 2026-09-30 exactly, and it
+starts 02b257aa, so no gzip magic and the body is the AES ciphertext rather than
+a compressed plaintext.
+
+Full tally for the session: 37 request/response pairs across 19 distinct
+routes, every one 200, single host pes22-game.cs.konami.net. Three routes are
+new, and one of them is the login:
+
+    gate_CMD_LOGIN.php
+    gate_CMD_GET_USEABLE_TEAM_LIST.php
+    gate_CMD_SET_PLAYDATA_MATCH.php
+
+Saved as gate-login-exchange.txt, gate blocks only, with bodies. Safe to commit
+because no browser login ran on this lane: every body here is ciphertext, so
+there is no credential in it. The rule remains that the raw log is withheld as
+soon as the browser login happens, because that leg is plaintext.

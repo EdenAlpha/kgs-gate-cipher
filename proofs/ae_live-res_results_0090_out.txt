@@ -1,0 +1,8 @@
+cmd: exec bash -c true; echo B1; sleep 200; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== data MB =="; adb -s 127.0.0.1:5555 shell du -sm /data 2>/dev/null | tail -1
+at: 07:09:38
+$ bash -c true; echo B1; sleep 200; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== data MB =="; adb -s 127.0.0.1:5555 shell du -sm /data 2>/dev/null | tail -1
+B1
+== data MB ==
+rc=1
+gamepid: 
+flows: 0

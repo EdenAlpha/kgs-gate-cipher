@@ -1,0 +1,12 @@
+cmd: exec bash -c true; echo WA; adb -s 127.0.0.1:5555 shell input swipe 634 267 634 267 150; sleep 4; adb -s 127.0.0.1:5555 shell input swipe 639 638 639 638 180; sleep 20; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== konami in mitm =="; grep -i konami /tmp/kgs/mitm.log 2>/dev/null | tail -12
+at: 00:25:53
+$ bash -c true; echo WA; adb -s 127.0.0.1:5555 shell input swipe 634 267 634 267 150; sleep 4; adb -s 127.0.0.1:5555 shell input swipe 639 638 639 638 180; sleep 20; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== konami in mitm =="; grep -i konami /tmp/kgs/mitm.log 2>/dev/null | tail -12
+WA
+== konami in mitm ==
+[00:10:15.197][172.17.0.2:59768] Client TLS handshake failed. The client does not trust the proxy's certificate for legal.konami.com (OpenSSL Error([('SSL routines', '', 'tls alert certificate unknown')]))
+[00:10:53.321][172.17.0.2:58132] Client TLS handshake failed. The client does not trust the proxy's certificate for pes22-game.cs.konami.net (OpenSSL Error([('SSL routines', '', 'tls alert certificate unknown')]))
+[00:13:30.605][172.17.0.2:38770] Client TLS handshake failed. The client does not trust the proxy's certificate for pes22-game.cs.konami.net (OpenSSL Error([('SSL routines', '', 'tls alert certificate unknown')]))
+172.17.0.2:60072: GET https://104.81.173.151/_common/img/konami_logo_normal.p… HTTP/2.0
+rc=0
+gamepid: 9664
+flows: 5

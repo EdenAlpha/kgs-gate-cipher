@@ -1,0 +1,11 @@
+cmd: exec bash -c true; echo G3; adb -s 127.0.0.1:5555 shell input tap 640 477; sleep 4; sudo modprobe iptable_nat || true; HOSTGW=$(ip -4 addr show docker0 | grep -oE "inet [0-9.]+" | head -1 | cut -d" " -f2); while sudo iptables-legacy -t nat -D PREROUTING -i docker0 -p tcp --dport 443 -j DNAT --to-destination "$HOSTGW:8080" 2>/dev/null; do echo "deleted a rule"; done; echo "== dnat now =="; sudo iptables-legacy -t nat -L PREROUTING -n | head -5; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+at: 06:04:20
+$ bash -c true; echo G3; adb -s 127.0.0.1:5555 shell input tap 640 477; sleep 4; sudo modprobe iptable_nat || true; HOSTGW=$(ip -4 addr show docker0 | grep -oE "inet [0-9.]+" | head -1 | cut -d" " -f2); while sudo iptables-legacy -t nat -D PREROUTING -i docker0 -p tcp --dport 443 -j DNAT --to-destination "$HOSTGW:8080" 2>/dev/null; do echo "deleted a rule"; done; echo "== dnat now =="; sudo iptables-legacy -t nat -L PREROUTING -n | head -5; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+G3
+deleted a rule
+== dnat now ==
+Chain PREROUTING (policy ACCEPT)
+target     prot opt source               destination         
+rc=0
+gamepid: 3058
+flows: 0

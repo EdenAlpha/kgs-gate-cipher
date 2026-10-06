@@ -1,0 +1,4 @@
+cmd: amstart jp.konami.pesam/com.epicgames.ue4.SplashActivity 2
+at: 19:52:21
+gamepid: 
+flows: 0

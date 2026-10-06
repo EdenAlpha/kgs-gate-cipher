@@ -1,0 +1,7 @@
+# puppet path deps (python3.10+; adb binary on PATH; tesseract-ocr installed)
+opencv-python
+numpy
+pillow
+pytesseract
+PyYAML
+frida-tools

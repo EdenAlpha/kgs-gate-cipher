@@ -1,0 +1,82 @@
+﻿total messages: 6400
+
+===== [4] user =====
+https://github.com/EdenAlpha/peerlink-session-bundle ive gone quite farbin this project the remaing thing is the authentication for peerlink my third party app that connects two efootball plsyers together via wifi becsuse efootball lacks it the ai was just messing up This is the third and only start with you. This is the third and only start. Why is this thing looking so difficult? Why are you making this thing look so difficult? I'm just tired. I'm just tired since morning just to build the network stack. Ha. Just to build the network stack. It is there in the game. It's there in the application you downloaded. It is there. It is there. It is there. The application in your hand, in your system, in your sandbox can connect to the internet. Just detach that part. Detach it. Detach it and let it connect by itself. What is all this? Just detach it. It will connect to the internet. It will log in by itself. See, the login does not require credentials. It does not require Gmail. You just enter the game and it will ask you simple questions: your country. When we are using the game normally, when we download the game for the first time normally, it will ask you your country. You select your country, you know. You select a username. That's all. Then you enter inside. It will take you. It will show you, give you a team, all those kind of things, all those kind of shenanigans, all those kind of things. You understand? That thing is what you will use. You will start, you know, building 
+
+===== [168] user =====
+Leave peerlink for now or just quicky go through it 5 mins quickly the best feature for peerlink is what im building i want people to play with peerlink so the physics sim of the game that runs on the full apk has been stripped so phones playing the full game will not be competing for ram and gpu with peerlink that doesn't need visuals to play idk if you get my point so its headless
+
+===== [201] user =====
+Check the work thst has been done in that repo especially the headless part its gone far i guess
+
+===== [332] user =====
+So now the next issue here, the next issue here is this: for somebody to play with PeerLink, you know, the issue here is that the in-game AI, the AI that plays eFootball, is not that good. So people are not really enjoying it because of a lot of problems, and, you know, I don't want to really get into now. So the major thing here is that a lot of people will enjoy that there is another thing, another AI they can play with that feels so real. You understand? No, sometimes not everybody has the opportunity to be with somebody who can play with them, but somebody that something that can be there to play with them, like as if a human being is playing, that can teach them different styles of play, that they can set different styles of play to learn different styles of play. You know, a lot of things can be done with it. But the first thing here is that we need to, both of them needs to connect. PeerLink needs to connect with the user. So the user needs to connect to PeerLink. But the only way they can connect is through the internet, through the server. So the user's game only understands connection to the server. So PeerLink needs to adapt to. So in order PeerLink needs to adapt. PeerLink needs to, like PeerLink is different. PeerLink is just using the network of the game, network stack of the game. So the game itself has its own network stack. So what PeerLink does is that PeerLink kind of, you know, as we took, as we ran something headless, as we ran the whole engine headless, 
+
+===== [401] user =====
+We go through konami because thats what the user game only understands
+
+===== [674] user =====
+I dont understand
+
+===== [685] user =====
+Login and let me know what you see
+
+===== [1530] user =====
+I dont understand
+
+===== [1541] user =====
+I think if you are doing this thing right, you're not supposed to be encountering this issue. If you are encountering this issue, if you are doing it right and you are encountering this issue, it means that nobody is capable of logging in, even with the real application. So I think you are not running it headless, completely. Run it headless. I don't understand. Maybe there's something I'm not understanding. I don't understand. Like, why should this be a problem? We are not reverse engineering the whole login process or the authentication process. I don't understand. The game itself does not request you Gmail or these things to log in. If you are just entering for the first time, you just enter, you select your country, you select a username, and that's all. You get in. They give you players. There are some compulsory matches that will come up your way and those kind of things, where you must play and those kind of things. That's, you know, that's for people that are using the full application. And if you are using the full application, there's no way you have to play all those matches. But I think you wouldn't need to do all those ones, especially that you are running almost everything headless. I don't know if you understand my point.
+
+===== [1712] user =====
+Got it?
+
+===== [2071] user =====
+Continue
+
+===== [2548] user =====
+Continue
+
+===== [3228] user =====
+I dont understand where are we now
+
+===== [3239] user =====
+Keep working untill everything is working End to End
+
+===== [3777] user =====
+Any update
+
+===== [3797] user =====
+python call_sender.py
+
+send] booting ...
+[send] subreq=0xa0000001000 calling 0x7d03b68 ...
+  -> err=None x0=0xe000001
+
+
+curl URLs: 0
+
+
+log (last 10):
+    MEM FAULT access=19 addr=0x722e1f0a35092118 size=8 pc=0x10002f92568
+    unhandled import: pthread_rwlock_init (lr=0x10007fcb76c) -> returning 0
+    unhandled import: getenv (lr=0x1000688f050) -> returning 0
+    watcher curl error: name 'UC_ARM64_REG_X2' is not defined
+    watcher curl error: name 'UC_ARM64_REG_X2' is not defined
+    watcher curl error: name 'UC_ARM64_REG_X2' is not defined
+    unhandled import: bind (lr=0x10006886ce0) -> returning 0
+    unhandled import: getsockname (lr=0x10006886cf8) -> returning 0
+    unhandled import: listen (lr=0x10006886d18) -> returning 0
+    unhandled import: time (lr=0x100068892c8) -> returning 0
+
+
+Command exited with code 0.
+your last command
+
+===== [3848] user =====
+Continue
+
+===== [4705] user =====
+Whats the update
+
+===== [4716] user =====
+Ok go

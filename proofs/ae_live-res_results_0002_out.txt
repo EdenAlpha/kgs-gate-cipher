@@ -1,0 +1,35 @@
+cmd: exec bash -c true; echo U1; adb -s 127.0.0.1:5555 shell pm list features 2>/dev/null | grep -i multitouch; echo "-- creds staged --"; wc -c /tmp/kgs/creds/GMAIL /tmp/kgs/creds/GPASS; echo "-- game present --"; adb -s 127.0.0.1:5555 shell pm path jp.konami.pesam; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+at: 23:23:55
+$ bash -c true; echo U1; adb -s 127.0.0.1:5555 shell pm list features 2>/dev/null | grep -i multitouch; echo "-- creds staged --"; wc -c /tmp/kgs/creds/GMAIL /tmp/kgs/creds/GPASS; echo "-- game present --"; adb -s 127.0.0.1:5555 shell pm path jp.konami.pesam; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+U1
+feature:android.hardware.touchscreen.multitouch
+-- creds staged --
+21 /tmp/kgs/creds/GMAIL
+ 9 /tmp/kgs/creds/GPASS
+30 total
+-- game present --
+package:/data/app/~~6YAE8FqwaloR1fwAZDHxkg==/jp.konami.pesam-OSd7qCgxHPwL2jfaunRd1w==/base.apk
+package:/data/app/~~6YAE8FqwaloR1fwAZDHxkg==/jp.konami.pesam-OSd7qCgxHPwL2jfaunRd1w==/split_config.ar.apk
+package:/data/app/~~6YAE8FqwaloR1fwAZDHxkg==/jp.konami.pesam-OSd7qCgxHPwL2jfaunRd1w==/split_config.arm64_v8a.apk
+package:/data/app/~~6YAE8FqwaloR1fwAZDHxkg==/jp.konami.pesam-OSd7qCgxHPwL2jfaunRd1w==/split_config.de.apk
+package:/data/app/~~6YAE8FqwaloR1fwAZDHxkg==/jp.konami.pesam-OSd7qCgxHPwL2jfaunRd1w==/split_config.en.apk
+package:/data/app/~~6YAE8FqwaloR1fwAZDHxkg==/jp.konami.pesam-OSd7qCgxHPwL2jfaunRd1w==/split_config.es.apk
+package:/data/app/~~6YAE8FqwaloR1fwAZDHxkg==/jp.konami.pesam-OSd7qCgxHPwL2jfaunRd1w==/split_config.fr.apk
+package:/data/app/~~6YAE8FqwaloR1fwAZDHxkg==/jp.konami.pesam-OSd7qCgxHPwL2jfaunRd1w==/split_config.hi.apk
+package:/data/app/~~6YAE8FqwaloR1fwAZDHxkg==/jp.konami.pesam-OSd7qCgxHPwL2jfaunRd1w==/split_config.in.apk
+package:/data/app/~~6YAE8FqwaloR1fwAZDHxkg==/jp.konami.pesam-OSd7qCgxHPwL2jfaunRd1w==/split_config.it.apk
+package:/data/app/~~6YAE8FqwaloR1fwAZDHxkg==/jp.konami.pesam-OSd7qCgxHPwL2jfaunRd1w==/split_config.ja.apk
+package:/data/app/~~6YAE8FqwaloR1fwAZDHxkg==/jp.konami.pesam-OSd7qCgxHPwL2jfaunRd1w==/split_config.ko.apk
+package:/data/app/~~6YAE8FqwaloR1fwAZDHxkg==/jp.konami.pesam-OSd7qCgxHPwL2jfaunRd1w==/split_config.my.apk
+package:/data/app/~~6YAE8FqwaloR1fwAZDHxkg==/jp.konami.pesam-OSd7qCgxHPwL2jfaunRd1w==/split_config.pt.apk
+package:/data/app/~~6YAE8FqwaloR1fwAZDHxkg==/jp.konami.pesam-OSd7qCgxHPwL2jfaunRd1w==/split_config.ru.apk
+package:/data/app/~~6YAE8FqwaloR1fwAZDHxkg==/jp.konami.pesam-OSd7qCgxHPwL2jfaunRd1w==/split_config.th.apk
+package:/data/app/~~6YAE8FqwaloR1fwAZDHxkg==/jp.konami.pesam-OSd7qCgxHPwL2jfaunRd1w==/split_config.tr.apk
+package:/data/app/~~6YAE8FqwaloR1fwAZDHxkg==/jp.konami.pesam-OSd7qCgxHPwL2jfaunRd1w==/split_config.vi.apk
+package:/data/app/~~6YAE8FqwaloR1fwAZDHxkg==/jp.konami.pesam-OSd7qCgxHPwL2jfaunRd1w==/split_config.xxxhdpi.apk
+package:/data/app/~~6YAE8FqwaloR1fwAZDHxkg==/jp.konami.pesam-OSd7qCgxHPwL2jfaunRd1w==/split_config.zh.apk
+package:/data/app/~~6YAE8FqwaloR1fwAZDHxkg==/jp.konami.pesam-OSd7qCgxHPwL2jfaunRd1w==/split_pad_it_0.apk
+package:/data/app/~~6YAE8FqwaloR1fwAZDHxkg==/jp.konami.pesam-OSd7qCgxHPwL2jfaunRd1w==/split_pad_it_1.apk
+rc=0
+gamepid: 
+flows: 0

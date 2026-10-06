@@ -1,0 +1,24 @@
+gate bodies: 42   sizes: [96, 128, 144, 160, 176, 192, 224, 240, 288, 320, 464, 592, 608, 640, 1024, 2352, 2400, 7296, 12368]
+P[0] = 0x243f6a88   S[0] = 0xd1310ba6   S[255] = 0x6e85076a   S[511] = 0xdb83adf7
+    (standard Blowfish wants P[0]=0x243f6a88, S0[0]=0xd1310ba6, S1[255]=0xfa43a425)
+
+==============================================================================
+CROSS-CHECK: does the transliteration match a library implementation?
+==============================================================================
+plaintext        0001020304050607
+transliteration  553367f1f9fbb5c4
+pycryptodome     553367f1f9fbb5c4
+identical        True
+
+==============================================================================
+PKCS#7 validity over all 42 bodies
+==============================================================================
+  key=A56  pre=8 iv=body[:8]      0/42 
+  key=A56  pre=8 iv=body[-8:]     0/42 
+  key=A56  pre=8 iv=zero          0/42 
+  key=A32  pre=8 iv=body[:8]      0/42 
+  key=A32  pre=8 iv=body[-8:]     0/42 
+  key=A32  pre=8 iv=zero          0/42 
+  key=B32  pre=8 iv=body[:8]      0/42 
+  key=B32  pre=8 iv=body[-8:]     0/42 
+  key=B32  pre=8 iv=zero          0/42 

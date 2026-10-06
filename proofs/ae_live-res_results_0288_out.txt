@@ -1,0 +1,19 @@
+cmd: exec bash -c true; echo VY; adb -s 127.0.0.1:5555 shell input swipe 146 535 146 535 150; sleep 5; adb -s 127.0.0.1:5555 shell input swipe 898 639 898 639 180; sleep 22; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== konami in mitm =="; grep -i konami /tmp/kgs/mitm.log 2>/dev/null | tail -10; echo "== flows =="; tail -6 /tmp/kgs/flows.log 2>/dev/null
+at: 00:23:54
+$ bash -c true; echo VY; adb -s 127.0.0.1:5555 shell input swipe 146 535 146 535 150; sleep 5; adb -s 127.0.0.1:5555 shell input swipe 898 639 898 639 180; sleep 22; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== konami in mitm =="; grep -i konami /tmp/kgs/mitm.log 2>/dev/null | tail -10; echo "== flows =="; tail -6 /tmp/kgs/flows.log 2>/dev/null
+VY
+== konami in mitm ==
+[00:10:15.197][172.17.0.2:59768] Client TLS handshake failed. The client does not trust the proxy's certificate for legal.konami.com (OpenSSL Error([('SSL routines', '', 'tls alert certificate unknown')]))
+[00:10:53.321][172.17.0.2:58132] Client TLS handshake failed. The client does not trust the proxy's certificate for pes22-game.cs.konami.net (OpenSSL Error([('SSL routines', '', 'tls alert certificate unknown')]))
+[00:13:30.605][172.17.0.2:38770] Client TLS handshake failed. The client does not trust the proxy's certificate for pes22-game.cs.konami.net (OpenSSL Error([('SSL routines', '', 'tls alert certificate unknown')]))
+172.17.0.2:60072: GET https://104.81.173.151/_common/img/konami_logo_normal.p… HTTP/2.0
+== flows ==
+ADDON-ERROR request: Traceback (most recent call last): |   File "/home/runner/.local/lib/python3.12/site-packages/mitmproxy/net/encoding.py", line 157, in decode_gzip |     return decompressor.decompress(content) + decompressor.flush() |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ | zlib.error: Error -3 while decompressing data: incorrect header check |  | During handling of the above exception, another exception occurred: |  | Traceback (most recent call last): |   File "/home/runner/.local/lib/python3.12/site-packages/mitmproxy/net/encoding.py", line 62, in decode |     decoded = custom_decode[encoding](encoded) |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ |   File "/home/runner/.local/lib/python3.12/site-packages/mitmproxy/net/encoding.py", line 159, in decode_gzip |     raise ValueError(f"Decompression failed: {e}") | ValueError: Decompression failed: Error -3 while decompressing data: incorrect header check |  | During handling of the above exception, another exception occurred: |  | Traceback (most recent call last): |   File "kgs-login/scripts/mitm_addon.py", line 68, in request |     body = bytes(flow.request.content or b"") |                  ^^^^^^^^^^^^^^^^^^^^ |   File "/home/runner/.local/lib/python3.12/site-packages/mitmproxy/http.py", line 339, in content |     return self.get_content() |            ^^^^^^^^^^^^^^^^^^ |   File "/home/runner/.local/lib/python3.12/site-packages/mitmproxy/http.py", line 395, in get_content |     content = encoding.decode(self.raw_content, ce) |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ | ValueError: ValueError when decoding b"\xfa\\\x with 'gzip': ValueError('Decompression failed: Error -3 while decompressing data: incorrect header check') | 
+### RESP POST /pes22/gate/gate_CMD_GET_KID_USER_AGE_KIND.php -> 200
+RESPLEN: 128
+RESPHEX: f3d5f021e496cbab7f54bd99fa7c537daf6daa040a49a3e12e70e1b1d3374c602a502e02b6a9aa31e4d6408ee8fcd120e436ead917d0ba33bafad2cc242bb71cf08a1aab4b7888d513a6c5e2117f79d603398fe84c4c849e2b9171d91a52fe5109514693409f017038ef2b91123a896f6db01c5dacdbc1a5e90b9ae558aa8be3
+HOST-SEEN: legal.konami.com
+HOST-SEEN: www.konami.com
+rc=0
+gamepid: 9664
+flows: 4

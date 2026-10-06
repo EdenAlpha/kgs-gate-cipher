@@ -1,0 +1,27 @@
+find_gzip_in_mem: the gate request is gzipped before it is encrypted
+
+The game's own memory shows how it builds every gate request:
+
+    PES/1.0 (ANDROID 14; ASKH124394950; redroid14_arm64_only; 1790844937;
+             6.0.1; ; 11.0.1; )
+    SetContentType(): application/x-www-form-urlencoded
+      useGzip = true
+      cookie  = sign=<44 base64 chars>
+    setRequestProperty pes-custom-encrypt:AES256
+
+That fixes the pipeline as form-urlencode, then gzip, then AES-256, with a
+32-byte HMAC-SHA256 signature carried as a cookie rather than a header. Two
+different sign values were captured for two requests, so it is per request.
+
+The ordering is the opening. Gzip happens before AES, so a complete plaintext
+body exists in the heap as a live gzip stream, and every 1f 8b in a writable
+region is a candidate. This scans for that two-byte magic and then requires the
+payload to actually inflate and to look form-encoded, so a hit is a request
+body rather than a coincidence. No key needed.
+
+The User-Agent also lines up with the passthrough capture from the zip taken
+earlier: the same positional fields, and ASKH124394950 is this session's User
+ID with the dashes stripped.
+
+Findings also records the frida-server result in full, since it closes off the
+injector route on two major lines and is the reason this approach exists.

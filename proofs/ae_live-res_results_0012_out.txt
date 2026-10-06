@@ -1,0 +1,7 @@
+cmd: exec bash -c true; echo U2; adb -s 127.0.0.1:5555 shell am start -a android.settings.ADD_ACCOUNT_SETTINGS >/dev/null 2>&1; sleep 7; adb -s 127.0.0.1:5555 shell input tap 360 467; sleep 14; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+at: 23:25:19
+$ bash -c true; echo U2; adb -s 127.0.0.1:5555 shell am start -a android.settings.ADD_ACCOUNT_SETTINGS >/dev/null 2>&1; sleep 7; adb -s 127.0.0.1:5555 shell input tap 360 467; sleep 14; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+U2
+rc=0
+gamepid: 
+flows: 0

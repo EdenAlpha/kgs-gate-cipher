@@ -1,0 +1,22 @@
+cmd: exec bash -c true; echo SX; adb -s 127.0.0.1:5555 shell "su 0 grep -n \x27<feature\x27 /vendor/etc/permissions/android.hardware.touchscreen.xml /vendor/etc/permissions/handheld_core_hardware.xml"; echo "== perms dir listing =="; adb -s 127.0.0.1:5555 shell "ls /vendor/etc/permissions/"; echo "== mount of /vendor =="; adb -s 127.0.0.1:5555 shell "mount | grep -E \x27/vendor| /system \x27"
+at: 23:00:46
+$ bash -c true; echo SX; adb -s 127.0.0.1:5555 shell "su 0 grep -n \x27<feature\x27 /vendor/etc/permissions/android.hardware.touchscreen.xml /vendor/etc/permissions/handheld_core_hardware.xml"; echo "== perms dir listing =="; adb -s 127.0.0.1:5555 shell "ls /vendor/etc/permissions/"; echo "== mount of /vendor =="; adb -s 127.0.0.1:5555 shell "mount | grep -E \x27/vendor| /system \x27"
+SX
+/system/bin/sh: can't open featurex27: No such file or directory
+== perms dir listing ==
+android.hardware.ethernet.xml
+android.hardware.hardware_keystore.km41.xml
+android.hardware.opengles.aep.xml
+android.hardware.touchscreen.xml
+android.hardware.usb.accessory.xml
+android.hardware.vulkan.compute-0.xml
+android.hardware.vulkan.level-1.xml
+android.hardware.vulkan.version-1_1.xml
+android.hardware.wifi.xml
+handheld_core_hardware.xml
+redroid-removed-permissions.xml
+== mount of /vendor ==
+/system/bin/sh: /system: can't execute: Is a directory
+rc=126
+gamepid: 
+flows: 0

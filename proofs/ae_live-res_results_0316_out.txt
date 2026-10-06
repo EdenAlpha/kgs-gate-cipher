@@ -1,0 +1,9 @@
+cmd: exec bash -c true; echo T8; adb -s 127.0.0.1:5555 shell input tap 360 676; sleep 14; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== open account settings =="; adb -s 127.0.0.1:5555 shell am start -a android.settings.ADD_ACCOUNT_SETTINGS 2>&1 | tail -1; sleep 12; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/screen2.png
+at: 23:12:16
+$ bash -c true; echo T8; adb -s 127.0.0.1:5555 shell input tap 360 676; sleep 14; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== open account settings =="; adb -s 127.0.0.1:5555 shell am start -a android.settings.ADD_ACCOUNT_SETTINGS 2>&1 | tail -1; sleep 12; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/screen2.png
+T8
+== open account settings ==
+Starting: Intent { act=android.settings.ADD_ACCOUNT_SETTINGS }
+rc=0
+gamepid: 
+flows: 0

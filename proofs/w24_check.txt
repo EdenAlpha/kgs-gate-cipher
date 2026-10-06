@@ -1,0 +1,34 @@
+==============================================================================
+Q1  WHAT IS 0x2f1ec94 ?   (its result becomes w24 in the sign key)
+==============================================================================
+ELF VA 0x2f1ec94   file 0x2f1ac94   (segment delta 0x4000)
+
+  0x02f1ec94  sub      sp, sp, #0x40
+  0x02f1ec98  stp      x29, x30, [sp, #0x20]
+  0x02f1ec9c  str      x19, [sp, #0x30]
+  0x02f1eca0  add      x29, sp, #0x20
+  0x02f1eca4  mrs      x19, tpidr_el0
+  0x02f1eca8  add      x1, sp, #8
+  0x02f1ecac  ldr      x8, [x19, #0x28]
+  0x02f1ecb0  mov      w0, #7
+  0x02f1ecb4  stur     x8, [x29, #-8]
+  0x02f1ecb8  bl       #0x8b352d0   <- PLT import
+  0x02f1ecbc  ldp      x8, x9, [sp, #8]
+  0x02f1ecc0  ldr      x10, [x19, #0x28]
+  0x02f1ecc4  ldur     x11, [x29, #-8]
+  0x02f1ecc8  cmp      x10, x11
+  0x02f1eccc  b.ne     #0x2f1ecec
+  0x02f1ecd0  mov      w10, #0xca00
+  0x02f1ecd4  movk     w10, #0x3b9a, lsl #16
+  0x02f1ecd8  madd     x0, x8, x10, x9
+  0x02f1ecdc  ldp      x29, x30, [sp, #0x20]
+  0x02f1ece0  ldr      x19, [sp, #0x30]
+  0x02f1ece4  add      sp, sp, #0x40
+  0x02f1ece8  ret      
+
+==============================================================================
+Q2  DOES ANYTHING ELSE RIDE ALONG WITH THE REQUEST?
+==============================================================================
+(names, lengths and shape only -- values deliberately omitted)
+
+no gate request headers matched the pattern -- check parse

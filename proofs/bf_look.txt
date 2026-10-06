@@ -1,0 +1,119 @@
+gate bodies: 42   msgpack available: True
+
+==============================================================================
+1. DUPLICATE CAPTURES  (does a repeated endpoint repeat its ciphertext?)
+==============================================================================
+  REQ gate_CMD_GET_SERVER_ENV.php  176 bytes   captures=2
+     pair 0/8: first diff at 0, bytes equal 0/176
+        differing 8-byte blocks: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
+        prefix8 equal: False   blocks 1..: all equal? False
+
+  RESP gate_CMD_GET_SERVER_ENV.php  2400 bytes   captures=2
+     pair 1/9: first diff at 0, bytes equal 9/2400
+        differing 8-byte blocks: 300 of 300 (all)
+        prefix8 equal: False   blocks 1..: all equal? False
+
+  REQ gate_CMD_GET_COUNTRY_LIST.php  144 bytes   captures=2
+     pair 2/10: first diff at 0, bytes equal 1/144
+        differing 8-byte blocks: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+        prefix8 equal: False   blocks 1..: all equal? False
+
+  RESP gate_CMD_GET_COUNTRY_LIST.php  2352 bytes   captures=2
+     pair 3/11: first diff at 0, bytes equal 9/2352
+        differing 8-byte blocks: 294 of 294 (all)
+        prefix8 equal: False   blocks 1..: all equal? False
+
+  REQ gate_CMD_GET_AGE_GATE_REQUIREMENTS.php  160 bytes   captures=2
+     pair 4/12: first diff at 1, bytes equal 4/160
+        differing 8-byte blocks: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+        prefix8 equal: False   blocks 1..: all equal? False
+
+  RESP gate_CMD_GET_AGE_GATE_REQUIREMENTS.php  160 bytes   captures=2
+     pair 5/13: first diff at 0, bytes equal 0/160
+        differing 8-byte blocks: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+        prefix8 equal: False   blocks 1..: all equal? False
+
+  REQ gate_CMD_GET_KID_USER_AGE_KIND.php  224 bytes   captures=2
+     pair 6/14: first diff at 0, bytes equal 1/224
+        differing 8-byte blocks: 28 of 28 (all)
+        prefix8 equal: False   blocks 1..: all equal? False
+
+  RESP gate_CMD_GET_KID_USER_AGE_KIND.php  128 bytes   captures=2
+     pair 7/15: first diff at 0, bytes equal 0/128
+        differing 8-byte blocks: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+        prefix8 equal: False   blocks 1..: all equal? False
+
+  REQ gate_CMD_SET_GAMERELAY_QUALITY.php  608 bytes   captures=3
+     pair 32/38: first diff at 0, bytes equal 3/608
+        differing 8-byte blocks: 76 of 76 (all)
+        prefix8 equal: False   blocks 1..: all equal? False
+     pair 32/40: first diff at 0, bytes equal 1/608
+        differing 8-byte blocks: 76 of 76 (all)
+        prefix8 equal: False   blocks 1..: all equal? False
+     pair 38/40: first diff at 0, bytes equal 1/608
+        differing 8-byte blocks: 76 of 76 (all)
+        prefix8 equal: False   blocks 1..: all equal? False
+
+  RESP gate_CMD_SET_GAMERELAY_QUALITY.php  96 bytes   captures=5
+     pair 33/35: first diff at 0, bytes equal 0/96
+        differing 8-byte blocks: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+        prefix8 equal: False   blocks 1..: all equal? False
+     pair 33/37: first diff at 0, bytes equal 0/96
+        differing 8-byte blocks: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+        prefix8 equal: False   blocks 1..: all equal? False
+     pair 33/39: first diff at 0, bytes equal 0/96
+        differing 8-byte blocks: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+        prefix8 equal: False   blocks 1..: all equal? False
+     pair 33/41: first diff at 0, bytes equal 1/96
+        differing 8-byte blocks: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+        prefix8 equal: False   blocks 1..: all equal? False
+     pair 35/37: first diff at 0, bytes equal 1/96
+        differing 8-byte blocks: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+        prefix8 equal: False   blocks 1..: all equal? False
+     pair 35/39: first diff at 0, bytes equal 0/96
+        differing 8-byte blocks: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+        prefix8 equal: False   blocks 1..: all equal? False
+     pair 35/41: first diff at 0, bytes equal 0/96
+        differing 8-byte blocks: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+        prefix8 equal: False   blocks 1..: all equal? False
+     pair 37/39: first diff at 0, bytes equal 0/96
+        differing 8-byte blocks: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+        prefix8 equal: False   blocks 1..: all equal? False
+     pair 37/41: first diff at 0, bytes equal 2/96
+        differing 8-byte blocks: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+        prefix8 equal: False   blocks 1..: all equal? False
+     pair 39/41: first diff at 0, bytes equal 0/96
+        differing 8-byte blocks: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+        prefix8 equal: False   blocks 1..: all equal? False
+
+  REQ gate_CMD_SET_GAMERELAY_QUALITY.php  592 bytes   captures=2
+     pair 34/36: first diff at 0, bytes equal 2/592
+        differing 8-byte blocks: 74 of 74 (all)
+        prefix8 equal: False   blocks 1..: all equal? False
+
+==============================================================================
+2. BLOWFISH OUTPUT, RAW  (first 64 bytes shown regardless of validity)
+==============================================================================
+------------------------------------------------------------------------------
+REQ /pes22/gate/gate_CMD_GET_SERVER_ENV.php  176 bytes
+  raw head: f1f7d09fe3db7d2789060607c98fa601425b0d03644a5a5a4354288ef0c1b328  ......}'........B[..dJZZCT(....(
+
+------------------------------------------------------------------------------
+RESP /pes22/gate/gate_CMD_GET_SERVER_ENV.php  2400 bytes
+  raw head: d3f57ff91701ae8f7b48af134e72bc871aafbc165b099c7b07b47dea17bf933b  ........{H..Nr......[..{..}....;
+
+------------------------------------------------------------------------------
+REQ /pes22/gate/gate_CMD_GET_COUNTRY_LIST.php  144 bytes
+  raw head: 87c28107c919dc8fdc1111ff1aff15d50a909f9d47fc9ddb6670f9ada7854a33  ....................G...fp....J3
+    k=A24 pre=0 CFB iv=87c28107c919dc8f ascii= 52%            ...E,L/).....uJ.u.).p. .7K1X..R..N.......@.MDXc.
+    k=A24 pre=0 CFB iv=87c28107c919dc8f ascii= 52%            ...E,L/).....uJ.u.).p. .7K1X..R..N.......@.MDXc.
+    k=A24 pre=8 CFB iv=0000000000000000 ascii= 52%            D....}..u.).p. .7K1X..R..N.......@.MDXc...`).Q.=
+    k=A24 pre=8 CFB iv=87c28107c919dc8f ascii= 52%            .....uJ.u.).p. .7K1X..R..N.......@.MDXc...`).Q.=
+    k=A24 pre=8 CFB iv=dc1111ff1aff15d5 ascii= 52%            ....UO.ku.).p. .7K1X..R..N.......@.MDXc...`).Q.=
+    k=A24 pre=16 CFB iv=0000000000000000 ascii= 52%            ....G..<7K1X..R..N.......@.MDXc...`).Q.=.r..".p.
+    k=A24 pre=16 CFB iv=87c28107c919dc8f ascii= 53%            l... J..7K1X..R..N.......@.MDXc...`).Q.=.r..".p.
+    k=A24 pre=16 CFB iv=0a909f9d47fc9ddb ascii= 54%            [. .`Q.b7K1X..R..N.......@.MDXc...`).Q.=.r..".p.
+
+------------------------------------------------------------------------------
+RESP /pes22/gate/gate_CMD_GET_COUNTRY_LIST.php  2352 bytes
+  raw head: 4d0b6214f9a91a36582d33b0e8215b3e7b47a11ddb6d5c2204dbe9a2ef8db0bb  M.b....6X-3..![>{G...m\"........

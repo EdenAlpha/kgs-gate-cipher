@@ -1,0 +1,8 @@
+{
+ "pad_it_0.apk": "dupe_of_game/split_pad_it_0.apk",
+ "pad_it_1.apk": "dupe_of_game/split_pad_it_1.apk",
+ "pc0000.pak": "dupe_of_game/split_pad_it_1.apk!assets/pc0000_mobile_and.pak",
+ "artA.zip": "old artifact zip, extracted into artj/",
+ "artA3.zip": "old artifact zip, extracted into artj/",
+ "nss1D57.tmp/app-64.7z": "NSIS installer bundle, not eFootball"
+}

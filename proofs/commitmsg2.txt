@@ -1,0 +1,38 @@
+gappslive: open the live control loop right after boot
+
+The run that worked on 2026-09-30 was driven by hand through the live command
+branch. An attempt to replace that with a scripted step was worse on two counts
+and is reverted here:
+
+  - it was unobservable. `gh run view --log` returns nothing while a job is in
+    progress, and the live loop does not open until step 05, so a scripted
+    sign-in plus the ~45 minute asset download was a three-hour silence in which
+    nothing could be seen and nothing could be corrected.
+
+  - watching is not steering. A script that taps coordinates it guessed on
+    2026-09-30 will fail the same way it failed then. The human-in-the-loop
+    path is the one with evidence behind it.
+
+So the workflow now stops after staging things and hands over:
+
+  01  boot the container
+  04a multitouch declaration (hard gate) + stage credentials from secrets
+  04b frida-server running + the hook staged on the device
+  05  live control loop -- sign-in, install, launch, all driven through here
+  06  upload
+
+04b launches nothing and installs nothing. It cannot, because starting the game
+is the operator's decision, and it must happen under `frida -f`.
+
+The mitm proxy, the CA and the DNAT rule are gone from the workflow entirely.
+Play will not download its asset packs through a proxy whose certificate it
+rejects; arming interception before the download is what produced "Download
+Failed 0%" on the 2026-10-01 run. If the gate channel is wanted, the recorder is
+armed from the loop once the packs are on disk. That also means the Conscrypt
+apex bind-mount, which fixes a CA nothing was reading on Android 14, has to be
+re-applied at that point rather than at boot.
+
+play_install.sh and publish.sh are kept. They are tools for the loop to call,
+not steps that run unattended: play_install.sh stages a Play install and
+publishes a screenshot at each stage via publish.sh, so even a long unattended
+wait leaves a visible trail instead of a silence.

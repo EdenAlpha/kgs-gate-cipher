@@ -1,0 +1,6 @@
+cmd: exec sudo docker exec redroid sh -c "tcpdump -r /data/local/tmp/game2.pcap -nn port 53 2>/dev/null | head -25"
+at: 10:17:45
+$ sudo docker exec redroid sh -c "tcpdump -r /data/local/tmp/game2.pcap -nn port 53 2>/dev/null | head -25"
+rc=0
+gamepid: 
+flows: 0

@@ -1,0 +1,14 @@
+cmd: exec bash -c true; echo L2; curl -fsSL --max-time 60 https://raw.githubusercontent.com/EdenAlpha/peerlink-efootball-disconnects/main/kgs-login/scripts/dump_game_mem.py -o /tmp/kgs/dump.py && wc -c /tmp/kgs/dump.py && adb -s 127.0.0.1:5555 shell "su 0 cat /proc/$(adb -s 127.0.0.1:5555 shell pidof jp.konami.pesam | tr -d \"\\r\")/maps" 2>&1 | head -3; python3 /tmp/kgs/dump.py jp.konami.pesam --top 6 2>&1 | tail -34
+at: 08:52:32
+$ bash -c true; echo L2; curl -fsSL --max-time 60 https://raw.githubusercontent.com/EdenAlpha/peerlink-efootball-disconnects/main/kgs-login/scripts/dump_game_mem.py -o /tmp/kgs/dump.py && wc -c /tmp/kgs/dump.py && adb -s 127.0.0.1:5555 shell "su 0 cat /proc/$(adb -s 127.0.0.1:5555 shell pidof jp.konami.pesam | tr -d \"\\r\")/maps" 2>&1 | head -3; python3 /tmp/kgs/dump.py jp.konami.pesam --top 6 2>&1 | tail -34
+L2
+6365 /tmp/kgs/dump.py
+12c00000-32c00000 rw-p 00000000 00:00 0                                  [anon:dalvik-main space (region space)]
+70517000-707d0000 rw-p 00000000 00:00 0                                  [anon:dalvik-/system/framework/boot.art]
+707d0000-70819000 rw-p 00000000 00:00 0                                  [anon:dalvik-/system/framework/boot-core-libart.art]
+pid 18731
+cannot read maps as root:
+
+rc=1
+gamepid: 18731
+flows: 68

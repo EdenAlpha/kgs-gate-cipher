@@ -1,0 +1,9 @@
+cmd: exec sudo docker exec redroid sh -c "curl -s -o /dev/null -w probe_http=%{http_code} --max-time 20 https://accounts.google.com/ 2>&1"; echo; sleep 3; tail -6 /tmp/kgs/flows.log
+at: 09:54:27
+$ sudo docker exec redroid sh -c "curl -s -o /dev/null -w probe_http=%{http_code} --max-time 20 https://accounts.google.com/ 2>&1"; echo; sleep 3; tail -6 /tmp/kgs/flows.log
+sh: curl: inaccessible or not found
+
+ADDON-READY targets=konami.net,konami.jp
+rc=0
+gamepid: 
+flows: 0

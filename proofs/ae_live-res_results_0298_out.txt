@@ -1,0 +1,14 @@
+cmd: exec bash -c true; echo D9; W=/tmp/kgs; adb -s 127.0.0.1:5555 shell input swipe 640 640 640 640 250; sleep 24; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/step1.png; adb -s 127.0.0.1:5555 shell input swipe 1139 677 1139 677 250; sleep 26; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/step2.png; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== flows =="; grep "^### " $W/flows.log | tail -6
+at: 07:55:22
+$ bash -c true; echo D9; W=/tmp/kgs; adb -s 127.0.0.1:5555 shell input swipe 640 640 640 640 250; sleep 24; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/step1.png; adb -s 127.0.0.1:5555 shell input swipe 1139 677 1139 677 250; sleep 26; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/step2.png; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== flows =="; grep "^### " $W/flows.log | tail -6
+D9
+== flows ==
+### REQ POST /pes22/gate/gate_CMD_GET_SERVER_ENV.php
+### RESP POST /pes22/gate/gate_CMD_GET_SERVER_ENV.php -> 200
+### REQ POST /pes22/gate/gate_CMD_GET_COUNTRY_LIST.php
+### RESP POST /pes22/gate/gate_CMD_GET_COUNTRY_LIST.php -> 200
+### REQ POST /pes22/gate/gate_CMD_GET_AGE_GATE_REQUIREMENTS.php
+### RESP POST /pes22/gate/gate_CMD_GET_AGE_GATE_REQUIREMENTS.php -> 200
+rc=0
+gamepid: 8404
+flows: 6

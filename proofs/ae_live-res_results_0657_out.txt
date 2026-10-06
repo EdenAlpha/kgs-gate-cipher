@@ -1,0 +1,77 @@
+cmd: exec bash -c true; echo L4; cd /tmp/kgs/memdump; echo "== strings around the encrypt header =="; strings -n 8 region_000012c00000.bin | grep -A10 -B10 "pes-custom-encrypt" | head -60; echo "== which region holds what =="; for m in uid= opt= libVer CMD_LOGIN command_service AES256 sign=; do printf "%s -> " "$m"; grep -l -a -F "$m" *.bin 2>/dev/null | tr "\n" " "; echo; done
+at: 09:00:55
+$ bash -c true; echo L4; cd /tmp/kgs/memdump; echo "== strings around the encrypt header =="; strings -n 8 region_000012c00000.bin | grep -A10 -B10 "pes-custom-encrypt" | head -60; echo "== which region holds what =="; for m in uid= opt= libVer CMD_LOGIN command_service AES256 sign=; do printf "%s -> " "$m"; grep -l -a -F "$m" *.bin 2>/dev/null | tr "\n" " "; echo; done
+L4
+== strings around the encrypt header ==
+Thread-10085
+PES/1.0 (ANDROID 14; ASKH124394950; redroid14_arm64_only; 1790844331; 6.0.1; ; 11.0.1; )
+application/x-www-form-urlencoded
+SetContentType(): 
+SetContentType(): application/x-www-form-urlencoded
+SetContentType(): application/x-www-form-urlencoded
+SetConnectTimeoutMsec(): 12000
+SetConnectTimeoutMsec(): 12000
+SetReadTimeoutMsec(): 80000
+SetReadTimeoutMsec(): 80000
+)pes-custom-encrypt
+AddRequestHeader() 
+AddRequestHeader() pes-custom-encrypt:AES256
+AddRequestHeader() pes-custom-encrypt:AES256
+https://pes22-game.cs.konami.net/pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php
+sign=N6hqmmR/noUzgwWd/zFM2mDeZlJPgIkbsQGw2U2/zkjaqrWA7k+fGw==;
+  uri     = 
+  uri     = https://pes22-game.cs.konami.net/pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php
+  uri     = https://pes22-game.cs.konami.net/pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php
+  useGzip = true
+  useGzip = true
+  cookie  = 
+  cookie  = sign=N6hqmmR/noUzgwWd/zFM2mDeZlJPgIkbsQGw2U2/zkjaqrWA7k+fGw==;
+  cookie  = sign=N6hqmmR/noUzgwWd/zFM2mDeZlJPgIkbsQGw2U2/zkjaqrWA7k+fGw==;
+--
+Thread-15603
+PES/1.0 (ANDROID 14; ASKH124394950; redroid14_arm64_only; 1790844937; 6.0.1; ; 11.0.1; )
+application/x-www-form-urlencoded
+SetContentType(): 
+SetContentType(): application/x-www-form-urlencoded
+SetContentType(): application/x-www-form-urlencoded
+SetConnectTimeoutMsec(): 12000
+SetConnectTimeoutMsec(): 12000
+SetReadTimeoutMsec(): 80000
+SetReadTimeoutMsec(): 80000
+)pes-custom-encrypt
+AddRequestHeader() 
+AddRequestHeader() pes-custom-encrypt:AES256
+AddRequestHeader() pes-custom-encrypt:AES256
+https://pes22-game.cs.konami.net/pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php
+sign=NGtP4v3TYFabShY9nONmO1RvPnE72iSliiqNmnFkJ4DAhBqJMPbiDA==;
+  uri     = 
+  uri     = https://pes22-game.cs.konami.net/pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php
+  uri     = https://pes22-game.cs.konami.net/pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php
+  useGzip = true
+  useGzip = true
+  cookie  = 
+  cookie  = sign=NGtP4v3TYFabShY9nONmO1RvPnE72iSliiqNmnFkJ4DAhBqJMPbiDA==;
+  cookie  = sign=NGtP4v3TYFabShY9nONmO1RvPnE72iSliiqNmnFkJ4DAhBqJMPbiDA==;
+  isPost  = true
+  isPost  = true
+pes22-game.cs.konami.net
+/pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php
+HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+readTimeoutMsec=80000
+readTimeoutMsec=80000(msec), connectTimeoutMsec=12000(msec)
+readTimeoutMsec=80000(msec), connectTimeoutMsec=12000(msec)
+setRequestProperty 
+setRequestProperty pes-custom-encrypt:AES256
+grep: write error: Broken pipe
+== which region holds what ==
+uid= -> 
+opt= -> 
+libVer -> 
+CMD_LOGIN -> 
+command_service -> 
+AES256 -> region_000012c00000.bin 
+sign= -> region_000012c00000.bin 
+rc=0
+gamepid: 18731
+flows: 70

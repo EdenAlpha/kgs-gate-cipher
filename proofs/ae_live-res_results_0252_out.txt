@@ -1,0 +1,11 @@
+cmd: exec bash -c true; echo SZ; adb -s 127.0.0.1:5555 push -q /tmp/base.apk /data/local/tmp/base.apk; adb -s 127.0.0.1:5555 push -q /tmp/cfg.apk /data/local/tmp/cfg.apk; echo "-- push done --"; adb -s 127.0.0.1:5555 shell pm install-multiple -r /data/local/tmp/base.apk /data/local/tmp/cfg.apk 2>&1 | tail -5
+at: 23:02:11
+$ bash -c true; echo SZ; adb -s 127.0.0.1:5555 push -q /tmp/base.apk /data/local/tmp/base.apk; adb -s 127.0.0.1:5555 push -q /tmp/cfg.apk /data/local/tmp/cfg.apk; echo "-- push done --"; adb -s 127.0.0.1:5555 shell pm install-multiple -r /data/local/tmp/base.apk /data/local/tmp/cfg.apk 2>&1 | tail -5
+SZ
+adb: unrecognized option '-q'
+adb: unrecognized option '-q'
+-- push done --
+Unknown command: install-multiple
+rc=255
+gamepid: 
+flows: 0

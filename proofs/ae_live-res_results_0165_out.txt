@@ -1,0 +1,42 @@
+cmd: exec bash -c true; echo UZ; adb -s 127.0.0.1:5555 shell am start -n jp.konami.pesam/com.epicgames.ue4.SplashActivity 2>&1 | tail -2; sleep 40; echo "== pid =="; adb -s 127.0.0.1:5555 shell pidof jp.konami.pesam; echo "== exit info =="; adb -s 127.0.0.1:5555 shell dumpsys activity exit-info jp.konami.pesam 2>/dev/null | head -14; echo "== ue4/egl log =="; adb -s 127.0.0.1:5555 shell su 0 logcat -d -t 800 2>/dev/null | grep -iE "pesam|Vulkan|GPU|OpenGL|RHI|Fatal signal|swiftshader|angle" | tail -22; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+at: 23:58:34
+$ bash -c true; echo UZ; adb -s 127.0.0.1:5555 shell am start -n jp.konami.pesam/com.epicgames.ue4.SplashActivity 2>&1 | tail -2; sleep 40; echo "== pid =="; adb -s 127.0.0.1:5555 shell pidof jp.konami.pesam; echo "== exit info =="; adb -s 127.0.0.1:5555 shell dumpsys activity exit-info jp.konami.pesam 2>/dev/null | head -14; echo "== ue4/egl log =="; adb -s 127.0.0.1:5555 shell su 0 logcat -d -t 800 2>/dev/null | grep -iE "pesam|Vulkan|GPU|OpenGL|RHI|Fatal signal|swiftshader|angle" | tail -22; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+UZ
+Starting: Intent { cmp=jp.konami.pesam/com.epicgames.ue4.SplashActivity }
+== pid ==
+6484
+== exit info ==
+ACTIVITY MANAGER PROCESS EXIT INFO (dumpsys activity exit-info)
+Last Timestamp of Persistence Into Persistent Storage: 2026-09-30 19:42:36.907
+  package: jp.konami.pesam
+    Historical Process Exit for uid=10105
+        ApplicationExitInfo #0:
+          timestamp=2026-09-30 19:55:39.782 pid=5642 realUid=10105 packageUid=10105 definingUid=10105 user=0
+          process=jp.konami.pesam reason=10 (USER REQUESTED) subreason=21 (FORCE STOP) status=0
+          importance=100 pss=0.96GB rss=1.1GB description=stop jp.konami.pesam due to from pid 6370 state=empty trace=null
+== ue4/egl log ==
+09-30 19:58:35.444   483   680 E OpenGLRenderer: Unable to match the desired swap behavior.
+09-30 19:58:35.445   483   971 D libEGL  : dlopen (libGLESv2_angle.so) success at 0x208b434eac38c73d
+09-30 19:58:35.445   483   971 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+09-30 19:58:35.457   483   680 E OpenGLRenderer: Unable to match the desired swap behavior.
+09-30 19:58:35.462   483   680 E OpenGLRenderer: Unable to match the desired swap behavior.
+09-30 19:58:35.474  6484  6556 D libEGL  : dlopen (libGLESv2_angle.so) success at 0x208b434eac38c73d
+09-30 19:58:35.827   230  2270 W InputManager-JNI: Input channel object 'cf4ae13 Splash Screen jp.konami.pesam (client)' was disposed without first being removed with the input manager!
+09-30 19:58:36.164   230  1114 D CoreBackPreview: Window{5166906 u0 jp.konami.pesam/com.epicgames.ue4.GameActivity}: Setting back callback null
+09-30 19:58:36.180   230  1114 W InputManager-JNI: Input channel object '5166906 jp.konami.pesam/com.epicgames.ue4.GameActivity (client)' was disposed without first being removed with the input manager!
+09-30 19:58:37.214  6484  6640 D jp.konami.pesam: PlayerBase::PlayerBase()
+09-30 19:58:37.214  3931  3961 I Finsky  : [53] jp.konami.pesam: Account determined from installer data - [-U6sJgpZDazTcoA9X1P8mbF6SB7JzwmUYu5pAANHEVc]
+09-30 19:58:37.214  3931  3961 I Finsky  : [53] Billing preferred account via installer for jp.konami.pesam: [-U6sJgpZDazTcoA9X1P8mbF6SB7JzwmUYu5pAANHEVc]
+09-30 19:58:37.215  6484  6640 D jp.konami.pesam: TrackPlayerBase::TrackPlayerBase()
+09-30 19:58:37.215  3931  3963 I Finsky  : [55] jp.konami.pesam: Account determined from installer data - [-U6sJgpZDazTcoA9X1P8mbF6SB7JzwmUYu5pAANHEVc]
+09-30 19:58:37.215  3931  3963 I Finsky  : [55] Billing preferred account via installer for jp.konami.pesam: [-U6sJgpZDazTcoA9X1P8mbF6SB7JzwmUYu5pAANHEVc]
+09-30 19:58:37.224  6484  6640 D jp.konami.pesam: PlayerBase::PlayerBase()
+09-30 19:58:37.224  6484  6640 D jp.konami.pesam: TrackPlayerBase::TrackPlayerBase()
+09-30 19:58:37.583   230  3855 D ConnectivityService: requestNetwork for uid/pid:10105/6484 activeRequest: null callbackRequest: 152 [NetworkRequest [ REQUEST id=152, [ Transports: WIFI Capabilities: NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED Uid: 10105 RequestorUid: 10105 RequestorPkg: jp.konami.pesam UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647
+09-30 19:58:37.583   230   410 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=152, [ Transports: WIFI Capabilities: NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED Uid: 10105 RequestorUid: 10105 RequestorPkg: jp.konami.pesam UnderlyingNetworks: Null] ]
+09-30 19:58:37.584   230   410 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=152, [ Transports: WIFI Capabilities: NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED Uid: 10105 RequestorUid: 10105 RequestorPkg: jp.konami.pesam UnderlyingNetworks: Null] ]
+09-30 19:58:37.584   230   410 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=152, [ Transports: WIFI Capabilities: NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED Uid: 10105 RequestorUid: 10105 RequestorPkg: jp.konami.pesam UnderlyingNetworks: Null] ]
+09-30 19:58:37.584   230   410 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=152, [ Transports: WIFI Capabilities: NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED Uid: 10105 RequestorUid: 10105 RequestorPkg: jp.konami.pesam UnderlyingNetworks: Null] ]
+rc=0
+gamepid: 6484
+flows: 0

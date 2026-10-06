@@ -1,0 +1,7 @@
+cmd: exec bash -c true; echo RR; adb -s 127.0.0.1:5555 shell input swipe 1183 560 1183 560 250; sleep 10; adb -s 127.0.0.1:5555 shell input swipe 639 138 639 138 200; sleep 16; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+at: 01:10:58
+$ bash -c true; echo RR; adb -s 127.0.0.1:5555 shell input swipe 1183 560 1183 560 250; sleep 10; adb -s 127.0.0.1:5555 shell input swipe 639 138 639 138 200; sleep 16; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+RR
+rc=0
+gamepid: 29128
+flows: 22

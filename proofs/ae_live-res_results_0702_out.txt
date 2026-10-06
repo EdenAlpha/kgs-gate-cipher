@@ -1,0 +1,54 @@
+cmd: exec sudo docker exec redroid ls -la /data/local/tmp/splits/ 2>&1 | head -30; ls /tmp/kgs/out/ 2>/dev/null | head -30
+at: 10:38:27
+$ sudo docker exec redroid ls -la /data/local/tmp/splits/ 2>&1 | head -30; ls /tmp/kgs/out/ 2>/dev/null | head -30
+total 841772
+drwxr-xr-x 2 root  root       4096 2026-09-30 08:53 .
+drwxrwx--x 4 shell shell      4096 2026-09-30 08:54 ..
+-rw-r--r-- 1 radio radio         2 2026-09-30 08:53 .ok
+-rw-r--r-- 1 radio radio  22347497 2026-09-30 08:53 base.apk
+-rw-r--r-- 1 radio radio     20690 2026-09-30 08:53 split_config.ar.apk
+-rw-r--r-- 1 radio radio  57148181 2026-09-30 08:53 split_config.arm64_v8a.apk
+-rw-r--r-- 1 radio radio     20690 2026-09-30 08:53 split_config.de.apk
+-rw-r--r-- 1 radio radio     37074 2026-09-30 08:53 split_config.en.apk
+-rw-r--r-- 1 radio radio     24786 2026-09-30 08:53 split_config.es.apk
+-rw-r--r-- 1 radio radio     24786 2026-09-30 08:53 split_config.fr.apk
+-rw-r--r-- 1 radio radio     20690 2026-09-30 08:53 split_config.hi.apk
+-rw-r--r-- 1 radio radio     20690 2026-09-30 08:53 split_config.in.apk
+-rw-r--r-- 1 radio radio     20690 2026-09-30 08:53 split_config.it.apk
+-rw-r--r-- 1 radio radio     20690 2026-09-30 08:53 split_config.ja.apk
+-rw-r--r-- 1 radio radio     20690 2026-09-30 08:53 split_config.ko.apk
+-rw-r--r-- 1 radio radio     20690 2026-09-30 08:53 split_config.my.apk
+-rw-r--r-- 1 radio radio     24786 2026-09-30 08:53 split_config.pt.apk
+-rw-r--r-- 1 radio radio     20690 2026-09-30 08:53 split_config.ru.apk
+-rw-r--r-- 1 radio radio     20690 2026-09-30 08:53 split_config.th.apk
+-rw-r--r-- 1 radio radio     20690 2026-09-30 08:53 split_config.tr.apk
+-rw-r--r-- 1 radio radio     20690 2026-09-30 08:53 split_config.vi.apk
+-rw-r--r-- 1 radio radio    198371 2026-09-30 08:53 split_config.xxxhdpi.apk
+-rw-r--r-- 1 radio radio     28882 2026-09-30 08:53 split_config.zh.apk
+-rw-r--r-- 1 radio radio 386375435 2026-09-30 08:53 split_pad_it_0.apk
+-rw-r--r-- 1 radio radio 395420368 2026-09-30 08:53 split_pad_it_1.apk
+base.apk
+split_config.ar.apk
+split_config.arm64_v8a.apk
+split_config.de.apk
+split_config.en.apk
+split_config.es.apk
+split_config.fr.apk
+split_config.hi.apk
+split_config.in.apk
+split_config.it.apk
+split_config.ja.apk
+split_config.ko.apk
+split_config.my.apk
+split_config.pt.apk
+split_config.ru.apk
+split_config.th.apk
+split_config.tr.apk
+split_config.vi.apk
+split_config.xxxhdpi.apk
+split_config.zh.apk
+split_pad_it_0.apk
+split_pad_it_1.apk
+rc=0
+gamepid: 
+flows: 0

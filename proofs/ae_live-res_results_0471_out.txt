@@ -1,0 +1,13 @@
+cmd: exec sudo modprobe nft_redir nf_nat xt_REDIRECT 2>&1; echo mp=$?; sudo iptables -t nat -A PREROUTING -i docker0 -p tcp --dport 443 -j REDIRECT --to-port 8080 2>&1; echo add=$?; sudo iptables -t nat -L PREROUTING -n | head -8
+at: 10:03:45
+$ sudo modprobe nft_redir nf_nat xt_REDIRECT 2>&1; echo mp=$?; sudo iptables -t nat -A PREROUTING -i docker0 -p tcp --dport 443 -j REDIRECT --to-port 8080 2>&1; echo add=$?; sudo iptables -t nat -L PREROUTING -n | head -8
+mp=0
+Warning: Extension REDIRECT revision 0 not supported, missing kernel module?
+iptables v1.8.10 (nf_tables):  RULE_APPEND failed (No such file or directory): rule in chain PREROUTING
+add=4
+Chain PREROUTING (policy ACCEPT)
+target     prot opt source               destination         
+DOCKER     0    --  0.0.0.0/0            0.0.0.0/0            ADDRTYPE match dst-type LOCAL
+rc=0
+gamepid: 
+flows: 0

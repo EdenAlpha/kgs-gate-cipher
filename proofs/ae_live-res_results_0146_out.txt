@@ -1,0 +1,20 @@
+cmd: exec bash -c true; echo UV; for i in 1 2 3 4 5 6; do echo -n "t$i "; adb -s 127.0.0.1:5555 shell su 0 du -sm /data/data/jp.konami.pesam 2>/dev/null; sleep 15; done; echo "== pad dir =="; adb -s 127.0.0.1:5555 shell su 0 ls /data/data/jp.konami.pesam 2>/dev/null; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+at: 23:52:54
+$ bash -c true; echo UV; for i in 1 2 3 4 5 6; do echo -n "t$i "; adb -s 127.0.0.1:5555 shell su 0 du -sm /data/data/jp.konami.pesam 2>/dev/null; sleep 15; done; echo "== pad dir =="; adb -s 127.0.0.1:5555 shell su 0 ls /data/data/jp.konami.pesam 2>/dev/null; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+UV
+t1 1974	/data/data/jp.konami.pesam
+t2 1974	/data/data/jp.konami.pesam
+t3 1974	/data/data/jp.konami.pesam
+t4 1974	/data/data/jp.konami.pesam
+t5 1974	/data/data/jp.konami.pesam
+t6 1974	/data/data/jp.konami.pesam
+== pad dir ==
+cache
+code_cache
+databases
+files
+no_backup
+shared_prefs
+rc=0
+gamepid: 5642
+flows: 0

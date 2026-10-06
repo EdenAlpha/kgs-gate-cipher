@@ -1,0 +1,139 @@
+PT_LOAD segments (vaddr, fileoff, filesz):
+  va 0x000000000  off 0x000000000  size 0x0028253b0   (delta 0x0)
+  va 0x0028293c0  off 0x0028253c0  size 0x006347d80   (delta 0x4000)
+  va 0x008b75140  off 0x008b6d140  size 0x000d8db80   (delta 0x8000)
+  va 0x009906cc0  off 0x0098facc0  size 0x000063d84   (delta 0xc000)
+
+mapping check: ELF 0x7b38a44 -> file 0x7b34a44  (expected 0x7b34a44)
+
+==============================================================================
+CALLER around ELF 0x7b2e46c (arg setup into the sign builder)   ELF VA 0x7b2e400  file 0x7b2a400  (ok)
+==============================================================================
+  0x07b2e400  tbz      w0, #0, #0x7b2e4b4
+  0x07b2e404  ldr      w8, [sp, #0xc]
+  0x07b2e408  cmp      w8, #1
+  0x07b2e40c  b.eq     #0x7b2e434
+  0x07b2e410  cbnz     w8, #0x7b2e44c
+  0x07b2e414  ldr      x0, [x20, #8]
+  0x07b2e418  cbz      x0, #0x7b2e44c
+  0x07b2e41c  adrp     x1, #0xa4a9000
+  0x07b2e420  add      x1, x1, #0x8e8
+  0x07b2e424  add      x2, x1, #0x30
+  0x07b2e428  b        #0x7b2e448
+  0x07b2e42c  mov      w23, wzr
+  0x07b2e430  b        #0x7b2e4cc
+  0x07b2e434  ldr      x0, [x20, #8]
+  0x07b2e438  cbz      x0, #0x7b2e44c
+  0x07b2e43c  adrp     x1, #0xa4a9000
+  0x07b2e440  add      x1, x1, #0x8e8
+  0x07b2e444  add      x2, x1, #0x18
+  0x07b2e448  bl       #0x7b2ef88
+  0x07b2e44c  add      x0, sp, #0x28
+  0x07b2e450  bl       #0x74e6d10
+  0x07b2e454  mov      x21, x0
+  0x07b2e458  add      x0, sp, #0x28
+  0x07b2e45c  bl       #0x74e6d24
+  0x07b2e460  mov      x2, x0
+  0x07b2e464  add      x0, sp, #0x10
+  0x07b2e468  mov      x1, x21
+  0x07b2e46c  bl       #0x7b38a44
+  0x07b2e470  tbz      w0, #0, #0x7b2e4f8
+  0x07b2e474  add      x0, sp, #0x28
+  0x07b2e478  ldr      x20, [x20, #8]
+  0x07b2e47c  bl       #0x74e6d10
+  0x07b2e480  mov      x21, x0
+  0x07b2e484  add      x0, sp, #0x28
+  0x07b2e488  bl       #0x74e6d24
+  0x07b2e48c  ldr      x8, [x20]
+  0x07b2e490  mov      x3, x0
+  0x07b2e494  add      x5, sp, #0x10
+  0x07b2e498  mov      x0, x20
+  0x07b2e49c  mov      x1, x19
+  0x07b2e4a0  mov      x2, x21
+  0x07b2e4a4  ldr      x8, [x8, #0x20]
+  0x07b2e4a8  mov      w4, #1
+  0x07b2e4ac  blr      x8
+  0x07b2e4b0  mov      w23, w0
+  0x07b2e4b4  add      x0, sp, #0x28
+  0x07b2e4b8  bl       #0x74e6e74
+  0x07b2e4bc  ldrb     w8, [sp, #0x10]
+
+==============================================================================
+HELPER ELF 0x74e6d10  (first arg, assumed data)   ELF VA 0x74e6d10  file 0x74e2d10  (ok)
+==============================================================================
+  0x074e6d10  ldr      x8, [x0, #0x20]
+  0x074e6d14  ldr      x9, [x0]
+  0x074e6d18  cmp      x8, #0
+  0x074e6d1c  csel     x0, xzr, x9, eq
+  0x074e6d20  ret      
+  0x074e6d24  ldr      x0, [x0, #0x18]
+  0x074e6d28  ret      
+  0x074e6d2c  ldur     q1, [x1, #8]
+  0x074e6d30  ldr      x8, [x1]
+  0x074e6d34  ldrb     w9, [x0, #0x28]
+  0x074e6d38  stur     q1, [x0, #8]
+  0x074e6d3c  ldur     q1, [x1, #0x18]
+  0x074e6d40  str      x8, [x0]
+  0x074e6d44  movi     v0.2d, #0000000000000000
+  0x074e6d48  stur     q1, [x0, #0x18]
+  0x074e6d4c  ldrb     w8, [x1, #0x28]
+  0x074e6d50  bfxil    w9, w8, #0, #1
+  0x074e6d54  strb     w9, [x0, #0x28]
+  0x074e6d58  ldrb     w8, [x1, #0x28]
+  0x074e6d5c  str      xzr, [x1, #0x20]
+  0x074e6d60  stp      q0, q0, [x1]
+  0x074e6d64  and      w8, w8, #0xfe
+  0x074e6d68  strb     w8, [x1, #0x28]
+  0x074e6d6c  ret      
+  0x074e6d70  stp      xzr, xzr, [x0, #8]
+  0x074e6d74  str      xzr, [x0, #0x18]
+  0x074e6d78  ret      
+  0x074e6d7c  stp      x29, x30, [sp, #-0x40]!
+  0x074e6d80  str      x23, [sp, #0x10]
+  0x074e6d84  stp      x22, x21, [sp, #0x20]
+  0x074e6d88  stp      x20, x19, [sp, #0x30]
+  0x074e6d8c  mov      x29, sp
+  0x074e6d90  mov      x19, x0
+  0x074e6d94  ldrb     w8, [x0, #0x28]
+  0x074e6d98  tbnz     w8, #0, #0x74e6e5c
+  0x074e6d9c  ldr      x22, [x1, #0x20]
+
+==============================================================================
+HELPER ELF 0x74e6d24  (second arg, assumed length)   ELF VA 0x74e6d24  file 0x74e2d24  (ok)
+==============================================================================
+  0x074e6d24  ldr      x0, [x0, #0x18]
+  0x074e6d28  ret      
+  0x074e6d2c  ldur     q1, [x1, #8]
+  0x074e6d30  ldr      x8, [x1]
+  0x074e6d34  ldrb     w9, [x0, #0x28]
+  0x074e6d38  stur     q1, [x0, #8]
+  0x074e6d3c  ldur     q1, [x1, #0x18]
+  0x074e6d40  str      x8, [x0]
+  0x074e6d44  movi     v0.2d, #0000000000000000
+  0x074e6d48  stur     q1, [x0, #0x18]
+  0x074e6d4c  ldrb     w8, [x1, #0x28]
+  0x074e6d50  bfxil    w9, w8, #0, #1
+  0x074e6d54  strb     w9, [x0, #0x28]
+  0x074e6d58  ldrb     w8, [x1, #0x28]
+  0x074e6d5c  str      xzr, [x1, #0x20]
+  0x074e6d60  stp      q0, q0, [x1]
+  0x074e6d64  and      w8, w8, #0xfe
+  0x074e6d68  strb     w8, [x1, #0x28]
+  0x074e6d6c  ret      
+  0x074e6d70  stp      xzr, xzr, [x0, #8]
+  0x074e6d74  str      xzr, [x0, #0x18]
+  0x074e6d78  ret      
+  0x074e6d7c  stp      x29, x30, [sp, #-0x40]!
+  0x074e6d80  str      x23, [sp, #0x10]
+  0x074e6d84  stp      x22, x21, [sp, #0x20]
+  0x074e6d88  stp      x20, x19, [sp, #0x30]
+  0x074e6d8c  mov      x29, sp
+  0x074e6d90  mov      x19, x0
+  0x074e6d94  ldrb     w8, [x0, #0x28]
+  0x074e6d98  tbnz     w8, #0, #0x74e6e5c
+  0x074e6d9c  ldr      x22, [x1, #0x20]
+  0x074e6da0  mov      x20, x1
+  0x074e6da4  ldr      x8, [x19, #0x20]
+  0x074e6da8  cmp      x8, x22
+  0x074e6dac  b.hs     #0x74e6dd4
+  0x074e6db0  ldr      x0, [x19]

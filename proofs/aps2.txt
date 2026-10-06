@@ -1,0 +1,77 @@
+loaded VA range: 0x0 .. 0xa5ace88
+stream at file 0x2ed270, 4056666 bytes, magic=b'APS2'
+header: relocation_count=1319752  initial r_offset=0x0  (stream pos 9)
+
+==============================================================================
+GROUP-FIELD ORDER SEARCH
+==============================================================================
+  INFO+OFFDELTA+ADDEND     count=1319752 (want 1319752)  consumed=4056666/4056666  out-of-range=1150317  types={'0x8': 999927, '0x403': 278531, '0x101': 19581, '0x18': 9234, '0x401': 2931}
+  INFO+ADDEND+OFFDELTA     count=1319752 (want 1319752)  consumed=4056666/4056666  out-of-range=1150317  types={'0x8': 999927, '0x403': 278531, '0x101': 19581, '0x18': 9234, '0x401': 2931}
+  OFFDELTA+INFO+ADDEND     count=1319752 (want 1319752)  consumed=4056666/4056666  out-of-range=0  types={'0x403': 1297240, '0x101': 19581, '0x401': 2931}
+        ^^^ VALID
+  OFFDELTA+ADDEND+INFO     count=1319752 (want 1319752)  consumed=4056666/4056666  out-of-range=0  types={'0x403': 1297240, '0x101': 19581, '0x401': 2931}
+        ^^^ VALID
+  ADDEND+INFO+OFFDELTA     count=1319752 (want 1319752)  consumed=4056666/4056666  out-of-range=1150317  types={'0x8': 999927, '0x403': 278531, '0x101': 19581, '0x18': 9234, '0x401': 2931}
+  ADDEND+OFFDELTA+INFO     count=1319752 (want 1319752)  consumed=4056666/4056666  out-of-range=0  types={'0x403': 1297240, '0x101': 19581, '0x401': 2931}
+        ^^^ VALID
+
+using order (4, 2, 1) : 1319752 relocations, stream fully consumed
+
+==============================================================================
+RESOLVED VTABLES
+==============================================================================
+cipher state (0x7b2d094 final)  @ 0x981a620
+   [ 0] 0x0981a620 -> 0x0000000007b2ce00  type=RELATIVE
+   [ 1] 0x0981a628 -> 0x0000000007b2d104  type=RELATIVE
+   [ 2] 0x0981a630 -> 0x0000000007b2d144  type=RELATIVE
+   [ 3] 0x0981a638 -> 0x0000000007b2d3dc  type=RELATIVE
+   [ 4] 0x0981a640 -> 0x0000000007b2d3e4  type=RELATIVE
+   [ 5] 0x0981a648 -> 0x0000000007b2ce94  type=RELATIVE
+   [ 6] 0x0981a650 -> 0x0000000007b2cf9c  type=RELATIVE
+   [ 7] 0x0981a658 -> 0x0000000007b2c7ec  type=RELATIVE
+   [ 8] 0x0981a660 -> 0x0000000007b2c88c  type=RELATIVE
+   [ 9] 0x0981a668 -> 0x0000000007b2d354  type=RELATIVE
+   [10] 0x0981a670 -> 0x0000000007b2d398  type=RELATIVE
+   [11] 0x0981a678 -> 0x0000000007b2d164  type=RELATIVE
+
+cipher state (alt)  @ 0x981a5b0
+   [ 0] 0x0981a5b0 -> 0x0000000007b2ce00  type=RELATIVE
+   [ 1] 0x0981a5b8 -> 0x0000000007b2ce28  type=RELATIVE
+   [ 2] 0x0981a5c0 -> 0x0000000007b2c7d8  type=RELATIVE
+   [ 3] 0x0981a5c8 -> 0x0000000007b2c7dc  type=RELATIVE
+   [ 4] 0x0981a5d0 -> 0x0000000007b2c7e4  type=RELATIVE
+   [ 5] 0x0981a5d8 -> 0x0000000007b2ce94  type=RELATIVE
+   [ 6] 0x0981a5e0 -> 0x0000000007b2cf9c  type=RELATIVE
+   [ 7] 0x0981a5e8 -> 0x0000000007b2c7ec  type=RELATIVE
+   [ 8] 0x0981a5f0 -> 0x0000000007b2c88c  type=RELATIVE
+   [ 9] 0x0981a5f8 -> 0x0000000007b2d354  type=RELATIVE
+   [10] 0x0981a600 -> 0x0000000007b2d398  type=RELATIVE
+   [11] 0x0981a608 -> 0x0000000007b2ce68  type=RELATIVE
+
+context A (56-byte key)  @ 0x981a590
+   [ 0] 0x0981a590 -> 0x0000000007b2c964  type=RELATIVE
+   [ 1] 0x0981a598 -> 0x0000000007b2c974  type=RELATIVE
+   [ 2] 0x0981a5a0  (no relocation)
+   [ 3] 0x0981a5a8  (no relocation)
+   [ 4] 0x0981a5b0 -> 0x0000000007b2ce00  type=RELATIVE
+   [ 5] 0x0981a5b8 -> 0x0000000007b2ce28  type=RELATIVE
+   [ 6] 0x0981a5c0 -> 0x0000000007b2c7d8  type=RELATIVE
+   [ 7] 0x0981a5c8 -> 0x0000000007b2c7dc  type=RELATIVE
+   [ 8] 0x0981a5d0 -> 0x0000000007b2c7e4  type=RELATIVE
+   [ 9] 0x0981a5d8 -> 0x0000000007b2ce94  type=RELATIVE
+   [10] 0x0981a5e0 -> 0x0000000007b2cf9c  type=RELATIVE
+   [11] 0x0981a5e8 -> 0x0000000007b2c7ec  type=RELATIVE
+
+context B (32-byte key)  @ 0x981a4a0
+   [ 0] 0x0981a4a0 -> 0x0000000007b2bcc8  type=RELATIVE
+   [ 1] 0x0981a4a8 -> 0x0000000007b2bcd8  type=RELATIVE
+   [ 2] 0x0981a4b0  (no relocation)
+   [ 3] 0x0981a4b8  (no relocation)
+   [ 4] 0x0981a4c0 -> 0x0000000007b2c194  type=RELATIVE
+   [ 5] 0x0981a4c8 -> 0x0000000007b2c198  type=RELATIVE
+   [ 6] 0x0981a4d0 -> 0x0000000007b2c7d8  type=RELATIVE
+   [ 7] 0x0981a4d8 -> 0x0000000007b2c7dc  type=RELATIVE
+   [ 8] 0x0981a4e0 -> 0x0000000007b2c7e4  type=RELATIVE
+   [ 9] 0x0981a4e8 -> 0x0000000007b2c19c  type=RELATIVE
+   [10] 0x0981a4f0 -> 0x0000000007b2c228  type=RELATIVE
+   [11] 0x0981a4f8 -> 0x0000000007b2c7ec  type=RELATIVE

@@ -1,0 +1,1 @@
+exec echo SWEEPPROBE; tail -3 /tmp/kgs/sweep.log 2>&1; echo CYCLES; ls /tmp/kgs/sweep 2>/dev/null | tail -3; du -sh /tmp/kgs/sweep 2>/dev/null; echo PROCS; pgrep -af sweep.sh | head -3; echo FINDERLOG; tail -5 /tmp/kgs/findkey.log 2>/dev/null

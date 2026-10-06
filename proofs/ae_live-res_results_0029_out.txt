@@ -1,0 +1,7 @@
+cmd: exec bash -c true; echo S5; adb -s 127.0.0.1:5555 shell input tap 360 631; sleep 2; adb -s 127.0.0.1:5555 shell input text "$PEERLINK_GMAIL"; sleep 2; adb -s 127.0.0.1:5555 shell input keyevent 66; sleep 12; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+at: 22:24:19
+$ bash -c true; echo S5; adb -s 127.0.0.1:5555 shell input tap 360 631; sleep 2; adb -s 127.0.0.1:5555 shell input text "$PEERLINK_GMAIL"; sleep 2; adb -s 127.0.0.1:5555 shell input keyevent 66; sleep 12; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+S5
+rc=0
+gamepid: 
+flows: 0

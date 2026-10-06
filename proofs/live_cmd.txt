@@ -1,0 +1,1 @@
+exec echo LIVENESS-$(date -u +%H:%M:%S) && echo SWEEPER:$(pgrep -af sweep_fixed | tr '\n' ' ') && echo GAMEPID:$(adb -s 127.0.0.1:5555 shell pidof jp.konami.pesam | tr -d '\r') && echo DISK:$(du -sh /tmp/kgs/sweep | cut -f1) && echo CYCLES:$(grep -c 'cycle ' /tmp/kgs/sweep.log) && tail -4 /tmp/kgs/sweep.log

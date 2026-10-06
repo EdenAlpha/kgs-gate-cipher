@@ -1,0 +1,613 @@
+﻿=== FUN_07c38a44 imports ===
+elfva       resolved
+------------------------------------------------------------
+8b38a10     IMPORT  _ZNSt6__ndk113random_deviceC2ERKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
+8b352c0     IMPORT  _ZdlPv
+8b38a20     IMPORT  _ZNSt6__ndk113random_deviceclEv
+8b38a30     IMPORT  _ZNSt6__ndk113random_deviceD1Ev
+8b38590     IMPORT  _ZNSt6__ndk18ios_base4initEPv
+8b385a0     IMPORT  _ZNSt6__ndk115basic_streambufIcNS_11char_traitsIcEEEC2Ev
+8b3ac10     IMPORT  _ZNSt6__ndk113basic_ostreamIcNS_11char_traitsIcEEElsEj
+8b35680     IMPORT  _Znam
+8b35260     IMPORT  _Znwm
+8b35360     IMPORT  memset
+8b35330     IMPORT  strlen
+8b388f0     IMPORT  _ZNSt6__ndk119__shared_weak_count14__release_weakEv
+8b385c0     IMPORT  _ZNSt6__ndk115basic_streambufIcNS_11char_traitsIcEEED2Ev
+8b385d0     IMPORT  _ZNSt6__ndk114basic_iostreamIcNS_11char_traitsIcEEED2Ev
+8b385e0     IMPORT  _ZNSt6__ndk19basic_iosIcNS_11char_traitsIcEEED2Ev
+8b35290     IMPORT  __stack_chk_fail
+8b38920     IMPORT  _ZNSt6__ndk119__shared_weak_countD2Ev
+8b35240     IMPORT  __cxa_atexit
+
+native (in-binary) callees: 0x2f1ec94, 0x7420858, 0x2f2e26c, 0x31b542c, 0x7b39a28, 0x2efa56c, 0x74b8d24, 0x74b8d5c, 0x2f15088, 0x8b34ef0, 0x7b393bc
+
+=== 0x7b39a28  (body+key -> 40-byte out)  elfva 0x7b39a28  (1280 bytes) ===
+7b39a28    sub      sp, sp, #0x1f0                        
+7b39a2c    stp      x29, x30, [sp, #0x1a0]                
+7b39a30    stp      x28, x25, [sp, #0x1b0]                
+7b39a34    stp      x24, x23, [sp, #0x1c0]                
+7b39a38    stp      x22, x21, [sp, #0x1d0]                
+7b39a3c    stp      x20, x19, [sp, #0x1e0]                
+7b39a40    add      x29, sp, #0x1a0                       
+7b39a44    mrs      x25, tpidr_el0                        
+7b39a48    mov      x19, x5                               
+7b39a4c    mov      x23, x3                               
+7b39a50    mov      w21, w2                               
+7b39a54    mov      x22, x1                               
+7b39a58    ldr      x8, [x25, #0x28]                      
+7b39a5c    mov      x20, x0                               
+7b39a60    cmp      w4, #0x41                             
+7b39a64    stur     x8, [x29, #-8]                        
+7b39a68    b.lt     #0x7b39a90                            
+7b39a6c    ldr      x8, [x20]                             
+7b39a70    mov      x3, sp                                
+7b39a74    mov      x0, x20                               
+7b39a78    mov      x1, x23                               
+7b39a7c    mov      w2, w4                                
+7b39a80    ldr      x8, [x8, #0x28]                       
+7b39a84    blr      x8                                    
+7b39a88    ldr      w4, [x20, #8]                         
+7b39a8c    mov      x23, sp                               
+7b39a90    movi     v0.2d, #0000000000000000              
+7b39a94    sxtw     x24, w4                               
+7b39a98    sub      x0, x29, #0x50                        
+7b39a9c    mov      x1, x23                               
+7b39aa0    mov      x2, x24                               
+7b39aa4    mov      w3, #0x41                             
+7b39aa8    sturb    wzr, [x29, #-0x10]                    
+7b39aac    stp      q0, q0, [x29, #-0xa0]                 
+7b39ab0    stp      q0, q0, [x29, #-0x80]                 
+7b39ab4    stp      q0, q0, [x29, #-0x50]                 
+7b39ab8    stp      q0, q0, [x29, #-0x30]                 
+7b39abc    sturb    wzr, [x29, #-0x60]                    
+7b39ac0    bl       #0x8b35400                              -> CALL 0x8b35400 __memcpy_chk
+7b39ac4    sub      x0, x29, #0xa0                        
+7b39ac8    mov      x1, x23                               
+7b39acc    mov      x2, x24                               
+7b39ad0    mov      w3, #0x41                             
+7b39ad4    bl       #0x8b35400                              -> CALL 0x8b35400 __memcpy_chk
+7b39ad8    ldp      q1, q3, [x29, #-0x50]                 
+7b39adc    movi     v0.16b, #0x36                         
+7b39ae0    mov      x0, x20                               
+7b39ae4    movi     v2.16b, #0x5c                         
+7b39ae8    eor      v1.16b, v1.16b, v0.16b                
+7b39aec    ldp      q4, q5, [x29, #-0xa0]                 
+7b39af0    eor      v3.16b, v3.16b, v0.16b                
+7b39af4    stp      q1, q3, [x29, #-0x50]                 
+7b39af8    eor      v4.16b, v4.16b, v2.16b                
+7b39afc    ldp      q1, q3, [x29, #-0x30]                 
+7b39b00    eor      v5.16b, v5.16b, v2.16b                
+7b39b04    stp      q4, q5, [x29, #-0xa0]                 
+7b39b08    eor      v1.16b, v1.16b, v0.16b                
+7b39b0c    eor      v0.16b, v3.16b, v0.16b                
+7b39b10    ldr      x8, [x20]                             
+7b39b14    ldp      q3, q4, [x29, #-0x80]                 
+7b39b18    stp      q1, q0, [x29, #-0x30]                 
+7b39b1c    eor      v0.16b, v3.16b, v2.16b                
+7b39b20    eor      v1.16b, v4.16b, v2.16b                
+7b39b24    stp      q0, q1, [x29, #-0x80]                 
+7b39b28    ldr      x8, [x8]                              
+7b39b2c    blr      x8                                    
+7b39b30    ldr      x8, [x20]                             
+7b39b34    sub      x1, x29, #0x50                        
+7b39b38    mov      x0, x20                               
+7b39b3c    mov      w2, #0x40                             
+7b39b40    ldr      x8, [x8, #8]                          
+7b39b44    blr      x8                                    
+7b39b48    ldr      x8, [x20]                             
+7b39b4c    mov      x0, x20                               
+7b39b50    mov      x1, x22                               
+7b39b54    mov      w2, w21                               
+7b39b58    ldr      x8, [x8, #8]                          
+7b39b5c    blr      x8                                    
+7b39b60    ldr      x8, [x20]                             
+7b39b64    mov      x0, x20                               
+7b39b68    mov      x1, x19                               
+7b39b6c    ldr      x8, [x8, #0x10]                       
+7b39b70    blr      x8                                    
+7b39b74    ldr      x8, [x20]                             
+7b39b78    mov      x0, x20                               
+7b39b7c    ldr      x8, [x8]                              
+7b39b80    blr      x8                                    
+7b39b84    ldr      x8, [x20]                             
+7b39b88    sub      x1, x29, #0xa0                        
+7b39b8c    mov      x0, x20                               
+7b39b90    mov      w2, #0x40                             
+7b39b94    ldr      x8, [x8, #8]                          
+7b39b98    blr      x8                                    
+7b39b9c    ldr      x8, [x20]                             
+7b39ba0    mov      x0, x20                               
+7b39ba4    ldr      x8, [x8, #0x20]                       
+7b39ba8    blr      x8                                    
+7b39bac    ldr      x8, [x20]                             
+7b39bb0    mov      w2, w0                                
+7b39bb4    mov      x0, x20                               
+7b39bb8    mov      x1, x19                               
+7b39bbc    ldr      x8, [x8, #8]                          
+7b39bc0    blr      x8                                    
+7b39bc4    ldr      x8, [x20]                             
+7b39bc8    mov      x0, x20                               
+7b39bcc    mov      x1, x19                               
+7b39bd0    ldr      x8, [x8, #0x10]                       
+7b39bd4    blr      x8                                    
+7b39bd8    ldr      x8, [x25, #0x28]                      
+7b39bdc    ldur     x9, [x29, #-8]                        
+7b39be0    cmp      x8, x9                                
+7b39be4    b.ne     #0x7b39c04                            
+7b39be8    ldp      x20, x19, [sp, #0x1e0]                
+7b39bec    ldp      x22, x21, [sp, #0x1d0]                
+7b39bf0    ldp      x24, x23, [sp, #0x1c0]                
+7b39bf4    ldp      x28, x25, [sp, #0x1b0]                
+7b39bf8    ldp      x29, x30, [sp, #0x1a0]                
+7b39bfc    add      sp, sp, #0x1f0                        
+7b39c00    ret                                            
+7b39c04    bl       #0x8b35290                              -> CALL 0x8b35290 __stack_chk_fail
+7b39c08    stp      x29, x30, [sp, #-0x30]!               
+7b39c0c    str      x21, [sp, #0x10]                      
+7b39c10    stp      x20, x19, [sp, #0x20]                 
+7b39c14    mov      x29, sp                               
+7b39c18    adrp     x8, #0x981a000                          -> page 0x981a000
+7b39c1c    add      x8, x8, #0xcd8                          -> 0x981acd8
+7b39c20    movi     v0.2d, #0000000000000000              
+7b39c24    adrp     x9, #0x72e000                           -> page 0x72e000
+7b39c28    stp      xzr, xzr, [x0, #0x168]                
+7b39c2c    mov      x19, x0                               
+7b39c30    str      x8, [x0]                              
+7b39c34    mov      w8, #6                                
+7b39c38    ldr      q1, [x9, #0x640]                        -> 0x72e640
+7b39c3c    mov      w9, #0x4550                           
+7b39c40    stp      q0, q0, [x0, #0x90]                   
+7b39c44    strb     w8, [x0, #0xa0]                       
+7b39c48    mov      w8, #0x53                             
+7b39c4c    sturh    w9, [x0, #0xa1]                       
+7b39c50    mov      w9, #8                                
+7b39c54    stur     q0, [x0, #8]                          
+7b39c58    strb     w8, [x0, #0xa3]                       
+7b39c5c    mov      w8, #0xff                             
+7b39c60    strb     w9, [x0, #0x168]                      
+7b39c64    mov      w9, #0x5448                           
+7b39c68    movk     w9, #0x5054, lsl #16                  
+7b39c6c    stur     q0, [x0, #0x18]                       
+7b39c70    sturh    w8, [x0, #0xe1]                       
+7b39c74    strh     w8, [x0, #0x160]                      
+7b39c78    add      x8, x0, #0x169                          -> 0x72e169
+7b39c7c    stur     q0, [x0, #0x28]                       
+7b39c80    str      xzr, [x0, #0x38]                      
+7b39c84    stp      xzr, xzr, [x0, #0x58]                 
+7b39c88    str      q1, [x0, #0x40]                       
+7b39c8c    str      xzr, [x0, #0x50]                      
+7b39c90    stur     xzr, [x0, #0x65]                      
+7b39c94    stp      q0, q0, [x0, #0x70]                   
+7b39c98    str      xzr, [x0, #0xb0]                      
+7b39c9c    strh     wzr, [x0, #0xb8]                      
+7b39ca0    strb     wzr, [x0, #0xba]                      
+7b39ca4    stp      wzr, wzr, [x0, #0xbc]                 
+7b39ca8    stp      xzr, xzr, [x0, #0xd0]                 
+7b39cac    str      xzr, [x0, #0xc8]                      
+7b39cb0    strb     wzr, [x0, #0xe0]                      
+7b39cb4    strb     wzr, [x0, #0xe8]                      
+7b39cb8    str      xzr, [x0, #0xf0]                      
+7b39cbc    strb     wzr, [x0, #0xf8]                      
+7b39cc0    str      xzr, [x0, #0x100]                     
+7b39cc4    strb     wzr, [x0, #0x108]                     
+7b39cc8    str      xzr, [x0, #0x110]                     
+7b39ccc    strb     wzr, [x0, #0x118]                     
+7b39cd0    str      xzr, [x0, #0x120]                     
+7b39cd4    strb     wzr, [x0, #0x128]                     
+7b39cd8    str      xzr, [x0, #0x130]                     
+7b39cdc    strb     wzr, [x0, #0x138]                     
+7b39ce0    stp      q0, q0, [x0, #0x140]                  
+7b39ce4    str      xzr, [x0, #0x178]                     
+7b39ce8    str      w9, [x8]                              
+7b39cec    stp      q0, q0, [x0, #0x180]                  
+7b39cf0    str      q0, [x0, #0x1a0]                      
+7b39cf4    cbz      x1, #0x7b39d44                        
+7b39cf8    mov      x20, x1                               
+7b39cfc    ldrb     w8, [x1]                              
+7b39d00    cbz      w8, #0x7b39d44                        
+7b39d04    add      x0, x19, #0x168                         -> str 'o'
+7b39d08    adrp     x1, #0x9f3000                           -> page 0x9f3000
+7b39d0c    add      x1, x1, #0x8ae                          -> str '('
+7b39d10    mov      w2, #1                                
+7b39d14    bl       #0x2f15088                              -> CALL 0x2f15088 
+7b39d18    mov      x21, x0                               
+7b39d1c    mov      x0, x20                               
+7b39d20    bl       #0x8b35330                              -> CALL 0x8b35330 strlen
+7b39d24    mov      x2, x0                                
+7b39d28    mov      x0, x21                               
+7b39d2c    mov      x1, x20                               
+7b39d30    bl       #0x2f15088                              -> CALL 0x2f15088 
+7b39d34    adrp     x1, #0xb10000                           -> page 0xb10000
+7b39d38    add      x1, x1, #0x623                          -> str ')'
+7b39d3c    mov      w2, #1                                
+7b39d40    bl       #0x2f15088                              -> CALL 0x2f15088 
+7b39d44    ldr      x20, [x19, #0x28]                       -> str '_SetBoneInitialTransform'
+7b39d48    stp      xzr, xzr, [x19, #0x20]                
+7b39d4c    cbz      x20, #0x7b39d60                       
+7b39d50    add      x1, x20, #8                             -> str 'Frequency'
+7b39d54    mov      x0, #-1                               
+7b39d58    bl       #0x8b34ef0                              -> CALL 0x8b34ef0 
+7b39d5c    cbz      x0, #0x7b39da0                        
+7b39d60    ldr      x20, [x19, #0x38]                       -> str 'ransform'
+7b39d64    stp      xzr, xzr, [x19, #0x30]                
+7b39d68    cbz      x20, #0x7b39dc4                       
+7b39d6c    add      x1, x20, #8                             -> str 'Frequency'
+7b39d70    mov      x0, #-1                               
+7b39d74    bl       #0x8b34ef0                              -> CALL 0x8b34ef0 
+7b39d78    cbnz     x0, #0x7b39dc4                        
+7b39d7c    ldr      x8, [x20]                             
+7b39d80    mov      x0, x20                               
+7b39d84    ldr      x8, [x8, #0x10]                         -> str 'y'
+7b39d88    blr      x8                                    
+7b39d8c    mov      x0, x20                               
+7b39d90    ldp      x20, x19, [sp, #0x20]                 
+7b39d94    ldr      x21, [sp, #0x10]                        -> str 'y'
+7b39d98    ldp      x29, x30, [sp], #0x30                 
+7b39d9c    b        #0x8b388f0                            
+7b39da0    ldr      x8, [x20]                             
+7b39da4    mov      x0, x20                               
+7b39da8    ldr      x8, [x8, #0x10]                         -> str 'y'
+7b39dac    blr      x8                                    
+7b39db0    mov      x0, x20                               
+7b39db4    bl       #0x8b388f0                              -> CALL 0x8b388f0 _ZNSt6__ndk119__shared_weak_count14__release_weakEv
+7b39db8    ldr      x20, [x19, #0x38]                       -> str 'ransform'
+7b39dbc    stp      xzr, xzr, [x19, #0x30]                
+7b39dc0    cbnz     x20, #0x7b39d6c                       
+7b39dc4    ldp      x20, x19, [sp, #0x20]                 
+7b39dc8    ldr      x21, [sp, #0x10]                        -> str 'y'
+7b39dcc    ldp      x29, x30, [sp], #0x30                 
+7b39dd0    ret                                            
+7b39dd4    stp      x29, x30, [sp, #-0x30]!               
+7b39dd8    stp      x22, x21, [sp, #0x10]                 
+7b39ddc    stp      x20, x19, [sp, #0x20]                 
+7b39de0    mov      x29, sp                               
+7b39de4    mov      x19, x0                               
+7b39de8    ldr      x8, [x0, #0x10]                         -> str 'y'
+7b39dec    adrp     x9, #0x981a000                          -> page 0x981a000
+7b39df0    add      x9, x9, #0xcd8                          -> 0x981acd8
+7b39df4    str      x9, [x0]                              
+7b39df8    cbz      x8, #0x7b39e70                        
+7b39dfc    ldr      x1, [x19, #8]                           -> 0x981a008
+7b39e00    cbz      x1, #0x7b39e60                        
+7b39e04    ldr      x0, [x19, #0x18]                        -> 0x981a018
+7b39e08    adrp     x2, #0xad7000                           -> page 0xad7000
+7b39e0c    add      x2, x2, #0x3b7                          -> str 'Close'
+7b39e10    adrp     x3, #0xbe1000                           -> page 0xbe1000
+7b39e14    add      x3, x3, #0x527                          -> str '()V'
+7b39e18    ldr      x8, [x0]                              
+7b39e1c    ldr      x8, [x8, #0x108]                        -> str ' by criFsBinder_Create.'
+7b39e20    blr      x8                                    
+7b39e24    mov      x2, x0                                
+7b39e28    ldp      x1, x0, [x19, #0x10]                  
+7b39e2c    bl       #0x4575654                              -> CALL 0x4575654 
+7b39e30    ldp      x1, x0, [x19, #0x10]                  
+7b39e34    ldr      x8, [x0]                              
+7b39e38    ldr      x8, [x8, #0xb0]                         -> str 'Surrounder Effect.'
+7b39e3c    blr      x8                                    
+7b39e40    ldr      x0, [x19, #0x18]                        -> str 'ack_SetDspBypassByName being deprecated. Please '
+7b39e44    str      xzr, [x19, #0x10]                     
+7b39e48    ldr      x1, [x19, #8]                           -> str '11:criAtomExAsrRack_SetDspBypassByName being dep'
+7b39e4c    ldr      x8, [x0]                              
+7b39e50    ldr      x8, [x8, #0xb0]                         -> str 'Surrounder Effect.'
+7b39e54    blr      x8                                    
+7b39e58    str      xzr, [x19, #8]                        
+7b39e5c    b        #0x7b39e70                            
+7b39e60    ldr      w8, [x19, #0xc0]                        -> str 't.'
+7b39e64    cbnz     w8, #0x7b39e70                        
+7b39e68    mov      w8, #0xb                              
+7b39e6c    str      w8, [x19, #0xc0]                      
+7b39e70    ldr      x20, [x19, #0x28]                       -> str 'ByName being deprecated. Please use criAtomExAsr'
+7b39e74    stp      xzr, xzr, [x19, #0x20]                
+7b39e78    cbz      x20, #0x7b39ea4                       
+7b39e7c    add      x1, x20, #8                             -> str '11:criAtomExAsrRack_SetDspBypassByName being dep'
+7b39e80    mov      x0, #-1                               
+7b39e84    bl       #0x8b34ef0                              -> CALL 0x8b34ef0 
+7b39e88    cbnz     x0, #0x7b39ea4                        
+7b39e8c    ldr      x8, [x20]                             
+7b39e90    mov      x0, x20                               
+7b39e94    ldr      x8, [x8, #0x10]                         -> str 'omExAsrRack_SetDspBypassByName being deprecated.'
+7b39e98    blr      x8                                    
+7b39e9c    mov      x0, x20                               
+7b39ea0    bl       #0x8b388f0                              -> CALL 0x8b388f0 _ZNSt6__ndk119__shared_weak_count14__release_weakEv
+7b39ea4    ldr      x20, [x19, #0x38]                       -> str 'recated. Please use criAtomExAsrRack_SetEffectBy'
+7b39ea8    stp      xzr, xzr, [x19, #0x30]                
+7b39eac    cbz      x20, #0x7b39ed8                       
+7b39eb0    add      x1, x20, #8                             -> str '11:criAtomExAsrRack_SetDspBypassByName being dep'
+7b39eb4    mov      x0, #-1                               
+7b39eb8    bl       #0x8b34ef0                              -> CALL 0x8b34ef0 
+7b39ebc    cbnz     x0, #0x7b39ed8                        
+7b39ec0    ldr      x8, [x20]                             
+7b39ec4    mov      x0, x20                               
+7b39ec8    ldr      x8, [x8, #0x10]                         -> str 'omExAsrRack_SetDspBypassByName being deprecated.'
+7b39ecc    blr      x8                                    
+7b39ed0    mov      x0, x20                               
+7b39ed4    bl       #0x8b388f0                              -> CALL 0x8b388f0 _ZNSt6__ndk119__shared_weak_count14__release_weakEv
+7b39ed8    ldr      x20, [x19, #0x198]                      -> str "ot start the Primary CPK's TOC(%d) load."
+7b39edc    cbz      x20, #0x7b39f44                       
+7b39ee0    ldr      x21, [x19, #0x1a0]                      -> str " the Primary CPK's TOC(%d) load."
+7b39ee4    mov      x0, x20                               
+7b39ee8    cmp      x21, x20                              
+7b39eec    b.ne     #0x7b39f00                            
+7b39ef0    b        #0x7b39f3c                            
+7b39ef4    mov      x21, x22                              
+7b39ef8    cmp      x22, x20                              
+7b39efc    b.eq     #0x7b39f38                            
+7b39f00    ldurb    w8, [x21, #-0x18]                     
+7b39f04    tbnz     w8, #0, #0x7b39f18                    
+7b39f08    ldurb    w8, [x21, #-0x30]                     
+7b39f0c    sub      x22, x21, #0x30                       
+7b39f10    tbz      w8, #0, #0x7b39ef4                    
+7b39f14    b        #0x7b39f2c                            
+7b39f18    ldur     x0, [x21, #-8]                        
+7b39f1c    bl       #0x2efa56c                              -> CALL 0x2efa56c 
+7b39f20    ldurb    w8, [x21, #-0x30]                     
+7b39f24    sub      x22, x21, #0x30                       
+
+=== 0x74b8d24  (returns a length)  elfva 0x74b8d24  (288 bytes) ===
+74b8d24    mov      x8, #-0x5555555555555556              
+74b8d28    add      x9, x0, #2                            
+74b8d2c    movk     x8, #0xaaab                           
+74b8d30    umulh    x8, x9, x8                            
+74b8d34    mov      x9, #0x435f                           
+74b8d38    movk     x9, #0xd79, lsl #16                   
+74b8d3c    lsl      x8, x8, #1                            
+74b8d40    movk     x9, #0x35e5, lsl #32                  
+74b8d44    and      x8, x8, #0xfffffffffffffffc           
+74b8d48    movk     x9, #0xd794, lsl #48                  
+74b8d4c    umulh    x9, x8, x9                            
+74b8d50    lsr      x9, x9, #6                            
+74b8d54    add      x0, x8, x9, lsl #1                    
+74b8d58    ret                                            
+74b8d5c    stp      x20, x19, [sp, #-0x10]!               
+74b8d60    cbz      x1, #0x74b8f00                        
+74b8d64    mov      w13, #0x86bd                          
+74b8d68    mov      x9, xzr                               
+74b8d6c    mov      x10, xzr                              
+74b8d70    mov      w8, wzr                               
+74b8d74    add      x11, x0, #2                           
+74b8d78    mov      w12, #4                               
+74b8d7c    movk     w13, #0x1af2, lsl #16                 
+74b8d80    mov      w14, #0x4c                            
+74b8d84    mov      w15, #0x3d                            
+74b8d88    mov      w16, #0xa0d                           
+74b8d8c    mov      w17, #0x3d3d                          
+74b8d90    mov      w0, #4                                
+74b8d94    mov      x5, x1                                
+74b8d98    adrp     x6, #0x995c000                          -> page 0x995c000
+74b8d9c    add      x6, x6, #0x370                          -> str 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuv'
+74b8da0    b        #0x74b8de0                            
+74b8da4    mov      x2, x7                                
+74b8da8    sub      x9, x9, #4                            
+74b8dac    sub      x5, x5, #3                            
+74b8db0    add      w0, w0, #4                              -> 0x995c004
+74b8db4    cmp      x10, x1                               
+74b8db8    b.lo     #0x74b8de0                            
+74b8dbc    b        #0x74b8f18                            
+74b8dc0    strh     w16, [x2, #4]                         
+74b8dc4    add      x2, x2, #6                              -> 0x995c006
+74b8dc8    add      w8, w8, #2                              -> 0x995c002
+74b8dcc    sub      x9, x9, #4                            
+74b8dd0    sub      x5, x5, #3                            
+74b8dd4    add      w0, w0, #4                              -> 0x995c004
+74b8dd8    cmp      x10, x1                               
+74b8ddc    b.hs     #0x74b8f18                            
+74b8de0    add      x7, x3, x9                            
+74b8de4    cmp      x7, #4                                
+74b8de8    b.lo     #0x74b8f34                            
+74b8dec    add      x7, x11, x10                          
+74b8df0    cmp      x5, #2                                
+74b8df4    b.eq     #0x74b8e34                            
+74b8df8    cmp      x5, #1                                
+74b8dfc    b.ne     #0x74b8e80                            
+74b8e00    ldurb    w19, [x7, #-2]                        
+74b8e04    lsr      x19, x19, #2                          
+74b8e08    ldrb     w19, [x6, x19]                        
+74b8e0c    strb     w19, [x2]                             
+74b8e10    ldurb    w7, [x7, #-2]                         
+74b8e14    ubfiz    x7, x7, #4, #2                        
+74b8e18    ldrb     w7, [x6, x7]                          
+74b8e1c    strh     w17, [x2, #2]                         
+74b8e20    strb     w7, [x2, #1]                          
+74b8e24    add      x7, x2, #4                              -> 0x995c004
+74b8e28    add      x10, x10, #3                            -> 0x995c003
+74b8e2c    tbnz     w4, #0, #0x74b8edc                    
+74b8e30    b        #0x74b8da4                            
+74b8e34    ldurb    w19, [x7, #-2]                        
+74b8e38    lsr      x19, x19, #2                          
+74b8e3c    ldrb     w19, [x6, x19]                        
+74b8e40    strb     w19, [x2]                             
+
+=== 0x74b8d5c  (out, 40, dst, cap, 1)  elfva 0x74b8d5c  (768 bytes) ===
+74b8d5c    stp      x20, x19, [sp, #-0x10]!               
+74b8d60    cbz      x1, #0x74b8f00                        
+74b8d64    mov      w13, #0x86bd                          
+74b8d68    mov      x9, xzr                               
+74b8d6c    mov      x10, xzr                              
+74b8d70    mov      w8, wzr                               
+74b8d74    add      x11, x0, #2                           
+74b8d78    mov      w12, #4                               
+74b8d7c    movk     w13, #0x1af2, lsl #16                 
+74b8d80    mov      w14, #0x4c                            
+74b8d84    mov      w15, #0x3d                            
+74b8d88    mov      w16, #0xa0d                           
+74b8d8c    mov      w17, #0x3d3d                          
+74b8d90    mov      w0, #4                                
+74b8d94    mov      x5, x1                                
+74b8d98    adrp     x6, #0x995c000                          -> page 0x995c000
+74b8d9c    add      x6, x6, #0x370                          -> str 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuv'
+74b8da0    b        #0x74b8de0                            
+74b8da4    mov      x2, x7                                
+74b8da8    sub      x9, x9, #4                            
+74b8dac    sub      x5, x5, #3                            
+74b8db0    add      w0, w0, #4                              -> 0x995c004
+74b8db4    cmp      x10, x1                               
+74b8db8    b.lo     #0x74b8de0                            
+74b8dbc    b        #0x74b8f18                            
+74b8dc0    strh     w16, [x2, #4]                         
+74b8dc4    add      x2, x2, #6                              -> 0x995c006
+74b8dc8    add      w8, w8, #2                              -> 0x995c002
+74b8dcc    sub      x9, x9, #4                            
+74b8dd0    sub      x5, x5, #3                            
+74b8dd4    add      w0, w0, #4                              -> 0x995c004
+74b8dd8    cmp      x10, x1                               
+74b8ddc    b.hs     #0x74b8f18                            
+74b8de0    add      x7, x3, x9                            
+74b8de4    cmp      x7, #4                                
+74b8de8    b.lo     #0x74b8f34                            
+74b8dec    add      x7, x11, x10                          
+74b8df0    cmp      x5, #2                                
+74b8df4    b.eq     #0x74b8e34                            
+74b8df8    cmp      x5, #1                                
+74b8dfc    b.ne     #0x74b8e80                            
+74b8e00    ldurb    w19, [x7, #-2]                        
+74b8e04    lsr      x19, x19, #2                          
+74b8e08    ldrb     w19, [x6, x19]                        
+74b8e0c    strb     w19, [x2]                             
+74b8e10    ldurb    w7, [x7, #-2]                         
+74b8e14    ubfiz    x7, x7, #4, #2                        
+74b8e18    ldrb     w7, [x6, x7]                          
+74b8e1c    strh     w17, [x2, #2]                         
+74b8e20    strb     w7, [x2, #1]                          
+74b8e24    add      x7, x2, #4                              -> 0x995c004
+74b8e28    add      x10, x10, #3                            -> 0x995c003
+74b8e2c    tbnz     w4, #0, #0x74b8edc                    
+74b8e30    b        #0x74b8da4                            
+74b8e34    ldurb    w19, [x7, #-2]                        
+74b8e38    lsr      x19, x19, #2                          
+74b8e3c    ldrb     w19, [x6, x19]                        
+74b8e40    strb     w19, [x2]                             
+74b8e44    ldurb    w19, [x7, #-1]                        
+74b8e48    ldurb    w20, [x7, #-2]                        
+74b8e4c    lsr      x19, x19, #4                          
+74b8e50    bfi      x19, x20, #4, #2                      
+74b8e54    ldrb     w19, [x6, x19]                        
+74b8e58    strb     w19, [x2, #1]                         
+74b8e5c    ldurb    w7, [x7, #-1]                         
+74b8e60    ubfiz    x7, x7, #2, #4                        
+74b8e64    ldrb     w7, [x6, x7]                          
+74b8e68    strb     w15, [x2, #3]                         
+74b8e6c    strb     w7, [x2, #2]                          
+74b8e70    add      x7, x2, #4                              -> 0x995c004
+74b8e74    add      x10, x10, #3                            -> 0x995c003
+74b8e78    tbnz     w4, #0, #0x74b8edc                    
+74b8e7c    b        #0x74b8da4                            
+74b8e80    ldurb    w19, [x7, #-2]                        
+74b8e84    lsr      x19, x19, #2                          
+74b8e88    ldrb     w19, [x6, x19]                        
+74b8e8c    strb     w19, [x2]                             
+74b8e90    ldurb    w19, [x7, #-1]                        
+74b8e94    ldurb    w20, [x7, #-2]                        
+74b8e98    lsr      x19, x19, #4                          
+74b8e9c    bfi      x19, x20, #4, #2                      
+74b8ea0    ldrb     w19, [x6, x19]                        
+74b8ea4    strb     w19, [x2, #1]                         
+74b8ea8    ldrb     w19, [x7]                             
+74b8eac    ldurb    w20, [x7, #-1]                        
+74b8eb0    lsr      x19, x19, #6                          
+74b8eb4    bfi      x19, x20, #2, #4                      
+74b8eb8    ldrb     w19, [x6, x19]                        
+74b8ebc    strb     w19, [x2, #2]                         
+74b8ec0    ldrb     w7, [x7]                              
+74b8ec4    and      x7, x7, #0x3f                         
+74b8ec8    ldrb     w7, [x6, x7]                          
+74b8ecc    strb     w7, [x2, #3]                          
+74b8ed0    add      x7, x2, #4                              -> 0x995c004
+74b8ed4    add      x10, x10, #3                            -> 0x995c003
+74b8ed8    tbz      w4, #0, #0x74b8da4                    
+74b8edc    lsr      w19, w0, #2                           
+74b8ee0    umull    x19, w19, w13                         
+74b8ee4    lsr      x19, x19, #0x21                       
+74b8ee8    msub     w19, w19, w14, w12                    
+74b8eec    cmp      w19, w9                               
+74b8ef0    b.ne     #0x74b8da4                            
+74b8ef4    cmp      x10, x1                               
+74b8ef8    b.lo     #0x74b8dc0                            
+74b8efc    b        #0x74b8da4                            
+74b8f00    strb     wzr, [x2]                             
+74b8f04    add      w8, wzr, wzr                          
+74b8f08    cmp      w8, #0                                
+74b8f0c    csel     w0, w8, wzr, gt                       
+74b8f10    ldp      x20, x19, [sp], #0x10                 
+74b8f14    ret                                            
+74b8f18    neg      w9, w9                                
+74b8f1c    strb     wzr, [x2]                             
+74b8f20    add      w8, w9, w8                            
+74b8f24    cmp      w8, #0                                
+74b8f28    csel     w0, w8, wzr, gt                       
+74b8f2c    ldp      x20, x19, [sp], #0x10                 
+74b8f30    ret                                            
+74b8f34    mov      w9, #-1                               
+74b8f38    add      w8, w9, w8                            
+74b8f3c    cmp      w8, #0                                
+74b8f40    csel     w0, w8, wzr, gt                       
+74b8f44    ldp      x20, x19, [sp], #0x10                 
+74b8f48    ret                                            
+74b8f4c    ldrb     w11, [x0]                             
+74b8f50    mov      w9, wzr                               
+74b8f54    cbz      w11, #0x74b9224                       
+74b8f58    cbz      x1, #0x74b9224                        
+74b8f5c    mov      w9, wzr                               
+74b8f60    mov      x8, xzr                               
+74b8f64    ldrb     w10, [x0, x8]                         
+74b8f68    cmp      w10, #0xd                             
+74b8f6c    ccmp     w10, #0xa, #4, ne                     
+74b8f70    b.ne     #0x74b8f80                            
+74b8f74    add      x8, x8, #1                              -> 0x995c001
+74b8f78    cbnz     w11, #0x74b9208                       
+74b8f7c    b        #0x74b9224                            
+74b8f80    cbz      x3, #0x74b922c                        
+74b8f84    cmp      w10, #0x2f                            
+74b8f88    b.eq     #0x74b8fac                            
+74b8f8c    cmp      w10, #0x2b                            
+74b8f90    b.ne     #0x74b8fc4                            
+74b8f94    mov      w10, #0x3e                            
+74b8f98    add      x11, x8, x0                           
+74b8f9c    ldrb     w11, [x11, #1]                        
+74b8fa0    cmp      w11, #0x2f                            
+74b8fa4    b.ne     #0x74b9008                            
+74b8fa8    b        #0x74b908c                            
+74b8fac    mov      w10, #0x3f                            
+74b8fb0    add      x11, x8, x0                           
+74b8fb4    ldrb     w11, [x11, #1]                        
+74b8fb8    cmp      w11, #0x2f                            
+74b8fbc    b.ne     #0x74b9008                            
+74b8fc0    b        #0x74b908c                            
+74b8fc4    sub      w11, w10, #0x30                       
+74b8fc8    cmp      w11, #9                               
+74b8fcc    b.hi     #0x74b8fe8                            
+74b8fd0    add      w10, w10, #4                            -> 0x995c004
+74b8fd4    add      x11, x8, x0                           
+74b8fd8    ldrb     w11, [x11, #1]                        
+74b8fdc    cmp      w11, #0x2f                            
+74b8fe0    b.ne     #0x74b9008                            
+74b8fe4    b        #0x74b908c                            
+74b8fe8    sub      w11, w10, #0x61                       
+74b8fec    cmp      w11, #0x19                            
+74b8ff0    b.hi     #0x74b9070                            
+74b8ff4    sub      w10, w10, #0x47                       
+74b8ff8    add      x11, x8, x0                           
+74b8ffc    ldrb     w11, [x11, #1]                        
+74b9000    cmp      w11, #0x2f                            
+74b9004    b.eq     #0x74b908c                            
+74b9008    cmp      w11, #0x2b                            
+74b900c    b.ne     #0x74b9028                            
+74b9010    mov      w11, #0x3e                            
+74b9014    add      x13, x8, #2                             -> 0x995c002
+74b9018    ldrb     w12, [x0, x13]                        
+74b901c    cmp      w12, #0x2f                            
+74b9020    b.ne     #0x74b90a0                            
+74b9024    b        #0x74b9124                            
+74b9028    sub      w12, w11, #0x30                       
+74b902c    cmp      w12, #9                               
+74b9030    b.hi     #0x74b904c                            
+74b9034    add      w11, w11, #4                            -> 0x995c004
+74b9038    add      x13, x8, #2                             -> 0x995c002
+74b903c    ldrb     w12, [x0, x13]                        
+74b9040    cmp      w12, #0x2f                            
+74b9044    b.ne     #0x74b90a0                            
+74b9048    b        #0x74b9124                            
+74b904c    sub      w12, w11, #0x61                       
+74b9050    cmp      w12, #0x19                            
+74b9054    b.hi     #0x74b9108                            
+74b9058    sub      w11, w11, #0x47                       

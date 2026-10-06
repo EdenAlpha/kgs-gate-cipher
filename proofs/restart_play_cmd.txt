@@ -1,0 +1,1 @@
+exec adb -s 127.0.0.1:5555 shell am force-stop com.google.android.gms; adb -s 127.0.0.1:5555 shell am force-stop com.android.vending; sleep 3; adb -s 127.0.0.1:5555 shell am start -n com.android.vending/com.google.android.finsky.activities.MainActivity; echo RESTARTED

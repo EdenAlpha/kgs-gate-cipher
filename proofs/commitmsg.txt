@@ -1,0 +1,41 @@
+gappslive: install the game from Play, not a sideload
+
+The run that delivered 1.97 GB on 2026-09-30 did four things, in an order that
+was never written into a workflow -- only into the live command branch history,
+which is why it had to be rediscovered from scratch on 2026-10-01:
+
+  - uninstall the sideloaded copy before installing from Play. Play Asset
+    Delivery only serves asset packs to an app Play itself installed; a pm
+    install-create sideload installs the binary and nothing else, which is why
+    tonight reported "Download Failed 0%".
+
+  - with interception OFF. Play rejects the proxy certificate, and the only
+    symptom is a bare Download Failed with no hint that the recorder is the
+    cause -- measured as "Client TLS handshake failed ... play.googleapis.com".
+
+  - install from the Play page, skip the payment gate, then wait for the packs
+    to settle (~45 min on 2026-09-30, so the wait allows an hour and exits
+    early once the size stops changing).
+
+  - and only afterwards arm the recorder.
+
+That sequence is now kgs-login/live/play_install.sh and step 04b. The XAPK
+fetch and the sideload steps are gone: if Play does not own the install, there
+is nothing for Play to serve.
+
+Also commits the Conscrypt apex bind-mount, which until now existed only in the
+live command branch. On Android 14 apps read the trust store from
+/apex/com.android.conscrypt/cacerts, which carries its own copy of the store,
+so the CA was installed correctly by hash and invisible to every app. Every
+run since has had a trust store that nothing reads.
+
+The frida timeout goes 900 -> 7200. The hook is detached and has to outlive its
+own step, because step 05 is what walks the game to the login screen; 15
+minutes killed it while the operator was still navigating.
+
+Multitouch is unchanged and still a hard gate in 04a, before the install,
+because Play's device compatibility check is what rejected the app.
+
+The Google 2FA code is now read from the PEERLINK_GCODE secret rather than
+typed into a commit. Two codes from 2026-09-30 are in the PUBLIC history of
+the live-cmd branch and should be treated as spent.

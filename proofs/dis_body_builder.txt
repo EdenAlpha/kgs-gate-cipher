@@ -1,0 +1,75 @@
+==============================================================================
+1.  URL-ISH STRINGS THE CALLER PASSES (x1/x2 at 0x7b2e41c..0x7b2e444)
+==============================================================================
+  0x0a4a98e8  b''
+  0x0a4a9900  b''
+  0x0a4a9918  b''
+  0x0a4a9918  b''
+
+==============================================================================
+0x7b2ef44   BODY BUILDER (x1 = sp+0x28)
+==============================================================================
+  prologue: 0x7b2ef44
+  instructions: 128   span 0x7b2ef44 .. 0x7b2f140
+  --- calls ---
+  --- notable immediates ---
+
+==============================================================================
+0x7b38268   called just before the sign
+==============================================================================
+  prologue: 0x7b380d8
+  instructions: 196   span 0x7b380d8 .. 0x7b383e4
+  --- calls ---
+    0x07b380f8 -> 0x07b2ca38
+          setup: mov x19, x2; mov w20, w1; mov x21, x0
+    0x07b3810c -> 0x07b2ca38
+          setup: cmp w22, #1; b.eq #0x7b38130; cbnz w22, #0x7b38154
+    0x07b38130 -> 0x07b2bd9c
+          setup: ldp x22, x21, [sp, #0x10]; ldp x29, x30, [sp], #0x30; b #0x7b2ccbc
+    0x07b381ac -> 0x08b35680   PLT: _Znam
+          setup: mov w21, w1; str x8, [sp, #8]; str w22, [sp, #4]
+    0x07b381b8 -> 0x08b35260   PLT: _Znwm
+          setup: bl #0x8b35680; mov x24, x0; mov w0, #0x20
+    0x07b381e4 -> 0x08b35360   PLT: memset
+          setup: mov x0, x24; mov x2, x22; str xzr, [x25, #8]!
+    0x07b381f8 -> 0x07dd6e78
+          setup: mov x0, x23; mov w1, w21; mov x2, x24
+    0x07b38208 -> 0x074e6c58
+          setup: ldr w2, [sp, #4]; mov x0, x20; mov x1, x24
+    0x07b38214 -> 0x08b34ef0
+          setup: bl #0x74e6c58; mov x0, #-1; mov x1, x25
+    0x07b38230 -> 0x08b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x19
+    0x07b38264 -> 0x08b35290   PLT: __stack_chk_fail
+          setup: ldp x29, x30, [sp, #0x10]; add sp, sp, #0x60; ret 
+    0x07b382a8 -> 0x07d269e8
+          setup: stur x8, [x29, #-8]; add x8, sp, #0x38; str wzr, [x3]
+    0x07b382b4 -> 0x08b3abf0   PLT: _ZNSt6__ndk119__shared_weak_count4lockEv
+          setup: bl #0x7d269e8; ldr x0, [sp, #0x40]; cbz x0, #0x7b38328
+    0x07b382d8 -> 0x08b34e90
+          setup: add x24, x23, #8; mov w0, #1; mov x1, x24
+    0x07b382e4 -> 0x08b34ef0
+          setup: bl #0x8b34e90; mov x0, #-1; mov x1, x24
+    0x07b38300 -> 0x08b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x23
+    0x07b3830c -> 0x08b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv
+          setup: bl #0x8b388f0; ldr x0, [sp, #0x40]; cbz x0, #0x7b38310
+    0x07b38360 -> 0x08b34ef0
+          setup: cbz x23, #0x7b38380; add x1, x23, #8; mov x0, #-1
+    0x07b3837c -> 0x08b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x23
+    0x07b38388 -> 0x074e6b00
+          setup: bl #0x8b388f0; add x0, sp, #0x38; mov x1, xzr
+    0x07b38398 -> 0x07b38168
+          setup: add x2, sp, #0x38; mov x0, x22; mov w1, w21
+    0x07b383a8 -> 0x074e6b00
+          setup: tbz w0, #0, #0x7b383fc; add x0, sp, #8; mov x1, xzr
+    0x07b383b0 -> 0x074e6d10
+          setup: mov x1, xzr; bl #0x74e6b00; add x0, sp, #0x38
+    0x07b383bc -> 0x074e6d24
+          setup: bl #0x74e6d10; mov x21, x0; add x0, sp, #0x38
+    0x07b383c8 -> 0x07b2ca38
+          setup: bl #0x74e6d24; ldr w20, [x20]; mov x22, x0
+    0x07b383dc -> 0x07b2ca38
+          setup: cmp w20, #1; b.eq #0x7b38404; cbnz w20, #0x7b3843c
+  --- notable immediates ---

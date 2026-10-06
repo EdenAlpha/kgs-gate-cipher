@@ -1,0 +1,481 @@
+==============================================================================
+EVERY adrp-REACHABLE ACCESS TO 0xa4b0140..0xa4b0190
+==============================================================================
+executable sections scanned: 2
+accesses in window         : 6
+
+  0x07d65d28  LOAD       -> 0x0a4b0140
+  0x07d665b8  STORE      -> 0x0a4b0148
+  0x07d65068  LOAD       -> 0x0a4b0158   <<<< CONTEXT POINTER
+  0x07d6510c  LOAD       -> 0x0a4b0170
+  0x07d65568  LOAD       -> 0x0a4b0188
+  0x07d66680  STORE      -> 0x0a4b018d
+
+==============================================================================
+DETAIL: EVERY ACCESS TO THE CONTEXT POINTER 0xa4b0158
+==============================================================================
+
+------------------------------------------------------------------------------
+LOAD 0x07d65068
+  function start 0x7d64fb0  (184 bytes before)
+  --- calls / strings ---
+      0x07d64fb0 bl #0x8b382d0   PLT: abort
+            setup: 
+      0x07d64fb4 bl #0x8b382d0   PLT: abort
+            setup: bl #0x8b382d0
+      0x07d64fb8 bl #0x8b382d0   PLT: abort
+            setup: bl #0x8b382d0; bl #0x8b382d0
+      [ref] 0x07d64fd4 -> 0x0a4b0158  <not file-backed>
+      [ref] 0x07d64ff0 -> 0x0a4b0158  <not file-backed>
+      0x07d65000 bl #0x6f878d0
+            setup: mov x2, sp; mov w1, #0x38; strb wzr, [sp]
+      [ref] 0x07d65020 -> 0x09823af0  <zeroed>
+      [ref] 0x07d65080 -> 0x0a4b0170  <not file-backed>
+      [ref] 0x07d65094 -> 0x0a4b0170  <not file-backed>
+      0x07d650a4 bl #0x6f878d0
+            setup: add x2, sp, #4; mov w1, #0x20; strb wzr, [sp, #4]
+      [ref] 0x07d650c4 -> 0x09823ba0  <zeroed>
+      0x07d65140 bl #0x8b35290   PLT: __stack_chk_fail
+            setup: ldr x19, [sp, #0x20]; add sp, sp, #0x30; ret 
+      0x07d6518c bl #0x6f878d0
+            setup: b.ls #0x7d65194; add x2, sp, #4; mov x0, x19
+  --- window around the access ---
+      0x07d65018  adrp    x13, #0xa4b0000
+      0x07d6501c  adrp    x14, #0x9823000
+      0x07d65020  add     x14, x14, #0xaf0
+      0x07d65024  and     w15, w8, #0xff
+      0x07d65028  add     x17, x14, x8
+      0x07d6502c  mul     w16, w15, w9
+      0x07d65030  mul     w15, w15, w10
+      0x07d65034  ldrb    w17, [x17, #8]
+      0x07d65038  lsr     w16, w16, #9
+      0x07d6503c  lsr     w15, w15, #0xb
+      0x07d65040  add     w16, w16, w16, lsl #3
+      0x07d65044  msub    w15, w15, w11, w8
+      0x07d65048  sub     w16, w8, w16
+      0x07d6504c  add     x16, x14, w16, uxtb
+      0x07d65050  add     x15, x14, w15, uxtb
+      0x07d65054  ldrb    w16, [x16, #0x50]
+      0x07d65058  ldrb    w15, [x15, #0x59]
+      0x07d6505c  eor     w16, w17, w16
+      0x07d65060  eor     w15, w15, w12
+      0x07d65064  eor     w15, w16, w15
+      0x07d65068  ldr     x16, [x13, #0x158]   <== LOAD
+      0x07d6506c  strb    w15, [x16, x8]
+      0x07d65070  add     x8, x8, #1
+      0x07d65074  cmp     x8, #0x38
+      0x07d65078  b.ne    #0x7d65024
+      0x07d6507c  adrp    x8, #0xa4b0000
+      0x07d65080  add     x8, x8, #0x170
+      0x07d65084  ldp     x9, x8, [x8]
+      0x07d65088  cmp     x9, x8
+      0x07d6508c  b.ne    #0x7d65120
+      0x07d65090  adrp    x0, #0xa4b0000
+      0x07d65094  add     x0, x0, #0x170
+      0x07d65098  add     x2, sp, #4
+      0x07d6509c  mov     w1, #0x20
+      0x07d650a0  strb    wzr, [sp, #4]
+      0x07d650a4  bl      #0x6f878d0
+      0x07d650a8  mov     x8, xzr
+      0x07d650ac  mov     w9, #0x39
+      0x07d650b0  mov     w10, #0xab
+      0x07d650b4  mov     w11, #0xc
+      0x07d650b8  mov     w12, #0x75
+
+==============================================================================
+DETAIL: NEIGHBOURING GLOBALS IN THE CONTEXT BLOCK
+==============================================================================
+
+------------------------------------------------------------------------------
+LOAD 0x07d65d28
+  function start 0x7d65c80  (168 bytes before)
+  --- calls / strings ---
+      0x07d65c80 bl #0x8b35290   PLT: __stack_chk_fail
+            setup: 
+      0x07d65cd4 bl #0x7d6532c
+            setup: stp q0, q0, [sp, #0x30]; stp q0, q0, [sp, #0x50]; str q0, [sp]
+      0x07d65cf8 bl #0x2efb614
+            setup: lsr x8, x8, #1; csel x1, x11, x9, eq; csel x2, x8, x10, eq
+      0x07d65d1c bl #0x2efb614
+            setup: lsr x8, x8, #1; csel x1, x11, x9, eq; csel x2, x8, x10, eq
+      0x07d65d90 bl #0x2efa56c
+            setup: add sp, sp, #0xc0; ret ; ldr x0, [sp, #0x70]
+      0x07d65da0 bl #0x2efa56c
+            setup: ldrb w8, [sp, #0x48]; tbz w8, #0, #0x7d65d48; ldr x0, [sp, #0x58]
+      0x07d65db0 bl #0x2efa56c
+            setup: ldrb w8, [sp, #0x30]; tbz w8, #0, #0x7d65d50; ldr x0, [sp, #0x40]
+      0x07d65dc0 bl #0x2efa56c
+            setup: ldrb w8, [sp, #0x18]; tbz w8, #0, #0x7d65d58; ldr x0, [sp, #0x28]
+      0x07d65dd0 bl #0x2efa56c
+            setup: ldrb w8, [sp]; tbz w8, #0, #0x7d65d60; ldr x0, [sp, #0x10]
+      0x07d65de4 bl #0x8b35290   PLT: __stack_chk_fail
+            setup: ldur x9, [x29, #-8]; cmp x8, x9; b.eq #0x7d65d70
+      [ref] 0x07d65dec -> 0x0a4b0158  <not file-backed>
+      [ref] 0x07d65df8 -> 0x0a4b0170  <not file-backed>
+      0x07d65e50 bl #0x2efa4dc
+            setup: orr x23, x21, #0xf; mov w1, wzr; add x0, x23, #1
+  --- window around the access ---
+      0x07d65cd8  ldp     x10, x9, [sp, #0x20]
+      0x07d65cdc  add     x11, x23, #0x19
+      0x07d65ce0  mov     x0, x21
+      0x07d65ce4  ldrb    w8, [sp, #0x18]
+      0x07d65ce8  tst     w8, #1
+      0x07d65cec  lsr     x8, x8, #1
+      0x07d65cf0  csel    x1, x11, x9, eq
+      0x07d65cf4  csel    x2, x8, x10, eq
+      0x07d65cf8  bl      #0x2efb614
+      0x07d65cfc  ldp     x10, x9, [sp, #0x38]
+      0x07d65d00  add     x11, x23, #0x31
+      0x07d65d04  mov     x0, x20
+      0x07d65d08  ldrb    w8, [sp, #0x30]
+      0x07d65d0c  tst     w8, #1
+      0x07d65d10  lsr     x8, x8, #1
+      0x07d65d14  csel    x1, x11, x9, eq
+      0x07d65d18  csel    x2, x8, x10, eq
+      0x07d65d1c  bl      #0x2efb614
+      0x07d65d20  adrp    x8, #0xa4b0000
+      0x07d65d24  mov     w9, #0x1bb
+      0x07d65d28  ldrh    w8, [x8, #0x140]   <== LOAD
+      0x07d65d2c  cmp     w8, #0
+      0x07d65d30  csel    w8, w9, w8, eq
+      0x07d65d34  ldrb    w9, [sp, #0x60]
+      0x07d65d38  strh    w8, [x19]
+      0x07d65d3c  tbnz    w9, #0, #0x7d65d8c
+      0x07d65d40  ldrb    w8, [sp, #0x48]
+      0x07d65d44  tbnz    w8, #0, #0x7d65d9c
+      0x07d65d48  ldrb    w8, [sp, #0x30]
+      0x07d65d4c  tbnz    w8, #0, #0x7d65dac
+      0x07d65d50  ldrb    w8, [sp, #0x18]
+      0x07d65d54  tbnz    w8, #0, #0x7d65dbc
+      0x07d65d58  ldrb    w8, [sp]
+      0x07d65d5c  tbnz    w8, #0, #0x7d65dcc
+      0x07d65d60  ldr     x8, [x22, #0x28]
+      0x07d65d64  ldur    x9, [x29, #-8]
+      0x07d65d68  cmp     x8, x9
+      0x07d65d6c  b.ne    #0x7d65de4
+      0x07d65d70  mov     w0, #1
+      0x07d65d74  ldp     x20, x19, [sp, #0xb0]
+      0x07d65d78  ldp     x22, x21, [sp, #0xa0]
+
+------------------------------------------------------------------------------
+STORE 0x07d665b8
+  function start 0x7d66580  (56 bytes before)
+  --- calls / strings ---
+      [ref] 0x07d66598 -> 0x0a4b0148  <not file-backed>
+      [ref] 0x07d665a0 -> 0x0683f9d8  <2 bytes> ffc3
+      [ref] 0x07d665a8 -> 0x08b75140  <zeroed>
+      0x07d665c4 bl #0x8b35240   PLT: __cxa_atexit
+            setup: str wzr, [x19]; stp xzr, xzr, [x19, #0x18]; str xzr, [x1, #0x10]!
+      0x07d665dc bl #0x8b35240   PLT: __cxa_atexit
+            setup: mov x2, x20; stp xzr, xzr, [x19, #0x30]; str xzr, [x1, #0x28]!
+      [ref] 0x07d665e4 -> 0x02ef7b54  <1 bytes> 08
+      [ref] 0x07d665ec -> 0x0a4b00e0  <not file-backed>
+      0x07d66600 bl #0x8b35240   PLT: __cxa_atexit
+            setup: mov x2, x20; stp xzr, xzr, [x1, #8]; str xzr, [x1]
+      [ref] 0x07d66608 -> 0x0a4b00f8  <not file-backed>
+      0x07d6661c bl #0x8b35240   PLT: __cxa_atexit
+            setup: mov x2, x20; stp xzr, xzr, [x1, #8]; str xzr, [x1]
+      [ref] 0x07d66624 -> 0x0a4b0110  <not file-backed>
+      0x07d66638 bl #0x8b35240   PLT: __cxa_atexit
+            setup: mov x2, x20; stp xzr, xzr, [x1, #8]; str xzr, [x1]
+      [ref] 0x07d66640 -> 0x0a4b0128  <not file-backed>
+      0x07d66654 bl #0x8b35240   PLT: __cxa_atexit
+            setup: mov x2, x20; stp xzr, xzr, [x1, #8]; str xzr, [x1]
+      0x07d66688 bl #0x8b35240   PLT: __cxa_atexit
+            setup: strb w23, [x1]; strb w8, [x19, #0x45]; stur w9, [x19, #0x41]
+      [ref] 0x07d66694 -> 0x00bc9e52  'pesam.stun.service.konami.net'
+      0x07d666a8 bl #0x2efb614
+            setup: stp xzr, xzr, [x19, #0x60]; str xzr, [x22, #0x58]!; mov x0, x22
+      0x07d666b8 bl #0x8b35240   PLT: __cxa_atexit
+            setup: mov x0, x21; mov x1, x22; mov x2, x20
+      0x07d666e8 bl #0x8b35240   PLT: __cxa_atexit
+            setup: strb w23, [x1]; strb w8, [x19, #0x75]; stur w9, [x19, #0x71]
+      [ref] 0x07d666f4 -> 0x00a5ed56  'pes22-game.cs.konami.net'
+  --- window around the access ---
+      0x07d66580  stp     x29, x30, [sp, #-0x40]!
+      0x07d66584  str     x23, [sp, #0x10]
+      0x07d66588  stp     x22, x21, [sp, #0x20]
+      0x07d6658c  stp     x20, x19, [sp, #0x30]
+      0x07d66590  mov     x29, sp
+      0x07d66594  adrp    x19, #0xa4b0000
+      0x07d66598  add     x19, x19, #0x148
+      0x07d6659c  adrp    x21, #0x683f000
+      0x07d665a0  add     x21, x21, #0x9d8
+      0x07d665a4  adrp    x20, #0x8b75000
+      0x07d665a8  add     x20, x20, #0x140
+      0x07d665ac  mov     x1, x19
+      0x07d665b0  mov     x0, x21
+      0x07d665b4  mov     x2, x20
+      0x07d665b8  str     wzr, [x19]   <== STORE
+      0x07d665bc  stp     xzr, xzr, [x19, #0x18]
+      0x07d665c0  str     xzr, [x1, #0x10]!
+      0x07d665c4  bl      #0x8b35240
+      0x07d665c8  mov     x1, x19
+      0x07d665cc  mov     x0, x21
+      0x07d665d0  mov     x2, x20
+      0x07d665d4  stp     xzr, xzr, [x19, #0x30]
+      0x07d665d8  str     xzr, [x1, #0x28]!
+      0x07d665dc  bl      #0x8b35240
+      0x07d665e0  adrp    x21, #0x2ef7000
+      0x07d665e4  add     x21, x21, #0xb54
+      0x07d665e8  adrp    x1, #0xa4b0000
+      0x07d665ec  add     x1, x1, #0xe0
+      0x07d665f0  mov     x0, x21
+      0x07d665f4  mov     x2, x20
+      0x07d665f8  stp     xzr, xzr, [x1, #8]
+      0x07d665fc  str     xzr, [x1]
+      0x07d66600  bl      #0x8b35240
+      0x07d66604  adrp    x1, #0xa4b0000
+      0x07d66608  add     x1, x1, #0xf8
+
+------------------------------------------------------------------------------
+LOAD 0x07d6510c
+  function start 0x7d64fb0  (348 bytes before)
+  --- calls / strings ---
+      0x07d64fb0 bl #0x8b382d0   PLT: abort
+            setup: 
+      0x07d64fb4 bl #0x8b382d0   PLT: abort
+            setup: bl #0x8b382d0
+      0x07d64fb8 bl #0x8b382d0   PLT: abort
+            setup: bl #0x8b382d0; bl #0x8b382d0
+      [ref] 0x07d64fd4 -> 0x0a4b0158  <not file-backed>
+      [ref] 0x07d64ff0 -> 0x0a4b0158  <not file-backed>
+      0x07d65000 bl #0x6f878d0
+            setup: mov x2, sp; mov w1, #0x38; strb wzr, [sp]
+      [ref] 0x07d65020 -> 0x09823af0  <zeroed>
+      [ref] 0x07d65080 -> 0x0a4b0170  <not file-backed>
+      [ref] 0x07d65094 -> 0x0a4b0170  <not file-backed>
+      0x07d650a4 bl #0x6f878d0
+            setup: add x2, sp, #4; mov w1, #0x20; strb wzr, [sp, #4]
+      [ref] 0x07d650c4 -> 0x09823ba0  <zeroed>
+      0x07d65140 bl #0x8b35290   PLT: __stack_chk_fail
+            setup: ldr x19, [sp, #0x20]; add sp, sp, #0x30; ret 
+      0x07d6518c bl #0x6f878d0
+            setup: b.ls #0x7d65194; add x2, sp, #4; mov x0, x19
+      0x07d65234 bl #0x8b35290   PLT: __stack_chk_fail
+            setup: ldr x21, [sp, #0x20]; add sp, sp, #0x40; ret 
+  --- window around the access ---
+      0x07d650bc  adrp    x13, #0xa4b0000
+      0x07d650c0  adrp    x14, #0x9823000
+      0x07d650c4  add     x14, x14, #0xba0
+      0x07d650c8  and     w15, w8, #0xff
+      0x07d650cc  add     x17, x14, x8
+      0x07d650d0  mul     w16, w15, w9
+      0x07d650d4  mul     w15, w15, w10
+      0x07d650d8  ldrb    w17, [x17, #8]
+      0x07d650dc  lsr     w16, w16, #9
+      0x07d650e0  lsr     w15, w15, #0xb
+      0x07d650e4  add     w16, w16, w16, lsl #3
+      0x07d650e8  msub    w15, w15, w11, w8
+      0x07d650ec  sub     w16, w8, w16
+      0x07d650f0  add     x16, x14, w16, uxtb
+      0x07d650f4  add     x15, x14, w15, uxtb
+      0x07d650f8  ldrb    w16, [x16, #0x38]
+      0x07d650fc  ldrb    w15, [x15, #0x41]
+      0x07d65100  eor     w16, w17, w16
+      0x07d65104  eor     w15, w15, w12
+      0x07d65108  eor     w15, w16, w15
+      0x07d6510c  ldr     x16, [x13, #0x170]   <== LOAD
+      0x07d65110  strb    w15, [x16, x8]
+      0x07d65114  add     x8, x8, #1
+      0x07d65118  cmp     x8, #0x20
+      0x07d6511c  b.ne    #0x7d650c8
+      0x07d65120  ldr     x8, [x19, #0x28]
+      0x07d65124  ldr     x9, [sp, #8]
+      0x07d65128  cmp     x8, x9
+      0x07d6512c  b.ne    #0x7d65140
+      0x07d65130  ldp     x29, x30, [sp, #0x10]
+      0x07d65134  ldr     x19, [sp, #0x20]
+      0x07d65138  add     sp, sp, #0x30
+      0x07d6513c  ret     
+      0x07d65140  bl      #0x8b35290
+      0x07d65144  sub     sp, sp, #0x40
+      0x07d65148  stp     x29, x30, [sp, #0x10]
+      0x07d6514c  str     x21, [sp, #0x20]
+      0x07d65150  stp     x20, x19, [sp, #0x30]
+      0x07d65154  add     x29, sp, #0x10
+      0x07d65158  mrs     x21, tpidr_el0
+      0x07d6515c  mov     x19, x1
+
+------------------------------------------------------------------------------
+LOAD 0x07d65568
+  function start 0x7d65328  (576 bytes before)
+  --- calls / strings ---
+      0x07d65328 bl #0x8b35290   PLT: __stack_chk_fail
+            setup: 
+      [ref] 0x07d65340 -> 0x0a4b0150  <not file-backed>
+      [ref] 0x07d6536c -> 0x0a4b0218  <not file-backed>
+      0x07d65390 bl #0x2efb614
+            setup: lsr x8, x8, #1; csel x1, x11, x9, eq; csel x2, x8, x10, eq
+      0x07d653b4 bl #0x2efb614
+            setup: lsr x8, x8, #1; csel x1, x11, x9, eq; csel x2, x8, x10, eq
+      0x07d653d4 bl #0x2efb614
+            setup: lsr x8, x8, #1; csinc x1, x9, x20, ne; csel x2, x8, x10, eq
+      0x07d653f8 bl #0x2efb614
+            setup: lsr x8, x8, #1; csel x1, x11, x9, eq; csel x2, x8, x10, eq
+      [ref] 0x07d65430 -> 0x0a4b0218  <not file-backed>
+      0x07d65438 bl #0x7d6677c
+            setup: adrp x20, #0xa4b0000; add x20, x20, #0x218; mov x0, x20
+      0x07d65460 bl #0x2efb614
+            setup: lsr x8, x8, #1; csel x1, x11, x9, eq; csel x2, x8, x10, eq
+      0x07d65484 bl #0x2efb614
+            setup: lsr x8, x8, #1; csel x1, x11, x9, eq; csel x2, x8, x10, eq
+      0x07d654a4 bl #0x2efb614
+            setup: lsr x8, x8, #1; csinc x1, x9, x20, ne; csel x2, x8, x10, eq
+      0x07d654c8 bl #0x2efb614
+            setup: lsr x8, x8, #1; csel x1, x11, x9, eq; csel x2, x8, x10, eq
+      0x07d654ec bl #0x2efb614
+            setup: lsr x8, x8, #1; csel x1, x11, x9, eq; csel x2, x8, x10, eq
+      [ref] 0x07d6550c -> 0x0a4b0188  <not file-backed>
+      0x07d65534 bl #0x2efb614
+            setup: lsr x8, x8, #1; csel x1, x11, x9, eq; csel x2, x8, x10, eq
+      0x07d6555c bl #0x2efb614
+            setup: lsr x8, x8, #1; csel x1, x11, x9, eq; csel x2, x8, x10, eq
+      0x07d6557c bl #0x2efb614
+            setup: lsr x8, x8, #1; csinc x1, x9, x22, ne; csel x2, x8, x10, eq
+      0x07d655a0 bl #0x2efb614
+            setup: lsr x8, x8, #1; csel x1, x11, x9, eq; csel x2, x8, x10, eq
+      0x07d655c4 bl #0x2efb614
+            setup: lsr x8, x8, #1; csel x1, x11, x9, eq; csel x2, x8, x10, eq
+      [ref] 0x07d655cc -> 0x0a4b00f8  <not file-backed>
+      [ref] 0x07d655ec -> 0x0a4b00f9  <not file-backed>
+      0x07d65600 bl #0x2efb614
+            setup: mov x0, x21; ldur x10, [x9, #0xf]; csel x1, x9, x10, eq
+      [ref] 0x07d65608 -> 0x0a4b0110  <not file-backed>
+      [ref] 0x07d65628 -> 0x0a4b0111  <not file-backed>
+      0x07d6563c bl #0x2efb614
+            setup: mov x0, x20; ldur x10, [x9, #0xf]; csel x1, x9, x10, eq
+      [ref] 0x07d65644 -> 0x0a4b00e0  <not file-backed>
+      [ref] 0x07d65664 -> 0x0a4b00e1  <not file-backed>
+      [ref] 0x07d6569c -> 0x0a4b0150  <not file-backed>
+      0x07d656a4 bl #0x8b35310   PLT: __cxa_guard_acquire
+            setup: adrp x20, #0xa4b0000; add x20, x20, #0x150; mov x0, x20
+  --- window around the access ---
+      0x07d65518  mov     x0, x21
+      0x07d6551c  ldp     x10, x9, [x22, #0x50]
+      0x07d65520  ldrb    w8, [x22, #0x48]
+      0x07d65524  tst     w8, #1
+      0x07d65528  lsr     x8, x8, #1
+      0x07d6552c  csel    x1, x11, x9, eq
+      0x07d65530  csel    x2, x8, x10, eq
+      0x07d65534  bl      #0x2efb614
+      0x07d65538  ldp     x10, x9, [x22, #0x68]
+      0x07d6553c  add     x20, x19, #0x30
+      0x07d65540  add     x11, x22, #0x61
+      0x07d65544  ldrb    w8, [x22, #0x60]
+      0x07d65548  mov     x0, x20
+      0x07d6554c  tst     w8, #1
+      0x07d65550  lsr     x8, x8, #1
+      0x07d65554  csel    x1, x11, x9, eq
+      0x07d65558  csel    x2, x8, x10, eq
+      0x07d6555c  bl      #0x2efb614
+      0x07d65560  ldp     x10, x9, [x22, #8]
+      0x07d65564  mov     x0, x19
+      0x07d65568  ldrb    w8, [x22]   <== LOAD
+      0x07d6556c  tst     w8, #1
+      0x07d65570  lsr     x8, x8, #1
+      0x07d65574  csinc   x1, x9, x22, ne
+      0x07d65578  csel    x2, x8, x10, eq
+      0x07d6557c  bl      #0x2efb614
+      0x07d65580  ldp     x10, x9, [x22, #0x80]
+      0x07d65584  add     x11, x22, #0x79
+      0x07d65588  add     x0, x19, #0x48
+      0x07d6558c  ldrb    w8, [x22, #0x78]
+      0x07d65590  tst     w8, #1
+      0x07d65594  lsr     x8, x8, #1
+      0x07d65598  csel    x1, x11, x9, eq
+      0x07d6559c  csel    x2, x8, x10, eq
+      0x07d655a0  bl      #0x2efb614
+      0x07d655a4  ldp     x10, x9, [x22, #0x38]
+      0x07d655a8  add     x11, x22, #0x31
+      0x07d655ac  add     x0, x19, #0x60
+      0x07d655b0  ldrb    w8, [x22, #0x30]
+      0x07d655b4  tst     w8, #1
+      0x07d655b8  lsr     x8, x8, #1
+
+------------------------------------------------------------------------------
+STORE 0x07d66680
+  function start 0x7d66580  (256 bytes before)
+  --- calls / strings ---
+      [ref] 0x07d66598 -> 0x0a4b0148  <not file-backed>
+      [ref] 0x07d665a0 -> 0x0683f9d8  <2 bytes> ffc3
+      [ref] 0x07d665a8 -> 0x08b75140  <zeroed>
+      0x07d665c4 bl #0x8b35240   PLT: __cxa_atexit
+            setup: str wzr, [x19]; stp xzr, xzr, [x19, #0x18]; str xzr, [x1, #0x10]!
+      0x07d665dc bl #0x8b35240   PLT: __cxa_atexit
+            setup: mov x2, x20; stp xzr, xzr, [x19, #0x30]; str xzr, [x1, #0x28]!
+      [ref] 0x07d665e4 -> 0x02ef7b54  <1 bytes> 08
+      [ref] 0x07d665ec -> 0x0a4b00e0  <not file-backed>
+      0x07d66600 bl #0x8b35240   PLT: __cxa_atexit
+            setup: mov x2, x20; stp xzr, xzr, [x1, #8]; str xzr, [x1]
+      [ref] 0x07d66608 -> 0x0a4b00f8  <not file-backed>
+      0x07d6661c bl #0x8b35240   PLT: __cxa_atexit
+            setup: mov x2, x20; stp xzr, xzr, [x1, #8]; str xzr, [x1]
+      [ref] 0x07d66624 -> 0x0a4b0110  <not file-backed>
+      0x07d66638 bl #0x8b35240   PLT: __cxa_atexit
+            setup: mov x2, x20; stp xzr, xzr, [x1, #8]; str xzr, [x1]
+      [ref] 0x07d66640 -> 0x0a4b0128  <not file-backed>
+      0x07d66654 bl #0x8b35240   PLT: __cxa_atexit
+            setup: mov x2, x20; stp xzr, xzr, [x1, #8]; str xzr, [x1]
+      0x07d66688 bl #0x8b35240   PLT: __cxa_atexit
+            setup: strb w23, [x1]; strb w8, [x19, #0x45]; stur w9, [x19, #0x41]
+      [ref] 0x07d66694 -> 0x00bc9e52  'pesam.stun.service.konami.net'
+      0x07d666a8 bl #0x2efb614
+            setup: stp xzr, xzr, [x19, #0x60]; str xzr, [x22, #0x58]!; mov x0, x22
+      0x07d666b8 bl #0x8b35240   PLT: __cxa_atexit
+            setup: mov x0, x21; mov x1, x22; mov x2, x20
+      0x07d666e8 bl #0x8b35240   PLT: __cxa_atexit
+            setup: strb w23, [x1]; strb w8, [x19, #0x75]; stur w9, [x19, #0x71]
+      [ref] 0x07d666f4 -> 0x00a5ed56  'pes22-game.cs.konami.net'
+      0x07d66708 bl #0x2efb614
+            setup: stp xzr, xzr, [x19, #0x90]; str xzr, [x22, #0x88]!; mov x0, x22
+      0x07d66718 bl #0x8b35240   PLT: __cxa_atexit
+            setup: mov x0, x21; mov x1, x22; mov x2, x20
+      0x07d66738 bl #0x8b35240   PLT: __cxa_atexit
+            setup: stp xzr, xzr, [x19, #0xa8]; str xzr, [x1, #0xa0]!; strh w8, [x1]
+      0x07d667b0 bl #0x684dc70
+            setup: stur x8, [x29, #-8]; stp xzr, xzr, [sp, #0x88]; str xzr, [sp, #0x98]
+      0x07d667bc bl #0x8b35330   PLT: strlen
+            setup: bl #0x684dc70; cbz x0, #0x7d667d0; mov x19, x0
+  --- window around the access ---
+      0x07d66630  stp     xzr, xzr, [x1, #8]
+      0x07d66634  str     xzr, [x1]
+      0x07d66638  bl      #0x8b35240
+      0x07d6663c  adrp    x1, #0xa4b0000
+      0x07d66640  add     x1, x1, #0x128
+      0x07d66644  mov     x0, x21
+      0x07d66648  mov     x2, x20
+      0x07d6664c  stp     xzr, xzr, [x1, #8]
+      0x07d66650  str     xzr, [x1]
+      0x07d66654  bl      #0x8b35240
+      0x07d66658  mov     w9, #0x7468
+      0x07d6665c  mov     x1, x19
+      0x07d66660  mov     w23, #0xa
+      0x07d66664  mov     w8, #0x73
+      0x07d66668  movk    w9, #0x7074, lsl #16
+      0x07d6666c  mov     x0, x21
+      0x07d66670  mov     x2, x20
+      0x07d66674  stp     xzr, xzr, [x19, #0x48]
+      0x07d66678  str     xzr, [x1, #0x40]!
+      0x07d6667c  strb    w23, [x1]
+      0x07d66680  strb    w8, [x19, #0x45]   <== STORE
+      0x07d66684  stur    w9, [x19, #0x41]
+      0x07d66688  bl      #0x8b35240
+      0x07d6668c  mov     x22, x19
+      0x07d66690  adrp    x1, #0xbc9000
+      0x07d66694  add     x1, x1, #0xe52
+      0x07d66698  mov     w2, #0x1d
+      0x07d6669c  stp     xzr, xzr, [x19, #0x60]
+      0x07d666a0  str     xzr, [x22, #0x58]!
+      0x07d666a4  mov     x0, x22
+      0x07d666a8  bl      #0x2efb614
+      0x07d666ac  mov     x0, x21
+      0x07d666b0  mov     x1, x22
+      0x07d666b4  mov     x2, x20
+      0x07d666b8  bl      #0x8b35240
+      0x07d666bc  mov     w9, #0x4420
+      0x07d666c0  mov     x1, x19
+      0x07d666c4  mov     w8, #0x31
+      0x07d666c8  movk    w9, #0x5645, lsl #16
+      0x07d666cc  mov     x0, x21
+      0x07d666d0  mov     x2, x20

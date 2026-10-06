@@ -1,0 +1,12 @@
+cmd: exec which iptables-legacy; sudo iptables-legacy -t nat -A PREROUTING -i docker0 -p tcp --dport 443 -j REDIRECT --to-port 8080 2>&1; echo add=$?; sudo iptables-legacy -t nat -L PREROUTING -n -v 2>/dev/null | head -8
+at: 10:05:18
+$ which iptables-legacy; sudo iptables-legacy -t nat -A PREROUTING -i docker0 -p tcp --dport 443 -j REDIRECT --to-port 8080 2>&1; echo add=$?; sudo iptables-legacy -t nat -L PREROUTING -n -v 2>/dev/null | head -8
+/usr/sbin/iptables-legacy
+Warning: Extension REDIRECT revision 0 not supported, missing kernel module?
+iptables: No chain/target/match by that name.
+add=1
+Chain PREROUTING (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+rc=0
+gamepid: 
+flows: 0

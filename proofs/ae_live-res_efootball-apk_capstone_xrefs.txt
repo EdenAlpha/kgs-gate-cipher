@@ -1,0 +1,797 @@
+LIB C:\Users\Administrator\Documents\Default Project\peerlink-efootball-disconnects\efootball-apk\native\lib\arm64-v8a\libUE4.so  size=160822968  PT_LOAD=4  numpy=True
+
+STRING E_TURN_ALLOCATION_MISSMATCH                    hits=1 0x9c6ea8
+
+STRING MATCH_STOP_COUNT_SELF_BUF_EMPTY                hits=8 0x9c6f63 0x9c6f8c 0xa8524f 0xabed3c
+
+STRING TurnReconnectWaitTimeMs                        hits=1 0xa007ee
+
+STRING NTL_PEER_KEEPALIVE_COUNT                       hits=1 0xb8f64b
+
+STRING KeepAliveTimerUs                               hits=1 0xb8f398
+
+STRING reflexive_address                              hits=1 0xba1410
+
+STRING CmdGetTurnServerList                           hits=2 0xa38506 0xbefc39
+
+STRING DETECT_NAT_ABORTED                             hits=1 0x9da6c8
+
+STRING MatchAbortTimerCoefficient                     hits=1 0xb8f403
+
+STRING is_cheat_user                                  hits=1 0xb434bf
+
+STRING OnlineModeTaskCheckCheat                       hits=1 0xa384e9
+
+STRING CHECK_STUN_RTT_TIMEOUT                         hits=1 0x9c6ee2
+
+STRING NTL_PEER_KEEPALIVE                             hits=1 0xb8f64b
+
+STRING MultiplaySessionRecvThreadReceiveTimeoutUs     hits=1 0x9c6bdf
+
+STRING GetIpAddressList                               hits=0 
+
+STRING CMD_GET_TURN_SERVER_LIST                       hits=2 0xa38b21 0xaab523
+
+exec ranges: 0x28293c0+0x6347d80
+ADRP candidates in 0x28293c0: 909974
+
+=== ADRP/ADD xrefs found: 44 ===
+
+========================================================================================
+TARGET E_TURN_ALLOCATION_MISSMATCH
+  no ADRP/ADD xref (referenced indirectly)
+
+========================================================================================
+TARGET MATCH_STOP_COUNT_SELF_BUF_EMPTY
+  xref ADRP @ 0x7d4c400 -> string 0xb0ac7d
+
+---- MATCH_STOP_COUNT_SELF_BUF_EMPTY ctx @ 0x7d4c400 ----
+  0x07d4c3cc: bl       #0x7d5ea60                                      ; call
+  0x07d4c3f8: bl       #0x7d5ea60                                      ; call
+  0x07d4c400: adrp     x1, #0xb0a000                                 <<<
+  0x07d4c424: bl       #0x7d5ea60                                      ; call
+  0x07d4c450: bl       #0x7d5ea60                                      ; call
+  0x07d4c47c: bl       #0x7d5ea60                                      ; call
+  0x07d4c4a8: bl       #0x7d5ea60                                      ; call
+  0x07d4c4d4: bl       #0x7d5ea60                                      ; call
+  0x07d4c500: bl       #0x7d5ea60                                      ; call
+  0x07d4c52c: bl       #0x7d5ea60                                      ; call
+  0x07d4c558: bl       #0x7d5ea60                                      ; call
+  xref ADRP @ 0x7d4c458 -> string 0xabed3c
+
+---- MATCH_STOP_COUNT_SELF_BUF_EMPTY ctx @ 0x7d4c458 ----
+  0x07d4c424: bl       #0x7d5ea60                                      ; call
+  0x07d4c450: bl       #0x7d5ea60                                      ; call
+  0x07d4c458: adrp     x1, #0xabe000                                 <<<
+  0x07d4c47c: bl       #0x7d5ea60                                      ; call
+  0x07d4c4a8: bl       #0x7d5ea60                                      ; call
+  0x07d4c4d4: bl       #0x7d5ea60                                      ; call
+  0x07d4c500: bl       #0x7d5ea60                                      ; call
+  0x07d4c52c: bl       #0x7d5ea60                                      ; call
+  0x07d4c558: bl       #0x7d5ea60                                      ; call
+  0x07d4c584: bl       #0x7d5ea60                                      ; call
+  0x07d4c5b0: bl       #0x7d5ea60                                      ; call
+  xref ADRP @ 0x7d4c4b0 -> string 0x9c6f63
+
+---- MATCH_STOP_COUNT_SELF_BUF_EMPTY ctx @ 0x7d4c4b0 ----
+  0x07d4c47c: bl       #0x7d5ea60                                      ; call
+  0x07d4c4a8: bl       #0x7d5ea60                                      ; call
+  0x07d4c4b0: adrp     x1, #0x9c6000                                 <<<
+  0x07d4c4d4: bl       #0x7d5ea60                                      ; call
+  0x07d4c500: bl       #0x7d5ea60                                      ; call
+  0x07d4c52c: bl       #0x7d5ea60                                      ; call
+  0x07d4c558: bl       #0x7d5ea60                                      ; call
+  0x07d4c584: bl       #0x7d5ea60                                      ; call
+  0x07d4c5b0: bl       #0x7d5ea60                                      ; call
+  0x07d4c5dc: bl       #0x7d5ea60                                      ; call
+  0x07d4c608: bl       #0x7d5ea60                                      ; call
+  xref ADRP @ 0x7d4c5e4 -> string 0xb1d84d
+
+---- MATCH_STOP_COUNT_SELF_BUF_EMPTY ctx @ 0x7d4c5e4 ----
+  0x07d4c5b0: bl       #0x7d5ea60                                      ; call
+  0x07d4c5dc: bl       #0x7d5ea60                                      ; call
+  0x07d4c5e4: adrp     x1, #0xb1d000                                 <<<
+  0x07d4c608: bl       #0x7d5ea60                                      ; call
+  0x07d4c634: bl       #0x7d5ea60                                      ; call
+  0x07d4c660: bl       #0x7d5ea60                                      ; call
+  0x07d4c68c: bl       #0x7d5ea60                                      ; call
+  0x07d4c6b8: bl       #0x7d5ea60                                      ; call
+  0x07d4c6e4: bl       #0x7d5ea60                                      ; call
+  0x07d4c710: bl       #0x7d5ea60                                      ; call
+  xref ADRP @ 0x7d4c63c -> string 0xaf757a
+
+---- MATCH_STOP_COUNT_SELF_BUF_EMPTY ctx @ 0x7d4c63c ----
+  0x07d4c608: bl       #0x7d5ea60                                      ; call
+  0x07d4c634: bl       #0x7d5ea60                                      ; call
+  0x07d4c63c: adrp     x1, #0xaf7000                                 <<<
+  0x07d4c660: bl       #0x7d5ea60                                      ; call
+  0x07d4c68c: bl       #0x7d5ea60                                      ; call
+  0x07d4c6b8: bl       #0x7d5ea60                                      ; call
+  0x07d4c6e4: bl       #0x7d5ea60                                      ; call
+  0x07d4c710: bl       #0x7d5ea60                                      ; call
+  0x07d4c74c: bl       #0x7d51134                                      ; call
+  0x07d4c75c: bl       #0x2efa56c                                      ; call
+  0x07d4c76c: bl       #0x2efa56c                                      ; call
+  0x07d4c798: bl       #0x7d5ea60                                      ; call
+  xref ADRP @ 0x7d4c668 -> string 0xabed92
+
+---- MATCH_STOP_COUNT_SELF_BUF_EMPTY ctx @ 0x7d4c668 ----
+  0x07d4c634: bl       #0x7d5ea60                                      ; call
+  0x07d4c660: bl       #0x7d5ea60                                      ; call
+  0x07d4c668: adrp     x1, #0xabe000                                 <<<
+  0x07d4c68c: bl       #0x7d5ea60                                      ; call
+  0x07d4c6b8: bl       #0x7d5ea60                                      ; call
+  0x07d4c6e4: bl       #0x7d5ea60                                      ; call
+  0x07d4c710: bl       #0x7d5ea60                                      ; call
+  0x07d4c74c: bl       #0x7d51134                                      ; call
+  0x07d4c75c: bl       #0x2efa56c                                      ; call
+  0x07d4c76c: bl       #0x2efa56c                                      ; call
+  0x07d4c798: bl       #0x7d5ea60                                      ; call
+  0x07d4c7c4: bl       #0x7d5ea60                                      ; call
+
+========================================================================================
+TARGET TurnReconnectWaitTimeMs
+  xref ADRP @ 0x7c05c1c -> string 0xa007ee
+
+---- TurnReconnectWaitTimeMs ctx @ 0x7c05c1c ----
+  0x07c05c00: bl       #0x7d2aa38                                      ; call
+  0x07c05c1c: adrp     x2, #0xa00000                                 <<<
+  0x07c05c30: bl       #0x7d2a9c0                                      ; call
+  0x07c05c60: bl       #0x7d2a9c0                                      ; call
+  0x07c05c90: bl       #0x7d2a9c0                                      ; call
+  0x07c05cc0: bl       #0x7d2aa38                                      ; call
+  0x07c05cf0: bl       #0x7d2a9c0                                      ; call
+  0x07c05d20: bl       #0x7d2a9c0                                      ; call
+  0x07c05d70: bl       #0x7d2a9c0                                      ; call
+
+========================================================================================
+TARGET NTL_PEER_KEEPALIVE_COUNT
+  xref ADRP @ 0x7d4c7cc -> string 0xb8f64b
+
+---- NTL_PEER_KEEPALIVE_COUNT ctx @ 0x7d4c7cc ----
+  0x07d4c798: bl       #0x7d5ea60                                      ; call
+  0x07d4c7c4: bl       #0x7d5ea60                                      ; call
+  0x07d4c7cc: adrp     x1, #0xb8f000                                 <<<
+  0x07d4c7f0: bl       #0x7d5ea60                                      ; call
+  0x07d4c81c: bl       #0x7d5ea60                                      ; call
+  0x07d4c848: bl       #0x7d5ea60                                      ; call
+  0x07d4c864: bl       #0x2efb614                                      ; call
+  0x07d4c880: bl       #0x7d502d4                                      ; call
+  0x07d4c890: bl       #0x2efa56c                                      ; call
+  0x07d4c8a0: bl       #0x2efa56c                                      ; call
+  0x07d4c8c0: bl       #0x2efb614                                      ; call
+  0x07d4c8e8: bl       #0x7d62a4c                                      ; call
+  0x07d4c904: bl       #0x7d6294c                                      ; call
+  0x07d4c914: bl       #0x2efa56c                                      ; call
+  xref ADRP @ 0x7d5c550 -> string 0xb8f64b
+
+---- NTL_PEER_KEEPALIVE_COUNT ctx @ 0x7d5c550 ----
+  0x07d5c518: bl       #0x7d5ec90                                      ; call
+  0x07d5c52c: bl       #0x7d5f708                                      ; call
+  0x07d5c53c: bl       #0x7d5ec90                                      ; call
+  0x07d5c54c: bl       #0x7d5ec90                                      ; call
+  0x07d5c550: adrp     x1, #0xb8f000                                 <<<
+  0x07d5c55c: bl       #0x7d5ec90                                      ; call
+  0x07d5c56c: bl       #0x7d5ec90                                      ; call
+  0x07d5c57c: bl       #0x7d5ec90                                      ; call
+  0x07d5c590: bl       #0x7d5f708                                      ; call
+  0x07d5c5a4: bl       #0x7d5f708                                      ; call
+  0x07d5c5b8: bl       #0x7d5f708                                      ; call
+  0x07d5c5cc: bl       #0x7d5f708                                      ; call
+  0x07d5c5dc: bl       #0x7d5ec90                                      ; call
+  0x07d5c5ec: bl       #0x7d5ec90                                      ; call
+  0x07d5c5fc: bl       #0x7d5ec90                                      ; call
+  0x07d5c610: bl       #0x7d5f708                                      ; call
+  0x07d5c624: bl       #0x7d5f708                                      ; call
+  0x07d5c638: bl       #0x7d5f708                                      ; call
+  0x07d5c64c: bl       #0x7d5f708                                      ; call
+  0x07d5c660: bl       #0x7d5f708                                      ; call
+  0x07d5c670: bl       #0x7d5ec90                                      ; call
+  0x07d5c680: bl       #0x7d5ec90                                      ; call
+  0x07d5c690: bl       #0x7d5ec90                                      ; call
+  0x07d5c6a0: bl       #0x7d5ec90                                      ; call
+
+========================================================================================
+TARGET KeepAliveTimerUs
+  xref ADRP @ 0x7c099e0 -> string 0xb8f398
+
+---- KeepAliveTimerUs ctx @ 0x7c099e0 ----
+  0x07c099c4: bl       #0x7d2aa38                                      ; call
+  0x07c099e0: adrp     x2, #0xb8f000                                 <<<
+  0x07c099f4: bl       #0x7d2aa38                                      ; call
+  0x07c09a24: bl       #0x7d2aa38                                      ; call
+  0x07c09a54: bl       #0x7d2a948                                      ; call
+  0x07c09a84: bl       #0x7d2aab0                                      ; call
+  0x07c09a90: mov      x8, #0xffffe0000000                             ; imm=281474439839744 (0xffffe0000000)
+  0x07c09a98: movk     x8, #0x47ef, lsl #48                            ; imm=18415 (0x47ef)
+  0x07c09aa0: mov      x8, #0xffffe0000000                             ; imm=281474439839744 (0xffffe0000000)
+  0x07c09aa4: movk     x8, #0xc7ef, lsl #48                            ; imm=51183 (0xc7ef)
+  0x07c09ae4: bl       #0x7d2aab0                                      ; call
+  0x07c09af0: mov      x8, #0xffffe0000000                             ; imm=281474439839744 (0xffffe0000000)
+  0x07c09af8: movk     x8, #0x47ef, lsl #48                            ; imm=18415 (0x47ef)
+  0x07c09b00: mov      x8, #0xffffe0000000                             ; imm=281474439839744 (0xffffe0000000)
+  0x07c09b04: movk     x8, #0xc7ef, lsl #48                            ; imm=51183 (0xc7ef)
+
+========================================================================================
+TARGET reflexive_address
+  xref ADRP @ 0x746c12c -> string 0xba1410
+
+---- reflexive_address ctx @ 0x746c12c ----
+  0x0746c108: bl       #0x2f927dc                                      ; call
+  0x0746c10c: bl       #0x2f917d8                                      ; call
+  0x0746c120: bl       #0x2f927dc                                      ; call
+  0x0746c124: bl       #0x2f91a88                                      ; call
+  0x0746c12c: adrp     x1, #0xba1000                                 <<<
+  0x0746c138: bl       #0x2f927dc                                      ; call
+  0x0746c13c: bl       #0x2f917d8                                      ; call
+  0x0746c150: bl       #0x2f927dc                                      ; call
+  0x0746c154: bl       #0x2f919d0                                      ; call
+  0x0746c194: bl       #0x2f10278                                      ; call
+  0x0746c1b8: bl       #0x2f927dc                                      ; call
+  0x0746c1bc: bl       #0x2f917d8                                      ; call
+  0x0746c1d0: bl       #0x2f927dc                                      ; call
+  0x0746c1d4: bl       #0x2f91a88                                      ; call
+  0x0746c1e8: bl       #0x2f927dc                                      ; call
+  0x0746c1ec: bl       #0x2f917d8                                      ; call
+  0x0746c200: bl       #0x2f927dc                                      ; call
+  0x0746c204: bl       #0x2f91a88                                      ; call
+  0x0746c268: mov      x24, #0x6572                                    ; imm=25970 (0x6572)
+  0x0746c26c: mov      x21, #0x616e                                    ; imm=24942 (0x616e)
+  0x0746c270: movk     x24, #0x6c66, lsl #16                           ; imm=27750 (0x6c66)
+  0x0746c274: movk     x21, #0x5f74, lsl #16                           ; imm=24436 (0x5f74)
+  0x0746c278: movk     x24, #0x7865, lsl #32                           ; imm=30821 (0x7865)
+  0x0746c288: movk     x21, #0x7974, lsl #32                           ; imm=31092 (0x7974)
+  xref ADRP @ 0x746c144 -> string 0xba1410
+
+---- reflexive_address ctx @ 0x746c144 ----
+  0x0746c108: bl       #0x2f927dc                                      ; call
+  0x0746c10c: bl       #0x2f917d8                                      ; call
+  0x0746c120: bl       #0x2f927dc                                      ; call
+  0x0746c124: bl       #0x2f91a88                                      ; call
+  0x0746c138: bl       #0x2f927dc                                      ; call
+  0x0746c13c: bl       #0x2f917d8                                      ; call
+  0x0746c144: adrp     x1, #0xba1000                                 <<<
+  0x0746c150: bl       #0x2f927dc                                      ; call
+  0x0746c154: bl       #0x2f919d0                                      ; call
+  0x0746c194: bl       #0x2f10278                                      ; call
+  0x0746c1b8: bl       #0x2f927dc                                      ; call
+  0x0746c1bc: bl       #0x2f917d8                                      ; call
+  0x0746c1d0: bl       #0x2f927dc                                      ; call
+  0x0746c1d4: bl       #0x2f91a88                                      ; call
+  0x0746c1e8: bl       #0x2f927dc                                      ; call
+  0x0746c1ec: bl       #0x2f917d8                                      ; call
+  0x0746c200: bl       #0x2f927dc                                      ; call
+  0x0746c204: bl       #0x2f91a88                                      ; call
+  0x0746c268: mov      x24, #0x6572                                    ; imm=25970 (0x6572)
+  0x0746c26c: mov      x21, #0x616e                                    ; imm=24942 (0x616e)
+  0x0746c270: movk     x24, #0x6c66, lsl #16                           ; imm=27750 (0x6c66)
+  0x0746c274: movk     x21, #0x5f74, lsl #16                           ; imm=24436 (0x5f74)
+  0x0746c278: movk     x24, #0x7865, lsl #32                           ; imm=30821 (0x7865)
+  0x0746c288: movk     x21, #0x7974, lsl #32                           ; imm=31092 (0x7974)
+  0x0746c28c: movk     x24, #0x7669, lsl #48                           ; imm=30313 (0x7669)
+  0x0746c29c: movk     x21, #0x6570, lsl #48                           ; imm=25968 (0x6570)
+  xref ADRP @ 0x7710ba4 -> string 0xba1410
+
+---- reflexive_address ctx @ 0x7710ba4 ----
+  0x07710b74: bl       #0x2f92514                                      ; call
+  0x07710b7c: bl       #0x2f8f898                                      ; call
+  0x07710b84: bl       #0x2f91730                                      ; call
+  0x07710ba0: bl       #0x2f913c8                                      ; call
+  0x07710ba4: adrp     x23, #0xba1000                                <<<
+  0x07710bb4: bl       #0x2f92514                                      ; call
+  0x07710bbc: bl       #0x2f8f898                                      ; call
+  0x07710bc4: bl       #0x2f91730                                      ; call
+  0x07710bd0: bl       #0x2f91374                                      ; call
+  0x07710be4: bl       #0x2f92514                                      ; call
+  0x07710bec: bl       #0x2f8f898                                      ; call
+  0x07710bf4: bl       #0x2f91730                                      ; call
+  0x07710c00: bl       #0x2f91374                                      ; call
+  0x07710c14: bl       #0x2f92514                                      ; call
+  0x07710c1c: bl       #0x2f8f898                                      ; call
+  0x07710c24: bl       #0x2f91730                                      ; call
+  0x07710c34: bl       #0x2f92514                                      ; call
+  0x07710c3c: bl       #0x2f8f898                                      ; call
+  0x07710c48: bl       #0x2f912cc                                      ; call
+  0x07710c64: bl       #0x2f913c8                                      ; call
+  0x07710c70: bl       #0x2f92514                                      ; call
+  0x07710c78: bl       #0x2f8f898                                      ; call
+  0x07710c80: bl       #0x2f91730                                      ; call
+  0x07710c8c: bl       #0x2f91374                                      ; call
+  0x07710c98: bl       #0x2f92514                                      ; call
+  0x07710ca0: bl       #0x2f8f898                                      ; call
+  0x07710ca8: bl       #0x2f91730                                      ; call
+  0x07710cc4: bl       #0x2f913c8                                      ; call
+  0x07710cd0: bl       #0x2f92514                                      ; call
+  0x07710cd8: bl       #0x2f8f898                                      ; call
+  0x07710ce0: bl       #0x2f91730                                      ; call
+  0x07710cec: bl       #0x2f91374                                      ; call
+  0x07710cf8: bl       #0x2f92514                                      ; call
+  0x07710d00: bl       #0x2f8f898                                      ; call
+  xref ADRP @ 0x771254c -> string 0xba1410
+
+---- reflexive_address ctx @ 0x771254c ----
+  0x07712520: bl       #0x8b35300                                      ; call
+  0x0771253c: bl       #0x8b352c0                                      ; call
+  0x07712548: bl       #0x76a79fc                                      ; call
+  0x0771254c: adrp     x9, #0xba1000                                 <<<
+  0x07712568: mov      w9, #0x73                                       ; imm=115 (0x73)
+  0x07712580: bl       #0x745cbd0                                      ; call
+  0x077125c4: mov      w10, #0x2000                                    ; imm=8192 (0x2000)
+  0x077125e8: bl       #0x8b38370                                      ; call
+  0x07712610: bl       #0x8b35300                                      ; call
+  0x0771262c: bl       #0x8b352c0                                      ; call
+  0x07712648: bl       #0x8b35330                                      ; call
+  0x0771267c: bl       #0x8b35260                                      ; call
+  0x0771269c: bl       #0x8b352f0                                      ; call
+  xref ADRP @ 0x77b2274 -> string 0xba1410
+
+---- reflexive_address ctx @ 0x77b2274 ----
+  0x077b2244: bl       #0x2f92514                                      ; call
+  0x077b224c: bl       #0x2f8f898                                      ; call
+  0x077b2254: bl       #0x2f91730                                      ; call
+  0x077b2270: bl       #0x2f913c8                                      ; call
+  0x077b2274: adrp     x23, #0xba1000                                <<<
+  0x077b2284: bl       #0x2f92514                                      ; call
+  0x077b228c: bl       #0x2f8f898                                      ; call
+  0x077b2294: bl       #0x2f91730                                      ; call
+  0x077b22a0: bl       #0x2f91374                                      ; call
+  0x077b22b4: bl       #0x2f92514                                      ; call
+  0x077b22bc: bl       #0x2f8f898                                      ; call
+  0x077b22c4: bl       #0x2f91730                                      ; call
+  0x077b22d0: bl       #0x2f91374                                      ; call
+  0x077b22e4: bl       #0x2f92514                                      ; call
+  0x077b22ec: bl       #0x2f8f898                                      ; call
+  0x077b22f4: bl       #0x2f91730                                      ; call
+  0x077b2304: bl       #0x2f92514                                      ; call
+  0x077b230c: bl       #0x2f8f898                                      ; call
+  0x077b2318: bl       #0x2f912cc                                      ; call
+  0x077b2334: bl       #0x2f913c8                                      ; call
+  0x077b2340: bl       #0x2f92514                                      ; call
+  0x077b2348: bl       #0x2f8f898                                      ; call
+  0x077b2350: bl       #0x2f91730                                      ; call
+  0x077b235c: bl       #0x2f91374                                      ; call
+  0x077b2368: bl       #0x2f92514                                      ; call
+  0x077b2370: bl       #0x2f8f898                                      ; call
+  0x077b2378: bl       #0x2f91730                                      ; call
+  0x077b2394: bl       #0x2f913c8                                      ; call
+  0x077b23a0: bl       #0x2f92514                                      ; call
+  0x077b23a8: bl       #0x2f8f898                                      ; call
+  0x077b23b0: bl       #0x2f91730                                      ; call
+  0x077b23bc: bl       #0x2f91374                                      ; call
+  0x077b23c8: bl       #0x2f92514                                      ; call
+  0x077b23d0: bl       #0x2f8f898                                      ; call
+  xref ADRP @ 0x77b5b9c -> string 0xba1410
+
+---- reflexive_address ctx @ 0x77b5b9c ----
+  0x077b5b70: bl       #0x8b35300                                      ; call
+  0x077b5b8c: bl       #0x8b352c0                                      ; call
+  0x077b5b98: bl       #0x76a79fc                                      ; call
+  0x077b5b9c: adrp     x9, #0xba1000                                 <<<
+  0x077b5bb8: mov      w9, #0x73                                       ; imm=115 (0x73)
+  0x077b5bd0: bl       #0x745cbd0                                      ; call
+  0x077b5c14: mov      w10, #0x2000                                    ; imm=8192 (0x2000)
+  0x077b5c38: bl       #0x8b38370                                      ; call
+  0x077b5c60: bl       #0x8b35300                                      ; call
+  0x077b5c7c: bl       #0x8b352c0                                      ; call
+  0x077b5c98: bl       #0x8b35330                                      ; call
+  0x077b5ccc: bl       #0x8b35260                                      ; call
+  0x077b5cec: bl       #0x8b352f0                                      ; call
+
+========================================================================================
+TARGET CmdGetTurnServerList
+  xref ADRP @ 0x7a570d0 -> string 0xa38506
+
+---- CmdGetTurnServerList ctx @ 0x7a570d0 ----
+  0x07a57098: bl       #0x79b1480                                      ; call
+  0x07a570a4: bl       #0x798200c                                      ; call
+  0x07a570d0: adrp     x10, #0xa38000                                <<<
+  0x07a570d8: mov      w9, #0x694c                                     ; imm=26956 (0x694c)
+  0x07a570e0: movk     w9, #0x7473, lsl #16                            ; imm=29811 (0x7473)
+  0x07a57100: bl       #0x7da5274                                      ; call
+  0x07a57114: bl       #0x2efa56c                                      ; call
+  0x07a57174: bl       #0x7d269e8                                      ; call
+  0x07a57180: bl       #0x8b3abf0                                      ; call
+  0x07a5719c: bl       #0x8b34e90                                      ; call
+  0x07a571a8: bl       #0x8b34ef0                                      ; call
+  0x07a571b4: bl       #0x7d27ac4                                      ; call
+  0x07a571c0: bl       #0x8b34ef0                                      ; call
+  0x07a571d0: bl       #0x8b388f0                                      ; call
+  0x07a5722c: bl       #0x8b35290                                      ; call
+  xref ADRP @ 0x7da51b0 -> string 0xa38506
+
+---- CmdGetTurnServerList ctx @ 0x7da51b0 ----
+  0x07da51b0: adrp     x10, #0xa38000                                <<<
+  0x07da52c4: bl       #0x8b35330                                      ; call
+  0x07da52e8: bl       #0x8b35880                                      ; call
+  xref ADRP @ 0x7daf0ec -> string 0xbefc39
+
+---- CmdGetTurnServerList ctx @ 0x7daf0ec ----
+  0x07daf0e8: bl       #0x2efb614                                      ; call
+  0x07daf0ec: adrp     x1, #0xbef000                                 <<<
+  0x07daf0fc: bl       #0x2efb614                                      ; call
+  0x07daf108: mov      w10, #0x656d                                    ; imm=25965 (0x656d)
+  0x07daf110: movk     w10, #0x746e, lsl #16                           ; imm=29806 (0x746e)
+  0x07daf178: bl       #0x2f91f98                                      ; call
+  0x07daf180: bl       #0x74e3374                                      ; call
+  0x07daf19c: bl       #0x2f913c8                                      ; call
+  0x07daf1ac: bl       #0x2f92514                                      ; call
+  0x07daf1b4: bl       #0x2f8f898                                      ; call
+  0x07daf1bc: bl       #0x2f91730                                      ; call
+  0x07daf1c8: bl       #0x2f9135c                                      ; call
+  0x07daf1d8: bl       #0x2f92514                                      ; call
+  0x07daf1e0: bl       #0x2f8f898                                      ; call
+  0x07daf1e8: bl       #0x2f91730                                      ; call
+  0x07daf214: bl       #0x8b35290                                      ; call
+  xref ADRP @ 0x7daf6a8 -> string 0xbefc39
+
+---- CmdGetTurnServerList ctx @ 0x7daf6a8 ----
+  0x07daf6a4: bl       #0x2efb614                                      ; call
+  0x07daf6a8: adrp     x1, #0xbef000                                 <<<
+  0x07daf6b8: bl       #0x2efb614                                      ; call
+  0x07daf6c4: mov      w10, #0x656d                                    ; imm=25965 (0x656d)
+  0x07daf6cc: movk     w10, #0x746e, lsl #16                           ; imm=29806 (0x746e)
+  0x07daf6f8: mov      w2, #0x800                                      ; imm=2048 (0x800)
+  0x07daf740: bl       #0x8b35360                                      ; call
+  0x07daf798: bl       #0x74e49c0                                      ; call
+  0x07daf7ac: bl       #0x2f92514                                      ; call
+  0x07daf7b0: bl       #0x2f917d8                                      ; call
+  0x07daf7c4: bl       #0x2f92514                                      ; call
+  0x07daf7c8: bl       #0x2f919d0                                      ; call
+  xref ADRP @ 0x7db53a0 -> string 0xa38506
+
+---- CmdGetTurnServerList ctx @ 0x7db53a0 ----
+  0x07db53a0: adrp     x10, #0xa38000                                <<<
+  0x07db53a8: mov      w9, #0x694c                                     ; imm=26956 (0x694c)
+  0x07db53b0: movk     w9, #0x7473, lsl #16                            ; imm=29811 (0x7473)
+  0x07db53d0: bl       #0x7da5274                                      ; call
+  0x07db53e4: bl       #0x2efa56c                                      ; call
+  0x07db5428: bl       #0x7b1d6ec                                      ; call
+  0x07db5464: bl       #0x8b35880                                      ; call
+  0x07db54bc: bl       #0x7d2bf4c                                      ; call
+  0x07db54c8: bl       #0x7d43a74                                      ; call
+
+========================================================================================
+TARGET DETECT_NAT_ABORTED
+  xref ADRP @ 0x7d15db0 -> string 0x9da6c8
+
+---- DETECT_NAT_ABORTED ctx @ 0x7d15db0 ----
+  0x07d15d70: mov      w8, #0x200                                      ; imm=512 (0x200)
+  0x07d15d74: movk     w8, #0xe500, lsl #16                            ; imm=58624 (0xe500)
+  0x07d15d80: mov      w8, #0x101                                      ; imm=257 (0x101)
+  0x07d15d84: movk     w8, #0xe500, lsl #16                            ; imm=58624 (0xe500)
+  0x07d15d90: mov      w8, #0x102                                      ; imm=258 (0x102)
+  0x07d15d94: movk     w8, #0xe500, lsl #16                            ; imm=58624 (0xe500)
+  0x07d15da0: mov      w8, #0x103                                      ; imm=259 (0x103)
+  0x07d15da4: movk     w8, #0xe500, lsl #16                            ; imm=58624 (0xe500)
+  0x07d15db0: adrp     x0, #0x9da000                                 <<<
+  0x07d15dbc: mov      w8, #0xd02                                      ; imm=3330 (0xd02)
+  0x07d15dc0: movk     w8, #0xe500, lsl #16                            ; imm=58624 (0xe500)
+  0x07d15dcc: mov      w8, #0xb00                                      ; imm=2816 (0xb00)
+  0x07d15dd0: movk     w8, #0xe500, lsl #16                            ; imm=58624 (0xe500)
+  0x07d15ddc: mov      w8, #0xa00                                      ; imm=2560 (0xa00)
+  0x07d15de0: movk     w8, #0xe500, lsl #16                            ; imm=58624 (0xe500)
+  0x07d15dec: mov      w8, #0xf5ff                                     ; imm=62975 (0xf5ff)
+  0x07d15df0: movk     w8, #0x1aff, lsl #16                            ; imm=6911 (0x1aff)
+  0x07d15e24: mov      w8, #0xf00                                      ; imm=3840 (0xf00)
+  0x07d15e28: movk     w8, #0xe500, lsl #16                            ; imm=58624 (0xe500)
+  0x07d15e34: mov      w8, #0xf1ff                                     ; imm=61951 (0xf1ff)
+  0x07d15e38: movk     w8, #0x1aff, lsl #16                            ; imm=6911 (0x1aff)
+  0x07d15e6c: mov      w8, #0xfdff                                     ; imm=65023 (0xfdff)
+  0x07d15e70: movk     w8, #0x1aff, lsl #16                            ; imm=6911 (0x1aff)
+  0x07d15ea4: mov      w8, #0xc01                                      ; imm=3073 (0xc01)
+  0x07d15ea8: movk     w8, #0xe500, lsl #16                            ; imm=58624 (0xe500)
+  0x07d15eb4: mov      w8, #0xb02                                      ; imm=2818 (0xb02)
+  0x07d15eb8: movk     w8, #0xe500, lsl #16                            ; imm=58624 (0xe500)
+  0x07d15ec4: mov      w8, #0xb01                                      ; imm=2817 (0xb01)
+  0x07d15ec8: movk     w8, #0xe500, lsl #16                            ; imm=58624 (0xe500)
+  0x07d15ed4: mov      w8, #0xb02                                      ; imm=2818 (0xb02)
+  0x07d15ed8: movk     w8, #0xe500, lsl #16                            ; imm=58624 (0xe500)
+  0x07d15ef0: mov      w8, #0x1101                                     ; imm=4353 (0x1101)
+  0x07d15ef4: movk     w8, #0xe500, lsl #16                            ; imm=58624 (0xe500)
+  0x07d15f00: mov      w8, #0x1200                                     ; imm=4608 (0x1200)
+  0x07d15f04: movk     w8, #0xe500, lsl #16                            ; imm=58624 (0xe500)
+
+========================================================================================
+TARGET MatchAbortTimerCoefficient
+  xref ADRP @ 0x7c0b56c -> string 0xb8f403
+
+---- MatchAbortTimerCoefficient ctx @ 0x7c0b56c ----
+  0x07c0b55c: bl       #0x7d2ac90                                      ; call
+  0x07c0b56c: adrp     x2, #0xb8f000                                 <<<
+  0x07c0b5a0: bl       #0x7d2aab0                                      ; call
+  0x07c0b5ac: mov      x8, #0xffffe0000000                             ; imm=281474439839744 (0xffffe0000000)
+  0x07c0b5b4: movk     x8, #0x47ef, lsl #48                            ; imm=18415 (0x47ef)
+  0x07c0b5bc: mov      x8, #0xffffe0000000                             ; imm=281474439839744 (0xffffe0000000)
+  0x07c0b5c0: movk     x8, #0xc7ef, lsl #48                            ; imm=51183 (0xc7ef)
+  0x07c0b5fc: bl       #0x7d2a948                                      ; call
+  0x07c0b638: bl       #0x7d2aab0                                      ; call
+  0x07c0b644: mov      x8, #0xffffe0000000                             ; imm=281474439839744 (0xffffe0000000)
+  0x07c0b64c: movk     x8, #0x47ef, lsl #48                            ; imm=18415 (0x47ef)
+  0x07c0b654: mov      x8, #0xffffe0000000                             ; imm=281474439839744 (0xffffe0000000)
+  0x07c0b658: movk     x8, #0xc7ef, lsl #48                            ; imm=51183 (0xc7ef)
+  0x07c0b694: bl       #0x7d2aa38                                      ; call
+
+========================================================================================
+TARGET is_cheat_user
+  xref ADRP @ 0x7742970 -> string 0xb434bf
+
+---- is_cheat_user ctx @ 0x7742970 ----
+  0x07742958: bl       #0x2f10278                                      ; call
+  0x07742970: adrp     x1, #0xb43000                                 <<<
+  0x0774297c: bl       #0x2f92514                                      ; call
+  0x07742980: bl       #0x2f917d8                                      ; call
+  0x07742994: bl       #0x2f92514                                      ; call
+  0x07742998: bl       #0x2f919d0                                      ; call
+  0x077429d8: bl       #0x2f10278                                      ; call
+  0x077429fc: bl       #0x2f92514                                      ; call
+  0x07742a00: bl       #0x2f917d8                                      ; call
+  0x07742a14: bl       #0x2f92514                                      ; call
+  0x07742a18: bl       #0x2f919d0                                      ; call
+  0x07742a58: bl       #0x2f10278                                      ; call
+  0x07742ac0: bl       #0x8b35260                                      ; call
+  0x07742ac4: mov      w1, #0x2000                                     ; imm=8192 (0x2000)
+  0x07742acc: bl       #0x6f83e70                                      ; call
+  xref ADRP @ 0x7742988 -> string 0xb434bf
+
+---- is_cheat_user ctx @ 0x7742988 ----
+  0x07742958: bl       #0x2f10278                                      ; call
+  0x0774297c: bl       #0x2f92514                                      ; call
+  0x07742980: bl       #0x2f917d8                                      ; call
+  0x07742988: adrp     x1, #0xb43000                                 <<<
+  0x07742994: bl       #0x2f92514                                      ; call
+  0x07742998: bl       #0x2f919d0                                      ; call
+  0x077429d8: bl       #0x2f10278                                      ; call
+  0x077429fc: bl       #0x2f92514                                      ; call
+  0x07742a00: bl       #0x2f917d8                                      ; call
+  0x07742a14: bl       #0x2f92514                                      ; call
+  0x07742a18: bl       #0x2f919d0                                      ; call
+  0x07742a58: bl       #0x2f10278                                      ; call
+  0x07742ac0: bl       #0x8b35260                                      ; call
+  0x07742ac4: mov      w1, #0x2000                                     ; imm=8192 (0x2000)
+  0x07742acc: bl       #0x6f83e70                                      ; call
+  0x07742ae4: bl       #0x6f83ca0                                      ; call
+
+========================================================================================
+TARGET OnlineModeTaskCheckCheat
+  no ADRP/ADD xref (referenced indirectly)
+
+========================================================================================
+TARGET CHECK_STUN_RTT_TIMEOUT
+  xref ADRP @ 0x7d1608c -> string 0x9c6ee2
+
+---- CHECK_STUN_RTT_TIMEOUT ctx @ 0x7d1608c ----
+  0x07d16050: mov      w8, #0xc01                                      ; imm=3073 (0xc01)
+  0x07d16054: movk     w8, #0xe500, lsl #16                            ; imm=58624 (0xe500)
+  0x07d1606c: mov      w8, #0x1201                                     ; imm=4609 (0x1201)
+  0x07d16070: movk     w8, #0xe500, lsl #16                            ; imm=58624 (0xe500)
+  0x07d1607c: mov      w8, #0x1202                                     ; imm=4610 (0x1202)
+  0x07d16080: movk     w8, #0xe500, lsl #16                            ; imm=58624 (0xe500)
+  0x07d1608c: adrp     x0, #0x9c6000                                 <<<
+  0x07d16098: mov      w8, #0xd01                                      ; imm=3329 (0xd01)
+  0x07d1609c: movk     w8, #0xe500, lsl #16                            ; imm=58624 (0xe500)
+  0x07d160a8: mov      w8, #0xd02                                      ; imm=3330 (0xd02)
+  0x07d160ac: movk     w8, #0xe500, lsl #16                            ; imm=58624 (0xe500)
+  0x07d160c4: mov      w8, #0xf8ff                                     ; imm=63743 (0xf8ff)
+  0x07d160c8: movk     w8, #0x1aff, lsl #16                            ; imm=6911 (0x1aff)
+  0x07d160fc: mov      w8, #0xd03                                      ; imm=3331 (0xd03)
+  0x07d16100: movk     w8, #0xe500, lsl #16                            ; imm=58624 (0xe500)
+
+========================================================================================
+TARGET NTL_PEER_KEEPALIVE
+  xref ADRP @ 0x7d4c7cc -> string 0xb8f64b
+
+---- NTL_PEER_KEEPALIVE ctx @ 0x7d4c7cc ----
+  0x07d4c798: bl       #0x7d5ea60                                      ; call
+  0x07d4c7c4: bl       #0x7d5ea60                                      ; call
+  0x07d4c7cc: adrp     x1, #0xb8f000                                 <<<
+  0x07d4c7f0: bl       #0x7d5ea60                                      ; call
+  0x07d4c81c: bl       #0x7d5ea60                                      ; call
+  0x07d4c848: bl       #0x7d5ea60                                      ; call
+  0x07d4c864: bl       #0x2efb614                                      ; call
+  0x07d4c880: bl       #0x7d502d4                                      ; call
+  0x07d4c890: bl       #0x2efa56c                                      ; call
+  0x07d4c8a0: bl       #0x2efa56c                                      ; call
+  0x07d4c8c0: bl       #0x2efb614                                      ; call
+  0x07d4c8e8: bl       #0x7d62a4c                                      ; call
+  0x07d4c904: bl       #0x7d6294c                                      ; call
+  0x07d4c914: bl       #0x2efa56c                                      ; call
+  xref ADRP @ 0x7d5c550 -> string 0xb8f64b
+
+---- NTL_PEER_KEEPALIVE ctx @ 0x7d5c550 ----
+  0x07d5c518: bl       #0x7d5ec90                                      ; call
+  0x07d5c52c: bl       #0x7d5f708                                      ; call
+  0x07d5c53c: bl       #0x7d5ec90                                      ; call
+  0x07d5c54c: bl       #0x7d5ec90                                      ; call
+  0x07d5c550: adrp     x1, #0xb8f000                                 <<<
+  0x07d5c55c: bl       #0x7d5ec90                                      ; call
+  0x07d5c56c: bl       #0x7d5ec90                                      ; call
+  0x07d5c57c: bl       #0x7d5ec90                                      ; call
+  0x07d5c590: bl       #0x7d5f708                                      ; call
+  0x07d5c5a4: bl       #0x7d5f708                                      ; call
+  0x07d5c5b8: bl       #0x7d5f708                                      ; call
+  0x07d5c5cc: bl       #0x7d5f708                                      ; call
+  0x07d5c5dc: bl       #0x7d5ec90                                      ; call
+  0x07d5c5ec: bl       #0x7d5ec90                                      ; call
+  0x07d5c5fc: bl       #0x7d5ec90                                      ; call
+  0x07d5c610: bl       #0x7d5f708                                      ; call
+  0x07d5c624: bl       #0x7d5f708                                      ; call
+  0x07d5c638: bl       #0x7d5f708                                      ; call
+  0x07d5c64c: bl       #0x7d5f708                                      ; call
+  0x07d5c660: bl       #0x7d5f708                                      ; call
+  0x07d5c670: bl       #0x7d5ec90                                      ; call
+  0x07d5c680: bl       #0x7d5ec90                                      ; call
+  0x07d5c690: bl       #0x7d5ec90                                      ; call
+  0x07d5c6a0: bl       #0x7d5ec90                                      ; call
+
+========================================================================================
+TARGET MultiplaySessionRecvThreadReceiveTimeoutUs
+  xref ADRP @ 0x7c07900 -> string 0x9c6bdf
+
+---- MultiplaySessionRecvThreadReceiveTimeoutUs ctx @ 0x7c07900 ----
+  0x07c078c0: mov      x8, #0xffffe0000000                             ; imm=281474439839744 (0xffffe0000000)
+  0x07c078c8: movk     x8, #0x47ef, lsl #48                            ; imm=18415 (0x47ef)
+  0x07c078d0: mov      x8, #0xffffe0000000                             ; imm=281474439839744 (0xffffe0000000)
+  0x07c078d4: movk     x8, #0xc7ef, lsl #48                            ; imm=51183 (0xc7ef)
+  0x07c07900: adrp     x2, #0x9c6000                                 <<<
+  0x07c07914: bl       #0x7d2aa38                                      ; call
+  0x07c07944: bl       #0x7d2aa38                                      ; call
+  0x07c07974: bl       #0x7d2aa38                                      ; call
+  0x07c079a4: bl       #0x7d2ac90                                      ; call
+  0x07c079d4: bl       #0x7d2aa38                                      ; call
+  0x07c079f8: bl       #0x2f912cc                                      ; call
+  0x07c07a0c: bl       #0x7d2ad08                                      ; call
+  0x07c07a20: bl       #0x2f91e8c                                      ; call
+  0x07c07a34: bl       #0x2efa4dc                                      ; call
+  0x07c07a44: bl       #0x2f91e8c                                      ; call
+
+========================================================================================
+TARGET GetIpAddressList
+  string not present
+
+========================================================================================
+TARGET CMD_GET_TURN_SERVER_LIST
+  xref ADRP @ 0x7daf0ac -> string 0xaab523
+
+---- CMD_GET_TURN_SERVER_LIST ctx @ 0x7daf0ac ----
+  0x07daf070: bl       #0x2f93838                                      ; call
+  0x07daf07c: bl       #0x2f912cc                                      ; call
+  0x07daf080: mov      w0, #0x2000                                     ; imm=8192 (0x2000)
+  0x07daf088: mov      w20, #0x2000                                    ; imm=8192 (0x2000)
+  0x07daf08c: bl       #0x8b35650                                      ; call
+  0x07daf0ac: adrp     x1, #0xaab000                                 <<<
+  0x07daf0e8: bl       #0x2efb614                                      ; call
+  0x07daf0fc: bl       #0x2efb614                                      ; call
+  0x07daf108: mov      w10, #0x656d                                    ; imm=25965 (0x656d)
+  0x07daf110: movk     w10, #0x746e, lsl #16                           ; imm=29806 (0x746e)
+  0x07daf178: bl       #0x2f91f98                                      ; call
+  0x07daf180: bl       #0x74e3374                                      ; call
+  0x07daf19c: bl       #0x2f913c8                                      ; call
+  0x07daf1ac: bl       #0x2f92514                                      ; call
+  0x07daf1b4: bl       #0x2f8f898                                      ; call
+  0x07daf1bc: bl       #0x2f91730                                      ; call
+  0x07daf1c8: bl       #0x2f9135c                                      ; call
+  0x07daf1d8: bl       #0x2f92514                                      ; call
+  0x07daf1e0: bl       #0x2f8f898                                      ; call
+  0x07daf1e8: bl       #0x2f91730                                      ; call
+  xref ADRP @ 0x7daf67c -> string 0xaab523
+
+---- CMD_GET_TURN_SERVER_LIST ctx @ 0x7daf67c ----
+  0x07daf654: bl       #0x8b35360                                      ; call
+  0x07daf660: mov      w2, #0x514                                      ; imm=1300 (0x514)
+  0x07daf664: bl       #0x8b35360                                      ; call
+  0x07daf67c: adrp     x1, #0xaab000                                 <<<
+  0x07daf6a4: bl       #0x2efb614                                      ; call
+  0x07daf6b8: bl       #0x2efb614                                      ; call
+  0x07daf6c4: mov      w10, #0x656d                                    ; imm=25965 (0x656d)
+  0x07daf6cc: movk     w10, #0x746e, lsl #16                           ; imm=29806 (0x746e)
+  0x07daf6f8: mov      w2, #0x800                                      ; imm=2048 (0x800)
+  0x07daf740: bl       #0x8b35360                                      ; call
+  0x07daf798: bl       #0x74e49c0                                      ; call
+  0x07daf7ac: bl       #0x2f92514                                      ; call
+  0x07daf7b0: bl       #0x2f917d8                                      ; call
+  0x07daf7c4: bl       #0x2f92514                                      ; call
+  0x07daf7c8: bl       #0x2f919d0                                      ; call
+
+========================================================================================
+KNOWN SITE 0x7d2a9c0
+
+---- 0x7d2a9c0 ctx @ 0x7d2a9c0 ----
+  0x07d2a988: bl       #0x2f927dc                                      ; call
+  0x07d2a98c: bl       #0x2f91a88                                      ; call
+  0x07d2a9c0: stp      x29, x30, [sp, #-0x30]!                       <<<
+  0x07d2a9ec: bl       #0x2f927dc                                      ; call
+  0x07d2a9f0: bl       #0x2f93008                                      ; call
+  0x07d2aa00: bl       #0x2f927dc                                      ; call
+  0x07d2aa04: bl       #0x2f91ad4                                      ; call
+  0x07d2aa64: bl       #0x2f927dc                                      ; call
+  0x07d2aa68: bl       #0x2f93008                                      ; call
+  0x07d2aa78: bl       #0x2f927dc                                      ; call
+  0x07d2aa7c: bl       #0x2f91b70                                      ; call
+  0x07d2aae0: bl       #0x7d2ab64                                      ; call
+  0x07d2ab14: bl       #0x8b38a00                                      ; call
+
+========================================================================================
+KNOWN SITE 0x7d2aa38
+
+---- 0x7d2aa38 ctx @ 0x7d2aa38 ----
+  0x07d2aa00: bl       #0x2f927dc                                      ; call
+  0x07d2aa04: bl       #0x2f91ad4                                      ; call
+  0x07d2aa38: stp      x29, x30, [sp, #-0x30]!                       <<<
+  0x07d2aa64: bl       #0x2f927dc                                      ; call
+  0x07d2aa68: bl       #0x2f93008                                      ; call
+  0x07d2aa78: bl       #0x2f927dc                                      ; call
+  0x07d2aa7c: bl       #0x2f91b70                                      ; call
+  0x07d2aae0: bl       #0x7d2ab64                                      ; call
+  0x07d2ab14: bl       #0x8b38a00                                      ; call
+  0x07d2ab34: bl       #0x2efa56c                                      ; call
+  0x07d2ab60: bl       #0x8b35290                                      ; call
+
+========================================================================================
+KNOWN SITE 0x7c05b7c
+
+---- 0x7c05b7c ctx @ 0x7c05b7c ----
+  0x07c05b7c: sub      x4, x29, #0x60                                <<<
+  0x07c05b84: bl       #0x7c06f54                                      ; call
+  0x07c05ba0: bl       #0x7d2ac90                                      ; call
+  0x07c05bd0: bl       #0x7d2aa38                                      ; call
+  0x07c05c00: bl       #0x7d2aa38                                      ; call
+  0x07c05c30: bl       #0x7d2a9c0                                      ; call
+  0x07c05c60: bl       #0x7d2a9c0                                      ; call
+  0x07c05c90: bl       #0x7d2a9c0                                      ; call
+  0x07c05cc0: bl       #0x7d2aa38                                      ; call
+
+========================================================================================
+KNOWN SITE 0x7d15db0
+
+---- 0x7d15db0 ctx @ 0x7d15db0 ----
+  0x07d15d70: mov      w8, #0x200                                      ; imm=512 (0x200)
+  0x07d15d74: movk     w8, #0xe500, lsl #16                            ; imm=58624 (0xe500)
+  0x07d15d80: mov      w8, #0x101                                      ; imm=257 (0x101)
+  0x07d15d84: movk     w8, #0xe500, lsl #16                            ; imm=58624 (0xe500)
+  0x07d15d90: mov      w8, #0x102                                      ; imm=258 (0x102)
+  0x07d15d94: movk     w8, #0xe500, lsl #16                            ; imm=58624 (0xe500)
+  0x07d15da0: mov      w8, #0x103                                      ; imm=259 (0x103)
+  0x07d15da4: movk     w8, #0xe500, lsl #16                            ; imm=58624 (0xe500)
+  0x07d15db0: adrp     x0, #0x9da000                                 <<<
+  0x07d15dbc: mov      w8, #0xd02                                      ; imm=3330 (0xd02)
+  0x07d15dc0: movk     w8, #0xe500, lsl #16                            ; imm=58624 (0xe500)
+  0x07d15dcc: mov      w8, #0xb00                                      ; imm=2816 (0xb00)
+  0x07d15dd0: movk     w8, #0xe500, lsl #16                            ; imm=58624 (0xe500)
+  0x07d15ddc: mov      w8, #0xa00                                      ; imm=2560 (0xa00)
+  0x07d15de0: movk     w8, #0xe500, lsl #16                            ; imm=58624 (0xe500)
+  0x07d15dec: mov      w8, #0xf5ff                                     ; imm=62975 (0xf5ff)
+  0x07d15df0: movk     w8, #0x1aff, lsl #16                            ; imm=6911 (0x1aff)
+  0x07d15e24: mov      w8, #0xf00                                      ; imm=3840 (0xf00)
+  0x07d15e28: movk     w8, #0xe500, lsl #16                            ; imm=58624 (0xe500)
+  0x07d15e34: mov      w8, #0xf1ff                                     ; imm=61951 (0xf1ff)
+  0x07d15e38: movk     w8, #0x1aff, lsl #16                            ; imm=6911 (0x1aff)
+  0x07d15e6c: mov      w8, #0xfdff                                     ; imm=65023 (0xfdff)
+  0x07d15e70: movk     w8, #0x1aff, lsl #16                            ; imm=6911 (0x1aff)
+  0x07d15ea4: mov      w8, #0xc01                                      ; imm=3073 (0xc01)
+  0x07d15ea8: movk     w8, #0xe500, lsl #16                            ; imm=58624 (0xe500)
+  0x07d15eb4: mov      w8, #0xb02                                      ; imm=2818 (0xb02)
+  0x07d15eb8: movk     w8, #0xe500, lsl #16                            ; imm=58624 (0xe500)
+  0x07d15ec4: mov      w8, #0xb01                                      ; imm=2817 (0xb01)
+  0x07d15ec8: movk     w8, #0xe500, lsl #16                            ; imm=58624 (0xe500)
+  0x07d15ed4: mov      w8, #0xb02                                      ; imm=2818 (0xb02)
+  0x07d15ed8: movk     w8, #0xe500, lsl #16                            ; imm=58624 (0xe500)
+  0x07d15ef0: mov      w8, #0x1101                                     ; imm=4353 (0x1101)
+  0x07d15ef4: movk     w8, #0xe500, lsl #16                            ; imm=58624 (0xe500)
+  0x07d15f00: mov      w8, #0x1200                                     ; imm=4608 (0x1200)
+  0x07d15f04: movk     w8, #0xe500, lsl #16                            ; imm=58624 (0xe500)
+
+========================================================================================
+KNOWN SITE 0x7d4c400
+
+---- 0x7d4c400 ctx @ 0x7d4c400 ----
+  0x07d4c3cc: bl       #0x7d5ea60                                      ; call
+  0x07d4c3f8: bl       #0x7d5ea60                                      ; call
+  0x07d4c400: adrp     x1, #0xb0a000                                 <<<
+  0x07d4c424: bl       #0x7d5ea60                                      ; call
+  0x07d4c450: bl       #0x7d5ea60                                      ; call
+  0x07d4c47c: bl       #0x7d5ea60                                      ; call
+  0x07d4c4a8: bl       #0x7d5ea60                                      ; call
+  0x07d4c4d4: bl       #0x7d5ea60                                      ; call
+  0x07d4c500: bl       #0x7d5ea60                                      ; call
+  0x07d4c52c: bl       #0x7d5ea60                                      ; call
+  0x07d4c558: bl       #0x7d5ea60                                      ; call

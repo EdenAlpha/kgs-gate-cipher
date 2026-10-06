@@ -1,0 +1,12 @@
+cmd: exec bash -c true; echo GSF2; adb -s 127.0.0.1:5555 exec-out su 0 cat /data/data/com.google.android.gms/databases/gservices.db > /tmp/live-res/gservices.db 2>/dev/null; adb -s 127.0.0.1:5555 exec-out su 0 cat /data/data/com.google.android.gsf/databases/gservices.db > /tmp/live-res/gsf2.db 2>/dev/null; ls -la /tmp/live-res/gservices.db /tmp/live-res/gsf2.db; strings /tmp/live-res/gservices.db 2>/dev/null | grep -iE "android_id" | head -3; strings /tmp/live-res/gsf2.db 2>/dev/null | grep -iE "android_id" | head -3
+at: 22:00:32
+$ bash -c true; echo GSF2; adb -s 127.0.0.1:5555 exec-out su 0 cat /data/data/com.google.android.gms/databases/gservices.db > /tmp/live-res/gservices.db 2>/dev/null; adb -s 127.0.0.1:5555 exec-out su 0 cat /data/data/com.google.android.gsf/databases/gservices.db > /tmp/live-res/gsf2.db 2>/dev/null; ls -la /tmp/live-res/gservices.db /tmp/live-res/gsf2.db; strings /tmp/live-res/gservices.db 2>/dev/null | grep -iE "android_id" | head -3; strings /tmp/live-res/gsf2.db 2>/dev/null | grep -iE "android_id" | head -3
+GSF2
+-rw-r--r-- 1 runner runner     89 Sep 30 22:00 /tmp/live-res/gservices.db
+-rw-r--r-- 1 runner runner 237568 Sep 30 22:00 /tmp/live-res/gsf2.db
+android_id
+wallet.request_context_include_native_client_context_android_id
+!3android_id4143484706287994755$
+rc=0
+gamepid: 
+flows: 0

@@ -1,0 +1,1 @@
+exec echo LIVECHECK; date -u +%H:%M:%S; git -C /home/runner/work rev-parse --short HEAD 2>&1 | head -1

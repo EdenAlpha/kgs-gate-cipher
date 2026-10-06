@@ -1,0 +1,40 @@
+cmd: exec sudo docker exec redroid ip -o addr 2>/dev/null | head -6; sudo docker exec redroid tcpdump -r /data/local/tmp/game2.pcap -nn -c 30 not port 5555 2>&1 | head -30
+at: 10:20:02
+$ sudo docker exec redroid ip -o addr 2>/dev/null | head -6; sudo docker exec redroid tcpdump -r /data/local/tmp/game2.pcap -nn -c 30 not port 5555 2>&1 | head -30
+1: lo    inet 127.0.0.1/8 scope host lo\       valid_lft forever preferred_lft forever
+1: lo    inet6 ::1/128 scope host \       valid_lft forever preferred_lft forever
+2: eth0    inet 172.17.0.2/16 brd 172.17.255.255 scope global eth0\       valid_lft forever preferred_lft forever
+2: eth0    inet6 fe80::172a:9521:4935:bd87/64 scope link stable-privacy \       valid_lft forever preferred_lft forever
+reading from file /data/local/tmp/game2.pcap, link-type LINUX_SLL2 (Linux cooked v2), snapshot length 262144
+Warning: interface names might be incorrect
+09:00:21.424711 eth0  Out IP 172.17.0.2.48368 > 209.85.200.84.443: Flags [S], seq 4276944927, win 65535, options [mss 1460,sackOK,TS val 1615443231 ecr 0,nop,wscale 6], length 0
+09:00:21.426548 eth0  Out IP 172.17.0.2.48564 > 74.125.126.101.443: Flags [S], seq 2564704197, win 65535, options [mss 1460,sackOK,TS val 194381997 ecr 0,nop,wscale 6], length 0
+09:00:21.448467 eth0  In  IP 74.125.126.101.443 > 172.17.0.2.48564: Flags [S.], seq 2572529980, ack 2564704198, win 65535, options [mss 1412,sackOK,TS val 2486658391 ecr 194381997,nop,wscale 8], length 0
+09:00:21.448508 eth0  Out IP 172.17.0.2.48564 > 74.125.126.101.443: Flags [.], ack 1, win 8190, options [nop,nop,TS val 194382019 ecr 2486658391], length 0
+09:00:21.449100 eth0  In  IP 209.85.200.84.443 > 172.17.0.2.48368: Flags [S.], seq 3622949977, ack 4276944928, win 65535, options [mss 1412,sackOK,TS val 1658746010 ecr 1615443231,nop,wscale 8], length 0
+09:00:21.449159 eth0  Out IP 172.17.0.2.48368 > 209.85.200.84.443: Flags [.], ack 1, win 8190, options [nop,nop,TS val 1615443255 ecr 1658746010], length 0
+09:00:21.450558 eth0  Out IP 172.17.0.2.48564 > 74.125.126.101.443: Flags [P.], seq 1:518, ack 1, win 8190, options [nop,nop,TS val 194382021 ecr 2486658391], length 517
+09:00:21.450706 eth0  Out IP 172.17.0.2.48368 > 209.85.200.84.443: Flags [P.], seq 1:540, ack 1, win 8190, options [nop,nop,TS val 1615443257 ecr 1658746010], length 539
+09:00:21.471265 eth0  In  IP 74.125.126.101.443 > 172.17.0.2.48564: Flags [.], ack 518, win 1048, options [nop,nop,TS val 2486658415 ecr 194382021], length 0
+09:00:21.471309 eth0  In  IP 209.85.200.84.443 > 172.17.0.2.48368: Flags [.], ack 540, win 1048, options [nop,nop,TS val 1658746035 ecr 1615443257], length 0
+09:00:21.472187 eth0  In  IP 74.125.126.101.443 > 172.17.0.2.48564: Flags [P.], seq 1:2801, ack 518, win 1050, options [nop,nop,TS val 2486658416 ecr 194382021], length 2800
+09:00:21.472221 eth0  Out IP 172.17.0.2.48564 > 74.125.126.101.443: Flags [.], ack 2801, win 8278, options [nop,nop,TS val 194382043 ecr 2486658416], length 0
+09:00:21.472189 eth0  In  IP 74.125.126.101.443 > 172.17.0.2.48564: Flags [P.], seq 2801:4482, ack 518, win 1050, options [nop,nop,TS val 2486658416 ecr 194382021], length 1681
+09:00:21.472226 eth0  Out IP 172.17.0.2.48564 > 74.125.126.101.443: Flags [.], ack 4482, win 8331, options [nop,nop,TS val 194382043 ecr 2486658416], length 0
+09:00:21.473190 eth0  In  IP 209.85.200.84.443 > 172.17.0.2.48368: Flags [P.], seq 1:2801, ack 540, win 1048, options [nop,nop,TS val 1658746037 ecr 1615443257], length 2800
+09:00:21.473221 eth0  Out IP 172.17.0.2.48368 > 209.85.200.84.443: Flags [.], ack 2801, win 8278, options [nop,nop,TS val 1615443280 ecr 1658746037], length 0
+09:00:21.473193 eth0  In  IP 209.85.200.84.443 > 172.17.0.2.48368: Flags [P.], seq 2801:4294, ack 540, win 1048, options [nop,nop,TS val 1658746037 ecr 1615443257], length 1493
+09:00:21.473226 eth0  Out IP 172.17.0.2.48368 > 209.85.200.84.443: Flags [.], ack 4294, win 8325, options [nop,nop,TS val 1615443280 ecr 1658746037], length 0
+09:00:21.478637 eth0  Out IP 172.17.0.2.48564 > 74.125.126.101.443: Flags [P.], seq 518:598, ack 4482, win 8331, options [nop,nop,TS val 194382049 ecr 2486658416], length 80
+09:00:21.479773 eth0  Out IP 172.17.0.2.48564 > 74.125.126.101.443: Flags [.], seq 598:1998, ack 4482, win 8331, options [nop,nop,TS val 194382050 ecr 2486658416], length 1400
+09:00:21.500569 eth0  In  IP 74.125.126.101.443 > 172.17.0.2.48564: Flags [.], ack 1998, win 1045, options [nop,nop,TS val 2486658444 ecr 194382049], length 0
+09:00:21.500606 eth0  Out IP 172.17.0.2.48564 > 74.125.126.101.443: Flags [P.], seq 1998:2015, ack 4482, win 8331, options [nop,nop,TS val 194382071 ecr 2486658444], length 17
+09:00:21.526515 eth0  In  IP 74.125.126.101.443 > 172.17.0.2.48564: Flags [.], ack 2015, win 1045, options [nop,nop,TS val 2486658470 ecr 194382071], length 0
+09:00:21.533164 eth0  In  IP 74.125.126.101.443 > 172.17.0.2.48564: Flags [P.], seq 4482:6142, ack 2015, win 1045, options [nop,nop,TS val 2486658477 ecr 194382071], length 1660
+09:00:21.533184 eth0  Out IP 172.17.0.2.48564 > 74.125.126.101.443: Flags [.], ack 6142, win 8382, options [nop,nop,TS val 194382104 ecr 2486658477], length 0
+09:00:21.533218 eth0  In  IP 74.125.126.101.443 > 172.17.0.2.48564: Flags [P.], seq 6142:6932, ack 2015, win 1045, options [nop,nop,TS val 2486658477 ecr 194382071], length 790
+09:00:21.533377 eth0  In  IP 74.125.126.101.443 > 172.17.0.2.48564: Flags [P.], seq 6932:6959, ack 2015, win 1045, options [nop,nop,TS val 2486658477 ecr 194382071], length 27
+09:00:21.533750 eth0  Out IP 172.17.0.2.48564 > 74.125.126.101.443: Flags [.], ack 6959, win 8426, options [nop,nop,TS val 194382104 ecr 2486658477], length 0
+rc=0
+gamepid: 
+flows: 0

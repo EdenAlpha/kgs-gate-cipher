@@ -1,0 +1,9 @@
+cmd: exec bash -c true; echo C9; adb -s 127.0.0.1:5555 shell wm size; adb -s 127.0.0.1:5555 shell dumpsys input 2>/dev/null | grep -iE "SurfaceOrientation" | head -2; adb -s 127.0.0.1:5555 shell settings get system user_rotation; adb -s 127.0.0.1:5555 shell input tap 160 265; sleep 7; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+at: 07:35:17
+$ bash -c true; echo C9; adb -s 127.0.0.1:5555 shell wm size; adb -s 127.0.0.1:5555 shell dumpsys input 2>/dev/null | grep -iE "SurfaceOrientation" | head -2; adb -s 127.0.0.1:5555 shell settings get system user_rotation; adb -s 127.0.0.1:5555 shell input tap 160 265; sleep 7; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+C9
+Physical size: 720x1280
+1
+rc=0
+gamepid: 8404
+flows: 0

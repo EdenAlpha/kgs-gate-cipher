@@ -1,0 +1,15 @@
+cmd: exec bash -c true; echo C6; W=/tmp/kgs; python3 -m pip install --quiet --break-system-packages mitmproxy 2>&1 | tail -1; mkdir -p $W/mitm; cat $W/ca/ca.key $W/ca/ca.crt > $W/mitm/mitmproxy-ca.pem; cp -f $W/ca/ca.crt $W/mitm/mitmproxy-ca-cert.pem; FLOWS_LOG=$W/flows.log nohup setsid mitmdump --mode transparent --listen-port 8080 --set confdir=$W/mitm -s kgs-login/scripts/mitm_addon.py -w $W/flows.mitm > $W/mitm.log 2>&1 < /dev/null & sleep 18; echo "addon ready: $(grep -c ADDON-READY $W/flows.log)"; sudo modprobe iptable_nat || true; HOSTGW=$(ip -4 addr show docker0 | grep -oE "inet [0-9.]+" | head -1 | cut -d" " -f2); sudo iptables-legacy -t nat -A PREROUTING -i docker0 -p tcp --dport 443 -j DNAT --to-destination "$HOSTGW:8080"; sudo iptables-legacy -t nat -L PREROUTING -n | head -5; adb -s 127.0.0.1:5555 shell am start -n jp.konami.pesam/com.epicgames.ue4.SplashActivity; sleep 45; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== flows =="; grep -c "^### " $W/flows.log; echo "== hosts =="; grep "^### " $W/flows.log | tail -8
+at: 07:28:09
+$ bash -c true; echo C6; W=/tmp/kgs; python3 -m pip install --quiet --break-system-packages mitmproxy 2>&1 | tail -1; mkdir -p $W/mitm; cat $W/ca/ca.key $W/ca/ca.crt > $W/mitm/mitmproxy-ca.pem; cp -f $W/ca/ca.crt $W/mitm/mitmproxy-ca-cert.pem; FLOWS_LOG=$W/flows.log nohup setsid mitmdump --mode transparent --listen-port 8080 --set confdir=$W/mitm -s kgs-login/scripts/mitm_addon.py -w $W/flows.mitm > $W/mitm.log 2>&1 < /dev/null & sleep 18; echo "addon ready: $(grep -c ADDON-READY $W/flows.log)"; sudo modprobe iptable_nat || true; HOSTGW=$(ip -4 addr show docker0 | grep -oE "inet [0-9.]+" | head -1 | cut -d" " -f2); sudo iptables-legacy -t nat -A PREROUTING -i docker0 -p tcp --dport 443 -j DNAT --to-destination "$HOSTGW:8080"; sudo iptables-legacy -t nat -L PREROUTING -n | head -5; adb -s 127.0.0.1:5555 shell am start -n jp.konami.pesam/com.epicgames.ue4.SplashActivity; sleep 45; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== flows =="; grep -c "^### " $W/flows.log; echo "== hosts =="; grep "^### " $W/flows.log | tail -8
+C6
+addon ready: 1
+Chain PREROUTING (policy ACCEPT)
+target     prot opt source               destination         
+DNAT       6    --  0.0.0.0/0            0.0.0.0/0            tcp dpt:443 to:172.17.0.1:8080
+Starting: Intent { cmp=jp.konami.pesam/com.epicgames.ue4.SplashActivity }
+== flows ==
+0
+== hosts ==
+rc=1
+gamepid: 8404
+flows: 0

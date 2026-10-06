@@ -1,0 +1,56 @@
+gate bodies: 42
+  REQ    /pes22/gate/gate_CMD_GET_SERVER_ENV.php                    176 bytes
+  RESP   /pes22/gate/gate_CMD_GET_SERVER_ENV.php                    2400 bytes
+  REQ    /pes22/gate/gate_CMD_GET_COUNTRY_LIST.php                  144 bytes
+  RESP   /pes22/gate/gate_CMD_GET_COUNTRY_LIST.php                  2352 bytes
+  REQ    /pes22/gate/gate_CMD_GET_AGE_GATE_REQUIREMENTS.php         160 bytes
+  RESP   /pes22/gate/gate_CMD_GET_AGE_GATE_REQUIREMENTS.php         160 bytes
+  REQ    /pes22/gate/gate_CMD_GET_KID_USER_AGE_KIND.php             224 bytes
+  RESP   /pes22/gate/gate_CMD_GET_KID_USER_AGE_KIND.php             128 bytes
+  REQ    /pes22/gate/gate_CMD_GET_SERVER_ENV.php                    176 bytes
+  RESP   /pes22/gate/gate_CMD_GET_SERVER_ENV.php                    2400 bytes
+  REQ    /pes22/gate/gate_CMD_GET_COUNTRY_LIST.php                  144 bytes
+  RESP   /pes22/gate/gate_CMD_GET_COUNTRY_LIST.php                  2352 bytes
+  REQ    /pes22/gate/gate_CMD_GET_AGE_GATE_REQUIREMENTS.php         160 bytes
+  RESP   /pes22/gate/gate_CMD_GET_AGE_GATE_REQUIREMENTS.php         160 bytes
+  REQ    /pes22/gate/gate_CMD_GET_KID_USER_AGE_KIND.php             224 bytes
+  RESP   /pes22/gate/gate_CMD_GET_KID_USER_AGE_KIND.php             128 bytes
+  REQ    /pes22/gate/gate_CMD_GET_SURVEY_INFO.php                   320 bytes
+  RESP   /pes22/gate/gate_CMD_GET_SURVEY_INFO.php                   464 bytes
+  REQ    /pes22/gate/gate_CMD_CHECK_STRING.php                      160 bytes
+  RESP   /pes22/gate/gate_CMD_CHECK_STRING.php                      128 bytes
+  REQ    /pes22/gate/gate_CMD_CREATE_USER.php                       1024 bytes
+  RESP   /pes22/gate/gate_CMD_CREATE_USER.php                       12368 bytes
+  REQ    /pes22/gate/gate_CMD_GET_PRODUCT_LIST.php                  160 bytes
+  RESP   /pes22/gate/gate_CMD_GET_PRODUCT_LIST.php                  7296 bytes
+  REQ    /pes22/gate/gate_CMD_SET_TRACKRECORD.php                   240 bytes
+  RESP   /pes22/gate/gate_CMD_SET_TRACKRECORD.php                   96 bytes
+  REQ    /pes22/gate/gate_CMD_GET_STADIUM_DATA.php                  192 bytes
+  RESP   /pes22/gate/gate_CMD_GET_STADIUM_DATA.php                  640 bytes
+  REQ    /pes22/gate/gate_CMD_GET_GAMERELAY_QUALITYCHECK_LIST.php   176 bytes
+  RESP   /pes22/gate/gate_CMD_GET_GAMERELAY_QUALITYCHECK_LIST.php   2352 bytes
+  REQ    /pes22/gate/gate_CMD_SEND_ADJUST_PARAM.php                 288 bytes
+  RESP   /pes22/gate/gate_CMD_SEND_ADJUST_PARAM.php                 96 bytes
+  REQ    /pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php             608 bytes
+  RESP   /pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php             96 bytes
+  REQ    /pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php             592 bytes
+  RESP   /pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php             96 bytes
+  REQ    /pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php             592 bytes
+  RESP   /pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php             96 bytes
+  REQ    /pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php             608 bytes
+  RESP   /pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php             96 bytes
+  REQ    /pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php             608 bytes
+  RESP   /pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php             96 bytes
+
+==============================================================================
+SWEEP  (oracle = whole plaintext must parse)
+==============================================================================
+combinations tested: 728 (4 bodies each)
+raw hits: 0
+
+==============================================================================
+HITS CONFIRMED ON ALL 4 TESTED BODIES
+==============================================================================
+  none
+
+partial hits (some bodies only):

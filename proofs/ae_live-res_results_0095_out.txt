@@ -1,0 +1,8 @@
+cmd: exec bash -c true; echo UI; adb -s 127.0.0.1:5555 shell pm uninstall jp.konami.pesam; sleep 3; adb -s 127.0.0.1:5555 shell am start -a android.intent.action.VIEW -d "market://details?id=jp.konami.pesam" >/dev/null 2>&1; sleep 9; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+at: 23:42:36
+$ bash -c true; echo UI; adb -s 127.0.0.1:5555 shell pm uninstall jp.konami.pesam; sleep 3; adb -s 127.0.0.1:5555 shell am start -a android.intent.action.VIEW -d "market://details?id=jp.konami.pesam" >/dev/null 2>&1; sleep 9; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+UI
+Success
+rc=0
+gamepid: 
+flows: 0

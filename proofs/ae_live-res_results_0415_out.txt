@@ -1,0 +1,8 @@
+cmd: exec bash -c true; echo G3; adb -s 127.0.0.1:5555 shell am force-stop jp.konami.pesam; sleep 6; adb -s 127.0.0.1:5555 shell am start -n jp.konami.pesam/com.epicgames.ue4.SplashActivity >/dev/null 2>&1; sleep 48; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/step1.png; adb -s 127.0.0.1:5555 shell input swipe 1206 662 1206 662 250; sleep 11; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/step2.png; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo flows=$(grep -c "^### " /tmp/kgs/flows.log)
+at: 08:19:33
+$ bash -c true; echo G3; adb -s 127.0.0.1:5555 shell am force-stop jp.konami.pesam; sleep 6; adb -s 127.0.0.1:5555 shell am start -n jp.konami.pesam/com.epicgames.ue4.SplashActivity >/dev/null 2>&1; sleep 48; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/step1.png; adb -s 127.0.0.1:5555 shell input swipe 1206 662 1206 662 250; sleep 11; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/step2.png; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo flows=$(grep -c "^### " /tmp/kgs/flows.log)
+G3
+flows=40
+rc=0
+gamepid: 18731
+flows: 40

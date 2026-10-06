@@ -1,0 +1,1 @@
+exec echo MITMLOG; tail -30 /tmp/kgs/mitm.log 2>&1; echo PROCS; pgrep -af mitmdump | head -2; echo FLOWS; wc -l /tmp/kgs/flows.log 2>/dev/null

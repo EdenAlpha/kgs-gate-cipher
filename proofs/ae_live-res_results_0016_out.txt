@@ -1,0 +1,16 @@
+cmd: exec bash -c true; echo U3; echo "== dnat before =="; sudo iptables-legacy -t nat -L PREROUTING -n --line-numbers | head -8; sudo iptables-legacy -t nat -D PREROUTING -i docker0 -p tcp --dport 443 -j DNAT --to-destination $(ip -4 addr show docker0 | grep -oE "inet [0-9.]+" | head -1 | cut -d" " -f2):8080; echo "delete rc=$?"; echo "== dnat after =="; sudo iptables-legacy -t nat -L PREROUTING -n | head -6; echo "== retry signin =="; adb -s 127.0.0.1:5555 shell am start -a android.settings.ADD_ACCOUNT_SETTINGS >/dev/null 2>&1; sleep 7; adb -s 127.0.0.1:5555 shell input tap 360 467; sleep 15; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+at: 23:26:14
+$ bash -c true; echo U3; echo "== dnat before =="; sudo iptables-legacy -t nat -L PREROUTING -n --line-numbers | head -8; sudo iptables-legacy -t nat -D PREROUTING -i docker0 -p tcp --dport 443 -j DNAT --to-destination $(ip -4 addr show docker0 | grep -oE "inet [0-9.]+" | head -1 | cut -d" " -f2):8080; echo "delete rc=$?"; echo "== dnat after =="; sudo iptables-legacy -t nat -L PREROUTING -n | head -6; echo "== retry signin =="; adb -s 127.0.0.1:5555 shell am start -a android.settings.ADD_ACCOUNT_SETTINGS >/dev/null 2>&1; sleep 7; adb -s 127.0.0.1:5555 shell input tap 360 467; sleep 15; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+U3
+== dnat before ==
+Chain PREROUTING (policy ACCEPT)
+num  target     prot opt source               destination         
+1    DNAT       6    --  0.0.0.0/0            0.0.0.0/0            tcp dpt:443 to:172.17.0.1:8080
+delete rc=0
+== dnat after ==
+Chain PREROUTING (policy ACCEPT)
+target     prot opt source               destination         
+== retry signin ==
+rc=0
+gamepid: 
+flows: 0

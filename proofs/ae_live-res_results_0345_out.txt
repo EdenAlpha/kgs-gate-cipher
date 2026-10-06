@@ -1,0 +1,10 @@
+cmd: exec bash -c true; echo WI; for i in 1 2 3; do adb -s 127.0.0.1:5555 shell input tap 640 400; sleep 9; done; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== flows =="; grep -c "^### " /tmp/kgs/flows.log 2>/dev/null; grep -oE "### RESP POST /pes22/[^ ]*" /tmp/kgs/flows.log 2>/dev/null | sort -u | wc -l
+at: 00:35:23
+$ bash -c true; echo WI; for i in 1 2 3; do adb -s 127.0.0.1:5555 shell input tap 640 400; sleep 9; done; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== flows =="; grep -c "^### " /tmp/kgs/flows.log 2>/dev/null; grep -oE "### RESP POST /pes22/[^ ]*" /tmp/kgs/flows.log 2>/dev/null | sort -u | wc -l
+WI
+== flows ==
+17
+15
+rc=0
+gamepid: 9664
+flows: 17

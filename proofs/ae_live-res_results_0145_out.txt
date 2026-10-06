@@ -1,0 +1,13 @@
+cmd: exec bash -c true; echo SM; adb -s 127.0.0.1:5555 shell getprop ro.product.model; adb -s 127.0.0.1:5555 shell getprop ro.product.brand; adb -s 127.0.0.1:5555 shell getprop ro.product.manufacturer; adb -s 127.0.0.1:5555 shell getprop ro.product.device; adb -s 127.0.0.1:5555 shell getprop ro.build.fingerprint; adb -s 127.0.0.1:5555 shell getprop ro.product.name
+at: 22:44:28
+$ bash -c true; echo SM; adb -s 127.0.0.1:5555 shell getprop ro.product.model; adb -s 127.0.0.1:5555 shell getprop ro.product.brand; adb -s 127.0.0.1:5555 shell getprop ro.product.manufacturer; adb -s 127.0.0.1:5555 shell getprop ro.product.device; adb -s 127.0.0.1:5555 shell getprop ro.build.fingerprint; adb -s 127.0.0.1:5555 shell getprop ro.product.name
+SM
+redroid14_arm64_only
+redroid
+redroid
+redroid_arm64_only
+redroid/redroid_arm64_only/redroid_arm64_only:14/UD2A.240505.001.W1/eng.edward.20240814.090735:userdebug/test-keys
+redroid_arm64_only
+rc=0
+gamepid: 
+flows: 0

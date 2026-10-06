@@ -1,0 +1,1 @@
+exec echo PING; date -u +%H:%M:%S

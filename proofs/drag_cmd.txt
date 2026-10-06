@@ -1,0 +1,1 @@
+exec adb -s 127.0.0.1:5555 shell input swipe 245 150 640 110 600; echo DRAG1; sleep 2; adb -s 127.0.0.1:5555 shell input swipe 245 150 830 250 600; echo DRAG2; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/drag.png; ls -la /tmp/live-res/drag.png

@@ -1,0 +1,7 @@
+cmd: exec bash -c true; echo VJ; adb -s 127.0.0.1:5555 shell input swipe 1209 663 1209 663 150; sleep 8; adb -s 127.0.0.1:5555 shell input swipe 1095 690 1095 690 150; sleep 14; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+at: 00:09:25
+$ bash -c true; echo VJ; adb -s 127.0.0.1:5555 shell input swipe 1209 663 1209 663 150; sleep 8; adb -s 127.0.0.1:5555 shell input swipe 1095 690 1095 690 150; sleep 14; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+VJ
+rc=0
+gamepid: 6484
+flows: 0

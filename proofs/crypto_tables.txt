@@ -1,0 +1,44 @@
+==============================================================================
+CRYPTO TABLE FINGERPRINTS IN libUE4.so   (160822968 bytes)
+==============================================================================
+miss AES S-box (fwd)
+miss AES S-box (inv)
+miss AES Rcon (01,02,04..36)
+
+HIT  SHA-256 K[0..3]   (2 occurrence(s))
+      off 0x00c8e9f8   va 0x00c8e9f8   sect .rodata
+        first 32: 982f8a4291443771cffbc0b5a5dbb5e95bc25639f111f159a4823f92d55e1cab
+      off 0x00cb50d8   va 0x00cb50d8   sect .rodata
+        first 32: 982f8a4291443771cffbc0b5a5dbb5e95bc25639f111f159a4823f92d55e1cab
+miss SHA-256 K[12..13]
+miss ChaCha sigma 'expand 32k'
+miss SHA-1 init (0123456789abcdeF fedcba9876543210)
+
+HIT  MD5 init (0123456789abcdeF ...)   (1 occurrence(s))
+      off 0x00735f00   va 0x00735f00   sect .rodata
+        first 32: 0123456789abcdeffedcba9876543210d4a3ac6ec14cec40ed8b86b7c58f4209
+
+HIT  BLAKE2s IV (6A09E667..)   (1 occurrence(s))
+      off 0x0072abb0   va 0x0072abb0   sect .rodata
+        first 32: 67e6096a85ae67bb72f36e3c3af54fa57f520e518c68059babd9831f19cde05b
+
+HIT  BLAKE2b IV (6A09E667.. 243F6A88)   (1 occurrence(s))
+      off 0x0072d850   va 0x0072d850   sect .rodata
+        first 32: 08c9bcf367e6096a3ba7ca8485ae67bb01000000000000001000000000040000
+miss AES Te0 table (a56363c6 ...)
+
+HIT  CRC32 poly 0xEDB88320 (LE)   (2 occurrence(s))
+      off 0x00c644d0   va 0x00c644d0   sect .rodata
+        first 32: 2083b8edb6b3bf9a0ce2b6039ad2b1743947d5eaaf77d29d1526db048316dc73
+      off 0x098ff8a8   va 0x0990b8a8   sect .data
+        first 32: 2083b8edb6b3bf9a0ce2b6039ad2b1743947d5eaaf77d29d1526db048316dc73
+
+HIT  crc32 IEEE reflected table[0]=0x00000000, [1]=0x77073096   (2 occurrence(s))
+      off 0x00c642d0   va 0x00c642d0   sect .rodata
+        first 32: 00000000963007772c610eeeba51099919c46d078ff46a7035a563e9a395649e
+      off 0x098ff6a8   va 0x0990b6a8   sect .data
+        first 32: 00000000963007772c610eeeba51099919c46d078ff46a7035a563e9a395649e
+
+==============================================================================
+VALIDATING any AES S-box hit (needs 256 bytes, all distinct)
+==============================================================================

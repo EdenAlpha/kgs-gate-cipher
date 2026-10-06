@@ -1,0 +1,8 @@
+cmd: exec bash -c true; echo PLAY14; adb -s 127.0.0.1:5555 shell input swipe 360 300 360 1000 400; sleep 3; adb -s 127.0.0.1:5555 shell input keyevent 123; for i in $(seq 1 30); do adb -s 127.0.0.1:5555 shell input keyevent 67; done; sleep 2; adb -s 127.0.0.1:5555 shell uiautomator dump /sdcard/u2.xml >/dev/null 2>&1; adb -s 127.0.0.1:5555 shell cat /sdcard/u2.xml > /tmp/live-res/ui2.xml; grep -o "<node[^>]*EditText[^>]*>" /tmp/live-res/ui2.xml | head -2; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+at: 21:31:05
+$ bash -c true; echo PLAY14; adb -s 127.0.0.1:5555 shell input swipe 360 300 360 1000 400; sleep 3; adb -s 127.0.0.1:5555 shell input keyevent 123; for i in $(seq 1 30); do adb -s 127.0.0.1:5555 shell input keyevent 67; done; sleep 2; adb -s 127.0.0.1:5555 shell uiautomator dump /sdcard/u2.xml >/dev/null 2>&1; adb -s 127.0.0.1:5555 shell cat /sdcard/u2.xml > /tmp/live-res/ui2.xml; grep -o "<node[^>]*EditText[^>]*>" /tmp/live-res/ui2.xml | head -2; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+PLAY14
+<node NAF="true" index="0" text="" resource-id="ootp-pin" class="android.widget.EditText" package="com.google.android.gms" content-desc="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="true" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[52,442][668,514]" />
+rc=0
+gamepid: 
+flows: 0

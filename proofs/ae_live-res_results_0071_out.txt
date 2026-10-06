@@ -1,0 +1,7 @@
+cmd: exec bash -c true; echo UC; adb -s 127.0.0.1:5555 shell am start -a android.settings.ADD_ACCOUNT_SETTINGS >/dev/null 2>&1; sleep 8; adb -s 127.0.0.1:5555 shell input tap 360 467; sleep 12; adb -s 127.0.0.1:5555 shell input tap 360 631; sleep 3; adb -s 127.0.0.1:5555 shell input keyevent 123; adb -s 127.0.0.1:5555 shell input keyevent 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67; sleep 2; E=$(cat /tmp/kgs/creds/GMAIL); adb -s 127.0.0.1:5555 shell input text "$E"; sleep 3; adb -s 127.0.0.1:5555 shell input tap 591 586; sleep 16; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+at: 23:37:24
+$ bash -c true; echo UC; adb -s 127.0.0.1:5555 shell am start -a android.settings.ADD_ACCOUNT_SETTINGS >/dev/null 2>&1; sleep 8; adb -s 127.0.0.1:5555 shell input tap 360 467; sleep 12; adb -s 127.0.0.1:5555 shell input tap 360 631; sleep 3; adb -s 127.0.0.1:5555 shell input keyevent 123; adb -s 127.0.0.1:5555 shell input keyevent 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67; sleep 2; E=$(cat /tmp/kgs/creds/GMAIL); adb -s 127.0.0.1:5555 shell input text "$E"; sleep 3; adb -s 127.0.0.1:5555 shell input tap 591 586; sleep 16; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+UC
+rc=0
+gamepid: 
+flows: 0

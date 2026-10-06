@@ -1,0 +1,11 @@
+cmd: exec bash -c true; echo J7; adb -s 127.0.0.1:5555 shell input swipe 640 557 640 557 250; sleep 13; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/s1.png; adb -s 127.0.0.1:5555 shell input swipe 1112 678 1112 678 250; sleep 14; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/s2.png; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo flows=$(grep -c "^### " /tmp/kgs/flows.log); grep "^### RESP" /tmp/kgs/flows.log | tail -3
+at: 08:45:48
+$ bash -c true; echo J7; adb -s 127.0.0.1:5555 shell input swipe 640 557 640 557 250; sleep 13; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/s1.png; adb -s 127.0.0.1:5555 shell input swipe 1112 678 1112 678 250; sleep 14; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/s2.png; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo flows=$(grep -c "^### " /tmp/kgs/flows.log); grep "^### RESP" /tmp/kgs/flows.log | tail -3
+J7
+flows=68
+### RESP POST /pes22/gate/gate_CMD_SET_MYCLUB_ENTRY_INFO.php -> 200
+### RESP POST /pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php -> 200
+### RESP POST /pes22/gate/gate_CMD_GET_MAINMENU_INFO.php -> 200
+rc=0
+gamepid: 18731
+flows: 68

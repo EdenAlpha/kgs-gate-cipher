@@ -1,0 +1,200 @@
+gate bodies: 42   sizes: [96, 128, 144, 160, 176, 192, 224, 240, 288, 320, 464, 592, 608, 640, 1024, 2352, 2400, 7296, 12368]
+==============================================================================
+PKCS#7 (block 16) over all 42 bodies -- AES-256
+==============================================================================
+   42/42   key=B32  pre=0 iv=00000000000000000000000000000000
+   42/42   key=B32  pre=0 iv=f1f7d09fe3db7d2789060607c98fa601
+   42/42   key=B32  pre=0 iv=89060607c98fa601425b0d03644a5a5a
+   42/42   key=B32  pre=0 iv=d9e9d3e014775c9c95761968893e9468
+   42/42   key=B32  pre=16 iv=00000000000000000000000000000000
+   42/42   key=B32  pre=16 iv=f1f7d09fe3db7d2789060607c98fa601
+   42/42   key=B32  pre=16 iv=89060607c98fa601425b0d03644a5a5a
+   42/42   key=B32  pre=16 iv=d9e9d3e014775c9c95761968893e9468
+    1/42   key=A16  pre=0 iv=00000000000000000000000000000000
+    1/42   key=A16  pre=0 iv=f1f7d09fe3db7d2789060607c98fa601
+    1/42   key=A16  pre=0 iv=89060607c98fa601425b0d03644a5a5a
+    1/42   key=A16  pre=0 iv=d9e9d3e014775c9c95761968893e9468
+    1/42   key=A16  pre=16 iv=00000000000000000000000000000000
+    1/42   key=A16  pre=16 iv=f1f7d09fe3db7d2789060607c98fa601
+    1/42   key=A16  pre=16 iv=89060607c98fa601425b0d03644a5a5a
+    1/42   key=A16  pre=16 iv=d9e9d3e014775c9c95761968893e9468
+    0/0    key=B32  pre=8 iv=00000000000000000000000000000000
+    0/0    key=B32  pre=8 iv=f1f7d09fe3db7d2789060607c98fa601
+    0/0    key=B32  pre=8 iv=f1f7d09fe3db7d270000000000000000
+    0/0    key=B32  pre=8 iv=89060607c98fa601f1f7d09fe3db7d27
+    0/0    key=B32  pre=8 iv=d9e9d3e014775c9c95761968893e9468
+    0/42   key=B24  pre=0 iv=00000000000000000000000000000000
+    0/42   key=B24  pre=0 iv=f1f7d09fe3db7d2789060607c98fa601
+    0/42   key=B24  pre=0 iv=89060607c98fa601425b0d03644a5a5a
+
+HIT -- 42/42 with key=B32 pre=0 iv=00000000000000000000000000000000
+
+raw bytes (no oracle applied):
+------------------------------------------------------------------------------
+REQ /pes22/gate/gate_CMD_GET_SERVER_ENV.php  176 bytes  pkcs7=True
+  hex   f0778ecfeb26a9249ac17b874f05195678daeb5a9a5b9c9e99b2c9d9d725dedd35243ed83528cc3528ded52f6c49516166ca39a1b3c297979716a716c567a630ac2a4e2d2ececccf03b217accead8c2fc8492c49cb2fca5deee8e712e4efe9b2b2383e3bb5b23cbf2865455c66706a52a044f4929cc4bcf445a1c1cb8a52d3813a5706b9ba7bfafbc58706af40d7bc2e39273335af24be2cb50864c752333d033d4300665f4051
+  ascii .w...&.$..{.O..Vx..Z.[.......%..5$>.5(.5(../lIQaf.9..........g.0.*N-.........../.I,I./.].........8>;..<.(eE\fpjR.D......E....R..:W...{......@...9'35.$.,..d.R3=.=C.f_@Q
+------------------------------------------------------------------------------
+RESP /pes22/gate/gate_CMD_GET_SERVER_ENV.php  2400 bytes  pkcs7=True
+  hex   373a4e6589a9436a5e39812317f2c11a1f8b0800000000000203b557cf8fe3561ddfa1b77240a5173800a5ad4008cdc471269b3162559cc4c9383b71268e633bbe3cd97ecf1327cf3f1adbc964c4a90209712aea9543b599a5db966ebbdb76db8204178438d09510a7410889037f0437be7e4e66677729cb6e61a4d124dff7dee7fbf97ebf9feff7bdf9dba56fbf19cfa23442519cfee5a943b2ec489669c5237ee8f7685a93a77a36323a89352c8f9d500f4686c261b3433543985ac6716f6494e970bf435d5ee7
+  ascii 7:Ne..Cj^9.#...............W...V....r@..8...@...q&.1bU...8;q&.c;.<.~..'.?...d....q*..C.....n..v.....8....A.....7.~Nfgw).na..$......~........o....4BQ....C..H.i.#~..hZ..z62:.5,..P.F..a.C5C.Z.qod..p.C]^.
+------------------------------------------------------------------------------
+REQ /pes22/gate/gate_CMD_GET_COUNTRY_LIST.php  144 bytes  pkcs7=True
+  hex   40f83f09c54175393714eee3c0f889c678daeb589a5b9c9e99b2c5d9d725dedd3524ded93fd42f242832dec733386449516166ca39a1b3c257979716a716c567a630ac2a4e2d2ececccf03b217accead8c2fc8492c49cb2fca5deee8e712e4efe9b2b2383e3bb5b23cbf2865455c66706a52a044f4929cc4bcf445a1c12bd0d502003320323b
+  ascii @.?..Au97.......x..X.[.......%..5$..?./$(2..38dIQaf.9...W......g.0.*N-.........../.I,I./.].........8>;..<.(eE\fpjR.D......E..+....3 2;
+------------------------------------------------------------------------------
+RESP /pes22/gate/gate_CMD_GET_COUNTRY_LIST.php  2352 bytes  pkcs7=True
+  hex   dc9d355ed7f9a1ffc663380ed924e6551f8b08000000000002039d5bcd72dbc811ce33242f804b2aa73c420e00088114019006406ac58baa498cc9b1000c3d04a425cfa93cc846fc91ecf5265927b555c96dcfc92d8754e561324dff64771a7655fb22a954d2a7ee9efef9fa477f78bd506ddde8ed4d2937cd7f7ff1eaf71fbfb15085f8a31b79a7156c6e400bf82619bd596b79078bed0d2c1aa9eaa33f4a2e0669fcf1776aa8c4d12de7504bb0907a33f70b9096421324371c7d0669ef866910fc0ce7e0d64b55
+  ascii ..5^.....c8..$.U...........[.r....3$/.K*.<B........@j...I.....=..%..<.F....&Y'.U.m..-.T.a2M.dw.vU.".T.......G.x.Pm...M)7.........P....y..ln@..&..Yky....,....?J..i..wj...-.PK..z3....B.$7.}.i..i......KU
+------------------------------------------------------------------------------
+REQ /pes22/gate/gate_CMD_GET_AGE_GATE_REQUIREMENTS.php  160 bytes  pkcs7=True
+  hex   bd6c8ee3d17dc9c201abb96c010e013c78da6b5f9a5b9c9e99b2d7d9d725dedd3524ded1dd35dedd31c4353ec83530d433c8d5d7d52f247849516166ca39a1b3c2d7969716a716c567a630ac2a4e2d2ececccf03b217accead8c2fc8492c49cb2fca5deee8e712e4efe9b2b2383e3bb5b23cbf2865455c66706a52a044f49ae4fcd2bc92a2caf8e4fc94d4c5a1c18e00ec0f31c6
+  ascii .l...}.....l...<x.k_.[.......%..5$...5..1.5>.50.3..../$xIQaf.9..........g.0.*N-.........../.I,I./.].........8>;..<.(eE\fpjR.D.....................1.
+------------------------------------------------------------------------------
+RESP /pes22/gate/gate_CMD_GET_AGE_GATE_REQUIREMENTS.php  160 bytes  pkcs7=True
+  hex   f50125a9aa1ba1343f381b5e577034ce1f8b08000000000002036b5d9f591c9f5a9a93189f9c5f9a575254b938d2357803941d9f989e1a9f9d9997b2c1c93328c4233ed2d53128ded7df2fc46359516a71694ec9523f7fd7a0a02545859929e784ce0a5f5b9a5b9c9e99b2d7d9d725dedd3524ded1dd35dedd31c4353ec83530d433c8d5d7d52f241800200486d072000000
+  ascii ..%....4?8.^Wp4...........k].Y..Z....._.WRT.8.5x..............3(.#>..1(.../.cYQjqiN.R?....%E..)...._[.[.......%..5$...5..1.5>.50.3..../$.. ...r...
+------------------------------------------------------------------------------
+REQ /pes22/gate/gate_CMD_GET_KID_USER_AGE_KIND.php  224 bytes  pkcs7=True
+  hex   6800af96aedf7f2b5bf95076d33b897d78da35894d0ec1501446ad81894d48ca0eca7ba19156b43510899bf21e6eaa7df56e1be916ac4252e277606a60094c6d4727926f70cef976c78896289e1d9b4197fbd0b7188c3cee82d9e5a538eca037283ed577ed7bca486a4051b99224421597bcbf453924eb205d281d9d4c87b9038b5d0842996f9516e7297a7236ac4fee7395c5a9ce61ae842c469e59044b796d1986d1309ae51effbfcc10622c1e6dcbf57b30e6a60bf6c0f17b2f2498a14e5722c801e3244b61b1
+  ascii h......+[.Pv.;.}x.5.M..P.F...MH...{..V.5.....n.}.n....BR.w`j`.LmG'.op..v...(...A......<.....8..7(>.w.{.Hj@Q..$B....E9$. ](..L....].B.o...)zr6.O.s....a..,F.Y.Kym...0.......b,.m..{0......{/$..NW"...$Ka.
+------------------------------------------------------------------------------
+RESP /pes22/gate/gate_CMD_GET_KID_USER_AGE_KIND.php  128 bytes  pkcs7=True
+  hex   bf607ffb7139b211631692646afeae391f8b08000000000002036b5d5b5a9c5a149f989e1a9f9d9997b2d4d125d427643190bbcac8c0c040d7c050d7d87059516a71694ec9523f7fd7a0a02545859929e784ce0a5f5f9a5b9c9e99b2d3d9d725dedd3524dedbd3253e34d83528ded1dd15c8f17301007e6cd6535b000000
+  ascii .`..q9..c..dj..9..........k][Z.Z............%.'d1......@..P..pYQjqiN.R?....%E..)....__.[.......%..5$...%>4.5(......s..~l.S[...
+------------------------------------------------------------------------------
+REQ /pes22/gate/gate_CMD_GET_SERVER_ENV.php  176 bytes  pkcs7=True
+  hex   463e13e3b89de4c2a39ff21db4d2145778daeb5a9a5b9c9e99b2c9d9d725dedd35243ed83528cc3528ded52f6c49516166ca39a1b3c237969716a716c567a630ac2a4e2d2ececccf03b217accead8c2fc8492c49cb2fca5deee8e712e4efe9b2b2383e3bb5b23cbf2865455c66706a52a044f4929cc4bcf445a1c1cb8a52d3813a5706b9ba7bfafbc58706af40d7bc2e39273335af24be2cb50864c752333d033d430068cb4056
+  ascii F>.............Wx..Z.[.......%..5$>.5(.5(../lIQaf.9...7......g.0.*N-.........../.I,I./.].........8>;..<.(eE\fpjR.D......E....R..:W...{......@...9'35.$.,..d.R3=.=C.h.@V
+------------------------------------------------------------------------------
+RESP /pes22/gate/gate_CMD_GET_SERVER_ENV.php  2400 bytes  pkcs7=True
+  hex   458723086f53908bbd7b4b7290d096ea1f8b0800000000000203b557cf8f234715de21b770402117b84048221042336eb7c7eb69c42ab4edb6a79d717ba6ddee6ef7a5d4dd553d6ebbfa47fa873d1e718a40429c8272e510c5b36493904d76936c1290e0821007b2123706216efc11dc785d6dcfceee12966c60a4d1d8afaabef7bdf7bef7aae6ef57bef3669c445984a238fbeb138764d9932cd38ac7fcc81fd0ac21cff47c6cf4526b549d38a11e8c0d85c3668f6a8630b38c93c1d8a8d2d17e8fbabccee9fb74
+  ascii E.#.oS...{Kr...............W..#G..!.p@!..@H".B3n...i.*.....q{...n....U=n..G..=.q.@B..r....d..Mv.l........7.!n...x]m.....l`..............W..f.DY..8....d..,........!..|l.RkT.8......f.j.0........~......t
+------------------------------------------------------------------------------
+REQ /pes22/gate/gate_CMD_GET_COUNTRY_LIST.php  144 bytes  pkcs7=True
+  hex   e916f3ccb2b420fa4f4801ada999160d78daeb589a5b9c9e99b2c5d9d725dedd3524ded93fd42f242832dec733386449516166ca39a1b3c237979716a716c567a630ac2a4e2d2ececccf03b217accead8c2fc8492c49cb2fca5deee8e712e4efe9b2b2383e3bb5b23cbf2865455c66706a52a044f4929cc4bcf445a1c12bd0d502003478323f
+  ascii ...... .OH......x..X.[.......%..5$..?./$(2..38dIQaf.9...7......g.0.*N-.........../.I,I./.].........8>;..<.(eE\fpjR.D......E..+....4x2?
+------------------------------------------------------------------------------
+RESP /pes22/gate/gate_CMD_GET_COUNTRY_LIST.php  2352 bytes  pkcs7=True
+  hex   ecb70b4ac6ccd38985a99f6ebbb3fa1c1f8b08000000000002039d5bcd72dbc811ce33242f804b2aa73c420e00088114019006406ac58baa498cc9b1000c3d04a425cfa93cc846fc91ecf5265927b555c96dcfc97dabf23099a67fb23b0dbbaa7d91542ae953774fff7cfda33fbd5ea8b66ef4f6a6949be6bfbf7af5c78fdf58a842fcd98dbcd30a3637a0057c938cdeacb5bc83c5f606168d54f5d11f25178334fef83b3554e2e89673a8255848bd99fb05484ba109921b8e3e83b477c334087e817370eba52a09
+  ascii ...J.......n...............[.r....3$/.K*.<B........@j...I.....=..%..<.F....&Y'.U.m..}..0....;...}.T*.SwO.|..?.^..n........z....X.B......67..|............T...%..4..;5T...s.%XH....HK.....>..w.4.~.sp..*.
+------------------------------------------------------------------------------
+REQ /pes22/gate/gate_CMD_GET_AGE_GATE_REQUIREMENTS.php  160 bytes  pkcs7=True
+  hex   0f057536fd7e7ecf1f8f59bcdb1afb1b78da6b5f9a5b9c9e99b2d7d9d725dedd3524ded1dd35dedd31c4353ec83530d433c8d5d7d52f247849516166ca39a1b3c2b7969716a716c567a630ac2a4e2d2ececccf03b217accead8c2fc8492c49cb2fca5deee8e712e4efe9b2b2383e3bb5b23cbf2865455c66706a52a044f49ae4fcd2bc92a2caf8e4fc94d4c5a1c18e00ed4731ca
+  ascii ..u6.~~...Y.....x.k_.[.......%..5$...5..1.5>.50.3..../$xIQaf.9..........g.0.*N-.........../.I,I./.].........8>;..<.(eE\fpjR.D....................G1.
+------------------------------------------------------------------------------
+RESP /pes22/gate/gate_CMD_GET_AGE_GATE_REQUIREMENTS.php  160 bytes  pkcs7=True
+  hex   7dd2cd6748e5de7ab5e8c59983fee00e1f8b08000000000002036b5d9f591c9f5a9a93189f9c5f9a575254b938d2357803941d9f989e1a9f9d9997b2c1c93328c4233ed2d53128ded7df2fc46359516a71694ec9523f7fd7a0a02545859929e784ce0adf5a9a5b9c9e99b2d7d9d725dedd3524ded1dd35dedd31c4353ec83530d433c8d5d7d52f241800e1ff736272000000
+  ascii }..gH..z..................k].Y..Z....._.WRT.8.5x..............3(.#>..1(.../.cYQjqiN.R?....%E..).....Z.[.......%..5$...5..1.5>.50.3..../$....sbr...
+------------------------------------------------------------------------------
+REQ /pes22/gate/gate_CMD_GET_KID_USER_AGE_KIND.php  224 bytes  pkcs7=True
+  hex   fc9d8b2132a9237168b36965ff19b26a78da35894d0ec1501446ad81894d48ca0eca7ba19156b43510899bf21e6eaa7df56e1be916ac4252e277606a60096cc0667422f906e79c6f778c6889e2d9b11974b90f7d8bc1c8e32e985d5e8ac30e7a83e2537dd7bea78ca40614952b49225471c9fb5b9443b20ed285d2d1c974983bb0d8852094f95669719ea22767c3fae43e57599cea1ce64ac862e49945b094d79661180da359eef1ffcb0c21c6e2d1b65cbf07636eba600f1cbff7428219ea7425821c304eb21416
+  ascii ...!2.#qh.ie...jx.5.M..P.F...MH...{..V.5.....n.}.n....BR.w`j`.l.ft"....ow.h.....t..}......]^...z..S}........+I"Tq..[.C.......t.;... ..Viq..'g...>WY....J.b..E....a...Y.....!....\..cn.`....B...t%..0N...
+------------------------------------------------------------------------------
+RESP /pes22/gate/gate_CMD_GET_KID_USER_AGE_KIND.php  128 bytes  pkcs7=True
+  hex   e18786079f7f38001944465b8fdab9521f8b08000000000002036b5d5b5a9c5a149f989e1a9f9d9997b2d4d125d427643190bbcac8c0c040d7c050d7d87059516a71694ec9523f7fd7a0a02545859929e784ce0adf5e9a5b9c9e99b2d3d9d725dedd3524dedbd3253e34d83528ded1dd15c8f17301006baef9e45b000000
+  ascii ......8..DF[...R..........k][Z.Z............%.'d1......@..P..pYQjqiN.R?....%E..).....^.[.......%..5$...%>4.5(......s..k...[...
+------------------------------------------------------------------------------
+REQ /pes22/gate/gate_CMD_GET_SURVEY_INFO.php  320 bytes  pkcs7=True
+  hex   73a0d0c567489080cfa6e3563ef50c2e78da5d8e5d4ac34014855d83beb809a5a0a8afd1c4360f4d303f8522789926d3303699c49949250b1071174527b45a156bd15de80a5c8ce9844aeddbbddf39f7dc7357263c22e1fca4ad43d3f0c0f59d8ed105d33ab525bb22e1f7e6d7d6cf38e7980109379e38e69ca4b49a47d3a4802c46a29fb264ac59ba639bfa2387012eae53164e2e888b7b67dbe793758f8c118dee7df75585e23c4640683fbd7dafc70c8234a7821580f61e7c57fb5498e31807624d7a595e7081
+  ascii s...gH.....V>...x.].]J.@..]..........6.M0?."x.&.06...I%..q.E'.Z.k.]..\...J....9..sW&<"....C.........:.%."......8....7.8.....G...,F...d.Y.c..#....S.N...{g...u.....}.U..<F@h?.}....4......|W.T....bMzY^p.
+------------------------------------------------------------------------------
+RESP /pes22/gate/gate_CMD_GET_SURVEY_INFO.php  464 bytes  pkcs7=True
+  hex   682743e5691c3bc7e73e8f6fe6aadecc1f8b0800000000000203ad92bf6e13411087df015e602482d244d021a54a010e5c818d8e4094ea347737e71bb1de7566e7ce5cef37084f80084914a5885281e011486f29154fc2da3e9b4be822bafd37dfecefdb9d9efb4a6a6a12b6853b9a9ead66f9a3336535947895596f9f84a07115143862c32830612d81769dd3148df93dfd0c2915ae3de515452987b1c186ed10d4e5d8ec9c2a7dd4ffc83bc94ac719f94f97316a4902d629a0f513929f11a0f16e5110eac22e0c
+  ascii h'C.i.;..>.o.................n.A....^`$..D.!.J..\...@..4w7....uf..\.7.O..I...R...Ho).O..>.K."..7.......Jjj...;...f..3e5.x.Yo...q..8b.(0a-.v.....=..)..=..E)...........*}...;.J...O.1jI..)........nQ.....
+------------------------------------------------------------------------------
+REQ /pes22/gate/gate_CMD_CHECK_STRING.php  160 bytes  pkcs7=True
+  hex   cb6d9c95e4bffb1a830cede144679da578da6b5f9a5b9c9e99b2c1d9d725ded9c3d5d93b3e3824c8d3cf7d49516166ca39a1b3c277979716a716c567a630ac2a4e2d2ececccf03b217accead8c2fc8492c49cb2fca5deee8e712e4efe9b2b2383e3bb5b23cbf2865455c66706a52a044f48ae292a2f89ccce29289eb53d392e243737dcb0a0242d20c758d00b1c830f6
+  ascii .m..........Dg..x.k_.[.......%.....;>8$...}IQaf.9...w......g.0.*N-.........../.I,I./.].........8>;..<.(eE\fpjR.D............S...Cs}...B..u....0.
+------------------------------------------------------------------------------
+RESP /pes22/gate/gate_CMD_CHECK_STRING.php  128 bytes  pkcs7=True
+  hex   728c7ae9bd75b1addc9b2b946cf37a751f8b08000000000002036bd958965a949996999a125f5c52149f93595c32717d6a5a527c68ae6f594140489aa1aed1b2a2d4e2d29c92a57efeae41414b8a0a3353ce099d15bebb34b7383d336583b3af4bbcb387abb3777c704890a79f3b00cd9a800f52000000
+  ascii r.z..u....+.l.zu..........k.X.Z......_\R...Y\2q}jZR|h.oYA@H............~..AAK..3S......4.8=3e...K.....w|pH...;.....R...
+------------------------------------------------------------------------------
+REQ /pes22/gate/gate_CMD_CREATE_USER.php  1024 bytes  pkcs7=True
+  hex   3a36d33a26a47205851163659b1c1c7578da6d54dd4ee34614ce4a7d82f6a69759b595405a223b7680dc3525161b35246d429050a58e8e3de3641a7bec9db1c3e612aaaa6a7b53a92f8020fc24fc2c7461ab56bdef15fb005cecb3f4d8219b009b5c78fc7de7cfe77c67de659e1ef8aacde9ab95b532596958a5758bb49a5663205f70faf6e39b4fde1dc58a49c26966a498523c1078de3df1fb24f4207203e91f956ae546bd521e2ad265fdad40d2e3ef7993d9df7efadda003aa739bc9b265db760cd32d6acc5c
+  ascii :6.:&.r...ce...ux.mT.N.F..J}....Y..@Z";v..5%..5$mB.P...=.d.{........j{S./. .$.,ta.V.....\....!...\x.}...|g.e.........2YiX.u...Vc _p....O....I.if..R<.x.=..$. r....j.F.R.*.e..@...y...~.....s...e.v..-j.\
+------------------------------------------------------------------------------
+RESP /pes22/gate/gate_CMD_CREATE_USER.php  12368 bytes  pkcs7=True
+  hex   2c4c814dde8d8e0d83b0d3dfce7bd7291f8b0800000000000203ed7d7b701cc779e72ec097a8f75b96f558d1b1055a2239af9e07013e168b05081258c0002889719c75cf4c0fb0e26217de5d50a25449d9b293cab3ce96ec7b5f8eb1488ae05b242dd99614ab2e77beba1ca4e4aa2e49f1cae58a73755597aafc91cbe5ee2a755795fbf5cc2cb058ec2e007a492d8046a9c4dd996fbafbfbfad7bfefd133b33f8d3c3e335d6485b49377d985f8e8e001dd248aa258a63243a74b13fef1eb1d96460d4ba1ba62ab92
+  ascii ,L.M.........{.)...........}{p..y......[..X...Z"9....>.....X..(.q.u.L...b..]P.TI........{_..H..[$-.....w.......I....suU.......*uW....,.X...zI-.F....o........3.?.<>3]d...w.......$..X.2C.K......F.K..b..
+------------------------------------------------------------------------------
+REQ /pes22/gate/gate_CMD_GET_PRODUCT_LIST.php  160 bytes  pkcs7=True
+  hex   240db89a80f3006118cbe20e8a4e46f178da6b5b9a5b9c9e99b2c5d9d725dedd35243e20c8df25d43924dec733386449516166ca39a1b3c2f7979716a716c50339154b57ef5f559c5a5c9c999f07e4ef318f37cac830b02c2b2accc948cd34334a2d30332e493434324e334e5e9d5b195f90935892965f94bbdcd1cf25c8dfd36565717c766a65797e51ca8ab8cce0d4a440896800a56e3465
+  ascii $......a.....NF.x.k[.[.......%..5$> ..%.9$..38dIQaf.9...........9.KW._U.Z\......1.7..0.,+*..H.43J-03.I442N3N^.[._..X.._.....%...eeq|vjey~Q.......@.h..n4e
+------------------------------------------------------------------------------
+RESP /pes22/gate/gate_CMD_GET_PRODUCT_LIST.php  7296 bytes  pkcs7=True
+  hex   f133f21b09d91384d06176a01c016afa1f8b0800000000000203ed9d09701bd779c77717e0a98ba214eb7024d1920f269119ece220405312491cc40df0706367328120624942020106007524693a55525b759ab1e2386e27a96b2ab11489926845a348b213276eec1c9d808a26751ba77562b575dbc44d5337d34e134f3bedee0224df2e412cdebe476aa53ece88c21e7804f0fbdeffbdef7bff5d3c766e3c9b494c0ce563a9642eff3af58d9f511ba766772513f4c5783a91cd2413b1f97d97f78fb71dc8a4e363
+  ascii .3.......av...j..............p..y.w.......p$...&.... @S.I....pcg2. bIB....u$i:UR[u...8n'.k*....hE.H..'n.....&u..ub.u..MS7.N.O;...$..A,..Gj.>....x.......{.]<vn<.IL..c.d..:...Q..fw%...x:..$...}........c
+------------------------------------------------------------------------------
+REQ /pes22/gate/gate_CMD_SET_TRACKRECORD.php  240 bytes  pkcs7=True
+  hex   ecadccd38e82352c86c6dc456ab3727978daeb589a5b9c9e99b2d9d9d7253ed835243e24c8d1d93bc8d5d93fc86549516166ca39a1b3c20f969716a716c50339154b57ef5f559c5a5c9c999f07e4ef318f37cac830b02c2b2accc948cd34334a2d30332e493434324e334e5e9d5b195f90935892965f94bbdcd1cf25c8dfd36565717c766a65797e51ca8ab8cce0d4a44089e895403595f129892589b7184c0c13752c740c7042433034d0313530d0314a818aae2ace2fcd4b819a6054ad04e11614a516a7962859
+  ascii ......5,...Ej.ryx..X.[.......%>.5$>$...;...?.eIQaf.9...........9.KW._U.Z\......1.7..0.,+*..H.43J-03.I442N3N^.[._..X.._.....%...eeq|vjey~Q.......@...@5..).%...L..u,t.pBC04.150.1J...*./.K..`T.........(Y
+------------------------------------------------------------------------------
+RESP /pes22/gate/gate_CMD_SET_TRACKRECORD.php  96 bytes  pkcs7=True
+  hex   64d9570b9ef3ed51d7c61c10ac5a196e1f8b08000000000002036b5e56945a5c9a53b2d4cfdf35286849516166ca39a1b3c20f96e616a767a66c76f675890f760d890f097274f60e7275f60f720100c1f376f432000000
+  ascii d.W....Q.....Z.n..........k^V.Z\.S....5(hIQaf.9........g.lv.u..v....rt..ru..r....v.2...
+------------------------------------------------------------------------------
+REQ /pes22/gate/gate_CMD_GET_STADIUM_DATA.php  192 bytes  pkcs7=True
+  hex   a77e7317c6041ec9b09e271c788cd87078daeb589a5b9c9e99b2c5d9d725dedd35243e38c4d1c533d437dec531c47149516166ca39a1b322d2cb4b8b538be2819c8aa5abf7af2a4e2d2ececccf03f2f798c71b65641858961515e664a4669a19a516981997241a1a19a71927afcead8c2fc8492c49cb2fca5deee8e712e4efe9b2b2383e3bb5b23cbf2865455c66706a52a044f4b2a2d474a0692b835cdd3dfdfde24383d725e764a6e695c497a51681ac596aa667a067080021dd4240
+  ascii .~s.......'.x..px..X.[.......%..5$>8...3.7..1.qIQaf.9.."..K.S.........*N-..........ed.X....d.f.......$.....'..../.I,I./.].........8>;..<.(eE\fpjR.D....t.i+.\.=...C..%.d.........Yj.g.g..!.B@
+------------------------------------------------------------------------------
+RESP /pes22/gate/gate_CMD_GET_STADIUM_DATA.php  640 bytes  pkcs7=True
+  hex   a64d6c6eac6b7ded335a1f51d30cc15c1f8b0800000000000203cd94bd6e53411085a1801629a4a3e301e2d9ff1d2a22120145400aa1b666676713837d1d7caf11a2a2405414d0d02312105d908017a0434afa3c010d0fc13a29524004a472b5d2487be6e8d339f3fc63a68efac341dbbd79b1d3d048be6cb301d0fdd1380d86d2a7262f6dd3c39d76f054f6cf8fde4d27c3c3575b5db7dd5eebf5b21a3676643834313c982ef1703ccd65326ebaa546ba5edb511e4c47b305bd48c9a8e4a89090f34a59ab83a802
+  ascii .Mln.k}.3Z.Q...\.............nSA.....)........*"..E@...fgg..}.|....@T...#..]....CJ.<....:)R@..r..H{...9..c....A..y...H.l.....8....&/m...v.T....M'..W[]..^....6vd841<...p<.e2n..F.^.Q.LG...H.......JY....
+------------------------------------------------------------------------------
+REQ /pes22/gate/gate_CMD_GET_GAMERELAY_QUALITYCHECK_LIST.php  176 bytes  pkcs7=True
+  hex   664a0b9c14126dfebc1a702dd21a75bd78da6b5b9a5b9c9e99728b41d9d9d725dedd3524deddd1d735c8d5c731323e30d4d1c73324d2d9c3d5d93bdec733386449516166ca39a1b322b2cb4b8b538be2819c8aa5abf7af2a4e2d2ececccf03f2f798c71b65641858961515e664a4669a19a516981997241a1a19a71927afcead8c2fc8492c49cb2fca5deee8e712e4efe9b2b2383e3bb5b23cbf2865455c66706a52a044340003783849
+  ascii fJ....m...p-..u.x.k[.[...r.A...%..5$....5...12>0...3$.....;..38dIQaf.9.."..K.S.........*N-..........ed.X....d.f.......$.....'..../.I,I./.].........8>;..<.(eE\fpjR.D4..x8I
+------------------------------------------------------------------------------
+RESP /pes22/gate/gate_CMD_GET_GAMERELAY_QUALITYCHECK_LIST.php  2352 bytes  pkcs7=True
+  hex   a9446a32cfdebbe03618ffed0fbfcd841f8b0800000000000203ed5a4b8f2447115eef4f4070423e20c4054de564e43b5748665946cbca632cd633ebdd0badacaaac9996fb31ee072bfb884ffc0f6c6cd6609b453288bf00dcd7e2c71059d3dd55fdaacaaaf3ae3487ed8af82223325e99197ff8f6c3a51b0d171f0db26b9f7d30c8ddc20d46c3f9e27f77defafd67337f359c4e3e7b78feee2fee9fffc9e5f9cccfe7af7e0a6089a00400081724cdc8d5747a35f2cbb99f65d3c9c24f16249b8eef09c1d7105fb9
+  ascii .Dj2....6..................ZK.$G.^.O@pB> ..M.d.;WHfYF..c,.3..........1..+..O..ll.`.E2........Y..U......4...."#2^.............k.}0....F....w...g3.5.N>{x../..........~.`......$...tz5....e...O.$......._.
+------------------------------------------------------------------------------
+REQ /pes22/gate/gate_CMD_SEND_ADJUST_PARAM.php  288 bytes  pkcs7=True
+  hex   7015d9c3be7fd7e113b110d39ba5acf578da258c314ec3301440991911031b926722c576886db6883080d4020d4c48588ebfdd84364d6aa740859818b80855818a910d8913c001380d118c4fefe93d2e2a3f2ce17dbf97caeca09fca243d3acfcee44932487a4f6e5ac2f7c6d7e6f672e68d931ddc2e569fafde785fd6938e3f982445118a6b371d17a68c896962da2a4ca8a57a55cd653356adad5db54cfae9e0f8307df17264e637b583e7cb3233f9e9d6c59b022f3d8c64a39caa7ed61eee9082ab996fbb3fda
+  ascii p...............x.%.1N.0.@......g".v.m..0....LHX....6Mj.@.....U........8...O..=.*?,.}.......$=:...I2HzOnZ......r......V...x_...?.$E..k7.....ib.*L..zU.e3V..].L....0}.rd.7....23....../=.d...~.......o.?.
+------------------------------------------------------------------------------
+RESP /pes22/gate/gate_CMD_SEND_ADJUST_PARAM.php  96 bytes  pkcs7=True
+  hex   3bb3b141a41b757561951519d0ea4d781f8b08000000000002036b5e56945a5c9a53b2d4cfdf35286849516166ca39a1b322f24b738bd33353b63afbbac407bbfab9c43bba78850687c407380639fa0200210459b834000000
+  ascii ;..A..uua.....Mx..........k^V.Z\.S....5(hIQaf.9..".Ks..3S.:........;.x.....8.9...!.Y.4...
+------------------------------------------------------------------------------
+REQ /pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php  608 bytes  pkcs7=True
+  hex   00b4e320cd1e0c011ad55767482e8d5878da95954d4f134118c73df901d483f146e4ba465a6821f160631b43047927a2d171ecced2c1ddee76661768c28570f07398888516055f126382f1a0376be3c59b267af4e0d9abebb03bd36d79dce138c9efff3cffe765661e6d3b7c999a6faf4d16d15c691e5d2f4c96664b13852534b35098189f5f7ac26ad4ec9cf97cee6223e084a1f0b0bedd7adfe48473ea56c3f3611e652a95cb63abac665708cd658897cbfa782893b5b2e59653479e8d7dcb654ea370b3383b35
+  ascii ... ......WgH..Xx...MO.A..=.....F..FZh!.`c.C.y'..q......vf.h..p.s....._.c...7k...&z......;.my..8...<..ef.m;|..o.M..\i.]/L.fK..%4.P..._z.j....|.b#.......z...s.V..a.e*..c..fW..e....x(.....SG..}.eN.p.8;5
+------------------------------------------------------------------------------
+RESP /pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php  96 bytes  pkcs7=True
+  hex   7ed57e86e08dbb3f2cafd4ca1da646421f8b08000000000002036b5e56945a5c9a53b2d4cfdf35286849516166ca39a1b322ca4b738bd33353763afbbac407bb86c4bb3bfaba06b9fa3846c607863afa7886440200a2bb1afd38000000
+  ascii ~.~....?,.....FB..........k^V.Z\.S....5(hIQaf.9..".Ks..3Sv:........;.....8F...:.x.D......8...
+------------------------------------------------------------------------------
+REQ /pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php  592 bytes  pkcs7=True
+  hex   b2cf7770667cb89b7ebda71122f5999778da95954d6b134118c7bdf8058aa027a1e04958b1599bb678d0604229b4d5b4e921541ca7d94933ba9bddccccb6860a3d78f07308b6699bfa2e484111c4838736278fbd78f0e037f0e83add9dc9263eeef438f0fbcff37fde669e6e797c953a07b7e68a68b15441d385b9d24269b65045e5a5c2ec4ca5fa9cb5a8d31b393a77b91372c2507478b4d5fdbcc709e7d46f46e78f1328d7685c9d5a632db741683e4782bc2df058ceaedbb5aed746818b45dd675ea7305f5cb8
+  ascii ..wpf|..~..."...x...Mk.A.......'..IX.Y..x.`B)....!T...I3........=x.s..i...HA....6'..x..7..:...&>..8......f.ny|.:....h.TA....Bi.PE....L.......9:w..r.Ptx........oF...(.h\.Zc-.Ah>G..-.X......F..E.g^.0_\.
+------------------------------------------------------------------------------
+RESP /pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php  96 bytes  pkcs7=True
+  hex   d427ea8030d24d88751ed99cea98e4ac1f8b08000000000002036b5e56945a5c9a53b2d4cfdf35286849516166ca39a1b3225a4b738bd33353763afbbac407bb86c4bb3bfaba06b9fa3846c607863afa788644020088aa0da738000000
+  ascii .'..0.M.u.................k^V.Z\.S....5(hIQaf.9.."ZKs..3Sv:........;.....8F...:.x.D......8...
+------------------------------------------------------------------------------
+REQ /pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php  592 bytes  pkcs7=True
+  hex   525d565618153e018d766242ce3d12fa78da95954d4f134118c73df90108899c4c4cb8ae91ae1689076d6c35248016eaa1313a0edd291ddded6e6766c146130f1efc1c1aa140117c4b0c09c6c478f0003d79e4e2c1035fc0b3ebb03bd36d7ddce138c9ef3fcfff799b79b1eaf125eaec5e9f2da2855205dd2ccc96e64b33852a2adf29cc4c57aaaf598b3abd918351ab1372c2507478bcdafdb2c909e7d46f46e7bd49946b342e4c2db396db20349f2341de16782267d7ed5ad76ba3c0c5a2ee33af53982bcedf9a
+  ascii R]VV..>..vbB.=..x...MO.A..=.....LL.......ml5$....1:..)...ngf.F.......@.|K....x..=y...._....;.m}..8..?..y.y...%..^.-..R..,...K3.**.).LW..Y.:...Q..r.Ptx........oF..I.k4.L-... 4.#A..x"g..Z.k.....3.S.+...
+------------------------------------------------------------------------------
+RESP /pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php  96 bytes  pkcs7=True
+  hex   f058db2e52d2d524d62d2a6dcbec55501f8b08000000000002036b5e56945a5c9a53b2d4cfdf35286849516166ca39a1b322ba4b738bd33353763afbbac407bb86c4bb3bfaba06b9fa3846c607863afa78864402005158d02738000000
+  ascii .X..R..$.-*m..UP..........k^V.Z\.S....5(hIQaf.9..".Ks..3Sv:........;.....8F...:.x.D..QX.'8...
+------------------------------------------------------------------------------
+REQ /pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php  608 bytes  pkcs7=True
+  hex   f3fe41a7c9d44f8f1fae6bd6f750df9c78da9595bd6fd34018c69960af1062aad8985c11bba41409898844a8525b481b8682c05ce34b7360c7cedd991021c4c0c0bfc1409ab629df4808a9808490584a2626d49585819d0d73b5efec84175fc7937ecffb3eefc7dd3dea796c8d38ef2e2c94ede54acdbe585aa82c55e64b2b76f54a697eaeb6f284b689339cf87a74aa1f324cede870b737f8b8c53063c46f45e79d19db6c364fcddea16db78949d1c441d1e2a8605a0dab3ef0ba76e022def0a9d72f2d96972ecd
+  ascii ..A...O...k..P..x....o.@...`..b...\.......D.R[H....\.Ks`.....!.....@..).H.....XJ&&......s....._..~..>...=.yl.8..,...J..XZ.,U.K+v.Ji~......3..zt..2L..p.7...0c.oE....l6O...m..I..A...`Z..>..v."..../-....
+------------------------------------------------------------------------------
+RESP /pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php  96 bytes  pkcs7=True
+  hex   021fd8ce9d83caecb41b32ccd86c22e31f8b08000000000002036b5e56945a5c9a53b2d4cfdf35286849516166ca39a1b3227a4b738bd33353763afbbac407bb86c4bb3bfaba06b9fa3846c607863afa788644020044e9c77c38000000
+  ascii ..........2..l"...........k^V.Z\.S....5(hIQaf.9.."zKs..3Sv:........;.....8F...:.x.D..D..|8...
+------------------------------------------------------------------------------
+REQ /pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php  608 bytes  pkcs7=True
+  hex   30ab3a10b4b7a578538adc3af4c96e6778da95953d6fd34018c759f80215422ca8338381c62525480c1109a8525f94be0c05c171b52fcd811d3b77674a041203035f8381366d53de91105211123030b49998104c881589950973b5efe284075f474bbffff3fc9f37df83359faf50f7cd85e90a9aaf2ea04be5e9ea5c75aabc846a8be5a9c985a547ac45dddec8de91539d881386e28fdb6bdd775b9c704e8366fcbd33810a8dc6e9d22dd6f21a84160b242cda028f15ecbaed74fd360a3d2cea01f33be599cadcec
+  ascii 0.:....xS..:..ngx...=o.@..Y...B,.3...%%H....R_.....q./...;wgJ...._..6mS...R..00....L.....s....._GK.....7..5..P.........K...\u...j......G.E.....S.......k.w[.pN.f..3......-......$,.......t.6.=,...;.....
+------------------------------------------------------------------------------
+RESP /pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php  96 bytes  pkcs7=True
+  hex   81c74869e15e8ddb22f6c865fc444b4b1f8b08000000000002036b5e56945a5c9a53b2d4cfdf35286849516166ca39a1b322fa4b738bd33353763afbbac407bb86c4bb3bfaba06b9fa3846c607863afa7886440200b779354a38000000
+  ascii ..Hi.^.."..e.DKK..........k^V.Z\.S....5(hIQaf.9..".Ks..3Sv:........;.....8F...:.x.D...y5J8...

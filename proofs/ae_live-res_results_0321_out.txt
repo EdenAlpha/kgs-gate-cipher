@@ -1,0 +1,8 @@
+cmd: exec bash -c true; echo T9; adb -s 127.0.0.1:5555 shell am start -a android.settings.ADD_ACCOUNT_SETTINGS 2>&1 | tail -1; sleep 13; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+at: 23:13:24
+$ bash -c true; echo T9; adb -s 127.0.0.1:5555 shell am start -a android.settings.ADD_ACCOUNT_SETTINGS 2>&1 | tail -1; sleep 13; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+T9
+Warning: Activity not started, intent has been delivered to currently running top-most instance.
+rc=0
+gamepid: 
+flows: 0

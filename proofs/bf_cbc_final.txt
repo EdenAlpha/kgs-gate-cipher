@@ -1,0 +1,80 @@
+gate bodies: 42   (sizes: [96, 128, 144, 160, 176, 192, 224, 240, 288, 320, 464, 592, 608, 640, 1024, 2352, 2400, 7296, 12368])
+
+==============================================================================
+PKCS#7 VALIDITY ACROSS ALL 42 BODIES (right key clears all of them)
+==============================================================================
+  key   pre  mode iv      valid     
+  A56   8    CBC  body[:8]    0/42 
+  A56   8    CBC  body[8:16]    0/42 
+  A56   8    CBC  zero      0/42 
+  A56   8    ECB  zero      0/42 
+  A56   16   CBC  body[:8]    0/42 
+  A56   16   CBC  body[8:16]    0/42 
+  A56   16   CBC  zero      0/42 
+  A56   16   ECB  zero      0/42 
+  A56   0    CBC  body[:8]    0/42 
+  A56   0    CBC  body[8:16]    0/42 
+  A56   0    CBC  zero      0/42 
+  A56   0    ECB  zero      0/42 
+  A32   8    CBC  body[:8]    0/42 
+  A32   8    CBC  body[8:16]    0/42 
+  A32   8    CBC  zero      0/42 
+  A32   8    ECB  zero      0/42 
+  A32   16   CBC  body[:8]    0/42 
+  A32   16   CBC  body[8:16]    0/42 
+  A32   16   CBC  zero      0/42 
+  A32   16   ECB  zero      0/42 
+  A32   0    CBC  body[:8]    0/42 
+  A32   0    CBC  body[8:16]    0/42 
+  A32   0    CBC  zero      0/42 
+  A32   0    ECB  zero      0/42 
+  A24   8    CBC  body[:8]    0/42 
+  A24   8    CBC  body[8:16]    0/42 
+  A24   8    CBC  zero      0/42 
+  A24   8    ECB  zero      0/42 
+  A24   16   CBC  body[:8]    0/42 
+  A24   16   CBC  body[8:16]    0/42 
+  A24   16   CBC  zero      0/42 
+  A24   16   ECB  zero      0/42 
+  A24   0    CBC  body[:8]    0/42 
+  A24   0    CBC  body[8:16]    0/42 
+  A24   0    CBC  zero      0/42 
+  A24   0    ECB  zero      0/42 
+  A16   8    CBC  body[:8]    0/42 
+  A16   8    CBC  body[8:16]    0/42 
+  A16   8    CBC  zero      0/42 
+  A16   8    ECB  zero      0/42 
+  A16   16   CBC  body[:8]    0/42 
+  A16   16   CBC  body[8:16]    0/42 
+  A16   16   CBC  zero      0/42 
+  A16   16   ECB  zero      0/42 
+  A16   0    CBC  body[:8]    0/42 
+  A16   0    CBC  body[8:16]    0/42 
+  A16   0    CBC  zero      0/42 
+  A16   0    ECB  zero      0/42 
+  B32   8    CBC  body[:8]    0/42 
+  B32   8    CBC  body[8:16]    0/42 
+  B32   8    CBC  zero      0/42 
+  B32   8    ECB  zero      0/42 
+  B32   16   CBC  body[:8]    0/42 
+  B32   16   CBC  body[8:16]    0/42 
+  B32   16   CBC  zero      0/42 
+  B32   16   ECB  zero      0/42 
+  B32   0    CBC  body[:8]    0/42 
+  B32   0    CBC  body[8:16]    0/42 
+  B32   0    CBC  zero      0/42 
+  B32   0    ECB  zero      0/42 
+  B16   8    CBC  body[:8]    0/42 
+  B16   8    CBC  body[8:16]    0/42 
+  B16   8    CBC  zero      0/42 
+  B16   8    ECB  zero      0/42 
+  B16   16   CBC  body[:8]    0/42 
+  B16   16   CBC  body[8:16]    0/42 
+  B16   16   CBC  zero      0/42 
+  B16   16   ECB  zero      0/42 
+  B16   0    CBC  body[:8]    0/42 
+  B16   0    CBC  body[8:16]    0/42 
+  B16   0    CBC  zero      0/42 
+  B16   0    ECB  zero      0/42 
+
+best: 0/42 valid with key=A56 pre=8 mode=CBC iv=body[:8]

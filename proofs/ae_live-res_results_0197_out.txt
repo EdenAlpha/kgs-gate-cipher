@@ -1,0 +1,12 @@
+cmd: exec bash -c true; echo C8; adb -s 127.0.0.1:5555 shell uiautomator dump /sdcard/s.xml 2>&1 | tail -1; adb -s 127.0.0.1:5555 shell cat /sdcard/s.xml > /tmp/live-res/ui.xml 2>/dev/null; echo "== nodes mentioning done/next =="; tr ">" "\n" < /tmp/live-res/ui.xml | grep -iE "done|next|agree|ok" | head -8; echo "== focus =="; adb -s 127.0.0.1:5555 shell dumpsys window 2>/dev/null | grep -iE "mCurrentFocus|mFocusedApp" | head -3
+at: 07:33:50
+$ bash -c true; echo C8; adb -s 127.0.0.1:5555 shell uiautomator dump /sdcard/s.xml 2>&1 | tail -1; adb -s 127.0.0.1:5555 shell cat /sdcard/s.xml > /tmp/live-res/ui.xml 2>/dev/null; echo "== nodes mentioning done/next =="; tr ">" "\n" < /tmp/live-res/ui.xml | grep -iE "done|next|agree|ok" | head -8; echo "== focus =="; adb -s 127.0.0.1:5555 shell dumpsys window 2>/dev/null | grep -iE "mCurrentFocus|mFocusedApp" | head -3
+C8
+UI hierchary dumped to: /sdcard/s.xml
+== nodes mentioning done/next ==
+== focus ==
+  mCurrentFocus=Window{74de2b4 u0 jp.konami.pesam/com.epicgames.ue4.GameActivity}
+  mFocusedApp=ActivityRecord{9a61bb6 u0 jp.konami.pesam/com.epicgames.ue4.GameActivity t13}
+rc=0
+gamepid: 8404
+flows: 0

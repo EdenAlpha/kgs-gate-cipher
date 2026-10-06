@@ -1,0 +1,8 @@
+cmd: exec bash -c true; echo S3; sudo iptables-legacy -t nat -D PREROUTING -i docker0 -p tcp --dport 443 -j DNAT --to-destination 172.17.0.1:8080 2>&1; adb -s 127.0.0.1:5555 shell am start -W -n com.android.vending/com.google.android.finsky.activities.MainActivity 2>&1 | tail -1; sleep 12; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+at: 22:22:22
+$ bash -c true; echo S3; sudo iptables-legacy -t nat -D PREROUTING -i docker0 -p tcp --dport 443 -j DNAT --to-destination 172.17.0.1:8080 2>&1; adb -s 127.0.0.1:5555 shell am start -W -n com.android.vending/com.google.android.finsky.activities.MainActivity 2>&1 | tail -1; sleep 12; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+S3
+Complete
+rc=0
+gamepid: 
+flows: 0

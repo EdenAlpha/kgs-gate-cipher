@@ -1,0 +1,8 @@
+cmd: exec bash -c true; echo G2; adb -s 127.0.0.1:5555 shell input keyevent 4; sleep 9; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo flows=$(grep -c "^### " /tmp/kgs/flows.log)
+at: 08:17:39
+$ bash -c true; echo G2; adb -s 127.0.0.1:5555 shell input keyevent 4; sleep 9; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo flows=$(grep -c "^### " /tmp/kgs/flows.log)
+G2
+flows=30
+rc=0
+gamepid: 8404
+flows: 30

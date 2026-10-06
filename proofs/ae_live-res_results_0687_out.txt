@@ -1,0 +1,51 @@
+cmd: exec bash -c true; echo T2; adb -s 127.0.0.1:5555 shell am force-stop jp.konami.pesam; sleep 3; rm -f /tmp/kgs/tar.done; nohup bash -c "adb -s 127.0.0.1:5555 exec-out su 0 tar -C /data/data -cf - jp.konami.pesam > /tmp/kgs/pesam-data.tar 2>/tmp/kgs/tar.err; echo rc=\$? > /tmp/kgs/tar.done" >/dev/null 2>&1 & sleep 20; ls -l /tmp/kgs/pesam-data.tar 2>&1; echo "== device size =="; adb -s 127.0.0.1:5555 shell su 0 du -sm /data/data/jp.konami.pesam 2>/dev/null; echo "== manifest =="; adb -s 127.0.0.1:5555 shell su 0 sh -c "find /data/data/jp.konami.pesam -maxdepth 2 -type d | head -40"
+at: 01:41:54
+$ bash -c true; echo T2; adb -s 127.0.0.1:5555 shell am force-stop jp.konami.pesam; sleep 3; rm -f /tmp/kgs/tar.done; nohup bash -c "adb -s 127.0.0.1:5555 exec-out su 0 tar -C /data/data -cf - jp.konami.pesam > /tmp/kgs/pesam-data.tar 2>/tmp/kgs/tar.err; echo rc=\$? > /tmp/kgs/tar.done" >/dev/null 2>&1 & sleep 20; ls -l /tmp/kgs/pesam-data.tar 2>&1; echo "== device size =="; adb -s 127.0.0.1:5555 shell su 0 du -sm /data/data/jp.konami.pesam 2>/dev/null; echo "== manifest =="; adb -s 127.0.0.1:5555 shell su 0 sh -c "find /data/data/jp.konami.pesam -maxdepth 2 -type d | head -40"
+T2
+-rw-r--r-- 1 runner runner 1953750528 Oct  1 01:42 /tmp/kgs/pesam-data.tar
+== device size ==
+2037	/data/data/jp.konami.pesam
+== manifest ==
+.
+./linkerconfig
+./linkerconfig/apex.libraries.config.txt
+./linkerconfig/com.android.tethering
+./linkerconfig/com.android.tethering/ld.config.txt
+./linkerconfig/com.android.sdkext
+./linkerconfig/com.android.sdkext/ld.config.txt
+./linkerconfig/com.android.runtime
+./linkerconfig/com.android.runtime/ld.config.txt
+./linkerconfig/com.android.os.statsd
+./linkerconfig/com.android.os.statsd/ld.config.txt
+./linkerconfig/com.android.mediaprovider
+./linkerconfig/com.android.mediaprovider/ld.config.txt
+./linkerconfig/com.android.media.swcodec
+./linkerconfig/com.android.media.swcodec/ld.config.txt
+./linkerconfig/com.android.media
+./linkerconfig/com.android.media/ld.config.txt
+./linkerconfig/com.android.conscrypt
+./linkerconfig/com.android.conscrypt/ld.config.txt
+./linkerconfig/com.android.art
+./linkerconfig/com.android.art/ld.config.txt
+./linkerconfig/com.android.adbd
+./linkerconfig/com.android.adbd/ld.config.txt
+./linkerconfig/ld.config.txt
+./postinstall
+./lost+found
+./sys
+./sys/kernel
+./sys/kernel/warn_count
+./sys/kernel/sched_ext
+./sys/kernel/sched_ext/nr_rejected
+./sys/kernel/sched_ext/hotplug_seq
+./sys/kernel/sched_ext/switch_all
+./sys/kernel/sched_ext/state
+./sys/kernel/sched_ext/enable_seq
+./sys/kernel/notes
+./sys/kernel/hardlockup_count
+./sys/kernel/time
+./sys/kernel/time/aux_clocks
+./sys/kernel/time/aux_clocks/7
+rc=0
+gamepid: 
+flows: 22

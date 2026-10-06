@@ -1,0 +1,8 @@
+cmd: exec bash -c true; echo MARK8; sleep 20; sudo docker exec redroid sh -c "pidof jp.konami.pesam"; sudo docker exec redroid sh -c "screencap -p /data/local/tmp/m8.png"
+at: 19:55:41
+$ bash -c true; echo MARK8; sleep 20; sudo docker exec redroid sh -c "pidof jp.konami.pesam"; sudo docker exec redroid sh -c "screencap -p /data/local/tmp/m8.png"
+MARK8
+2341
+rc=0
+gamepid: 
+flows: 0

@@ -1,0 +1,32 @@
+fix(live/live_loop.sh): run the key finder INSIDE the loop, not on request
+
+The 2026-10-04 run captured 449 MB of the game's memory during login and
+published NO MATCH and NO MATCH-attempt either: the finder was only ever run
+when an operator queued it through the command channel, and by the time it
+was queued the control loop had stopped reading commands. The capture then
+died with the job.
+
+Two structural causes, both fixed here:
+
+1. `timeout-minutes` kills the job WITHOUT running any later step, so a
+   finder invoked as a step after the loop never runs when the wall is what
+   ends the run. It now runs from inside heartbeat(), writing
+   $W/findkey.log and publishing $LIVE_RES_DIR/keyfinder.txt every attempt.
+   A key found at minute 20 is on the results branch long before minute 350.
+
+2. The result branch had no file recording finder attempts, so "no verdict
+   published" was indistinguishable from "the finder never ran". keyfinder.txt
+   now always exists once a scan has been attempted, and repeats the last
+   attempt's tail plus any MATCH line.
+
+Safety properties, because this code runs unattended inside the control loop:
+- `timeout 1500` on the scan, so it can never wedge the loop
+- rate limited to one attempt per 20 min (a full scan of hundreds of MB is
+  not free), skipped entirely below 20 MB of sweep
+- stops scanning once $W/keyfound.txt exists, and just republishes the key
+- python deps installed once behind a marker file
+- every failure path returns 0; `auto_find_key || true` so the loop is
+  unaffected
+
+Also uploads $W/findkey.log and the flagged sweep cycles in step 06, so the
+evidence survives the job wall as an artifact.

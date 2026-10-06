@@ -1,0 +1,2933 @@
+functions in dump: 237740   range 0x29293d0 .. 0x8c1f610
+
+==============================================================================
+WHICH FUNCTION HOLDS EACH 'pes-custom-encrypt' XREF
+==============================================================================
+  xref dump=0x07c23164  elf=0x07b23164  -> FUN dump=0x07c22060  elf=0x07b22060
+  xref dump=0x07c2eb78  elf=0x07b2eb78  -> FUN dump=0x07c2e5fc  elf=0x07b2e5fc
+  xref dump=0x07c34d18  elf=0x07b34d18  -> FUN dump=0x07c2e5fc  elf=0x07b2e5fc
+  xref dump=0x07c35cf4  elf=0x07b35cf4  -> FUN dump=0x07c2e5fc  elf=0x07b2e5fc
+  xref dump=0x07c36ba8  elf=0x07b36ba8  -> FUN dump=0x07c2e5fc  elf=0x07b2e5fc
+  xref dump=0x07c39120  elf=0x07b39120  -> FUN dump=0x07c38a44  elf=0x07b38a44
+  xref dump=0x07ec024c  elf=0x07dc024c  -> FUN dump=0x07ebfb14  elf=0x07dbfb14
+  xref dump=0x07ecad64  elf=0x07dcad64  -> FUN dump=0x07ec9d7c  elf=0x07dc9d7c
+
+functions to walk: 0x7b22060, 0x7b2e5fc, 0x7b36ec8, 0x7b38a44, 0x7dbfb14, 0x7dc9d7c
+
+==============================================================================
+FUNCTION 0x7b22060
+==============================================================================
+  instructions: 2560  (0x7b22060 .. 0x7b2485c)
+    0x07b22098 bl #0x2efc5d0
+          setup: ldr x8, [x26, #0x28]; mov x0, x20; stur x8, [x29, #-8]
+    0x07b220a8 blr x8
+          setup: ldr x8, [x19]; mov x0, x19; ldr x8, [x8, #0x48]
+    0x07b220e0 blr x8
+          setup: cbz x0, #0x7b220e8; ldr x8, [x0]; ldr x8, [x8]
+    0x07b220fc bl #0x7b21ef4
+          setup: ldrb w8, [x19, #0x240]; cbz w8, #0x7b22108; mov x0, x19
+    0x07b22110 bl #0x2f1ec94
+          setup: b #0x7b22808; mov w8, #1; strb w8, [x19, #0x240]
+    0x07b2211c bl #0x7b21ef4
+          setup: bl #0x2f1ec94; str x0, [x19, #0x248]; mov x0, x19
+    0x07b22174 bl #0x7afbc44
+          setup: ldr x0, [x8]; cbz x0, #0x7b22228; add x2, sp, #0x30
+    0x07b22188 bl #0x2f1ec94
+          setup: b #0x7b22228; mov w8, #1; strb w8, [x19, #0x250]
+    0x07b221a0 bl #0x2f1ec94
+          setup: cbnz w8, #0x7b22138; mov w8, #1; strb w8, [x19, #0x260]
+    0x07b221b8 bl #0x74e6b00
+          setup: b.ne #0x7b22140; add x0, sp, #0x30; mov x1, xzr
+    0x07b221e0 bl #0x7afc3d8
+          setup: ldr x0, [x8]; cbz x0, #0x7b22264; add x2, sp, #0x30
+    0x07b22200 bl #0x7b0384c
+          setup: ldr x0, [x8]; cbz x0, #0x7b22228; add x2, sp, #0x30
+    0x07b22224 bl #0x7b21958
+          setup: mov x0, x19; tst w8, #1; csel x1, x10, x9, eq
+    0x07b22234 bl #0x2efa56c
+          setup: ldrb w8, [sp, #0x30]; tbz w8, #0, #0x7b2226c; ldr x0, [sp, #0x40]
+    0x07b22250 bl #0x7b04214
+          setup: ldr x0, [x8]; cbz x0, #0x7b22264; add x2, sp, #0x30
+    0x07b22260 bl #0x7b211c8
+          setup: tbz w0, #0, #0x7b22264; add x1, sp, #0x30; mov x0, x19
+    0x07b22268 bl #0x74e6e74
+          setup: mov x0, x19; bl #0x7b211c8; add x0, sp, #0x30
+    0x07b22280 blr x8
+          setup: ldr x8, [x19]; mov x0, x19; ldr x8, [x8, #0xe0]
+    0x07b22298 bl #0x2f1ec94
+          setup: cbnz w8, #0x7b222a0; mov w8, #1; strb w8, [x19, #0x270]
+    0x07b222e0 bl #0x8b35880   PLT: memcmp
+          setup: csel x0, x24, x9, eq; adrp x1, #0xafd000; add x1, x1, #0xa3e
+    0x07b22300 bl #0x2f1ec94
+          setup: cbnz w8, #0x7b22308; mov w8, #1; strb w8, [x19, #0x2c0]
+    0x07b2230c bl #0x7d269e8
+          setup: bl #0x2f1ec94; str x0, [x19, #0x2c8]; add x8, sp, #0x30
+    0x07b22318 bl #0x8b3abf0   PLT: _ZNSt6__ndk119__shared_weak_count4lockEv   <<<< CRYPTO?
+          setup: bl #0x7d269e8; ldr x0, [sp, #0x38]; cbz x0, #0x7b2252c
+    0x07b22334 bl #0x8b34e90
+          setup: mov w0, #1; mov x1, x23; ldr x24, [sp, #0x30]
+    0x07b22340 bl #0x8b34ef0
+          setup: bl #0x8b34e90; mov x0, #-1; mov x1, x23
+    0x07b22354 bl #0x8b34ef0
+          setup: mov x0, #-1; mov x1, x23; ldr w24, [x24, #0x28]
+    0x07b22364 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: cbz x0, #0x7b22874; ldr x0, [sp, #0x38]; cbz x0, #0x7b22368
+    0x07b22374 bl #0x7b1f404
+          setup: cbz w24, #0x7b2270c; add x1, x21, #0x118; mov x0, x19
+    0x07b223c4 bl #0x7b1c7bc
+          setup: str xzr, [sp, #0x28]; stp xzr, xzr, [sp]; str xzr, [sp, #0x10]
+    0x07b223d4 bl #0x2efa56c
+          setup: ldrb w8, [sp]; tbz w8, #0, #0x7b223d8; ldr x0, [sp, #0x10]
+    0x07b223dc bl #0x2efc5d0
+          setup: ldr x0, [sp, #0x10]; bl #0x2efa56c; mov x0, x20
+    0x07b223e8 bl #0x7d2bf4c
+          setup: bl #0x2efc5d0; ldrb w8, [x19, #0x3c9]; cbz w8, #0x7b22428
+    0x07b2242c bl #0x8b38760   PLT: _ZNSt6__ndk115recursive_mutex6unlockEv
+          setup: str x9, [x8]; strb wzr, [x19, #0x3c9]; add x0, x19, #0x340
+    0x07b22460 bl #0x8b35880   PLT: memcmp
+          setup: csel x2, x22, x9, lo; tst w23, #1; csel x0, x24, x8, eq
+    0x07b22474 bl #0x7b26120
+          setup: cmp x22, #0x12; b.ne #0x7b22478; mov x0, x21
+    0x07b224b4 bl #0x2efb614
+          setup: stp q0, q0, [sp, #0x30]; stp q0, q0, [sp, #0x50]; stur d1, [sp, #0x7c]
+    0x07b224dc bl #0x2efb614
+          setup: lsr x8, x8, #1; csel x1, x11, x9, eq; csel x2, x8, x10, eq
+    0x07b2254c bl #0x2efa4dc
+          setup: orr x27, x24, #0xf; mov w1, wzr; add x0, x27, #1
+    0x07b2256c bl #0x8b352f0   PLT: memmove
+          setup: mov x0, x25; mov x1, x23; mov x2, x24
+    0x07b2259c bl #0x758d704
+          setup: cmp w23, #0xa3; b.eq #0x7b22604; mov w0, w23
+    0x07b225b4 bl #0x8b35330   PLT: strlen
+          setup: tst w8, #1; csinc x25, x9, x0, ne; mov x0, x25
+    0x07b225f4 bl #0x8b35880   PLT: memcmp
+          setup: tst w8, #1; mov x1, x25; csel x0, x27, x9, eq
+    0x07b22610 bl #0x2f0eee8
+          setup: adrp x0, #0xa97000; add x0, x0, #0x753; mov w1, #0x23
+    0x07b22620 bl #0x2efa56c
+          setup: ldrb w8, [sp, #0x18]; tbz w8, #0, #0x7b22624; ldr x0, [sp, #0x28]
+    0x07b22638 bl #0x7dc1270
+          setup: mov w2, #1; stp xzr, xzr, [sp, #0x18]; str xzr, [sp, #0x28]
+    0x07b22658 bl #0x7b1c7bc
+          setup: mov x0, x19; mov x1, x22; mov w4, #1
+    0x07b22660 bl #0x2efc5d0
+          setup: mov w4, #1; bl #0x7b1c7bc; mov x0, x20
+    0x07b2266c bl #0x7d2bf4c
+          setup: bl #0x2efc5d0; ldrb w8, [x19, #0x3c9]; cbz w8, #0x7b226ac
+    0x07b226b0 bl #0x8b38760   PLT: _ZNSt6__ndk115recursive_mutex6unlockEv
+          setup: str x9, [x8]; strb wzr, [x19, #0x3c9]; add x0, x19, #0x340
+    0x07b226d4 bl #0x2efa56c
+          setup: tbnz w8, #0, #0x7b226f0; b #0x7b226f8; ldr x0, [sp, #0x28]
+    0x07b226e4 bl #0x2efa56c
+          setup: ldrb w8, [sp, #0x60]; tbz w8, #0, #0x7b226c4; ldr x0, [sp, #0x70]
+    0x07b226f4 bl #0x2efa56c
+          setup: ldrb w8, [sp, #0x48]; tbz w8, #0, #0x7b226f8; ldr x0, [sp, #0x58]
+    0x07b22704 bl #0x2efa56c
+          setup: ldrb w8, [sp, #0x30]; tbz w8, #0, #0x7b227e8; ldr x0, [sp, #0x40]
+    0x07b22714 bl #0x74e6b00
+          setup: b #0x7b227e8; add x0, sp, #0x30; mov x1, xzr
+    0x07b22720 bl #0x74e2eb4
+          setup: bl #0x74e6b00; add x1, sp, #0x30; mov x0, x21
+    0x07b2272c bl #0x7b1f3c0
+          setup: bl #0x74e2eb4; add x1, sp, #0x30; mov x0, x19
+    0x07b22734 bl #0x74e6e74
+          setup: mov x0, x19; bl #0x7b1f3c0; add x0, sp, #0x30
+    0x07b22744 bl #0x7b1f3e8
+          setup: mov w8, #3; str w8, [x19, #0x39c]; mov x0, x19
+    0x07b22760 bl #0x2f1ec94
+          setup: cbnz w8, #0x7b22768; mov w8, #1; strb w8, [x19, #0x2d0]
+    0x07b22784 bl #0x7b1c7bc
+          setup: add x6, x21, #0x220; mov x0, x19; mov w4, wzr
+    0x07b22794 bl #0x2efc5d0
+          setup: mov w8, #4; str w8, [x19, #0x39c]; mov x0, x20
+    0x07b227a0 bl #0x7d2bf4c
+          setup: bl #0x2efc5d0; ldrb w8, [x19, #0x3c9]; cbz w8, #0x7b227e0
+    0x07b227e4 bl #0x8b38760   PLT: _ZNSt6__ndk115recursive_mutex6unlockEv
+          setup: str x9, [x8]; strb wzr, [x19, #0x3c9]; add x0, x19, #0x340
+    0x07b227f0 bl #0x8b38760   PLT: _ZNSt6__ndk115recursive_mutex6unlockEv
+          setup: bl #0x8b38760; mov w20, #1; add x0, x19, #0x340
+    0x07b22804 bl #0x8b35290   PLT: __stack_chk_fail
+          setup: ldur x9, [x29, #-8]; cmp x8, x9; b.eq #0x7b22824
+    0x07b22810 bl #0x8b38760   PLT: _ZNSt6__ndk115recursive_mutex6unlockEv
+          setup: bl #0x8b35290; mov w20, wzr; add x0, x19, #0x340
+    0x07b22854 blr x8
+          setup: ldr x8, [x22]; mov x0, x22; ldr x8, [x8, #0x10]
+    0x07b2285c bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x22
+    0x07b2286c bl #0x8b34ef0
+          setup: mov x0, #-1; mov x1, x23; ldr w24, [x24, #0x28]
+    0x07b22880 blr x8
+          setup: ldr x8, [x22]; mov x0, x22; ldr x8, [x8, #0x10]
+    0x07b22888 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x22
+    0x07b22898 bl #0x8b382d0   PLT: abort
+          setup: ldr x0, [sp, #0x38]; cbnz x0, #0x7b22364; b #0x7b22368
+    0x07b2289c bl #0x8b382d0   PLT: abort
+          setup: cbnz x0, #0x7b22364; b #0x7b22368; bl #0x8b382d0
+    0x07b228b4 bl #0x2efc5d0
+          setup: mov x29, sp; mov x19, x0; add x0, x0, #0x338
+    0x07b228c4 blr x8
+          setup: ldr x8, [x19]; mov x0, x19; ldr x8, [x8, #0x50]
+    0x07b228f0 bl #0x7afcb8c
+          setup: ldr x0, [x8]; cbz x0, #0x7b228f4; ldr w1, [x19, #0x1d0]
+    0x07b228f8 bl #0x8b38760   PLT: _ZNSt6__ndk115recursive_mutex6unlockEv
+          setup: ldr w1, [x19, #0x1d0]; bl #0x7afcb8c; add x0, x19, #0x340
+    0x07b22920 bl #0x7b04e90
+          setup: ldr x0, [x8]; cbz x0, #0x7b228f4; ldr w1, [x19, #0x1d0]
+    0x07b22928 bl #0x8b38760   PLT: _ZNSt6__ndk115recursive_mutex6unlockEv
+          setup: ldr w1, [x19, #0x1d0]; bl #0x7b04e90; add x0, x19, #0x340
+    0x07b22950 bl #0x2efc5d0
+          setup: mov x29, sp; mov x19, x0; add x0, x0, #0x338
+    0x07b22960 blr x8
+          setup: ldr x8, [x19]; mov x0, x19; ldr x8, [x8, #0x60]
+    0x07b2298c bl #0x7afcb8c
+          setup: ldr x0, [x8]; cbz x0, #0x7b22990; ldr w1, [x19, #0x1d0]
+    0x07b22994 bl #0x8b38760   PLT: _ZNSt6__ndk115recursive_mutex6unlockEv
+          setup: ldr w1, [x19, #0x1d0]; bl #0x7afcb8c; add x0, x19, #0x340
+    0x07b229bc bl #0x7b04e90
+          setup: ldr x0, [x8]; cbz x0, #0x7b22990; ldr w1, [x19, #0x1d0]
+    0x07b229c4 bl #0x8b38760   PLT: _ZNSt6__ndk115recursive_mutex6unlockEv
+          setup: ldr w1, [x19, #0x1d0]; bl #0x7b04e90; add x0, x19, #0x340
+    0x07b22a04 bl #0x7afcb8c
+          setup: cbz x8, #0x7b22a08; ldr w1, [x0, #0x1d0]; mov x0, x8
+    0x07b22a2c bl #0x7b04e90
+          setup: cbz x8, #0x7b22a08; ldr w1, [x0, #0x1d0]; mov x0, x8
+    0x07b22a50 bl #0x2efc5d0
+          setup: mov x29, sp; mov x19, x0; add x0, x0, #0x338
+    0x07b22a60 blr x8
+          setup: ldr x8, [x19]; mov x0, x19; ldr x8, [x8, #0x108]
+    0x07b22a84 bl #0x7afcb8c
+          setup: ldr x0, [x8]; cbz x0, #0x7b22a88; ldr w1, [x19, #0x1d0]
+    0x07b22ab4 bl #0x7b04e90
+          setup: ldr x0, [x8]; cbz x0, #0x7b22a88; ldr w1, [x19, #0x1d0]
+    0x07b22ae4 bl #0x2efc5d0
+          setup: mov x29, sp; mov x19, x0; add x0, x0, #0x338
+    0x07b22af4 blr x8
+          setup: ldr x8, [x19]; mov x0, x19; ldr x8, [x8, #0x108]
+    0x07b22b18 bl #0x7afcb8c
+          setup: ldr x0, [x8]; cbz x0, #0x7b22b1c; ldr w1, [x19, #0x1d0]
+    0x07b22b48 bl #0x7b04e90
+          setup: ldr x0, [x8]; cbz x0, #0x7b22b1c; ldr w1, [x19, #0x1d0]
+    0x07b22b88 bl #0x7b23924
+          setup: ldr x8, [x19, #0x28]; str x8, [sp, #8]; strb wzr, [sp, #4]
+    0x07b22bac bl #0x8b35290   PLT: __stack_chk_fail
+          setup: ldr x19, [sp, #0x20]; add sp, sp, #0x30; ret 
+    0x07b22bd4 bl #0x7b239cc
+          setup: ldr x8, [x19, #0x28]; str x8, [sp, #8]; strb wzr, [sp, #4]
+    0x07b22bf8 bl #0x8b35290   PLT: __stack_chk_fail
+          setup: ldr x19, [sp, #0x20]; add sp, sp, #0x30; ret 
+    0x07b22c20 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: add x8, x8, #0; str x8, [x19]; cbz x0, #0x7b22c24
+    0x07b22c58 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: add x8, x8, #0; str x8, [x19]; cbz x0, #0x7b22c5c
+    0x07b22c60 bl #0x74e6e74
+          setup: cbz x0, #0x7b22c5c; bl #0x8b388f0; add x0, x19, #8
+    0x07b22c90 bl #0x8b35260   PLT: _Znwm
+          setup: mov x19, x0; add x21, x0, #8; mov w0, #0x50
+    0x07b22cac bl #0x74e6b50
+          setup: add x8, x8, #0; mov x1, x21; str x8, [x20]
+    0x07b22cc4 bl #0x8b34e90
+          setup: cbz x8, #0x7b22cc8; add x1, x8, #0x10; mov w0, #1
+    0x07b22d14 bl #0x74e6b50
+          setup: adrp x8, #0x981a000; add x8, x8, #0; str x8, [x19]
+    0x07b22d2c bl #0x8b34e90
+          setup: cbz x8, #0x7b22d30; add x1, x8, #0x10; mov w0, #1
+    0x07b22d64 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: mov x19, x0; ldr x0, [x0, #0x40]; cbz x0, #0x7b22d68
+    0x07b22d90 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: mov x19, x0; ldr x0, [x0, #0x40]; cbz x0, #0x7b22d94
+    0x07b22d98 bl #0x74e6e74
+          setup: cbz x0, #0x7b22d94; bl #0x8b388f0; add x0, x19, #8
+    0x07b22ddc bl #0x8b3abf0   PLT: _ZNSt6__ndk119__shared_weak_count4lockEv   <<<< CRYPTO?
+          setup: stur x8, [x29, #-8]; ldr x0, [x0, #0x40]; cbz x0, #0x7b22e3c
+    0x07b22e04 bl #0x8b34e90
+          setup: mov x1, x22; add x21, x20, #8; stp x8, x19, [sp, #8]
+    0x07b22e18 bl #0x7b214f8
+          setup: add x0, sp, #8; ldrb w3, [x20, #0x4c]; mov x1, x21
+    0x07b22e24 bl #0x8b34ef0
+          setup: bl #0x7b214f8; mov x0, #-1; mov x1, x22
+    0x07b22e34 bl #0x8b34ef0
+          setup: cbz x0, #0x7b22e64; add x1, x19, #8; mov x0, #-1
+    0x07b22e70 blr x8
+          setup: ldr x8, [x19]; mov x0, x19; ldr x8, [x8, #0x10]
+    0x07b22e78 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x19
+    0x07b22e84 bl #0x8b34ef0
+          setup: bl #0x8b388f0; add x1, x19, #8; mov x0, #-1
+    0x07b22e98 blr x8
+          setup: ldr x8, [x19]; mov x0, x19; ldr x8, [x8, #0x10]
+    0x07b22ec8 bl #0x8b35290   PLT: __stack_chk_fail
+          setup: ldr x23, [sp, #0x30]; add sp, sp, #0x60; b #0x8b388f0
+    0x07b22f10 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: add x8, x8, #0x48; str x8, [x19]; cbz x0, #0x7b22f14
+    0x07b22f38 bl #0x8b35260   PLT: _Znwm
+          setup: mov x29, sp; mov x19, x0; mov w0, #0x28
+    0x07b22f60 bl #0x8b34e90
+          setup: cbz x8, #0x7b22f64; add x1, x8, #0x10; mov w0, #1
+    0x07b22fb8 bl #0x8b34e90
+          setup: cbz x8, #0x7b22fbc; add x1, x8, #0x10; mov w0, #1
+    0x07b23000 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: mov x19, x0; ldr x0, [x0, #0x10]; cbz x0, #0x7b23004
+    0x07b23040 bl #0x8b3abf0   PLT: _ZNSt6__ndk119__shared_weak_count4lockEv   <<<< CRYPTO?
+          setup: stur x8, [x29, #-8]; ldr x0, [x0, #0x10]; cbz x0, #0x7b230a4
+    0x07b23064 bl #0x8b34e90
+          setup: mov w0, #1; mov x1, x21; stp x8, x19, [sp, #8]
+    0x07b23080 bl #0x7b21688
+          setup: ldr w4, [x20, #0x20]; ldrb w6, [x20, #0x26]; ldrb w5, [x20, #0x25]
+    0x07b2308c bl #0x8b34ef0
+          setup: bl #0x7b21688; mov x0, #-1; mov x1, x21
+    0x07b2309c bl #0x8b34ef0
+          setup: cbz x0, #0x7b230c8; add x1, x19, #8; mov x0, #-1
+    0x07b230d4 blr x8
+          setup: ldr x8, [x19]; mov x0, x19; ldr x8, [x8, #0x10]
+    0x07b230dc bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x19
+    0x07b230e8 bl #0x8b34ef0
+          setup: bl #0x8b388f0; add x1, x19, #8; mov x0, #-1
+    0x07b230fc blr x8
+          setup: ldr x8, [x19]; mov x0, x19; ldr x8, [x8, #0x10]
+    0x07b23128 bl #0x8b35290   PLT: __stack_chk_fail
+          setup: ldp x29, x30, [sp, #0x20]; add sp, sp, #0x50; b #0x8b388f0
+    0x07b23188 bl #0x8b35240   PLT: __cxa_atexit
+          setup: strb w8, [x1, #8]!; stur q0, [x19, #9]; sturh w9, [x19, #0x19]
+    0x07b231bc bl #0x8b35240   PLT: __cxa_atexit
+          setup: stur w9, [x19, #0x21]; sturh w10, [x19, #0x25]; strb wzr, [x19, #0x27]
+    0x07b23218 bl #0x8b34ef0
+          setup: cbz x19, #0x7b23220; add x1, x19, #8; mov x0, #-1
+    0x07b23238 blr x8
+          setup: ldr x8, [x19]; mov x0, x19; ldr x8, [x8, #0x10]
+    0x07b23260 bl #0x8b35260   PLT: _Znwm
+          setup: mov x29, sp; mov x19, x0; mov w0, #0xe0
+    0x07b2326c bl #0x7b237e0
+          setup: bl #0x8b35260; mov x1, x19; mov x20, x0
+    0x07b23274 bl #0x8b35260   PLT: _Znwm
+          setup: mov x20, x0; bl #0x7b237e0; mov w0, #0x20
+    0x07b232a4 bl #0x8b34ef0
+          setup: cbz x19, #0x7b232ac; add x1, x19, #8; mov x0, #-1
+    0x07b232c4 blr x8
+          setup: ldr x8, [x19]; mov x0, x19; ldr x8, [x8, #0x10]
+    0x07b232fc bl #0x8b34e90
+          setup: cbz x9, #0x7b23300; add x1, x9, #8; mov w0, #1
+    0x07b23330 bl #0x8b34ef0
+          setup: cbz x19, #0x7b23338; add x1, x19, #8; mov x0, #-1
+    0x07b23350 blr x8
+          setup: ldr x8, [x19]; mov x0, x19; ldr x8, [x8, #0x10]
+    0x07b233c8 bl #0x2efb614
+          setup: lsr x8, x8, #1; csel x1, x22, x9, eq; csel x2, x8, x10, eq
+    0x07b233f4 bl #0x2f1ed1c
+          setup: sub x0, x8, x9; strb w10, [sp, #0x20]; str x0, [sp, #0x28]
+    0x07b23408 bl #0x7b236c4
+          setup: sub x1, x29, #0xc; mov x0, x19; mov x2, x19
+    0x07b23418 bl #0x2efa56c
+          setup: ldrb w8, [sp, #8]; tbz w8, #0, #0x7b2341c; ldr x0, [sp, #0x18]
+    0x07b23448 bl #0x2efb614
+          setup: lsr x8, x8, #1; csel x1, x22, x9, eq; csel x2, x8, x10, eq
+    0x07b23474 bl #0x2f1ed1c
+          setup: sub x0, x8, x9; strb w10, [sp, #0x20]; str x0, [sp, #0x28]
+    0x07b23488 bl #0x7b236c4
+          setup: stur w0, [x29, #-0xc]; sub x1, x29, #0xc; mov x0, x19
+    0x07b23498 bl #0x2efa56c
+          setup: ldrb w8, [sp, #8]; tbz w8, #0, #0x7b2349c; ldr x0, [sp, #0x18]
+    0x07b234c8 bl #0x2efb614
+          setup: lsr x8, x8, #1; csel x1, x22, x9, eq; csel x2, x8, x10, eq
+    0x07b234f4 bl #0x2f1ed1c
+          setup: sub x0, x8, x9; strb w10, [sp, #0x20]; str x0, [sp, #0x28]
+    0x07b23508 bl #0x7b236c4
+          setup: stur w0, [x29, #-0xc]; sub x1, x29, #0xc; mov x0, x19
+    0x07b23518 bl #0x2efa56c
+          setup: ldrb w8, [sp, #8]; tbz w8, #0, #0x7b2351c; ldr x0, [sp, #0x18]
+    0x07b23548 bl #0x2efb614
+          setup: lsr x8, x8, #1; csel x1, x22, x9, eq; csel x2, x8, x10, eq
+    0x07b23574 bl #0x2f1ed1c
+          setup: sub x0, x8, x9; strb w10, [sp, #0x20]; str x0, [sp, #0x28]
+    0x07b23588 bl #0x7b236c4
+          setup: stur w0, [x29, #-0xc]; sub x1, x29, #0xc; mov x0, x19
+    0x07b23598 bl #0x2efa56c
+          setup: ldrb w8, [sp, #8]; tbz w8, #0, #0x7b2359c; ldr x0, [sp, #0x18]
+    0x07b235c8 bl #0x2efb614
+          setup: lsr x8, x8, #1; csel x1, x22, x9, eq; csel x2, x8, x10, eq
+    0x07b235f4 bl #0x2f1ed1c
+          setup: sub x0, x8, x9; strb w10, [sp, #0x20]; str x0, [sp, #0x28]
+    0x07b23608 bl #0x7b236c4
+          setup: stur w0, [x29, #-0xc]; sub x1, x29, #0xc; mov x0, x19
+    0x07b23618 bl #0x2efa56c
+          setup: ldrb w8, [sp, #8]; tbz w8, #0, #0x7b2361c; ldr x0, [sp, #0x18]
+    0x07b23648 bl #0x2efb614
+          setup: lsr x8, x8, #1; csel x1, x22, x9, eq; csel x2, x8, x10, eq
+    0x07b23674 bl #0x2f1ed1c
+          setup: sub x0, x8, x9; strb w10, [sp, #0x20]; str x0, [sp, #0x28]
+    0x07b23688 bl #0x7b236c4
+          setup: stur w0, [x29, #-0xc]; sub x1, x29, #0xc; mov x0, x19
+    0x07b23698 bl #0x2efa56c
+          setup: ldrb w8, [sp, #8]; tbz w8, #0, #0x7b2369c; ldr x0, [sp, #0x18]
+    0x07b236c0 bl #0x8b35290   PLT: __stack_chk_fail
+          setup: ldp x29, x30, [sp, #0x40]; add sp, sp, #0x70; ret 
+    0x07b23734 bl #0x8b35260   PLT: _Znwm
+          setup: b #0x7b2379c; mov w0, #0x18; mov x21, x2
+    0x07b23748 bl #0x8b35260   PLT: _Znwm
+          setup: stp xzr, xzr, [x0, #8]; str xzr, [x0]; mov w0, #0x20
+    0x07b23770 bl #0x8b34ef0
+          setup: cbz x22, #0x7b236e0; add x1, x22, #8; mov x0, #-1
+    0x07b237c8 blr x8
+          setup: ldr x8, [x22]; mov x0, x22; ldr x8, [x8, #0x10]
+    0x07b237d0 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x22
+    0x07b2384c bl #0x2efc580
+          setup: add x0, x0, #0xb0; str q0, [x22, #0x78]!; stp xzr, xzr, [x19, #0xa0]
+    0x07b238a0 bl #0x2efa56c
+          setup: ldp x29, x30, [sp], #0x40; ret ; mov x0, x20
+    0x07b238c0 bl #0x8b34ef0
+          setup: cbz x21, #0x7b238c8; add x1, x21, #8; mov x0, #-1
+    0x07b238d4 bl #0x2efa56c
+          setup: ldrb w8, [x20, #0x10]; tbz w8, #0, #0x7b2389c; ldr x0, [x20, #0x20]
+    0x07b238e8 blr x8
+          setup: ldr x8, [x21]; mov x0, x21; ldr x8, [x8, #0x10]
+    0x07b238f0 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x21
+    0x07b23950 bl #0x8b34e90
+          setup: cbz x19, #0x7b23954; add x1, x19, #8; mov w0, #1
+    0x07b2395c bl #0x2efc5d0
+          setup: bl #0x8b34e90; cbz x21, #0x7b23984; add x0, x21, #0xb0
+    0x07b23980 bl #0x8b38760   PLT: _ZNSt6__ndk115recursive_mutex6unlockEv
+          setup: add w9, w9, #1; str w9, [x8, #0xa0]; add x0, x21, #0xb8
+    0x07b23990 bl #0x8b34ef0
+          setup: cbz x19, #0x7b23998; add x1, x19, #8; mov x0, #-1
+    0x07b239b4 blr x8
+          setup: ldr x8, [x19]; mov x0, x19; ldr x8, [x8, #0x10]
+    0x07b239f8 bl #0x8b34e90
+          setup: cbz x19, #0x7b239fc; add x1, x19, #8; mov w0, #1
+    0x07b23a04 bl #0x2efc5d0
+          setup: bl #0x8b34e90; cbz x21, #0x7b23a2c; add x0, x21, #0xb0
+    0x07b23a28 bl #0x8b38760   PLT: _ZNSt6__ndk115recursive_mutex6unlockEv
+          setup: add w9, w9, #1; str w9, [x8, #0xa4]; add x0, x21, #0xb8
+    0x07b23a38 bl #0x8b34ef0
+          setup: cbz x19, #0x7b23a40; add x1, x19, #8; mov x0, #-1
+    0x07b23a5c blr x8
+          setup: ldr x8, [x19]; mov x0, x19; ldr x8, [x8, #0x10]
+    0x07b23aa4 bl #0x8b34e90
+          setup: cbz x19, #0x7b23aa8; add x1, x19, #8; mov w0, #1
+    0x07b23ab8 bl #0x7b23b04
+          setup: mov x0, x22; mov x1, x21; mov x2, x20
+    0x07b23ac8 bl #0x8b34ef0
+          setup: cbz x19, #0x7b23ad0; add x1, x19, #8; mov x0, #-1
+    0x07b23aec blr x8
+          setup: ldr x8, [x19]; mov x0, x19; ldr x8, [x8, #0x10]
+    0x07b23b40 bl #0x2efc5d0
+          setup: mov x20, x2; mov x25, x1; stur x8, [x29, #-8]
+    0x07b23b50 bl #0x7b23e6c
+          setup: add x23, x19, #0x78; mov x1, x25; mov x0, x23
+    0x07b23b6c bl #0x8b34e90
+          setup: cbz x21, #0x7b23b70; add x1, x21, #8; mov w0, #1
+    0x07b23b7c bl #0x7b23370
+          setup: cbz x22, #0x7b23b80; mov x0, x22; mov x1, x20
+    0x07b23b8c bl #0x8b34ef0
+          setup: cbz x21, #0x7b23d44; add x1, x21, #8; mov x0, #-1
+    0x07b23ba0 blr x8
+          setup: ldr x8, [x21]; mov x0, x21; ldr x8, [x8, #0x10]
+    0x07b23ba8 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x21
+    0x07b23bb4 bl #0x8b35260   PLT: _Znwm
+          setup: bl #0x8b388f0; b #0x7b23d44; mov w0, #0x68
+    0x07b23bd8 bl #0x8b35260   PLT: _Znwm
+          setup: stp q0, q0, [x0, #0x20]; stp q0, q0, [x0, #0x40]; mov w0, #0x20
+    0x07b23c4c bl #0x2efa4dc
+          setup: orr x20, x25, #0xf; add x0, x20, #1; mov w1, wzr
+    0x07b23c78 bl #0x8b352f0   PLT: memmove
+          setup: mov x0, x27; mov x1, x26; mov x2, x25
+    0x07b23c8c bl #0x8b34e90
+          setup: mov w0, #1; strb wzr, [x27, x25]; stp x24, x21, [sp, #0x28]
+    0x07b23c9c bl #0x7b24244
+          setup: add x1, sp, #0x10; add x2, sp, #0x10; mov x0, x23
+    0x07b23cb8 bl #0x8b34ef0
+          setup: cbz x25, #0x7b23cd8; add x1, x25, #8; mov x0, #-1
+    0x07b23ccc blr x8
+          setup: ldr x8, [x25]; mov x0, x25; ldr x8, [x8, #0x10]
+    0x07b23cd4 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x25
+    0x07b23ce4 bl #0x2efa56c
+          setup: ldrb w8, [sp, #0x10]; tbz w8, #0, #0x7b23ce8; ldr x0, [sp, #0x20]
+    0x07b23cf4 bl #0x8b34ef0
+          setup: mov x0, #-1; mov x1, x22; tbnz w23, #0, #0x7b23d18
+    0x07b23d08 blr x8
+          setup: ldr x8, [x21]; mov x0, x21; ldr x8, [x8, #0x10]
+    0x07b23d10 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x21
+    0x07b23d18 bl #0x8b34ef0
+          setup: mov x0, x21; bl #0x8b388f0; b #0x7b23d50
+    0x07b23d34 blr x8
+          setup: ldr x8, [x21]; mov x0, x21; ldr x8, [x8, #0x10]
+    0x07b23d3c bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x21
+    0x07b23d4c bl #0x7b23370
+          setup: cbnz x24, #0x7b23b5c; add x0, x19, #0x10; mov x1, x20
+    0x07b23d54 bl #0x8b38760   PLT: _ZNSt6__ndk115recursive_mutex6unlockEv
+          setup: mov x1, x20; bl #0x7b23370; add x0, x19, #0xb8
+    0x07b23d88 bl #0x8b382d0   PLT: abort
+          setup: ldp x29, x30, [sp, #0x40]; add sp, sp, #0xa0; ret 
+    0x07b23d8c bl #0x8b35290   PLT: __stack_chk_fail
+          setup: add sp, sp, #0xa0; ret ; bl #0x8b382d0
+    0x07b23db4 bl #0x2efc590
+          setup: adrp x8, #0x981a000; add x8, x8, #0x90; str x8, [x19]
+    0x07b23dcc bl #0x2efa56c
+          setup: ldr x0, [x19, #0x78]; str xzr, [x19, #0x78]; cbz x0, #0x7b23dd0
+    0x07b23de8 bl #0x2efa56c
+          setup: ldp x29, x30, [sp], #0x30; b #0x7b240e0; mov x0, x20
+    0x07b23e08 bl #0x8b34ef0
+          setup: cbz x21, #0x7b23e10; add x1, x21, #8; mov x0, #-1
+    0x07b23e1c bl #0x2efa56c
+          setup: ldrb w8, [x20, #0x10]; tbz w8, #0, #0x7b23de4; ldr x0, [x20, #0x20]
+    0x07b23e30 blr x8
+          setup: ldr x8, [x21]; mov x0, x21; ldr x8, [x8, #0x10]
+    0x07b23e38 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x21
+    0x07b23e58 bl #0x7b23d90
+          setup: str x19, [sp, #0x10]; mov x29, sp; mov x19, x0
+    0x07b23e8c bl #0x2f16760
+          setup: mov x19, x0; add x0, x0, #0x18; mov x22, x1
+    0x07b23fb0 bl #0x8b35880   PLT: memcmp
+          setup: cbz x21, #0x7b2404c; mov x1, x22; mov x2, x21
+    0x07b24044 bl #0x8b35880   PLT: memcmp
+          setup: cbz x21, #0x7b2404c; mov x1, x22; mov x2, x21
+    0x07b24090 bl #0x8b38920   PLT: _ZNSt6__ndk119__shared_weak_countD2Ev   <<<< CRYPTO?
+          setup: str x19, [sp, #0x10]; mov x29, sp; mov x19, x0
+    0x07b240bc bl #0x7b240e0
+          setup: ldr x19, [x0, #0x18]; cbz x19, #0x7b240d0; mov x0, x19
+    0x07b24100 bl #0x8b34ef0
+          setup: cbz x20, #0x7b24108; add x1, x20, #8; mov x0, #-1
+    0x07b24118 bl #0x8b34ef0
+          setup: cbz x20, #0x7b2415c; add x1, x20, #8; mov x0, #-1
+    0x07b2412c blr x8
+          setup: ldr x8, [x20]; mov x0, x20; ldr x8, [x8, #0x10]
+    0x07b24134 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x20
+    0x07b24148 blr x8
+          setup: ldr x8, [x20]; mov x0, x20; ldr x8, [x8, #0x10]
+    0x07b24150 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x20
+    0x07b2416c bl #0x8b34ef0
+          setup: cbz x20, #0x7b24174; add x1, x20, #8; mov x0, #-1
+    0x07b24184 bl #0x8b34ef0
+          setup: cbz x20, #0x7b241c8; add x1, x20, #8; mov x0, #-1
+    0x07b24198 blr x8
+          setup: ldr x8, [x20]; mov x0, x20; ldr x8, [x8, #0x10]
+    0x07b241a0 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x20
+    0x07b241b4 blr x8
+          setup: ldr x8, [x20]; mov x0, x20; ldr x8, [x8, #0x10]
+    0x07b241bc bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x20
+    0x07b241d8 bl #0x8b34ef0
+          setup: cbz x20, #0x7b241e0; add x1, x20, #8; mov x0, #-1
+    0x07b241f0 bl #0x8b34ef0
+          setup: cbz x19, #0x7b24238; add x1, x19, #8; mov x0, #-1
+    0x07b24204 blr x8
+          setup: ldr x8, [x19]; mov x0, x19; ldr x8, [x8, #0x10]
+    0x07b24224 blr x8
+          setup: ldr x8, [x20]; mov x0, x20; ldr x8, [x8, #0x10]
+    0x07b2422c bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x20
+    0x07b24278 bl #0x2f16760
+          setup: mov x0, x19; mov x23, x2; mov x25, x1
+    0x07b24394 bl #0x8b35880   PLT: memcmp
+          setup: cbz x24, #0x7b2442c; mov x1, x25; mov x2, x24
+    0x07b24424 bl #0x8b35880   PLT: memcmp
+          setup: cbz x24, #0x7b2442c; mov x1, x25; mov x2, x24
+    0x07b2443c bl #0x2efa4dc
+          setup: b #0x7b246d0; mov w0, #0x38; mov w1, wzr
+    0x07b2449c bl #0x2efa4dc
+          setup: orr x19, x24, #0xf; add x0, x19, #1; mov w1, wzr
+    0x07b244d0 bl #0x8b352f0   PLT: memmove
+          setup: mov x0, x26; mov x1, x25; mov x2, x24
+    0x07b24578 bl #0x8b38680   PLT: _ZNSt6__ndk112__next_primeEm
+          setup: tst x23, x8; b.eq #0x7b24580; mov x0, x23
+    0x07b24594 bl #0x7b246f8
+          setup: b.ls #0x7b2459c; mov x0, x20; mov x1, x23
+    0x07b24604 bl #0x8b38680   PLT: _ZNSt6__ndk112__next_primeEm
+          setup: cmp x23, x24; b.lo #0x7b2458c; b #0x7b24618
+    0x07b246f4 bl #0x8b382d0   PLT: abort
+          setup: ldp x29, x30, [sp, #0x10]; add sp, sp, #0x70; ret 
+    0x07b24718 bl #0x2efa4dc
+          setup: mov x20, x1; lsl x0, x1, #3; mov w1, wzr
+    0x07b2472c bl #0x2efa56c
+          setup: ldr x0, [x19]; str x8, [x19]; cbz x0, #0x7b24730
+    0x07b247a4 bl #0x2efa56c
+          setup: ldr x0, [x19]; str xzr, [x19]; cbz x0, #0x7b247a8
+
+==============================================================================
+FUNCTION 0x7b2e5fc
+==============================================================================
+  instructions: 2560  (0x7b2e5fc .. 0x7b30df8)
+    0x07b2e634 blr x8
+          setup: cbz x0, #0x7b2e7bc; ldr x8, [x0]; ldr x8, [x8, #0x28]
+    0x07b2e650 bl #0x7b2f6a0
+          setup: cmp w8, #1; b.ne #0x7b2e760; ldr x0, [x19, #8]
+    0x07b2e664 blr x8
+          setup: ldr x0, [x19, #8]; ldr x8, [x0]; ldr x8, [x8, #0x38]
+    0x07b2e67c bl #0x7b2f760
+          setup: cbz x21, #0x7b2e7c0; cbz x22, #0x7b2e7c0; ldr x0, [x19, #8]
+    0x07b2e68c bl #0x7b2f790
+          setup: tbz w0, #0, #0x7b2e6a0; ldr x0, [x19, #8]; mov x8, sp
+    0x07b2e69c bl #0x2efa56c
+          setup: ldrb w8, [sp]; tbz w8, #0, #0x7b2e6a0; ldr x0, [sp, #0x10]
+    0x07b2e6b0 bl #0x7b38868
+          setup: mov x0, x21; mov w1, w22; mov x2, x20
+    0x07b2e6dc bl #0x7d269e8
+          setup: add x10, x10, x11, lsl #2; br x10; mov x8, sp
+    0x07b2e6e8 bl #0x8b3abf0   PLT: _ZNSt6__ndk119__shared_weak_count4lockEv   <<<< CRYPTO?
+          setup: bl #0x7d269e8; ldr x0, [sp, #8]; cbz x0, #0x7b2e800
+    0x07b2e704 bl #0x8b34e90
+          setup: mov w0, #1; mov x1, x21; ldr x22, [sp]
+    0x07b2e710 bl #0x8b34ef0
+          setup: bl #0x8b34e90; mov x0, #-1; mov x1, x21
+    0x07b2e724 bl #0x8b34ef0
+          setup: mov x0, #-1; mov x1, x21; ldr w22, [x22, #0x28]
+    0x07b2e734 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: cbz x0, #0x7b2e840; ldr x0, [sp, #8]; cbz x0, #0x7b2e738
+    0x07b2e740 bl #0x7b3865c
+          setup: bl #0x8b388f0; cbnz w22, #0x7b2e748; mov x0, x20
+    0x07b2e79c bl #0x2f649fc
+          setup: adrp x1, #0xaf7000; add x1, x1, #0x169; mov x0, sp
+    0x07b2e7a8 bl #0x7b2e864
+          setup: bl #0x2f649fc; mov x1, sp; mov x0, x19
+    0x07b2e7b8 bl #0x2efa56c
+          setup: ldrb w8, [sp]; tbz w8, #0, #0x7b2e7bc; ldr x0, [sp, #0x10]
+    0x07b2e7fc bl #0x8b35290   PLT: __stack_chk_fail
+          setup: ldur x9, [x29, #-8]; cmp x8, x9; b.eq #0x7b2e7d0
+    0x07b2e820 blr x8
+          setup: ldr x8, [x19]; mov x0, x19; ldr x8, [x8, #0x10]
+    0x07b2e828 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x19
+    0x07b2e838 bl #0x8b34ef0
+          setup: mov x0, #-1; mov x1, x21; ldr w22, [x22, #0x28]
+    0x07b2e84c blr x8
+          setup: ldr x8, [x19]; mov x0, x19; ldr x8, [x8, #0x10]
+    0x07b2e854 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x19
+    0x07b2e8c8 bl #0x74e6b00
+          setup: str xzr, [x19, #0x10]; str x8, [x19]; str xzr, [x23, #8]!
+    0x07b2e8f4 bl #0x8b34ef0
+          setup: cbz x22, #0x7b2e940; add x1, x22, #8; mov x0, #-1
+    0x07b2e914 blr x8
+          setup: ldr x8, [x22]; mov x0, x22; ldr x8, [x8, #0x10]
+    0x07b2e91c bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x22
+    0x07b2e92c bl #0x7b2ef44
+          setup: ldr x0, [x23]; cbz x0, #0x7b2e940; mov x1, x21
+    0x07b2e93c bl #0x7b2f018
+          setup: ldr x0, [x23]; cbz x0, #0x7b2e940; mov w1, #0x3c
+    0x07b2e944 bl #0x8b35260   PLT: _Znwm
+          setup: mov w1, #0x3c; bl #0x7b2f018; mov w0, #0x40
+    0x07b2e960 bl #0x7b2ec10
+          setup: ldr w2, [x19, #0x48]; tst w8, #1; csinc x1, x9, x20, ne
+    0x07b2e968 bl #0x8b35260   PLT: _Znwm
+          setup: csinc x1, x9, x20, ne; bl #0x7b2ec10; mov w0, #0x20
+    0x07b2e990 bl #0x8b34ef0
+          setup: cbz x20, #0x7b2e9c4; add x1, x20, #8; mov x0, #-1
+    0x07b2e9b0 blr x8
+          setup: ldr x8, [x20]; mov x0, x20; ldr x8, [x8, #0x10]
+    0x07b2e9b8 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x20
+    0x07b2e9d0 blr x8
+          setup: ldr x8, [x21]; mov x0, x21; ldr x8, [x8, #0x10]
+    0x07b2e9d4 bl #0x7d2bf4c
+          setup: mov x0, x21; ldr x8, [x8, #0x10]; blr x8
+    0x07b2e9e0 bl #0x7d376a8
+          setup: bl #0x7d2bf4c; cbz x0, #0x7b2e9f8; ldr x0, [x0, #0x10]
+    0x07b2ea34 bl #0x74e6d70
+          setup: mov x19, x0; str x8, [x0]; mov x0, x20
+    0x07b2ea4c bl #0x8b34ef0
+          setup: cbz x21, #0x7b2ea54; add x1, x21, #8; mov x0, #-1
+    0x07b2ea60 bl #0x2efa56c
+          setup: ldrb w8, [x19, #0x50]; tbz w8, #0, #0x7b2ea64; ldr x0, [x19, #0x60]
+    0x07b2ea68 bl #0x74e6e74
+          setup: ldr x0, [x19, #0x60]; bl #0x2efa56c; mov x0, x20
+    0x07b2ea7c bl #0x8b34ef0
+          setup: cbz x19, #0x7b2ea84; add x1, x19, #8; mov x0, #-1
+    0x07b2eaa0 blr x8
+          setup: ldr x8, [x21]; mov x0, x21; ldr x8, [x8, #0x10]
+    0x07b2eaa8 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x21
+    0x07b2eac4 blr x8
+          setup: ldr x8, [x19]; mov x0, x19; ldr x8, [x8, #0x10]
+    0x07b2eaec bl #0x7b2ea0c
+          setup: str x19, [sp, #0x10]; mov x29, sp; mov x19, x0
+    0x07b2eb10 bl #0x8b38920   PLT: _ZNSt6__ndk119__shared_weak_countD2Ev   <<<< CRYPTO?
+          setup: str x19, [sp, #0x10]; mov x29, sp; mov x19, x0
+    0x07b2eb9c bl #0x8b35240   PLT: __cxa_atexit
+          setup: strb w8, [x1, #8]!; stur q0, [x19, #9]; sturh w9, [x19, #0x19]
+    0x07b2ebd0 bl #0x8b35240   PLT: __cxa_atexit
+          setup: stur w9, [x19, #0x21]; sturh w10, [x19, #0x25]; strb wzr, [x19, #0x27]
+    0x07b2ec68 bl #0x8b34ef0
+          setup: cbz x20, #0x7b2eca0; add x1, x20, #8; mov x0, #-1
+    0x07b2ec7c blr x8
+          setup: ldr x8, [x20]; mov x0, x20; ldr x8, [x8, #0x10]
+    0x07b2ec84 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x20
+    0x07b2ec98 bl #0x8b34ef0
+          setup: cbz x20, #0x7b2eca0; add x1, x20, #8; mov x0, #-1
+    0x07b2ecc0 blr x8
+          setup: ldr x8, [x20]; mov x0, x20; ldr x8, [x8, #0x10]
+    0x07b2ecc8 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x20
+    0x07b2ed18 bl #0x8b34ef0
+          setup: cbz x20, #0x7b2ed50; add x1, x20, #8; mov x0, #-1
+    0x07b2ed2c blr x8
+          setup: ldr x8, [x20]; mov x0, x20; ldr x8, [x8, #0x10]
+    0x07b2ed34 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x20
+    0x07b2ed48 bl #0x8b34ef0
+          setup: cbz x20, #0x7b2ed50; add x1, x20, #8; mov x0, #-1
+    0x07b2ed5c bl #0x2efa56c
+          setup: ldrb w8, [x19, #0x10]; tbz w8, #0, #0x7b2ed60; ldr x0, [x19, #0x20]
+    0x07b2ed7c blr x8
+          setup: ldr x8, [x20]; mov x0, x20; ldr x8, [x8, #0x10]
+    0x07b2ed84 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x20
+    0x07b2eda8 bl #0x7d2bf4c
+          setup: stp x20, x19, [sp, #0x20]; mov x29, sp; mov x19, x0
+    0x07b2edb4 bl #0x7d376a0
+          setup: bl #0x7d2bf4c; cbz x0, #0x7b2edb8; ldr x0, [x0, #0x10]
+    0x07b2edbc bl #0x7d2bf4c
+          setup: ldr x0, [x0, #0x10]; bl #0x7d376a0; ldr w20, [x19, #8]
+    0x07b2edc8 bl #0x7d2bf4c
+          setup: bl #0x7d2bf4c; cbz w20, #0x7b2ee44; cbz x0, #0x7b2edf8
+    0x07b2edd0 bl #0x7d37690
+          setup: cbz x0, #0x7b2edf8; bl #0x7d2bf4c; ldr x0, [x0, #0x10]
+    0x07b2eddc bl #0x8b35260   PLT: _Znwm
+          setup: bl #0x7d37690; tbz w0, #0, #0x7b2edf8; mov w0, #0x228
+    0x07b2edfc bl #0x8b35260   PLT: _Znwm
+          setup: mov w2, #1; b #0x7b2ee74; mov w0, #0x1b0
+    0x07b2ee18 bl #0x7b3e8ac
+          setup: mov x21, x0; tst w8, #1; csel x1, x10, x9, eq
+    0x07b2ee20 bl #0x8b35260   PLT: _Znwm
+          setup: csel x1, x10, x9, eq; bl #0x7b3e8ac; mov w0, #0x20
+    0x07b2ee48 bl #0x7d2bf4c
+          setup: cbnz x20, #0x7b2eef0; b #0x7b2ef18; cbz x0, #0x7b2eea8
+    0x07b2ee50 bl #0x7d37690
+          setup: cbz x0, #0x7b2eea8; bl #0x7d2bf4c; ldr x0, [x0, #0x10]
+    0x07b2ee5c bl #0x8b35260   PLT: _Znwm
+          setup: bl #0x7d37690; tbz w0, #0, #0x7b2eea8; mov w0, #0x228
+    0x07b2ee7c bl #0x7b3bacc
+          setup: mov w2, wzr; tst w8, #1; csel x1, x10, x9, eq
+    0x07b2ee84 bl #0x8b35260   PLT: _Znwm
+          setup: csel x1, x10, x9, eq; bl #0x7b3bacc; mov w0, #0x20
+    0x07b2eeac bl #0x8b35260   PLT: _Znwm
+          setup: cbnz x20, #0x7b2eef0; b #0x7b2ef18; mov w0, #0x1b0
+    0x07b2eec8 bl #0x7b39c08
+          setup: mov x21, x0; tst w8, #1; csel x1, x10, x9, eq
+    0x07b2eed0 bl #0x8b35260   PLT: _Znwm
+          setup: csel x1, x10, x9, eq; bl #0x7b39c08; mov w0, #0x20
+    0x07b2eef8 bl #0x8b34ef0
+          setup: cbz x20, #0x7b2ef18; add x1, x20, #8; mov x0, #-1
+    0x07b2ef0c blr x8
+          setup: ldr x8, [x20]; mov x0, x20; ldr x8, [x8, #0x10]
+    0x07b2ef14 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x20
+    0x07b2ef5c blr x8
+          setup: ldr x8, [x0]; mov x19, x1; ldr x8, [x8, #0x40]
+    0x07b2efa4 blr x8
+          setup: mov x19, x2; mov x20, x1; ldr x8, [x8, #0x40]
+    0x07b2efec blr x8
+          setup: ldr x8, [x0]; mov w19, w1; ldr x8, [x8, #0x40]
+    0x07b2f030 blr x8
+          setup: ldr x8, [x0]; mov w19, w1; ldr x8, [x8, #0x40]
+    0x07b2f084 blr x8
+          setup: mov x20, x2; mov x21, x1; ldr x8, [x8, #0x40]
+    0x07b2f0f4 blr x8
+          setup: mov x21, x2; mov x23, x1; ldr x8, [x8, #0x40]
+    0x07b2f170 blr x8
+          setup: stur x8, [x29, #-8]; ldr x8, [x0]; ldr x8, [x8, #0x40]
+    0x07b2f184 blr x8
+          setup: ldr x8, [x0]; mov x20, x0; ldr x8, [x8, #0x58]
+    0x07b2f1a8 blr x8
+          setup: ldr x8, [x20]; mov x0, x20; ldr x8, [x8, #0xa0]
+    0x07b2f1e0 bl #0x2efb614
+          setup: csel x2, x8, x10, eq; stur xzr, [x29, #-0x40]; sturb wzr, [x29, #-0x28]
+    0x07b2f238 bl #0x2efb614
+          setup: csel x2, x12, x10, eq; sturb w13, [x29, #-0x28]; csel x1, x24, x11, eq
+    0x07b2f290 bl #0x2efb614
+          setup: csel x2, x12, x10, eq; sturb w13, [x29, #-0x50]; csel x1, x24, x11, eq
+    0x07b2f2d4 bl #0x2f1ed1c
+          setup: cbz w9, #0x7b2f348; cbz w8, #0x7b2f348; ldur x0, [x29, #-0x20]
+    0x07b2f2e0 bl #0x2f1ed1c
+          setup: bl #0x2f1ed1c; mov x21, x0; ldur x0, [x29, #-0x48]
+    0x07b2f2ec bl #0x2f1ed1c
+          setup: bl #0x2f1ed1c; mov x22, x0; ldr x0, [sp, #0xb0]
+    0x07b2f300 bl #0x7b31ea0
+          setup: add x8, sp, #0x68; str w0, [sp, #0x48]; str x21, [sp, #0x40]
+    0x07b2f314 bl #0x7b2f918
+          setup: cbz x0, #0x7b2f318; sub x1, x29, #0x40; add x2, sp, #0x40
+    0x07b2f328 bl #0x8b34ef0
+          setup: cbz x21, #0x7b2f348; add x1, x21, #8; mov x0, #-1
+    0x07b2f33c blr x8
+          setup: ldr x8, [x21]; mov x0, x21; ldr x8, [x8, #0x10]
+    0x07b2f344 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x21
+    0x07b2f374 bl #0x2efb614
+          setup: lsr x8, x8, #1; csel x1, x24, x9, eq; csel x2, x8, x10, eq
+    0x07b2f3cc bl #0x2efb614
+          setup: csel x2, x12, x10, eq; strb w13, [sp, #0x80]; csel x1, x24, x11, eq
+    0x07b2f40c bl #0x2efb614
+          setup: csel x2, x12, x11, eq; strb wzr, [sp, #0x30]; csel x1, x24, x9, eq
+    0x07b2f448 bl #0x7b31ea0
+          setup: ldr x10, [sp, #0x60]; sub x8, x29, #0x18; stp x9, x10, [sp]
+    0x07b2f45c bl #0x7b318fc
+          setup: cbz x0, #0x7b2f460; add x1, sp, #0x68; mov x2, sp
+    0x07b2f470 bl #0x8b34ef0
+          setup: cbz x21, #0x7b2f490; add x1, x21, #8; mov x0, #-1
+    0x07b2f484 blr x8
+          setup: ldr x8, [x21]; mov x0, x21; ldr x8, [x8, #0x10]
+    0x07b2f48c bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x21
+    0x07b2f49c bl #0x7b31ea0
+          setup: ldrb w8, [x20, #0x79]; cbz w8, #0x7b2f4e4; mov x8, sp
+    0x07b2f4c4 bl #0x8b34ef0
+          setup: cbz x20, #0x7b2f4e4; add x1, x20, #8; mov x0, #-1
+    0x07b2f4d8 blr x8
+          setup: ldr x8, [x20]; mov x0, x20; ldr x8, [x8, #0x10]
+    0x07b2f4e0 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x20
+    0x07b2f524 bl #0x2efa56c
+          setup: mov w19, wzr; b #0x7b2f578; ldr x0, [sp, #0x28]
+    0x07b2f534 bl #0x2efa56c
+          setup: ldrb w8, [sp, #0x40]; tbz w8, #0, #0x7b2f4f4; ldr x0, [sp, #0x50]
+    0x07b2f544 bl #0x2efa56c
+          setup: ldrb w8, [sp, #0x68]; tbz w8, #0, #0x7b2f4fc; ldr x0, [sp, #0x78]
+    0x07b2f554 bl #0x2efa56c
+          setup: ldrb w8, [sp, #0x90]; tbz w8, #0, #0x7b2f504; ldr x0, [sp, #0xa0]
+    0x07b2f564 bl #0x2efa56c
+          setup: ldurb w8, [x29, #-0x68]; tbz w8, #0, #0x7b2f50c; ldur x0, [x29, #-0x58]
+    0x07b2f574 bl #0x2efa56c
+          setup: ldurb w8, [x29, #-0x40]; tbz w8, #0, #0x7b2f578; ldur x0, [x29, #-0x30]
+    0x07b2f5a8 bl #0x8b35290   PLT: __stack_chk_fail
+          setup: ldr x28, [sp, #0x130]; add sp, sp, #0x170; ret 
+    0x07b2f5bc blr x8
+          setup: mov x29, sp; ldr x8, [x0]; ldr x8, [x8, #0x40]
+    0x07b2f5ec blr x8
+          setup: mov x29, sp; ldr x8, [x0]; ldr x8, [x8, #0x48]
+    0x07b2f624 blr x8
+          setup: ldr x8, [x0]; mov x19, x1; ldr x8, [x8, #0x48]
+    0x07b2f634 blr x8
+          setup: cbz x0, #0x7b2f664; ldr x8, [x0]; ldr x8, [x8, #0xb0]
+    0x07b2f680 blr x8
+          setup: mov x29, sp; ldr x8, [x0]; ldr x8, [x8, #0x48]
+    0x07b2f6b0 blr x8
+          setup: mov x29, sp; ldr x8, [x0]; ldr x8, [x8, #0x48]
+    0x07b2f6e0 blr x8
+          setup: mov x29, sp; ldr x8, [x0]; ldr x8, [x8, #0x48]
+    0x07b2f710 blr x8
+          setup: mov x29, sp; ldr x8, [x0]; ldr x8, [x8, #0x48]
+    0x07b2f740 blr x8
+          setup: mov x29, sp; ldr x8, [x0]; ldr x8, [x8, #0x40]
+    0x07b2f770 blr x8
+          setup: mov x29, sp; ldr x8, [x0]; ldr x8, [x8, #0x40]
+    0x07b2f7ac blr x8
+          setup: mov x19, x8; ldr x8, [x0]; ldr x8, [x8, #0x40]
+    0x07b2f7bc blr x8
+          setup: cbz x0, #0x7b2f7f4; ldr x8, [x0]; ldr x8, [x8, #0xc0]
+    0x07b2f818 bl #0x2efa4dc
+          setup: orr x22, x20, #0xf; mov w1, wzr; add x0, x22, #1
+    0x07b2f838 bl #0x8b352f0   PLT: memmove
+          setup: mov x0, x19; mov x1, x21; mov x2, x20
+    0x07b2f850 bl #0x8b382d0   PLT: abort
+          setup: ldp x22, x21, [sp, #0x10]; ldp x29, x30, [sp], #0x30; ret 
+    0x07b2f868 bl #0x8b38920   PLT: _ZNSt6__ndk119__shared_weak_countD2Ev   <<<< CRYPTO?
+          setup: str x19, [sp, #0x10]; mov x29, sp; mov x19, x0
+    0x07b2f8a8 bl #0x8b38920   PLT: _ZNSt6__ndk119__shared_weak_countD2Ev   <<<< CRYPTO?
+          setup: str x19, [sp, #0x10]; mov x29, sp; mov x19, x0
+    0x07b2f8e8 bl #0x8b38920   PLT: _ZNSt6__ndk119__shared_weak_countD2Ev   <<<< CRYPTO?
+          setup: str x19, [sp, #0x10]; mov x29, sp; mov x19, x0
+    0x07b2f944 bl #0x7b2f9ec
+          setup: mov x21, x1; mov x20, x0; stur x8, [x29, #-8]
+    0x07b2f95c bl #0x7b3307c
+          setup: mov x1, x21; stp xzr, xzr, [sp]; str xzr, [sp, #0x10]
+    0x07b2f99c bl #0x7b2fd44
+          setup: mov x1, sp; mov x0, x20; mov x2, x19
+    0x07b2f9b0 bl #0x7b3009c
+          setup: add x3, x19, #4; mov x2, sp; mov x0, x20
+    0x07b2f9c4 bl #0x7b3009c
+          setup: add x3, x19, #8; mov x2, sp; mov x0, x20
+    0x07b2f9d4 bl #0x2efa56c
+          setup: ldrb w8, [sp]; tbz w8, #0, #0x7b2f96c; ldr x0, [sp, #0x10]
+    0x07b2f9e8 bl #0x8b35290   PLT: __stack_chk_fail
+          setup: ldur x9, [x29, #-8]; cmp x8, x9; b.eq #0x7b2f97c
+    0x07b2fa28 bl #0x2efc5d0
+          setup: mov x20, x2; mov x23, x1; stur x8, [x29, #-8]
+    0x07b2fa50 bl #0x8b35330   PLT: strlen
+          setup: csinc x21, x9, x23, ne; cbz x21, #0x7b2fa64; mov x0, x21
+    0x07b2fa60 bl #0x2efb614
+          setup: mov x2, x0; add x0, sp, #0x10; mov x1, x21
+    0x07b2fa6c bl #0x7b303fc
+          setup: bl #0x2efb614; add x1, sp, #0x10; mov x0, x22
+    0x07b2fa80 bl #0x2efa56c
+          setup: mov x24, x0; tbz w8, #0, #0x7b2fa84; ldr x0, [sp, #0x20]
+    0x07b2fa98 bl #0x8b34e90
+          setup: cbz x21, #0x7b2fa9c; add x1, x21, #8; mov w0, #1
+    0x07b2fabc bl #0x7b3125c
+          setup: ldr x8, [x22, #0x18]; mov w1, w20; cbz x8, #0x7b2fc80
+    0x07b2fad0 bl #0x8b35260   PLT: _Znwm
+          setup: b #0x7b2fcd8; mov w0, #0xa0; add x25, x23, #1
+    0x07b2fb18 bl #0x7b30610
+          setup: str xzr, [x24, #0x40]; strb wzr, [x24, #0x58]; cbz x1, #0x7b2fb20
+    0x07b2fb34 bl #0x8b35260   PLT: _Znwm
+          setup: mov w0, #0x20; stp xzr, xzr, [x24, #0x88]; str wzr, [x24, #0x98]
+    0x07b2fba8 bl #0x2efa4dc
+          setup: orr x20, x25, #0xf; add x0, x20, #1; mov w1, wzr
+    0x07b2fbd4 bl #0x8b352f0   PLT: memmove
+          setup: mov x0, x27; mov x1, x26; mov x2, x25
+    0x07b2fbe8 bl #0x8b34e90
+          setup: mov w0, #1; strb wzr, [x27, x25]; stp x24, x21, [sp, #0x28]
+    0x07b2fbf8 bl #0x7b309b4
+          setup: add x1, sp, #0x10; add x2, sp, #0x10; mov x0, x22
+    0x07b2fc14 bl #0x8b34ef0
+          setup: cbz x25, #0x7b2fc34; add x1, x25, #8; mov x0, #-1
+    0x07b2fc28 blr x8
+          setup: ldr x8, [x25]; mov x0, x25; ldr x8, [x8, #0x10]
+    0x07b2fc30 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x25
+    0x07b2fc40 bl #0x2efa56c
+          setup: ldrb w8, [sp, #0x10]; tbz w8, #0, #0x7b2fc44; ldr x0, [sp, #0x20]
+    0x07b2fc50 bl #0x8b34ef0
+          setup: mov x0, #-1; mov x1, x23; tbz w22, #0, #0x7b2fce4
+    0x07b2fc6c blr x8
+          setup: ldr x8, [x21]; mov x0, x21; ldr x8, [x8, #0x10]
+    0x07b2fc74 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x21
+    0x07b2fc80 bl #0x7b31038
+          setup: bl #0x8b388f0; cbnz x24, #0x7b2fa88; b #0x7b2fd04
+    0x07b2fce4 bl #0x8b34ef0
+          setup: cbz x21, #0x7b2fd04; add x1, x21, #8; mov x0, #-1
+    0x07b2fcf8 blr x8
+          setup: ldr x8, [x21]; mov x0, x21; ldr x8, [x8, #0x10]
+    0x07b2fd00 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x21
+    0x07b2fd08 bl #0x8b38760   PLT: _ZNSt6__ndk115recursive_mutex6unlockEv
+          setup: mov x0, x21; bl #0x8b388f0; add x0, x19, #0x188
+    0x07b2fd3c bl #0x8b382d0   PLT: abort
+          setup: ldp x29, x30, [sp, #0x40]; add sp, sp, #0xa0; ret 
+    0x07b2fd40 bl #0x8b35290   PLT: __stack_chk_fail
+          setup: add sp, sp, #0xa0; ret ; bl #0x8b382d0
+    0x07b2fd80 bl #0x2efc5d0
+          setup: mov x20, x2; mov x23, x1; stur x8, [x29, #-8]
+    0x07b2fda8 bl #0x8b35330   PLT: strlen
+          setup: csinc x21, x9, x23, ne; cbz x21, #0x7b2fdbc; mov x0, x21
+    0x07b2fdb8 bl #0x2efb614
+          setup: mov x2, x0; add x0, sp, #0x10; mov x1, x21
+    0x07b2fdc4 bl #0x7b303fc
+          setup: bl #0x2efb614; add x1, sp, #0x10; mov x0, x22
+    0x07b2fdd8 bl #0x2efa56c
+          setup: mov x24, x0; tbz w8, #0, #0x7b2fddc; ldr x0, [sp, #0x20]
+    0x07b2fdf0 bl #0x8b34e90
+          setup: cbz x21, #0x7b2fdf4; add x1, x21, #8; mov w0, #1
+    0x07b2fe14 bl #0x7b3125c
+          setup: ldr x8, [x22, #0x18]; mov w1, w20; cbz x8, #0x7b2ffd8
+    0x07b2fe28 bl #0x8b35260   PLT: _Znwm
+          setup: b #0x7b30030; mov w0, #0xa0; add x25, x23, #1
+    0x07b2fe70 bl #0x7b30610
+          setup: str xzr, [x24, #0x40]; strb wzr, [x24, #0x58]; cbz x1, #0x7b2fe78
+    0x07b2fe8c bl #0x8b35260   PLT: _Znwm
+          setup: mov w0, #0x20; stp xzr, xzr, [x24, #0x88]; str wzr, [x24, #0x98]
+    0x07b2ff00 bl #0x2efa4dc
+          setup: orr x20, x25, #0xf; add x0, x20, #1; mov w1, wzr
+    0x07b2ff2c bl #0x8b352f0   PLT: memmove
+          setup: mov x0, x27; mov x1, x26; mov x2, x25
+    0x07b2ff40 bl #0x8b34e90
+          setup: mov w0, #1; strb wzr, [x27, x25]; stp x24, x21, [sp, #0x28]
+    0x07b2ff50 bl #0x7b309b4
+          setup: add x1, sp, #0x10; add x2, sp, #0x10; mov x0, x22
+    0x07b2ff6c bl #0x8b34ef0
+          setup: cbz x25, #0x7b2ff8c; add x1, x25, #8; mov x0, #-1
+    0x07b2ff80 blr x8
+          setup: ldr x8, [x25]; mov x0, x25; ldr x8, [x8, #0x10]
+    0x07b2ff88 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x25
+    0x07b2ff98 bl #0x2efa56c
+          setup: ldrb w8, [sp, #0x10]; tbz w8, #0, #0x7b2ff9c; ldr x0, [sp, #0x20]
+    0x07b2ffa8 bl #0x8b34ef0
+          setup: mov x0, #-1; mov x1, x23; tbz w22, #0, #0x7b3003c
+    0x07b2ffc4 blr x8
+          setup: ldr x8, [x21]; mov x0, x21; ldr x8, [x8, #0x10]
+    0x07b2ffcc bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x21
+    0x07b2ffd8 bl #0x7b31038
+          setup: bl #0x8b388f0; cbnz x24, #0x7b2fde0; b #0x7b3005c
+    0x07b3003c bl #0x8b34ef0
+          setup: cbz x21, #0x7b3005c; add x1, x21, #8; mov x0, #-1
+    0x07b30050 blr x8
+          setup: ldr x8, [x21]; mov x0, x21; ldr x8, [x8, #0x10]
+    0x07b30058 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x21
+    0x07b30060 bl #0x8b38760   PLT: _ZNSt6__ndk115recursive_mutex6unlockEv
+          setup: mov x0, x21; bl #0x8b388f0; add x0, x19, #0x188
+    0x07b30094 bl #0x8b382d0   PLT: abort
+          setup: ldp x29, x30, [sp, #0x40]; add sp, sp, #0xa0; ret 
+    0x07b30098 bl #0x8b35290   PLT: __stack_chk_fail
+          setup: add sp, sp, #0xa0; ret ; bl #0x8b382d0
+    0x07b300dc bl #0x2efc5d0
+          setup: mov x23, x2; mov x22, x1; stur x8, [x29, #-8]
+    0x07b30100 bl #0x8b35330   PLT: strlen
+          setup: csinc x21, x9, x23, ne; cbz x21, #0x7b30114; mov x0, x21
+    0x07b30110 bl #0x2efb614
+          setup: mov x2, x0; add x0, sp, #0x10; mov x1, x21
+    0x07b3011c bl #0x7b303fc
+          setup: bl #0x2efb614; add x1, sp, #0x10; mov x0, x22
+    0x07b30130 bl #0x2efa56c
+          setup: mov x24, x0; tbz w8, #0, #0x7b30134; ldr x0, [sp, #0x20]
+    0x07b30148 bl #0x8b34e90
+          setup: cbz x21, #0x7b3014c; add x1, x21, #8; mov w0, #1
+    0x07b3016c bl #0x7b3125c
+          setup: ldr x8, [x22, #0x18]; mov w1, w20; cbz x8, #0x7b30338
+    0x07b30180 bl #0x8b35260   PLT: _Znwm
+          setup: b #0x7b30390; mov w0, #0xa0; add x25, x23, #1
+    0x07b301c8 bl #0x7b30610
+          setup: str xzr, [x24, #0x40]; strb wzr, [x24, #0x58]; cbz x1, #0x7b301d0
+    0x07b301e4 bl #0x8b35260   PLT: _Znwm
+          setup: mov w0, #0x20; stp xzr, xzr, [x24, #0x88]; str wzr, [x24, #0x98]
+    0x07b3025c bl #0x2efa4dc
+          setup: orr x20, x25, #0xf; mov w1, wzr; add x0, x20, #1
+    0x07b3028c bl #0x8b352f0   PLT: memmove
+          setup: mov x0, x27; mov x1, x26; mov x2, x25
+    0x07b302a0 bl #0x8b34e90
+          setup: mov w0, #1; strb wzr, [x27, x25]; stp x24, x21, [sp, #0x28]
+    0x07b302b0 bl #0x7b309b4
+          setup: add x1, sp, #0x10; add x2, sp, #0x10; mov x0, x22
+    0x07b302cc bl #0x8b34ef0
+          setup: cbz x25, #0x7b302ec; add x1, x25, #8; mov x0, #-1
+    0x07b302e0 blr x8
+          setup: ldr x8, [x25]; mov x0, x25; ldr x8, [x8, #0x10]
+    0x07b302e8 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x25
+    0x07b302f8 bl #0x2efa56c
+          setup: ldrb w8, [sp, #0x10]; tbz w8, #0, #0x7b302fc; ldr x0, [sp, #0x20]
+    0x07b30308 bl #0x8b34ef0
+          setup: mov x0, #-1; mov x1, x23; tbz w22, #0, #0x7b3039c
+    0x07b30324 blr x8
+          setup: ldr x8, [x21]; mov x0, x21; ldr x8, [x8, #0x10]
+    0x07b3032c bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x21
+    0x07b30338 bl #0x7b31038
+          setup: bl #0x8b388f0; cbnz x24, #0x7b30138; b #0x7b303bc
+    0x07b3039c bl #0x8b34ef0
+          setup: cbz x21, #0x7b303bc; add x1, x21, #8; mov x0, #-1
+    0x07b303b0 blr x8
+          setup: ldr x8, [x21]; mov x0, x21; ldr x8, [x8, #0x10]
+    0x07b303b8 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x21
+    0x07b303c0 bl #0x8b38760   PLT: _ZNSt6__ndk115recursive_mutex6unlockEv
+          setup: mov x0, x21; bl #0x8b388f0; add x0, x19, #0x188
+    0x07b303f4 bl #0x8b382d0   PLT: abort
+          setup: ldp x29, x30, [sp, #0x40]; add sp, sp, #0xa0; ret 
+    0x07b303f8 bl #0x8b35290   PLT: __stack_chk_fail
+          setup: add sp, sp, #0xa0; ret ; bl #0x8b382d0
+    0x07b3041c bl #0x2f16760
+          setup: mov x19, x0; add x0, x0, #0x18; mov x22, x1
+    0x07b30540 bl #0x8b35880   PLT: memcmp
+          setup: cbz x21, #0x7b305dc; mov x1, x22; mov x2, x21
+    0x07b305d4 bl #0x8b35880   PLT: memcmp
+          setup: cbz x21, #0x7b305dc; mov x1, x22; mov x2, x21
+    0x07b3063c bl #0x2efa56c
+          setup: str x1, [x19, #8]; cbz x0, #0x7b30640; str x0, [x19, #0x18]
+    0x07b30658 bl #0x2efa56c
+          setup: stp q0, q0, [x21]; cbz x0, #0x7b3065c; str x0, [x19, #0x38]
+    0x07b306ac bl #0x2efa4dc
+          setup: mov x0, x21; mov w1, wzr; sub x22, x10, x9
+    0x07b30768 bl #0x2efa56c
+          setup: stp x12, x9, [x19, #0x10]; str x10, [x19, #0x20]; cbz x0, #0x7b3076c
+    0x07b3079c bl #0x7b30818
+          setup: b.hs #0x7b307ac; sub x1, x11, x12; mov x0, x20
+    0x07b30814 bl #0x8b382d0   PLT: abort
+          setup: ldp x22, x21, [sp, #0x10]; ldp x29, x30, [sp], #0x30; ret 
+    0x07b30884 bl #0x2efa4dc
+          setup: cbz x22, #0x7b308b0; lsl x0, x22, #6; mov w1, wzr
+    0x07b308a0 bl #0x8b35360   PLT: memset
+          setup: mov x0, x21; mov w1, wzr; mov x2, x20
+    0x07b308cc bl #0x8b35360   PLT: memset
+          setup: mov x0, x21; mov w1, wzr; mov x2, x20
+    0x07b30938 bl #0x8b382d0   PLT: abort
+          setup: ldp x22, x21, [sp, #0x10]; ldp x29, x30, [sp], #0x30; ret 
+    0x07b3094c bl #0x8b38920   PLT: _ZNSt6__ndk119__shared_weak_countD2Ev   <<<< CRYPTO?
+          setup: str x19, [sp, #0x10]; mov x29, sp; mov x19, x0
+    0x07b30980 bl #0x2efa56c
+          setup: ldr x0, [x19, #0x40]; cbz x0, #0x7b30984; str x0, [x19, #0x48]
+    0x07b30990 bl #0x2efa56c
+          setup: ldr x0, [x19, #0x20]; cbz x0, #0x7b30994; str x0, [x19, #0x28]
+    0x07b309e8 bl #0x2f16760
+          setup: mov x0, x19; mov x23, x2; mov x25, x1
+    0x07b30b04 bl #0x8b35880   PLT: memcmp
+          setup: cbz x24, #0x7b30b9c; mov x1, x25; mov x2, x24
+    0x07b30b94 bl #0x8b35880   PLT: memcmp
+          setup: cbz x24, #0x7b30b9c; mov x1, x25; mov x2, x24
+    0x07b30bac bl #0x2efa4dc
+          setup: b #0x7b30e40; mov w0, #0x38; mov w1, wzr
+    0x07b30c0c bl #0x2efa4dc
+          setup: orr x19, x24, #0xf; add x0, x19, #1; mov w1, wzr
+    0x07b30c40 bl #0x8b352f0   PLT: memmove
+          setup: mov x0, x26; mov x1, x25; mov x2, x24
+    0x07b30ce8 bl #0x8b38680   PLT: _ZNSt6__ndk112__next_primeEm
+          setup: tst x23, x8; b.eq #0x7b30cf0; mov x0, x23
+    0x07b30d04 bl #0x7b30e68
+          setup: b.ls #0x7b30d0c; mov x0, x20; mov x1, x23
+    0x07b30d74 bl #0x8b38680   PLT: _ZNSt6__ndk112__next_primeEm
+          setup: cmp x23, x24; b.lo #0x7b30cfc; b #0x7b30d88
+
+==============================================================================
+FUNCTION 0x7b36ec8
+==============================================================================
+  instructions: 2560  (0x7b36ec8 .. 0x7b396c4)
+    0x07b36f64 bl #0x7b2f6a0
+          setup: b #0x7b36f60; cbz x20, #0x7b37998; mov x0, x19
+    0x07b36f70 bl #0x7b2f700
+          setup: bl #0x7b2f6a0; mov x20, x0; mov x0, x19
+    0x07b36f8c bl #0x2efb614
+          setup: mov x2, x0; add x0, sp, #0xc8; mov x1, x20
+    0x07b37030 bl #0x2f4bfc0
+          setup: strb wzr, [x8, #0x10]; stp q0, q0, [x21]; stur q0, [x21, #0x19]
+    0x07b370d0 bl #0x8b35260   PLT: _Znwm
+          setup: b.hi #0x7b379d0; add x8, x20, x20, lsl #1; lsl x0, x8, #3
+    0x07b371ac bl #0x8b352c0   PLT: _ZdlPv
+          setup: str x8, [sp, #0x88]; cbz x28, #0x7b3729c; mov x0, x28
+    0x07b372c0 bl #0x8b352c0   PLT: _ZdlPv
+          setup: str x8, [sp, #0x80]; cbz x0, #0x7b372c4; stur x0, [x29, #-0x88]
+    0x07b37384 bl #0x8b3ad70   PLT: _ZNKSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE7compareEPKc
+          setup: sub x0, x29, #0x90; adrp x1, #0x9f2000; add x1, x1, #0x82f
+    0x07b37398 bl #0x8b3ad70   PLT: _ZNKSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE7compareEPKc
+          setup: sub x0, x29, #0x90; adrp x1, #0xa79000; add x1, x1, #0x3eb
+    0x07b373ac bl #0x8b3ad70   PLT: _ZNKSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE7compareEPKc
+          setup: sub x0, x29, #0x90; adrp x1, #0x9e0000; add x1, x1, #0x10c
+    0x07b373c0 bl #0x8b3ad70   PLT: _ZNKSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE7compareEPKc
+          setup: sub x0, x29, #0x90; adrp x1, #0xb2e000; add x1, x1, #0x53d
+    0x07b37430 bl #0x7b37b98
+          setup: ldur x1, [x29, #-0xb0]; mov x3, x25; ldr x0, [sp, #0x28]
+    0x07b37484 bl #0x8b35260   PLT: _Znwm
+          setup: str x23, [sp, #0x30]; orr x23, x25, #0xf; add x0, x23, #1
+    0x07b37588 bl #0x8b3ad70   PLT: _ZNKSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE7compareEPKc
+          setup: sub x0, x29, #0x90; adrp x1, #0x9f2000; add x1, x1, #0x82f
+    0x07b375c0 blr x8
+          setup: ldr x8, [x0]; sub x1, x29, #0xd0; ldr x8, [x8, #0x30]
+    0x07b375fc bl #0x2efa56c
+          setup: ldur x0, [x29, #-0xb8]; cbz x0, #0x7b37600; stur x0, [x29, #-0xb0]
+    0x07b376c4 bl #0x8b35260   PLT: _Znwm
+          setup: str x23, [sp, #0x30]; orr x23, x25, #0xf; add x0, x23, #1
+    0x07b37724 bl #0x8b35330   PLT: strlen
+          setup: ldr x8, [sp, #0x40]; csel x20, x8, x9, eq; mov x0, x20
+    0x07b3775c bl #0x2efa4dc
+          setup: orr x19, x25, #0xf; mov w1, wzr; add x0, x19, #1
+    0x07b37780 bl #0x8b352f0   PLT: memmove
+          setup: mov x0, x20; ldr x1, [sp, #0x90]; mov x2, x25
+    0x07b377a4 bl #0x2efb614
+          setup: lsr x8, x8, #1; csel x1, x19, x9, eq; csel x2, x8, x10, eq
+    0x07b377b8 bl #0x2efa56c
+          setup: sturb wzr, [x29, #-0xa0]; tbz w8, #0, #0x7b377bc; ldr x0, [sp, #0xa8]
+    0x07b377c8 bl #0x8b352c0   PLT: _ZdlPv
+          setup: ldrb w8, [sp, #0xb0]; tbz w8, #0, #0x7b377cc; ldr x0, [sp, #0xc0]
+    0x07b377e8 bl #0x8b352c0   PLT: _ZdlPv
+          setup: sub x19, x9, x24; tbz w8, #0, #0x7b377ec; ldur x0, [x29, #-0x80]
+    0x07b37808 bl #0x8b35260   PLT: _Znwm
+          setup: str x23, [sp, #0x30]; orr x23, x25, #0xf; add x0, x23, #1
+    0x07b37868 bl #0x8b35330   PLT: strlen
+          setup: ldr x8, [sp, #0x40]; csel x20, x8, x9, eq; mov x0, x20
+    0x07b378a0 bl #0x2efa4dc
+          setup: orr x19, x25, #0xf; mov w1, wzr; add x0, x19, #1
+    0x07b378c4 bl #0x8b352f0   PLT: memmove
+          setup: mov x0, x20; ldr x1, [sp, #0x90]; mov x2, x25
+    0x07b378e8 bl #0x2efb614
+          setup: lsr x8, x8, #1; csel x1, x19, x9, eq; csel x2, x8, x10, eq
+    0x07b378f8 bl #0x2efa56c
+          setup: ldrb w8, [sp, #0x98]; tbz w8, #0, #0x7b378fc; ldr x0, [sp, #0xa8]
+    0x07b37908 bl #0x8b352c0   PLT: _ZdlPv
+          setup: ldrb w8, [sp, #0xb0]; tbz w8, #0, #0x7b3790c; ldr x0, [sp, #0xc0]
+    0x07b37944 blr x8
+          setup: ldr x8, [x0]; sub x1, x29, #0xd0; ldr x8, [x8, #0x30]
+    0x07b37954 bl #0x8b352c0   PLT: _ZdlPv
+          setup: ldr x20, [sp, #0x60]; cbz x27, #0x7b37958; mov x0, x27
+    0x07b37964 bl #0x2efa56c
+          setup: ldur x0, [x29, #-0xb8]; cbz x0, #0x7b37968; stur x0, [x29, #-0xb0]
+    0x07b37974 bl #0x2efa56c
+          setup: ldurb w8, [x29, #-0xd0]; tbz w8, #0, #0x7b37978; ldur x0, [x29, #-0xc0]
+    0x07b3797c bl #0x7b2f730
+          setup: ldur x0, [x29, #-0xc0]; bl #0x2efa56c; mov x0, x19
+    0x07b37990 bl #0x2efa56c
+          setup: and w8, w8, #1; cbz w8, #0x7b36f5c; ldr x0, [sp, #0xd8]
+    0x07b379cc bl #0x8b382d0   PLT: abort
+          setup: ldp x28, x27, [sp, #0x10]; ldp x29, x30, [sp], #0x60; ret 
+    0x07b379d0 bl #0x2f2532c
+          setup: ldp x29, x30, [sp], #0x60; ret ; bl #0x8b382d0
+    0x07b379d4 bl #0x8b382d0   PLT: abort
+          setup: ret ; bl #0x8b382d0; bl #0x2f2532c
+    0x07b379d8 bl #0x8b382d0   PLT: abort
+          setup: bl #0x8b382d0; bl #0x2f2532c; bl #0x8b382d0
+    0x07b379dc bl #0x8b382d0   PLT: abort
+          setup: bl #0x2f2532c; bl #0x8b382d0; bl #0x8b382d0
+    0x07b379e0 bl #0x8b382d0   PLT: abort
+          setup: bl #0x8b382d0; bl #0x8b382d0; bl #0x8b382d0
+    0x07b379e4 bl #0x8b382d0   PLT: abort
+          setup: bl #0x8b382d0; bl #0x8b382d0; bl #0x8b382d0
+    0x07b379e8 bl #0x8b35290   PLT: __stack_chk_fail
+          setup: bl #0x8b382d0; bl #0x8b382d0; bl #0x8b382d0
+    0x07b37a80 blr x8
+          setup: mov x0, x20; mov x1, x19; ldr x8, [x8, #0x18]
+    0x07b37a90 blr x8
+          setup: ldr x0, [x20, #0x20]; ldr x8, [x0]; ldr x8, [x8, #0x20]
+    0x07b37ac4 blr x8
+          setup: mov x0, x19; mov x1, x20; ldr x8, [x8, #0x18]
+    0x07b37ad4 blr x8
+          setup: ldr x0, [x19, #0x20]; ldr x8, [x0]; ldr x8, [x8, #0x20]
+    0x07b37b18 blr x8
+          setup: mov x1, sp; mov x0, x20; ldr x8, [x8, #0x18]
+    0x07b37b28 blr x8
+          setup: ldr x0, [x20, #0x20]; ldr x8, [x0]; ldr x8, [x8, #0x20]
+    0x07b37b40 blr x8
+          setup: ldr x0, [x19, #0x20]; ldr x8, [x0]; ldr x8, [x8, #0x18]
+    0x07b37b50 blr x8
+          setup: ldr x0, [x19, #0x20]; ldr x8, [x0]; ldr x8, [x8, #0x20]
+    0x07b37b6c blr x8
+          setup: mov x0, sp; mov x1, x19; ldr x8, [x8, #0x18]
+    0x07b37b7c blr x8
+          setup: ldr x8, [sp]; mov x0, sp; ldr x8, [x8, #0x20]
+    0x07b37b94 bl #0x8b35290   PLT: __stack_chk_fail
+          setup: ldur x9, [x29, #-8]; cmp x8, x9; b.eq #0x7b37af4
+    0x07b37c20 bl #0x2efa4dc
+          setup: cbz x24, #0x7b37c7c; mov x0, x24; mov w1, wzr
+    0x07b37df4 bl #0x8b352f0   PLT: memmove
+          setup: sub x0, x9, x2; mov x1, x19; str x11, [x20, #8]
+    0x07b37e04 bl #0x8b352f0   PLT: memmove
+          setup: sub x2, x22, x21; mov x0, x19; mov x1, x21
+    0x07b37f40 bl #0x8b352f0   PLT: memmove
+          setup: mov x1, x19; sub x21, x8, x19; mov x2, x21
+    0x07b37f58 bl #0x2efa56c
+          setup: str x23, [x20, #0x10]; stp x24, x8, [x20]; cbz x0, #0x7b37f5c
+    0x07b37f80 bl #0x8b382d0   PLT: abort
+          setup: ldp x28, x27, [sp, #0x10]; ldp x29, x30, [sp], #0x60; ret 
+    0x07b37fa4 bl #0x8b388e0   PLT: _ZNSt6__ndk16localeC1Ev
+          setup: add x19, x20, #8; mov x0, x19; str wzr, [x20]
+    0x07b37fb4 bl #0x8b38840   PLT: _ZNKSt6__ndk16locale9use_facetERNS0_2idE
+          setup: adrp x1, #0x98d6000; mov x0, x19; ldr x1, [x1, #0x840]
+    0x07b37fc8 bl #0x8b38840   PLT: _ZNKSt6__ndk16locale9use_facetERNS0_2idE
+          setup: str x0, [x20, #0x10]; mov x0, x19; ldr x1, [x1, #0x868]
+    0x07b37ff0 bl #0x2f438d0
+          setup: stp q0, q0, [x20, #0x20]; add x20, x1, #0x1c; mov x2, x20
+    0x07b38020 bl #0x2f43bb8
+          setup: ldp x20, x19, [sp, #0x10]; ldp x29, x30, [sp], #0x20; b #0x8b35240
+    0x07b38044 bl #0x7b2ca38
+          setup: mov x19, x2; mov w20, w1; mov x21, x0
+    0x07b38058 bl #0x7b2ca38
+          setup: cmp w22, #1; b.eq #0x7b3807c; cbnz w22, #0x7b380c4
+    0x07b3806c bl #0x7b2cbb0
+          setup: mov x1, x21; mov w2, w20; mov x3, x19
+    0x07b3807c bl #0x7b2bd9c
+          setup: tbnz w0, #0, #0x7b38098; mov w0, wzr; b #0x7b380b4
+    0x07b38090 bl #0x7b2bf14
+          setup: mov x1, x21; mov w2, w20; mov x3, x19
+    0x07b3809c bl #0x74e6d24
+          setup: bl #0x7b2bf14; tbz w0, #0, #0x7b380c4; mov x0, x19
+    0x07b380f8 bl #0x7b2ca38
+          setup: mov x19, x2; mov w20, w1; mov x21, x0
+    0x07b3810c bl #0x7b2ca38
+          setup: cmp w22, #1; b.eq #0x7b38130; cbnz w22, #0x7b38154
+    0x07b38130 bl #0x7b2bd9c
+          setup: ldp x22, x21, [sp, #0x10]; ldp x29, x30, [sp], #0x30; b #0x7b2ccbc
+    0x07b381ac bl #0x8b35680   PLT: _Znam
+          setup: mov w21, w1; str x8, [sp, #8]; str w22, [sp, #4]
+    0x07b381b8 bl #0x8b35260   PLT: _Znwm
+          setup: bl #0x8b35680; mov x24, x0; mov w0, #0x20
+    0x07b381e4 bl #0x8b35360   PLT: memset
+          setup: mov x0, x24; mov x2, x22; str xzr, [x25, #8]!
+    0x07b381f8 bl #0x7dd6e78
+          setup: mov x0, x23; mov w1, w21; mov x2, x24
+    0x07b38208 bl #0x74e6c58
+          setup: ldr w2, [sp, #4]; mov x0, x20; mov x1, x24
+    0x07b38214 bl #0x8b34ef0
+          setup: bl #0x74e6c58; mov x0, #-1; mov x1, x25
+    0x07b38228 blr x8
+          setup: ldr x8, [x19]; mov x0, x19; ldr x8, [x8, #0x10]
+    0x07b38230 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x19
+    0x07b38264 bl #0x8b35290   PLT: __stack_chk_fail
+          setup: ldp x29, x30, [sp, #0x10]; add sp, sp, #0x60; ret 
+    0x07b382a8 bl #0x7d269e8
+          setup: stur x8, [x29, #-8]; add x8, sp, #0x38; str wzr, [x3]
+    0x07b382b4 bl #0x8b3abf0   PLT: _ZNSt6__ndk119__shared_weak_count4lockEv   <<<< CRYPTO?
+          setup: bl #0x7d269e8; ldr x0, [sp, #0x40]; cbz x0, #0x7b38328
+    0x07b382d8 bl #0x8b34e90
+          setup: add x24, x23, #8; mov w0, #1; mov x1, x24
+    0x07b382e4 bl #0x8b34ef0
+          setup: bl #0x8b34e90; mov x0, #-1; mov x1, x24
+    0x07b382f8 blr x8
+          setup: ldr x8, [x23]; mov x0, x23; ldr x8, [x8, #0x10]
+    0x07b38300 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x23
+    0x07b3830c bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: bl #0x8b388f0; ldr x0, [sp, #0x40]; cbz x0, #0x7b38310
+    0x07b38360 bl #0x8b34ef0
+          setup: cbz x23, #0x7b38380; add x1, x23, #8; mov x0, #-1
+    0x07b38374 blr x8
+          setup: ldr x8, [x23]; mov x0, x23; ldr x8, [x8, #0x10]
+    0x07b3837c bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x23
+    0x07b38388 bl #0x74e6b00
+          setup: bl #0x8b388f0; add x0, sp, #0x38; mov x1, xzr
+    0x07b38398 bl #0x7b38168
+          setup: add x2, sp, #0x38; mov x0, x22; mov w1, w21
+    0x07b383a8 bl #0x74e6b00
+          setup: tbz w0, #0, #0x7b383fc; add x0, sp, #8; mov x1, xzr
+    0x07b383b0 bl #0x74e6d10
+          setup: mov x1, xzr; bl #0x74e6b00; add x0, sp, #0x38
+    0x07b383bc bl #0x74e6d24
+          setup: bl #0x74e6d10; mov x21, x0; add x0, sp, #0x38
+    0x07b383c8 bl #0x7b2ca38
+          setup: bl #0x74e6d24; ldr w20, [x20]; mov x22, x0
+    0x07b383dc bl #0x7b2ca38
+          setup: cmp w20, #1; b.eq #0x7b38404; cbnz w20, #0x7b3843c
+    0x07b383f0 bl #0x7b2cbb0
+          setup: add x3, sp, #8; mov x1, x21; mov w2, w22
+    0x07b38404 bl #0x7b2bd9c
+          setup: b #0x7b3843c; mov w19, wzr; b #0x7b38448
+    0x07b38418 bl #0x7b2bf14
+          setup: add x3, sp, #8; mov x1, x21; mov w2, w22
+    0x07b38424 bl #0x74e6d24
+          setup: bl #0x7b2bf14; tbz w0, #0, #0x7b3843c; add x0, sp, #8
+    0x07b38430 bl #0x74e6d7c
+          setup: bl #0x74e6d24; add x1, sp, #8; mov x0, x19
+    0x07b38444 bl #0x74e6e74
+          setup: b #0x7b38440; mov w19, wzr; add x0, sp, #8
+    0x07b3844c bl #0x74e6e74
+          setup: add x0, sp, #8; bl #0x74e6e74; add x0, sp, #0x38
+    0x07b38480 bl #0x8b35290   PLT: __stack_chk_fail
+          setup: ldp x29, x30, [sp, #0x70]; add sp, sp, #0xc0; ret 
+    0x07b384b4 bl #0x74e6d24
+          setup: mov x20, x0; ldr x8, [x24, #0x28]; str x8, [sp, #8]
+    0x07b384c8 bl #0x8b35680   PLT: _Znam
+          setup: sub w22, w8, w0, lsl #1; mov x0, x22; str w22, [sp, #4]
+    0x07b384d4 bl #0x8b35260   PLT: _Znwm
+          setup: bl #0x8b35680; mov x21, x0; mov w0, #0x20
+    0x07b38518 bl #0x8b35360   PLT: memset
+          setup: mov w2, w22; mov x0, x21; mov w1, wzr
+    0x07b38520 bl #0x74e6d10
+          setup: mov w1, wzr; bl #0x8b35360; mov x0, x20
+    0x07b3852c bl #0x74e6d24
+          setup: bl #0x74e6d10; mov x22, x0; mov x0, x20
+    0x07b38540 bl #0x7dd7260
+          setup: add x3, sp, #4; mov x0, x22; mov x2, x21
+    0x07b38564 bl #0x8b35680   PLT: _Znam
+          setup: ldr w8, [sp, #4]; lsl w0, w8, #1; str w0, [sp, #4]
+    0x07b38570 bl #0x8b35260   PLT: _Znwm
+          setup: bl #0x8b35680; mov x21, x0; mov w0, #0x20
+    0x07b38588 bl #0x8b34ef0
+          setup: stp x27, xzr, [x0]; stp xzr, x21, [x0, #0x10]; mov x0, #-1
+    0x07b3859c blr x8
+          setup: ldr x8, [x19]; mov x0, x19; ldr x8, [x8, #0x10]
+    0x07b385a4 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x19
+    0x07b385b4 bl #0x74e6d70
+          setup: b #0x7b38500; cbnz w0, #0x7b385e0; mov x0, x20
+    0x07b385c4 bl #0x74e6c58
+          setup: ldr w2, [sp, #4]; mov x0, x20; mov x1, x21
+    0x07b385d4 bl #0x8b34ef0
+          setup: mov w20, wzr; add x1, x19, #8; mov x0, #-1
+    0x07b385ec bl #0x8b34ef0
+          setup: mov w20, #2; add x1, x19, #8; mov x0, #-1
+    0x07b38600 blr x8
+          setup: ldr x8, [x19]; mov x0, x19; ldr x8, [x8, #0x10]
+    0x07b38608 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x19
+    0x07b3864c bl #0x8b34ef0
+          setup: mov w20, #1; add x1, x19, #8; mov x0, #-1
+    0x07b38658 bl #0x8b35290   PLT: __stack_chk_fail
+          setup: bl #0x8b34ef0; cbnz x0, #0x7b3860c; b #0x7b385f4
+    0x07b3868c bl #0x74e6d24
+          setup: mov x20, x0; ldr x8, [x19, #0x28]; stur x8, [x29, #-8]
+    0x07b3869c bl #0x74e6d10
+          setup: cbz x0, #0x7b38828; stp x0, x19, [sp]; mov x0, x20
+    0x07b387c4 bl #0x2efa4dc
+          setup: mov x24, #-0x11; mov x0, x24; mov w1, wzr
+    0x07b387d4 bl #0x8b352f0   PLT: memmove
+          setup: mov x1, x22; mov x2, x21; mov x23, x0
+    0x07b387e4 bl #0x2efa56c
+          setup: cmp x21, #0x16; b.eq #0x7b386d0; mov x0, x22
+    0x07b387f0 bl #0x74e6d70
+          setup: bl #0x2efa56c; b #0x7b386d0; mov x0, x20
+    0x07b38810 bl #0x74e6c58
+          setup: lsr x8, x8, #1; csel x1, x26, x9, eq; csel x2, x8, x10, eq
+    0x07b38820 bl #0x2efa56c
+          setup: ldrb w8, [sp, #0x10]; tbz w8, #0, #0x7b38824; ldr x0, [sp, #0x20]
+    0x07b38860 bl #0x8b382d0   PLT: abort
+          setup: ldp x29, x30, [sp, #0x30]; add sp, sp, #0x90; ret 
+    0x07b38864 bl #0x8b35290   PLT: __stack_chk_fail
+          setup: add sp, sp, #0x90; ret ; bl #0x8b382d0
+    0x07b388a0 bl #0x7d269e8
+          setup: mov x21, x0; stur x8, [x29, #-8]; add x8, sp, #8
+    0x07b388ac bl #0x8b3abf0   PLT: _ZNSt6__ndk119__shared_weak_count4lockEv   <<<< CRYPTO?
+          setup: bl #0x7d269e8; ldr x0, [sp, #0x10]; cbz x0, #0x7b38930
+    0x07b388d0 bl #0x8b34e90
+          setup: add x23, x22, #8; mov w0, #1; mov x1, x23
+    0x07b388dc bl #0x8b34ef0
+          setup: bl #0x8b34e90; mov x0, #-1; mov x1, x23
+    0x07b388f0 blr x8
+          setup: ldr x8, [x22]; mov x0, x22; ldr x8, [x8, #0x10]
+    0x07b388f8 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x22
+    0x07b38904 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: bl #0x8b388f0; ldr x0, [sp, #0x10]; cbz x0, #0x7b38908
+    0x07b3895c bl #0x8b34ef0
+          setup: cbz x22, #0x7b38964; add x1, x22, #8; mov x0, #-1
+    0x07b38964 bl #0x7b2ca38
+          setup: mov x0, #-1; bl #0x8b34ef0; cbz x0, #0x7b389e4
+    0x07b38970 bl #0x7b2bd9c
+          setup: bl #0x7b2ca38; cbz x0, #0x7b38a04; cbz w23, #0x7b38990
+    0x07b38984 bl #0x7b2c040
+          setup: mov x1, x21; mov w2, w20; mov x3, x19
+    0x07b38990 bl #0x7b2ca38
+          setup: bl #0x7b2c040; tbnz w0, #0, #0x7b389ac; b #0x7b38a04
+    0x07b389a4 bl #0x7b2ccbc
+          setup: mov x1, x21; mov w2, w20; mov x3, x19
+    0x07b389b0 bl #0x7b38484
+          setup: bl #0x7b2ccbc; tbz w0, #0, #0x7b38a04; mov x0, x19
+    0x07b389d8 bl #0x74e6c58
+          setup: mov x0, x19; mov w2, #1; strb wzr, [sp, #8]
+    0x07b389f0 blr x8
+          setup: ldr x8, [x22]; mov x0, x22; ldr x8, [x8, #0x10]
+    0x07b389f8 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x22
+    0x07b389fc bl #0x7b2ca38
+          setup: blr x8; mov x0, x22; bl #0x8b388f0
+    0x07b38a34 bl #0x8b35290   PLT: __stack_chk_fail
+          setup: ldr x25, [sp, #0x30]; add sp, sp, #0x70; ret 
+    0x07b38ab4 bl #0x2f1ec94
+          setup: add x8, sp, #0x50; orr x25, x8, #1; stur q0, [sp, #0x51]
+    0x07b38b1c bl #0x8b38a10   PLT: _ZNSt6__ndk113random_deviceC2ERKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE   <<<< CRYPTO?
+          setup: stur w9, [sp, #0x71]; stur x10, [sp, #0x69]; strb wzr, [sp, #0x75]
+    0x07b38b2c bl #0x8b352c0   PLT: _ZdlPv
+          setup: ldrb w8, [sp, #0x68]; tbz w8, #0, #0x7b38b30; ldr x0, [sp, #0x78]
+    0x07b38b38 bl #0x8b38a20   PLT: _ZNSt6__ndk113random_deviceclEv   <<<< CRYPTO?
+          setup: bl #0x8b352c0; add x0, sp, #0x180; str w20, [sp, #0xc]
+    0x07b38b70 bl #0x8b38a30   PLT: _ZNSt6__ndk113random_deviceD1Ev   <<<< CRYPTO?
+          setup: b.ne #0x7b38b4c; add x0, sp, #0x180; str xzr, [sp, #0x1580]
+    0x07b38b8c bl #0x7420858
+          setup: add x2, sp, #0x48; ldr d0, [x8, #0x2d0]; str d0, [sp, #0x48]
+    0x07b38bd4 bl #0x8b38590   PLT: _ZNSt6__ndk18ios_base4initEPv
+          setup: stp xzr, x20, [sp, #0x70]; str x10, [sp, #0xe8]; str x9, [sp, #0x68]
+    0x07b38bf8 bl #0x8b385a0   PLT: _ZNSt6__ndk115basic_streambufIcNS_11char_traitsIcEEEC2Ev
+          setup: str w8, [sp, #0x178]; str x9, [sp, #0xe8]; str x20, [sp, #0x78]
+    0x07b38c48 bl #0x2f2e26c
+          setup: str x10, [sp, #0xe8]; str x9, [sp, #0x68]; str x8, [sp, #0x78]
+    0x07b38c58 bl #0x2f2e26c
+          setup: adrp x1, #0xbb5000; add x1, x1, #0x3ec; mov w2, #1
+    0x07b38c60 bl #0x8b3ac10   PLT: _ZNSt6__ndk113basic_ostreamIcNS_11char_traitsIcEEElsEj
+          setup: mov w2, #1; bl #0x2f2e26c; eor w1, w26, w24
+    0x07b38cac bl #0x31b542c
+          setup: stur q0, [x23, #0x4c]; stur q0, [x23, #0x5c]; stur q0, [x23, #0x6c]
+    0x07b38ccc bl #0x31b542c
+          setup: tst w8, #1; add x8, sp, #0x18; csel x24, x10, x9, eq
+    0x07b38cfc bl #0x7b39a28
+          setup: csel w4, w10, w9, eq; ldr x1, [sp]; mov w2, w20
+    0x07b38d24 bl #0x2efa56c
+          setup: strh wzr, [x19]; b #0x7b38d4c; ldr x0, [sp, #0x28]
+    0x07b38d34 bl #0x2efa56c
+          setup: ldrb w8, [sp, #0x30]; tbz w8, #0, #0x7b38d10; ldr x0, [sp, #0x40]
+    0x07b38d50 bl #0x74b8d24
+          setup: strb wzr, [x8]; str xzr, [x19, #8]; mov w0, w20
+    0x07b38d60 bl #0x8b35680   PLT: _Znam
+          setup: add x24, x0, #1; mov x23, x0; mov x0, x24
+    0x07b38d6c bl #0x8b35260   PLT: _Znwm
+          setup: bl #0x8b35680; mov x25, x0; mov w0, #0x20
+    0x07b38d98 bl #0x8b35360   PLT: memset
+          setup: mov x0, x25; mov x2, x24; str xzr, [x26, #8]!
+    0x07b38db0 bl #0x74b8d5c
+          setup: mov x2, x25; mov x3, x23; mov w4, #1
+    0x07b38dc4 bl #0x2f15088
+          setup: add x1, x1, #0x471; mov x0, x19; mov w2, #5
+    0x07b38dcc bl #0x8b35330   PLT: strlen
+          setup: mov w2, #5; bl #0x2f15088; mov x0, x25
+    0x07b38ddc bl #0x2f15088
+          setup: mov x2, x0; mov x0, x19; mov x1, x25
+    0x07b38df0 bl #0x2f15088
+          setup: add x1, x1, #0x8a3; mov x0, x19; mov w2, #1
+    0x07b38dfc bl #0x8b34ef0
+          setup: bl #0x2f15088; mov x0, #-1; mov x1, x26
+    0x07b38e10 blr x8
+          setup: ldr x8, [x20]; mov x0, x20; ldr x8, [x8, #0x10]
+    0x07b38e18 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x20
+    0x07b38e44 bl #0x2efa56c
+          setup: stp x11, x8, [sp, #0x78]; tbz w10, #0, #0x7b38e48; ldr x0, [sp, #0xd0]
+    0x07b38e4c bl #0x8b385c0   PLT: _ZNSt6__ndk115basic_streambufIcNS_11char_traitsIcEEED2Ev
+          setup: ldr x0, [sp, #0xd0]; bl #0x2efa56c; mov x0, x22
+    0x07b38e5c bl #0x8b385d0   PLT: _ZNSt6__ndk114basic_iostreamIcNS_11char_traitsIcEEED2Ev
+          setup: adrp x1, #0x8cc7000; add x1, x1, #0x720; add x0, sp, #0x68
+    0x07b38e64 bl #0x8b385e0   PLT: _ZNSt6__ndk19basic_iosIcNS_11char_traitsIcEEED2Ev
+          setup: add x0, sp, #0x68; bl #0x8b385d0; mov x0, x21
+    0x07b38e74 bl #0x2efa56c
+          setup: ldrb w8, [sp, #0x50]; tbz w8, #0, #0x7b38e78; ldr x0, [sp, #0x60]
+    0x07b38eb4 bl #0x8b35290   PLT: __stack_chk_fail
+          setup: ldp x28, x27, [sp, #0x10]; ldp x29, x30, [sp], #0x60; ret 
+    0x07b39018 bl #0x8b38920   PLT: _ZNSt6__ndk119__shared_weak_countD2Ev   <<<< CRYPTO?
+          setup: str x19, [sp, #0x10]; mov x29, sp; mov x19, x0
+    0x07b39050 bl #0x8b38920   PLT: _ZNSt6__ndk119__shared_weak_countD2Ev   <<<< CRYPTO?
+          setup: str x19, [sp, #0x10]; mov x29, sp; mov x19, x0
+    0x07b39088 bl #0x8b38920   PLT: _ZNSt6__ndk119__shared_weak_countD2Ev   <<<< CRYPTO?
+          setup: str x19, [sp, #0x10]; mov x29, sp; mov x19, x0
+    0x07b390c0 bl #0x8b38920   PLT: _ZNSt6__ndk119__shared_weak_countD2Ev   <<<< CRYPTO?
+          setup: str x19, [sp, #0x10]; mov x29, sp; mov x19, x0
+    0x07b39144 bl #0x8b35240   PLT: __cxa_atexit
+          setup: strb w8, [x1, #8]!; stur q0, [x19, #9]; sturh w9, [x19, #0x19]
+    0x07b39178 bl #0x8b35240   PLT: __cxa_atexit
+          setup: stur w9, [x19, #0x21]; sturh w10, [x19, #0x25]; strb wzr, [x19, #0x27]
+    0x07b39268 bl #0x7b393bc
+          setup: ldr w8, [x20, #0x6c]; cbnz w8, #0x7b3928c; mov x0, x20
+    0x07b39414 bl #0x7b3957c
+          setup: cmp w8, #0x40; b.lt #0x7b393f4; mov x0, x19
+    0x07b39560 bl #0x7b3957c
+          setup: cmp w8, #0x40; b.ne #0x7b394fc; mov x0, x19
+
+==============================================================================
+FUNCTION 0x7b38a44
+==============================================================================
+  instructions: 2560  (0x7b38a44 .. 0x7b3b240)
+    0x07b38ab4 bl #0x2f1ec94
+          setup: add x8, sp, #0x50; orr x25, x8, #1; stur q0, [sp, #0x51]
+    0x07b38b1c bl #0x8b38a10   PLT: _ZNSt6__ndk113random_deviceC2ERKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE   <<<< CRYPTO?
+          setup: stur w9, [sp, #0x71]; stur x10, [sp, #0x69]; strb wzr, [sp, #0x75]
+    0x07b38b2c bl #0x8b352c0   PLT: _ZdlPv
+          setup: ldrb w8, [sp, #0x68]; tbz w8, #0, #0x7b38b30; ldr x0, [sp, #0x78]
+    0x07b38b38 bl #0x8b38a20   PLT: _ZNSt6__ndk113random_deviceclEv   <<<< CRYPTO?
+          setup: bl #0x8b352c0; add x0, sp, #0x180; str w20, [sp, #0xc]
+    0x07b38b70 bl #0x8b38a30   PLT: _ZNSt6__ndk113random_deviceD1Ev   <<<< CRYPTO?
+          setup: b.ne #0x7b38b4c; add x0, sp, #0x180; str xzr, [sp, #0x1580]
+    0x07b38b8c bl #0x7420858
+          setup: add x2, sp, #0x48; ldr d0, [x8, #0x2d0]; str d0, [sp, #0x48]
+    0x07b38bd4 bl #0x8b38590   PLT: _ZNSt6__ndk18ios_base4initEPv
+          setup: stp xzr, x20, [sp, #0x70]; str x10, [sp, #0xe8]; str x9, [sp, #0x68]
+    0x07b38bf8 bl #0x8b385a0   PLT: _ZNSt6__ndk115basic_streambufIcNS_11char_traitsIcEEEC2Ev
+          setup: str w8, [sp, #0x178]; str x9, [sp, #0xe8]; str x20, [sp, #0x78]
+    0x07b38c48 bl #0x2f2e26c
+          setup: str x10, [sp, #0xe8]; str x9, [sp, #0x68]; str x8, [sp, #0x78]
+    0x07b38c58 bl #0x2f2e26c
+          setup: adrp x1, #0xbb5000; add x1, x1, #0x3ec; mov w2, #1
+    0x07b38c60 bl #0x8b3ac10   PLT: _ZNSt6__ndk113basic_ostreamIcNS_11char_traitsIcEEElsEj
+          setup: mov w2, #1; bl #0x2f2e26c; eor w1, w26, w24
+    0x07b38cac bl #0x31b542c
+          setup: stur q0, [x23, #0x4c]; stur q0, [x23, #0x5c]; stur q0, [x23, #0x6c]
+    0x07b38ccc bl #0x31b542c
+          setup: tst w8, #1; add x8, sp, #0x18; csel x24, x10, x9, eq
+    0x07b38cfc bl #0x7b39a28
+          setup: csel w4, w10, w9, eq; ldr x1, [sp]; mov w2, w20
+    0x07b38d24 bl #0x2efa56c
+          setup: strh wzr, [x19]; b #0x7b38d4c; ldr x0, [sp, #0x28]
+    0x07b38d34 bl #0x2efa56c
+          setup: ldrb w8, [sp, #0x30]; tbz w8, #0, #0x7b38d10; ldr x0, [sp, #0x40]
+    0x07b38d50 bl #0x74b8d24
+          setup: strb wzr, [x8]; str xzr, [x19, #8]; mov w0, w20
+    0x07b38d60 bl #0x8b35680   PLT: _Znam
+          setup: add x24, x0, #1; mov x23, x0; mov x0, x24
+    0x07b38d6c bl #0x8b35260   PLT: _Znwm
+          setup: bl #0x8b35680; mov x25, x0; mov w0, #0x20
+    0x07b38d98 bl #0x8b35360   PLT: memset
+          setup: mov x0, x25; mov x2, x24; str xzr, [x26, #8]!
+    0x07b38db0 bl #0x74b8d5c
+          setup: mov x2, x25; mov x3, x23; mov w4, #1
+    0x07b38dc4 bl #0x2f15088
+          setup: add x1, x1, #0x471; mov x0, x19; mov w2, #5
+    0x07b38dcc bl #0x8b35330   PLT: strlen
+          setup: mov w2, #5; bl #0x2f15088; mov x0, x25
+    0x07b38ddc bl #0x2f15088
+          setup: mov x2, x0; mov x0, x19; mov x1, x25
+    0x07b38df0 bl #0x2f15088
+          setup: add x1, x1, #0x8a3; mov x0, x19; mov w2, #1
+    0x07b38dfc bl #0x8b34ef0
+          setup: bl #0x2f15088; mov x0, #-1; mov x1, x26
+    0x07b38e10 blr x8
+          setup: ldr x8, [x20]; mov x0, x20; ldr x8, [x8, #0x10]
+    0x07b38e18 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x20
+    0x07b38e44 bl #0x2efa56c
+          setup: stp x11, x8, [sp, #0x78]; tbz w10, #0, #0x7b38e48; ldr x0, [sp, #0xd0]
+    0x07b38e4c bl #0x8b385c0   PLT: _ZNSt6__ndk115basic_streambufIcNS_11char_traitsIcEEED2Ev
+          setup: ldr x0, [sp, #0xd0]; bl #0x2efa56c; mov x0, x22
+    0x07b38e5c bl #0x8b385d0   PLT: _ZNSt6__ndk114basic_iostreamIcNS_11char_traitsIcEEED2Ev
+          setup: adrp x1, #0x8cc7000; add x1, x1, #0x720; add x0, sp, #0x68
+    0x07b38e64 bl #0x8b385e0   PLT: _ZNSt6__ndk19basic_iosIcNS_11char_traitsIcEEED2Ev
+          setup: add x0, sp, #0x68; bl #0x8b385d0; mov x0, x21
+    0x07b38e74 bl #0x2efa56c
+          setup: ldrb w8, [sp, #0x50]; tbz w8, #0, #0x7b38e78; ldr x0, [sp, #0x60]
+    0x07b38eb4 bl #0x8b35290   PLT: __stack_chk_fail
+          setup: ldp x28, x27, [sp, #0x10]; ldp x29, x30, [sp], #0x60; ret 
+    0x07b39018 bl #0x8b38920   PLT: _ZNSt6__ndk119__shared_weak_countD2Ev   <<<< CRYPTO?
+          setup: str x19, [sp, #0x10]; mov x29, sp; mov x19, x0
+    0x07b39050 bl #0x8b38920   PLT: _ZNSt6__ndk119__shared_weak_countD2Ev   <<<< CRYPTO?
+          setup: str x19, [sp, #0x10]; mov x29, sp; mov x19, x0
+    0x07b39088 bl #0x8b38920   PLT: _ZNSt6__ndk119__shared_weak_countD2Ev   <<<< CRYPTO?
+          setup: str x19, [sp, #0x10]; mov x29, sp; mov x19, x0
+    0x07b390c0 bl #0x8b38920   PLT: _ZNSt6__ndk119__shared_weak_countD2Ev   <<<< CRYPTO?
+          setup: str x19, [sp, #0x10]; mov x29, sp; mov x19, x0
+    0x07b39144 bl #0x8b35240   PLT: __cxa_atexit
+          setup: strb w8, [x1, #8]!; stur q0, [x19, #9]; sturh w9, [x19, #0x19]
+    0x07b39178 bl #0x8b35240   PLT: __cxa_atexit
+          setup: stur w9, [x19, #0x21]; sturh w10, [x19, #0x25]; strb wzr, [x19, #0x27]
+    0x07b39268 bl #0x7b393bc
+          setup: ldr w8, [x20, #0x6c]; cbnz w8, #0x7b3928c; mov x0, x20
+    0x07b39414 bl #0x7b3957c
+          setup: cmp w8, #0x40; b.lt #0x7b393f4; mov x0, x19
+    0x07b39560 bl #0x7b3957c
+          setup: cmp w8, #0x40; b.ne #0x7b394fc; mov x0, x19
+    0x07b399c0 bl #0x8b35290   PLT: __stack_chk_fail
+          setup: ldp x29, x30, [sp, #0x120]; add sp, sp, #0x180; ret 
+    0x07b399ec blr x8
+          setup: mov x21, x0; mov x22, x1; ldr x8, [x8]
+    0x07b39a04 blr x8
+          setup: mov x1, x22; mov w2, w20; ldr x8, [x8, #8]
+    0x07b39a84 blr x8
+          setup: mov x1, x23; mov w2, w4; ldr x8, [x8, #0x28]
+    0x07b39ac0 bl #0x8b35400   PLT: __memcpy_chk
+          setup: stp q0, q0, [x29, #-0x50]; stp q0, q0, [x29, #-0x30]; sturb wzr, [x29, #-0x60]
+    0x07b39ad4 bl #0x8b35400   PLT: __memcpy_chk
+          setup: mov x1, x23; mov x2, x24; mov w3, #0x41
+    0x07b39b2c blr x8
+          setup: eor v1.16b, v4.16b, v2.16b; stp q0, q1, [x29, #-0x80]; ldr x8, [x8]
+    0x07b39b44 blr x8
+          setup: mov x0, x20; mov w2, #0x40; ldr x8, [x8, #8]
+    0x07b39b5c blr x8
+          setup: mov x1, x22; mov w2, w21; ldr x8, [x8, #8]
+    0x07b39b70 blr x8
+          setup: mov x0, x20; mov x1, x19; ldr x8, [x8, #0x10]
+    0x07b39b80 blr x8
+          setup: ldr x8, [x20]; mov x0, x20; ldr x8, [x8]
+    0x07b39b98 blr x8
+          setup: mov x0, x20; mov w2, #0x40; ldr x8, [x8, #8]
+    0x07b39ba8 blr x8
+          setup: ldr x8, [x20]; mov x0, x20; ldr x8, [x8, #0x20]
+    0x07b39bc0 blr x8
+          setup: mov x0, x20; mov x1, x19; ldr x8, [x8, #8]
+    0x07b39bd4 blr x8
+          setup: mov x0, x20; mov x1, x19; ldr x8, [x8, #0x10]
+    0x07b39c04 bl #0x8b35290   PLT: __stack_chk_fail
+          setup: ldp x29, x30, [sp, #0x1a0]; add sp, sp, #0x1f0; ret 
+    0x07b39d14 bl #0x2f15088
+          setup: adrp x1, #0x9f3000; add x1, x1, #0x8ae; mov w2, #1
+    0x07b39d20 bl #0x8b35330   PLT: strlen
+          setup: bl #0x2f15088; mov x21, x0; mov x0, x20
+    0x07b39d30 bl #0x2f15088
+          setup: mov x2, x0; mov x0, x21; mov x1, x20
+    0x07b39d40 bl #0x2f15088
+          setup: adrp x1, #0xb10000; add x1, x1, #0x623; mov w2, #1
+    0x07b39d58 bl #0x8b34ef0
+          setup: cbz x20, #0x7b39d60; add x1, x20, #8; mov x0, #-1
+    0x07b39d74 bl #0x8b34ef0
+          setup: cbz x20, #0x7b39dc4; add x1, x20, #8; mov x0, #-1
+    0x07b39d88 blr x8
+          setup: ldr x8, [x20]; mov x0, x20; ldr x8, [x8, #0x10]
+    0x07b39dac blr x8
+          setup: ldr x8, [x20]; mov x0, x20; ldr x8, [x8, #0x10]
+    0x07b39db4 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x20
+    0x07b39e20 blr x8
+          setup: add x3, x3, #0x527; ldr x8, [x0]; ldr x8, [x8, #0x108]
+    0x07b39e2c bl #0x4575654
+          setup: blr x8; mov x2, x0; ldp x1, x0, [x19, #0x10]
+    0x07b39e3c blr x8
+          setup: ldp x1, x0, [x19, #0x10]; ldr x8, [x0]; ldr x8, [x8, #0xb0]
+    0x07b39e54 blr x8
+          setup: ldr x1, [x19, #8]; ldr x8, [x0]; ldr x8, [x8, #0xb0]
+    0x07b39e84 bl #0x8b34ef0
+          setup: cbz x20, #0x7b39ea4; add x1, x20, #8; mov x0, #-1
+    0x07b39e98 blr x8
+          setup: ldr x8, [x20]; mov x0, x20; ldr x8, [x8, #0x10]
+    0x07b39ea0 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x20
+    0x07b39eb8 bl #0x8b34ef0
+          setup: cbz x20, #0x7b39ed8; add x1, x20, #8; mov x0, #-1
+    0x07b39ecc blr x8
+          setup: ldr x8, [x20]; mov x0, x20; ldr x8, [x8, #0x10]
+    0x07b39ed4 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x20
+    0x07b39f1c bl #0x2efa56c
+          setup: tbz w8, #0, #0x7b39ef4; b #0x7b39f2c; ldur x0, [x21, #-8]
+    0x07b39f30 bl #0x2efa56c
+          setup: sub x22, x21, #0x30; tbz w8, #0, #0x7b39ef4; ldur x0, [x21, #-0x20]
+    0x07b39f40 bl #0x2efa56c
+          setup: b #0x7b39ef4; ldr x0, [x19, #0x198]; str x20, [x19, #0x1a0]
+    0x07b39f8c bl #0x2efa56c
+          setup: cbnz x20, #0x7b39ff8; b #0x7b3a008; ldr x0, [x19, #0x190]
+    0x07b39f9c bl #0x2efa56c
+          setup: ldrb w8, [x19, #0x168]; tbz w8, #0, #0x7b39f54; ldr x0, [x19, #0x178]
+    0x07b39fac bl #0x2efa56c
+          setup: ldrb w8, [x19, #0x148]; tbz w8, #0, #0x7b39f5c; ldr x0, [x19, #0x158]
+    0x07b39fbc bl #0x2efa56c
+          setup: ldrb w8, [x19, #0xc8]; tbz w8, #0, #0x7b39f64; ldr x0, [x19, #0xd8]
+    0x07b39fcc bl #0x2efa56c
+          setup: ldrb w8, [x19, #0xa0]; tbz w8, #0, #0x7b39f6c; ldr x0, [x19, #0xb0]
+    0x07b39fdc bl #0x2efa56c
+          setup: ldrb w8, [x19, #0x88]; tbz w8, #0, #0x7b39f74; ldr x0, [x19, #0x98]
+    0x07b39fec bl #0x2efa56c
+          setup: ldrb w8, [x19, #0x70]; tbz w8, #0, #0x7b39f7c; ldr x0, [x19, #0x80]
+    0x07b3a000 bl #0x8b34ef0
+          setup: cbz x20, #0x7b3a008; add x1, x20, #8; mov x0, #-1
+    0x07b3a018 bl #0x8b34ef0
+          setup: cbz x19, #0x7b3a020; add x1, x19, #8; mov x0, #-1
+    0x07b3a03c blr x8
+          setup: ldr x8, [x20]; mov x0, x20; ldr x8, [x8, #0x10]
+    0x07b3a044 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x20
+    0x07b3a060 blr x8
+          setup: ldr x8, [x19]; mov x0, x19; ldr x8, [x8, #0x10]
+    0x07b3a088 bl #0x7b39dd4
+          setup: str x19, [sp, #0x10]; mov x29, sp; mov x19, x0
+    0x07b3a0b8 bl #0x2f14530
+          setup: mov x29, sp; mov x21, x1; mov x19, x0
+    0x07b3a0e8 blr x8
+          setup: mov x1, x23; movk w2, #1, lsl #16; ldr x8, [x8, #0x30]
+    0x07b3a104 blr x8
+          setup: mov x1, x23; mov x2, xzr; ldr x8, [x8, #0x20]
+    0x07b3a128 blr x8
+          setup: adrp x1, #0xa64000; add x1, x1, #0xb74; ldr x8, [x8, #0x30]
+    0x07b3a150 blr x8
+          setup: ldr x8, [x0]; mov x1, x20; ldr x8, [x8, #0x108]
+    0x07b3a160 bl #0x282d818
+          setup: mov x2, x0; ldr x0, [x19, #0x18]; ldr x1, [x22, #0x18]
+    0x07b3a17c blr x8
+          setup: add x1, x1, #0x91d; ldr x8, [x0]; ldr x8, [x8, #0x30]
+    0x07b3a1a4 blr x8
+          setup: ldr x8, [x0]; mov x1, x23; ldr x8, [x8, #0x108]
+    0x07b3a1bc blr x8
+          setup: mov x1, x21; ldr x8, [x0]; ldr x8, [x8, #0x538]
+    0x07b3a1d4 bl #0x282d818
+          setup: mov x1, x22; mov x2, x24; mov x3, x21
+    0x07b3a1ec blr x8
+          setup: mov x1, x24; ldr x8, [x0]; ldr x8, [x8, #0xa8]
+    0x07b3a208 blr x9
+          setup: ldr x9, [x8]; mov x0, x8; ldr x9, [x9, #0xb8]
+    0x07b3a21c blr x8
+          setup: mov x1, x21; ldr x8, [x0]; ldr x8, [x8, #0xb8]
+    0x07b3a230 blr x8
+          setup: mov x1, x23; ldr x8, [x0]; ldr x8, [x8, #0xb8]
+    0x07b3a244 blr x8
+          setup: mov x1, x22; ldr x8, [x0]; ldr x8, [x8, #0xb8]
+    0x07b3a258 blr x8
+          setup: mov x1, x20; ldr x8, [x0]; ldr x8, [x8, #0xb8]
+    0x07b3a2fc bl #0x2efb614
+          setup: lsr x8, x8, #1; csinc x1, x9, x4, ne; csel x2, x8, x10, eq
+    0x07b3a320 bl #0x2efb614
+          setup: lsr x8, x8, #1; csinc x1, x9, x21, ne; csel x2, x8, x10, eq
+    0x07b3a34c bl #0x2f15088
+          setup: add x1, x1, #0x924; mov x0, x22; mov w2, #1
+    0x07b3a36c bl #0x2f15088
+          setup: lsr x8, x8, #1; csinc x1, x9, x20, ne; csel x2, x8, x10, eq
+    0x07b3a39c blr x8
+          setup: mov w3, wzr; ldr x8, [x8, #0xe8]; mov x4, xzr
+    0x07b3a414 bl #0x8b35680   PLT: _Znam
+          setup: mov w24, w4; mov x20, x1; str x22, [x19, #0x50]
+    0x07b3a420 bl #0x8b35260   PLT: _Znwm
+          setup: bl #0x8b35680; mov x25, x0; mov w0, #0x20
+    0x07b3a448 bl #0x8b34ef0
+          setup: cbz x26, #0x7b3a458; add x1, x26, #8; mov x0, #-1
+    0x07b3a468 bl #0x8b35300   PLT: memcpy
+          setup: mov x1, x23; mov x2, x22; and w24, w24, #1
+    0x07b3a49c bl #0x2efb614
+          setup: lsr x8, x8, #1; csinc x1, x9, x21, ne; csel x2, x8, x10, eq
+    0x07b3a4bc bl #0x2efb614
+          setup: lsr x8, x8, #1; csinc x1, x9, x20, ne; csel x2, x8, x10, eq
+    0x07b3a504 blr x8
+          setup: ldr x8, [x8, #0xe8]; mov w3, wzr; mov x4, xzr
+    0x07b3a530 blr x8
+          setup: ldr x8, [x26]; mov x0, x26; ldr x8, [x8, #0x10]
+    0x07b3a538 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x26
+    0x07b3a5f0 bl #0x7a33d28
+          setup: ldr x8, [x21, #0x28]; add x0, sp, #8; stur x8, [x29, #-8]
+    0x07b3a608 bl #0x7a596e0
+          setup: b.hs #0x7b3a620; add x1, sp, #8; mov x0, x20
+    0x07b3a628 bl #0x7b3b928
+          setup: b #0x7b3a63c; add x0, x19, #0x198; add x1, sp, #8
+    0x07b3a638 bl #0x2efa56c
+          setup: ldrb w8, [sp, #0x20]; tbz w8, #0, #0x7b3a63c; ldr x0, [sp, #0x30]
+    0x07b3a66c bl #0x2efa56c
+          setup: add sp, sp, #0x70; ret ; ldr x0, [sp, #0x18]
+    0x07b3a680 bl #0x8b35290   PLT: __stack_chk_fail
+          setup: ldur x9, [x29, #-8]; cmp x8, x9; b.eq #0x7b3a654
+    0x07b3a6c4 blr x8
+          setup: mov x3, x20; ldr x8, [x0]; ldr x8, [x8, #0x108]
+    0x07b3a6ec blr x8
+          setup: tst w8, #1; csel x1, x11, x9, eq; ldr x8, [x10, #0x538]
+    0x07b3a700 bl #0x4575654
+          setup: mov x2, x21; ldp x1, x0, [x19, #0x10]; mov x3, x22
+    0x07b3a714 blr x8
+          setup: mov x1, x22; ldr x8, [x0]; ldr x8, [x8, #0xb8]
+    0x07b3a734 blr x8
+          setup: mov x3, x20; ldr x8, [x0]; ldr x8, [x8, #0x108]
+    0x07b3a76c blr x8
+          setup: cmp w8, #0; csel x1, x11, x9, eq; ldr x8, [x10, #0x538]
+    0x07b3a780 bl #0x4575654
+          setup: mov x2, x20; ldp x1, x0, [x19, #0x10]; mov x3, x21
+    0x07b3a794 blr x8
+          setup: mov x1, x21; ldr x8, [x0]; ldr x8, [x8, #0xb8]
+    0x07b3a7bc blr x8
+          setup: ldr x8, [x0]; mov x3, x20; ldr x8, [x8, #0x108]
+    0x07b3a7cc bl #0x4575654
+          setup: mov x2, x0; ldr w3, [x19, #0x40]; ldp x1, x0, [x19, #0x10]
+    0x07b3a7ec blr x8
+          setup: mov x3, x20; ldr x8, [x0]; ldr x8, [x8, #0x108]
+    0x07b3a7fc bl #0x4575654
+          setup: mov x2, x0; ldr w3, [x19, #0x48]; ldp x1, x0, [x19, #0x10]
+    0x07b3a82c blr x8
+          setup: add x3, x3, #0x5df; ldr x8, [x0]; ldr x8, [x8, #0x108]
+    0x07b3a85c blr x8
+          setup: tst w8, #1; csinc x1, x9, x23, ne; ldr x8, [x10, #0x538]
+    0x07b3a884 blr x8
+          setup: tst w8, #1; csel x1, x11, x9, eq; ldr x8, [x10, #0x538]
+    0x07b3a89c bl #0x4575654
+          setup: ldp x1, x0, [x19, #0x10]; mov x3, x21; mov x4, x22
+    0x07b3a8b0 blr x8
+          setup: mov x1, x21; ldr x8, [x0]; ldr x8, [x8, #0xb8]
+    0x07b3a8c4 blr x8
+          setup: mov x1, x22; ldr x8, [x0]; ldr x8, [x8, #0xb8]
+    0x07b3a8f4 bl #0x2efb614
+          setup: lsr x8, x8, #1; csel x1, x11, x9, eq; csel x2, x8, x10, eq
+    0x07b3a908 bl #0x2f1ec94
+          setup: cbnz w8, #0x7b3a910; mov w8, #1; strb w8, [x19, #0xe8]
+    0x07b3a934 blr x8
+          setup: ldr x9, [x19]; str x8, [x19, #0x130]; ldr x8, [x9, #0xe0]
+    0x07b3a974 blr x8
+          setup: ldr x8, [x8, #0xe8]; mov w3, wzr; mov x4, xzr
+    0x07b3a9cc blr x8
+          setup: ldr x8, [x0]; ldr x1, [x19, #8]; ldr x8, [x8, #0x108]
+    0x07b3a9f4 blr x8
+          setup: tst w8, #1; csel x1, x11, x9, eq; ldr x8, [x10, #0x538]
+    0x07b3aa18 blr x8
+          setup: mov w1, w23; ldr x8, [x0]; ldr x8, [x8, #0x580]
+    0x07b3aa38 blr x8
+          setup: mov w3, w23; ldr x8, [x0]; ldr x8, [x8, #0x680]
+    0x07b3aa7c blr x8
+          setup: ldr x10, [x0]; csel x1, x11, x9, eq; ldr x8, [x10, #0x538]
+    0x07b3aaa8 bl #0x456e6c8
+          setup: mov w4, w24; mov x5, x23; mov x6, x22
+    0x07b3aac0 blr x8
+          setup: mov x1, x21; ldr x8, [x0]; ldr x8, [x8, #0xb8]
+    0x07b3aad8 blr x8
+          setup: mov x1, x22; ldr x8, [x0]; ldr x8, [x8, #0xb8]
+    0x07b3aaf0 blr x8
+          setup: mov x1, x23; ldr x8, [x0]; ldr x8, [x8, #0xb8]
+    0x07b3ab6c blr x8
+          setup: add x3, x3, #0x527; ldr x8, [x0]; ldr x8, [x8, #0x108]
+    0x07b3ab78 bl #0x4575654
+          setup: blr x8; mov x2, x0; ldp x1, x0, [x19, #0x10]
+    0x07b3aba4 blr x8
+          setup: add x3, x3, #0x29c; ldr x8, [x0]; ldr x8, [x8, #0x108]
+    0x07b3abb0 bl #0x282d818
+          setup: blr x8; mov x2, x0; ldp x1, x0, [x19, #0x10]
+    0x07b3abd0 blr x8
+          setup: mov x2, xzr; ldr x8, [x0]; ldr x8, [x8, #0x548]
+    0x07b3abe4 bl #0x8b38a50   PLT: strstr
+          setup: adrp x1, #0xb41000; add x1, x1, #0x414; mov x21, x0
+    0x07b3ac14 blr x8
+          setup: ldr x8, [x8, #0xe8]; mov w3, wzr; mov x4, xzr
+    0x07b3ac2c bl #0x8b35290   PLT: __stack_chk_fail
+          setup: ldur x9, [x29, #-8]; cmp x8, x9; b.eq #0x7b3b168
+    0x07b3ac3c bl #0x8b38a50   PLT: strstr
+          setup: adrp x1, #0x9c4000; add x1, x1, #0x8ef; mov x0, x21
+    0x07b3ac58 bl #0x8b38a50   PLT: strstr
+          setup: adrp x1, #0xa5e000; add x1, x1, #0x81e; mov x0, x21
+    0x07b3ac84 blr x8
+          setup: mov x2, x21; ldr x8, [x0]; ldr x8, [x8, #0x550]
+    0x07b3ac98 blr x8
+          setup: mov x1, x20; ldr x8, [x0]; ldr x8, [x8, #0xb8]
+    0x07b3accc blr x8
+          setup: add x3, x3, #0x2f6; ldr x8, [x0]; ldr x8, [x8, #0x108]
+    0x07b3acd8 bl #0x456e6c8
+          setup: blr x8; mov x2, x0; ldp x1, x0, [x19, #0x10]
+    0x07b3ad04 blr x8
+          setup: ldr x8, [x0]; mov x3, x20; ldr x8, [x8, #0x108]
+    0x07b3ad10 bl #0x456e6c8
+          setup: blr x8; mov x2, x0; ldp x1, x0, [x19, #0x10]
+    0x07b3ad38 blr x8
+          setup: str x8, [x19, #0x58]; ldr x8, [x0]; ldr x8, [x8, #0x108]
+    0x07b3ad44 bl #0x456e6c8
+          setup: blr x8; mov x2, x0; ldp x1, x0, [x19, #0x10]
+    0x07b3ad70 blr x8
+          setup: str x8, [x19, #0x60]; ldr x8, [x0]; ldr x8, [x8, #0x108]
+    0x07b3ad7c bl #0x2f35718
+          setup: blr x8; mov x2, x0; ldp x1, x0, [x19, #0x10]
+    0x07b3ada8 blr x8
+          setup: add x3, x3, #0xd29; ldr x8, [x0]; ldr x8, [x8, #0x108]
+    0x07b3adb4 bl #0x2f35718
+          setup: blr x8; mov x2, x0; ldp x1, x0, [x19, #0x10]
+    0x07b3ade8 blr x8
+          setup: add x2, x2, #0xe66; adrp x3, #0xa9d000; add x3, x3, #0x2f6
+    0x07b3adf4 bl #0x456e6c8
+          setup: blr x8; mov x2, x0; ldp x1, x0, [x19, #0x10]
+    0x07b3ae40 blr x8
+          setup: add x2, x2, #0x3db; adrp x3, #0xa25000; add x3, x3, #0xd89
+    0x07b3ae4c bl #0x7b3b22c
+          setup: blr x8; mov x2, x0; ldp x1, x0, [x19, #0x10]
+    0x07b3ae80 blr x8
+          setup: add x3, x3, #0x2f6; ldr x8, [x0]; ldr x8, [x8, #0x108]
+    0x07b3ae8c bl #0x456e6c8
+          setup: blr x8; mov x2, x0; ldp x1, x0, [x19, #0x10]
+    0x07b3aebc blr x8
+          setup: add x3, x3, #0x2d4; ldr x8, [x0]; ldr x8, [x8, #0x108]
+    0x07b3aec8 bl #0x282d818
+          setup: blr x8; mov x2, x0; ldp x1, x0, [x19, #0x10]
+    0x07b3aee4 blr x8
+          setup: mov x2, xzr; ldr x8, [x0]; ldr x8, [x8, #0x6f0]
+    0x07b3aefc bl #0x8b35680   PLT: _Znam
+          setup: add x8, x8, #0x3f; and x22, x8, #0xffffffffffffffc0; mov x0, x22
+    0x07b3af08 bl #0x8b35260   PLT: _Znwm
+          setup: bl #0x8b35680; mov x23, x0; mov w0, #0x20
+    0x07b3af30 bl #0x8b34ef0
+          setup: cbz x24, #0x7b3af58; add x1, x24, #8; mov x0, #-1
+    0x07b3af44 blr x8
+          setup: ldr x8, [x24]; mov x0, x24; ldr x8, [x8, #0x10]
+    0x07b3af4c bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x24
+    0x07b3af64 bl #0x8b35360   PLT: memset
+          setup: mov x0, x23; mov w1, wzr; mov x2, x22
+    0x07b3af74 bl #0x8b35300   PLT: memcpy
+          setup: ldr x0, [x19, #0x30]; mov x1, x21; ldr x2, [x19, #0x60]
+    0x07b3af90 blr x8
+          setup: mov w3, wzr; ldr x8, [x0]; ldr x8, [x8, #0x6f8]
+    0x07b3afa4 blr x8
+          setup: mov x1, x20; ldr x8, [x0]; ldr x8, [x8, #0xb8]
+    0x07b3afcc blr x8
+          setup: add x3, x3, #0x29c; ldr x8, [x0]; ldr x8, [x8, #0x108]
+    0x07b3afd8 bl #0x282d818
+          setup: blr x8; mov x2, x0; ldp x1, x0, [x19, #0x10]
+    0x07b3aff8 blr x8
+          setup: mov x2, xzr; ldr x8, [x0]; ldr x8, [x8, #0x548]
+    0x07b3b02c bl #0x8b37ac0   PLT: strncmp
+          setup: str xzr, [sp, #0x10]; strb w8, [sp]; stur w10, [sp, #1]
+    0x07b3b050 blr x8
+          setup: mov x2, x21; ldr x8, [x0]; ldr x8, [x8, #0x550]
+    0x07b3b064 blr x8
+          setup: mov x1, x20; ldr x8, [x0]; ldr x8, [x8, #0xb8]
+    0x07b3b08c bl #0x2f1ec94
+          setup: str x8, [x19, #0x140]; cbnz w9, #0x7b3b158; strb w20, [x19, #0x118]
+    0x07b3b0cc blr x8
+          setup: add x3, x3, #0x29c; ldr x8, [x0]; ldr x8, [x8, #0x108]
+    0x07b3b0d8 bl #0x282d818
+          setup: blr x8; mov x2, x0; ldp x1, x0, [x19, #0x10]
+    0x07b3b0f8 blr x8
+          setup: mov x2, xzr; ldr x8, [x0]; ldr x8, [x8, #0x548]
+    0x07b3b124 blr x8
+          setup: ldr x8, [x8, #0xe8]; mov w3, w20; mov x4, x23
+    0x07b3b13c blr x8
+          setup: mov x2, x23; ldr x8, [x0]; ldr x8, [x8, #0x550]
+    0x07b3b150 blr x8
+          setup: mov x1, x22; ldr x8, [x0]; ldr x8, [x8, #0xb8]
+    0x07b3b198 bl #0x2f1ec88
+          setup: ldr x21, [x19, #0xf0]; mov x20, x0; strb w8, [x19, #0xf8]
+    0x07b3b1d0 bl #0x2f1ec94
+          setup: cbnz w8, #0x7b3ae60; mov w8, #1; strb w8, [x19, #0x108]
+
+==============================================================================
+FUNCTION 0x7dbfb14
+==============================================================================
+  instructions: 2560  (0x7dbfb14 .. 0x7dc2310)
+    0x07dbfb44 bl #0x684e378
+          setup: add x23, sp, #0x98; ldr x8, [x22, #0x28]; stur x8, [x29, #-8]
+    0x07dbfb58 bl #0x8b35330   PLT: strlen
+          setup: stur xzr, [x29, #-0x98]; cbz x0, #0x7dbfb6c; mov x19, x0
+    0x07dbfb68 bl #0x2efb614
+          setup: mov x2, x0; sub x0, x29, #0x98; mov x1, x19
+    0x07dbfb70 bl #0x8b388e0   PLT: _ZNSt6__ndk16localeC1Ev
+          setup: mov x1, x19; bl #0x2efb614; add x0, sp, #0x98
+    0x07dbfb80 bl #0x8b38840   PLT: _ZNKSt6__ndk16locale9use_facetERNS0_2idE
+          setup: adrp x1, #0x98d6000; add x0, sp, #0x98; ldr x1, [x1, #0x840]
+    0x07dbfb94 bl #0x8b38840   PLT: _ZNKSt6__ndk16locale9use_facetERNS0_2idE
+          setup: str x0, [sp, #0xa0]; add x0, sp, #0x98; ldr x1, [x1, #0x868]
+    0x07dbfbc0 bl #0x2f438d0
+          setup: str xzr, [sp, #0xd0]; stur q0, [x23, #0x18]; stur q0, [x23, #0x28]
+    0x07dbfbfc bl #0x8b35330   PLT: strlen
+          setup: str xzr, [sp, #0x68]; cbz x19, #0x7dbfc10; mov x0, x19
+    0x07dbfc0c bl #0x2efb614
+          setup: mov x2, x0; add x0, sp, #0x68; mov x1, x19
+    0x07dbfc60 bl #0x2efa4dc
+          setup: orr x25, x19, #0xf; mov w1, wzr; add x0, x25, #1
+    0x07dbfc80 bl #0x8b352f0   PLT: memmove
+          setup: mov x0, x21; mov x1, x20; mov x2, x19
+    0x07dbfc90 bl #0x2f18400
+          setup: add x0, sp, #0x50; add x1, sp, #0x80; strb wzr, [x21, x19]
+    0x07dbfca0 bl #0x2efa56c
+          setup: ldrb w8, [sp, #0x50]; tbz w8, #0, #0x7dbfca4; ldr x0, [sp, #0x60]
+    0x07dbfd04 bl #0x8b35330   PLT: strlen
+          setup: csinc x19, x9, x20, ne; cbz x19, #0x7dbfd18; mov x0, x19
+    0x07dbfd14 bl #0x2efb614
+          setup: mov x2, x0; add x0, sp, #0x38; mov x1, x19
+    0x07dbfd38 bl #0x8b35330   PLT: strlen
+          setup: csel x19, x24, x9, eq; cbz x19, #0x7dbfd4c; mov x0, x19
+    0x07dbfd48 bl #0x2efb614
+          setup: mov x2, x0; add x0, sp, #0x20; mov x1, x19
+    0x07dbfd68 bl #0x2f15088
+          setup: lsr x8, x8, #1; csel x1, x21, x9, eq; csel x2, x8, x10, eq
+    0x07dbfdbc bl #0x2f4bfc0
+          setup: stur q0, [x23, #0x58]; stur q0, [x23, #0x68]; stur q0, [x23, #0x71]
+    0x07dbfdd4 bl #0x8b352c0   PLT: _ZdlPv
+          setup: cbz x8, #0x7dbfdd8; mov x0, x8; stur x8, [x29, #-0x78]
+    0x07dbfdf0 bl #0x8b35330   PLT: strlen
+          setup: tst w8, #1; csel x19, x25, x9, eq; mov x0, x19
+    0x07dbfe00 bl #0x2f1956c
+          setup: mov x1, x0; mov x0, x19; mov w2, wzr
+    0x07dbfe24 bl #0x8b35330   PLT: strlen
+          setup: csel x19, x25, x9, eq; cbz x19, #0x7dbfe38; mov x0, x19
+    0x07dbfe34 bl #0x2efb614
+          setup: mov x2, x0; add x0, sp, #8; mov x1, x19
+    0x07dbfe3c bl #0x2f1992c
+          setup: mov x1, x19; bl #0x2efb614; add x0, sp, #8
+    0x07dbfe4c bl #0x2efa56c
+          setup: ldrb w8, [sp, #8]; tbz w8, #0, #0x7dbfe50; ldr x0, [sp, #0x18]
+    0x07dbfe68 bl #0x2efa56c
+          setup: tbz w8, #0, #0x7dbfcd0; b #0x7dbfe74; ldr x0, [sp, #0x30]
+    0x07dbfe78 bl #0x2efa56c
+          setup: ldrb w8, [sp, #0x38]; tbz w8, #0, #0x7dbfcd0; ldr x0, [sp, #0x48]
+    0x07dbfe8c bl #0x2efa56c
+          setup: ldrb w8, [sp, #0x68]; tbz w8, #0, #0x7dbfe90; ldr x0, [sp, #0x78]
+    0x07dbfec8 bl #0x2efa56c
+          setup: ldrb w9, [x20, #-0x18]!; tbz w9, #0, #0x7dbfeb0; ldur x0, [x8, #-8]
+    0x07dbfed8 bl #0x2efa56c
+          setup: b #0x7dbfeb0; ldr x0, [sp, #0x80]; str x19, [sp, #0x88]
+    0x07dbfeec bl #0x8b34ef0
+          setup: cbz x19, #0x7dbfef4; add x1, x19, #8; mov x0, #-1
+    0x07dbfef8 bl #0x8b38850   PLT: _ZNSt6__ndk16localeD1Ev
+          setup: bl #0x8b34ef0; cbz x0, #0x7dbff3c; add x0, sp, #0x98
+    0x07dbff08 bl #0x2efa56c
+          setup: ldurb w8, [x29, #-0x98]; tbz w8, #0, #0x7dbff0c; ldur x0, [x29, #-0x88]
+    0x07dbff48 blr x8
+          setup: ldr x8, [x19]; mov x0, x19; ldr x8, [x8, #0x10]
+    0x07dbff50 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x19
+    0x07dbff58 bl #0x8b38850   PLT: _ZNSt6__ndk16localeD1Ev
+          setup: mov x0, x19; bl #0x8b388f0; add x0, sp, #0x98
+    0x07dbff68 bl #0x2f43bb8
+          setup: ldurb w8, [x29, #-0x98]; tbnz w8, #0, #0x7dbff04; b #0x7dbff0c
+    0x07dbff6c bl #0x8b382d0   PLT: abort
+          setup: tbnz w8, #0, #0x7dbff04; b #0x7dbff0c; bl #0x2f43bb8
+    0x07dbff70 bl #0x8b35290   PLT: __stack_chk_fail
+          setup: b #0x7dbff0c; bl #0x2f43bb8; bl #0x8b382d0
+    0x07dbffb4 bl #0x7afcb8c
+          setup: add x8, x8, #0x1a0; ldr x0, [x8]; cbz x0, #0x7dbffd0
+    0x07dbffcc bl #0x7b04e90
+          setup: add x8, x8, #0x240; ldr x0, [x8]; cbz x0, #0x7dbffd0
+    0x07dbffd4 bl #0x74e6e74
+          setup: cbz x0, #0x7dbffd0; bl #0x7b04e90; add x0, x19, #0x28
+    0x07dc003c bl #0x7afcb8c
+          setup: add x8, x8, #0x1a0; ldr x0, [x8]; cbz x0, #0x7dc0058
+    0x07dc0054 bl #0x7b04e90
+          setup: add x8, x8, #0x240; ldr x0, [x8]; cbz x0, #0x7dc0058
+    0x07dc005c bl #0x74e6e74
+          setup: cbz x0, #0x7dc0058; bl #0x7b04e90; add x0, x19, #0x28
+    0x07dc006c bl #0x2efa56c
+          setup: ldrb w8, [x19, #8]; tbz w8, #0, #0x7dc0070; ldr x0, [x19, #0x18]
+    0x07dc0114 bl #0x2efa56c
+          setup: cbnz w1, #0x7dc016c; b #0x7dc01a4; ldr x0, [x19, #0xe0]
+    0x07dc0124 bl #0x2efa56c
+          setup: ldrb w8, [x19, #0xb8]; tbz w8, #0, #0x7dc00e0; ldr x0, [x19, #0xc8]
+    0x07dc0134 bl #0x2efa56c
+          setup: ldrb w8, [x19, #0xa0]; tbz w8, #0, #0x7dc00e8; ldr x0, [x19, #0xb0]
+    0x07dc0144 bl #0x2efa56c
+          setup: ldrb w8, [x19, #0x88]; tbz w8, #0, #0x7dc00f0; ldr x0, [x19, #0x98]
+    0x07dc0154 bl #0x2efa56c
+          setup: ldrb w8, [x19, #0x70]; tbz w8, #0, #0x7dc00f8; ldr x0, [x19, #0x80]
+    0x07dc0188 bl #0x7afcb8c
+          setup: add x8, x8, #0x1a0; ldr x0, [x8]; cbz x0, #0x7dc01a4
+    0x07dc01a0 bl #0x7b04e90
+          setup: add x8, x8, #0x240; ldr x0, [x8]; cbz x0, #0x7dc01a4
+    0x07dc01a8 bl #0x74e6e74
+          setup: cbz x0, #0x7dc01a4; bl #0x7b04e90; add x0, x19, #0x28
+    0x07dc01e0 bl #0x7dc00b4
+          setup: str x19, [sp, #0x10]; mov x29, sp; mov x19, x0
+    0x07dc0204 blr x8
+          setup: mov x29, sp; ldr x8, [x0]; ldr x8, [x8, #0x20]
+    0x07dc0270 bl #0x8b35240   PLT: __cxa_atexit
+          setup: strb w8, [x1, #8]!; stur q0, [x19, #9]; sturh w9, [x19, #0x19]
+    0x07dc02a4 bl #0x8b35240   PLT: __cxa_atexit
+          setup: stur w9, [x19, #0x21]; sturh w10, [x19, #0x25]; strb wzr, [x19, #0x27]
+    0x07dc0310 bl #0x8b35260   PLT: _Znwm
+          setup: ldp x29, x30, [sp], #0x20; ret ; mov w0, #0xa0
+    0x07dc0344 bl #0x2efc3dc
+          setup: stur q0, [x19, #8]; stur q0, [x19, #0x18]; stur q0, [x19, #0x28]
+    0x07dc037c blr x8
+          setup: cbz x0, #0x7dc0384; ldr x8, [x0]; ldr x8, [x8, #8]
+    0x07dc03c0 bl #0x2efc3ec
+          setup: adrp x8, #0x9828000; add x8, x8, #0x360; str x8, [x19]
+    0x07dc03cc bl #0x7dc1488
+          setup: bl #0x2efc3ec; add x20, x19, #8; mov x0, x20
+    0x07dc03e0 bl #0x2efa56c
+          setup: cmp x21, x22; b.eq #0x7dc040c; ldr x0, [x21], #8
+    0x07dc0458 bl #0x2efc3ec
+          setup: adrp x8, #0x9828000; add x8, x8, #0x360; str x8, [x19]
+    0x07dc0464 bl #0x7dc1488
+          setup: bl #0x2efc3ec; add x20, x19, #8; mov x0, x20
+    0x07dc0478 bl #0x2efa56c
+          setup: cmp x21, x22; b.eq #0x7dc04a4; ldr x0, [x21], #8
+    0x07dc04ac bl #0x2efa56c
+          setup: str x8, [x19, #0x18]; ldr x0, [x20]; cbz x0, #0x7dc04b0
+    0x07dc0548 bl #0x2efa4dc
+          setup: orr x27, x23, #0xf; mov w1, wzr; add x0, x27, #1
+    0x07dc0568 bl #0x8b352f0   PLT: memmove
+          setup: mov x0, x25; mov x1, x24; mov x2, x23
+    0x07dc05b8 bl #0x2efa4dc
+          setup: orr x25, x22, #0xf; mov w1, wzr; add x0, x25, #1
+    0x07dc05d8 bl #0x8b352f0   PLT: memmove
+          setup: mov x0, x24; mov x1, x23; mov x2, x22
+    0x07dc0628 bl #0x2efa4dc
+          setup: orr x24, x21, #0xf; mov w1, wzr; add x0, x24, #1
+    0x07dc0648 bl #0x8b352f0   PLT: memmove
+          setup: mov x0, x23; mov x1, x22; mov x2, x21
+    0x07dc0668 bl #0x7dc06fc
+          setup: mov w4, w19; mov w5, #-1; strb wzr, [x23, x21]
+    0x07dc06b8 bl #0x2efa56c
+          setup: add sp, sp, #0xb0; ret ; ldr x0, [sp, #0x10]
+    0x07dc06c8 bl #0x2efa56c
+          setup: ldrb w8, [sp, #0x18]; tbz w8, #0, #0x7dc067c; ldr x0, [sp, #0x28]
+    0x07dc06d8 bl #0x2efa56c
+          setup: ldurb w8, [x29, #-0x20]; tbz w8, #0, #0x7dc0684; ldur x0, [x29, #-0x10]
+    0x07dc06ec bl #0x8b35290   PLT: __stack_chk_fail
+          setup: ldur x9, [x29, #-8]; cmp x8, x9; b.eq #0x7dc0694
+    0x07dc06f0 bl #0x8b382d0   PLT: abort
+          setup: cmp x8, x9; b.eq #0x7dc0694; bl #0x8b35290
+    0x07dc06f4 bl #0x8b382d0   PLT: abort
+          setup: b.eq #0x7dc0694; bl #0x8b35290; bl #0x8b382d0
+    0x07dc06f8 bl #0x8b382d0   PLT: abort
+          setup: bl #0x8b35290; bl #0x8b382d0; bl #0x8b382d0
+    0x07dc0740 bl #0x2efc42c
+          setup: mov x24, x2; mov x23, x1; stur x8, [x29, #-0x10]
+    0x07dc0834 bl #0x2efb614
+          setup: str xzr, [sp, #0x48]; b.ne #0x7dc0844; add x0, sp, #0x38
+    0x07dc0850 bl #0x8b35330   PLT: strlen
+          setup: add x8, x1, x8, asr #32; add x24, x8, #1; mov x0, x24
+    0x07dc0860 bl #0x2efb614
+          setup: mov x2, x0; add x0, sp, #0x38; mov x1, x24
+    0x07dc08f8 bl #0x7dc0ce4
+          setup: ldr x10, [x10, x9, lsl #3]; nop ; madd x1, x8, x20, x10
+    0x07dc0978 bl #0x8b35880   PLT: memcmp
+          setup: b.ne #0x7dc0950; b #0x7dc0980; cbz x2, #0x7dc0980
+    0x07dc0a04 bl #0x8b35880   PLT: memcmp
+          setup: b.ne #0x7dc09dc; b #0x7dc0a0c; cbz x2, #0x7dc0a0c
+    0x07dc0a9c bl #0x8b35880   PLT: memcmp
+          setup: b.ne #0x7dc0a74; b #0x7dc0ab0; cbz x2, #0x7dc0ab0
+    0x07dc0ae4 bl #0x2efa56c
+          setup: ldrb w8, [sp, #0x80]; tbz w8, #0, #0x7dc0af0; ldr x0, [sp, #0x90]
+    0x07dc0af8 bl #0x2efa56c
+          setup: and w22, w8, #1; cbz w22, #0x7dc0afc; ldr x0, [sp, #0x78]
+    0x07dc0b08 bl #0x2efa56c
+          setup: ldrb w8, [sp, #0x50]; tbz w8, #0, #0x7dc08ac; ldr x0, [sp, #0x60]
+    0x07dc0b54 bl #0x2efb614
+          setup: stp q0, q0, [sp, #0x50]; stp q0, q0, [sp, #0x70]; stur d1, [sp, #0x9c]
+    0x07dc0b7c bl #0x2efb614
+          setup: lsr x8, x8, #1; csel x1, x10, x9, eq; csel x2, x8, x11, eq
+    0x07dc0ba0 bl #0x2efb614
+          setup: lsr x8, x8, #1; csinc x1, x9, x11, ne; csel x2, x8, x10, eq
+    0x07dc0be8 bl #0x7dc1618
+          setup: stp w11, w10, [sp, #0x98]; b.ne #0x7dc0bf8; add x0, x19, #8
+    0x07dc0c2c bl #0x7dc0ce4
+          setup: ldr x8, [x8, x10, lsl #3]; mov w10, #0x58; madd x0, x9, x10, x8
+    0x07dc0c48 bl #0x2efa56c
+          setup: str x8, [x19, #0x30]; tbz w9, #0, #0x7dc0c4c; ldr x0, [sp, #0x90]
+    0x07dc0c58 bl #0x2efa56c
+          setup: ldrb w8, [sp, #0x68]; tbz w8, #0, #0x7dc0c5c; ldr x0, [sp, #0x78]
+    0x07dc0c68 bl #0x2efa56c
+          setup: ldrb w8, [sp, #0x50]; tbz w8, #0, #0x7dc0c6c; ldr x0, [sp, #0x60]
+    0x07dc0c78 bl #0x2efa56c
+          setup: ldrb w8, [sp, #0x38]; tbz w8, #0, #0x7dc0c7c; ldr x0, [sp, #0x48]
+    0x07dc0c80 bl #0x8b38640   PLT: _ZNSt6__ndk111timed_mutex6unlockEv
+          setup: ldr x0, [sp, #0x48]; bl #0x2efa56c; add x0, x19, #0x40
+    0x07dc0cc8 bl #0x2efa56c
+          setup: str w8, [sp, #0xa0]; tbz w25, #0, #0x7dc0cd4; mov x0, x24
+    0x07dc0ce0 bl #0x8b35290   PLT: __stack_chk_fail
+          setup: ldr x20, [sp]; cbnz w22, #0x7dc0c54; b #0x7dc0c5c
+    0x07dc0d44 bl #0x2efa4dc
+          setup: orr x24, x21, #0xf; mov w1, wzr; add x0, x24, #1
+    0x07dc0d64 bl #0x8b352f0   PLT: memmove
+          setup: mov x0, x23; mov x1, x22; mov x2, x21
+    0x07dc0db4 bl #0x2efa4dc
+          setup: orr x24, x21, #0xf; mov w1, wzr; add x0, x24, #1
+    0x07dc0dd4 bl #0x8b352f0   PLT: memmove
+          setup: mov x0, x23; mov x1, x22; mov x2, x21
+    0x07dc0e24 bl #0x2efa4dc
+          setup: orr x24, x21, #0xf; mov w1, wzr; add x0, x24, #1
+    0x07dc0e44 bl #0x8b352f0   PLT: memmove
+          setup: mov x0, x23; mov x1, x22; mov x2, x21
+    0x07dc0e70 bl #0x8b382d0   PLT: abort
+          setup: ldp x24, x23, [sp, #0x10]; ldp x29, x30, [sp], #0x40; ret 
+    0x07dc0e74 bl #0x8b382d0   PLT: abort
+          setup: ldp x29, x30, [sp], #0x40; ret ; bl #0x8b382d0
+    0x07dc0e78 bl #0x8b382d0   PLT: abort
+          setup: ret ; bl #0x8b382d0; bl #0x8b382d0
+    0x07dc0fbc bl #0x8b35330   PLT: strlen
+          setup: strb w9, [sp, #0x22]; strb w8, [sp, #0x23]; strb wzr, [sp, #0x24]
+    0x07dc0fcc bl #0x2efb614
+          setup: mov x2, x0; add x0, sp, #8; add x1, sp, #0x20
+    0x07dc100c bl #0x8b38590   PLT: _ZNSt6__ndk18ios_base4initEPv
+          setup: stp xzr, x19, [sp, #0x40]; str x10, [sp, #0xb8]; str x8, [sp, #0x38]
+    0x07dc1030 bl #0x8b385a0   PLT: _ZNSt6__ndk115basic_streambufIcNS_11char_traitsIcEEEC2Ev
+          setup: str w8, [sp, #0x148]; str x9, [sp, #0xb8]; str x19, [sp, #0x48]
+    0x07dc108c bl #0x8b35330   PLT: strlen
+          setup: mov x0, x25; str x9, [sp, #0x38]; stp x11, x19, [sp, #0x48]
+    0x07dc109c bl #0x2f2e26c
+          setup: mov x2, x0; mov x0, x24; mov x1, x25
+    0x07dc10b0 bl #0x2f2e26c
+          setup: adrp x1, #0xbbc000; add x1, x1, #0xb30; mov w2, #1
+    0x07dc10e8 bl #0x8b38830   PLT: _ZNKSt6__ndk18ios_base6getlocEv
+          setup: b.ne #0x7dc1114; add x8, sp, #0x20; mov x0, x26
+    0x07dc10f8 bl #0x8b38840   PLT: _ZNKSt6__ndk16locale9use_facetERNS0_2idE
+          setup: adrp x1, #0x98d6000; add x0, sp, #0x20; ldr x1, [x1, #0x840]
+    0x07dc1108 blr x8
+          setup: ldr x8, [x0]; mov w1, #0x20; ldr x8, [x8, #0x38]
+    0x07dc1110 bl #0x8b38850   PLT: _ZNSt6__ndk16localeD1Ev
+          setup: ldr x8, [x8, #0x38]; blr x8; add x0, sp, #0x20
+    0x07dc1124 bl #0x8b387e0   PLT: _ZNSt6__ndk113basic_ostreamIcNS_11char_traitsIcEEElsEi
+          setup: mov x0, x25; str w8, [x26, #0x90]; ldr w1, [x20, #0x4c]
+    0x07dc1134 bl #0x8b3ac10   PLT: _ZNSt6__ndk113basic_ostreamIcNS_11char_traitsIcEEElsEj
+          setup: tbz w21, #0, #0x7dc113c; b #0x7dc1198; ldr w1, [x20, #0x48]
+    0x07dc1164 bl #0x2f2e26c
+          setup: add x1, x1, #0xb30; mov x0, x24; mov w2, #1
+    0x07dc1184 bl #0x8b35330   PLT: strlen
+          setup: tst w8, #1; csel x20, x10, x9, eq; mov x0, x20
+    0x07dc1194 bl #0x2f2e26c
+          setup: mov x2, x0; mov x0, x21; mov x1, x20
+    0x07dc11a4 bl #0x31b542c
+          setup: add x8, sp, #0x20; mov x0, x23; add x20, sp, #0x20
+    0x07dc11c4 bl #0x8b35330   PLT: strlen
+          setup: csel x20, x10, x9, eq; cbz x20, #0x7dc11d8; mov x0, x20
+    0x07dc11d4 bl #0x2efb614
+          setup: mov x2, x0; ldr x0, [sp]; mov x1, x20
+    0x07dc11e4 bl #0x2efa56c
+          setup: ldrb w8, [sp, #0x20]; tbz w8, #0, #0x7dc11e8; ldr x0, [sp, #0x30]
+    0x07dc1208 bl #0x2efa56c
+          setup: str x9, [sp, #0xb8]; tbz w10, #0, #0x7dc120c; ldr x0, [sp, #0xa0]
+    0x07dc1210 bl #0x8b385c0   PLT: _ZNSt6__ndk115basic_streambufIcNS_11char_traitsIcEEED2Ev
+          setup: ldr x0, [sp, #0xa0]; bl #0x2efa56c; mov x0, x23
+    0x07dc1220 bl #0x8b385d0   PLT: _ZNSt6__ndk114basic_iostreamIcNS_11char_traitsIcEEED2Ev
+          setup: adrp x1, #0x8cc7000; add x1, x1, #0x720; add x0, sp, #0x38
+    0x07dc1228 bl #0x8b385e0   PLT: _ZNSt6__ndk19basic_iosIcNS_11char_traitsIcEEED2Ev
+          setup: add x0, sp, #0x38; bl #0x8b385d0; mov x0, x22
+    0x07dc1238 bl #0x2efa56c
+          setup: ldrb w8, [sp, #8]; tbz w8, #0, #0x7dc123c; ldr x0, [sp, #0x18]
+    0x07dc126c bl #0x8b35290   PLT: __stack_chk_fail
+          setup: ldp x29, x30, [sp, #0x160]; add sp, sp, #0x1c0; ret 
+    0x07dc1294 bl #0x7dc0e7c
+          setup: mov x19, x1; ldr x8, [x21, #0x28]; stur x8, [x29, #-8]
+    0x07dc12cc bl #0x8b35330   PLT: strlen
+          setup: mov x0, x20; strb w10, [sp]; sturh w12, [sp, #1]
+    0x07dc12dc bl #0x2f15088
+          setup: mov x2, x0; mov x0, sp; mov x1, x20
+    0x07dc12f8 bl #0x8b35330   PLT: strlen
+          setup: csel x20, x22, x9, eq; cbz x20, #0x7dc130c; mov x0, x20
+    0x07dc1308 bl #0x2efb614
+          setup: mov x2, x0; mov x0, x19; mov x1, x20
+    0x07dc1318 bl #0x2efa56c
+          setup: ldrb w8, [sp]; tbz w8, #0, #0x7dc131c; ldr x0, [sp, #0x10]
+    0x07dc1340 bl #0x8b35290   PLT: __stack_chk_fail
+          setup: ldp x29, x30, [sp, #0x20]; add sp, sp, #0x50; ret 
+    0x07dc1378 bl #0x2efc42c
+          setup: mov w21, w2; mov x20, x1; stur x8, [x29, #-8]
+    0x07dc13c0 bl #0x7dc0ce4
+          setup: ldr x10, [x10, x9, lsl #3]; mov w9, #0x58; madd x1, x8, x9, x10
+    0x07dc13d0 bl #0x7dc0e7c
+          setup: and w2, w21, #1; mov x0, sp; mov x1, x20
+    0x07dc13f0 bl #0x2efa56c
+          setup: ldrb w8, [sp]; tbz w8, #0, #0x7dc13f4; ldr x0, [sp, #0x10]
+    0x07dc1400 bl #0x8b38640   PLT: _ZNSt6__ndk111timed_mutex6unlockEv
+          setup: add x0, x19, #0x40; cmp x23, #0; cset w20, ne
+    0x07dc1434 bl #0x2efa56c
+          setup: add sp, sp, #0xa0; ret ; ldr x0, [sp, #0x40]
+    0x07dc1444 bl #0x2efa56c
+          setup: ldrb w8, [sp, #0x18]; tbz w8, #0, #0x7dc13e4; ldr x0, [sp, #0x28]
+    0x07dc1454 bl #0x8b35290   PLT: __stack_chk_fail
+          setup: ldrb w8, [sp]; tbnz w8, #0, #0x7dc13ec; b #0x7dc13f4
+    0x07dc146c bl #0x2efc42c
+          setup: mov x29, sp; mov x19, x0; add x0, x0, #0x38
+    0x07dc1474 bl #0x7dc1488
+          setup: add x0, x0, #0x38; bl #0x2efc42c; add x0, x19, #8
+    0x07dc1554 bl #0x2efa56c
+          setup: b.ne #0x7dc1518; b #0x7dc158c; ldr x0, [x23, #0x40]
+    0x07dc1564 bl #0x2efa56c
+          setup: ldrb w8, [x23, #0x18]; tbz w8, #0, #0x7dc1530; ldr x0, [x23, #0x28]
+    0x07dc1574 bl #0x2efa56c
+          setup: ldrb w8, [x23]; tbz w8, #0, #0x7dc1538; ldr x0, [x23, #0x10]
+    0x07dc15ac bl #0x2efa56c
+          setup: cmp x9, #0x11; b.lo #0x7dc15c8; ldr x0, [x8]
+    0x07dc16a0 bl #0x8b352f0   PLT: memmove
+          setup: lsr x8, x8, #1; lsl x22, x8, #3; sub x0, x1, x22
+    0x07dc16e4 bl #0x2efa4dc
+          setup: cmp x8, x23; b.eq #0x7dc1810; mov w1, wzr
+    0x07dc16f4 bl #0x7dc1b84
+          setup: str x0, [sp, #0x10]; add x1, sp, #0x10; mov x0, x19
+    0x07dc1718 bl #0x2efa4dc
+          setup: lsl x22, x24, #3; mov w1, wzr; mov x0, x22
+    0x07dc1730 bl #0x2efa4dc
+          setup: add x27, x0, x22; mov w0, #0xfd0; mov w1, wzr
+    0x07dc17d8 bl #0x2efa4dc
+          setup: lsl x20, x8, #3; lsr x22, x8, #2; mov x0, x20
+    0x07dc1814 bl #0x2efa4dc
+          setup: mov x8, x10; b #0x7dc1aa0; mov w1, wzr
+    0x07dc1824 bl #0x7dc1cf4
+          setup: str x0, [sp, #0x10]; add x1, sp, #0x10; mov x0, x19
+    0x07dc1868 bl #0x2efa4dc
+          setup: lsl x20, x8, #3; lsr x22, x8, #2; mov x0, x20
+    0x07dc18b8 bl #0x2efa4dc
+          setup: mov w1, wzr; lsl x21, x24, #3; mov x0, x21
+    0x07dc18d4 bl #0x2efa56c
+          setup: add x21, x0, x8, lsl #3; cbz x20, #0x7dc18d8; mov x0, x20
+    0x07dc1958 bl #0x8b352f0   PLT: memmove
+          setup: add x23, x25, x8, lsl #3; sub x22, x23, x2; mov x0, x22
+    0x07dc1988 bl #0x2efa4dc
+          setup: add x9, x8, #3; mov x0, x23; lsr x27, x9, #2
+    0x07dc1a38 bl #0x2efa56c
+          setup: b.ne #0x7dc1a20; mov x0, x21; add x27, x20, x23
+    0x07dc1ac4 bl #0x2efa56c
+          setup: stp x20, x9, [x19, #0x10]; cbz x8, #0x7dc1acc; mov x0, x8
+    0x07dc1b80 bl #0x8b35290   PLT: __stack_chk_fail
+          setup: cmp x8, x20; b.ne #0x7dc1b6c; b #0x7dc1ab0
+    0x07dc1bd8 bl #0x8b352f0   PLT: memmove
+          setup: lsr x8, x8, #1; lsl x22, x8, #3; sub x0, x1, x22
+    0x07dc1c0c bl #0x2efa4dc
+          setup: lsl x21, x8, #3; lsr x22, x8, #2; mov x0, x21
+    0x07dc1cc8 bl #0x2efa56c
+          setup: stp x21, x9, [x19, #0x10]; cbz x8, #0x7dc1cd0; mov x0, x8
+    0x07dc1d58 bl #0x8b352f0   PLT: memmove
+          setup: add x10, x9, x22; sub x21, x10, x2; mov x0, x21
+    0x07dc1d90 bl #0x2efa4dc
+          setup: add x9, x8, #3; mov x0, x21; lsr x22, x9, #2
+    0x07dc1e4c bl #0x2efa56c
+          setup: stp x11, x10, [x19, #0x10]; cbz x9, #0x7dc1e54; mov x0, x9
+    0x07dc1ea8 bl #0x2efc3dc
+          setup: adrp x2, #0xa77000; add x2, x2, #0x25e; str x8, [x19]
+    0x07dc1eec bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: add x8, x8, #0x380; str x8, [x19]; cbz x0, #0x7dc1ef0
+    0x07dc1efc bl #0x2efa56c
+          setup: ldrb w8, [x19, #0x70]; tbz w8, #0, #0x7dc1f00; ldr x0, [x19, #0x80]
+    0x07dc1f34 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: add x8, x8, #0x380; str x8, [x19]; cbz x0, #0x7dc1f38
+    0x07dc1f44 bl #0x2efa56c
+          setup: ldrb w8, [x19, #0x70]; tbz w8, #0, #0x7dc1f48; ldr x0, [x19, #0x80]
+    0x07dc1f4c bl #0x2efc3ec
+          setup: ldr x0, [x19, #0x80]; bl #0x2efa56c; add x0, x19, #8
+    0x07dc1f78 bl #0x2efc42c
+          setup: mov x29, sp; mov x19, x0; add x0, x0, #8
+    0x07dc1f84 bl #0x8b3abf0   PLT: _ZNSt6__ndk119__shared_weak_count4lockEv   <<<< CRYPTO?
+          setup: bl #0x2efc42c; ldr x0, [x19, #0x98]; cbz x0, #0x7dc1fcc
+    0x07dc1f9c bl #0x8b34ef0
+          setup: add x1, x0, #8; mov x0, #-1; ldr x21, [x19, #0x90]
+    0x07dc1fbc blr x8
+          setup: ldr x8, [x20]; mov x0, x20; ldr x8, [x8, #0x10]
+    0x07dc1fc4 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x20
+    0x07dc1fd4 bl #0x8b38640   PLT: _ZNSt6__ndk111timed_mutex6unlockEv
+          setup: cbnz x21, #0x7dc1fa8; mov w20, #2; add x0, x19, #0x10
+    0x07dc2000 bl #0x2efc42c
+          setup: mov x29, sp; mov x19, x0; add x0, x0, #8
+    0x07dc200c bl #0x8b38640   PLT: _ZNSt6__ndk111timed_mutex6unlockEv
+          setup: bl #0x2efc42c; add x0, x19, #0x10; add x20, x19, #0x70
+    0x07dc208c bl #0x2efa4dc
+          setup: orr x24, x21, #0xf; mov w1, wzr; add x0, x24, #1
+    0x07dc20ac bl #0x8b352f0   PLT: memmove
+          setup: mov x0, x23; mov x1, x22; mov x2, x21
+    0x07dc20d0 bl #0x2efc3dc
+          setup: mov x0, x22; strb wzr, [x23, x21]; str xzr, [x19, #0x20]
+    0x07dc20e0 bl #0x2efc42c
+          setup: mov x0, x22; stp xzr, xzr, [x19, #0x90]; str x20, [x19, #0xa0]
+    0x07dc20fc bl #0x8b34e90
+          setup: cbz x21, #0x7dc2100; add x1, x21, #8; mov w0, #1
+    0x07dc2114 bl #0x8b34ef0
+          setup: cbz x20, #0x7dc211c; add x1, x20, #8; mov x0, #-1
+    0x07dc2140 blr x8
+          setup: ldr x8, [x20]; mov x0, x20; ldr x8, [x8, #0x10]
+    0x07dc2148 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x20
+    0x07dc2164 bl #0x8b382d0   PLT: abort
+          setup: ldp x24, x23, [sp, #0x10]; ldp x29, x30, [sp], #0x40; b #0x8b38640
+    0x07dc2194 bl #0x8b34ef0
+          setup: cbz x20, #0x7dc219c; add x1, x20, #8; mov x0, #-1
+    0x07dc21a0 bl #0x2efc3ec
+          setup: bl #0x8b34ef0; cbz x0, #0x7dc21b8; add x0, x19, #0x28
+    0x07dc21c4 blr x8
+          setup: ldr x8, [x20]; mov x0, x20; ldr x8, [x8, #0x10]
+    0x07dc21cc bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x20
+    0x07dc21d4 bl #0x2efc3ec
+          setup: mov x0, x20; bl #0x8b388f0; add x0, x19, #0x28
+    0x07dc221c bl #0x8b34ef0
+          setup: cbz x20, #0x7dc2224; add x1, x20, #8; mov x0, #-1
+    0x07dc2228 bl #0x2efc3ec
+          setup: bl #0x8b34ef0; cbz x0, #0x7dc224c; add x0, x19, #0x28
+    0x07dc2238 bl #0x2efa56c
+          setup: ldrb w8, [x19, #8]; tbz w8, #0, #0x7dc223c; ldr x0, [x19, #0x18]
+    0x07dc2258 blr x8
+          setup: ldr x8, [x20]; mov x0, x20; ldr x8, [x8, #0x10]
+    0x07dc2260 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv   <<<< CRYPTO?
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x20
+    0x07dc2268 bl #0x2efc3ec
+          setup: mov x0, x20; bl #0x8b388f0; add x0, x19, #0x28
+    0x07dc22c8 bl #0x8b39d00   PLT: getaddrinfo
+          setup: ldr x9, [x0, #0x18]; tst w8, #1; csel x0, x10, x9, eq
+    0x07dc22e4 bl #0x8b35290   PLT: __stack_chk_fail
+          setup: ldur x9, [x29, #-8]; cmp x8, x9; b.eq #0x7dc2470
+
+==============================================================================
+FUNCTION 0x7dc9d7c
+==============================================================================
+  instructions: 2560  (0x7dc9d7c .. 0x7dcc578)
+    0x07dc9d9c bl #0x2f8e028
+          setup: adrp x8, #0x97a2000; add x8, x8, #0x600; str x8, [x19]
+    0x07dc9da4 bl #0x2f93838
+          setup: str x8, [x19]; bl #0x2f8e028; add x0, x19, #0xc8
+    0x07dc9db0 bl #0x2f912cc
+          setup: bl #0x2f93838; add x0, x19, #0xf0; mov w1, wzr
+    0x07dc9dc0 bl #0x8b35650   PLT: malloc
+          setup: mov w0, #0x2000; strb wzr, [x19, #0x108]; mov w20, #0x2000
+    0x07dc9dfc bl #0x8b35360   PLT: memset
+          setup: stp q0, q0, [x8, #0x80]; add x8, x19, #0x708; mov x0, x8
+    0x07dc9e0c bl #0x8b35360   PLT: memset
+          setup: mov x0, x20; mov w1, wzr; mov w2, #0x514
+    0x07dc9ec8 bl #0x74e49c0
+          setup: stp x20, x19, [sp, #0x10]; mov x29, sp; mov x20, x0
+    0x07dc9edc bl #0x2f92514
+          setup: adrp x1, #0xa53000; add x1, x1, #0x6c4; mov x0, x19
+    0x07dc9ee0 bl #0x2f917d8
+          setup: add x1, x1, #0x6c4; mov x0, x19; bl #0x2f92514
+    0x07dc9ef4 bl #0x2f92514
+          setup: adrp x1, #0xa53000; add x1, x1, #0x6c4; mov x0, x19
+    0x07dc9ef8 bl #0x2f919d0
+          setup: add x1, x1, #0x6c4; mov x0, x19; bl #0x2f92514
+    0x07dc9f38 bl #0x2f10278
+          setup: ldrb w1, [x19, #1]!; cbz w1, #0x7dc9f50; mov x0, x20
+    0x07dc9f9c bl #0x8b35260   PLT: _Znwm
+          setup: ldp x22, x21, [x0, #0x118]; mov w0, #0x38; stur wzr, [x29, #-0x20]
+    0x07dc9fa8 bl #0x6f83e70
+          setup: bl #0x8b35260; mov w1, #0x2000; mov x20, x0
+    0x07dc9fc0 bl #0x6f83ca0
+          setup: mov x1, x22; mov x2, xzr; mov x3, x20
+    0x07dca044 bl #0x8b387a0   PLT: _ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKcm
+          setup: ldr w2, [x22, #8]; stur xzr, [x29, #-0x20]; ldr x1, [x22, #0x10]
+    0x07dca05c bl #0x8b35330   PLT: strlen
+          setup: tst w8, #1; csel x24, x28, x9, eq; mov x0, x24
+    0x07dca090 bl #0x2efa4dc
+          setup: orr x21, x25, #0xf; mov w1, wzr; add x0, x21, #1
+    0x07dca0b0 bl #0x8b352f0   PLT: memmove
+          setup: mov x0, x26; mov x1, x24; mov x2, x25
+    0x07dca0c4 bl #0x74e5cc4
+          setup: mov x0, x19; mov x2, x22; strb wzr, [x26, x25]
+    0x07dca0d8 bl #0x2efa56c
+          setup: mov w24, w0; tbz w8, #0, #0x7dca0dc; ldr x0, [sp, #0x28]
+    0x07dca134 bl #0x8b352c0   PLT: _ZdlPv
+          setup: ldurb w8, [x29, #-0x20]; tbz w8, #0, #0x7dca018; ldur x0, [x29, #-0x10]
+    0x07dca158 bl #0x8b387a0   PLT: _ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKcm
+          setup: str xzr, [sp, #0x18]; ldr w2, [x22, #0x20]; ldr x1, [x22, #0x28]
+    0x07dca178 bl #0x8b35330   PLT: strlen
+          setup: csel x24, x8, x9, eq; cbz x24, #0x7dca18c; mov x0, x24
+    0x07dca188 bl #0x2efb614
+          setup: mov x2, x0; mov x0, x27; mov x1, x24
+    0x07dca190 bl #0x81279ec
+          setup: mov x1, x24; bl #0x2efb614; mov x0, x27
+    0x07dca1a0 bl #0x8b352c0   PLT: _ZdlPv
+          setup: ldrb w8, [sp, #0x18]; tbz w8, #0, #0x7dca128; ldr x0, [sp, #0x28]
+    0x07dca1ac bl #0x6f83e14
+          setup: bl #0x8b352c0; b #0x7dca128; mov x0, x20
+    0x07dca1b4 bl #0x8b352c0   PLT: _ZdlPv
+          setup: mov x0, x20; bl #0x6f83e14; mov x0, x20
+    0x07dca1c4 bl #0x6f83e14
+          setup: mov w0, wzr; b #0x7dca1d8; mov x0, x20
+    0x07dca1cc bl #0x8b352c0   PLT: _ZdlPv
+          setup: mov x0, x20; bl #0x6f83e14; mov x0, x20
+    0x07dca208 bl #0x8b382d0   PLT: abort
+          setup: ldp x29, x30, [sp, #0x50]; add sp, sp, #0xb0; ret 
+    0x07dca20c bl #0x8b35290   PLT: __stack_chk_fail
+          setup: add sp, sp, #0xb0; ret ; bl #0x8b382d0
+    0x07dca264 bl #0x2efa56c
+          setup: ldrb w8, [x19, #0x1e8]; tbz w8, #0, #0x7dca268; ldr x0, [x19, #0x1f8]
+    0x07dca26c bl #0x6f5ea24
+          setup: ldr x0, [x19, #0x1f8]; bl #0x2efa56c; mov x0, x20
+    0x07dca280 bl #0x8b35660   PLT: free
+          setup: adrp x8, #0x97a2000; add x8, x8, #0x5d0; str x8, [x19, #0x110]
+    0x07dca298 bl #0x2efa56c
+          setup: ldp x29, x30, [sp], #0x20; b #0x6f5eac4; ldr x0, [x19, #0x230]
+    0x07dca2ac bl #0x2efa56c
+          setup: add x20, x19, #0x130; tbz w8, #0, #0x7dca258; ldr x0, [x19, #0x218]
+    0x07dca2cc bl #0x7dca218
+          setup: str x19, [sp, #0x10]; mov x29, sp; mov x19, x0
+    0x07dca30c bl #0x7dca218
+          setup: mov x29, sp; sub x19, x0, #0x110; mov x0, x19
+    0x07dca344 bl #0x7dca218
+          setup: mov x29, sp; sub x19, x0, #0x130; mov x0, x19
+    0x07dca36c bl #0x745c198
+          setup: mov x29, sp; mov x19, x0; add x0, x0, #0x1e8
+    0x07dca374 bl #0x6f5ea24
+          setup: add x0, x0, #0x1e8; bl #0x745c198; add x0, x19, #0x130
+    0x07dca388 bl #0x8b35660   PLT: free
+          setup: adrp x8, #0x97a2000; add x8, x8, #0x5d0; str x8, [x19, #0x110]
+    0x07dca390 bl #0x6f5eac4
+          setup: str x8, [x19, #0x110]; bl #0x8b35660; mov x0, x19
+    0x07dca3cc bl #0x745c198
+          setup: mov x19, x0; sub x20, x0, #0x110; add x0, x0, #0xd8
+    0x07dca3d4 bl #0x6f5ea24
+          setup: add x0, x0, #0xd8; bl #0x745c198; add x0, x19, #0x20
+    0x07dca3e8 bl #0x8b35660   PLT: free
+          setup: adrp x8, #0x97a2000; add x8, x8, #0x5d0; str x8, [x19]
+    0x07dca414 bl #0x745c198
+          setup: mov x19, x0; sub x20, x0, #0x110; add x0, x0, #0xd8
+    0x07dca41c bl #0x6f5ea24
+          setup: add x0, x0, #0xd8; bl #0x745c198; add x0, x19, #0x20
+    0x07dca430 bl #0x8b35660   PLT: free
+          setup: adrp x8, #0x97a2000; add x8, x8, #0x5d0; str x8, [x19]
+    0x07dca438 bl #0x6f5eac4
+          setup: str x8, [x19]; bl #0x8b35660; mov x0, x20
+    0x07dca46c bl #0x745c198
+          setup: mov x19, x0; sub x20, x0, #0x130; add x0, x0, #0xb8
+    0x07dca474 bl #0x6f5ea24
+          setup: add x0, x0, #0xb8; bl #0x745c198; mov x0, x19
+    0x07dca488 bl #0x8b35660   PLT: free
+          setup: adrp x8, #0x97a2000; add x8, x8, #0x5d0; stur x8, [x19, #-0x20]
+    0x07dca4b4 bl #0x745c198
+          setup: mov x19, x0; sub x20, x0, #0x130; add x0, x0, #0xb8
+    0x07dca4bc bl #0x6f5ea24
+          setup: add x0, x0, #0xb8; bl #0x745c198; mov x0, x19
+    0x07dca4d0 bl #0x8b35660   PLT: free
+          setup: adrp x8, #0x97a2000; add x8, x8, #0x5d0; stur x8, [x19, #-0x20]
+    0x07dca4d8 bl #0x6f5eac4
+          setup: stur x8, [x19, #-0x20]; bl #0x8b35660; mov x0, x20
+    0x07dca500 bl #0x745c198
+          setup: mov x29, sp; mov x19, x0; sub x20, x0, #0x1e8
+    0x07dca508 bl #0x6f5ea24
+          setup: sub x20, x0, #0x1e8; bl #0x745c198; sub x0, x19, #0xb8
+    0x07dca51c bl #0x8b35660   PLT: free
+          setup: adrp x8, #0x97a2000; add x8, x8, #0x5d0; stur x8, [x19, #-0xd8]
+    0x07dca544 bl #0x745c198
+          setup: mov x29, sp; mov x19, x0; sub x20, x0, #0x1e8
+    0x07dca54c bl #0x6f5ea24
+          setup: sub x20, x0, #0x1e8; bl #0x745c198; sub x0, x19, #0xb8
+    0x07dca560 bl #0x8b35660   PLT: free
+          setup: adrp x8, #0x97a2000; add x8, x8, #0x5d0; stur x8, [x19, #-0xd8]
+    0x07dca568 bl #0x6f5eac4
+          setup: stur x8, [x19, #-0xd8]; bl #0x8b35660; mov x0, x20
+    0x07dca5a8 bl #0x7dd257c
+          setup: mrs x20, tpidr_el0; ldr x8, [x20, #0x28]; stur x8, [x29, #-8]
+    0x07dca5e0 bl #0x7dbce98
+          setup: mov x0, sp; str x23, [sp, #0x20]; str x8, [sp]
+    0x07dca610 blr x8
+          setup: mov x0, sp; add x8, x8, #0x20; ldr x8, [x8]
+    0x07dca648 bl #0x8b35290   PLT: __stack_chk_fail
+          setup: ldr x23, [sp, #0x50]; add sp, sp, #0x80; ret 
+    0x07dca674 bl #0x8b35260   PLT: _Znwm
+          setup: stp x29, x30, [sp, #-0x10]!; mov x29, sp; mov w0, #0x10
+    0x07dca6b4 bl #0x7dd8188
+          setup: mov x29, sp; adrp x0, #0xa4b2000; add x0, x0, #0x718
+    0x07dca700 bl #0x2efc3dc
+          setup: str wzr, [x8, #0x710]; stp q0, q0, [x19]; str q0, [x19, #0x20]
+    0x07dca770 bl #0x74e6b00
+          setup: mov x19, x1; add x0, sp, #0x38; mov x1, xzr
+    0x07dca77c bl #0x74e6b00
+          setup: bl #0x74e6b00; add x0, sp, #8; mov x1, xzr
+    0x07dca79c bl #0x74e6c58
+          setup: lsr x8, x8, #1; csinc x1, x9, x20, ne; csel x2, x8, x10, eq
+    0x07dca7a4 bl #0x74e6d24
+          setup: csel x2, x8, x10, eq; bl #0x74e6c58; add x0, sp, #8
+    0x07dca7c8 bl #0x74e6c58
+          setup: add x0, sp, #8; add x1, sp, #4; mov w2, #1
+    0x07dca7e0 bl #0x74e6d24
+          setup: cmp w20, w8; b.lt #0x7dca7bc; add x0, sp, #8
+    0x07dca7e4 bl #0x8b35680   PLT: _Znam
+          setup: b.lt #0x7dca7bc; add x0, sp, #8; bl #0x74e6d24
+    0x07dca7f0 bl #0x74e6d24
+          setup: bl #0x8b35680; mov x20, x0; add x0, sp, #8
+    0x07dca7fc bl #0x74e6d10
+          setup: bl #0x74e6d24; str w0, [sp, #4]; add x0, sp, #8
+    0x07dca808 bl #0x74e6d24
+          setup: bl #0x74e6d10; mov x21, x0; add x0, sp, #8
+    0x07dca824 bl #0x7b2c568
+          setup: add x4, sp, #4; mov x1, x21; mov x3, x20
+    0x07dca838 bl #0x7b2c558
+          setup: adrp x21, #0xa4b2000; add x21, x21, #0x7b8; mov x0, x21
+    0x07dca844 bl #0x7b2c560
+          setup: bl #0x7b2c558; mov x22, x0; mov x0, x21
+    0x07dca854 bl #0x74e6c58
+          setup: mov w2, w0; add x0, sp, #0x38; mov x1, x22
+    0x07dca864 bl #0x74e6c58
+          setup: ldrsw x2, [sp, #4]; add x0, sp, #0x38; mov x1, x20
+    0x07dca86c bl #0x8b356b0   PLT: _ZdaPv
+          setup: mov x1, x20; bl #0x74e6c58; mov x0, x20
+    0x07dca874 bl #0x74e6e74
+          setup: mov x0, x20; bl #0x8b356b0; add x0, sp, #8
+    0x07dca87c bl #0x74e6d24
+          setup: add x0, sp, #8; bl #0x74e6e74; add x0, sp, #0x38
+    0x07dca880 bl #0x74b8d24
+          setup: bl #0x74e6e74; add x0, sp, #0x38; bl #0x74e6d24
+    0x07dca890 bl #0x8b35680   PLT: _Znam
+          setup: mov x20, x0; add w21, w20, #1; mov x0, x21
+    0x07dca8a0 bl #0x8b35360   PLT: memset
+          setup: mov w1, wzr; mov x2, x21; mov x22, x0
+    0x07dca8b0 bl #0x74e6d10
+          setup: add x0, sp, #0x38; stp xzr, xzr, [sp, #8]; str xzr, [sp, #0x18]
+    0x07dca8bc bl #0x74e6d24
+          setup: bl #0x74e6d10; mov x21, x0; add x0, sp, #0x38
+    0x07dca8d4 bl #0x74b8d5c
+          setup: mov x0, x21; mov x2, x22; mov w4, wzr
+    0x07dca8dc bl #0x8b35330   PLT: strlen
+          setup: mov w4, wzr; bl #0x74b8d5c; mov x0, x22
+    0x07dca8f0 bl #0x2efb614
+          setup: add x0, sp, #8; mov x1, x22; add x21, sp, #8
+    0x07dca8f8 bl #0x8b356b0   PLT: _ZdaPv
+          setup: add x21, sp, #8; bl #0x2efb614; mov x0, x22
+    0x07dcaa14 bl #0x8b356b0   PLT: _ZdaPv
+          setup: mov w20, wzr; b #0x7dcacd0; mov x0, x20
+    0x07dcaa1c bl #0x74e6e74
+          setup: mov x0, x20; bl #0x8b356b0; add x0, sp, #8
+    0x07dcaca4 bl #0x8b35330   PLT: strlen
+          setup: cmp w12, #0; csel x21, x8, x9, eq; mov x0, x21
+    0x07dcacb4 bl #0x2efb614
+          setup: mov x2, x0; mov x0, x19; mov x1, x21
+    0x07dcacc4 bl #0x2efa56c
+          setup: ldrb w8, [sp, #8]; tbz w8, #0, #0x7dcacc8; ldr x0, [sp, #0x18]
+    0x07dcaccc bl #0x74e6e74
+          setup: ldr x0, [sp, #0x18]; bl #0x2efa56c; add x0, sp, #0x38
+    0x07dcad28 bl #0x8b35290   PLT: __stack_chk_fail
+          setup: b.ne #0x7dcad08; strb w11, [x9]; b #0x7dcad08
+    0x07dcad88 bl #0x8b35240   PLT: __cxa_atexit
+          setup: strb w8, [x1, #8]!; stur q0, [x19, #9]; sturh w9, [x19, #0x19]
+    0x07dcadbc bl #0x8b35240   PLT: __cxa_atexit
+          setup: stur w9, [x19, #0x21]; sturh w10, [x19, #0x25]; strb wzr, [x19, #0x27]
+    0x07dcadec bl #0x8b35240   PLT: __cxa_atexit
+          setup: mov x1, x19; stp xzr, xzr, [x19, #8]; stur x9, [x19, #1]
+    0x07dcae08 bl #0x7b2c3bc
+          setup: add x1, x1, #0x5eb; mov x0, x19; mov w2, #0x20
+    0x07dcae54 bl #0x8b35260   PLT: _Znwm
+          setup: mov w0, #0x78; mov w23, w1; mov x19, x8
+    0x07dcaea4 bl #0x2efa4dc
+          setup: orr x26, x24, #0xf; mov w1, wzr; add x0, x26, #1
+    0x07dcaec4 bl #0x8b352f0   PLT: memmove
+          setup: mov x0, x25; mov x1, x21; mov x2, x24
+    0x07dcaf48 bl #0x7f522dc
+          setup: lsr x8, x10, #1; csel x0, x13, x11, eq; csel w1, w8, w12, eq
+    0x07dcaf60 bl #0x7fadbf0
+          setup: mov x1, xzr; mov x3, x22; mov x24, x0
+    0x07dcaf70 bl #0x7f50134
+          setup: str x0, [x20, #0x20]; cbz x0, #0x7dcaf80; mov x0, x24
+    0x07dcaf80 bl #0x7f7a684
+          setup: ldr x0, [x26]; cbnz x0, #0x7dcafcc; b #0x7dcb040
+    0x07dcafa0 bl #0x7f7a6a0
+          setup: mov x0, x8; mov x1, x22; mov w2, #0x1ff
+    0x07dcafa8 bl #0x8b35330   PLT: strlen
+          setup: mov w2, #0x1ff; bl #0x7f7a6a0; mov x0, x22
+    0x07dcafb8 bl #0x2efb614
+          setup: mov x2, x0; mov x0, x21; mov x1, x22
+    0x07dcafc0 bl #0x7f50134
+          setup: mov x1, x22; bl #0x2efb614; mov x0, x24
+    0x07dcafd0 bl #0x7f972ac
+          setup: ldr x0, [x26]; cbz x0, #0x7dcb040; mov x1, xzr
+    0x07dcafd8 bl #0x7f96a98
+          setup: mov x1, xzr; bl #0x7f972ac; str x0, [x20, #0x28]
+    0x07dcaff4 bl #0x7fbdfec
+          setup: mov w2, #0x1001; mov w3, w23; mov x4, xzr
+    0x07dcb004 bl #0x7f7a684
+          setup: tbnz w0, #0x1f, #0x7dcb004; mov w8, #1; b #0x7dcb044
+    0x07dcb024 bl #0x7f7a6a0
+          setup: mov x0, x8; mov x1, x22; mov w2, #0x1ff
+    0x07dcb02c bl #0x8b35330   PLT: strlen
+          setup: mov w2, #0x1ff; bl #0x7f7a6a0; mov x0, x22
+    0x07dcb03c bl #0x2efb614
+          setup: mov x2, x0; mov x0, x21; mov x1, x22
+    0x07dcb050 bl #0x8b35260   PLT: _Znwm
+          setup: mov w0, #0x20; strb w8, [x20, #0x70]; str x20, [x19]
+    0x07dcb080 bl #0x8b382d0   PLT: abort
+          setup: ldp x26, x25, [sp, #0x10]; ldp x29, x30, [sp], #0x50; ret 
+    0x07dcb0ac bl #0x2efa56c
+          setup: str x8, [x19]; cbz x0, #0x7dcb0b0; str x0, [x19, #0x60]
+    0x07dcb0b8 bl #0x7f82528
+          setup: bl #0x2efa56c; ldr x0, [x19, #0x20]; cbz x0, #0x7dcb0c0
+    0x07dcb0c8 bl #0x7f97584
+          setup: str xzr, [x19, #0x20]; ldr x0, [x19, #0x28]; cbz x0, #0x7dcb0d0
+    0x07dcb0dc bl #0x2efa56c
+          setup: ldrb w8, [x19, #0x38]; tbz w8, #0, #0x7dcb0e0; ldr x0, [x19, #0x48]
+    0x07dcb114 bl #0x7dcb084
+          setup: str x19, [sp, #0x10]; mov x29, sp; mov x19, x0
+    0x07dcb180 bl #0x7f96b34
+          setup: mov x3, x22; mov x4, x21; str xzr, [sp, #0x10]
+    0x07dcb198 bl #0x68348b4
+          setup: ldr x1, [sp, #0x10]; add x2, sp, #0xc; strb wzr, [sp, #0xc]
+    0x07dcb1b0 bl #0x7f96b34
+          setup: ldr x1, [x20, #0x58]; mov x3, x22; mov x4, x21
+    0x07dcb1d8 bl #0x7f7a684
+          setup: subs x21, x8, x9; b.ne #0x7dcb300; b #0x7dcb214
+    0x07dcb1f8 bl #0x7f7a6a0
+          setup: mov x0, x8; mov x1, x21; mov w2, #0x1ff
+    0x07dcb200 bl #0x8b35330   PLT: strlen
+          setup: mov w2, #0x1ff; bl #0x7f7a6a0; mov x0, x21
+    0x07dcb210 bl #0x2efb614
+          setup: mov x2, x0; add x0, x20, #0x38; mov x1, x21
+    0x07dcb220 bl #0x8b35260   PLT: _Znwm
+          setup: mov w0, #0x38; stp xzr, xzr, [x19]; str xzr, [x19, #0x10]
+    0x07dcb28c bl #0x2efa4dc
+          setup: orr x26, x20, #0xf; mov w1, wzr; add x0, x26, #1
+    0x07dcb2ac bl #0x8b352f0   PLT: memmove
+          setup: mov x0, x23; mov x1, x22; mov x2, x20
+    0x07dcb310 bl #0x2efa4dc
+          setup: b.mi #0x7dcb3d4; mov x0, x21; mov w1, wzr
+    0x07dcb3cc bl #0x8b35290   PLT: __stack_chk_fail
+          setup: ldur x9, [x29, #-8]; cmp x8, x9; b.eq #0x7dcb2cc
+    0x07dcb3d0 bl #0x8b382d0   PLT: abort
+          setup: cmp x8, x9; b.eq #0x7dcb2cc; bl #0x8b35290
+    0x07dcb3d4 bl #0x8b382d0   PLT: abort
+          setup: b.eq #0x7dcb2cc; bl #0x8b35290; bl #0x8b382d0
+    0x07dcb40c bl #0x8b38920   PLT: _ZNSt6__ndk119__shared_weak_countD2Ev   <<<< CRYPTO?
+          setup: add x8, x8, #0xd70; mov x19, x0; str x8, [x0]
+    0x07dcb448 bl #0x8b38920   PLT: _ZNSt6__ndk119__shared_weak_countD2Ev   <<<< CRYPTO?
+          setup: str x19, [sp, #0x10]; mov x29, sp; mov x19, x0
+    0x07dcb510 bl #0x8075ce8
+          setup: ldrb w9, [x0, #8]; strb w8, [x0, #9]; cbz w9, #0x7dcb70c
+    0x07dcb52c bl #0x2f93838
+          setup: ldr x9, [x8]; str x9, [x8, #8]; add x0, sp, #0x18
+    0x07dcb540 bl #0x2f93850
+          setup: add x0, sp, #0x18; mov x1, x20; mov x23, sp
+    0x07dcb568 bl #0x7dcb738
+          setup: tst w8, #1; csel x8, x10, x9, eq; add x1, x8, #1
+    0x07dcb588 bl #0x2f17588
+          setup: tst w9, #1; sub x1, x8, x0; csel x2, x11, x10, eq
+    0x07dcb5c4 bl #0x8b3aac0   PLT: time
+          setup: stp q0, q0, [sp, #0x160]; stp q0, q0, [sp, #0x180]; stp q0, q0, [sp, #0x1a0]
+    0x07dcb640 bl #0x2f1774c
+          setup: add x0, sp, #0x1e8; mov w1, #0x200; csel x3, x23, x8, eq
+    0x07dcb648 bl #0x8b35330   PLT: strlen
+          setup: csel x3, x23, x8, eq; bl #0x2f1774c; add x0, sp, #0x1e8
+    0x07dcb658 bl #0x2efb614
+          setup: mov x2, x0; add x0, x23, #0x17; add x1, sp, #0x1e8
+    0x07dcb6cc bl #0x8075d58
+          setup: add x3, sp, #0x40; csinc x2, x9, x20, ne; mov x0, x19
+    0x07dcb6e0 bl #0x2efa56c
+          setup: str x0, [x22, #0xe08]; tbz w8, #0, #0x7dcb6e4; ldr x0, [sp, #0x10]
+    0x07dcb700 bl #0x2efa56c
+          setup: str x8, [sp, #0x18]; tbz w9, #0, #0x7dcb704; ldr x0, [sp, #0x30]
+    0x07dcb708 bl #0x2f93834
+          setup: ldr x0, [sp, #0x30]; bl #0x2efa56c; add x0, sp, #0x18
+    0x07dcb734 bl #0x8b35290   PLT: __stack_chk_fail
+          setup: ldp x28, x23, [sp, #0x10]; ldp x29, x30, [sp], #0x40; ret 
+    0x07dcb7ac bl #0x2efa4dc
+          setup: mov x8, #0x7fffffffffffffff; csel x25, x9, x8, lo; mov x0, x25
+    0x07dcb7cc bl #0x8b35360   PLT: memset
+          setup: mov x0, x20; mov w1, wzr; mov x2, x23
+    0x07dcb894 bl #0x8b35360   PLT: memset
+          setup: mov w1, wzr; mov x2, x23; add x20, x21, x23
+    0x07dcb8b8 bl #0x8b382d0   PLT: abort
+          setup: ldr x27, [sp, #0x10]; ldp x29, x30, [sp], #0x60; ret 
+    0x07dcb900 bl #0x8b35330   PLT: strlen
+          setup: mov x0, x20; stp xzr, xzr, [sp, #0x20]; str xzr, [sp, #0x30]
+    0x07dcb914 bl #0x2efb614
+          setup: add x0, sp, #0x20; mov x1, x20; add x20, sp, #0x20
+    0x07dcb91c bl #0x2f8e028
+          setup: add x20, sp, #0x20; bl #0x2efb614; add x0, sp, #0x38
+    0x07dcb944 bl #0x8b35330   PLT: strlen
+          setup: csel x20, x10, x9, eq; cbz x20, #0x7dcb958; mov x0, x20
+    0x07dcb954 bl #0x2efb614
+          setup: mov x2, x0; add x0, sp, #8; mov x1, x20
+    0x07dcb968 bl #0x2f8e054
+          setup: add x1, sp, #8; mov x2, x19; mov w3, #1
+    0x07dcb978 bl #0x2efa56c
+          setup: ldrb w8, [sp, #8]; tbz w8, #0, #0x7dcb97c; ldr x0, [sp, #0x18]
+    0x07dcb9ac bl #0x2efa56c
+          setup: ldrb w8, [sp, #0xd8]; tbz w8, #0, #0x7dcb9b0; ldr x0, [sp, #0xe8]
+    0x07dcb9bc bl #0x2efa56c
+          setup: ldrb w8, [sp, #0x98]; tbz w8, #0, #0x7dcb9c0; ldr x0, [sp, #0xa8]
+    0x07dcb9c8 bl #0x2f95734
+          setup: bl #0x2efa56c; add x8, sp, #0x38; add x0, x8, #0x30
+    0x07dcb9e4 bl #0x8b352c0   PLT: _ZdlPv
+          setup: cmp x8, #0x11; b.lo #0x7dcba00; ldr x0, [x19]
+    0x07dcba30 bl #0x8b352c0   PLT: _ZdlPv
+          setup: cmp x19, x20; b.eq #0x7dcba5c; ldr x0, [x19], #8
+    0x07dcba64 bl #0x8b352c0   PLT: _ZdlPv
+          setup: str x8, [sp, #0x48]; ldr x0, [sp, #0x38]; cbz x0, #0x7dcba68
+    0x07dcba74 bl #0x2efa56c
+          setup: ldrb w8, [sp, #0x20]; tbz w8, #0, #0x7dcba78; ldr x0, [sp, #0x30]
+    0x07dcba9c bl #0x8b35290   PLT: __stack_chk_fail
+          setup: ldp x29, x30, [sp, #0x100]; add sp, sp, #0x130; ret 
+    0x07dcbb60 bl #0x2f1774c
+          setup: add x0, sp, #8; mov w1, #0x200; csel x3, x21, x8, eq
+    0x07dcbb68 bl #0x8b35330   PLT: strlen
+          setup: csel x3, x21, x8, eq; bl #0x2f1774c; add x0, sp, #8
+    0x07dcbb78 bl #0x2efb614
+          setup: mov x2, x0; add x0, x21, #0x17; add x1, sp, #8
+    0x07dcbbb0 bl #0x8075f70
+          setup: mov x0, x19; csinc x2, x9, x22, ne; mov w3, #4
+    0x07dcbbd8 bl #0x80762d0
+          setup: adrp x2, #0xc90000; add x2, x2, #0x660; mov x0, x19
+    0x07dcbc24 bl #0x7dcb8bc
+          setup: b.eq #0x7dcbc2c; adrp x0, #0xa4b3000; add x0, x0, #0xdf0
+    0x07dcbc2c bl #0x8075ce8
+          setup: add x0, x0, #0xdf0; bl #0x7dcb8bc; ldr x0, [x21, #0xe18]
+    0x07dcbc34 bl #0x8075ce8
+          setup: ldr x0, [x21, #0xe18]; bl #0x8075ce8; ldr x0, [x22, #0xe20]
+    0x07dcbc6c bl #0x8b35290   PLT: __stack_chk_fail
+          setup: ldur x10, [x29, #-8]; cmp x8, x10; b.eq #0x7dcbc84
+    0x07dcbd38 bl #0x2efc42c
+          setup: mov w22, w2; mov x23, x1; stur x8, [x29, #-8]
+    0x07dcbd44 bl #0x2f914c8
+          setup: bl #0x2efc42c; add x0, sp, #8; mov w1, w19
+    0x07dcbd5c bl #0x2f92514
+          setup: adrp x1, #0xbc9000; add x1, x1, #0xec9; mov x0, x21
+    0x07dcbd64 bl #0x2f8f898
+          setup: mov x0, x21; bl #0x2f92514; add x1, sp, #8
+    0x07dcbd6c bl #0x2f91730
+          setup: add x1, sp, #8; bl #0x2f8f898; add x0, sp, #8
+    0x07dcbd84 bl #0x2f913c8
+          setup: ldr x9, [x23, #0x10]; tst w8, #1; csinc x1, x9, x23, ne
+    0x07dcbd94 bl #0x2f92514
+          setup: adrp x1, #0xa13000; add x1, x1, #0x921; mov x0, x21
+    0x07dcbd9c bl #0x2f8f898
+          setup: mov x0, x21; bl #0x2f92514; add x1, sp, #8
+    0x07dcbda4 bl #0x2f91730
+          setup: add x1, sp, #8; bl #0x2f8f898; add x0, sp, #8
+    0x07dcbdb0 bl #0x2f9135c
+          setup: bl #0x2f91730; add x0, sp, #8; mov w1, w22
+    0x07dcbdc0 bl #0x2f92514
+          setup: adrp x1, #0xb5d000; add x1, x1, #0xb2c; mov x0, x21
+    0x07dcbdc8 bl #0x2f8f898
+          setup: mov x0, x21; bl #0x2f92514; add x1, sp, #8
+    0x07dcbdd0 bl #0x2f91730
+          setup: add x1, sp, #8; bl #0x2f8f898; add x0, sp, #8
+    0x07dcbddc bl #0x2f9135c
+          setup: bl #0x2f91730; add x0, sp, #8; mov w1, w20
+    0x07dcbdec bl #0x2f92514
+          setup: adrp x1, #0xba3000; add x1, x1, #0x2c9; mov x0, x21
+    0x07dcbdf4 bl #0x2f8f898
+          setup: mov x0, x21; bl #0x2f92514; add x1, sp, #8
+    0x07dcbdfc bl #0x2f91730
+          setup: add x1, sp, #8; bl #0x2f8f898; add x0, sp, #8
+    0x07dcbe64 bl #0x2f1774c
+          setup: add x0, sp, #8; mov w1, #0x200; csel x3, x20, x8, eq
+    0x07dcbe6c bl #0x8b35330   PLT: strlen
+          setup: csel x3, x20, x8, eq; bl #0x2f1774c; add x0, sp, #8
+    0x07dcbe7c bl #0x2efb614
+          setup: mov x2, x0; add x0, x20, #0x17; add x1, sp, #8
+    0x07dcbe8c bl #0x7dcb4c0
+          setup: tbz w19, #0, #0x7dcbed8; adrp x0, #0xa4b3000; add x0, x0, #0xdf0
+    0x07dcbf00 bl #0x8075ce8
+          setup: ldrb w9, [x0, #8]; strb w8, [x0, #9]; cbz w9, #0x7dcbfac
+    0x07dcbf38 bl #0x8076190
+          setup: mov x0, x19; tst w8, #1; csel x2, x10, x9, eq
+    0x07dcbf68 bl #0x8075ce8
+          setup: mov w9, #1; strb w9, [x0, #9]; cbz w8, #0x7dcbf74
+    0x07dcbf7c bl #0x8b38640   PLT: _ZNSt6__ndk111timed_mutex6unlockEv
+          setup: str xzr, [x8, #0xe10]; adrp x0, #0xa4b3000; add x0, x0, #0xe80
+    0x07dcbfb4 bl #0x8b35290   PLT: __stack_chk_fail
+          setup: ret ; strb w8, [x0, #9]; b #0x7dcbf74
+    0x07dcbff4 bl #0x2efc42c
+          setup: mov x19, x2; mov x21, x1; stur x8, [x29, #-8]
+    0x07dcc014 bl #0x2f92514
+          setup: add x0, x0, #0xdf0; adrp x1, #0xbc9000; add x1, x1, #0xec9
+    0x07dcc018 bl #0x2f91f88
+          setup: adrp x1, #0xbc9000; add x1, x1, #0xec9; bl #0x2f92514
+    0x07dcc030 bl #0x2f92514
+          setup: add x0, x0, #0xdf0; adrp x1, #0xbc9000; add x1, x1, #0xec9
+    0x07dcc034 bl #0x2f92fc8
+          setup: adrp x1, #0xbc9000; add x1, x1, #0xec9; bl #0x2f92514
+    0x07dcc04c bl #0x2f92514
+          setup: add x0, x0, #0xdf0; adrp x1, #0xbc9000; add x1, x1, #0xec9
+    0x07dcc050 bl #0x2f91c80
+          setup: adrp x1, #0xbc9000; add x1, x1, #0xec9; bl #0x2f92514
+    0x07dcc078 bl #0x2f92514
+          setup: add x0, x0, #0xdf0; adrp x1, #0xa13000; add x1, x1, #0x921
+    0x07dcc07c bl #0x2f91f88
+          setup: adrp x1, #0xa13000; add x1, x1, #0x921; bl #0x2f92514
+    0x07dcc094 bl #0x2f92514
+          setup: add x0, x0, #0xdf0; adrp x1, #0xa13000; add x1, x1, #0x921
+    0x07dcc098 bl #0x2f9303c
+          setup: adrp x1, #0xa13000; add x1, x1, #0x921; bl #0x2f92514
+    0x07dcc0b0 bl #0x2f92514
+          setup: add x0, x0, #0xdf0; adrp x1, #0xa13000; add x1, x1, #0x921
+    0x07dcc0bc bl #0x2f919d8
+          setup: bl #0x2f92514; mov x8, sp; mov x23, sp
+    0x07dcc0dc bl #0x8b35330   PLT: strlen
+          setup: csel x23, x10, x9, eq; cbz x23, #0x7dcc0f0; mov x0, x23
+    0x07dcc0ec bl #0x2efb614
+          setup: mov x2, x0; mov x0, x22; mov x1, x23
+    0x07dcc0fc bl #0x2efa56c
+          setup: ldrb w8, [sp]; tbz w8, #0, #0x7dcc100; ldr x0, [sp, #0x10]
+    0x07dcc110 bl #0x2f92514
+          setup: add x0, x0, #0xdf0; adrp x1, #0xb5d000; add x1, x1, #0xb2c
+    0x07dcc114 bl #0x2f91f88
+          setup: adrp x1, #0xb5d000; add x1, x1, #0xb2c; bl #0x2f92514
+    0x07dcc12c bl #0x2f92514
+          setup: add x0, x0, #0xdf0; adrp x1, #0xb5d000; add x1, x1, #0xb2c
+    0x07dcc130 bl #0x2f92fe8
+          setup: adrp x1, #0xb5d000; add x1, x1, #0xb2c; bl #0x2f92514
+    0x07dcc148 bl #0x2f92514
+          setup: add x0, x0, #0xdf0; adrp x1, #0xb5d000; add x1, x1, #0xb2c
+    0x07dcc14c bl #0x2f91ad4
+          setup: adrp x1, #0xb5d000; add x1, x1, #0xb2c; bl #0x2f92514
+    0x07dcc164 bl #0x2f92514
+          setup: add x0, x0, #0xdf0; adrp x1, #0xba3000; add x1, x1, #0x2c9
+    0x07dcc168 bl #0x2f91f88
+          setup: adrp x1, #0xba3000; add x1, x1, #0x2c9; bl #0x2f92514
+    0x07dcc180 bl #0x2f92514
+          setup: add x0, x0, #0xdf0; adrp x1, #0xba3000; add x1, x1, #0x2c9
+    0x07dcc184 bl #0x2f92fe8
+          setup: adrp x1, #0xba3000; add x1, x1, #0x2c9; bl #0x2f92514
+    0x07dcc19c bl #0x2f92514
+          setup: add x0, x0, #0xdf0; adrp x1, #0xba3000; add x1, x1, #0x2c9
+    0x07dcc1a0 bl #0x2f91ad4
+          setup: adrp x1, #0xba3000; add x1, x1, #0x2c9; bl #0x2f92514
+    0x07dcc1b0 bl #0x8b38640   PLT: _ZNSt6__ndk111timed_mutex6unlockEv
+          setup: str w0, [x19]; adrp x0, #0xa4b3000; add x0, x0, #0xe80
+    0x07dcc1e0 bl #0x8b35290   PLT: __stack_chk_fail
+          setup: ldp x29, x30, [sp, #0x20]; add sp, sp, #0x60; ret 
+    0x07dcc214 bl #0x2efc42c
+          setup: mov x19, x0; mov x0, x20; stur x8, [x29, #-8]
+    0x07dcc22c bl #0x2f913c8
+          setup: ldr x9, [x19, #0x10]; tst w8, #1; csinc x1, x9, x19, ne
+    0x07dcc244 bl #0x2f92514
+          setup: adrp x1, #0xbdc000; add x1, x1, #0xb80; mov x0, x19
+    0x07dcc24c bl #0x2f8f898
+          setup: mov x0, x19; bl #0x2f92514; mov x1, sp
+    0x07dcc254 bl #0x2f91730
+          setup: mov x1, sp; bl #0x2f8f898; mov x0, sp
+    0x07dcc25c bl #0x7dcb4c0
+          setup: mov x0, sp; bl #0x2f91730; mov x0, x19
+    0x07dcc264 bl #0x8b38640   PLT: _ZNSt6__ndk111timed_mutex6unlockEv
+          setup: mov x0, x19; bl #0x7dcb4c0; add x0, x20, #8
+    0x07dcc28c bl #0x8b35290   PLT: __stack_chk_fail
+          setup: ldr x21, [sp, #0x30]; add sp, sp, #0x50; ret 
+    0x07dcc2c0 bl #0x2efc42c
+          setup: mov x19, x0; add x0, x20, #0x50; stur x8, [x29, #-8]
+    0x07dcc2e0 bl #0x2f92514
+          setup: add x0, x0, #0xdf0; adrp x1, #0xbdc000; add x1, x1, #0xb80
+    0x07dcc2e4 bl #0x2f91f88
+          setup: adrp x1, #0xbdc000; add x1, x1, #0xb80; bl #0x2f92514
+    0x07dcc2fc bl #0x2f92514
+          setup: add x0, x0, #0xdf0; adrp x1, #0xbdc000; add x1, x1, #0xb80
+    0x07dcc300 bl #0x2f9303c
+          setup: adrp x1, #0xbdc000; add x1, x1, #0xb80; bl #0x2f92514
+    0x07dcc318 bl #0x2f92514
+          setup: add x0, x0, #0xdf0; adrp x1, #0xbdc000; add x1, x1, #0xb80
+    0x07dcc324 bl #0x2f919d8
+          setup: bl #0x2f92514; mov x8, sp; mov x20, sp
+    0x07dcc344 bl #0x8b35330   PLT: strlen
+          setup: csel x20, x10, x9, eq; cbz x20, #0x7dcc358; mov x0, x20
+    0x07dcc354 bl #0x2efb614
+          setup: mov x2, x0; mov x0, x19; mov x1, x20
+    0x07dcc364 bl #0x2efa56c
+          setup: ldrb w8, [sp]; tbz w8, #0, #0x7dcc368; ldr x0, [sp, #0x10]
+    0x07dcc37c bl #0x8b38640   PLT: _ZNSt6__ndk111timed_mutex6unlockEv
+          setup: mov w19, wzr; adrp x0, #0xa4b3000; add x0, x0, #0xe80
+    0x07dcc3a8 bl #0x8b35290   PLT: __stack_chk_fail
+          setup: ldr x21, [sp, #0x30]; add sp, sp, #0x50; ret 
+    0x07dcc3c4 bl #0x2efc42c
+          setup: adrp x19, #0xa4b3000; add x19, x19, #0xe78; mov x0, x19
+    0x07dcc3d4 bl #0x2f91f98
+          setup: adrp x20, #0xa4b3000; add x20, x20, #0xdf0; mov x0, x20
+    0x07dcc3dc bl #0x7dcb4c0
+          setup: mov x0, x20; bl #0x2f91f98; mov x0, x20
+    0x07dcc424 bl #0x2efc3dc
+          setup: add x2, x2, #0x25e; mov x0, x20; str wzr, [x19]
+    0x07dcc440 bl #0x8b35240   PLT: __cxa_atexit
+          setup: mov x1, x20; mov x2, x21; ldr x0, [x0, #0xc88]
+    0x07dcc464 bl #0x8b35240   PLT: __cxa_atexit
+          setup: stur xzr, [x19, #0x14]; stur xzr, [x19, #0xc]; str xzr, [x1, #4]!
+    0x07dcc480 bl #0x8b35240   PLT: __cxa_atexit
+          setup: stur xzr, [x19, #0x2c]; stur xzr, [x19, #0x24]; str xzr, [x1, #0x1c]!
+    0x07dcc49c bl #0x8b35240   PLT: __cxa_atexit
+          setup: mov x1, x19; mov x2, x21; stp xzr, xzr, [x19, #8]
+    0x07dcc4b0 bl #0x2f912cc
+          setup: add x19, x19, #0xdf0; mov x0, x19; mov w1, wzr
+    0x07dcc4fc bl #0x8b35260   PLT: _Znwm
+          setup: mov w0, #0x128; mov w19, w2; mov x20, x1
+    0x07dcc524 bl #0x7dcd698
+          setup: str x8, [x0]; mov x0, x23; mov w2, w19
+    0x07dcc53c bl #0x8b34ef0
+          setup: cbz x19, #0x7dcc544; add x1, x19, #8; mov x0, #-1
+    0x07dcc564 blr x8
+          setup: ldr x8, [x19]; mov x0, x19; ldr x8, [x8, #0x10]

@@ -1,0 +1,21 @@
+cmd: exec grep ca-setup /tmp/kgs/pipeline.log | head -12; echo ---; openssl x509 -in /tmp/kgs/mitm/mitmproxy-ca-cert.pem -noout -subject_hash_old -subject_hash; echo ---; sudo docker exec redroid sh -c "ls /system/etc/security/cacerts/ | tail -4"
+at: 10:10:48
+$ grep ca-setup /tmp/kgs/pipeline.log | head -12; echo ---; openssl x509 -in /tmp/kgs/mitm/mitmproxy-ca-cert.pem -noout -subject_hash_old -subject_hash; echo ---; sudo docker exec redroid sh -c "ls /system/etc/security/cacerts/ | tail -4"
+ca-setup: generating a CA and a server key for pes22-game.cs.konami.net
+ca-setup: wrote: ca.crt ca.key 
+ca-setup: installing the CA into the SYSTEM trust store
+ca-setup: subject hash: 928a8368
+ca-setup: system store is writable, installing
+ca-setup: INSTALLED into /system/etc/security/cacerts/928a8368.0
+ca-setup: RESULT: installed without remount
+---
+928a8368
+293a83db
+---
+f8fc53da.0
+fb5fa911.0
+fd08c599.0
+fde84897.0
+rc=0
+gamepid: 
+flows: 0

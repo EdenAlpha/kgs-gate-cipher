@@ -1,0 +1,8 @@
+cmd: exec bash -c true; echo G6; adb -s 127.0.0.1:5555 shell input swipe 640 477 640 477 250; sleep 10; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; sudo iptables-legacy -t nat -L PREROUTING -n | grep -c DNAT
+at: 06:08:01
+$ bash -c true; echo G6; adb -s 127.0.0.1:5555 shell input swipe 640 477 640 477 250; sleep 10; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; sudo iptables-legacy -t nat -L PREROUTING -n | grep -c DNAT
+G6
+0
+rc=1
+gamepid: 3058
+flows: 0

@@ -1,0 +1,159 @@
+cmd: exec bash -c true; echo SW; echo "== touchscreen.xml =="; adb -s 127.0.0.1:5555 shell "su 0 cat /vendor/etc/permissions/android.hardware.touchscreen.xml"; echo "== handheld_core_hardware.xml =="; adb -s 127.0.0.1:5555 shell "su 0 cat /vendor/etc/permissions/handheld_core_hardware.xml"; echo "== all permission files count =="; adb -s 127.0.0.1:5555 shell "ls /vendor/etc/permissions/ | wc -l"; echo "== system perms w/ feature tag =="; adb -s 127.0.0.1:5555 shell "grep -c feature /system/etc/permissions/*.xml 2>/dev/null | grep -v \x27:0\x27"
+at: 23:00:12
+$ bash -c true; echo SW; echo "== touchscreen.xml =="; adb -s 127.0.0.1:5555 shell "su 0 cat /vendor/etc/permissions/android.hardware.touchscreen.xml"; echo "== handheld_core_hardware.xml =="; adb -s 127.0.0.1:5555 shell "su 0 cat /vendor/etc/permissions/handheld_core_hardware.xml"; echo "== all permission files count =="; adb -s 127.0.0.1:5555 shell "ls /vendor/etc/permissions/ | wc -l"; echo "== system perms w/ feature tag =="; adb -s 127.0.0.1:5555 shell "grep -c feature /system/etc/permissions/*.xml 2>/dev/null | grep -v \x27:0\x27"
+SW
+== touchscreen.xml ==
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<!-- This is the standard set of features for a touchscreen that does not
+     support multitouch. -->
+<permissions>
+    <feature name="android.hardware.touchscreen" />
+    <feature name="android.hardware.faketouch" />
+</permissions>
+== handheld_core_hardware.xml ==
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<!-- These are the hardware components that all handheld devices except Android Go
+     must include, for Android Go devices include go_handheld_core_hardware.xml.
+     Devices with optional hardware must also include extra hardware files, per the comments below.
+
+     Handheld devices include phones, mobile Internet devices (MIDs),
+     Personal Media Players (PMPs), small tablets (7" or less), and similar
+     devices.
+-->
+<permissions>
+    <!-- This is Android and fully CTS compatible.  Basically this is for CTS tests to use. -->
+    <feature name="android.software.cts" />
+
+    <feature name="android.hardware.audio.output" />
+    <feature name="android.hardware.camera" />
+    <feature name="android.hardware.location" />
+    <feature name="android.hardware.location.network" />
+    <feature name="android.hardware.sensor.compass" />
+    <feature name="android.hardware.sensor.accelerometer" />
+    <feature name="android.hardware.bluetooth" />
+    <feature name="android.hardware.touchscreen" />
+    <feature name="android.hardware.microphone" />
+    <feature name="android.hardware.screen.portrait" />
+    <feature name="android.hardware.screen.landscape" />
+    <!-- Indicate support for the Android security model per the CDD. -->
+    <feature name="android.hardware.security.model.compatible" />
+
+    <!-- basic system services -->
+    <feature name="android.software.app_widgets" />
+    <feature name="android.software.telecom" />
+    <feature name="android.software.voice_recognizers" notLowRam="true" />
+    <feature name="android.software.backup" />
+    <feature name="android.software.home_screen" />
+    <feature name="android.software.input_methods" />
+    <feature name="android.software.picture_in_picture" notLowRam="true" />
+    <feature name="android.software.activities_on_secondary_displays" notLowRam="true" />
+    <feature name="android.software.print" />
+    <feature name="android.software.companion_device_setup" />
+    <feature name="android.software.autofill" />
+    <feature name="android.software.credentials" />
+    <feature name="android.software.cant_save_state" />
+    <feature name="android.software.secure_lock_screen" />
+    <feature name="android.software.window_magnification" />
+
+    <!-- Feature to specify if the device supports adding device admins. -->
+    <feature name="android.software.device_admin" />
+
+    <!-- Feature to specify if the device support managed users. -->
+    <feature name="android.software.managed_users" notLowRam="true"/>
+
+    <!-- Feature to specify if the device supports controls. -->
+    <feature name="android.software.controls" />
+
+    <!-- Devices with all optimizations required to support VR Mode and
+         pass all CDD requirements for this feature may include
+         android.hardware.vr.high_performance -->
+    <!-- Devices that support VR headtracking features and pass all CDD
+         requirements may include
+         android.hardware.vr.headtracking -->
+
+    <!-- devices with GPS must include android.hardware.location.gps.xml -->
+    <!-- devices with an autofocus camera and/or flash must include either
+         android.hardware.camera.autofocus.xml or
+         android.hardware.camera.autofocus-flash.xml -->
+    <!-- devices with a front facing camera must include
+         android.hardware.camera.front.xml -->
+    <!-- devices with WiFi must also include android.hardware.wifi.xml -->
+    <!-- devices that support multitouch must include the most appropriate one
+         of these files:
+
+         If only partial (non-independent) pointers are supported:
+         android.hardware.touchscreen.multitouch.xml
+
+         If up to 4 independently tracked pointers are supported:
+         include android.hardware.touchscreen.multitouch.distinct.xml
+
+         If 5 or more independently tracked pointers are supported:
+         include android.hardware.touchscreen.multitouch.jazzhand.xml
+
+         ONLY ONE of the above should be included. -->
+    <!-- devices with an ambient light sensor must also include
+         android.hardware.sensor.light.xml -->
+    <!-- devices with a proximity sensor must also include
+         android.hardware.sensor.proximity.xml -->
+    <!-- GSM phones must also include android.hardware.telephony.gsm.xml -->
+    <!-- CDMA phones must also include android.hardware.telephony.cdma.xml -->
+    <!-- Devices that have low-latency audio stacks suitable for apps like
+         VoIP may include android.hardware.audio.low_latency.xml. ONLY apps
+         that meet the requirements specified in the CDD may include this. -->
+</permissions>
+== all permission files count ==
+11
+== system perms w/ feature tag ==
+/system/etc/permissions/android.software.live_wallpaper.xml:3
+/system/etc/permissions/android.software.webview.xml:1
+/system/etc/permissions/android.software.window_magnification.xml:2
+/system/etc/permissions/android.test.base.xml:0
+/system/etc/permissions/android.test.mock.xml:0
+/system/etc/permissions/android.test.runner.xml:0
+/system/etc/permissions/com.android.adservices.sdksandbox.xml:2
+/system/etc/permissions/com.android.documentsui.xml:0
+/system/etc/permissions/com.android.future.usb.accessory.xml:0
+/system/etc/permissions/com.android.intentresolver.xml:0
+/system/etc/permissions/com.android.location.provider.xml:0
+/system/etc/permissions/com.android.media.remotedisplay.xml:0
+/system/etc/permissions/com.android.mediadrm.signer.xml:0
+/system/etc/permissions/com.android.networkstack.xml:0
+/system/etc/permissions/javax.obex.xml:0
+/system/etc/permissions/org.apache.http.legacy.xml:0
+/system/etc/permissions/platform.xml:1
+/system/etc/permissions/privapp-permissions-platform.xml:0
+/system/etc/permissions/privapp_allowlist_com.android.adservices.api.xml:0
+/system/etc/permissions/privapp_allowlist_com.android.providers.media.module.xml:0
+rc=0
+gamepid: 
+flows: 0

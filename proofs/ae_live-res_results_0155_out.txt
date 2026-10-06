@@ -1,0 +1,8 @@
+cmd: exec bash -c true; echo UW; adb -s 127.0.0.1:5555 shell am force-stop jp.konami.pesam; sleep 4; adb -s 127.0.0.1:5555 shell monkey -p jp.konami.pesam -c android.intent.category.LAUNCHER 1 >/dev/null 2>&1; sleep 40; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; adb -s 127.0.0.1:5555 shell su 0 du -sm /data/data/jp.konami.pesam 2>/dev/null
+at: 23:55:39
+$ bash -c true; echo UW; adb -s 127.0.0.1:5555 shell am force-stop jp.konami.pesam; sleep 4; adb -s 127.0.0.1:5555 shell monkey -p jp.konami.pesam -c android.intent.category.LAUNCHER 1 >/dev/null 2>&1; sleep 40; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; adb -s 127.0.0.1:5555 shell su 0 du -sm /data/data/jp.konami.pesam 2>/dev/null
+UW
+1974	/data/data/jp.konami.pesam
+rc=0
+gamepid: 
+flows: 0

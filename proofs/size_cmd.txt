@@ -1,0 +1,1 @@
+exec echo SIZE-CHECK; adb -s 127.0.0.1:5555 shell pm path jp.konami.pesam; echo OBB; adb -s 127.0.0.1:5555 shell ls -la /sdcard/Android/obb/jp.konami.pesam; echo DATA; adb -s 127.0.0.1:5555 shell dumpsys package jp.konami.pesam | grep -E versionName

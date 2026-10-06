@@ -1,0 +1,8 @@
+cmd: exec bash -c true; echo U5; adb -s 127.0.0.1:5555 shell input tap 360 284; sleep 3; adb -s 127.0.0.1:5555 shell input keyevent 123; for i in $(seq 1 30); do adb -s 127.0.0.1:5555 shell input keyevent 67; done; sleep 2; E=$(cat /tmp/kgs/creds/GMAIL); adb -s 127.0.0.1:5555 shell input text "$E"; sleep 3; adb -s 127.0.0.1:5555 shell uiautomator dump /sdcard/u.xml >/dev/null 2>&1; echo "== field content =="; adb -s 127.0.0.1:5555 shell cat /sdcard/u.xml | tr ">" "\n" | grep -oE "text=\"[^\"]*gmail[^\"]*\"" | head -3; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+at: 23:29:03
+$ bash -c true; echo U5; adb -s 127.0.0.1:5555 shell input tap 360 284; sleep 3; adb -s 127.0.0.1:5555 shell input keyevent 123; for i in $(seq 1 30); do adb -s 127.0.0.1:5555 shell input keyevent 67; done; sleep 2; E=$(cat /tmp/kgs/creds/GMAIL); adb -s 127.0.0.1:5555 shell input text "$E"; sleep 3; adb -s 127.0.0.1:5555 shell uiautomator dump /sdcard/u.xml >/dev/null 2>&1; echo "== field content =="; adb -s 127.0.0.1:5555 shell cat /sdcard/u.xml | tr ">" "\n" | grep -oE "text=\"[^\"]*gmail[^\"]*\"" | head -3; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+U5
+== field content ==
+rc=0
+gamepid: 
+flows: 0

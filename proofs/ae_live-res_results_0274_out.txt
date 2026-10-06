@@ -1,0 +1,7 @@
+cmd: exec bash -c true; echo VU; adb -s 127.0.0.1:5555 shell input swipe 634 342 634 342 150; sleep 9; for i in $(seq 1 8); do adb -s 127.0.0.1:5555 shell input swipe 818 456 818 456 120; sleep 1; done; sleep 3; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+at: 00:19:59
+$ bash -c true; echo VU; adb -s 127.0.0.1:5555 shell input swipe 634 342 634 342 150; sleep 9; for i in $(seq 1 8); do adb -s 127.0.0.1:5555 shell input swipe 818 456 818 456 120; sleep 1; done; sleep 3; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+VU
+rc=0
+gamepid: 9664
+flows: 3

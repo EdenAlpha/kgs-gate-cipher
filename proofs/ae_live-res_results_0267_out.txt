@@ -1,0 +1,15 @@
+cmd: exec bash -c true; echo VS; adb -s 127.0.0.1:5555 shell am start -n jp.konami.pesam/com.epicgames.ue4.SplashActivity >/dev/null 2>&1; sleep 45; adb -s 127.0.0.1:5555 shell pidof jp.konami.pesam; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== mitm new lines =="; tail -4 /tmp/kgs/mitm.log 2>/dev/null; echo "== konami =="; grep -ci konami /tmp/kgs/mitm.log 2>/dev/null
+at: 00:17:41
+$ bash -c true; echo VS; adb -s 127.0.0.1:5555 shell am start -n jp.konami.pesam/com.epicgames.ue4.SplashActivity >/dev/null 2>&1; sleep 45; adb -s 127.0.0.1:5555 shell pidof jp.konami.pesam; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== mitm new lines =="; tail -4 /tmp/kgs/mitm.log 2>/dev/null; echo "== konami =="; grep -ci konami /tmp/kgs/mitm.log 2>/dev/null
+VS
+9664
+== mitm new lines ==
+[00:18:18.919][172.17.0.2:33034] client connect
+[00:18:18.922][172.17.0.2:33034] server connect 172.217.117.4:443
+172.17.0.2:33034: POST https://172.217.117.4/v0cc/log/batch?format=json_proto3
+               << 200 OK 211b
+== konami ==
+3
+rc=0
+gamepid: 9664
+flows: 2

@@ -1,0 +1,9 @@
+cmd: exec bash -c true; echo PLAY12; adb -s 127.0.0.1:5555 shell uiautomator dump /sdcard/u.xml >/dev/null 2>&1; adb -s 127.0.0.1:5555 shell cat /sdcard/u.xml > /tmp/u.xml; N=$(grep -o "<node [^>]*android.widget.EditText[^>]*>" /tmp/u.xml | head -1); B=$(echo "$N" | grep -o "bounds=.[0-9]*,[0-9]*,[0-9]*,[0-9]*" | tr -dc "0-9,"); echo BOUNDS=$B; X1=$(echo $B | cut -d, -f1); Y1=$(echo $B | cut -d, -f2); X2=$(echo $B | cut -d, -f3); Y2=$(echo $B | cut -d, -f4); X=$(( (X1+X2)/2 )); Y=$(( (Y1+Y2)/2 )); echo TAP=$X $Y; adb -s 127.0.0.1:5555 shell input tap $X $Y; sleep 2; adb -s 127.0.0.1:5555 shell input text "8639996156"; sleep 1; adb -s 127.0.0.1:5555 shell input keyevent 66; sleep 16; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+at: 21:27:44
+$ bash -c true; echo PLAY12; adb -s 127.0.0.1:5555 shell uiautomator dump /sdcard/u.xml >/dev/null 2>&1; adb -s 127.0.0.1:5555 shell cat /sdcard/u.xml > /tmp/u.xml; N=$(grep -o "<node [^>]*android.widget.EditText[^>]*>" /tmp/u.xml | head -1); B=$(echo "$N" | grep -o "bounds=.[0-9]*,[0-9]*,[0-9]*,[0-9]*" | tr -dc "0-9,"); echo BOUNDS=$B; X1=$(echo $B | cut -d, -f1); Y1=$(echo $B | cut -d, -f2); X2=$(echo $B | cut -d, -f3); Y2=$(echo $B | cut -d, -f4); X=$(( (X1+X2)/2 )); Y=$(( (Y1+Y2)/2 )); echo TAP=$X $Y; adb -s 127.0.0.1:5555 shell input tap $X $Y; sleep 2; adb -s 127.0.0.1:5555 shell input text "8639996156"; sleep 1; adb -s 127.0.0.1:5555 shell input keyevent 66; sleep 16; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+PLAY12
+BOUNDS=
+TAP=0 0
+rc=0
+gamepid: 
+flows: 0

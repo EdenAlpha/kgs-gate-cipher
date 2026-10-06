@@ -1,0 +1,13 @@
+cmd: exec bash -c true; echo E8; sleep 30; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo flows=$(grep -c "^### " /tmp/kgs/flows.log); grep "^### " /tmp/kgs/flows.log | tail -4; echo cpu=$(adb -s 127.0.0.1:5555 shell top -b -n 1 -m 3 2>/dev/null | grep -i pesam | awk "{print \$9}")
+at: 08:11:02
+$ bash -c true; echo E8; sleep 30; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo flows=$(grep -c "^### " /tmp/kgs/flows.log); grep "^### " /tmp/kgs/flows.log | tail -4; echo cpu=$(adb -s 127.0.0.1:5555 shell top -b -n 1 -m 3 2>/dev/null | grep -i pesam | awk "{print \$9}")
+E8
+flows=28
+### REQ POST /pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php
+### RESP POST /pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php -> 200
+### REQ POST /pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php
+### RESP POST /pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php -> 200
+cpu=404
+rc=0
+gamepid: 8404
+flows: 28

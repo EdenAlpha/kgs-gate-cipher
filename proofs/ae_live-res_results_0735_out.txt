@@ -1,0 +1,43 @@
+cmd: exec bash -c true; echo TA; echo "== tar status =="; ls -l /tmp/kgs/pesam-data.tar 2>&1 | tail -1; ls /tmp/kgs/tar.done 2>&1; echo "== per-dir sizes =="; adb -s 127.0.0.1:5555 shell su 0 du -sm /data/data/jp.konami.pesam/files /data/data/jp.konami.pesam/shared_prefs /data/data/jp.konami.pesam/databases /data/data/jp.konami.pesam/no_backup /data/data/jp.konami.pesam/app_textures 2>&1; echo "== file counts =="; adb -s 127.0.0.1:5555 shell su 0 find /data/data/jp.konami.pesam -type f 2>/dev/null | wc -l; echo "== biggest 15 =="; adb -s 127.0.0.1:5555 shell su 0 find /data/data/jp.konami.pesam -type f -size +10M 2>/dev/null | head -15; echo "== prefs =="; adb -s 127.0.0.1:5555 shell su 0 ls /data/data/jp.konami.pesam/shared_prefs 2>&1
+at: 01:51:52
+$ bash -c true; echo TA; echo "== tar status =="; ls -l /tmp/kgs/pesam-data.tar 2>&1 | tail -1; ls /tmp/kgs/tar.done 2>&1; echo "== per-dir sizes =="; adb -s 127.0.0.1:5555 shell su 0 du -sm /data/data/jp.konami.pesam/files /data/data/jp.konami.pesam/shared_prefs /data/data/jp.konami.pesam/databases /data/data/jp.konami.pesam/no_backup /data/data/jp.konami.pesam/app_textures 2>&1; echo "== file counts =="; adb -s 127.0.0.1:5555 shell su 0 find /data/data/jp.konami.pesam -type f 2>/dev/null | wc -l; echo "== biggest 15 =="; adb -s 127.0.0.1:5555 shell su 0 find /data/data/jp.konami.pesam -type f -size +10M 2>/dev/null | head -15; echo "== prefs =="; adb -s 127.0.0.1:5555 shell su 0 ls /data/data/jp.konami.pesam/shared_prefs 2>&1
+TA
+== tar status ==
+-rw-r--r-- 1 runner runner 2134203392 Oct  1 01:44 /tmp/kgs/pesam-data.tar
+/tmp/kgs/tar.done
+== per-dir sizes ==
+2033	/data/data/jp.konami.pesam/files
+1	/data/data/jp.konami.pesam/shared_prefs
+1	/data/data/jp.konami.pesam/databases
+1	/data/data/jp.konami.pesam/no_backup
+1	/data/data/jp.konami.pesam/app_textures
+== file counts ==
+307
+== biggest 15 ==
+/data/data/jp.konami.pesam/files/assetpacks/pad_ff_11/311000101/311000101/assets/pc7000_mobile_and.pak
+/data/data/jp.konami.pesam/files/assetpacks/pad_ff_10/311000101/311000101/assets/pc4000_mobile_and.ucas
+/data/data/jp.konami.pesam/files/assetpacks/pad_ff_09/311000101/311000101/assets/pc3700_mobile_and.ucas
+/data/data/jp.konami.pesam/files/assetpacks/pad_ff_01/311000101/311000101/assets/pc0101_mobile_and.ucas
+/data/data/jp.konami.pesam/files/assetpacks/pad_ff_02/311000101/311000101/assets/pc0103_mobile_and.ucas
+/data/data/jp.konami.pesam/files/assetpacks/pad_ff_08/311000101/311000101/assets/pc3611_mobile_and.ucas
+/data/data/jp.konami.pesam/files/assetpacks/pad_ff_00/311000101/311000101/assets/pc0102_mobile_and.ucas
+/data/data/jp.konami.pesam/files/assetpacks/pad_ff_05/311000101/311000101/assets/pc3001_mobile_and.ucas
+/data/data/jp.konami.pesam/files/assetpacks/pad_ff_03/311000101/311000101/assets/pc1000_mobile_and.ucas
+/data/data/jp.konami.pesam/files/assetpacks/pad_ff_04/311000101/311000101/assets/pc1001_mobile_and.ucas
+/data/data/jp.konami.pesam/files/Download/pc9252_mobile_and.ucas
+== prefs ==
+AnalysisNetwork.xml
+ApplilinkNetwork.xml
+AwOriginVisitLoggerPrefs.xml
+FirebaseHeartBeatW0RFRkFVTFRd+MTozMDY0NDIyMTIwNTY6YW5kcm9pZDo1ZjAxNWQwNWFlODI1ZWFi.xml
+RecommendNetwork.xml
+RewordNetwork.xml
+WebViewChromiumPrefs.xml
+adjust_preferences.xml
+com.google.android.gms.appid.xml
+com.google.android.gms.measurement.prefs.xml
+com.google.firebase.crashlytics.xml
+com.google.firebase.messaging.xml
+rc=0
+gamepid: 82330
+flows: 22

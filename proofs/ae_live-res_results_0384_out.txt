@@ -1,0 +1,13 @@
+cmd: exec bash -c true; echo F1; echo "== browser packages =="; adb -s 127.0.0.1:5555 shell pm list packages 2>/dev/null | grep -iE "chrome|browser|webview"; echo "== default handler for https =="; adb -s 127.0.0.1:5555 shell cmd package resolve-activity --brief -a android.intent.action.VIEW -d "https://example.com" 2>&1 | tail -2; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+at: 08:14:40
+$ bash -c true; echo F1; echo "== browser packages =="; adb -s 127.0.0.1:5555 shell pm list packages 2>/dev/null | grep -iE "chrome|browser|webview"; echo "== default handler for https =="; adb -s 127.0.0.1:5555 shell cmd package resolve-activity --brief -a android.intent.action.VIEW -d "https://example.com" 2>&1 | tail -2; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+F1
+== browser packages ==
+package:com.android.webview
+package:org.chromium.webview_shell
+== default handler for https ==
+priority=0 preferredOrder=0 match=0x208000 specificIndex=-1 isDefault=true
+org.chromium.webview_shell/.WebViewBrowserActivity
+rc=0
+gamepid: 8404
+flows: 30

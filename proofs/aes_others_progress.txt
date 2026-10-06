@@ -1,0 +1,1 @@
+progress  160000000 / 169162641 (94.6%)  101295 off/s  split_config.arm64_v8a.apk!lib/arm64-v8a/libgadsme.so

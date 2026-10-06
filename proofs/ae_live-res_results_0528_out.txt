@@ -1,0 +1,9 @@
+cmd: exec sudo docker exec redroid sh -c "ls /system/etc/security/cacerts/ | grep 928a; cp /data/local/tmp/cacerts/928a8368.0 /system/etc/security/cacerts/293a83db.0; ls -la /system/etc/security/cacerts/928a8368.0 /system/etc/security/cacerts/293a83db.0"
+at: 10:12:05
+$ sudo docker exec redroid sh -c "ls /system/etc/security/cacerts/ | grep 928a; cp /data/local/tmp/cacerts/928a8368.0 /system/etc/security/cacerts/293a83db.0; ls -la /system/etc/security/cacerts/928a8368.0 /system/etc/security/cacerts/293a83db.0"
+928a8368.0
+-rw-r--r-- 1 root root 1155 2026-09-30 10:12 /system/etc/security/cacerts/293a83db.0
+-rw-r--r-- 1 root root 1155 2026-09-30 08:53 /system/etc/security/cacerts/928a8368.0
+rc=0
+gamepid: 
+flows: 0

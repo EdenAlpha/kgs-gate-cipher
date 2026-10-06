@@ -1,0 +1,11 @@
+cmd: exec bash -c true; echo SR; adb -s 127.0.0.1:5555 shell dumpsys account 2>/dev/null | grep -i "Account {" | head -5; adb -s 127.0.0.1:5555 shell dumpsys package com.google.android.gms 2>/dev/null | grep -E "versionName|versionCode" | head -2; adb -s 127.0.0.1:5555 shell am force-stop com.google.android.gms; adb -s 127.0.0.1:5555 shell am force-stop com.android.vending; sleep 30; adb -s 127.0.0.1:5555 shell am start -n com.android.vending/com.google.android.finsky.activities.MainActivity 2>&1 | tail -1; sleep 14; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+at: 22:51:08
+$ bash -c true; echo SR; adb -s 127.0.0.1:5555 shell dumpsys account 2>/dev/null | grep -i "Account {" | head -5; adb -s 127.0.0.1:5555 shell dumpsys package com.google.android.gms 2>/dev/null | grep -E "versionName|versionCode" | head -2; adb -s 127.0.0.1:5555 shell am force-stop com.google.android.gms; adb -s 127.0.0.1:5555 shell am force-stop com.android.vending; sleep 30; adb -s 127.0.0.1:5555 shell am start -n com.android.vending/com.google.android.finsky.activities.MainActivity 2>&1 | tail -1; sleep 14; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+SR
+    Account {name=peerlink.02@gmail.com, type=com.google}
+    versionCode=263633029 minSdk=31 targetSdk=37
+    versionName=26.36.33 (190400-986028547)
+Starting: Intent { cmp=com.android.vending/com.google.android.finsky.activities.MainActivity }
+rc=0
+gamepid: 
+flows: 0

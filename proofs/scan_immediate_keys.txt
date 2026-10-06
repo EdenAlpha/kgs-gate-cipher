@@ -1,0 +1,7 @@
+.text va 0x28293c0 size 103857736
+MOVZ 1061820  MOVK 255652  groups 1061820
+  16-byte candidates: 51272 (ascii 1680)
+  24-byte candidates: 34917 (ascii 843)
+  32-byte candidates: 30179 (ascii 483)
+tested 116368
+hits 0

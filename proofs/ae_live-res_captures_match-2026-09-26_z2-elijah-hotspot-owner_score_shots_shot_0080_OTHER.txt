@@ -1,0 +1,1 @@
+OTHER why=no_yellow hueY=61.592922 yellowPx=244.99998 need=460.8 strict=2.126736E-4 1600x720 615ms

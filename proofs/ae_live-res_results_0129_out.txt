@@ -1,0 +1,13 @@
+cmd: exec bash -c true; echo SL; P=$(adb -s 127.0.0.1:5555 shell pm list packages 2>/dev/null | tr -d "\r" | grep -i cpuz | cut -d: -f2); echo PKG=$P; adb -s 127.0.0.1:5555 shell dumpsys package $P 2>/dev/null | grep -iE "minSdk|targetSdk|primaryCpuAbi|versionName" | head -4
+at: 22:42:14
+$ bash -c true; echo SL; P=$(adb -s 127.0.0.1:5555 shell pm list packages 2>/dev/null | tr -d "\r" | grep -i cpuz | cut -d: -f2); echo PKG=$P; adb -s 127.0.0.1:5555 shell dumpsys package $P 2>/dev/null | grep -iE "minSdk|targetSdk|primaryCpuAbi|versionName" | head -4
+SL
+PKG=
+    primaryCpuAbi=arm64-v8a
+    versionCode=34 minSdk=24 targetSdk=28
+    versionName=14-10093150
+    primaryCpuAbi=null
+grep: write error: Broken pipe
+rc=2
+gamepid: 
+flows: 0

@@ -1,0 +1,10 @@
+cmd: exec bash -c true; echo RESTART; cd "$GITHUB_WORKSPACE"; git fetch -q origin main; git checkout -q origin/main -- kgs-login/scripts/mitm_addon.py; echo "addon lines: $(wc -l < kgs-login/scripts/mitm_addon.py)"; grep -c "raw_content" kgs-login/scripts/mitm_addon.py; pkill -f mitmdump; sleep 4; FLOWS_LOG=/tmp/kgs/flows2.log nohup setsid mitmdump --mode transparent --listen-port 8080 --set confdir=/tmp/kgs/mitm -s kgs-login/scripts/mitm_addon.py -w /tmp/kgs/flows2.mitm > /tmp/kgs/mitm2.log 2>&1 < /dev/null & sleep 14; grep -q ADDON-READY /tmp/kgs/flows2.log && echo "PROXY UP with fixed addon" || { echo "PROXY FAILED"; tail -12 /tmp/kgs/mitm2.log; }
+at: 00:46:47
+$ bash -c true; echo RESTART; cd "$GITHUB_WORKSPACE"; git fetch -q origin main; git checkout -q origin/main -- kgs-login/scripts/mitm_addon.py; echo "addon lines: $(wc -l < kgs-login/scripts/mitm_addon.py)"; grep -c "raw_content" kgs-login/scripts/mitm_addon.py; pkill -f mitmdump; sleep 4; FLOWS_LOG=/tmp/kgs/flows2.log nohup setsid mitmdump --mode transparent --listen-port 8080 --set confdir=/tmp/kgs/mitm -s kgs-login/scripts/mitm_addon.py -w /tmp/kgs/flows2.mitm > /tmp/kgs/mitm2.log 2>&1 < /dev/null & sleep 14; grep -q ADDON-READY /tmp/kgs/flows2.log && echo "PROXY UP with fixed addon" || { echo "PROXY FAILED"; tail -12 /tmp/kgs/mitm2.log; }
+RESTART
+addon lines: 125
+2
+PROXY UP with fixed addon
+rc=0
+gamepid: 9664
+flows: 22

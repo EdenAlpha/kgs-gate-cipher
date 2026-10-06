@@ -1,0 +1,53 @@
+distinct sign values: 13  (raw matches incl. repeats: 13)
+
+decoded lengths: [40]
+
+==============================================================================
+RAW BYTES  (hex | text)
+==============================================================================
+ 0  7a32f0143caabbf29f3e08cb9f730fe4afcd97241a2cee13c6948eefa145c1af82692b0cb468ec10
+    |z2..<....>...s.....$.,.......E...i+..h..|
+ 1  22a8d1af4ca7e8c204c3fbaffd995d8e81674c0ee127ded59eac4c99fc2d6bf6b67afd4b26d7681f
+    |"...L.........]..gL..'....L..-k..z.K&.h.|
+ 2  4923d3a09cd1488f0a50d4423f4f82ce7d5a58856f88dd1c2edc8bf7014e19ff2908c18b447c1f1b
+    |I#....H..P.B?O..}ZX.o........N..)...D|..|
+ 3  f6c63ab28177d63306f10ece68b5f18ede0a9347b8d793da19b5fedefb1ace0f9a4c0adfd976f308
+    |..:..w.3....h......G.............L...v..|
+ 4  650f9f3e5aae19ed5889184dc63458782f131f198479896f6089bbc7be699219d67047d680d78a1f
+    |e..>Z...X..M.4Xx/....y.o`....i...pG.....|
+ 5  8f4391fe427f6e7e2cc5a45eff7737a01ac045ba4cdeb57be715f490501a879b068d502f28fb8408
+    |.C..B.n~,..^.w7...E.L..{....P.....P/(...|
+ 6  1885c9766a4a629fc0375a45bf6b4c0c3a597c95314415f389bd71ef891792a8349f5198dc433810
+    |...vjJb..7ZE.kL.:Y|.1D....q.....4.Q..C8.|
+ 7  d780bf9dbe6079f7ff8bd456cdcc0a3c144817d5f5abc5af6e485d8675be04ee9cdaf4af896e5e00
+    |.....`y....V...<.H......nH].u........n^.|
+ 8  5f9332699d77ce8938852241c6b66795a73ddf3278451d37eb5e3d854469844cf3c4dc1d9924fb07
+    |_.2i.w..8."A..g..=.2xE.7.^=.Di.L.....$..|
+ 9  e948312bd2ccd1074e2518a7f1efe0509403b4894fb8110f4f2b0914e91ced2faf98c0feac82530d
+    |.H1+....N%.....P....O...O+...../......S.|
+10  247dea1ecd0debe458adc888f69f2807cc97c50d35545fc303da0eee46f524014e43e26bfca4f601
+    |$}......X.....(.....5T_.....F.$.NC.k....|
+11  7c3f6cfca2a7ce0403ad662118875c98af3380df88a0ca9f6a625aa7ce35bc289a3dd8e32ff1b61e
+    ||?l.......f!..\..3......jbZ..5.(.=../...|
+12  5daf2015d183f0c2c43811537edf9200d531190ecff10c9cc78f8d439880d82f86e98781f145d819
+    |]. ......8.S~....1.........C.../.....E..|
+
+==============================================================================
+DO ANY BYTES STAY THE SAME ACROSS ALL REQUESTS?
+==============================================================================
+positions identical in every sign (0 bytes): NONE
+
+first half identical in every sign : False
+last  half identical in every sign : False
+distinct values overall            : 13 of 13
+
+==============================================================================
+IS THE KEY SEED PRESENT IN THE RAW SIGN BYTES?
+==============================================================================
+  seed found verbatim in       : NONE
+  any sign contains '|' (0x7c) : [2, 6, 11]
+  fully printable ASCII        : NONE
+
+Note: a 17-char ASCII seed + '|' + digits would only fit in 40 bytes
+      together with a 20-byte MAC if the number were <= 3 digits.
+      Nothing above supports that -- recorded for the record either way.

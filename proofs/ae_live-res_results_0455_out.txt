@@ -1,0 +1,10 @@
+cmd: exec bash -c true; echo RE; sleep 30; adb -s 127.0.0.1:5555 shell pidof jp.konami.pesam; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== flows2 =="; grep -c "^### " /tmp/kgs/flows2.log 2>/dev/null
+at: 00:59:13
+$ bash -c true; echo RE; sleep 30; adb -s 127.0.0.1:5555 shell pidof jp.konami.pesam; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== flows2 =="; grep -c "^### " /tmp/kgs/flows2.log 2>/dev/null
+RE
+29128
+== flows2 ==
+44
+rc=0
+gamepid: 29128
+flows: 22

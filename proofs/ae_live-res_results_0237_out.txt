@@ -1,0 +1,22 @@
+cmd: exec bash -c true; echo D3; echo "== top =="; adb -s 127.0.0.1:5555 shell top -b -n 1 -m 8 2>/dev/null | head -14; echo "== game logcat =="; adb -s 127.0.0.1:5555 logcat -d -t 400 2>/dev/null | grep -iE "pesam|libUE4|ANR in|FATAL|EGL|SwiftShader|vulkan" | tail -22
+at: 07:39:57
+$ bash -c true; echo D3; echo "== top =="; adb -s 127.0.0.1:5555 shell top -b -n 1 -m 8 2>/dev/null | head -14; echo "== game logcat =="; adb -s 127.0.0.1:5555 logcat -d -t 400 2>/dev/null | grep -iE "pesam|libUE4|ANR in|FATAL|EGL|SwiftShader|vulkan" | tail -22
+D3
+== top ==
+Tasks: 78 total,   1 running,  77 sleeping,   0 stopped,   0 zombie
+  Mem:    15947M total,    11404M used,     4543M free,      121M buffers
+ Swap:     3071M total,        0M used,     3071M free,     8513M cached
+400%cpu 296%user   0%nice   8%sys  96%idle   0%iow   0%irq   0%sirq   0%host
+    PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS
+   8404 u0_a104      10 -10  19G 1.1G 282M S  300   7.2  32:44.55 jp.konami.pesam
+   6122 audioserver  20   0  11G  12M  11M S  4.0   0.0   0:02.81 android.hardware.audio.service
+   8999 shell        20   0  10G 4.8M 4.1M R  0.0   0.0   0:00.00 top -b -n 1 -m 8
+   8479 u0_a55       20   0  15G 165M 108M S  0.0   1.0   0:00.20 com.android.vending:quick_launch
+   8265 u0_a55       20   0  15G 161M 104M S  0.0   1.0   0:00.31 com.android.vending:background
+   8226 bluetooth    20   0  10G  12M  11M S  0.0   0.0   0:00.00 android.hardware.bluetooth@1.1-service.sim
+   8084 system       20   0  14G  91M  44M S  0.0   0.5   0:00.01 com.android.localtransport
+   8070 u0_a58       20   0  15G 241M 180M S  0.0   1.5   0:00.69 com.google.android.gms.unstable
+== game logcat ==
+rc=1
+gamepid: 8404
+flows: 0

@@ -1,0 +1,7 @@
+cmd: exec bash -c true; echo PLAY17; adb -s 127.0.0.1:5555 shell input tap 360 280; sleep 2; adb -s 127.0.0.1:5555 shell input text "2001545675"; sleep 1; adb -s 127.0.0.1:5555 shell input keyevent 66; sleep 20; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+at: 21:38:29
+$ bash -c true; echo PLAY17; adb -s 127.0.0.1:5555 shell input tap 360 280; sleep 2; adb -s 127.0.0.1:5555 shell input text "2001545675"; sleep 1; adb -s 127.0.0.1:5555 shell input keyevent 66; sleep 20; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+PLAY17
+rc=0
+gamepid: 
+flows: 0

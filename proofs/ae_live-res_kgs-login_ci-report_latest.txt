@@ -1,0 +1,49 @@
+===== ARM64 RUNNER REPORT =====
+Tue Sep 29 22:33:33 UTC 2026
+Linux runnervmoyp6c 6.17.0-1022-azure #22-Ubuntu SMP Mon Jul 27 17:12:01 UTC 2026 aarch64 aarch64 aarch64 GNU/Linux
+4
+               total        used        free      shared  buff/cache   available
+Mem:            15Gi       1.1Gi        13Gi        41Mi       1.3Gi        14Gi
+Swap:          3.0Gi          0B       3.0Gi
+/dev/root       145G   37G  108G  26% /
+--- kernel says about binder ---
+CONFIG_ANDROID_BINDER_IPC=m
+CONFIG_ANDROID_BINDERFS=m
+CONFIG_ANDROID_BINDER_DEVICES=""
+--- install the module package (this is what was missing) ---
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+--- module files present now? ---
+/lib/modules/6.17.0-1022-azure/kernel/drivers/android/binder_linux.ko.zst
+--- try to load it ---
+modprobe: FATAL: Module binder not found in directory /lib/modules/6.17.0-1022-azure
+ls: cannot access '/dev/binder*': No such file or directory
+--- mount binderfs ---
+mount: /dev/binderfs: unknown filesystem type 'binderfs'.
+       dmesg(1) may have more information after failed mount system call.
+binder on /dev/binderfs type binder (rw,relatime,max=1048576)
+--- docker ---
+server=28.0.4
+Status: Downloaded newer image for alpine:latest
+PRIVILEGED_OK
+--- start redroid ---
+Status: Downloaded newer image for redroid/redroid:14.0.0_64only-latest
+9f665257a6054b5d6a67a1a97151c14475c32ee34d7987b4d01bd57a94d705d6
+redroid Up 8 seconds
+--- wait for android boot (up to 6 min) ---
+BOOTED after 10s
+--- inside android ---
+uid=0(root) gid=0(root) groups=0(root)
+[ro.build.version.release]: [14]
+[ro.build.version.release_or_codename]: [14]
+[ro.build.version.release_or_preview_display]: [14]
+[ro.odm.build.version.release]: [14]
+[ro.odm.build.version.release_or_codename]: [14]
+[ro.odm.product.cpu.abilist]: [arm64-v8a]
+[ro.odm.product.cpu.abilist32]: []
+[ro.odm.product.cpu.abilist64]: [arm64-v8a]
+[ro.product.build.version.release]: [14]
+[ro.product.build.version.release_or_codename]: [14]
+--- logs ---
+===== END REPORT =====

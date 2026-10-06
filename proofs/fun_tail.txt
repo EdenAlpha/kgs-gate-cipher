@@ -1,0 +1,127 @@
+==============================================================================
+UNREAD TAIL OF FUN_07c38a44   0x7b38e60 .. 0x7b39344  (313 instructions)
+==============================================================================
+
+--- calls ---
+  0x07b38e64 bl #0x8b385e0   PLT: _ZNSt6__ndk19basic_iosIcNS_11char_traitsIcEEED2Ev
+        setup: mov x0, x21
+  0x07b38e74 bl #0x2efa56c
+        setup: ldrb w8, [sp, #0x50]; tbz w8, #0, #0x7b38e78; ldr x0, [sp, #0x60]
+  0x07b38eb4 bl #0x8b35290   PLT: __stack_chk_fail
+        setup: ldp x28, x27, [sp, #0x10]; ldp x29, x30, [sp], #0x60; ret 
+  [str] 0x07b38ec8  adrp #0xc8e000 ; x9, x9, #0x981   -> see below
+  [str] 0x07b38ee4  adrp #0xc8e000 ; x9, x9, #0x990   -> see below
+  [str] 0x07b38f04  adrp #0xc8e000 ; x9, x9, #0x990   -> see below
+  [str] 0x07b38f1c  adrp #0xc8e000 ; x9, x9, #0x990   -> see below
+  [str] 0x07b38f50  adrp #0xc8e000 ; x9, x9, #0x990   -> see below
+  [str] 0x07b38f68  adrp #0xc8e000 ; x9, x9, #0x990   -> see below
+  [str] 0x07b38f80  adrp #0xc8e000 ; x9, x9, #0x990   -> see below
+  [str] 0x07b38f98  adrp #0xc8e000 ; x9, x9, #0x990   -> see below
+  [str] 0x07b38fb0  adrp #0xc8e000 ; x9, x9, #0x990   -> see below
+  [str] 0x07b38fc8  adrp #0xc8e000 ; x9, x9, #0x990   -> see below
+  [str] 0x07b38fe0  adrp #0xc8e000 ; x9, x9, #0x990   -> see below
+  [str] 0x07b38ff8  adrp #0xc8e000 ; x9, x9, #0x990   -> see below
+  0x07b39018 bl #0x8b38920   PLT: _ZNSt6__ndk119__shared_weak_countD2Ev
+        setup: str x19, [sp, #0x10]; mov x29, sp; mov x19, x0
+  0x07b39050 bl #0x8b38920   PLT: _ZNSt6__ndk119__shared_weak_countD2Ev
+        setup: str x19, [sp, #0x10]; mov x29, sp; mov x19, x0
+  0x07b39088 bl #0x8b38920   PLT: _ZNSt6__ndk119__shared_weak_countD2Ev
+        setup: str x19, [sp, #0x10]; mov x29, sp; mov x19, x0
+  0x07b390c0 bl #0x8b38920   PLT: _ZNSt6__ndk119__shared_weak_countD2Ev
+        setup: str x19, [sp, #0x10]; mov x29, sp; mov x19, x0
+  [str] 0x07b390fc  adrp #0xad1000 ; x9, x9, #0x20e   -> see below
+  [str] 0x07b39104  adrp #0xa4a9000 ; x19, x19, #0xb30   -> see below
+  [str] 0x07b3910c  adrp #0x2ef7000 ; x20, x20, #0xb54   -> see below
+  [str] 0x07b39114  adrp #0x8b75000 ; x21, x21, #0x140   -> see below
+  0x07b39144 bl #0x8b35240   PLT: __cxa_atexit
+        setup: strb w8, [x1, #8]!; stur q0, [x19, #9]; sturh w9, [x19, #0x19]
+  0x07b39178 bl #0x8b35240   PLT: __cxa_atexit
+        setup: stur w9, [x19, #0x21]; sturh w10, [x19, #0x25]; strb wzr, [x19, #0x27]
+  [str] 0x07b391d4  adrp #0x9da000 ; x0, x0, #0x3c7   -> see below
+  0x07b39268 bl #0x7b393bc
+        setup: ldr w8, [x20, #0x6c]; cbnz w8, #0x7b3928c; mov x0, x20
+
+--- full dump around the pes-custom-encrypt xref 0x7b39120 ---
+  0x07b390b0  stp      x29, x30, [sp, #-0x20]!
+  0x07b390b4  str      x19, [sp, #0x10]
+  0x07b390b8  mov      x29, sp
+  0x07b390bc  mov      x19, x0
+  0x07b390c0  bl       #0x8b38920
+  0x07b390c4  mov      x0, x19
+  0x07b390c8  ldr      x19, [sp, #0x10]
+  0x07b390cc  ldp      x29, x30, [sp], #0x20
+  0x07b390d0  b        #0x8b352c0
+  0x07b390d4  ldr      x0, [x0, #0x18]
+  0x07b390d8  cbz      x0, #0x7b390e0
+  0x07b390dc  b        #0x8b356b0
+  0x07b390e0  ret      
+  0x07b390e4  b        #0x8b352c0
+  0x07b390e8  stp      x29, x30, [sp, #-0x30]!
+  0x07b390ec  str      x21, [sp, #0x10]
+  0x07b390f0  stp      x20, x19, [sp, #0x20]
+  0x07b390f4  mov      x29, sp
+  0x07b390f8  adrp     x9, #0xad1000
+  0x07b390fc  add      x9, x9, #0x20e
+  0x07b39100  adrp     x19, #0xa4a9000
+  0x07b39104  add      x19, x19, #0xb30
+  0x07b39108  adrp     x20, #0x2ef7000
+  0x07b3910c  add      x20, x20, #0xb54
+  0x07b39110  adrp     x21, #0x8b75000
+  0x07b39114  add      x21, x21, #0x140
+  0x07b39118  mov      w8, #0x24
+  0x07b3911c  mov      x1, x19
+  0x07b39120  ldr      q0, [x9]   <== header xref
+  0x07b39124  mov      w9, #0x7470
+  0x07b39128  mov      x0, x20
+  0x07b3912c  mov      x2, x21
+  0x07b39130  str      wzr, [x19]
+  0x07b39134  str      xzr, [x19, #0x18]
+  0x07b39138  strb     w8, [x1, #8]!
+  0x07b3913c  stur     q0, [x19, #9]
+  0x07b39140  sturh    w9, [x19, #0x19]
+  0x07b39144  bl       #0x8b35240
+  0x07b39148  mov      w9, #0x4541
+  0x07b3914c  mov      w8, #0xc
+  0x07b39150  mov      x1, x19
+  0x07b39154  movk     w9, #0x3253, lsl #16
+  0x07b39158  mov      w10, #0x3635
+  0x07b3915c  mov      x0, x20
+  0x07b39160  mov      x2, x21
+  0x07b39164  stp      xzr, xzr, [x19, #0x28]
+  0x07b39168  strb     w8, [x1, #0x20]!
+  0x07b3916c  stur     w9, [x19, #0x21]
+  0x07b39170  sturh    w10, [x19, #0x25]
+  0x07b39174  strb     wzr, [x19, #0x27]
+  0x07b39178  bl       #0x8b35240
+  0x07b3917c  mov      w8, #0x10
+  0x07b39180  mov      x0, x20
+  0x07b39184  mov      x2, x21
+  0x07b39188  strb     w8, [x19, #0x38]!
+  0x07b3918c  mov      x8, #0x6c62
+  0x07b39190  mov      x1, x19
+
+--- every ret (function ends / inlined tails) ---
+  0x07b38eb0
+  0x07b38ef0
+  0x07b38ef8
+  0x07b38f10
+  0x07b38f28
+  0x07b38f44
+  0x07b38f5c
+  0x07b38f74
+  0x07b38f8c
+  0x07b38fa4
+  0x07b38fbc
+  0x07b38fd4
+  0x07b38fec
+  0x07b39004
+  0x07b39038
+  0x07b39070
+  0x07b390a8
+  0x07b390e0
+  0x07b391d8
+  0x07b391e0
+  0x07b391e4
+  0x07b3921c
+  0x07b39224
+  0x07b39258

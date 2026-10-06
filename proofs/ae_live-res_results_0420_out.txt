@@ -1,0 +1,10 @@
+cmd: exec bash -c true; echo F2; awk "/^### RESP .*\/pes22\/gate\//{keep=1; print; next} /^### /{keep=0} keep && (/^HOST/ || /^RESPLEN/ || /^RESPHEX/){print}" /tmp/kgs/flows.log > /tmp/live-res/kgs-gate-resp.txt; wc -c /tmp/live-res/kgs-gate-resp.txt; echo "total RESP: $(grep -c "^### RESP" /tmp/kgs/flows.log)"; echo "non-gate RESP: $(grep "^### RESP" /tmp/kgs/flows.log | grep -vc "/pes22/gate/")"; grep "^### RESP" /tmp/kgs/flows.log | grep -v "/pes22/gate/" | tail -6
+at: 08:21:24
+$ bash -c true; echo F2; awk "/^### RESP .*\/pes22\/gate\//{keep=1; print; next} /^### /{keep=0} keep && (/^HOST/ || /^RESPLEN/ || /^RESPHEX/){print}" /tmp/kgs/flows.log > /tmp/live-res/kgs-gate-resp.txt; wc -c /tmp/live-res/kgs-gate-resp.txt; echo "total RESP: $(grep -c "^### RESP" /tmp/kgs/flows.log)"; echo "non-gate RESP: $(grep "^### RESP" /tmp/kgs/flows.log | grep -vc "/pes22/gate/")"; grep "^### RESP" /tmp/kgs/flows.log | grep -v "/pes22/gate/" | tail -6
+F2
+70701 /tmp/live-res/kgs-gate-resp.txt
+total RESP: 20
+non-gate RESP: 0
+rc=1
+gamepid: 18731
+flows: 40

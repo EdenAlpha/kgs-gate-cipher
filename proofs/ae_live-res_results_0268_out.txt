@@ -1,0 +1,19 @@
+cmd: exec bash -c true; echo D6; W=/tmp/kgs; echo "== flows BEFORE =="; grep "^### " $W/flows.log; for i in 1 2; do adb -s 127.0.0.1:5555 shell input swipe 1139 677 1139 677 250; sleep 26; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/step$i.png; done; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== flows AFTER =="; grep "^### " $W/flows.log; echo "== cpu =="; adb -s 127.0.0.1:5555 shell top -b -n 1 -m 3 2>/dev/null | grep -i pesam
+at: 07:48:54
+$ bash -c true; echo D6; W=/tmp/kgs; echo "== flows BEFORE =="; grep "^### " $W/flows.log; for i in 1 2; do adb -s 127.0.0.1:5555 shell input swipe 1139 677 1139 677 250; sleep 26; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/step$i.png; done; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== flows AFTER =="; grep "^### " $W/flows.log; echo "== cpu =="; adb -s 127.0.0.1:5555 shell top -b -n 1 -m 3 2>/dev/null | grep -i pesam
+D6
+== flows BEFORE ==
+### REQ POST /pes22/gate/gate_CMD_GET_SERVER_ENV.php
+### RESP POST /pes22/gate/gate_CMD_GET_SERVER_ENV.php -> 200
+### REQ POST /pes22/gate/gate_CMD_GET_COUNTRY_LIST.php
+### RESP POST /pes22/gate/gate_CMD_GET_COUNTRY_LIST.php -> 200
+== flows AFTER ==
+### REQ POST /pes22/gate/gate_CMD_GET_SERVER_ENV.php
+### RESP POST /pes22/gate/gate_CMD_GET_SERVER_ENV.php -> 200
+### REQ POST /pes22/gate/gate_CMD_GET_COUNTRY_LIST.php
+### RESP POST /pes22/gate/gate_CMD_GET_COUNTRY_LIST.php -> 200
+== cpu ==
+   8404 u0_a104      10 -10  19G 1.1G 283M S  372   7.4  61:43.88 jp.konami.pesam
+rc=0
+gamepid: 8404
+flows: 4

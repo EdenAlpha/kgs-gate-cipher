@@ -1,0 +1,15 @@
+cmd: exec bash -c true; echo E9; sleep 70; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo flows=$(grep -c "^### " /tmp/kgs/flows.log); grep "^### " /tmp/kgs/flows.log | tail -5; echo cpu=$(adb -s 127.0.0.1:5555 shell top -b -n 1 -m 3 2>/dev/null | grep -i pesam | awk "{print \$9}"); echo pid=$(adb -s 127.0.0.1:5555 shell pidof jp.konami.pesam)
+at: 08:13:16
+$ bash -c true; echo E9; sleep 70; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo flows=$(grep -c "^### " /tmp/kgs/flows.log); grep "^### " /tmp/kgs/flows.log | tail -5; echo cpu=$(adb -s 127.0.0.1:5555 shell top -b -n 1 -m 3 2>/dev/null | grep -i pesam | awk "{print \$9}"); echo pid=$(adb -s 127.0.0.1:5555 shell pidof jp.konami.pesam)
+E9
+flows=30
+### RESP POST /pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php -> 200
+### REQ POST /pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php
+### RESP POST /pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php -> 200
+### REQ POST /pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php
+### RESP POST /pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php -> 200
+cpu=332
+pid=8404
+rc=0
+gamepid: 8404
+flows: 30

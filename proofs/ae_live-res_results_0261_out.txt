@@ -1,0 +1,31 @@
+cmd: exec bash -c true; echo T1; adb -s 127.0.0.1:5555 shell ls -1 /data/local/tmp/splits/ | head -30; echo "== install-multiple =="; adb -s 127.0.0.1:5555 install-multiple /data/local/tmp/splits/base.apk /data/local/tmp/splits/split_config.arm64_v8a.apk 2>&1 | tail -6
+at: 23:03:26
+$ bash -c true; echo T1; adb -s 127.0.0.1:5555 shell ls -1 /data/local/tmp/splits/ | head -30; echo "== install-multiple =="; adb -s 127.0.0.1:5555 install-multiple /data/local/tmp/splits/base.apk /data/local/tmp/splits/split_config.arm64_v8a.apk 2>&1 | tail -6
+T1
+base.apk
+split_config.ar.apk
+split_config.arm64_v8a.apk
+split_config.de.apk
+split_config.en.apk
+split_config.es.apk
+split_config.fr.apk
+split_config.hi.apk
+split_config.in.apk
+split_config.it.apk
+split_config.ja.apk
+split_config.ko.apk
+split_config.my.apk
+split_config.pt.apk
+split_config.ru.apk
+split_config.th.apk
+split_config.tr.apk
+split_config.vi.apk
+split_config.xxxhdpi.apk
+split_config.zh.apk
+split_pad_it_0.apk
+split_pad_it_1.apk
+== install-multiple ==
+adb: failed to stat "/data/local/tmp/splits/split_config.arm64_v8a.apk": No such file or directory
+rc=1
+gamepid: 
+flows: 0

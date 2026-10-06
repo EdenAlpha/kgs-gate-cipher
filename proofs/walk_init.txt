@@ -1,0 +1,80 @@
+==============================================================================
+WALK OF THE BUILD -> SIGN -> SEND REGION
+==============================================================================
+
+------------------------------------------------------------------------------
+FUNCTION 0x07b2c960 .. 0x07b2ca44   (window)
+------------------------------------------------------------------------------
+  instructions: 57   (0x7b2c960 .. 0x7b2ca40)
+  --- calls ---
+      0x07b2c960 bl #0x8b35290   PLT: __stack_chk_fail
+            setup: 
+      [str] 0x07b2c968 -> 0x0981a590  <zeroed>
+      [str] 0x07b2c984 -> 0x0981a590  <zeroed>
+      0x07b2c990 bl #0x74e6e74
+            setup: add x8, x8, #0x590; mov x19, x0; str x8, [x0], #8
+      0x07b2c9e8 bl #0x8b35260   PLT: _Znwm
+            setup: mov x20, x0; mov w0, #0x38; mov w21, w1
+      [str] 0x07b2c9f0 -> 0x0981a590  <zeroed>
+      0x07b2ca08 bl #0x74e6b00
+            setup: mov x1, xzr; str x8, [x0]; mov x0, x22
+      0x07b2ca18 bl #0x74e6c58
+            setup: mov w2, w21; mov x0, x22; mov x1, x20
+  --- full listing ---
+      0x07b2c960  bl      #0x8b35290
+      0x07b2c964  adrp    x8, #0x981a000
+      0x07b2c968  add     x8, x8, #0x590
+      0x07b2c96c  str     x8, [x0], #8
+      0x07b2c970  b       #0x74e6e74
+      0x07b2c974  stp     x29, x30, [sp, #-0x20]!
+      0x07b2c978  str     x19, [sp, #0x10]
+      0x07b2c97c  mov     x29, sp
+      0x07b2c980  adrp    x8, #0x981a000
+      0x07b2c984  add     x8, x8, #0x590
+      0x07b2c988  mov     x19, x0
+      0x07b2c98c  str     x8, [x0], #8
+      0x07b2c990  bl      #0x74e6e74
+      0x07b2c994  mov     x0, x19
+      0x07b2c998  ldr     x19, [sp, #0x10]
+      0x07b2c99c  ldp     x29, x30, [sp], #0x20
+      0x07b2c9a0  b       #0x8b352c0
+      0x07b2c9a4  stp     x29, x30, [sp, #-0x40]!
+      0x07b2c9a8  str     x23, [sp, #0x10]
+      0x07b2c9ac  stp     x22, x21, [sp, #0x20]
+      0x07b2c9b0  stp     x20, x19, [sp, #0x30]
+      0x07b2c9b4  mov     x29, sp
+      0x07b2c9b8  adrp    x23, #0xa4a9000
+      0x07b2c9bc  ldr     x19, [x23, #0x8d8]
+      0x07b2c9c0  cbz     x19, #0x7b2c9dc
+      0x07b2c9c4  mov     x0, x19
+      0x07b2c9c8  ldp     x20, x19, [sp, #0x30]
+      0x07b2c9cc  ldp     x22, x21, [sp, #0x20]
+      0x07b2c9d0  ldr     x23, [sp, #0x10]
+      0x07b2c9d4  ldp     x29, x30, [sp], #0x40
+      0x07b2c9d8  ret     
+      0x07b2c9dc  mov     x20, x0
+      0x07b2c9e0  mov     w0, #0x38
+      0x07b2c9e4  mov     w21, w1
+      0x07b2c9e8  bl      #0x8b35260
+      0x07b2c9ec  adrp    x8, #0x981a000
+      0x07b2c9f0  add     x8, x8, #0x590
+      0x07b2c9f4  add     x22, x0, #8
+      0x07b2c9f8  mov     x19, x0
+      0x07b2c9fc  mov     x1, xzr
+      0x07b2ca00  str     x8, [x0]
+      0x07b2ca04  mov     x0, x22
+      0x07b2ca08  bl      #0x74e6b00
+      0x07b2ca0c  mov     w2, w21
+      0x07b2ca10  mov     x0, x22
+      0x07b2ca14  mov     x1, x20
+      0x07b2ca18  bl      #0x74e6c58
+      0x07b2ca1c  str     x19, [x23, #0x8d8]
+      0x07b2ca20  mov     x0, x19
+      0x07b2ca24  ldp     x20, x19, [sp, #0x30]
+      0x07b2ca28  ldp     x22, x21, [sp, #0x20]
+      0x07b2ca2c  ldr     x23, [sp, #0x10]
+      0x07b2ca30  ldp     x29, x30, [sp], #0x40
+      0x07b2ca34  ret     
+      0x07b2ca38  adrp    x8, #0xa4a9000
+      0x07b2ca3c  ldr     x0, [x8, #0x8d8]
+      0x07b2ca40  ret     

@@ -1,0 +1,208 @@
+==============================================================================
+vtable[11]  build cipher object (owns the real vtable)   @ 0x7b2d164
+==============================================================================
+      0x07b2d164  sub      sp, sp, #0x40                                <<<< ENTRY
+      0x07b2d168  stp      x29, x30, [sp, #0x20]                     
+      0x07b2d16c  stp      x20, x19, [sp, #0x30]                     
+      0x07b2d170  add      x29, sp, #0x20                            
+      0x07b2d174  mrs      x20, tpidr_el0                            
+      0x07b2d178  mov      x19, x0                                   
+      0x07b2d17c  ldr      x8, [x20, #0x28]                          
+      0x07b2d180  stur     x8, [x29, #-8]                            
+      0x07b2d184  ldrb     w8, [x0, #0x54]                           
+      0x07b2d188  cbnz     w8, #0x7b2d194                            
+      0x07b2d18c  mov      x0, x19                                   
+      0x07b2d190  bl       #0x7b2d1f8                                   -> 0x7b2d1f8 
+      0x07b2d194  mov      x1, x19                                   
+      0x07b2d198  add      x2, sp, #8                                
+      0x07b2d19c  mov      x0, x19                                   
+      0x07b2d1a0  str      xzr, [sp, #8]                             
+      0x07b2d1a4  ldr      x8, [x1], #0x4c                           
+      0x07b2d1a8  ldr      x8, [x8, #0x48]                           
+      0x07b2d1ac  blr      x8                                        
+      0x07b2d1b0  ldr      x8, [sp, #8]                              
+      0x07b2d1b4  mov      w0, #0x1058                               
+      0x07b2d1b8  str      x8, [sp, #0x10]                           
+      0x07b2d1bc  bl       #0x8b35260                                   -> 0x8b35260 
+      0x07b2d1c0  add      x1, sp, #0x10                             
+      0x07b2d1c4  mov      w2, #8                                    
+      0x07b2d1c8  mov      x19, x0                                   
+      0x07b2d1cc  bl       #0x7b2e150                                   -> 0x7b2e150 
+      0x07b2d1d0  ldr      x8, [x20, #0x28]                          
+      0x07b2d1d4  ldur     x9, [x29, #-8]                            
+      0x07b2d1d8  cmp      x8, x9                                    
+      0x07b2d1dc  b.ne     #0x7b2d1f4                                
+      0x07b2d1e0  mov      x0, x19                                   
+      0x07b2d1e4  ldp      x20, x19, [sp, #0x30]                     
+      0x07b2d1e8  ldp      x29, x30, [sp, #0x20]                     
+      0x07b2d1ec  add      sp, sp, #0x40                             
+      0x07b2d1f0  ret                                                
+      <<<<
+
+==============================================================================
+called (new(0x1058), &iv, 8) from inside the builder   @ 0x7b2e150
+==============================================================================
+      0x07b2e150  adrp     x8, #0x981a000                               <<<< ENTRY
+      0x07b2e154  add      x8, x8, #0x6e0                               -> 0x981a6e0
+      0x07b2e158  str      xzr, [x0, #0x1050]                        
+      0x07b2e15c  str      x8, [x0]                                  
+      0x07b2e160  cbz      x1, #0x7b2e174                            
+      0x07b2e164  cmp      w2, #8                                    
+      0x07b2e168  b.ne     #0x7b2e174                                
+      0x07b2e16c  ldr      x8, [x1]                                  
+      0x07b2e170  str      x8, [x0, #0x1050]                         
+      0x07b2e174  ret                                                
+      <<<<
+
+==============================================================================
+encrypt_mode0  pad -> transform -> prepend 8 bytes   @ 0x7b2cbb0
+==============================================================================
+      0x07b2cbb0  sub      sp, sp, #0xd0                                <<<< ENTRY
+      0x07b2cbb4  stp      x29, x30, [sp, #0x90]                     
+      0x07b2cbb8  stp      x24, x23, [sp, #0xa0]                     
+      0x07b2cbbc  stp      x22, x21, [sp, #0xb0]                     
+      0x07b2cbc0  stp      x20, x19, [sp, #0xc0]                     
+      0x07b2cbc4  add      x29, sp, #0x90                            
+      0x07b2cbc8  mrs      x24, tpidr_el0                            
+      0x07b2cbcc  add      x22, x0, #8                               
+      0x07b2cbd0  ldr      x8, [x24, #0x28]                          
+      0x07b2cbd4  mov      x0, x22                                   
+      0x07b2cbd8  mov      x19, x3                                   
+      0x07b2cbdc  mov      w20, w2                                   
+      0x07b2cbe0  mov      x21, x1                                   
+      0x07b2cbe4  stur     x8, [x29, #-8]                            
+      0x07b2cbe8  bl       #0x74e6d10                                   -> 0x74e6d10 
+      0x07b2cbec  mov      x23, x0                                   
+      0x07b2cbf0  mov      x0, x22                                   
+      0x07b2cbf4  bl       #0x74e6d24                                   -> 0x74e6d24 
+      0x07b2cbf8  mov      x2, x0                                    
+      0x07b2cbfc  add      x0, sp, #0x30                             
+      0x07b2cc00  mov      x1, x23                                   
+      0x07b2cc04  add      x22, sp, #0x30                            
+      0x07b2cc08  bl       #0x7b2d094                                   -> 0x7b2d094 init_cipher_state(state, key, keylen)
+      0x07b2cc0c  add      x1, sp, #0x30                             
+      0x07b2cc10  mov      x2, x21                                   
+      0x07b2cc14  mov      w3, w20                                   
+      0x07b2cc18  mov      x4, x19                                   
+      0x07b2cc1c  bl       #0x7b2ca78                                   -> 0x7b2ca78 pad_then_transform(state, data, len, out)
+      0x07b2cc20  mov      w20, w0                                   
+      0x07b2cc24  tbz      w0, #0, #0x7b2cc84                        
+      0x07b2cc28  mov      x0, sp                                    
+      0x07b2cc2c  mov      x1, xzr                                   
+      0x07b2cc30  bl       #0x74e6b00                                   -> 0x74e6b00 
+      0x07b2cc34  add      x1, x22, #0x4c                            
+      0x07b2cc38  mov      x0, sp                                    
+      0x07b2cc3c  mov      w2, #8                                    
+      0x07b2cc40  bl       #0x74e6c58                                   -> 0x74e6c58 
+      0x07b2cc44  mov      x0, x19                                   
+      0x07b2cc48  bl       #0x74e6d10                                   -> 0x74e6d10 
+      0x07b2cc4c  mov      x21, x0                                   
+      0x07b2cc50  mov      x0, x19                                   
+      0x07b2cc54  bl       #0x74e6d24                                   -> 0x74e6d24 
+      0x07b2cc58  mov      x2, x0                                    
+      0x07b2cc5c  mov      x0, sp                                    
+      0x07b2cc60  mov      x1, x21                                   
+      0x07b2cc64  bl       #0x74e6c58                                   -> 0x74e6c58 
+      0x07b2cc68  mov      x0, x19                                   
+      0x07b2cc6c  bl       #0x74e6d70                                   -> 0x74e6d70 
+      0x07b2cc70  mov      x1, sp                                    
+      0x07b2cc74  mov      x0, x19                                   
+      0x07b2cc78  bl       #0x74e6d7c                                   -> 0x74e6d7c 
+      0x07b2cc7c  mov      x0, sp                                    
+      0x07b2cc80  bl       #0x74e6e74                                   -> 0x74e6e74 
+      0x07b2cc84  add      x0, sp, #0x30                             
+      0x07b2cc88  bl       #0x7b2ce00                                   -> 0x7b2ce00 
+      0x07b2cc8c  ldr      x8, [x24, #0x28]                          
+      0x07b2cc90  ldur     x9, [x29, #-8]                            
+      0x07b2cc94  cmp      x8, x9                                    
+      0x07b2cc98  b.ne     #0x7b2ccb8                                
+      0x07b2cc9c  and      w0, w20, #1                               
+      0x07b2cca0  ldp      x20, x19, [sp, #0xc0]                     
+      0x07b2cca4  ldp      x22, x21, [sp, #0xb0]                     
+      0x07b2cca8  ldp      x24, x23, [sp, #0xa0]                     
+      0x07b2ccac  ldp      x29, x30, [sp, #0x90]                     
+      0x07b2ccb0  add      sp, sp, #0xd0                             
+      0x07b2ccb4  ret                                                
+      <<<<
+
+==============================================================================
+pad_then_transform(state, data, len, out)   @ 0x7b2ca78
+==============================================================================
+      0x07b2ca78  sub      sp, sp, #0x80                                <<<< ENTRY
+      0x07b2ca7c  stp      x29, x30, [sp, #0x40]                     
+      0x07b2ca80  str      x23, [sp, #0x50]                          
+      0x07b2ca84  stp      x22, x21, [sp, #0x60]                     
+      0x07b2ca88  stp      x20, x19, [sp, #0x70]                     
+      0x07b2ca8c  add      x29, sp, #0x40                            
+      0x07b2ca90  mrs      x23, tpidr_el0                            
+      0x07b2ca94  mov      x20, x1                                   
+      0x07b2ca98  ldr      x8, [x23, #0x28]                          
+      0x07b2ca9c  stur     x8, [x29, #-8]                            
+      0x07b2caa0  cbz      x1, #0x7b2cb80                            
+      0x07b2caa4  add      x0, sp, #8                                
+      0x07b2caa8  mov      x1, xzr                                   
+      0x07b2caac  mov      x19, x4                                   
+      0x07b2cab0  mov      w21, w3                                   
+      0x07b2cab4  mov      x22, x2                                   
+      0x07b2cab8  bl       #0x74e6b00                                   -> 0x74e6b00 
+      0x07b2cabc  mov      w2, w21                                   
+      0x07b2cac0  add      x0, sp, #8                                
+      0x07b2cac4  mov      x1, x22                                   
+      0x07b2cac8  bl       #0x74e6c58                                   -> 0x74e6c58 
+      0x07b2cacc  ldr      x8, [x20]                                 
+      0x07b2cad0  add      x1, sp, #8                                
+      0x07b2cad4  mov      x0, x20                                   
+      0x07b2cad8  mov      w2, #8                                    
+      0x07b2cadc  ldr      x8, [x8, #0x38]                           
+      0x07b2cae0  blr      x8                                        
+      0x07b2cae4  tbz      w0, #0, #0x7b2cb74                        
+      0x07b2cae8  add      x0, sp, #8                                
+      0x07b2caec  bl       #0x74e6d24                                   -> 0x74e6d24 
+      0x07b2caf0  bl       #0x8b35680                                   -> 0x8b35680 
+      0x07b2caf4  mov      x21, x0                                   
+      0x07b2caf8  add      x0, sp, #8                                
+      0x07b2cafc  bl       #0x74e6d24                                   -> 0x74e6d24 
+      0x07b2cb00  mov      x2, x0                                    
+      0x07b2cb04  mov      x0, x21                                   
+      0x07b2cb08  mov      w1, wzr                                   
+      0x07b2cb0c  bl       #0x8b35360                                   -> 0x8b35360 
+      0x07b2cb10  add      x0, sp, #8                                
+      0x07b2cb14  bl       #0x74e6d24                                   -> 0x74e6d24 
+      0x07b2cb18  str      w0, [sp, #4]                              
+      0x07b2cb1c  add      x0, sp, #8                                
+      0x07b2cb20  bl       #0x74e6d10                                   -> 0x74e6d10 
+      0x07b2cb24  mov      x22, x0                                   
+      0x07b2cb28  add      x0, sp, #8                                
+      0x07b2cb2c  bl       #0x74e6d24                                   -> 0x74e6d24 
+      0x07b2cb30  ldr      x8, [x20]                                 
+      0x07b2cb34  mov      x2, x0                                    
+      0x07b2cb38  add      x4, sp, #4                                
+      0x07b2cb3c  mov      x0, x20                                   
+      0x07b2cb40  mov      x1, x22                                   
+      0x07b2cb44  mov      x3, x21                                   
+      0x07b2cb48  ldr      x8, [x8, #0x28]                           
+      0x07b2cb4c  blr      x8                                        
+      0x07b2cb50  mov      w20, w0                                   
+      0x07b2cb54  tbz      w0, #0, #0x7b2cb68                        
+      0x07b2cb58  ldrsw    x2, [sp, #4]                              
+      0x07b2cb5c  mov      x0, x19                                   
+      0x07b2cb60  mov      x1, x21                                   
+      0x07b2cb64  bl       #0x74e6c58                                   -> 0x74e6c58 
+      0x07b2cb68  mov      x0, x21                                   
+      0x07b2cb6c  bl       #0x8b356b0                                   -> 0x8b356b0 
+      0x07b2cb70  b        #0x7b2cb78                                   -> 0x7b2cb78 
+      0x07b2cb74  mov      w20, wzr                                  
+      0x07b2cb78  add      x0, sp, #8                                
+      0x07b2cb7c  bl       #0x74e6e74                                   -> 0x74e6e74 
+      0x07b2cb80  ldr      x8, [x23, #0x28]                          
+      0x07b2cb84  ldur     x9, [x29, #-8]                            
+      0x07b2cb88  cmp      x8, x9                                    
+      0x07b2cb8c  b.ne     #0x7b2cbac                                
+      0x07b2cb90  and      w0, w20, #1                               
+      0x07b2cb94  ldp      x20, x19, [sp, #0x70]                     
+      0x07b2cb98  ldp      x22, x21, [sp, #0x60]                     
+      0x07b2cb9c  ldp      x29, x30, [sp, #0x40]                     
+      0x07b2cba0  ldr      x23, [sp, #0x50]                          
+      0x07b2cba4  add      sp, sp, #0x80                             
+      0x07b2cba8  ret                                                
+      <<<<

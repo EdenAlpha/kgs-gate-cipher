@@ -1,0 +1,5 @@
+primary /pes22/gate/gate_CMD_SET_TRACKRECORD.php 96 bytes
+confirm 20
+stage2 17388532
+hits 0
+elapsed 1899.4

@@ -1,0 +1,8 @@
+cmd: exec sudo docker exec redroid sh -c "am start -n com.aurora.store/.ComposeActivity >/dev/null 2>&1; sleep 8; dumpsys activity top | grep -oE \"(mText|text|contentDescription)=.[^\\\"]*.\" | sort -u | head -40; echo ---; dumpsys window | grep mCurrentFocus"
+at: 15:21:29
+$ sudo docker exec redroid sh -c "am start -n com.aurora.store/.ComposeActivity >/dev/null 2>&1; sleep 8; dumpsys activity top | grep -oE \"(mText|text|contentDescription)=.[^\\\"]*.\" | sort -u | head -40; echo ---; dumpsys window | grep mCurrentFocus"
+---
+  mCurrentFocus=Window{c7e4e32 u0 com.aurora.store/com.aurora.store.ComposeActivity}
+rc=0
+gamepid: 
+flows: 0

@@ -1,0 +1,1 @@
+exec adb -s 127.0.0.1:5555 shell input touchscreen swipe 640 605 640 605 2000

@@ -1,0 +1,37 @@
+cmd: exec tail -20 /tmp/kgs/mitm.log; echo ---; ls -la /tmp/kgs/flows.mitm /tmp/kgs/flows.log; echo ---; ss -tlnp 2>/dev/null | head -8
+at: 10:00:47
+$ tail -20 /tmp/kgs/mitm.log; echo ---; ls -la /tmp/kgs/flows.mitm /tmp/kgs/flows.log; echo ---; ss -tlnp 2>/dev/null | head -8
+[10:00:20.594][10.1.0.174:41961] server connect 172.17.0.1:8080
+[10:00:20.594][10.1.0.174:42133] server connect 172.17.0.1:8080
+[10:00:20.594][10.1.0.174:42169] server connect 172.17.0.1:8080
+[10:00:20.595][10.1.0.174:42321] client connect
+[10:00:20.596][10.1.0.174:42633] client connect
+[10:00:20.597][10.1.0.174:42635] client connect
+[10:00:20.601][10.1.0.174:42189] server connect 172.17.0.1:8080
+[10:00:20.601][10.1.0.174:42239] server connect 172.17.0.1:8080
+[10:00:20.601][10.1.0.174:42307] server connect 172.17.0.1:8080
+[10:00:20.601][10.1.0.174:42655] client connect
+[10:00:20.603][10.1.0.174:42713] client connect
+[10:00:20.604][10.1.0.174:42907] client connect
+[10:00:20.606][10.1.0.174:42321] server connect 172.17.0.1:8080
+[10:00:20.607][10.1.0.174:42633] server connect 172.17.0.1:8080
+[10:00:20.607][10.1.0.174:42635] server connect 172.17.0.1:8080
+[10:00:20.607][10.1.0.174:42949] client connect
+[10:00:20.609][10.1.0.174:42951] client connect
+[10:00:20.610][10.1.0.174:43051] client connect
+[10:00:20.613][10.1.0.174:42655] server connect 172.17.0.1:8080
+[10:00:20.613][10.1.0.174:42713] server connect 172.17.0.1:8080---
+-rw-r--r-- 1 runner runner 41 Sep 30 08:54 /tmp/kgs/flows.log
+-rw-r--r-- 1 runner runner  0 Sep 30 08:54 /tmp/kgs/flows.mitm
+---
+State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess                             
+LISTEN 0      0         127.0.0.54:53         0.0.0.0:*                                       
+LISTEN 0      0            0.0.0.0:27042      0.0.0.0:*                                       
+LISTEN 0      0            0.0.0.0:22         0.0.0.0:*                                       
+LISTEN 0      0         127.0.0.53:53         0.0.0.0:*                                       
+LISTEN 0      0            0.0.0.0:8080       0.0.0.0:*    users:(("mitmdump",pid=12363,fd=7))
+LISTEN 0      0          127.0.0.1:5037       0.0.0.0:*    users:(("adb",pid=11924,fd=9))     
+LISTEN 0      0            0.0.0.0:5555       0.0.0.0:*                                       
+rc=0
+gamepid: 
+flows: 0

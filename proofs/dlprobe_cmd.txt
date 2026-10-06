@@ -1,0 +1,1 @@
+exec mkdir -p /tmp/kgs/full; echo PROBE-OK-20261005 > /tmp/kgs/full/probe.txt; dd if=/dev/urandom of=/tmp/kgs/full/blob.bin bs=1048576 count=3 2>/dev/null; ls -la /tmp/kgs/full/

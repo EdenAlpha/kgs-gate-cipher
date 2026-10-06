@@ -1,0 +1,23 @@
+sections of interest:
+  .dynsym      type=11   addr=0x000000328 off=0x000000328 size=0x0000c81a8 entsize=24 link=7
+  .dynstr      type=3    addr=0x000111f04 off=0x000111f04 size=0x0001db368 entsize=0 link=0
+  .rela.dyn    type=1610612738 addr=0x0002ed270 off=0x0002ed270 size=0x0003de65a entsize=1 link=3
+  .rela.plt    type=4    addr=0x0006cb8d0 off=0x0006cb8d0 size=0x000059e98 entsize=24 link=3
+  .plt         type=1    addr=0x008b35210 off=0x008b31210 size=0x00003bf30 entsize=0 link=0
+
+.rela.plt entries: 15345
+plt section VA    : 0x8b35210
+
+==============================================================================
+PLT SYMBOL RESOLUTION
+==============================================================================
+  0x08b352d0  ->  clock_gettime          (GOT 0x98e4d88)
+  0x08b3ac10  ->  _ZNSt6__ndk113basic_ostreamIcNS_11char_traitsIcEEElsEj          (GOT 0x98e7a28)
+  0x08b38590  ->  _ZNSt6__ndk18ios_base4initEPv          (GOT 0x98e66e8)
+  0x08b385a0  ->  _ZNSt6__ndk115basic_streambufIcNS_11char_traitsIcEEEC2Ev          (GOT 0x98e66f0)
+  0x08b38820  ->  _ZNSt6__ndk113basic_ostreamIcNS_11char_traitsIcEEE6sentryC1ERS3_          (GOT 0x98e6830)
+  0x08b38600  ->  _ZNSt6__ndk18ios_base5clearEj          (GOT 0x98e6720)
+  0x08b38a10  ->  _ZNSt6__ndk113random_deviceC2ERKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE          (GOT 0x98e6928)
+  0x08b38a20  ->  _ZNSt6__ndk113random_deviceclEv          (GOT 0x98e6930)
+  0x08b38a30  ->  _ZNSt6__ndk113random_deviceD1Ev          (GOT 0x98e6938)
+  0x08b352c0  ->  _ZdlPv          (GOT 0x98e4d80)

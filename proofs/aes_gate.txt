@@ -1,0 +1,87 @@
+framing: body[0:16]=IV  body[16:]=ct   key=Key B  AES-256-CBC  pad=16
+bodies: 42
+==============================================================================
+REQ /pes22/gate/gate_CMD_GET_SERVER_ENV.php                    pad=ok inflate=zlib   exact=True  plain=151    out=159
+RESP /pes22/gate/gate_CMD_GET_SERVER_ENV.php                    pad=ok inflate=gzip   exact=True  plain=2373   out=4590
+REQ /pes22/gate/gate_CMD_GET_COUNTRY_LIST.php                  pad=ok inflate=zlib   exact=True  plain=118    out=123
+RESP /pes22/gate/gate_CMD_GET_COUNTRY_LIST.php                  pad=ok inflate=gzip   exact=True  plain=2327   out=13237
+REQ /pes22/gate/gate_CMD_GET_AGE_GATE_REQUIREMENTS.php         pad=ok inflate=zlib   exact=True  plain=132    out=124
+RESP /pes22/gate/gate_CMD_GET_AGE_GATE_REQUIREMENTS.php         pad=ok inflate=gzip   exact=True  plain=130    out=114
+REQ /pes22/gate/gate_CMD_GET_KID_USER_AGE_KIND.php             pad=ok inflate=zlib   exact=True  plain=198    out=203
+RESP /pes22/gate/gate_CMD_GET_KID_USER_AGE_KIND.php             pad=ok inflate=gzip   exact=True  plain=110    out=91
+REQ /pes22/gate/gate_CMD_GET_SERVER_ENV.php                    pad=ok inflate=zlib   exact=True  plain=151    out=159
+RESP /pes22/gate/gate_CMD_GET_SERVER_ENV.php                    pad=ok inflate=gzip   exact=True  plain=2369   out=4590
+REQ /pes22/gate/gate_CMD_GET_COUNTRY_LIST.php                  pad=ok inflate=zlib   exact=True  plain=118    out=123
+RESP /pes22/gate/gate_CMD_GET_COUNTRY_LIST.php                  pad=ok inflate=gzip   exact=True  plain=2326   out=13237
+REQ /pes22/gate/gate_CMD_GET_AGE_GATE_REQUIREMENTS.php         pad=ok inflate=zlib   exact=True  plain=132    out=124
+RESP /pes22/gate/gate_CMD_GET_AGE_GATE_REQUIREMENTS.php         pad=ok inflate=gzip   exact=True  plain=130    out=114
+REQ /pes22/gate/gate_CMD_GET_KID_USER_AGE_KIND.php             pad=ok inflate=zlib   exact=True  plain=199    out=203
+RESP /pes22/gate/gate_CMD_GET_KID_USER_AGE_KIND.php             pad=ok inflate=gzip   exact=True  plain=110    out=91
+REQ /pes22/gate/gate_CMD_GET_SURVEY_INFO.php                   pad=ok inflate=zlib   exact=True  plain=288    out=405
+RESP /pes22/gate/gate_CMD_GET_SURVEY_INFO.php                   pad=ok inflate=gzip   exact=True  plain=442    out=874
+REQ /pes22/gate/gate_CMD_CHECK_STRING.php                      pad=ok inflate=zlib   exact=True  plain=128    out=120
+RESP /pes22/gate/gate_CMD_CHECK_STRING.php                      pad=ok inflate=gzip   exact=True  plain=103    out=82
+REQ /pes22/gate/gate_CMD_CREATE_USER.php                       pad=ok inflate=zlib   exact=True  plain=1003   out=1673
+RESP /pes22/gate/gate_CMD_CREATE_USER.php                       pad=ok inflate=gzip   exact=True  plain=12342  out=129012
+REQ /pes22/gate/gate_CMD_GET_PRODUCT_LIST.php                  pad=ok inflate=zlib   exact=True  plain=137    out=130
+RESP /pes22/gate/gate_CMD_GET_PRODUCT_LIST.php                  pad=ok inflate=gzip   exact=True  plain=7270   out=101450
+REQ /pes22/gate/gate_CMD_SET_TRACKRECORD.php                   pad=ok inflate=zlib   exact=True  plain=209    out=258
+RESP /pes22/gate/gate_CMD_SET_TRACKRECORD.php                   pad=ok inflate=gzip   exact=True  plain=71     out=50
+REQ /pes22/gate/gate_CMD_GET_STADIUM_DATA.php                  pad=ok inflate=zlib   exact=True  plain=173    out=168
+RESP /pes22/gate/gate_CMD_GET_STADIUM_DATA.php                  pad=ok inflate=gzip   exact=True  plain=616    out=1812
+REQ /pes22/gate/gate_CMD_GET_GAMERELAY_QUALITYCHECK_LIST.php   pad=ok inflate=zlib   exact=True  plain=154    out=147
+RESP /pes22/gate/gate_CMD_GET_GAMERELAY_QUALITYCHECK_LIST.php   pad=ok inflate=gzip   exact=True  plain=2321   out=12280
+REQ /pes22/gate/gate_CMD_SEND_ADJUST_PARAM.php                 pad=ok inflate=zlib   exact=True  plain=264    out=279
+RESP /pes22/gate/gate_CMD_SEND_ADJUST_PARAM.php                 pad=ok inflate=gzip   exact=True  plain=73     out=52
+REQ /pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php             pad=ok inflate=zlib   exact=True  plain=577    out=2394
+RESP /pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php             pad=ok inflate=gzip   exact=True  plain=77     out=56
+REQ /pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php             pad=ok inflate=zlib   exact=True  plain=575    out=2392
+RESP /pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php             pad=ok inflate=gzip   exact=True  plain=77     out=56
+REQ /pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php             pad=ok inflate=zlib   exact=True  plain=575    out=2392
+RESP /pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php             pad=ok inflate=gzip   exact=True  plain=77     out=56
+REQ /pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php             pad=ok inflate=zlib   exact=True  plain=578    out=2392
+RESP /pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php             pad=ok inflate=gzip   exact=True  plain=77     out=56
+REQ /pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php             pad=ok inflate=zlib   exact=True  plain=580    out=2392
+RESP /pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php             pad=ok inflate=gzip   exact=True  plain=77     out=56
+
+bodies whose plaintext fully decompresses: 42/42
+
+==============================================================================
+ONE PAIR, VERBATIM
+==============================================================================
+
+--- REQ /pes22/gate/gate_CMD_GET_SERVER_ENV.php ---
+wire     176 bytes   IV=f1f7d09fe3db7d2789060607c98fa601
+plain    151 bytes   zlib
+plainhex 78daeb5a9a5b9c9e99b2c9d9d725dedd35243ed83528cc3528ded52f6c49516166ca39a1b3c297979716a716c567a630ac2a4e2d2ececccf03b217accead8c2fc8492c49cb2fca5deee8e712e4efe9b2b2383e3bb5b23cbf2865455c66706a52a044f4929cc4bcf445a1c1cb8a52d3813a5706b9ba7bfafbc58706af40d7bc2e39273335af24be2cb50864c752333d033d4300665f4051
+plainasc x..Z.[.......%..5$>.5(.5(../lIQaf.9..........g.0.*N-.........../.I,I./.].........8>;..<.(eE\fpjR.D......E....R..:W...{......@...9'35.$.,..d.R3=.=C.f_@Q
+inflated 159 bytes
+infhex   8aa56d73676964b2434d445f4745545f5345525645525f454e56a472716964ce12cd13d3a7757365725f696400aa73657373696f6e5f6964a0ab6d795f706c6174666f726da7414e44524f4944a9735f6b6579776f7264a85e6953656251185ba46c616e67a25553a6726567696f6ea9524547494f4e5f5553a8706c6174666f726da7414e44524f4944ae636c69656e745f76657273696f6ea5362e302e31
+infasc   ..msgid.CMD_GET_SERVER_ENV.rqid......user_id..session_id..my_platform.ANDROID.s_keyword.^iSebQ.[.lang.US.region.REGION_US.platform.ANDROID.client_version.6.0.1
+
+--- RESP /pes22/gate/gate_CMD_GET_SERVER_ENV.php ---
+wire     2400 bytes   IV=d3f57ff91701ae8f7b48af134e72bc87
+plain    2373 bytes   gzip
+plainhex 1f8b0800000000000203b557cf8fe3561ddfa1b77240a5173800a5ad4008cdc471269b3162559cc4c9383b71268e633bbe3cd97ecf1327cf3f1adbc964c4a90209712aea9543b599a5db966ebbdb76db8204178438d09510a7410889037f0437be7e4e66677729cb6e61a4d124dff7dee7fbf97ebf9feff7bdf9dba56fbf19cfa23442519cfee5a943b2ec489669c5237ee8f7685a93a77a36323a89352c8f9d
+plainasc ...........W...V....r@..8...@...q&.1bU...8;q&.c;.<.~..'.?...d....q*..C.....n..v.....8....A.....7.~Nfgw).na..$......~........o....4BQ....C..H.i.#~..hZ..z62:.5,..
+inflated 4590 bytes
+infhex   de0027a970726f746f5f6f7074da035065794a455a585a70593255694f6c7437496b567559574a735a553168626e566d59574e3064584a6c5457396b5a57784f5957316c55484a6c6332563056486c775a5349364d43776954476c7a644756755a584a5862334a725a584a446232356d61576451636d567a5a5852556558426c496a6f7766537837496b567559574a735a553168626e566d59574e3064584a6c5457396b5a57784f5957316c55484a6c6332563056486c775a5349364d53776954476c7a644756755a584a5862334a725a584a446232356d61576451636d567a5a5852556558426c496a6f7866537837496b567559574a735a553168626e566d59574e3064584a6c5457396b5a57784f5957316c55484a6c6332563056486c775a5349364d69776951584277
+infasc   ..'.proto_opt..PeyJEZXZpY2UiOlt7IkVuYWJsZU1hbnVmYWN0dXJlTW9kZWxOYW1lUHJlc2V0VHlwZSI6MCwiTGlzdGVuZXJXb3JrZXJDb25maWdQcmVzZXRUeXBlIjowfSx7IkVuYWJsZU1hbnVmYWN0dXJlTW9kZWxOYW1lUHJlc2V0VHlwZSI6MSwiTGlzdGVuZXJXb3JrZXJDb25maWdQcmVzZXRUeXBlIjoxfSx7IkVuYWJsZU1hbnVmYWN0dXJlTW9kZWxOYW1lUHJlc2V0VHlwZSI6MiwiQXBw
+
+--- REQ /pes22/gate/gate_CMD_GET_SERVER_ENV.php ---
+wire     176 bytes   IV=a34740a440bfcd1169fcd711b305cccb
+plain    151 bytes   zlib
+plainhex 78daeb5a9a5b9c9e99b2c9d9d725dedd35243ed83528cc3528ded52f6c49516166ca39a1b3c237969716a716c567a630ac2a4e2d2ececccf03b217accead8c2fc8492c49cb2fca5deee8e712e4efe9b2b2383e3bb5b23cbf2865455c66706a52a044f4929cc4bcf445a1c1cb8a52d3813a5706b9ba7bfafbc58706af40d7bc2e39273335af24be2cb50864c752333d033d430068cb4056
+plainasc x..Z.[.......%..5$>.5(.5(../lIQaf.9...7......g.0.*N-.........../.I,I./.].........8>;..<.(eE\fpjR.D......E....R..:W...{......@...9'35.$.,..d.R3=.=C.h.@V
+inflated 159 bytes
+infhex   8aa56d73676964b2434d445f4745545f5345525645525f454e56a472716964ce12cd13d8a7757365725f696400aa73657373696f6e5f6964a0ab6d795f706c6174666f726da7414e44524f4944a9735f6b6579776f7264a85e6953656251185ba46c616e67a25553a6726567696f6ea9524547494f4e5f5553a8706c6174666f726da7414e44524f4944ae636c69656e745f76657273696f6ea5362e302e31
+infasc   ..msgid.CMD_GET_SERVER_ENV.rqid......user_id..session_id..my_platform.ANDROID.s_keyword.^iSebQ.[.lang.US.region.REGION_US.platform.ANDROID.client_version.6.0.1
+
+--- RESP /pes22/gate/gate_CMD_GET_SERVER_ENV.php ---
+wire     2400 bytes   IV=62b86ade021fc305f4cb04b36c94f35b
+plain    2369 bytes   gzip
+plainhex 1f8b0800000000000203b557cf8f234715de21b770402117b84048221042336eb7c7eb69c42ab4edb6a79d717ba6ddee6ef7a5d4dd553d6ebbfa47fa873d1e718a40429c8272e510c5b36493904d76936c1290e0821007b2123706216efc11dc785d6dcfceee12966c60a4d1d8afaabef7bdf7bef7aae6ef57bef3669c445984a238fbeb138764d9932cd38ac7fcc81fd0ac21cff47c6cf4526b549d38a11e8c
+plainasc ...........W..#G..!.p@!..@H".B3n...i.*.....q{...n....U=n..G..=.q.@B..r....d..Mv.l........7.!n...x]m.....l`..............W..f.DY..8....d..,........!..|l.RkT.8...
+inflated 4590 bytes
+infhex   de0027a970726f746f5f6f7074da035065794a455a585a70593255694f6c7437496b567559574a735a553168626e566d59574e3064584a6c5457396b5a57784f5957316c55484a6c6332563056486c775a5349364d43776954476c7a644756755a584a5862334a725a584a446232356d61576451636d567a5a5852556558426c496a6f7766537837496b567559574a735a553168626e566d59574e3064584a6c5457396b5a57784f5957316c55484a6c6332563056486c775a5349364d53776954476c7a644756755a584a5862334a725a584a446232356d61576451636d567a5a5852556558426c496a6f7866537837496b567559574a735a553168626e566d59574e3064584a6c5457396b5a57784f5957316c55484a6c6332563056486c775a5349364d69776951584277
+infasc   ..'.proto_opt..PeyJEZXZpY2UiOlt7IkVuYWJsZU1hbnVmYWN0dXJlTW9kZWxOYW1lUHJlc2V0VHlwZSI6MCwiTGlzdGVuZXJXb3JrZXJDb25maWdQcmVzZXRUeXBlIjowfSx7IkVuYWJsZU1hbnVmYWN0dXJlTW9kZWxOYW1lUHJlc2V0VHlwZSI6MSwiTGlzdGVuZXJXb3JrZXJDb25maWdQcmVzZXRUeXBlIjoxfSx7IkVuYWJsZU1hbnVmYWN0dXJlTW9kZWxOYW1lUHJlc2V0VHlwZSI6MiwiQXBw

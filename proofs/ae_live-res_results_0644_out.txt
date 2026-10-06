@@ -1,0 +1,5 @@
+cmd: intent market://details?id=jp.konami.pesam
+at: 10:29:38
+Starting: Intent { act=android.intent.action.VIEW dat=market://details/... }
+gamepid: 
+flows: 0

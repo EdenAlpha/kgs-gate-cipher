@@ -1,0 +1,27 @@
+cmd: exec bash -c true; echo C3; echo "== data total MB =="; sudo docker exec redroid sh -c "du -sm /data 2>/dev/null | tail -1"; sudo docker exec -d redroid sh -c "/data/local/tmp/frida-server > /data/local/tmp/frida.out 2>&1"; sleep 12; nc -z 127.0.0.1 27042 && echo PORT_OPEN || echo PORT_CLOSED; adb -s 127.0.0.1:5555 shell am start -n jp.konami.pesam/com.epicgames.ue4.SplashActivity; sleep 50; echo "pid=$(adb -s 127.0.0.1:5555 shell pidof jp.konami.pesam)"; SCRIPT=$(find /home/runner -name capture_insecure.js -path "*kgs-login*" 2>/dev/null | head -1); (cd /tmp/kgs && nohup setsid timeout 5400 frida -H 127.0.0.1:27042 -n jp.konami.pesam -l "$SCRIPT" --runtime=v8 > /tmp/kgs/attach.log 2>&1 < /dev/null &); sleep 25; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== attach log =="; tail -20 /tmp/kgs/attach.log
+at: 07:19:01
+$ bash -c true; echo C3; echo "== data total MB =="; sudo docker exec redroid sh -c "du -sm /data 2>/dev/null | tail -1"; sudo docker exec -d redroid sh -c "/data/local/tmp/frida-server > /data/local/tmp/frida.out 2>&1"; sleep 12; nc -z 127.0.0.1 27042 && echo PORT_OPEN || echo PORT_CLOSED; adb -s 127.0.0.1:5555 shell am start -n jp.konami.pesam/com.epicgames.ue4.SplashActivity; sleep 50; echo "pid=$(adb -s 127.0.0.1:5555 shell pidof jp.konami.pesam)"; SCRIPT=$(find /home/runner -name capture_insecure.js -path "*kgs-login*" 2>/dev/null | head -1); (cd /tmp/kgs && nohup setsid timeout 5400 frida -H 127.0.0.1:27042 -n jp.konami.pesam -l "$SCRIPT" --runtime=v8 > /tmp/kgs/attach.log 2>&1 < /dev/null &); sleep 25; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== attach log =="; tail -20 /tmp/kgs/attach.log
+C3
+== data total MB ==
+5908	/data
+Connection to 127.0.0.1 27042 port [tcp/*] succeeded!
+PORT_OPEN
+Starting: Intent { cmp=jp.konami.pesam/com.epicgames.ue4.SplashActivity }
+pid=5494
+== attach log ==
+     ____
+    / _  |   Frida 17.19.0 - A world-class dynamic instrumentation toolkit
+   | (_| |
+    > _  |   Commands:
+   /_/ |_|       help      -> Displays the help system
+   . . . .       object?   -> Display information about 'object'
+   . . . .       exit/quit -> Exit
+   . . . .
+   . . . .   Prefer a GUI? Luma is the official Frida app, with a live REPL,
+   . . . .   persistent sessions & collaboration. https://luma.frida.re/
+   . . . .
+   . . . .   Connected to 127.0.0.1:27042 (id=socket@127.0.0.1:27042)
+Failed to spawn: error receiving data: Connection reset by peer
+rc=0
+gamepid: 5494
+flows: 0

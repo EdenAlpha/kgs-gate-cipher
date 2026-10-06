@@ -1,0 +1,7 @@
+cmd: exec adb connect 127.0.0.1:5555; adb -s 127.0.0.1:5555 shell input tap 360 625; sleep 2; adb -s 127.0.0.1:5555 shell input text $PEERLINK_GMAIL
+at: 09:05:00
+$ adb connect 127.0.0.1:5555; adb -s 127.0.0.1:5555 shell input tap 360 625; sleep 2; adb -s 127.0.0.1:5555 shell input text $PEERLINK_GMAIL
+already connected to 127.0.0.1:5555
+rc=0
+gamepid: 
+flows: 0

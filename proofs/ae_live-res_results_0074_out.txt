@@ -1,0 +1,7 @@
+cmd: exec bash -c true; echo UD; P=$(cat /tmp/kgs/creds/GPASS); adb -s 127.0.0.1:5555 shell input tap 360 538; sleep 3; adb -s 127.0.0.1:5555 shell input text "$P"; sleep 3; adb -s 127.0.0.1:5555 shell input tap 591 667; sleep 16; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+at: 23:38:34
+$ bash -c true; echo UD; P=$(cat /tmp/kgs/creds/GPASS); adb -s 127.0.0.1:5555 shell input tap 360 538; sleep 3; adb -s 127.0.0.1:5555 shell input text "$P"; sleep 3; adb -s 127.0.0.1:5555 shell input tap 591 667; sleep 16; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+UD
+rc=0
+gamepid: 
+flows: 0

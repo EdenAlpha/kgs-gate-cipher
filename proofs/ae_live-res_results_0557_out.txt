@@ -1,0 +1,11 @@
+cmd: exec sudo docker exec redroid sh -c "ls -la /data/local/tmp/game2.pcap; tcpdump -r /data/local/tmp/game2.pcap -nn -c 200 2>/dev/null | awk \"{print \\$3}\" | cut -d. -f1-4 | sort | uniq -c | sort -rn | head -15"
+at: 10:16:29
+$ sudo docker exec redroid sh -c "ls -la /data/local/tmp/game2.pcap; tcpdump -r /data/local/tmp/game2.pcap -nn -c 200 2>/dev/null | awk \"{print \\$3}\" | cut -d. -f1-4 | sort | uniq -c | sort -rn | head -15"
+-rw-r--r-- 1 root root 19894272 2026-09-30 10:13 /data/local/tmp/game2.pcap
+awk: syntax error at source line 1
+ context is
+	{print >>>  \ <<< exec}
+awk: illegal statement at source line 1
+rc=0
+gamepid: 
+flows: 0

@@ -1,0 +1,12 @@
+cmd: exec bash -c true; echo T7; adb -s 127.0.0.1:5555 shell input swipe 640 620 640 620 250; sleep 22; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== flows2 =="; grep -c "^### " /tmp/kgs/flows2.log; echo "== tar =="; ls -l /tmp/kgs/pesam-data.tar 2>&1 | tail -1; ls /tmp/kgs/tar.done 2>&1
+at: 01:47:09
+$ bash -c true; echo T7; adb -s 127.0.0.1:5555 shell input swipe 640 620 640 620 250; sleep 22; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== flows2 =="; grep -c "^### " /tmp/kgs/flows2.log; echo "== tar =="; ls -l /tmp/kgs/pesam-data.tar 2>&1 | tail -1; ls /tmp/kgs/tar.done 2>&1
+T7
+== flows2 ==
+106
+== tar ==
+-rw-r--r-- 1 runner runner 2134203392 Oct  1 01:44 /tmp/kgs/pesam-data.tar
+/tmp/kgs/tar.done
+rc=0
+gamepid: 82330
+flows: 22

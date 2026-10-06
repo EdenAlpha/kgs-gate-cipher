@@ -1,0 +1,1 @@
+exec adb -s 127.0.0.1:5555 shell "su 0 sh -c \"tar -czf /sdcard/gamedata.tgz /data/data/jp.konami.pesam\""; adb -s 127.0.0.1:5555 shell "su 0 sh -c \"du -sh /sdcard/gamedata.tgz\""; adb -s 127.0.0.1:5555 pull /sdcard/gamedata.tgz /tmp/kgs/full/; adb -s 127.0.0.1:5555 pull /sdcard/Android/data/jp.konami.pesam /tmp/kgs/full/sdcard-data; echo FULL; ls -la /tmp/kgs/full/

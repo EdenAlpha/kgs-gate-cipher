@@ -1,0 +1,6 @@
+cmd: exec ls /data/local/tmp/splits/ 2>/dev/null | head -30
+at: 10:37:18
+$ ls /data/local/tmp/splits/ 2>/dev/null | head -30
+rc=2
+gamepid: 
+flows: 0

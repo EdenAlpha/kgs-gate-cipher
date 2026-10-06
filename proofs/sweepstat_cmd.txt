@@ -1,0 +1,1 @@
+exec echo SWEEPNOW; tail -4 /tmp/kgs/sweep2.log 2>&1; echo KBTOTAL; du -sk /tmp/kgs/sweep2 2>/dev/null; echo FLOWCOUNT; grep -c '^### ' /tmp/kgs/flows.log 2>/dev/null; echo KEYLOG; tail -3 /tmp/kgs/findkey.log 2>/dev/null

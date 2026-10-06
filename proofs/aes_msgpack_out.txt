@@ -1,0 +1,48 @@
+﻿stage-1/2 target : 96 bytes  /pes22/gate/gate_CMD_SET_TRACKRECORD.php
+confirmation     : 20 replies, lengths [96, 96, 96, 96, 96, 96, 128, 128, 128, 160, 160, 464, 640, 2352, 2352, 2352, 2400, 2400, 7296, 12368]
+oracle           : full plaintext must PARSE (msgpack / json / gzip /
+                   mostly-printable).  No padding assumed anywhere.
+layouts          : IV_prefix, no_IV, IV_suffix
+
+file 160822968 bytes, offsets 0 .. 160822936
+
+progress   5000000 / 160822937 (3.1%)  0 off/s  ETA 155822937000000s  stage2=610204
+progress  10000000 / 160822937 (6.2%)  85065 off/s  ETA 1773s  stage2=1193651
+progress  15000000 / 160822937 (9.3%)  171914 off/s  ETA 848s  stage2=1702262
+progress  20000000 / 160822937 (12.4%)  256005 off/s  ETA 550s  stage2=2233260
+progress  25000000 / 160822937 (15.5%)  271147 off/s  ETA 501s  stage2=2811467
+progress  30000000 / 160822937 (18.7%)  422850 off/s  ETA 309s  stage2=3382102
+progress  35000000 / 160822937 (21.8%)  505142 off/s  ETA 249s  stage2=3955449
+progress  40000000 / 160822937 (24.9%)  590580 off/s  ETA 205s  stage2=4532969
+progress  45000000 / 160822937 (28.0%)  682905 off/s  ETA 170s  stage2=5111976
+progress  50000000 / 160822937 (31.1%)  752897 off/s  ETA 147s  stage2=5692841
+progress  55000000 / 160822937 (34.2%)  853152 off/s  ETA 124s  stage2=6279101
+progress  60000000 / 160822937 (37.3%)  921244 off/s  ETA 109s  stage2=6862607
+progress  65000000 / 160822937 (40.4%)  1012650 off/s  ETA 95s  stage2=7447299
+progress  70000000 / 160822937 (43.5%)  1105653 off/s  ETA 82s  stage2=8027052
+progress  75000000 / 160822937 (46.6%)  1144622 off/s  ETA 75s  stage2=8610530
+progress  80000000 / 160822937 (49.7%)  1265127 off/s  ETA 64s  stage2=9190880
+progress  85000000 / 160822937 (52.9%)  1329382 off/s  ETA 57s  stage2=9772108
+progress  90000000 / 160822937 (56.0%)  1439941 off/s  ETA 49s  stage2=10352290
+progress  95000000 / 160822937 (59.1%)  1491473 off/s  ETA 44s  stage2=10933612
+progress 100000000 / 160822937 (62.2%)  1603032 off/s  ETA 38s  stage2=11514651
+progress 105000000 / 160822937 (65.3%)  1683022 off/s  ETA 33s  stage2=12097604
+progress 110000000 / 160822937 (68.4%)  1824702 off/s  ETA 28s  stage2=12679448
+progress 115000000 / 160822937 (71.5%)  1788034 off/s  ETA 26s  stage2=13261489
+progress 120000000 / 160822937 (74.6%)  1952765 off/s  ETA 21s  stage2=13842840
+progress 125000000 / 160822937 (77.7%)  2038927 off/s  ETA 18s  stage2=14426483
+progress 130000000 / 160822937 (80.8%)  2156489 off/s  ETA 14s  stage2=15009710
+progress 135000000 / 160822937 (83.9%)  2231140 off/s  ETA 12s  stage2=15591439
+progress 140000000 / 160822937 (87.1%)  2290046 off/s  ETA 9s  stage2=16169764
+progress 145000000 / 160822937 (90.2%)  2339174 off/s  ETA 7s  stage2=16751112
+progress 150000000 / 160822937 (93.3%)  2751952 off/s  ETA 4s  stage2=16945252
+progress 155000000 / 160822937 (96.4%)  2812345 off/s  ETA 2s  stage2=17158990
+progress 160000000 / 160822937 (99.5%)  2983260 off/s  ETA 0s  stage2=17353852
+
+tested 160822937 offsets in 1899.4 s (84671/s)
+reached stage 2 (shape plausible): 17388532
+parsed AND confirmed on all 20 replies: 0
+
+NO -- no 32-byte window of libUE4.so yields a plaintext that parses
+      under any IV layout, with or without PKCS#7 padding
+wrote C:\Users\Administrator\AppData\Local\Temp\2\aes_scan_msgpack.txt

@@ -1,0 +1,465 @@
+==============================================================================
+Blowfish core (encrypt) -- called by key schedule and by vtable[0] 0x7b2e17c   @ 0x7b2d404
+==============================================================================
+      0x07b2d404  ldp      w10, w12, [x0, #8]                           <<<< ENTRY
+      0x07b2d408  ldr      w9, [x1]                                  
+      0x07b2d40c  add      x8, x0, #0x50                             
+      0x07b2d410  ldr      w3, [x2]                                  
+      0x07b2d414  eor      w13, w10, w9                              
+      0x07b2d418  add      x9, x0, #0x450                            
+      0x07b2d41c  lsr      w11, w13, #0x18                           
+      0x07b2d420  ubfx     w14, w13, #0x10, #8                       
+      0x07b2d424  ubfx     w15, w13, #8, #8                          
+      0x07b2d428  add      x10, x0, #0x850                           
+      0x07b2d42c  and      w16, w13, #0xff                           
+      0x07b2d430  eor      w12, w12, w3                              
+      0x07b2d434  ldr      w17, [x8, w11, uxtw #2]                   
+      0x07b2d438  add      x11, x0, #0xc50                           
+      0x07b2d43c  ldr      w14, [x9, w14, uxtw #2]                   
+      0x07b2d440  ldr      w15, [x10, w15, uxtw #2]                  
+      0x07b2d444  ldr      w16, [x11, w16, uxtw #2]                  
+      0x07b2d448  add      w14, w14, w17                             
+      0x07b2d44c  eor      w14, w14, w15                             
+      0x07b2d450  add      w14, w14, w16                             
+      0x07b2d454  eor      w12, w12, w14                             
+      0x07b2d458  lsr      w14, w12, #0x18                           
+      0x07b2d45c  ubfx     w15, w12, #0x10, #8                       
+      0x07b2d460  ubfx     w16, w12, #8, #8                          
+      0x07b2d464  and      w17, w12, #0xff                           
+      0x07b2d468  ldr      w14, [x8, w14, uxtw #2]                   
+      0x07b2d46c  ldr      w15, [x9, w15, uxtw #2]                   
+      0x07b2d470  ldr      w16, [x10, w16, uxtw #2]                  
+      0x07b2d474  ldr      w17, [x11, w17, uxtw #2]                  
+      0x07b2d478  add      w14, w15, w14                             
+      0x07b2d47c  ldp      w3, w15, [x0, #0x10]                      
+      0x07b2d480  eor      w14, w14, w16                             
+      0x07b2d484  add      w14, w14, w17                             
+      0x07b2d488  eor      w13, w3, w13                              
+      0x07b2d48c  eor      w12, w15, w12                             
+      0x07b2d490  eor      w13, w13, w14                             
+      0x07b2d494  lsr      w14, w13, #0x18                           
+      0x07b2d498  ubfx     w16, w13, #0x10, #8                       
+      0x07b2d49c  ubfx     w17, w13, #8, #8                          
+      0x07b2d4a0  and      w3, w13, #0xff                            
+      0x07b2d4a4  ldr      w14, [x8, w14, uxtw #2]                   
+      0x07b2d4a8  ldr      w16, [x9, w16, uxtw #2]                   
+      0x07b2d4ac  ldr      w17, [x10, w17, uxtw #2]                  
+      0x07b2d4b0  ldr      w3, [x11, w3, uxtw #2]                    
+      0x07b2d4b4  add      w14, w16, w14                             
+      0x07b2d4b8  eor      w14, w14, w17                             
+      0x07b2d4bc  add      w14, w14, w3                              
+      0x07b2d4c0  eor      w12, w12, w14                             
+      0x07b2d4c4  lsr      w14, w12, #0x18                           
+      0x07b2d4c8  ubfx     w15, w12, #0x10, #8                       
+      0x07b2d4cc  ubfx     w16, w12, #8, #8                          
+      0x07b2d4d0  and      w17, w12, #0xff                           
+      0x07b2d4d4  ldr      w14, [x8, w14, uxtw #2]                   
+      0x07b2d4d8  ldr      w15, [x9, w15, uxtw #2]                   
+      0x07b2d4dc  ldr      w16, [x10, w16, uxtw #2]                  
+      0x07b2d4e0  ldr      w17, [x11, w17, uxtw #2]                  
+      0x07b2d4e4  add      w14, w15, w14                             
+      0x07b2d4e8  ldp      w3, w15, [x0, #0x18]                      
+      0x07b2d4ec  eor      w14, w14, w16                             
+      0x07b2d4f0  add      w14, w14, w17                             
+      0x07b2d4f4  eor      w13, w3, w13                              
+      0x07b2d4f8  eor      w12, w15, w12                             
+      0x07b2d4fc  eor      w13, w13, w14                             
+      0x07b2d500  lsr      w14, w13, #0x18                           
+      0x07b2d504  ubfx     w16, w13, #0x10, #8                       
+      0x07b2d508  ubfx     w17, w13, #8, #8                          
+      0x07b2d50c  and      w3, w13, #0xff                            
+      0x07b2d510  ldr      w14, [x8, w14, uxtw #2]                   
+      0x07b2d514  ldr      w16, [x9, w16, uxtw #2]                   
+      0x07b2d518  ldr      w17, [x10, w17, uxtw #2]                  
+      0x07b2d51c  ldr      w3, [x11, w3, uxtw #2]                    
+      0x07b2d520  add      w14, w16, w14                             
+      0x07b2d524  eor      w14, w14, w17                             
+      0x07b2d528  add      w14, w14, w3                              
+      0x07b2d52c  eor      w12, w12, w14                             
+      0x07b2d530  lsr      w14, w12, #0x18                           
+      0x07b2d534  ubfx     w15, w12, #0x10, #8                       
+      0x07b2d538  ubfx     w16, w12, #8, #8                          
+      0x07b2d53c  and      w17, w12, #0xff                           
+      0x07b2d540  ldr      w14, [x8, w14, uxtw #2]                   
+      0x07b2d544  ldr      w15, [x9, w15, uxtw #2]                   
+      0x07b2d548  ldr      w16, [x10, w16, uxtw #2]                  
+      0x07b2d54c  ldr      w17, [x11, w17, uxtw #2]                  
+      0x07b2d550  add      w14, w15, w14                             
+      0x07b2d554  ldp      w3, w15, [x0, #0x20]                      
+      0x07b2d558  eor      w14, w14, w16                             
+      0x07b2d55c  add      w14, w14, w17                             
+      0x07b2d560  eor      w13, w3, w13                              
+      0x07b2d564  eor      w12, w15, w12                             
+      0x07b2d568  eor      w13, w13, w14                             
+      0x07b2d56c  lsr      w14, w13, #0x18                           
+      0x07b2d570  ubfx     w16, w13, #0x10, #8                       
+      0x07b2d574  ubfx     w17, w13, #8, #8                          
+      0x07b2d578  and      w3, w13, #0xff                            
+      0x07b2d57c  ldr      w14, [x8, w14, uxtw #2]                   
+      0x07b2d580  ldr      w16, [x9, w16, uxtw #2]                   
+      0x07b2d584  ldr      w17, [x10, w17, uxtw #2]                  
+      0x07b2d588  ldr      w3, [x11, w3, uxtw #2]                    
+      0x07b2d58c  add      w14, w16, w14                             
+      0x07b2d590  eor      w14, w14, w17                             
+      0x07b2d594  add      w14, w14, w3                              
+      0x07b2d598  eor      w12, w12, w14                             
+      0x07b2d59c  lsr      w14, w12, #0x18                           
+      0x07b2d5a0  ubfx     w15, w12, #0x10, #8                       
+      0x07b2d5a4  ubfx     w16, w12, #8, #8                          
+      0x07b2d5a8  and      w17, w12, #0xff                           
+      0x07b2d5ac  ldr      w14, [x8, w14, uxtw #2]                   
+      0x07b2d5b0  ldr      w15, [x9, w15, uxtw #2]                   
+      0x07b2d5b4  ldr      w16, [x10, w16, uxtw #2]                  
+      0x07b2d5b8  ldr      w17, [x11, w17, uxtw #2]                  
+      0x07b2d5bc  add      w14, w15, w14                             
+      0x07b2d5c0  ldp      w3, w15, [x0, #0x28]                      
+      0x07b2d5c4  eor      w14, w14, w16                             
+      0x07b2d5c8  add      w14, w14, w17                             
+      0x07b2d5cc  eor      w13, w3, w13                              
+      0x07b2d5d0  eor      w12, w15, w12                             
+      0x07b2d5d4  eor      w13, w13, w14                             
+      0x07b2d5d8  lsr      w14, w13, #0x18                           
+      0x07b2d5dc  ubfx     w16, w13, #0x10, #8                       
+      0x07b2d5e0  ubfx     w17, w13, #8, #8                          
+      0x07b2d5e4  and      w3, w13, #0xff                            
+      0x07b2d5e8  ldr      w14, [x8, w14, uxtw #2]                   
+      0x07b2d5ec  ldr      w16, [x9, w16, uxtw #2]                   
+      0x07b2d5f0  ldr      w17, [x10, w17, uxtw #2]                  
+      0x07b2d5f4  ldr      w3, [x11, w3, uxtw #2]                    
+      0x07b2d5f8  add      w14, w16, w14                             
+      0x07b2d5fc  eor      w14, w14, w17                             
+      0x07b2d600  add      w14, w14, w3                              
+      0x07b2d604  eor      w12, w12, w14                             
+      0x07b2d608  lsr      w14, w12, #0x18                           
+      0x07b2d60c  ubfx     w15, w12, #0x10, #8                       
+      0x07b2d610  ubfx     w16, w12, #8, #8                          
+      0x07b2d614  and      w17, w12, #0xff                           
+      0x07b2d618  ldr      w14, [x8, w14, uxtw #2]                   
+      0x07b2d61c  ldr      w15, [x9, w15, uxtw #2]                   
+      0x07b2d620  ldr      w16, [x10, w16, uxtw #2]                  
+      0x07b2d624  ldr      w17, [x11, w17, uxtw #2]                  
+      0x07b2d628  add      w14, w15, w14                             
+      0x07b2d62c  ldp      w3, w15, [x0, #0x30]                      
+      0x07b2d630  eor      w14, w14, w16                             
+      0x07b2d634  add      w14, w14, w17                             
+      0x07b2d638  eor      w13, w3, w13                              
+      0x07b2d63c  eor      w12, w15, w12                             
+      0x07b2d640  eor      w13, w13, w14                             
+      0x07b2d644  lsr      w14, w13, #0x18                           
+      0x07b2d648  ubfx     w16, w13, #0x10, #8                       
+      0x07b2d64c  ubfx     w17, w13, #8, #8                          
+      0x07b2d650  and      w3, w13, #0xff                            
+      0x07b2d654  ldr      w14, [x8, w14, uxtw #2]                   
+      0x07b2d658  ldr      w16, [x9, w16, uxtw #2]                   
+      0x07b2d65c  ldr      w17, [x10, w17, uxtw #2]                  
+      0x07b2d660  ldr      w3, [x11, w3, uxtw #2]                    
+      0x07b2d664  add      w14, w16, w14                             
+      0x07b2d668  eor      w14, w14, w17                             
+      0x07b2d66c  add      w14, w14, w3                              
+      0x07b2d670  eor      w12, w12, w14                             
+      0x07b2d674  lsr      w14, w12, #0x18                           
+      0x07b2d678  ubfx     w15, w12, #0x10, #8                       
+      0x07b2d67c  ubfx     w16, w12, #8, #8                          
+      0x07b2d680  and      w17, w12, #0xff                           
+      0x07b2d684  ldr      w14, [x8, w14, uxtw #2]                   
+      0x07b2d688  ldr      w15, [x9, w15, uxtw #2]                   
+      0x07b2d68c  ldr      w16, [x10, w16, uxtw #2]                  
+      0x07b2d690  ldr      w17, [x11, w17, uxtw #2]                  
+      0x07b2d694  add      w14, w15, w14                             
+      0x07b2d698  ldp      w3, w15, [x0, #0x38]                      
+      0x07b2d69c  eor      w14, w14, w16                             
+      0x07b2d6a0  add      w14, w14, w17                             
+      0x07b2d6a4  eor      w13, w3, w13                              
+      0x07b2d6a8  eor      w12, w15, w12                             
+      0x07b2d6ac  eor      w13, w13, w14                             
+      0x07b2d6b0  lsr      w14, w13, #0x18                           
+      0x07b2d6b4  ubfx     w16, w13, #0x10, #8                       
+      0x07b2d6b8  ubfx     w17, w13, #8, #8                          
+      0x07b2d6bc  and      w3, w13, #0xff                            
+      0x07b2d6c0  ldr      w14, [x8, w14, uxtw #2]                   
+      0x07b2d6c4  ldr      w16, [x9, w16, uxtw #2]                   
+      0x07b2d6c8  ldr      w17, [x10, w17, uxtw #2]                  
+      0x07b2d6cc  ldr      w3, [x11, w3, uxtw #2]                    
+      0x07b2d6d0  add      w14, w16, w14                             
+      0x07b2d6d4  eor      w14, w14, w17                             
+      0x07b2d6d8  add      w14, w14, w3                              
+      0x07b2d6dc  eor      w12, w12, w14                             
+      0x07b2d6e0  lsr      w14, w12, #0x18                           
+      0x07b2d6e4  ubfx     w15, w12, #0x10, #8                       
+      0x07b2d6e8  ubfx     w16, w12, #8, #8                          
+      0x07b2d6ec  and      w17, w12, #0xff                           
+      0x07b2d6f0  ldr      w14, [x8, w14, uxtw #2]                   
+      0x07b2d6f4  ldr      w15, [x9, w15, uxtw #2]                   
+      0x07b2d6f8  ldr      w16, [x10, w16, uxtw #2]                  
+      0x07b2d6fc  ldr      w17, [x11, w17, uxtw #2]                  
+      0x07b2d700  add      w14, w15, w14                             
+      0x07b2d704  ldp      w3, w15, [x0, #0x40]                      
+      0x07b2d708  eor      w14, w14, w16                             
+      0x07b2d70c  add      w14, w14, w17                             
+      0x07b2d710  eor      w13, w3, w13                              
+      0x07b2d714  eor      w12, w15, w12                             
+      0x07b2d718  eor      w13, w13, w14                             
+      0x07b2d71c  lsr      w14, w13, #0x18                           
+      0x07b2d720  ubfx     w16, w13, #0x10, #8                       
+      0x07b2d724  ubfx     w17, w13, #8, #8                          
+      0x07b2d728  and      w3, w13, #0xff                            
+      0x07b2d72c  ldr      w14, [x8, w14, uxtw #2]                   
+      0x07b2d730  ldr      w16, [x9, w16, uxtw #2]                   
+      0x07b2d734  ldr      w17, [x10, w17, uxtw #2]                  
+      0x07b2d738  ldr      w3, [x11, w3, uxtw #2]                    
+      0x07b2d73c  add      w14, w16, w14                             
+      0x07b2d740  eor      w14, w14, w17                             
+      0x07b2d744  add      w14, w14, w3                              
+      0x07b2d748  eor      w12, w12, w14                             
+      0x07b2d74c  lsr      w14, w12, #0x18                           
+      0x07b2d750  ubfx     w15, w12, #0x10, #8                       
+      0x07b2d754  ubfx     w16, w12, #8, #8                          
+      0x07b2d758  ldr      w8, [x8, w14, uxtw #2]                    
+      0x07b2d75c  and      w14, w12, #0xff                           
+      0x07b2d760  ldr      w9, [x9, w15, uxtw #2]                    
+      0x07b2d764  ldr      w10, [x10, w16, uxtw #2]                  
+      0x07b2d768  ldr      w11, [x11, w14, uxtw #2]                  
+      0x07b2d76c  add      w8, w9, w8                                
+      0x07b2d770  ldp      w14, w9, [x0, #0x48]                      
+      0x07b2d774  eor      w8, w8, w10                               
+      0x07b2d778  add      w8, w8, w11                               
+      0x07b2d77c  eor      w10, w14, w13                             
+      0x07b2d780  eor      w9, w9, w12                               
+      0x07b2d784  eor      w8, w10, w8                               
+      0x07b2d788  str      w8, [x2]                                  
+      0x07b2d78c  str      w9, [x1]                                  
+      0x07b2d790  ret                                                
+      <<<<
+
+==============================================================================
+Blowfish core (decrypt) -- called by vtable[1] 0x7b2e244   @ 0x7b2d794
+==============================================================================
+      0x07b2d794  ldp      w12, w10, [x0, #0x48]                        <<<< ENTRY
+      0x07b2d798  ldr      w9, [x1]                                  
+      0x07b2d79c  add      x8, x0, #0x50                             
+      0x07b2d7a0  ldr      w3, [x2]                                  
+      0x07b2d7a4  eor      w13, w10, w9                              
+      0x07b2d7a8  add      x9, x0, #0x450                            
+      0x07b2d7ac  lsr      w11, w13, #0x18                           
+      0x07b2d7b0  ubfx     w14, w13, #0x10, #8                       
+      0x07b2d7b4  ubfx     w15, w13, #8, #8                          
+      0x07b2d7b8  add      x10, x0, #0x850                           
+      0x07b2d7bc  and      w16, w13, #0xff                           
+      0x07b2d7c0  eor      w12, w12, w3                              
+      0x07b2d7c4  ldr      w17, [x8, w11, uxtw #2]                   
+      0x07b2d7c8  add      x11, x0, #0xc50                           
+      0x07b2d7cc  ldr      w14, [x9, w14, uxtw #2]                   
+      0x07b2d7d0  ldr      w15, [x10, w15, uxtw #2]                  
+      0x07b2d7d4  ldr      w16, [x11, w16, uxtw #2]                  
+      0x07b2d7d8  add      w14, w14, w17                             
+      0x07b2d7dc  eor      w14, w14, w15                             
+      0x07b2d7e0  add      w14, w14, w16                             
+      0x07b2d7e4  eor      w12, w12, w14                             
+      0x07b2d7e8  lsr      w14, w12, #0x18                           
+      0x07b2d7ec  ubfx     w15, w12, #0x10, #8                       
+      0x07b2d7f0  ubfx     w16, w12, #8, #8                          
+      0x07b2d7f4  and      w17, w12, #0xff                           
+      0x07b2d7f8  ldr      w14, [x8, w14, uxtw #2]                   
+      0x07b2d7fc  ldr      w15, [x9, w15, uxtw #2]                   
+      0x07b2d800  ldr      w16, [x10, w16, uxtw #2]                  
+      0x07b2d804  ldr      w17, [x11, w17, uxtw #2]                  
+      0x07b2d808  add      w14, w15, w14                             
+      0x07b2d80c  ldp      w15, w3, [x0, #0x40]                      
+      0x07b2d810  eor      w14, w14, w16                             
+      0x07b2d814  add      w14, w14, w17                             
+      0x07b2d818  eor      w13, w3, w13                              
+      0x07b2d81c  eor      w12, w15, w12                             
+      0x07b2d820  eor      w13, w13, w14                             
+      0x07b2d824  lsr      w14, w13, #0x18                           
+      0x07b2d828  ubfx     w16, w13, #0x10, #8                       
+      0x07b2d82c  ubfx     w17, w13, #8, #8                          
+      0x07b2d830  and      w3, w13, #0xff                            
+      0x07b2d834  ldr      w14, [x8, w14, uxtw #2]                   
+      0x07b2d838  ldr      w16, [x9, w16, uxtw #2]                   
+      0x07b2d83c  ldr      w17, [x10, w17, uxtw #2]                  
+      0x07b2d840  ldr      w3, [x11, w3, uxtw #2]                    
+      0x07b2d844  add      w14, w16, w14                             
+      0x07b2d848  eor      w14, w14, w17                             
+      0x07b2d84c  add      w14, w14, w3                              
+      0x07b2d850  eor      w12, w12, w14                             
+      0x07b2d854  lsr      w14, w12, #0x18                           
+      0x07b2d858  ubfx     w15, w12, #0x10, #8                       
+      0x07b2d85c  ubfx     w16, w12, #8, #8                          
+      0x07b2d860  and      w17, w12, #0xff                           
+      0x07b2d864  ldr      w14, [x8, w14, uxtw #2]                   
+      0x07b2d868  ldr      w15, [x9, w15, uxtw #2]                   
+      0x07b2d86c  ldr      w16, [x10, w16, uxtw #2]                  
+      0x07b2d870  ldr      w17, [x11, w17, uxtw #2]                  
+      0x07b2d874  add      w14, w15, w14                             
+      0x07b2d878  ldp      w15, w3, [x0, #0x38]                      
+      0x07b2d87c  eor      w14, w14, w16                             
+      0x07b2d880  add      w14, w14, w17                             
+      0x07b2d884  eor      w13, w3, w13                              
+      0x07b2d888  eor      w12, w15, w12                             
+      0x07b2d88c  eor      w13, w13, w14                             
+      0x07b2d890  lsr      w14, w13, #0x18                           
+      0x07b2d894  ubfx     w16, w13, #0x10, #8                       
+      0x07b2d898  ubfx     w17, w13, #8, #8                          
+      0x07b2d89c  and      w3, w13, #0xff                            
+      0x07b2d8a0  ldr      w14, [x8, w14, uxtw #2]                   
+      0x07b2d8a4  ldr      w16, [x9, w16, uxtw #2]                   
+      0x07b2d8a8  ldr      w17, [x10, w17, uxtw #2]                  
+      0x07b2d8ac  ldr      w3, [x11, w3, uxtw #2]                    
+      0x07b2d8b0  add      w14, w16, w14                             
+      0x07b2d8b4  eor      w14, w14, w17                             
+      0x07b2d8b8  add      w14, w14, w3                              
+      0x07b2d8bc  eor      w12, w12, w14                             
+      0x07b2d8c0  lsr      w14, w12, #0x18                           
+      0x07b2d8c4  ubfx     w15, w12, #0x10, #8                       
+      0x07b2d8c8  ubfx     w16, w12, #8, #8                          
+      0x07b2d8cc  and      w17, w12, #0xff                           
+      0x07b2d8d0  ldr      w14, [x8, w14, uxtw #2]                   
+      0x07b2d8d4  ldr      w15, [x9, w15, uxtw #2]                   
+      0x07b2d8d8  ldr      w16, [x10, w16, uxtw #2]                  
+      0x07b2d8dc  ldr      w17, [x11, w17, uxtw #2]                  
+      0x07b2d8e0  add      w14, w15, w14                             
+      0x07b2d8e4  ldp      w15, w3, [x0, #0x30]                      
+      0x07b2d8e8  eor      w14, w14, w16                             
+      0x07b2d8ec  add      w14, w14, w17                             
+      0x07b2d8f0  eor      w13, w3, w13                              
+      0x07b2d8f4  eor      w12, w15, w12                             
+      0x07b2d8f8  eor      w13, w13, w14                             
+      0x07b2d8fc  lsr      w14, w13, #0x18                           
+      0x07b2d900  ubfx     w16, w13, #0x10, #8                       
+      0x07b2d904  ubfx     w17, w13, #8, #8                          
+      0x07b2d908  and      w3, w13, #0xff                            
+      0x07b2d90c  ldr      w14, [x8, w14, uxtw #2]                   
+      0x07b2d910  ldr      w16, [x9, w16, uxtw #2]                   
+      0x07b2d914  ldr      w17, [x10, w17, uxtw #2]                  
+      0x07b2d918  ldr      w3, [x11, w3, uxtw #2]                    
+      0x07b2d91c  add      w14, w16, w14                             
+      0x07b2d920  eor      w14, w14, w17                             
+      0x07b2d924  add      w14, w14, w3                              
+      0x07b2d928  eor      w12, w12, w14                             
+      0x07b2d92c  lsr      w14, w12, #0x18                           
+      0x07b2d930  ubfx     w15, w12, #0x10, #8                       
+      0x07b2d934  ubfx     w16, w12, #8, #8                          
+      0x07b2d938  and      w17, w12, #0xff                           
+      0x07b2d93c  ldr      w14, [x8, w14, uxtw #2]                   
+      0x07b2d940  ldr      w15, [x9, w15, uxtw #2]                   
+      0x07b2d944  ldr      w16, [x10, w16, uxtw #2]                  
+      0x07b2d948  ldr      w17, [x11, w17, uxtw #2]                  
+      0x07b2d94c  add      w14, w15, w14                             
+      0x07b2d950  ldp      w15, w3, [x0, #0x28]                      
+      0x07b2d954  eor      w14, w14, w16                             
+      0x07b2d958  add      w14, w14, w17                             
+      0x07b2d95c  eor      w13, w3, w13                              
+      0x07b2d960  eor      w12, w15, w12                             
+      0x07b2d964  eor      w13, w13, w14                             
+      0x07b2d968  lsr      w14, w13, #0x18                           
+      0x07b2d96c  ubfx     w16, w13, #0x10, #8                       
+      0x07b2d970  ubfx     w17, w13, #8, #8                          
+      0x07b2d974  and      w3, w13, #0xff                            
+      0x07b2d978  ldr      w14, [x8, w14, uxtw #2]                   
+      0x07b2d97c  ldr      w16, [x9, w16, uxtw #2]                   
+      0x07b2d980  ldr      w17, [x10, w17, uxtw #2]                  
+      0x07b2d984  ldr      w3, [x11, w3, uxtw #2]                    
+      0x07b2d988  add      w14, w16, w14                             
+      0x07b2d98c  eor      w14, w14, w17                             
+      0x07b2d990  add      w14, w14, w3                              
+      0x07b2d994  eor      w12, w12, w14                             
+      0x07b2d998  lsr      w14, w12, #0x18                           
+      0x07b2d99c  ubfx     w15, w12, #0x10, #8                       
+      0x07b2d9a0  ubfx     w16, w12, #8, #8                          
+      0x07b2d9a4  and      w17, w12, #0xff                           
+      0x07b2d9a8  ldr      w14, [x8, w14, uxtw #2]                   
+      0x07b2d9ac  ldr      w15, [x9, w15, uxtw #2]                   
+      0x07b2d9b0  ldr      w16, [x10, w16, uxtw #2]                  
+      0x07b2d9b4  ldr      w17, [x11, w17, uxtw #2]                  
+      0x07b2d9b8  add      w14, w15, w14                             
+      0x07b2d9bc  ldp      w15, w3, [x0, #0x20]                      
+      0x07b2d9c0  eor      w14, w14, w16                             
+      0x07b2d9c4  add      w14, w14, w17                             
+      0x07b2d9c8  eor      w13, w3, w13                              
+      0x07b2d9cc  eor      w12, w15, w12                             
+      0x07b2d9d0  eor      w13, w13, w14                             
+      0x07b2d9d4  lsr      w14, w13, #0x18                           
+      0x07b2d9d8  ubfx     w16, w13, #0x10, #8                       
+      0x07b2d9dc  ubfx     w17, w13, #8, #8                          
+      0x07b2d9e0  and      w3, w13, #0xff                            
+      0x07b2d9e4  ldr      w14, [x8, w14, uxtw #2]                   
+      0x07b2d9e8  ldr      w16, [x9, w16, uxtw #2]                   
+      0x07b2d9ec  ldr      w17, [x10, w17, uxtw #2]                  
+      0x07b2d9f0  ldr      w3, [x11, w3, uxtw #2]                    
+      0x07b2d9f4  add      w14, w16, w14                             
+      0x07b2d9f8  eor      w14, w14, w17                             
+      0x07b2d9fc  add      w14, w14, w3                              
+      0x07b2da00  eor      w12, w12, w14                             
+      0x07b2da04  lsr      w14, w12, #0x18                           
+      0x07b2da08  ubfx     w15, w12, #0x10, #8                       
+      0x07b2da0c  ubfx     w16, w12, #8, #8                          
+      0x07b2da10  and      w17, w12, #0xff                           
+      0x07b2da14  ldr      w14, [x8, w14, uxtw #2]                   
+      0x07b2da18  ldr      w15, [x9, w15, uxtw #2]                   
+      0x07b2da1c  ldr      w16, [x10, w16, uxtw #2]                  
+      0x07b2da20  ldr      w17, [x11, w17, uxtw #2]                  
+      0x07b2da24  add      w14, w15, w14                             
+      0x07b2da28  ldp      w15, w3, [x0, #0x18]                      
+      0x07b2da2c  eor      w14, w14, w16                             
+      0x07b2da30  add      w14, w14, w17                             
+      0x07b2da34  eor      w13, w3, w13                              
+      0x07b2da38  eor      w12, w15, w12                             
+      0x07b2da3c  eor      w13, w13, w14                             
+      0x07b2da40  lsr      w14, w13, #0x18                           
+      0x07b2da44  ubfx     w16, w13, #0x10, #8                       
+      0x07b2da48  ubfx     w17, w13, #8, #8                          
+      0x07b2da4c  and      w3, w13, #0xff                            
+      0x07b2da50  ldr      w14, [x8, w14, uxtw #2]                   
+      0x07b2da54  ldr      w16, [x9, w16, uxtw #2]                   
+      0x07b2da58  ldr      w17, [x10, w17, uxtw #2]                  
+      0x07b2da5c  ldr      w3, [x11, w3, uxtw #2]                    
+      0x07b2da60  add      w14, w16, w14                             
+      0x07b2da64  eor      w14, w14, w17                             
+      0x07b2da68  add      w14, w14, w3                              
+      0x07b2da6c  eor      w12, w12, w14                             
+      0x07b2da70  lsr      w14, w12, #0x18                           
+      0x07b2da74  ubfx     w15, w12, #0x10, #8                       
+      0x07b2da78  ubfx     w16, w12, #8, #8                          
+      0x07b2da7c  and      w17, w12, #0xff                           
+      0x07b2da80  ldr      w14, [x8, w14, uxtw #2]                   
+      0x07b2da84  ldr      w15, [x9, w15, uxtw #2]                   
+      0x07b2da88  ldr      w16, [x10, w16, uxtw #2]                  
+      0x07b2da8c  ldr      w17, [x11, w17, uxtw #2]                  
+      0x07b2da90  add      w14, w15, w14                             
+      0x07b2da94  ldp      w15, w3, [x0, #0x10]                      
+      0x07b2da98  eor      w14, w14, w16                             
+      0x07b2da9c  add      w14, w14, w17                             
+      0x07b2daa0  eor      w13, w3, w13                              
+      0x07b2daa4  eor      w12, w15, w12                             
+      0x07b2daa8  eor      w13, w13, w14                             
+      0x07b2daac  lsr      w14, w13, #0x18                           
+      0x07b2dab0  ubfx     w16, w13, #0x10, #8                       
+      0x07b2dab4  ubfx     w17, w13, #8, #8                          
+      0x07b2dab8  and      w3, w13, #0xff                            
+      0x07b2dabc  ldr      w14, [x8, w14, uxtw #2]                   
+      0x07b2dac0  ldr      w16, [x9, w16, uxtw #2]                   
+      0x07b2dac4  ldr      w17, [x10, w17, uxtw #2]                  
+      0x07b2dac8  ldr      w3, [x11, w3, uxtw #2]                    
+      0x07b2dacc  add      w14, w16, w14                             
+      0x07b2dad0  eor      w14, w14, w17                             
+      0x07b2dad4  add      w14, w14, w3                              
+      0x07b2dad8  eor      w12, w12, w14                             
+      0x07b2dadc  lsr      w14, w12, #0x18                           
+      0x07b2dae0  ubfx     w15, w12, #0x10, #8                       
+      0x07b2dae4  ubfx     w16, w12, #8, #8                          
+      0x07b2dae8  ldr      w8, [x8, w14, uxtw #2]                    
+      0x07b2daec  and      w14, w12, #0xff                           
+      0x07b2daf0  ldr      w9, [x9, w15, uxtw #2]                    
+      0x07b2daf4  ldr      w10, [x10, w16, uxtw #2]                  
+      0x07b2daf8  ldr      w11, [x11, w14, uxtw #2]                  
+      0x07b2dafc  ldp      w15, w14, [x0, #8]                        
+      0x07b2db00  add      w8, w9, w8                                
+      0x07b2db04  eor      w8, w8, w10                               
+      0x07b2db08  add      w8, w8, w11                               
+      0x07b2db0c  eor      w9, w14, w13                              
+      0x07b2db10  eor      w10, w15, w12                             
+      0x07b2db14  eor      w8, w9, w8                                
+      0x07b2db18  str      w10, [x1]                                 
+      0x07b2db1c  str      w8, [x2]                                  
+      0x07b2db20  ret                                                
+      <<<<

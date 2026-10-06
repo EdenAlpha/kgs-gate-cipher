@@ -1,0 +1,13 @@
+decode_gate_flows: report per-body entropy and print whatever is readable
+
+Terminating TLS is not the same as a readable body, and this script refuses to
+assume either way. Every captured response is hex-decoded and reported with its
+length, Shannon entropy and printable ratio, then printed only when those two
+numbers say there is text to read. Bodies that are genuinely ciphertext are
+reported as CIPHERTEXT rather than being mangled into the output, because
+"unreadable" is itself a result worth having rather than noise to hide.
+
+Thresholds are 7.0 bits/byte and 60 percent printable. The login body measured
+7.67 and 7.99, well clear of text, while configuration responses such as server
+environment and relay quality are expected to come back readable -- which is
+the reason to run this over every captured response rather than only the login.

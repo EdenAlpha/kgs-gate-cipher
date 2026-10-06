@@ -1,0 +1,13 @@
+cmd: exec bash -c true; echo F3; W=/tmp/kgs; ls -la $W/flows.log $W/flows.mitm 2>&1 | tail -3; cp -f $W/flows.mitm /tmp/live-res/flows.mitm.gz.tmp && gzip -f /tmp/live-res/flows.mitm.gz.tmp && mv /tmp/live-res/flows.mitm.gz.tmp /tmp/live-res/flows.mitm.gz; cp -f $W/mitm.log /tmp/live-res/mitm.log; ls -la /tmp/live-res/flows.mitm.gz /tmp/live-res/mitm.log 2>&1 | tail -2; echo "total RESP now: $(grep -c "^### RESP" $W/flows.log)"
+at: 08:27:12
+$ bash -c true; echo F3; W=/tmp/kgs; ls -la $W/flows.log $W/flows.mitm 2>&1 | tail -3; cp -f $W/flows.mitm /tmp/live-res/flows.mitm.gz.tmp && gzip -f /tmp/live-res/flows.mitm.gz.tmp && mv /tmp/live-res/flows.mitm.gz.tmp /tmp/live-res/flows.mitm.gz; cp -f $W/mitm.log /tmp/live-res/mitm.log; ls -la /tmp/live-res/flows.mitm.gz /tmp/live-res/mitm.log 2>&1 | tail -2; echo "total RESP now: $(grep -c "^### RESP" $W/flows.log)"
+F3
+-rw-r--r-- 1 runner runner   141172 Oct  1 08:25 /tmp/kgs/flows.log
+-rw-r--r-- 1 runner runner 65169941 Oct  1 08:26 /tmp/kgs/flows.mitm
+mv: cannot stat '/tmp/live-res/flows.mitm.gz.tmp': No such file or directory
+ls: cannot access '/tmp/live-res/flows.mitm.gz': No such file or directory
+-rw-r--r-- 1 runner runner 109561 Oct  1 08:27 /tmp/live-res/mitm.log
+total RESP now: 28
+rc=0
+gamepid: 18731
+flows: 56

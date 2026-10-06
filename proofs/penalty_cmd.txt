@@ -1,0 +1,1 @@
+exec adb -s 127.0.0.1:5555 shell input swipe 668 480 640 280 400; echo SWIPED; sleep 3; adb -s 127.0.0.1:5555 shell input swipe 668 480 640 280 400; echo SWIPED2; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/penalty.png; ls -la /tmp/live-res/penalty.png

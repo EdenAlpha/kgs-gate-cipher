@@ -1,0 +1,9 @@
+cmd: exec bash -c true; echo PLAY18; adb -s 127.0.0.1:5555 shell input tap 578 1090; sleep 18; adb -s 127.0.0.1:5555 shell dumpsys account 2>/dev/null | grep -iE "Account \{|peerlink" | head -4; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+at: 21:40:25
+$ bash -c true; echo PLAY18; adb -s 127.0.0.1:5555 shell input tap 578 1090; sleep 18; adb -s 127.0.0.1:5555 shell dumpsys account 2>/dev/null | grep -iE "Account \{|peerlink" | head -4; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+PLAY18
+    Account {name=peerlink.02@gmail.com, type=com.google}
+    peerlink.02@gmail.com
+rc=0
+gamepid: 
+flows: 0

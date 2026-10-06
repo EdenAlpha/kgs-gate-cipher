@@ -1,0 +1,5 @@
+cmd: tap 670 1150
+at: 09:37:27
+tapped (670,1150)
+gamepid: 
+flows: 0

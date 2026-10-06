@@ -1,0 +1,21 @@
+cmd: exec bash -c true; echo C4; sudo sysctl -w kernel.yama.ptrace_scope=0 2>&1 | tail -1; adb -s 127.0.0.1:5555 shell input tap 853 403; sleep 4; adb -s 127.0.0.1:5555 shell input tap 160 265; sleep 3; adb -s 127.0.0.1:5555 shell input tap 1137 678; sleep 22; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; sudo docker exec -d redroid sh -c "/data/local/tmp/frida-server > /data/local/tmp/frida.out 2>&1"; sleep 10; SCRIPT=$(find /home/runner -name capture_insecure.js -path "*kgs-login*" 2>/dev/null | head -1); (cd /tmp/kgs && nohup setsid timeout 5400 frida -H 127.0.0.1:27042 -n jp.konami.pesam -l "$SCRIPT" --runtime=v8 > /tmp/kgs/attach2.log 2>&1 < /dev/null &); sleep 25; echo "== attach2 log =="; tail -10 /tmp/kgs/attach2.log; echo "== frida.out =="; sudo docker exec redroid sh -c "tail -4 /data/local/tmp/frida.out"
+at: 07:22:27
+$ bash -c true; echo C4; sudo sysctl -w kernel.yama.ptrace_scope=0 2>&1 | tail -1; adb -s 127.0.0.1:5555 shell input tap 853 403; sleep 4; adb -s 127.0.0.1:5555 shell input tap 160 265; sleep 3; adb -s 127.0.0.1:5555 shell input tap 1137 678; sleep 22; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; sudo docker exec -d redroid sh -c "/data/local/tmp/frida-server > /data/local/tmp/frida.out 2>&1"; sleep 10; SCRIPT=$(find /home/runner -name capture_insecure.js -path "*kgs-login*" 2>/dev/null | head -1); (cd /tmp/kgs && nohup setsid timeout 5400 frida -H 127.0.0.1:27042 -n jp.konami.pesam -l "$SCRIPT" --runtime=v8 > /tmp/kgs/attach2.log 2>&1 < /dev/null &); sleep 25; echo "== attach2 log =="; tail -10 /tmp/kgs/attach2.log; echo "== frida.out =="; sudo docker exec redroid sh -c "tail -4 /data/local/tmp/frida.out"
+C4
+kernel.yama.ptrace_scope = 0
+== attach2 log ==
+    > _  |   Commands:
+   /_/ |_|       help      -> Displays the help system
+   . . . .       object?   -> Display information about 'object'
+   . . . .       exit/quit -> Exit
+   . . . .
+   . . . .   Prefer a GUI? Luma is the official Frida app, with a live REPL,
+   . . . .   persistent sessions & collaboration. https://luma.frida.re/
+   . . . .
+   . . . .   Connected to 127.0.0.1:27042 (id=socket@127.0.0.1:27042)
+Failed to spawn: connection closed
+== frida.out ==
+Aborted (core dumped) 
+rc=0
+gamepid: 5494
+flows: 0

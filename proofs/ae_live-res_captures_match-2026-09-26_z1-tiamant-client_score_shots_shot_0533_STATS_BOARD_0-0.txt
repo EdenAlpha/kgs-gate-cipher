@@ -1,0 +1,1 @@
+STATS_BOARD 0-0 final=FULL_TIME stats=13 why=stats_board hueY=59.739132 yellowPx=299122.0 need=464.256 strict=0.2577216 pairs=1 unread=0 boxA=56x54@722,108 boxB=56x54@834,108 rows=13 strip=true 1253ms

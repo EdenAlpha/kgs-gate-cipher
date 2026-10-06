@@ -1,0 +1,11 @@
+cmd: exec bash -c true; echo K1; sudo docker exec redroid sh -c "pkill -f frida-server" 2>/dev/null; python3 -m pip install --quiet --break-system-packages "frida==16.7.19" "frida-tools==13.6.0" 2>&1 | tail -3; python3 -c "import frida; print(\"frida module\", frida.__version__)" 2>&1 | tail -2; which frida || echo "no frida cli"; curl -fsSL --max-time 240 -o /tmp/kgs/fs16.xz "https://github.com/frida/frida/releases/download/16.7.19/frida-server-16.7.19-android-arm64.xz" && xz -d -f /tmp/kgs/fs16.xz && ls -la /tmp/kgs/fs16 && echo DOWNLOADED
+at: 08:33:53
+$ bash -c true; echo K1; sudo docker exec redroid sh -c "pkill -f frida-server" 2>/dev/null; python3 -m pip install --quiet --break-system-packages "frida==16.7.19" "frida-tools==13.6.0" 2>&1 | tail -3; python3 -c "import frida; print(\"frida module\", frida.__version__)" 2>&1 | tail -2; which frida || echo "no frida cli"; curl -fsSL --max-time 240 -o /tmp/kgs/fs16.xz "https://github.com/frida/frida/releases/download/16.7.19/frida-server-16.7.19-android-arm64.xz" && xz -d -f /tmp/kgs/fs16.xz && ls -la /tmp/kgs/fs16 && echo DOWNLOADED
+K1
+frida module 16.7.19
+/home/runner/.local/bin/frida
+-rw-r--r-- 1 runner runner 53702368 Oct  1 08:33 /tmp/kgs/fs16
+DOWNLOADED
+rc=0
+gamepid: 18731
+flows: 60

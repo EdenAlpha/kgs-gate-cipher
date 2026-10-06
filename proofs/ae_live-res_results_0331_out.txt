@@ -1,0 +1,23 @@
+cmd: exec bash -c true; echo WG; adb -s 127.0.0.1:5555 shell input tap 640 620; sleep 20; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== flows =="; grep -c "^### " /tmp/kgs/flows.log 2>/dev/null; echo "== new paths =="; grep -oE "### RESP POST /pes22/[^ ]*" /tmp/kgs/flows.log 2>/dev/null | sort -u | tail -20
+at: 00:32:47
+$ bash -c true; echo WG; adb -s 127.0.0.1:5555 shell input tap 640 620; sleep 20; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== flows =="; grep -c "^### " /tmp/kgs/flows.log 2>/dev/null; echo "== new paths =="; grep -oE "### RESP POST /pes22/[^ ]*" /tmp/kgs/flows.log 2>/dev/null | sort -u | tail -20
+WG
+== flows ==
+15
+== new paths ==
+### RESP POST /pes22/gate/gate_CMD_CHECK_STRING.php
+### RESP POST /pes22/gate/gate_CMD_CREATE_USER.php
+### RESP POST /pes22/gate/gate_CMD_GET_AGE_GATE_REQUIREMENTS.php
+### RESP POST /pes22/gate/gate_CMD_GET_COUNTRY_LIST.php
+### RESP POST /pes22/gate/gate_CMD_GET_GAMERELAY_QUALITYCHECK_LIST.php
+### RESP POST /pes22/gate/gate_CMD_GET_KID_USER_AGE_KIND.php
+### RESP POST /pes22/gate/gate_CMD_GET_PRODUCT_LIST.php
+### RESP POST /pes22/gate/gate_CMD_GET_SERVER_ENV.php
+### RESP POST /pes22/gate/gate_CMD_GET_STADIUM_DATA.php
+### RESP POST /pes22/gate/gate_CMD_GET_SURVEY_INFO.php
+### RESP POST /pes22/gate/gate_CMD_SEND_ADJUST_PARAM.php
+### RESP POST /pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php
+### RESP POST /pes22/gate/gate_CMD_SET_TRACKRECORD.php
+rc=0
+gamepid: 9664
+flows: 15

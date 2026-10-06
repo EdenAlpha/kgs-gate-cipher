@@ -1,0 +1,14 @@
+cmd: exec bash -c true; echo D1; adb -s 127.0.0.1:5555 shell dumpsys input 2>/dev/null | grep -iE "viewport|orientation=|displayId=0" | head -6; adb -s 127.0.0.1:5555 shell input tap 455 160; sleep 7; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+at: 07:36:41
+$ bash -c true; echo D1; adb -s 127.0.0.1:5555 shell dumpsys input 2>/dev/null | grep -iE "viewport|orientation=|displayId=0" | head -6; adb -s 127.0.0.1:5555 shell input tap 455 160; sleep 7; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+D1
+      Viewports:
+        Viewport INTERNAL: displayId=0, uniqueId=local:0, port=0, orientation=1, logicalFrame=[0, 0, 1280, 720], physicalFrame=[0, 0, 1280, 720], deviceSize=[1280, 720], isActive=[1]
+    displayId=0, name='ActivityRecord{9a61bb6 u0 jp.konami.pesam/com.epicgames.ue4.GameActivity t13}', dispatchingTimeout=5000ms
+    displayId=0, name='74de2b4 jp.konami.pesam/com.epicgames.ue4.GameActivity'
+    displayId=0, name='74de2b4 jp.konami.pesam/com.epicgames.ue4.GameActivity' result='OK'
+      0: name='[Gesture Monitor] swipe-up', id=321, displayId=0, inputConfig=NOT_FOCUSABLE | TRUSTED_OVERLAY | SPY, alpha=1.00, frame=[720,0][720,0], globalScale=1.000000, applicationInfo.name=[Gesture Monitor] swipe-up, applicationInfo.token=<null>, touchableRegion=[-12079,-7199][13520,7200], ownerPid=6713, ownerUid=10077, dispatchingTimeout=5000ms, hasToken=0xb400f93a3d674c90, touchOcclusionMode=BLOCK_UNTRUSTED
+grep: write error: Broken pipe
+rc=0
+gamepid: 8404
+flows: 0

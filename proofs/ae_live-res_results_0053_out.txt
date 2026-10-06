@@ -1,0 +1,8 @@
+cmd: exec bash -c true; echo S8; adb -s 127.0.0.1:5555 shell input tap 578 1090; sleep 14; adb -s 127.0.0.1:5555 shell dumpsys account 2>/dev/null | grep -c peerlink.02; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+at: 22:28:23
+$ bash -c true; echo S8; adb -s 127.0.0.1:5555 shell input tap 578 1090; sleep 14; adb -s 127.0.0.1:5555 shell dumpsys account 2>/dev/null | grep -c peerlink.02; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+S8
+2
+rc=0
+gamepid: 
+flows: 0

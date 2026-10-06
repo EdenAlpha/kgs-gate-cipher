@@ -1,0 +1,40 @@
+cmd: exec bash -c true; echo WF; echo "=== CAPTURED KGS PATHS ==="; grep -oE "### (RESP|REQ) [A-Z]+ /pes22/[^ ]*" /tmp/kgs/flows.log 2>/dev/null | sort | uniq -c | sort -rn; echo; echo "=== ALL HOSTS SEEN ==="; grep -oE "HOST-SEEN: .*" /tmp/kgs/flows.log 2>/dev/null | sort | uniq -c | sort -rn; echo; echo "=== TOTAL FLOWS ==="; grep -c "^### " /tmp/kgs/flows.log 2>/dev/null
+at: 00:30:33
+$ bash -c true; echo WF; echo "=== CAPTURED KGS PATHS ==="; grep -oE "### (RESP|REQ) [A-Z]+ /pes22/[^ ]*" /tmp/kgs/flows.log 2>/dev/null | sort | uniq -c | sort -rn; echo; echo "=== ALL HOSTS SEEN ==="; grep -oE "HOST-SEEN: .*" /tmp/kgs/flows.log 2>/dev/null | sort | uniq -c | sort -rn; echo; echo "=== TOTAL FLOWS ==="; grep -c "^### " /tmp/kgs/flows.log 2>/dev/null
+WF
+=== CAPTURED KGS PATHS ===
+      1 ### RESP POST /pes22/gate/gate_CMD_SET_TRACKRECORD.php
+      1 ### RESP POST /pes22/gate/gate_CMD_SEND_ADJUST_PARAM.php
+      1 ### RESP POST /pes22/gate/gate_CMD_GET_SURVEY_INFO.php
+      1 ### RESP POST /pes22/gate/gate_CMD_GET_STADIUM_DATA.php
+      1 ### RESP POST /pes22/gate/gate_CMD_GET_SERVER_ENV.php
+      1 ### RESP POST /pes22/gate/gate_CMD_GET_PRODUCT_LIST.php
+      1 ### RESP POST /pes22/gate/gate_CMD_GET_KID_USER_AGE_KIND.php
+      1 ### RESP POST /pes22/gate/gate_CMD_GET_GAMERELAY_QUALITYCHECK_LIST.php
+      1 ### RESP POST /pes22/gate/gate_CMD_GET_COUNTRY_LIST.php
+      1 ### RESP POST /pes22/gate/gate_CMD_GET_AGE_GATE_REQUIREMENTS.php
+      1 ### RESP POST /pes22/gate/gate_CMD_CREATE_USER.php
+      1 ### RESP POST /pes22/gate/gate_CMD_CHECK_STRING.php
+
+=== ALL HOSTS SEEN ===
+      1 HOST-SEEN: www.konami.com
+      1 HOST-SEEN: www.googleapis.com
+      1 HOST-SEEN: www.google.com
+      1 HOST-SEEN: play.googleapis.com
+      1 HOST-SEEN: pes22-game.cs.konami.net
+      1 HOST-SEEN: notifications-pa.googleapis.com
+      1 HOST-SEEN: legal.konami.com
+      1 HOST-SEEN: lamssettings-pa.googleapis.com
+      1 HOST-SEEN: geller-pa.googleapis.com
+      1 HOST-SEEN: firebaselogging.googleapis.com
+      1 HOST-SEEN: firebaselogging-pa.googleapis.com
+      1 HOST-SEEN: d1ln4m3c7n87ju.cloudfront.net
+      1 HOST-SEEN: connectivitycheck.gstatic.com
+      1 HOST-SEEN: app.adjust.com
+      1 HOST-SEEN: android.googleapis.com
+
+=== TOTAL FLOWS ===
+12
+rc=0
+gamepid: 9664
+flows: 12

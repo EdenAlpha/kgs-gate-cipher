@@ -1,0 +1,1 @@
+exec P=$(adb -s 127.0.0.1:5555 shell pidof jp.konami.pesam | tr -d '\r' | awk '{print $1}'); echo PID=$P; adb -s 127.0.0.1:5555 shell "su 0 sh -c \"dd if=/proc/$P/mem of=/data/local/tmp/t1.bin bs=4096 skip=76800 count=8\""; echo RC=$?; adb -s 127.0.0.1:5555 shell ls -l /data/local/tmp/t1.bin

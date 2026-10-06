@@ -1,0 +1,15 @@
+cmd: exec bash -c true; echo VR; adb -s 127.0.0.1:5555 shell su 0 mount --bind /system/etc/security/cacerts /apex/com.android.conscrypt/cacerts 2>&1 | tail -2; echo "bind rc=$?"; adb -s 127.0.0.1:5555 shell su 0 ls /apex/com.android.conscrypt/cacerts 2>&1 | wc -l; adb -s 127.0.0.1:5555 shell su 0 ls -l /apex/com.android.conscrypt/cacerts/928a8368.0 2>&1; echo "== restart zygote so system_server re-reads the store =="; adb -s 127.0.0.1:5555 shell su 0 setprop ctl.restart zygote; sleep 35; adb connect 127.0.0.1:5555 2>&1 | tail -1; sleep 10; echo "== system alive =="; adb -s 127.0.0.1:5555 shell pm list packages 2>/dev/null | wc -l; adb -s 127.0.0.1:5555 shell getprop sys.boot_completed
+at: 00:16:14
+$ bash -c true; echo VR; adb -s 127.0.0.1:5555 shell su 0 mount --bind /system/etc/security/cacerts /apex/com.android.conscrypt/cacerts 2>&1 | tail -2; echo "bind rc=$?"; adb -s 127.0.0.1:5555 shell su 0 ls /apex/com.android.conscrypt/cacerts 2>&1 | wc -l; adb -s 127.0.0.1:5555 shell su 0 ls -l /apex/com.android.conscrypt/cacerts/928a8368.0 2>&1; echo "== restart zygote so system_server re-reads the store =="; adb -s 127.0.0.1:5555 shell su 0 setprop ctl.restart zygote; sleep 35; adb connect 127.0.0.1:5555 2>&1 | tail -1; sleep 10; echo "== system alive =="; adb -s 127.0.0.1:5555 shell pm list packages 2>/dev/null | wc -l; adb -s 127.0.0.1:5555 shell getprop sys.boot_completed
+VR
+bind rc=0
+135
+-rw-r--r-- 1 root root 1155 2026-09-30 19:21 /apex/com.android.conscrypt/cacerts/928a8368.0
+== restart zygote so system_server re-reads the store ==
+already connected to 127.0.0.1:5555
+== system alive ==
+132
+1
+rc=0
+gamepid: 
+flows: 0

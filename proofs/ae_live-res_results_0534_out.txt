@@ -1,0 +1,9 @@
+cmd: exec bash -c true; echo RZ; adb -s 127.0.0.1:5555 shell input swipe 168 677 168 677 250; sleep 13; adb -s 127.0.0.1:5555 shell input swipe 168 677 168 677 250; sleep 14; adb -s 127.0.0.1:5555 shell input swipe 160 592 160 592 250; sleep 16; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== flows2 =="; grep -c "^### " /tmp/kgs/flows2.log 2>/dev/null
+at: 01:17:31
+$ bash -c true; echo RZ; adb -s 127.0.0.1:5555 shell input swipe 168 677 168 677 250; sleep 13; adb -s 127.0.0.1:5555 shell input swipe 168 677 168 677 250; sleep 14; adb -s 127.0.0.1:5555 shell input swipe 160 592 160 592 250; sleep 16; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== flows2 =="; grep -c "^### " /tmp/kgs/flows2.log 2>/dev/null
+RZ
+== flows2 ==
+72
+rc=0
+gamepid: 29128
+flows: 22

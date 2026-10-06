@@ -1,0 +1,10 @@
+cmd: exec bash -c true; echo R3; adb -s 127.0.0.1:5555 shell am force-stop jp.konami.pesam; sleep 5; adb -s 127.0.0.1:5555 shell am start -n jp.konami.pesam/com.epicgames.ue4.SplashActivity >/dev/null 2>&1; sleep 45; adb -s 127.0.0.1:5555 shell pidof jp.konami.pesam; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== new flows =="; grep -c "^### " /tmp/kgs/flows2.log 2>/dev/null
+at: 00:48:18
+$ bash -c true; echo R3; adb -s 127.0.0.1:5555 shell am force-stop jp.konami.pesam; sleep 5; adb -s 127.0.0.1:5555 shell am start -n jp.konami.pesam/com.epicgames.ue4.SplashActivity >/dev/null 2>&1; sleep 45; adb -s 127.0.0.1:5555 shell pidof jp.konami.pesam; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== new flows =="; grep -c "^### " /tmp/kgs/flows2.log 2>/dev/null
+R3
+29128
+== new flows ==
+10
+rc=0
+gamepid: 29128
+flows: 22

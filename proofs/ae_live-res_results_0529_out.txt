@@ -1,0 +1,8 @@
+cmd: exec bash -c true; echo J6; for i in 1 2 3; do adb -s 127.0.0.1:5555 shell input swipe 1112 678 1112 678 250; sleep 13; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/s$i.png; done; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo flows=$(grep -c "^### " /tmp/kgs/flows.log)
+at: 08:40:36
+$ bash -c true; echo J6; for i in 1 2 3; do adb -s 127.0.0.1:5555 shell input swipe 1112 678 1112 678 250; sleep 13; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/s$i.png; done; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo flows=$(grep -c "^### " /tmp/kgs/flows.log)
+J6
+flows=64
+rc=0
+gamepid: 18731
+flows: 64

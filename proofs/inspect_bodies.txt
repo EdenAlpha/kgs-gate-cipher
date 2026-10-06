@@ -1,0 +1,117 @@
+==============================================================================
+GATE EXCHANGE BODY INSPECTION  (21 exchanges)
+==============================================================================
+
+  /pes22/gate/gate_CMD_GET_SERVER_ENV.php
+    REQ  len=176    len%16=0    b0=0xf1  negative fixint -15
+         head : f1f7d09fe3db7d2789060607c98fa601425b0d03644a5a5a
+         tail : d9e9d3e014775c9c95761968893e9468
+         entropy(first 512)=6.85 bits/byte   whole=6.85
+         full msgpack decode: decodes as int (consumed 1 of 176 bytes)
+         ascii run @20: b'dJZZCT('
+    RESP len=2400   len%16=0    b0=0xd3  int64
+         head : d3f57ff91701ae8f7b48af134e72bc871aafbc165b099c7b
+         tail : 2112eccbd8e9669005d136e1d4462bc5
+         entropy(first 512)=7.52 bits/byte   whole=7.92
+         full msgpack decode: decodes as int (consumed 9 of 2400 bytes)
+         ascii run @79: b'1*fIp#'
+
+  /pes22/gate/gate_CMD_GET_COUNTRY_LIST.php
+    REQ  len=144    len%16=0    b0=0x87  fixmap with 7 pairs
+         head : 87c28107c919dc8fdc1111ff1aff15d50a909f9d47fc9ddb
+         tail : 7a4137571be7adb08e60b5da424dd410
+         entropy(first 512)=6.72 bits/byte   whole=6.72
+         full msgpack decode: empty
+    RESP len=2352   len%16=0    b0=0x4d  positive fixint 77
+         head : 4d0b6214f9a91a36582d33b0e8215b3e7b47a11ddb6d5c22
+         tail : b153bccbdf16f944f9d7c273b845063d
+         entropy(first 512)=7.56 bits/byte   whole=7.92
+         full msgpack decode: decodes as int (consumed 1 of 2352 bytes)
+         ascii run @13: b'![>{G'
+
+  /pes22/gate/gate_CMD_GET_AGE_GATE_REQUIREMENTS.php
+    REQ  len=160    len%16=0    b0=0x89  fixmap with 9 pairs
+         head : 8988543cf760c73e24b28a771daaf0f4adb6db383d6b08cc
+         tail : 5b28e16503785a89944d2b1e099c5775
+         entropy(first 512)=6.78 bits/byte   whole=6.78
+         full msgpack decode: FAILS: int is not allowed for map key when strict_map_key=True
+    RESP len=160    len%16=0    b0=0x4f  positive fixint 79
+         head : 4f394ef412fb2aeeb0a37156bc0e8934aa9f15ebe84dc742
+         tail : be871d309b0ef4460a2c174c3b265591
+         entropy(first 512)=6.67 bits/byte   whole=6.67
+         full msgpack decode: decodes as int (consumed 1 of 160 bytes)
+
+  /pes22/gate/gate_CMD_GET_KID_USER_AGE_KIND.php
+    REQ  len=224    len%16=0    b0=0x98  fixarray of 8
+         head : 9896877f5de36cf66a024ae1d84348e2c46d47d33f21cd26
+         tail : 9fa0ce11c3096e2dd804faf8877d36e4
+         entropy(first 512)=7.14 bits/byte   whole=7.14
+         full msgpack decode: FAILS: int is not allowed for map key when strict_map_key=True
+         ascii run @113: b'\\us*l'
+    RESP len=128    len%16=0    b0=0x73  positive fixint 115
+         head : 731e0e9b75ccc91dcdc60b926c3cf0662bb83e52cd78ad27
+         tail : 548087021ae0e5b6f1a2c04cc3a06315
+         entropy(first 512)=6.56 bits/byte   whole=6.56
+         full msgpack decode: decodes as int (consumed 1 of 128 bytes)
+         ascii run @50: b'8F.0i'
+
+  /pes22/gate/gate_CMD_GET_SERVER_ENV.php
+    REQ  len=176    len%16=0    b0=0xa3  fixstr len 3
+         head : a34740a440bfcd1169fcd711b305cccb6a5f5b11e9f3502f
+         tail : 8faee2d3c641d823c8ab70912524253d
+         entropy(first 512)=6.85 bits/byte   whole=6.85
+         full msgpack decode: FAILS: 'utf-8' codec can't decode byte 0xa4 in position 2: invalid start byte
+    RESP len=2400   len%16=0    b0=0x62  positive fixint 98
+         head : 62b86ade021fc305f4cb04b36c94f35b5fc71f2050d8403c
+         tail : f4f23f5dacf25c046f4164572bd2427d
+         entropy(first 512)=7.58 bits/byte   whole=7.92
+         full msgpack decode: decodes as int (consumed 1 of 2400 bytes)
+
+  /pes22/gate/gate_CMD_GET_COUNTRY_LIST.php
+    REQ  len=144    len%16=0    b0=0x47  positive fixint 71
+         head : 4709f618e135200bfd66a4a46e4481ce91c2d3d46f25a40c
+         tail : 147f0e926ed3ff78c7b9d83e8829124a
+         entropy(first 512)=6.72 bits/byte   whole=6.72
+         full msgpack decode: decodes as int (consumed 1 of 144 bytes)
+    RESP len=2352   len%16=0    b0=0x97  fixarray of 7
+         head : 972b9bd8c4476906fbe0056031789eb7b3d6424506accd5d
+         tail : c701865dd681b574a05608c6505f9b9a
+         entropy(first 512)=7.63 bits/byte   whole=7.92
+         full msgpack decode: FAILS: code must be 0~127
+         ascii run @23: b']gqdGf'
+
+  /pes22/gate/gate_CMD_GET_AGE_GATE_REQUIREMENTS.php
+    REQ  len=160    len%16=0    b0=0x89  fixmap with 9 pairs
+         head : 891db8907c68877b596e884122a1a508a9969dc597aba2d4
+         tail : eebfd6e58ae76e967cfdcc49b1435d75
+         entropy(first 512)=6.76 bits/byte   whole=6.76
+         full msgpack decode: FAILS: 'utf-8' codec can't decode byte 0x90 in position 0: invalid start byte
+         ascii run @88: b'z_ur_'
+    RESP len=160    len%16=0    b0=0xe3  negative fixint -29
+         head : e3814be97ae0ec0e6a3313aec96815c31d8e51cf067b2d33
+         tail : 392edab5bc12f09b034b0ec126a14ad7
+         entropy(first 512)=6.83 bits/byte   whole=6.83
+         full msgpack decode: decodes as int (consumed 1 of 160 bytes)
+         ascii run @31: b'mU3PN'
+
+  /pes22/gate/gate_CMD_GET_KID_USER_AGE_KIND.php
+    REQ  len=224    len%16=0    b0=0xed  negative fixint -19
+         head : ed370063f4540e1df765dede790cdf20c8492e9043d2cd59
+         tail : 923c840e5d38bb5d948f856dfb8f3923
+         entropy(first 512)=7.10 bits/byte   whole=7.10
+         full msgpack decode: decodes as int (consumed 1 of 224 bytes)
+    RESP len=128    len%16=0    b0=0x7b  positive fixint 123
+         head : 7bdf8c0d15c501488b672978e86826be97b141b98a8fd01c
+         tail : 1cc3a64d56d58b1072af9782cb8e6829
+         entropy(first 512)=6.62 bits/byte   whole=6.62
+         full msgpack decode: decodes as int (consumed 1 of 128 bytes)
+
+==============================================================================
+SUMMARY
+==============================================================================
+  gate requests : 21   lengths [176, 144, 160, 224, 176, 144, 160, 224, 320, 160, 1024, 160, 240, 192, 176, 288, 608, 592, 592, 608, 608]
+  gate responses: 21   lengths [2400, 2352, 160, 128, 2400, 2352, 160, 128, 464, 128, 12368, 7296, 96, 640, 2352, 96, 96, 96, 96, 96, 96]
+  all requests  %16==0 : True
+  all responses %16==0 : True
+  response b0 distribution: {211: 1, 77: 1, 79: 1, 115: 1, 98: 1, 151: 1, 227: 1, 123: 1, 125: 1, 162: 1, 233: 1, 88: 1, 55: 1, 118: 1, 35: 1, 74: 1, 21: 1, 216: 1, 25: 1, 91: 1, 22: 1}
+  request  b0 distribution: {241: 1, 135: 1, 137: 2, 152: 1, 163: 1, 71: 1, 237: 2, 79: 1, 201: 1, 15: 1, 136: 1, 234: 1, 197: 1, 47: 1, 109: 1, 5: 1, 235: 1, 254: 1, 20: 1}

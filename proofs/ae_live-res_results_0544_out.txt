@@ -1,0 +1,9 @@
+cmd: exec sudo docker exec redroid sh -c "ls -Z /system/etc/security/cacerts/293a83db.0 /system/etc/security/cacerts/928a8368.0 /system/etc/security/cacerts/f8fc53da.0"
+at: 10:14:39
+$ sudo docker exec redroid sh -c "ls -Z /system/etc/security/cacerts/293a83db.0 /system/etc/security/cacerts/928a8368.0 /system/etc/security/cacerts/f8fc53da.0"
+HACKED /system/etc/security/cacerts/293a83db.0
+HACKED /system/etc/security/cacerts/928a8368.0
+HACKED /system/etc/security/cacerts/f8fc53da.0
+rc=0
+gamepid: 
+flows: 0

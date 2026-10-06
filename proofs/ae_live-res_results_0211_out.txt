@@ -1,0 +1,8 @@
+cmd: exec bash -c true; echo VG; adb -s 127.0.0.1:5555 shell input swipe 807 478 807 478 150; sleep 8; adb -s 127.0.0.1:5555 shell input swipe 1111 677 1111 677 180; sleep 14; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; adb -s 127.0.0.1:5555 shell pidof jp.konami.pesam
+at: 00:07:07
+$ bash -c true; echo VG; adb -s 127.0.0.1:5555 shell input swipe 807 478 807 478 150; sleep 8; adb -s 127.0.0.1:5555 shell input swipe 1111 677 1111 677 180; sleep 14; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; adb -s 127.0.0.1:5555 shell pidof jp.konami.pesam
+VG
+6484
+rc=0
+gamepid: 6484
+flows: 0

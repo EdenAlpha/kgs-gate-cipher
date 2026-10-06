@@ -1,0 +1,10 @@
+gate messages: 42   (req+resp)
+bodies >= 32 B: 42
+length mod 16 = [0]
+
+constructions tested: 27
+
+==============================================================================
+RESULT  (a construction must open EVERY body, not just one)
+==============================================================================
+  (no construction opened even one body)

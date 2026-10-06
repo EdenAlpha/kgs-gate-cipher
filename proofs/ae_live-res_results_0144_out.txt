@@ -1,0 +1,7 @@
+cmd: exec sudo docker exec redroid sh -c "am start -n com.aurora.store/.ComposeActivity >/dev/null 2>&1; sleep 7; input tap 190 1140; sleep 6; screencap -p /data/local/tmp/s.png; echo SHOTDONE"
+at: 15:23:54
+$ sudo docker exec redroid sh -c "am start -n com.aurora.store/.ComposeActivity >/dev/null 2>&1; sleep 7; input tap 190 1140; sleep 6; screencap -p /data/local/tmp/s.png; echo SHOTDONE"
+SHOTDONE
+rc=0
+gamepid: 
+flows: 0

@@ -1,0 +1,1 @@
+exec adb -s 127.0.0.1:5555 shell input swipe 640 520 640 330 120; echo SWIPED_UP

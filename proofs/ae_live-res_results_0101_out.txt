@@ -1,0 +1,7 @@
+cmd: exec bash -c true; echo UL; adb -s 127.0.0.1:5555 shell input tap 360 1100; sleep 9; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+at: 23:44:00
+$ bash -c true; echo UL; adb -s 127.0.0.1:5555 shell input tap 360 1100; sleep 9; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+UL
+rc=0
+gamepid: 
+flows: 0

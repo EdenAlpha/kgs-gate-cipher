@@ -1,0 +1,9 @@
+cmd: exec bash -c true; echo R4; adb -s 127.0.0.1:5555 shell input swipe 640 620 640 620 180; sleep 18; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== flows2 =="; grep -c "^### " /tmp/kgs/flows2.log 2>/dev/null
+at: 00:49:43
+$ bash -c true; echo R4; adb -s 127.0.0.1:5555 shell input swipe 640 620 640 620 180; sleep 18; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== flows2 =="; grep -c "^### " /tmp/kgs/flows2.log 2>/dev/null
+R4
+== flows2 ==
+16
+rc=0
+gamepid: 29128
+flows: 22

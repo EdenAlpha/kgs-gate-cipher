@@ -1,0 +1,30 @@
+cmd: exec bash -c true; echo L3; curl -fsSL --max-time 60 https://raw.githubusercontent.com/EdenAlpha/peerlink-efootball-disconnects/main/kgs-login/scripts/dump_game_mem.py -o /tmp/kgs/dump.py && wc -c /tmp/kgs/dump.py && python3 /tmp/kgs/dump.py jp.konami.pesam --top 6 2>&1 | tail -36
+at: 08:56:57
+$ bash -c true; echo L3; curl -fsSL --max-time 60 https://raw.githubusercontent.com/EdenAlpha/peerlink-efootball-disconnects/main/kgs-login/scripts/dump_game_mem.py -o /tmp/kgs/dump.py && wc -c /tmp/kgs/dump.py && python3 /tmp/kgs/dump.py jp.konami.pesam --top 6 2>&1 | tail -36
+L3
+7244 /tmp/kgs/dump.py
+pid 18731
+5960 map lines
+636 writable regions over 256K; taking the largest 6
+  000076e37000-000096e37000 rw-p [anon:dalvik-free list large object space]  512.0 MB  markers: none
+  000012c00000-000032c00000 rw-p [anon:dalvik-main space (region space)]  512.0 MB  markers: /pes22/gate/
+  f937109fe000-f9371efff000 rw-p [anon:scudo:secondary]  230.0 MB  markers: none
+  f93766c30000-f9376b3ff000 rw-p [anon:scudo:secondary]  71.8 MB  markers: none
+  f9382d000000-f93831000000 rw-s /memfd:jit-cache (deleted)  64.0 MB  markers: none
+  f936c55e0000-f936c83f8000 rw-p [anon]  46.1 MB  markers: none
+======================================================================
+dumped 6 regions
+======================================================================
+MARKER /pes22/gate/ in /tmp/kgs/memdump/region_000012c00000.bin at 0x3598d0
+    AES256
+    AddRequestHeader() 
+    AddRequestHeader() pes-custom-encrypt:AES256
+    AddRequestHeader() pes-custom-encrypt:AES256
+    https://pes22-game.cs.konami.net/pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php
+    q|iqk5
+    sign=N6hqmmR/noUzgwWd/zFM2mDeZlJPgIkbsQGw2U2/zkjaqrWA7k+fGw==;
+      uri     = 
+      uri     = https://pes22-game.cs.konami.net/pes22/gate/gate_CMD_SET_GAM
+rc=0
+gamepid: 18731
+flows: 70

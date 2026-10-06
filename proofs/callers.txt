@@ -1,0 +1,109 @@
+﻿scanning 4 PT_LOAD segments ...
+
+target      label                    callers (caller VA)
+------------------------------------------------------------------------------
+0x7b38a44    sign-builder             0x7b2e46c, 0x7b36008
+
+  --- caller 0x7b2e46c ---
+    7b2e40c    b.eq     #0x7b2e434                          
+    7b2e410    cbnz     w8, #0x7b2e44c                      
+    7b2e414    ldr      x0, [x20, #8]                       
+    7b2e418    cbz      x0, #0x7b2e44c                      
+    7b2e41c    adrp     x1, #0xa4a9000                      
+    7b2e420    add      x1, x1, #0x8e8                        -> 0xa4a98e8
+    7b2e424    add      x2, x1, #0x30                         -> 0xa4a9030
+    7b2e428    b        #0x7b2e448                          
+    7b2e42c    mov      w23, wzr                            
+    7b2e430    b        #0x7b2e4cc                          
+    7b2e434    ldr      x0, [x20, #8]                         -> 0xa4a9008
+    7b2e438    cbz      x0, #0x7b2e44c                      
+    7b2e43c    adrp     x1, #0xa4a9000                      
+    7b2e440    add      x1, x1, #0x8e8                        -> 0xa4a98e8
+    7b2e444    add      x2, x1, #0x18                         -> 0xa4a9018
+    7b2e448    bl       #0x7b2ef88                          
+    7b2e44c    add      x0, sp, #0x28                         -> 0xa4a9028
+    7b2e450    bl       #0x74e6d10                          
+    7b2e454    mov      x21, x0                             
+    7b2e458    add      x0, sp, #0x28                         -> 0xa4a9028
+    7b2e45c    bl       #0x74e6d24                          
+    7b2e460    mov      x2, x0                              
+    7b2e464    add      x0, sp, #0x10                         -> 0xa4a9010
+    7b2e468    mov      x1, x21                             
+    7b2e46c    bl       #0x7b38a44                            <<< CALL
+    7b2e470    tbz      w0, #0, #0x7b2e4f8                  
+    7b2e474    add      x0, sp, #0x28                         -> 0xa4a9028
+    7b2e478    ldr      x20, [x20, #8]                        -> 0xa4a9008
+    7b2e47c    bl       #0x74e6d10                          
+    7b2e480    mov      x21, x0                             
+    7b2e484    add      x0, sp, #0x28                         -> 0xa4a9028
+    7b2e488    bl       #0x74e6d24                          
+
+  --- caller 0x7b36008 ---
+    7b35fa8    bl       #0x7b38168                          
+    7b35fac    tbz      w0, #0, #0x7b360a0                  
+    7b35fb0    add      x0, sp, #0x18                       
+    7b35fb4    mov      x1, xzr                             
+    7b35fb8    bl       #0x74e6b00                          
+    7b35fbc    sub      x0, x29, #0x38                      
+    7b35fc0    bl       #0x74e6d10                          
+    7b35fc4    mov      x21, x0                             
+    7b35fc8    sub      x0, x29, #0x38                      
+    7b35fcc    bl       #0x74e6d24                          
+    7b35fd0    mov      x1, x0                              
+    7b35fd4    add      x2, sp, #0x18                       
+    7b35fd8    mov      x0, x21                             
+    7b35fdc    mov      w3, w24                             
+    7b35fe0    bl       #0x7b38024                          
+    7b35fe4    tbz      w0, #0, #0x7b360b8                  
+    7b35fe8    add      x0, sp, #0x18                       
+    7b35fec    bl       #0x74e6d10                          
+    7b35ff0    mov      x21, x0                             
+    7b35ff4    add      x0, sp, #0x18                       
+    7b35ff8    bl       #0x74e6d24                          
+    7b35ffc    mov      x2, x0                              
+    7b36000    mov      x0, sp                              
+    7b36004    mov      x1, x21                             
+    7b36008    bl       #0x7b38a44                            <<< CALL
+    7b3600c    tbz      w0, #0, #0x7b360b8                  
+    7b36010    add      x0, sp, #0x18                       
+    7b36014    ldr      x20, [x20, #8]                      
+    7b36018    bl       #0x74e6d10                          
+    7b3601c    mov      x21, x0                             
+    7b36020    add      x0, sp, #0x18                       
+    7b36024    bl       #0x74e6d24                          
+0x7b390e8    encrypt-header-setter    NONE
+0x7b39a28    hmac                     0x7b38cfc
+
+  --- caller 0x7b38cfc ---
+    7b38c9c    add      x8, sp, #0x30                       
+    7b38ca0    stur     q0, [x23, #0x4c]                    
+    7b38ca4    stur     q0, [x23, #0x5c]                    
+    7b38ca8    stur     q0, [x23, #0x6c]                    
+    7b38cac    bl       #0x31b542c                          
+    7b38cb0    ldrb     w8, [sp, #0x30]                     
+    7b38cb4    mov      x0, x22                             
+    7b38cb8    ldr      x9, [sp, #0x40]                     
+    7b38cbc    orr      x10, x20, #1                        
+    7b38cc0    tst      w8, #1                              
+    7b38cc4    add      x8, sp, #0x18                       
+    7b38cc8    csel     x24, x10, x9, eq                    
+    7b38ccc    bl       #0x31b542c                          
+    7b38cd0    ldrb     w8, [sp, #0x18]                     
+    7b38cd4    add      x0, sp, #0x180                      
+    7b38cd8    ldr      w9, [sp, #0x20]                     
+    7b38cdc    sub      x5, x29, #0x38                      
+    7b38ce0    ldr      w20, [sp, #0xc]                     
+    7b38ce4    mov      x3, x24                             
+    7b38ce8    lsr      x10, x8, #1                         
+    7b38cec    tst      w8, #1                              
+    7b38cf0    csel     w4, w10, w9, eq                     
+    7b38cf4    ldr      x1, [sp]                            
+    7b38cf8    mov      w2, w20                             
+    7b38cfc    bl       #0x7b39a28                            <<< CALL
+    7b38d00    ldrb     w8, [sp, #0x18]                     
+    7b38d04    tbnz     w8, #0, #0x7b38d20                  
+    7b38d08    ldrb     w8, [sp, #0x30]                     
+    7b38d0c    tbnz     w8, #0, #0x7b38d30                  
+    7b38d10    ldrb     w8, [x19]                           
+    7b38d14    tbnz     w8, #0, #0x7b38d40                  
+    7b38d18    strh     wzr, [x19]                          

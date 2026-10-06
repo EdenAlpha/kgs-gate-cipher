@@ -1,0 +1,4 @@
+cmd: amstart com.android.vending/com.google.android.finsky.activities.MainActivity
+at: 20:43:46
+gamepid: 
+flows: 0

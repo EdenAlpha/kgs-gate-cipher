@@ -1,0 +1,33 @@
+gate REQ/RESP pairs: 21
+   CMD_GET_SERVER_ENV         req=176    resp=2400
+   CMD_GET_COUNTRY_LIST       req=144    resp=2352
+   CMD_GET_AGE_GATE_REQUIREMENTS req=160    resp=160
+   CMD_GET_KID_USER_AGE_KIND  req=224    resp=128
+   CMD_GET_SERVER_ENV         req=176    resp=2400
+   CMD_GET_COUNTRY_LIST       req=144    resp=2352
+   CMD_GET_AGE_GATE_REQUIREMENTS req=160    resp=160
+   CMD_GET_KID_USER_AGE_KIND  req=224    resp=128
+   CMD_GET_SURVEY_INFO        req=320    resp=464
+   CMD_CHECK_STRING           req=160    resp=128
+   CMD_CREATE_USER            req=1024   resp=12368
+   CMD_GET_PRODUCT_LIST       req=160    resp=7296
+   CMD_SET_TRACKRECORD        req=240    resp=96
+   CMD_GET_STADIUM_DATA       req=192    resp=640
+   CMD_GET_GAMERELAY_QUALITYCHECK_LIST req=176    resp=2352
+   CMD_SEND_ADJUST_PARAM      req=288    resp=96
+   CMD_SET_GAMERELAY_QUALITY  req=608    resp=96
+   CMD_SET_GAMERELAY_QUALITY  req=592    resp=96
+   CMD_SET_GAMERELAY_QUALITY  req=592    resp=96
+   CMD_SET_GAMERELAY_QUALITY  req=608    resp=96
+   CMD_SET_GAMERELAY_QUALITY  req=608    resp=96
+
+signs: 13   distinct N values: 13
+
+candidate keys: 61
+
+==============================================================================
+RESULT
+==============================================================================
+
+decryptions attempted: 2562
+NO -- no derived key unlocks any recorded gate response

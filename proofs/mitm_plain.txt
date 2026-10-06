@@ -1,0 +1,220 @@
+==============================================================================
+GZIP STREAMS IN flows.mitm  (112)
+==============================================================================
+  off 0x0000dc2b        0 -> 4999536   '............COLR|.^..7^<....CPAL.....G.<..\\.GSUB..o..HH...p.OS/2C..{..'
+  off 0x002bae27        0 -> 1405885   '<!doctype html><html lang="en-US" dir="ltr"><head><base href="https://'
+  off 0x002efe49        0 -> 1331726   '"use strict";this.default_AccountsSignInUi=this.default_AccountsSignIn'
+  off 0x0035220f        0 ->  929260   '"use strict";_F_installCss(".vxY00{border-bottom-style:solid;border-bo'
+  off 0x006f6e85        0 ->  108812   '<!DOCTYPE HTML>.<html lang="en">..<head>...<meta charset="UTF-8">...<m'
+  off 0x00522c44        0 ->   78122   "........efootball:..........Z................W.'...n.l..APPS_SEARCH_PA"
+  off 0x004e5343        0 ->   77062   '.....*....J!........................<... .*..Z.7......jp.konami.pesam.'
+  off 0x00489646        0 ->   66208   '..."................=."".redroid14_arm64_only*.redroid_arm64_only2.UD2'
+  off 0x005299a9        0 ->   60580   '....................,......com.epicgames.fortnite..*....com.epicgames.'
+  off 0x0052eb70        0 ->   55901   '....................3......com.firsttouchgames.story..1....com.firstto'
+  off 0x0049c857        0 ->   52657   '{. "kind": "calendar#events",. "etag": "\\"p3378dt4etqhpe0o\\"",. "summa'
+  off 0x0050d0f3        0 ->   44943   '.....*....J!........................%... .*..Z.#.%.#.!com.activision.c'
+  off 0x00549c8f        0 ->   44809   '.....*....J!.................T.......... .*..Z.2......com.zhiliaoapp.m'
+  off 0x0034c027        0 ->   41164   '"use strict";this.default_AccountsSignInUi=this.default_AccountsSignIn'
+  off 0x006659f7        0 ->   34965   '.................=."".redroid14_arm64_only*.redroid_arm64_only2.UD2A.2'
+  off 0x0066250a        0 ->   34463   '.................=."".redroid14_arm64_only*.redroid_arm64_only2.UD2A.2'
+  off 0x0055bef9        0 ->   34224   '.................=."".redroid14_arm64_only*.redroid_arm64_only2.UD2A.2'
+  off 0x00545807        0 ->   34061   '.................=."".redroid14_arm64_only*.redroid_arm64_only2.UD2A.2'
+  off 0x005aaeed        0 ->   33342   '.................=."".redroid14_arm64_only*.redroid_arm64_only2.UD2A.2'
+  off 0x0050534f        0 ->   33186   '.................=."".redroid14_arm64_only*.redroid_arm64_only2.UD2A.2'
+  off 0x006f1898        0 ->   26567   '...................com.google.android.gms..com.google.android.gms.. .*'
+  off 0x00515732        0 ->   24504   '.B.@....;.9..ZERO_PREFIX_SEARCH_SUGGEST_PAGE.....................!.f..'
+  off 0x003bca84        0 ->   20686   '.........=.*1-538c31afec944dd501555ea08328c9798471153b"......rredroid/'
+  off 0x00673afa        0 ->   18683   '.................=."".redroid14_arm64_only*.redroid_arm64_only2.UD2A.2'
+  off 0x004a04f3        0 ->   10629   '.................=."".redroid14_arm64_only*.redroid_arm64_only2.UD2A.2'
+  off 0x004c8220        0 ->    9832   '......EgkIxs/AkO6jlwM=..agsa..L .8..............................en-US.'
+  off 0x004bfeac        0 ->    9818   '...7...$..agsa..L .8..............................en-US......3..3.BB@8'
+  off 0x004c4069        0 ->    9814   '......agsa..L .8..............................en-US......3..3.BB@8ea6b'
+  off 0x006fd604        0 ->    8607   '@charset "UTF-8";./* init */.html, body, div, span, applet, object, if'
+  off 0x005092f9        0 ->    7190   '....8......5..5.....R.....-.+.)..&.$..STREAM......search_home_stream..'
+
+==============================================================================
+ENCRYPTION-RELATED WORDING INSIDE THE PLAIN REPLIES
+==============================================================================
+  off 0x2bae27 len 1405885 'n\\",\\"next\\",\\"oauth\\",\\"osid\\",\\"pEmail\\",\\"pName\\",\\"pageId\\",\\"palette_colors\\",\\"passwdsession\\",\\"pav\\",\\"ph\\",\\"platform_variant\\",\\"profile_owner\\",\\"pstMsg\\",\\"pug\\",\\"rart\\",\\"rast\\",\\"rip\\",\\'
+  off 0x2bae27 len 1405885 'rl","multilogin","next","oauth","osid","pEmail","pName","pageId","palette_colors","passwdsession","pav","ph","platform_variant","profile_owner","pstMsg","pug","rart","rast","rip","sarp","scc","scope"'
+  off 0x2efe49 len 1331726 '/0"];b=b();return a.prototype["$$class/0"]=b};var wsa=0;var Csa=function(){var a="Passwd password Password ConfirmPassword year month answer dcmauth Email reqemail login_hint id_token_hint SID LSID S'
+  off 0x2efe49 len 1331726 ');return a.prototype["$$class/0"]=b};var wsa=0;var Csa=function(){var a="Passwd password Password ConfirmPassword year month answer dcmauth Email reqemail login_hint id_token_hint SID LSID SSID assck'
+  off 0x2efe49 len 1331726 'a.prototype["$$class/0"]=b};var wsa=0;var Csa=function(){var a="Passwd password Password ConfirmPassword year month answer dcmauth Email reqemail login_hint id_token_hint SID LSID SSID assck asrck HB'
+  off 0x2efe49 len 1331726 'lass/0"]=b};var wsa=0;var Csa=function(){var a="Passwd password Password ConfirmPassword year month answer dcmauth Email reqemail login_hint id_token_hint SID LSID SSID assck asrck HBSID TL PREF rapt'
+  off 0x2efe49 len 1331726 'e 17:c+="Google wants to make sure it\\u2019s really you trying to change how you encrypt a storage bucket";break;case 18:c+="Google wants to make sure it\\u2019s really you trying to sign up for payme'
+  off 0x2efe49 len 1331726 '};Eia={COLOR:!0,DATE:!0,DATETIME:!0,"DATETIME-LOCAL":!0,EMAIL:!0,MONTH:!0,NUMBER:!0,PASSWORD:!0,RANGE:!0,SEARCH:!0,TEL:!0,TEXT:!0,TEXTAREA:!0,TIME:!0,URL:!0,WEEK:!0};.Iia={A:!0,AREA:!0,BUTTON:!0,DIALOG:!0,I'
+  off 0x2efe49 len 1331726 '_.y("sOXFj");_.Xwa=_.qg("LdUV1b","oGtAuc","eo4d1b",_.Wwa);_.Cp=_.qg("uiNkee","eBAeSb","MKLhGc",_.wo,"Bwueh");Ee("R9YHJc","Y84RH");Ee("R9YHJc","rHjpXd");Ee("Xd8iUd","htS66e");_.Ywa=_.y("Xd8iUd",'
+  off 0x2efe49 len 1331726 'Sgm9oZ6LJAbvZwpvLvDB4Qc+/GkXwMLMDRi79iFWnuTLflwiBJ1OB/39/RQ+PDy8bRCqLDCHsq8Af/nD4aesP+7Yexiz2QwTExNgOZvBVp8AOoUCent7ffCxsTGrzwDfKbpgrDQEgSHsHkwrz0M4n8If/pj1YGP99hLDMC6bzeYwmUww3nCVwr+VvuKLhsDxgG'
+  off 0x2efe49 len 1331726 'nUER%2BYaYPxT1SvnqnccJbk1IDht6AMDY0Rd4lz0fUcRPEDq4AGiuGgOsydwfEGBcmjQP3ro3gv9XTzAeSXQi2rkIA1eeOh3NirRowZYnwQ7HJOprwW9OeJoT%2BABcU3K20jphpfx8W8P4UQKmkwBmj3pnYTrx4rHZ5//LdIzF0h/nOVDyGGtziQTOuHjkB'
+  off 0x2efe49 len 1331726 '8-662L396-402l84 84Z"></path>\'),b,void 0,c,void 0,."0 -960 960 960",a))});_.T("k","passwordManager",0,function(a){a=a||{};var b=a.ja,c=a.fill;a=a.width;return _.V(_.W(),_.Rp((0,_.E)(\'<path d="M280-380q'
+  off 0x2efe49 len 1331726 '84 184-56 56Z"></path>\'),b,void 0,c,void 0,"0 -960 960 960",a))});._.T("k","lskfPassword",0,function(a){a=a||{};var b=a.ja;a=a.width;return _.V(_.W(),_.Rp((0,_.E)(\'<path xmlns="http://www.w3.org/2000/sv'
+  off 0x2efe49 len 1331726 '440h80v-240h-80v240Z"></path>\'),b,void 0,c,void 0,"0 -960 960 960",.a))});_.T("k","encrypted",0,function(a){a=a||{};var b=a.ja,c=a.fill;a=a.width;return _.V(_.W(),_.Rp((0,_.E)(\'<path d="M420-360h120l-'
+  off 0x2efe49 len 1331726 ' 220t172 132Zm0-316Z"></path>\'),b,void 0,c,void 0,"0 -960 960 960",a))});._.T("k","password",0,function(a){a=a||{};var b=a.ja,c=a.fill;a=a.width;return _.V(_.W(),_.Rp((0,_.E)(\'<path d="M80-200v-80h800v80H8'
+  off 0x2efe49 len 1331726 'Sgm9oZ6LJAbvZwpvLvDB4Qc+/GkXwMLMDRi79iFWnuTLflwiBJ1OB/39/RQ+PDy8bRCqLDCHsq8Af/nD4aesP+7Yexiz2QwTExNgOZvBVp8AOoUCent7ffCxsTGrzwDfKbpgrDQEgSHsHkwrz0M4n8If/pj1YGP99hLDMC6bzeYwmUww3nCVwr+VvuKLhsDxgG'
+  off 0x2efe49 len 1331726 'd")+" "+_.I("TrZEUc")+\'" aria-hidden="true" alt=""></div>\')});._.T("t","previousPassword",0,function(){return(0,_.E)(\'<div class="\'+_.I("B6L7ke")+" "+_.I("IiQozc")+\'" jsname="\'+_.I("wSDHh")+\'"><img src='
+  off 0x2efe49 len 1331726 'e="\'+_.I("wSDHh")+\'"><img src="https://ssl.gstatic.com/accounts/account-recovery-password.svg" class="\'+_.I("xh7Wmd")+" "+_.I("TrZEUc")+\'" aria-hidden="true" alt=""></div>\')});._.T("t","emailPin",0,fu'
+  off 0x2efe49 len 1331726 'return(0,_.E)(\'<div class="\'+_.I("B6L7ke")+" "+_.I("IiQozc")+\'" jsname="\'+_.I("JAEsdc")+\'"><img src="https://www.gstatic.com/identity/boq/scui/error-unavailable-7c298d182487d04b32e0062b1b8d708c'
+  off 0x2efe49 len 1331726 'ccounts/embedded/smart_lock_2x.png"),Ea:"#FFCB15",Ha:!0},b))});_.T("w","previousPassword",0,function(a,b){a=a||{};a=a.config;return _.V(_.W(),Xq({config:a,jsname:"wSDHh",Fa:(0,_.Q)("https://ssl.gstatic.'
+  off 0x2efe49 len 1331726 'g:a,jsname:"wSDHh",Fa:(0,_.Q)("https://ssl.gstatic.com/accounts/account-recovery-password.svg"),Ea:"#FFC61C",Ha:!0},b))});._.T("w","emailPin",0,function(a,b){a=a||{};a=a.config;return _.V(_.W(),Xq({co'
+  off 0x2efe49 len 1331726 'rror",0,function(a,b){a=a||{};a=a.config;return _.V(_.W(),Xq({config:a,jsname:"JAEsdc",Fa:(0,_.Q)("https://www.gstatic.com/identity/boq/scui/error-unavailable-7c298d182487d04b32e0062b1b8d708c.s'
+  off 0x2efe49 len 1331726 'Sgm9oZ6LJAbvZwpvLvDB4Qc+/GkXwMLMDRi79iFWnuTLflwiBJ1OB/39/RQ+PDy8bRCqLDCHsq8Af/nD4aesP+7Yexiz2QwTExNgOZvBVp8AOoUCent7ffCxsTGrzwDfKbpgrDQEgSHsHkwrz0M4n8If/pj1YGP99hLDMC6bzeYwmUww3nCVwr+VvuKLhsDxgG'
+  off 0x2efe49 len 1331726 'ccounts/embedded/smart_lock_2x.png"),Ea:"#FFCB15",Ha:!0},b))});_.T("A","previousPassword",0,function(a,b){a=a||{};a=a.config;return _.V(_.W(),ar({config:a,jsname:"wSDHh",Fa:(0,_.Q)("https://ssl.gstatic.'
+  off 0x2efe49 len 1331726 'g:a,jsname:"wSDHh",Fa:(0,_.Q)("https://ssl.gstatic.com/accounts/account-recovery-password.svg"),Ea:"#FFC61C",Ha:!0},b))});._.T("A","emailPin",0,function(a,b){a=a||{};a=a.config;return _.V(_.W(),ar({co'
+  off 0x2efe49 len 1331726 'rror",0,function(a,b){a=a||{};a=a.config;return _.V(_.W(),ar({config:a,jsname:"JAEsdc",Fa:(0,_.Q)("https://www.gstatic.com/identity/boq/scui/error-unavailable-7c298d182487d04b32e0062b1b8d708c.s'
+  off 0x2efe49 len 1331726 'nUER%2BYaYPxT1SvnqnccJbk1IDht6AMDY0Rd4lz0fUcRPEDq4AGiuGgOsydwfEGBcmjQP3ro3gv9XTzAeSXQi2rkIA1eeOh3NirRowZYnwQ7HJOprwW9OeJoT%2BABcU3K20jphpfx8W8P4UQKmkwBmj3pnYTrx4rHZ5//LdIzF0h/nOVDyGGtziQTOuHjkB'
+  off 0x2efe49 len 1331726 ' 0v-120H580v120h120Z"></path>\'),b,.void 0,c,void 0,"0 -960 960 960",a))});_.T("E","passwordManager",0,function(a){a=a||{};var b=a.ja,c=a.fill;a=a.width;return _.V(_.W(),_.Aq((0,_.E)(\'<path d="M280-380q'
+  off 0x2efe49 len 1331726 '84 184-56 56Z"></path>\'),b,void 0,c,void 0,"0 -960 960 960",a))});._.T("E","lskfPassword",0,function(a){a=a||{};var b=a.ja;a=a.width;return _.V(_.W(),_.Aq((0,_.E)(\'<path xmlns="http://www.w3.org/2000/sv'
+  off 0x2efe49 len 1331726 '440h80v-240h-80v240Z"></path>\'),b,void 0,c,void 0,"0 -960 960 960",.a))});_.T("E","encrypted",0,function(a){a=a||{};var b=a.ja,c=a.fill;a=a.width;return _.V(_.W(),_.Aq((0,_.E)(\'<path d="M420-360h120l-'
+  off 0x2efe49 len 1331726 ' 220t172 132Zm0-316Z"></path>\'),b,void 0,c,void 0,"0 -960 960 960",a))});._.T("E","password",0,function(a){a=a||{};var b=a.ja,c=a.fill;a=a.width;return _.V(_.W(),_.Aq((0,_.E)(\'<path d="M80-200v-80h800v80H8'
+  off 0x2efe49 len 1331726 'nUER%2BYaYPxT1SvnqnccJbk1IDht6AMDY0Rd4lz0fUcRPEDq4AGiuGgOsydwfEGBcmjQP3ro3gv9XTzAeSXQi2rkIA1eeOh3NirRowZYnwQ7HJOprwW9OeJoT%2BABcU3K20jphpfx8W8P4UQKmkwBmj3pnYTrx4rHZ5//LdIzF0h/nOVDyGGtziQTOuHjkB'
+  off 0x2efe49 len 1331726 '8-662L396-402l84 84Z"></path>\'),b,void 0,c,void 0,."0 -960 960 960",a))});_.T("M","passwordManager",0,function(a){a=a||{};var b=a.ja,c=a.fill;a=a.width;return _.V(_.W(),_.Yq((0,_.E)(\'<path d="M280-380q'
+  off 0x2efe49 len 1331726 '84 184-56 56Z"></path>\'),b,void 0,c,void 0,"0 -960 960 960",a))});._.T("M","lskfPassword",0,function(a){a=a||{};var b=a.ja;a=a.width;return _.V(_.W(),_.Yq((0,_.E)(\'<path xmlns="http://www.w3.org/2000/sv'
+  off 0x2efe49 len 1331726 '440h80v-240h-80v240Z"></path>\'),b,void 0,c,void 0,"0 -960 960 960",.a))});_.T("M","encrypted",0,function(a){a=a||{};var b=a.ja,c=a.fill;a=a.width;return _.V(_.W(),_.Yq((0,_.E)(\'<path d="M420-360h120l-'
+  off 0x2efe49 len 1331726 ' 220t172 132Zm0-316Z"></path>\'),b,void 0,c,void 0,"0 -960 960 960",a))});._.T("M","password",0,function(a){a=a||{};var b=a.ja,c=a.fill;a=a.width;return _.V(_.W(),_.Yq((0,_.E)(\'<path d="M80-200v-80h800v80H8'
+  off 0x2efe49 len 1331726 'Sgm9oZ6LJAbvZwpvLvDB4Qc+/GkXwMLMDRi79iFWnuTLflwiBJ1OB/39/RQ+PDy8bRCqLDCHsq8Af/nD4aesP+7Yexiz2QwTExNgOZvBVp8AOoUCent7ffCxsTGrzwDfKbpgrDQEgSHsHkwrz0M4n8If/pj1YGP99hLDMC6bzeYwmUww3nCVwr+VvuKLhsDxgG'
+  off 0x2efe49 len 1331726 'nUER%2BYaYPxT1SvnqnccJbk1IDht6AMDY0Rd4lz0fUcRPEDq4AGiuGgOsydwfEGBcmjQP3ro3gv9XTzAeSXQi2rkIA1eeOh3NirRowZYnwQ7HJOprwW9OeJoT%2BABcU3K20jphpfx8W8P4UQKmkwBmj3pnYTrx4rHZ5//LdIzF0h/nOVDyGGtziQTOuHjkB'
+  off 0x2efe49 len 1331726 ' 0v-120H580v120h120Z"></path>\'),b,.void 0,c,void 0,"0 -960 960 960",a))});_.T("Q","passwordManager",0,function(a){a=a||{};var b=a.ja,c=a.fill;a=a.width;return _.V(_.W(),_.qr((0,_.E)(\'<path d="M280-380q'
+  off 0x2efe49 len 1331726 '84 184-56 56Z"></path>\'),b,void 0,c,void 0,"0 -960 960 960",a))});._.T("Q","lskfPassword",0,function(a){a=a||{};var b=a.ja;a=a.width;return _.V(_.W(),_.qr((0,_.E)(\'<path xmlns="http://www.w3.org/2000/sv'
+  off 0x2efe49 len 1331726 '440h80v-240h-80v240Z"></path>\'),b,void 0,c,void 0,"0 -960 960 960",.a))});_.T("Q","encrypted",0,function(a){a=a||{};var b=a.ja,c=a.fill;a=a.width;return _.V(_.W(),_.qr((0,_.E)(\'<path d="M420-360h120l-'
+  off 0x2efe49 len 1331726 ' 220t172 132Zm0-316Z"></path>\'),b,void 0,c,void 0,"0 -960 960 960",a))});._.T("Q","password",0,function(a){a=a||{};var b=a.ja,c=a.fill;a=a.width;return _.V(_.W(),_.qr((0,_.E)(\'<path d="M80-200v-80h800v80H8'
+  off 0x35220f len 929260 'on(){return _.rj(0)};_.k.setLockScreenConsent=function(){return _.rj(0)};_.k.addEncryptionRecoveryMethod=function(){return _.rj(0)};_.k.setDeviceSharedKeys=function(){return _.rj(0)};_.k.createRetr'
+  off 0x35220f len 929260 ':{Jc:{id:_.hx,name:"Pv7Rlc",yc:function(){var a=new _.ex;_.fx(a,"identity-signin-password");.return{mb:a,id:_.hx,name:"Pv7Rlc"}}},eb:{id:_.rx,name:"n7vHCb",yc:function(a){var b=new _.ox;_.ny(a)&&_.px(b,_'
+  off 0x35220f len 929260 'Mk(c,15,b));b=a.getData("passive");_.Wn(b)&&(b=_.Vn(b),_.Mk(c,16,b));a=a.getData("passwdsession");_.Wn(a)&&(a=_.Vn(a),_.Mk(c,17,a));return c};_.gz=function(a){new rTa(a,!0)};.sTa=function(a){return('
+  off 0x35220f len 929260 '_.Hk(d,3,!0));d="1"===_.Wn(a.getData("rpbg"));_.Mk(b,8,d?"identity-signin-reauth-password":"identity-signin-password");_.zg(b,_.oNa,7,c);c=_.Wn(a.getData("hd"));_.Mk(b,3,c);a="1"==_.Wn(a.getData("ksa"))'
+  off 0x35220f len 929260 'a.getData("rpbg"));_.Mk(b,8,d?"identity-signin-reauth-password":"identity-signin-password");_.zg(b,_.oNa,7,c);c=_.Wn(a.getData("hd"));_.Mk(b,3,c);a="1"==_.Wn(a.getData("ksa"))||ITa.includes(_.lj(a.getData'
+  off 0x35220f len 929260 '")))&&_.Mk(c,3,b);(a=_.Wn(a.getData("ch_pi")))&&_.Mk(c,4,a);return c}});_.gz({Zb:["/seededkidreauthlanding"],jc:_.ZQa,fc:function(a,b){var c=new _.YQa;b=_.fz(a,b!=null?b:"");c=_.zg(c,_.mw,2,b);(a=_.'
+  off 0x35220f len 929260 '_.zg(c,_.mw,2,b);(a=_.Wn(a.getData("kid_id")))&&_.Mk(c,1,a);return c}});_.gz({Zb:["/seededkidsigninlanding"],jc:_.bRa,fc:function(a,b){var c=new _.aRa;b=_.fz(a,b!=null?b:"");c=_.zg(c,_.mw,5,b);(a=_.'
+  off 0x35220f len 929260 'com/intl/"+_.lm(n)+"/chrome/browser/privacy?langCountry="+_.lm(n);break;case "DaaeSd":a+="https://play.google/intl/"+_.lm(n)+"/play-terms"+(b?"/embedded":"")+(g?"?color_scheme=dark":"");break;c'
+
+keyword hits: 145
+
+==============================================================================
+BASE64 RUNS OF KEY-INTERESTING LENGTH
+==============================================================================
+  off 0xb4  len 64 = ~48 bytes         cab4d1f0a6a2a1afecae808a520f6690dd2b9d58bf54762877f2dc9715d55461
+  off 0xb4  len 64 = ~48 bytes         cab4d1f0a6a2a1afecae808a520f6690dd2b9d58bf54762877f2dc9715d55461
+  off 0xdc2b  len 51 = ~38 bytes         704744105045250561041610656747667663670521670256761
+  off 0xdc2b  len 40 = ~30 bytes         0414164165674674636561034252430761252366
+  off 0xdc2b  len 56 = ~42 bytes         32700167076707672076706167043674746767676765674765061676
+  off 0xdc2b  len 51 = ~38 bytes         676676767676767667676766765667476474656766744544546
+  off 0xdc2b  len 51 = ~38 bytes         676676767676767667676766765667476474656766744544546
+  off 0xdc2b  len 45 = ~33 bytes         667676167016706367063670367223632016302122122
+  off 0xdc2b  len 51 = ~38 bytes         270016766766746505674767647667005667667667041667676
+  off 0xdc2b  len 49 = ~36 bytes         6767667667465056747676476670056676676670416676765
+  off 0xdc2b  len 49 = ~36 bytes         7276670016161605243061070612725232070323021021632
+  off 0xdc2b  44 chars = 32 decoded bytes 00101010010101010101010101010101010110101011
+  off 0xdc2b  44 chars = 32 decoded bytes 10110101001010101010110101001010110101010101
+  off 0xdc2b  len 40 = ~30 bytes         1010010101101010101001010101011010101011
+  off 0xdc2b  44 chars = 32 decoded bytes 1010101010010101101011010101010110101010101
+  off 0xdc2b  len 41 = ~30 bytes         10110101010101101011010101010110101010101
+  off 0xdc2b  len 40 = ~30 bytes         1010101301011010101010101010110101010101
+  off 0xdc2b  len 40 = ~30 bytes         0010101001010101010101010101010110101011
+  off 0xdc2b  len 52 = ~39 bytes         7114541516551167114767116715075675110545454511454763
+  off 0xdc2b  len 66 = ~49 bytes         0505672511076176767567616711770177363116711670767116776711276336
+  off 0xdc2b  len 41 = ~30 bytes         70612774714561147471634116343103214101001
+  off 0xdc2b  len 42 = ~31 bytes         532761651167671167671167671167677633671163
+  off 0xdc2b  len 40 = ~30 bytes         5454545154745114545474545116547651167636
+  off 0xdc2b  len 40 = ~30 bytes         1ca67b179cb5c384b04d596cb2497e378312cc39
+  off 0x2bae27  len 50 = ~37 bytes         com/v3/signin/interstitial/doritos/forward/success
+  off 0x2bae27  len 98 = ~73 bytes         CAMSRR1E88O5KRYEFqCJJQT9nwQEsK3MBAT2LwSq4ATJxwUWwJ0BBJ3xEoHdBPND
+  off 0x2bae27  len 50 = ~37 bytes         com/v3/signin/interstitial/doritos/forward/timeout
+  off 0x2bae27  len 76 = ~57 bytes         AKctkzkQcWXB2GLUgd6620dSZzHlROs1D7048SLkYJNQVvNDrvKzJEUxoYmEe3A1
+  off 0x2bae27  len 67 = ~50 bytes         com/i18n/flags/48x32/nobevel/063708a09723aa13639468def709ad19/fl
+  off 0x2bae27  len 47 = ~35 bytes         com/s/googlesans/v62/4UasrENHsxJlGDuGo1OIlJfC6l
+  off 0x2bae27  len 47 = ~35 bytes         com/s/googlesans/v62/4UasrENHsxJlGDuGo1OIlJfC6l
+  off 0x2bae27  len 47 = ~35 bytes         com/s/googlesans/v62/4UasrENHsxJlGDuGo1OIlJfC6l
+  off 0x2bae27  len 47 = ~35 bytes         com/s/googlesans/v62/4UasrENHsxJlGDuGo1OIlJfC6l
+  off 0x2bae27  len 47 = ~35 bytes         com/s/googlesans/v62/4UasrENHsxJlGDuGo1OIlJfC6l
+  off 0x2bae27  len 47 = ~35 bytes         com/s/googlesans/v62/4UasrENHsxJlGDuGo1OIlJfC6l
+  off 0x2bae27  len 47 = ~35 bytes         com/s/googlesans/v62/4UasrENHsxJlGDuGo1OIlJfC6l
+  off 0x2bae27  len 47 = ~35 bytes         com/s/googlesans/v62/4UasrENHsxJlGDuGo1OIlJfC6l
+  off 0x2bae27  len 47 = ~35 bytes         com/s/googlesans/v62/4UasrENHsxJlGDuGo1OIlJfC6l
+  off 0x2bae27  len 47 = ~35 bytes         com/s/googlesans/v62/4UasrENHsxJlGDuGo1OIlJfC6l
+  off 0x2bae27  len 47 = ~35 bytes         com/s/googlesans/v62/4UasrENHsxJlGDuGo1OIlJfC6l
+  off 0x2bae27  len 47 = ~35 bytes         com/s/googlesans/v62/4UasrENHsxJlGDuGo1OIlJfC6l
+  off 0x2bae27  len 47 = ~35 bytes         com/s/googlesans/v62/4UasrENHsxJlGDuGo1OIlJfC6l
+  off 0x2bae27  len 47 = ~35 bytes         com/s/googlesans/v62/4UasrENHsxJlGDuGo1OIlJfC6l
+  off 0x2bae27  len 47 = ~35 bytes         com/s/googlesans/v62/4UasrENHsxJlGDuGo1OIlJfC6l
+  off 0x2bae27  len 47 = ~35 bytes         com/s/googlesans/v62/4UasrENHsxJlGDuGo1OIlJfC6l
+  off 0x2bae27  len 47 = ~35 bytes         com/s/googlesans/v62/4UasrENHsxJlGDuGo1OIlJfC6l
+  off 0x2bae27  len 47 = ~35 bytes         com/s/googlesans/v62/4UasrENHsxJlGDuGo1OIlJfC6l
+  off 0x2bae27  len 47 = ~35 bytes         com/s/googlesans/v62/4UasrENHsxJlGDuGo1OIlJfC6l
+  off 0x2bae27  len 47 = ~35 bytes         com/s/googlesans/v62/4UasrENHsxJlGDuGo1OIlJfC6l
+  off 0x2bae27  len 47 = ~35 bytes         com/s/googlesans/v62/4UasrENHsxJlGDuGo1OIlJfC6l
+  off 0x2bae27  len 47 = ~35 bytes         com/s/googlesans/v62/4UasrENHsxJlGDuGo1OIlJfC6l
+  off 0x2bae27  len 47 = ~35 bytes         com/s/googlesans/v62/4UasrENHsxJlGDuGo1OIlJfC6l
+  off 0x2bae27  len 47 = ~35 bytes         com/s/googlesans/v62/4UasrENHsxJlGDuGo1OIlJfC6l
+  off 0x2bae27  len 47 = ~35 bytes         com/s/googlesans/v62/4UasrENHsxJlGDuGo1OIlJfC6l
+  off 0x2bae27  len 47 = ~35 bytes         com/s/googlesans/v62/4UasrENHsxJlGDuGo1OIlJfC6l
+  off 0x2bae27  len 47 = ~35 bytes         com/s/googlesans/v62/4UasrENHsxJlGDuGo1OIlJfC6l
+  off 0x2bae27  len 47 = ~35 bytes         com/s/googlesans/v62/4UasrENHsxJlGDuGo1OIlJfC6l
+  off 0x2bae27  len 47 = ~35 bytes         com/s/googlesans/v62/4UasrENHsxJlGDuGo1OIlJfC6l
+  off 0x2bae27  len 47 = ~35 bytes         com/s/googlesans/v62/4UasrENHsxJlGDuGo1OIlJfC6l
+  off 0x2bae27  len 47 = ~35 bytes         com/s/googlesans/v62/4UasrENHsxJlGDuGo1OIlJfC6l
+
+base64 runs: 1981
+
+==============================================================================
+HIGH-ENTROPY 32-BYTE RUNS (a stored key would look like this)
+==============================================================================
+  stream@0xb4  payload+1477  3958355630364371793746366b72432f536851457a706c555c7530303364227d  ent=4.73
+  stream@0x2adc  payload+44  010a02820101008ffbbf5c3763943cb0ee01c4b5a69ab19f46746f1638a03227  ent=4.75
+  stream@0x2adc  payload+76  35ddf0716b0edcf625cbb2edeafb32d5af1e03430346f0a739db23961d65e578  ent=4.88
+  stream@0x2adc  payload+108  51f084b00e12ac0e5bdcc9d64c7c00d5b81b88333e2fdaebaaf71a75c2ae3a54  ent=4.94
+  stream@0x2adc  payload+140  de378f10d228e684794d15b4f3bd3f56d33c3f18abfc2e05c01e0831b661d0fd  ent=4.94
+  stream@0x2adc  payload+172  9f4f3f640d1793bcad41c748be0027a84d7042920554a66db8de566e204970ee  ent=4.94
+  stream@0x2adc  payload+204  103e6bd27c31bd1b6ea43c46629f086693f92a5131a8dbb59db90f73e8a00932  ent=4.94
+  stream@0x2adc  payload+236  01e97b2a8a36a0cf17b050709da2f9a46f624db6c931fcf30812ff93bd6231d8  ent=4.88
+  stream@0x2adc  payload+268  1cea1a9ef581287f755ed2277ac296f59ddb18fc76dc46f057c05834c8222d2a  ent=4.94
+  stream@0x2adc  payload+300  6575a7d90862cd02030100011280027f2fdb3fef383a0d5b327b4d1419effde9  ent=4.81
+  stream@0x2adc  payload+332  926cf2ed9a1d6aa6f29a745ce893bdcedd6f59891772ad8ac198436fdc386ccd  ent=4.75
+  stream@0x2adc  payload+364  fe4bf345953db70643ccf9524093895a27ccb9d81d15262b6357fcde13bcabc5  ent=4.94
+  stream@0x2adc  payload+396  8a40f4373153a6e8c7c34abbb1c7aeb71a7a38f2dc51288646ddc3c409cb919a  ent=4.88
+  stream@0x2adc  payload+428  8f1a17236e5038a28c2a49579ad35ed1aeaaf2ff9d6a0944ca3ce297a0ff14e1  ent=4.94
+  stream@0x2adc  payload+460  3c6eb14011636a41d2df6843221340dd3929f1c45467a42ae6a90ec3d8cc5da4  ent=4.88
+  stream@0x2adc  payload+492  afdd88f9564c617c3378c11363bca3fb6dc4dbba19e819ed88eb02dafeb678f3  ent=4.81
+  stream@0x2adc  payload+524  3ea63312e7947854ab3f0cb7935f26569f4ba3c0b6135721bb57a6775343bf34  ent=4.88
+  stream@0x2adc  payload+556  bf047a75687231bfd35b115094cc1012ac080aa60430820222300d06092a8648  ent=4.81
+  stream@0x2adc  payload+599  0f003082020a0282020100ab86c260a8fb477aba0c21846866c1c0d83e619645  ent=4.73
+  stream@0x2adc  payload+631  8859220e9fad54e1ed6ce408680cd8a9d33c071c30d7f8f2c4532a7f3dcaae4d  ent=5.00
+  stream@0x2adc  payload+665  62a12ff2685e62b77e267e523a58b42ddda375849b4b3d28d10aa9fea952de8d  ent=4.75
+  stream@0x2adc  payload+697  b486112c7e8deee136373b3b6d5a66368108133c3010886f251aa1aa26d3250b  ent=4.81
+  stream@0x2adc  payload+729  1f12dbe4a6c4917ab379ff970f4b729f708dd95f1a98506f60a5e07e76a0ae83  ent=5.00
+  stream@0x2adc  payload+761  211f24ebe77e9ee66fc1480bfbb775704d9eda6bef0cba414fdfb128c7201607  ent=4.94
+  stream@0x2adc  payload+793  2228aa03d6d3e05aa631f28718105126b77e939586bd9022faa1aae671244252  ent=4.88
+  stream@0x2adc  payload+825  5e149c97eea0aac5a820056d9809406373e85fd38f16885775cd47aac3721a62  ent=4.94
+  stream@0x2adc  payload+857  a6ccf6ad87b1b72e13189801a4e2e3db4311f3f39738a3eea8870313a806b5fa  ent=4.75
+  stream@0x2adc  payload+889  a66a652137ae4f30101c318b632718acd9fca591d5aace6e363ec8d64495106d  ent=4.94
+  stream@0x2adc  payload+921  42530a7233e088e1e3a31ba4383969679c51ec2fe43572de384c97d409595db2  ent=4.88
+  stream@0x2adc  payload+953  1d458761f599aeb674a220c8afd4e7ba9623dbddaa64e751672ce7793860678b  ent=4.79
+
+flagged: 12794
+
+==============================================================================
+WHAT THE PLAIN REPLIES CONTAIN (first printable run of each)
+==============================================================================
+  len 4999536 off 0xdc2b  & &#&&&*&/&:&@&B&S&`&c&f&h&{&
+  len 1405885 off 0x2bae27  <!doctype html><html lang="en-US" dir="ltr"><head><base href="https://accounts.google.com/
+  len 1331726 off 0x2efe49  "use strict";this.default_AccountsSignInUi=this.default_AccountsSignInUi||{};(function(_){
+  len 929260  off 0x35220f  "use strict";_F_installCss(".vxY00{border-bottom-style:solid;border-bottom-width:1px;backg
+  len 108812  off 0x6f6e85  <!DOCTYPE HTML>
+  len 78122   off 0x522c44  APPS_SEARCH_PAGE2X
+  len 77062   off 0x4e5343  jp.konami.pesam
+  len 66208   off 0x489646  redroid14_arm64_only*
+  len 60580   off 0x5299a9  com.epicgames.fortnite
+  len 55901   off 0x52eb70  com.firsttouchgames.story
+  len 52657   off 0x49c857   "kind": "calendar#events",
+  len 44943   off 0x50d0f3  !com.activision.callofduty.shooter
+  len 44809   off 0x549c8f  com.zhiliaoapp.musically
+  len 41164   off 0x34c027  "use strict";this.default_AccountsSignInUi=this.default_AccountsSignInUi||{};(function(_){
+  len 34965   off 0x6659f7  redroid14_arm64_only*
+  len 34463   off 0x66250a  redroid14_arm64_only*
+  len 34224   off 0x55bef9  redroid14_arm64_only*
+  len 34061   off 0x545807  redroid14_arm64_only*
+  len 33342   off 0x5aaeed  redroid14_arm64_only*
+  len 33186   off 0x50534f  redroid14_arm64_only*
+  len 26567   off 0x6f1898  com.google.android.gms
+  len 24504   off 0x515732  ZERO_PREFIX_SEARCH_SUGGEST_PAGE
+  len 20686   off 0x3bca84  *1-538c31afec944dd501555ea08328c9798471153b"
+  len 18683   off 0x673afa  redroid14_arm64_only*
+  len 10629   off 0x4a04f3  redroid14_arm64_only*

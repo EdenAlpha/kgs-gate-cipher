@@ -1,0 +1,1 @@
+exec bash -c true; echo IB; A="adb -s 127.0.0.1:5555"; $A shell input swipe 618 890 618 890 250; sleep 18; echo "== focus =="; $A shell dumpsys window 2>/dev/null | tr -d "\r" | grep -iE "mCurrentFocus" | head -1; $A exec-out screencap -p > /tmp/live-res/screen.png; echo "== shot =="

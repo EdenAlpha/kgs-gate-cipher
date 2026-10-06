@@ -1,0 +1,8 @@
+cmd: exec sudo docker exec redroid sh -c "uiautomator dump /data/local/tmp/u.xml 2>&1; echo rc=$?; cat /data/local/tmp/u.xml 2>&1 | head -c 4000"
+at: 15:22:11
+$ sudo docker exec redroid sh -c "uiautomator dump /data/local/tmp/u.xml 2>&1; echo rc=$?; cat /data/local/tmp/u.xml 2>&1 | head -c 4000"
+rc=0
+cat: /data/local/tmp/u.xml: No such file or directory
+rc=0
+gamepid: 
+flows: 0

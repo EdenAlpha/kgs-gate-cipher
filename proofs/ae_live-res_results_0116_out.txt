@@ -1,0 +1,20 @@
+cmd: exec bash -c true; echo C2; echo "== frida-server alive? =="; sudo docker exec redroid sh -c "ps -A | grep -i frida" 2>&1; echo "== frida.out =="; sudo docker exec redroid sh -c "cat /data/local/tmp/frida.out 2>&1 | tail -15"; echo "== launcher activity =="; adb -s 127.0.0.1:5555 shell cmd package resolve-activity --brief jp.konami.pesam 2>&1 | tail -3; echo "== game running? =="; adb -s 127.0.0.1:5555 shell pidof jp.konami.pesam; echo "== app data size =="; sudo docker exec redroid sh -c "du -sm /data/media/0/Android/obb 2>/dev/null | tail -1"; echo "== device kgs dir =="; adb -s 127.0.0.1:5555 shell ls -la /data/local/tmp/kgs 2>&1 | head -5
+at: 07:17:36
+$ bash -c true; echo C2; echo "== frida-server alive? =="; sudo docker exec redroid sh -c "ps -A | grep -i frida" 2>&1; echo "== frida.out =="; sudo docker exec redroid sh -c "cat /data/local/tmp/frida.out 2>&1 | tail -15"; echo "== launcher activity =="; adb -s 127.0.0.1:5555 shell cmd package resolve-activity --brief jp.konami.pesam 2>&1 | tail -3; echo "== game running? =="; adb -s 127.0.0.1:5555 shell pidof jp.konami.pesam; echo "== app data size =="; sudo docker exec redroid sh -c "du -sm /data/media/0/Android/obb 2>/dev/null | tail -1"; echo "== device kgs dir =="; adb -s 127.0.0.1:5555 shell ls -la /data/local/tmp/kgs 2>&1 | head -5
+C2
+== frida-server alive? ==
+== frida.out ==
+Aborted (core dumped) 
+== launcher activity ==
+priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=false
+jp.konami.pesam/com.epicgames.ue4.SplashActivity
+== game running? ==
+== app data size ==
+1	/data/media/0/Android/obb
+== device kgs dir ==
+total 8
+drwxrwxrwx 2 shell shell 4096 2026-10-01 00:15 .
+drwxrwx--x 4 shell shell 4096 2026-10-01 00:15 ..
+rc=0
+gamepid: 
+flows: 0

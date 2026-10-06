@@ -1,0 +1,7 @@
+cmd: exec bash -c true; echo U4; E=$(cat /tmp/kgs/creds/GMAIL); adb -s 127.0.0.1:5555 shell input tap 360 631; sleep 3; adb -s 127.0.0.1:5555 shell input text "$E"; sleep 3; adb -s 127.0.0.1:5555 shell input tap 591 1113; sleep 16; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+at: 23:27:34
+$ bash -c true; echo U4; E=$(cat /tmp/kgs/creds/GMAIL); adb -s 127.0.0.1:5555 shell input tap 360 631; sleep 3; adb -s 127.0.0.1:5555 shell input text "$E"; sleep 3; adb -s 127.0.0.1:5555 shell input tap 591 1113; sleep 16; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+U4
+rc=0
+gamepid: 
+flows: 0

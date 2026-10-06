@@ -1,0 +1,7 @@
+cmd: exec bash -c true; echo T9; adb -s 127.0.0.1:5555 shell input swipe 639 551 639 551 250; sleep 8; adb -s 127.0.0.1:5555 shell input swipe 399 592 399 592 250; sleep 14; adb -s 127.0.0.1:5555 shell input swipe 262 330 262 330 250; sleep 14; adb -s 127.0.0.1:5555 shell input swipe 672 73 672 73 250; sleep 15; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+at: 01:50:16
+$ bash -c true; echo T9; adb -s 127.0.0.1:5555 shell input swipe 639 551 639 551 250; sleep 8; adb -s 127.0.0.1:5555 shell input swipe 399 592 399 592 250; sleep 14; adb -s 127.0.0.1:5555 shell input swipe 262 330 262 330 250; sleep 14; adb -s 127.0.0.1:5555 shell input swipe 672 73 672 73 250; sleep 15; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+T9
+rc=0
+gamepid: 82330
+flows: 22

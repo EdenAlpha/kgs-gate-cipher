@@ -1,0 +1,39 @@
+recorded request
+  path        /pes22/gate/gate_CMD_GET_SERVER_ENV.php
+  body        176 bytes  head=f1f7d09fe3db7d27
+  sign        56 chars  head=b'ejLwFDyq'
+
+======================================================================
+PROBES
+======================================================================
+--- 1 control-ip   (fake script name, expect 404) ---
+    GET /pes22/gate/gate_CMD_ZZZ_PROBE_NOT_A_SCRIPT.php
+    -> 404 Not Found   36 bytes   0.29s   ct=text/html; charset=UTF-8 cl=-
+    body: ..........s..IU../QH./.K....+..!....
+    gunzip -> 16 bytes: b'File not found.\n'
+
+--- 2 control-good (byte-exact replay, expect 200) ---
+    POST /pes22/gate/gate_CMD_GET_SERVER_ENV.php
+    -> 200 OK   2400 bytes   0.26s   ct=application/json; charset=UTF-8 cl=2400
+    body: .. ..:....y.....X-...}EU...........AH..vq.e.C..4...Z..!v:...z.oF..?.G..].3...8.i...Q.......[H.W........#v.;L..J\8.t..}._....<u..*.......T.vo....~?}.Fp.A. G...P{
+
+--- 3 bad-sign     (same length, all-zero) ---
+    POST /pes22/gate/gate_CMD_GET_SERVER_ENV.php
+    -> 500 Internal Server Error   0 bytes   0.24s   ct=text/html; charset=UTF-8 cl=-
+    body: 
+
+--- 4 no-sign      (no Cookie header) ---
+    POST /pes22/gate/gate_CMD_GET_SERVER_ENV.php
+    -> 500 Internal Server Error   0 bytes   0.25s   ct=text/html; charset=UTF-8 cl=-
+    body: 
+
+======================================================================
+VERDICT
+======================================================================
+  control-ip  = 404
+  control-good= 200 (2400 bytes)
+  bad-sign    = 500 (0 bytes)
+  no-sign     = 500 (0 bytes)
+
+  VERDICT: sign IS checked. responses differ, so the cookie is
+           validated and must be forged correctly.

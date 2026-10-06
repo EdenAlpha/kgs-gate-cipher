@@ -1,0 +1,15 @@
+cmd: exec bash -c true; echo UY; echo "== launcher activity =="; adb -s 127.0.0.1:5555 shell cmd package resolve-activity --brief -c android.intent.category.LAUNCHER jp.konami.pesam 2>&1 | tail -2; echo "== launch =="; adb -s 127.0.0.1:5555 shell monkey -p jp.konami.pesam -c android.intent.category.LAUNCHER 1 2>&1 | tail -3; sleep 45; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== pid =="; adb -s 127.0.0.1:5555 shell pidof jp.konami.pesam
+at: 23:57:23
+$ bash -c true; echo UY; echo "== launcher activity =="; adb -s 127.0.0.1:5555 shell cmd package resolve-activity --brief -c android.intent.category.LAUNCHER jp.konami.pesam 2>&1 | tail -2; echo "== launch =="; adb -s 127.0.0.1:5555 shell monkey -p jp.konami.pesam -c android.intent.category.LAUNCHER 1 2>&1 | tail -3; sleep 45; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== pid =="; adb -s 127.0.0.1:5555 shell pidof jp.konami.pesam
+UY
+== launcher activity ==
+priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=false
+jp.konami.pesam/com.epicgames.ue4.SplashActivity
+== launch ==
+data="jp.konami.pesam"
+data="android.intent.category.LAUNCHER"
+** SYS_KEYS has no physical keys but with factor 2.0%.
+== pid ==
+rc=1
+gamepid: 
+flows: 0

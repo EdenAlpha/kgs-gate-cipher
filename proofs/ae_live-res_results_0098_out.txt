@@ -1,0 +1,20 @@
+cmd: exec bash -c true; echo G2; adb -s 127.0.0.1:5555 shell input tap 640 477; sleep 9; adb -s 127.0.0.1:5555 shell df -h /data 2>/dev/null | tail -2; adb -s 127.0.0.1:5555 shell su 0 df -h /data 2>/dev/null | tail -2; echo "== dnat =="; sudo iptables-legacy -t nat -L PREROUTING -n 2>&1 | head -6; echo "== mitm tail =="; tail -5 /tmp/kgs/mitm.log 2>/dev/null; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+at: 06:01:12
+$ bash -c true; echo G2; adb -s 127.0.0.1:5555 shell input tap 640 477; sleep 9; adb -s 127.0.0.1:5555 shell df -h /data 2>/dev/null | tail -2; adb -s 127.0.0.1:5555 shell su 0 df -h /data 2>/dev/null | tail -2; echo "== dnat =="; sudo iptables-legacy -t nat -L PREROUTING -n 2>&1 | head -6; echo "== mitm tail =="; tail -5 /tmp/kgs/mitm.log 2>/dev/null; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+G2
+Filesystem      Size Used Avail Use% Mounted on
+/dev/root       144G  43G  101G  30% /storage/emulated/0/Android/obb
+Filesystem      Size Used Avail Use% Mounted on
+/dev/root       144G  43G  101G  30% /storage/emulated/0/Android/obb
+== dnat ==
+Chain PREROUTING (policy ACCEPT)
+target     prot opt source               destination         
+DNAT       6    --  0.0.0.0/0            0.0.0.0/0            tcp dpt:443 to:172.17.0.1:8080
+== mitm tail ==
+[06:00:52.876][172.17.0.2:38136] server disconnect 172.217.113.4:443
+[06:00:52.897][172.17.0.2:42036] client connect
+[06:00:52.912][172.17.0.2:42036] server connect 172.217.119.4:443
+[06:00:52.941][172.17.0.2:42036] Client TLS handshake failed. The client does not trust the proxy's certificate for play.googleapis.com (OpenSSL Error([('SSL routines', '', 'tls alert certificate unknown')]))
+[06:00:52.943][172.17.0.2:42036] client disconnectrc=0
+gamepid: 3058
+flows: 0

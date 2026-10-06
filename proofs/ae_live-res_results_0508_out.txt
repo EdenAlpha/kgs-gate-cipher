@@ -1,0 +1,17 @@
+cmd: exec adb -s 127.0.0.1:5555 shell am force-stop com.aurora.store; adb -s 127.0.0.1:5555 shell am start -n com.aurora.store/.ComposeActivity; sleep 18; tail -8 /tmp/kgs/mitm.log; sudo iptables-legacy -t nat -L PREROUTING -n -v 2>/dev/null | head -5
+at: 10:08:58
+$ adb -s 127.0.0.1:5555 shell am force-stop com.aurora.store; adb -s 127.0.0.1:5555 shell am start -n com.aurora.store/.ComposeActivity; sleep 18; tail -8 /tmp/kgs/mitm.log; sudo iptables-legacy -t nat -L PREROUTING -n -v 2>/dev/null | head -5
+Starting: Intent { cmp=com.aurora.store/.ComposeActivity }
+[10:08:59.415][172.17.0.2:37130] client connect
+[10:08:59.434][172.17.0.2:37130] server connect 142.250.125.100:443
+[10:08:59.459][172.17.0.2:37130] Client TLS handshake failed. The client does not trust the proxy's certificate for android.clients.google.com (OpenSSL Error([('SSL routines', '', 'tls alert certificate unknown')]))
+[10:08:59.460][172.17.0.2:37130] client disconnect
+[10:08:59.460][172.17.0.2:37130] server disconnect 142.250.125.100:443
+[10:08:59.461][172.17.0.2:41784] client connect
+[10:08:59.481][172.17.0.2:41784] server connect 192.178.210.102:443
+[10:08:59.506][172.17.0.2:41784] Client TLS handshake failed. The client does not trust the proxy's certificate for android.clients.google.com (OpenSSL Error([('SSL routines', '', 'tls alert certificate unknown')]))Chain PREROUTING (policy ACCEPT 1 packets, 1228 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+   32  1920 DNAT       6    --  docker0 *       0.0.0.0/0            0.0.0.0/0            tcp dpt:443 to:172.17.0.1:8080
+rc=0
+gamepid: 
+flows: 0

@@ -1,0 +1,27 @@
+cmd: exec sudo docker exec redroid sh -c "dumpsys activity top | grep -iE \"TextView|Button|EditText|text=|mText|contentDescription\" | head -50"
+at: 15:20:21
+$ sudo docker exec redroid sh -c "dumpsys activity top | grep -iE \"TextView|Button|EditText|text=|mText|contentDescription\" | head -50"
+                                android.widget.TextView{ca95ed1 VFED..C.. ......ID 115,31-660,118 #7f08004c app:id/search_widget_text}
+                                  android.widget.ImageView{a9fb437 VFED..C.. ......ID 0,0-0,0 #7f080067 app:id/voice_search_hint_close_button}
+                                    android.widget.TextView{a94170d V.ED..... ......I. 0,0-0,0}
+                                    android.widget.TextView{121f6c2 V.ED..... ......ID 0,0-0,0 #7f080069 app:id/voice_search_hint_text}
+                                android.widget.ImageButton{b15cd3 GFED..C.. ......I. 0,0-0,0 #7f08004d app:id/search_widget_voice_btn}
+                      com.android.launcher3.views.DoubleShadowBubbleTextView{3ff0010 VFED..CL. ......ID 172,705-344,940 #4}
+                    com.android.launcher3.views.DoubleShadowBubbleTextView{f803d18 VFED..CL. ......ID 0,0-172,122 #1}
+                    com.android.launcher3.views.DoubleShadowBubbleTextView{4c78371 VFED..CL. ......ID 344,0-516,122 #2}
+                    com.android.launcher3.views.DoubleShadowBubbleTextView{d659556 VFED..CL. ......ID 516,0-688,122 #3}
+                  android.widget.LinearLayout{3101927 I.E...... ......ID 0,48-720,144 #7f090040 app:id/action_buttons}
+                    android.widget.Button{d45dd7d VFED..C.. ......ID 236,0-483,96 #7f090058 app:id/action_screenshot}
+                    android.widget.Button{fdb20c3 GFED..C.. ......I. 0,0-0,0 #7f09005b app:id/action_split}
+                    android.widget.Space{7d7d479 G.ED..... ......I. 0,0-0,0 #7f09021f app:id/oav_three_button_space}
+                      com.android.launcher3.BubbleTextView{57a99b1 GFED..CL. ......I. 0,0-0,0 #7f09018f app:id/icon}
+                      com.android.launcher3.BubbleTextView{fed8e96 GFED..CL. ......I. 0,0-0,0 #7f09018f app:id/icon}
+                      com.android.launcher3.BubbleTextView{79b9a17 GFED..CL. ......I. 0,0-0,0 #7f09018f app:id/icon}
+                      com.android.launcher3.BubbleTextView{afdce04 GFED..CL. ......I. 0,0-0,0 #7f09018f app:id/icon}
+                      android.widget.Button{7b5c0b3 VFED..C.. ......I. 0,0-0,0 #7f0902d4 app:id/tab_personal}
+                      android.widget.Button{68bc670 VFED..C.. ......I. 0,0-0,0 #7f0902d5 app:id/tab_work}
+                  android.widget.TextView{a99cde9 V.ED..... ......ID 0,0-0,0 #7f090138 app:id/fast_scroller_popup}
+    	overviewActionsButtonSpacing: 72.0px (36.0dp)
+rc=0
+gamepid: 
+flows: 0

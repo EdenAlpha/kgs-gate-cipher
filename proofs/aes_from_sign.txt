@@ -1,0 +1,2 @@
+pairs=13 tested=2288 pad_only=17 hits=0
+

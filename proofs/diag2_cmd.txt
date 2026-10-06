@@ -1,0 +1,1 @@
+exec P=$(adb -s 127.0.0.1:5555 shell pidof jp.konami.pesam | tr -d \r); echo pidof=[$P]; adb -s 127.0.0.1:5555 shell su 0 cat /proc/$P/maps 2>&1 | head -2; adb -s 127.0.0.1:5555 shell su 0 cat /proc/$P/maps 2>/dev/null | wc -l

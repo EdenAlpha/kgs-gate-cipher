@@ -1,0 +1,11 @@
+cmd: exec bash -c true; echo T5; ls -l /tmp/kgs/pesam-data.tar 2>&1 | tail -1; adb -s 127.0.0.1:5555 shell am start -n jp.konami.pesam/com.epicgames.ue4.SplashActivity >/dev/null 2>&1; sleep 40; adb -s 127.0.0.1:5555 shell pidof jp.konami.pesam; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== flows2 =="; grep -c "^### " /tmp/kgs/flows2.log
+at: 01:44:56
+$ bash -c true; echo T5; ls -l /tmp/kgs/pesam-data.tar 2>&1 | tail -1; adb -s 127.0.0.1:5555 shell am start -n jp.konami.pesam/com.epicgames.ue4.SplashActivity >/dev/null 2>&1; sleep 40; adb -s 127.0.0.1:5555 shell pidof jp.konami.pesam; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== flows2 =="; grep -c "^### " /tmp/kgs/flows2.log
+T5
+-rw-r--r-- 1 runner runner 2134203392 Oct  1 01:44 /tmp/kgs/pesam-data.tar
+82330
+== flows2 ==
+100
+rc=0
+gamepid: 82330
+flows: 22

@@ -1,0 +1,1941 @@
+dump file          : C:\Users\Administrator\AppData\Local\Temp\2\full1\fulldump_out.txt
+total lines        : 400004
+STR rows parsed    : 97406
+STRINGS section on : yes
+header literal      : dump 0x00bd120e  (8 xrefs)
+                      xref 0x07ecad64 @ _INIT_11490
+                      xref 0x07ec024c @ _INIT_11483
+                      xref 0x07c39120 @ _INIT_11438
+                      xref 0x07c36ba8 @ _INIT_11436
+                      xref 0x07c35cf4 @ _INIT_11435
+                      xref 0x07c34d18 @ _INIT_11434
+                      xref 0x07c2eb78 @ _INIT_11432
+                      xref 0x07c23164 @ _INIT_11426
+ELF (dump-0x100000) : 0x07dcad64, 0x07dc024c, 0x07b39120, 0x07b36ba8, 0x07b35cf4, 0x07b34d18, 0x07b2eb78, 0x07b23164
+
+==============================================================================
+A. LITERALS WITHIN +-0x4000 OF THE HEADER  (1093)
+==============================================================================
+  0x00bcd217  gkcatch_s03_0_0_y04                                                     via 0x09a19e20@null
+  0x00bcd22b  gkcatch_s03_0_0_y10                                                     via 0x09a19e38@null
+  0x00bcd23f  gkcatch_s05_0_0_y10                                                     via 0x09a19e98@null
+  0x00bcd253  gkdeflectExpect_s02_3_0_y10                                             via 0x09a1a158@null
+  0x00bcd26f  gkdeflectlate_s01_0_0_y05_unjust                                        via 0x09a1a1f0@null
+  0x00bcd290  gkdeflectlate_s03_0_0_y08                                               via 0x09a1a238@null
+  0x00bcd2aa  gkdeflectlate_s03_0_0_y10                                               via 0x09a1a240@null
+  0x00bcd2c4  gkdeflectscoop_s02b01_0_0_y04_090                                       via 0x09a1a2f0@null
+  0x00bcd2e6  gkdeflect_b03_snapunder_3_0_y08                                         via 0x09a1a388@null
+  0x00bcd306  gkdeflect_f00_0_0_y00                                                   via 0x09a1a3a8@null
+  0x00bcd31c  gkdeflect_f00_otherside_0_0_after_y06                                   via 0x09a1a400@null
+  0x00bcd342  gkdeflect_f02_3_0_y08_000                                               via 0x09a1a438@null
+  0x00bcd35c  gkdeflect_s03_0_0_y02                                                   via 0x09a1a5a8@null
+  0x00bcd372  gkdeflect_s05_0_0_y02                                                   via 0x09a1a638@null
+  0x00bcd388  gkfall_catch_0_0_y10_f090                                               via 0x09a1a6a0@null
+  0x00bcd3a2  gkmovehigh_idle_0_0_122_ball                                            via 0x09a1a738@null
+  0x00bcd3bf  gkdeflectscoop_f03_3_0_y06_090                                          via 0x09a1a808@null
+  0x00bcd3de  gkmovenear_HeisouBack_3_1                                               via 0x09a1aa18@null
+  0x00bcd3f8  gkmovenear_HeisouSlant_4_4_ReverseMirror                                via 0x09a1ab60@null
+  0x00bcd421  gkmovenear_sidestep_4_4_mirror_180                                      via 0x09a1ab88@null
+  0x00bcd444  gkprejump_0_0_mid                                                       via 0x09a1ac40@null
+  0x00bcd456  gkprejump_0_0_near_min_movefront                                        via 0x09a1ac70@null
+  0x00bcd477  gkprejump_riseup_frontF0                                                via 0x09a1ada0@null
+  0x00bcd490  gkprejump_riseup_sideS3                                                 via 0x09a1adb8@null
+  0x00bcd4a8  gknearmovestep_fast_back_3_3                                            via 0x09a1b160@null
+  0x00bcd4c5  goalpost_stop_2_0_160                                                   via 0x09a1b228@null
+  0x00bcd4db  head_y07_0_0_180_rear                                                   via 0x09a1b3f0@null
+  0x00bcd4f1  head_y07_shoot_0_0_090                                                  via 0x09a1b490@null
+  0x00bcd508  head_y07_sidle_3_2_045_v2                                               via 0x09a1b4f0@null
+  0x00bcd522  head_y09_0_0_f090_side                                                  via 0x09a1b548@null
+  0x00bcd539  idle_0_1_000_pain_sign                                                  via 0x09a1b638@null
+  0x00bcd550  stagger_ballhit_reaction_y03_0_0_000_quickly_act068                     via 0x09a1b6b8@null
+  0x00bcd584  kickoff_loop_stretch                                                    via 0x09a1b960@null,0x09a50740@null
+  0x00bcd599  kick_long_0_0_infront_y0_090_late                                       via 0x09a1b9a0@null
+  0x00bcd5bb  kick_long_0_0_instep_y6_090                                             via 0x09a1baa0@null
+  0x00bcd5d7  kick_long_3_0_inside_y0_000_punch                                       via 0x09a1bb30@null
+  0x00bcd5f9  kick_long_3_0_inside_y0_045_curve_ozil                                  via 0x09a1bbb0@null
+  0x00bcd620  kick_long_3_0_inside_y0_045_curve_silva                                 via 0x09a1bbd8@null
+  0x00bcd648  kick_long_3_0_instep_y0_090                                             via 0x09a1bcc8@null
+  0x00bcd664  kick_long_3_0_instep_y4_000                                             via 0x09a1bd50@null
+  0x00bcd680  kick_long_4_0_inside_y0_045_punch                                       via 0x09a1bde8@null
+  0x00bcd6a2  kick_mid_0_0_inside_y2_045                                              via 0x09a1bf18@null
+  0x00bcd6bd  kick_mid_0_0_inside_y2_090                                              via 0x09a1bf20@null
+  0x00bcd6d8  kick_mid_0_0_instep_y2_135                                              via 0x09a1bf68@null
+  0x00bcd6f3  kick_mid_0_0_outside_y0_000                                             via 0x09a1bf90@null
+  0x00bcd70f  kick_mid_3_0_inside_y2_135                                              via 0x09a1c130@null
+  0x00bcd72a  kick_mid_3_0_toe_y4_000_far_down                                        via 0x09a1c208@null
+  0x00bcd74b  kick_short_0_0_inside_y0_135_late                                       via 0x09a1c350@null
+  0x00bcd76d  kick_short_0_0_inside_y2_045_keep                                       via 0x09a1c3b0@null
+  0x00bcd78f  kick_short_0_0_inside_y2_f090                                           via 0x09a1c3d0@null
+  0x00bcd7ad  kick_short_0_0_outside_y0_000_far                                       via 0x09a1c418@null
+  0x00bcd7cf  kick_short_0_0_outside_y0_f090_lob                                      via 0x09a1c460@null
+  0x00bcd7f2  kick_short_0_0_outside_y0_f135_side                                     via 0x09a1c480@null
+  0x00bcd816  kick_short_0_0_outside_y4_f090                                          via 0x09a1c4a0@null
+  0x00bcd835  kick_short_3_0_heel_y0_180                                              via 0x09a1c558@null
+  0x00bcd850  kick_short_3_0_inside_y0_090                                            via 0x09a1c638@null
+  0x00bcd86d  kick_short_3_0_inside_y2_000                                            via 0x09a1c6a0@null
+  0x00bcd88a  kick_short_3_0_inside_y2_135                                            via 0x09a1c6b8@null
+  0x00bcd8a7  kick_short_3_0_outside_y0_000_far                                       via 0x09a1c718@null
+  0x00bcd8c9  kick_short_3_4_inside_y0_045_r_f135                                     via 0x09a1c828@null
+  0x00bcd8ed  layer_jostle_f045_f090_touch                                            via 0x09a1c928@null
+  0x00bcd90a  ballTouch_03_3_dribble_player_wrap_around_1_1_045_and_090_y0_gabriel    via 0x09a1cc00@null
+  0x00bcd94f  referee_1_0_000_hand_low_point_000                                      via 0x09a1cdd8@null
+  0x00bcd972  referee_2_2_000_whistle                                                 via 0x09a1ce00@null
+  0x00bcd98a  run_3_1_000_pain                                                        via 0x09a1d108@null
+  0x00bcd99b  js_dribbleslant_1_1_f045_sole_guard_back_main_act064                    via 0x09a1d198@null
+  0x00bcd9d0  run_4_4                                                                 via 0x09a1d348@null
+  0x00bcd9d8  dribblerun_3_3_slide_045_sole_ver3                                      via 0x09a1d368@null
+  0x00bcd9fb  js_slide_1_1_090_keep_guard_back_sub_act064                             via 0x09a1d3f0@null
+  0x00bcda27  stagger_lowbody_3_3_045                                                 via 0x09a1d688@null
+  0x00bcda3f  stagger_upbody_3_3_030                                                  via 0x09a1d6f8@null
+  0x00bcda56  stagger_upbody_3_3_090_f045                                             via 0x09a1d708@null
+  0x00bcda72  throwin_release_run_067_mid                                             via 0x09a1d948@null
+  0x00bcda8e  traprun_3_0_f135_y0_in_ver12                                            via 0x09a1db00@null
+  0x00bcdaab  traprun_3_3_045_y4_thigh_ver01                                          via 0x09a1db80@null
+  0x00bcdaca  traprun_3_3_s_000_y0_far_out                                            via 0x09a1dbd0@null
+  0x00bcdae7  trap_0_0_000_y2_out_ver2                                                via 0x09a1df78@null
+  0x00bcdb00  trap_0_0_f045_y0_far_in                                                 via 0x09a1dff0@null
+  0x00bcdb18  trap_0_1_000_y4_breast_ver03                                            via 0x09a1e070@null
+  0x00bcdb35  trap_0_3_000_y4_thigh_ver20                                             via 0x09a1e0b8@null
+  0x00bcdb51  trap_0_3_f045_y0_accordion_in                                           via 0x09a1e140@null
+  0x00bcdb6f  trap_0_3_f045_y0_near_in                                                via 0x09a1e158@null
+  0x00bcdb88  head_y07_sidle_short_3_0_000_act064                                     via 0x09a1e188@null
+  0x00bcdbac  trap_0_3_f090_y2_in                                                     via 0x09a1e1b0@null
+  0x00bcdbc0  trap_0_3_f135_y2_in                                                     via 0x09a1e1f0@null
+  0x00bcdbd4  walkback_1_1                                                            via 0x09a1e288@null
+  0x00bcdbe1  wall_idle2                                                              via 0x09a1e310@null,0x09a55590@null
+  0x00bcdbec  gkmovenear_frontstep_0_4_1_short                                        via 0x09a1e3b0@null
+  0x00bcdc0d  trap_0_0_s_000_y0_in_ver21                                              via 0x09a1e3f0@null
+  0x00bcdc28  kick_mid_0_0_outside_y0_000_curve                                       via 0x09a1e520@null
+  0x00bcdc4a  gkmoveSeriesA_BackSlant_0_3                                             via 0x09a1e5a0@null
+  0x00bcdc66  gkmoveSeriesA_Sidestep_4_4_Reverse                                      via 0x09a1e648@null
+  0x00bcdc89  js_idle_0_0_000_y05_tacklefoot_passcut                                  via 0x09a1e918@null
+  0x00bcdcb0  js_run_3_3_000_hardpress_sub_aslant_v2                                  via 0x09a1e958@null
+  0x00bcdcd7  feintrun_trap_accordion_3_3_f180_y0_in_ver21                            via 0x09a1ea68@null
+  0x00bcdd04  slidingshort_0_0_045_act064                                             via 0x09a1ebd8@null
+  0x00bcdd20  slidingshort_0_0_090_act064                                             via 0x09a1ebe0@null
+  0x00bcdd3c  gkdeflect_f00_otherside_3_0_after_y02                                   via 0x09a1ed90@null
+  0x00bcdd62  traprun_3_3_s_f090_y0_in_ver23                                          via 0x09a1ee28@null
+  0x00bcdd81  autoMove_32_go_to_0_3m_act095                                           via 0x09a1eeb8@null
+  0x00bcdd9f  autoMove_32_go_to_0_3_parallel_135_act064                               via 0x09a1ef18@null
+  0x00bcddc9  autoMove_41_parallel_to_reverse_3_3m_act097                             via 0x09a1f0c0@null
+  0x00bcddf5  fk_idle_ronaldinho_2                                                    via 0x09a1f2e0@null,0x09a52978@null
+  0x00bcde0a  gkmoveSeriesA_Back_1_1_Reverse                                          via 0x09a1f470@null
+  0x00bcde29  gkmovenear_backstep_0_3_1_short                                         via 0x09a1f4c0@null
+  0x00bcde49  gkprejump_0_0_near_min3                                                 via 0x09a1f988@null
+  0x00bcde61  js_slant_2_2_loop_guard_back_sub                                        via 0x09a1fa50@null
+  0x00bcde82  autoMove_03_crank90_loop_3_3_STEP_mid                                   via 0x09a1fb28@null
+  0x00bcdea8  autoMove_10_bodyangle_keep_circle_smallturn_front_1_1_STEP_mid          via 0x09a1fc70@null
+  0x00bcdee7  dm_oop_ballcome_000_walkback_1_2_runback                                via 0x09a1fd98@null
+  0x00bcdf10  dm_oop_ballcome_f090_side_2_2_runback_090                               via 0x09a1fda8@null
+  0x00bcdf3a  dm_oop_beckon_f180_side_2_2_000                                         via 0x09a1fe20@null
+  0x00bcdf5a  dm_oop_linekeep_f135_mid_delay_v2                                       via 0x09a1fe80@null
+  0x00bcdf7c  dm_oop_pass_point_000_run_3_4_000                                       via 0x09a1fee0@null
+  0x00bcdf9e  autoMove_00_bodyangle_00_90_180_00_2_2_STEP_mid_michael                 via 0x09a1ff60@null
+  0x00bcdfd6  Ballboy_standup_y0_y3                                                   via 0x09a1ffe8@null
+  0x00bcdfec  autoMove_04_crank45_loop_2_2_STEP_mid_michael                           via 0x09a20148@null
+  0x00bce01a  autoMove_07_ragged45_front_loop_3_3_STEP_mid_michael                    via 0x09a20230@null
+  0x00bce04f  autoMove_10_bodyangle_keep_circle_bigturn_front_2_2_STEP_near           via 0x09a20290@null
+  0x00bce08d  autoMove_03_crank90_loop_1_1_STEP_near_gabriel                          via 0x09a20760@null
+  0x00bce0bc  autoMove_06_zigzag135_side_loop_1_1_STEP_near_gabriel                   via 0x09a207c0@null
+  0x00bce0f2  dm_goal_extra_loop_0003                                                 via 0x09a20858@null
+  0x00bce10a  dash_04_turn_4_4_045_CIRCLE_Oriul                                       via 0x09a20ac8@null
+  0x00bce12c  dash_09_idle_0_4_180_dash_Oriul                                         via 0x09a20b68@null
+  0x00bce14c  dash_10_walk_1_4_180_dash_Oriul                                         via 0x09a20bc8@null
+  0x00bce16c  nearDefense_04_BODYTURN_Slant_1_1_f45_90_f135_reverse_near_gabriel      via 0x09a20cc8@null
+  0x00bce1af  nearDefense_04_BODYTURN_Slant_2_2_rightside_STEP_near_gabriel           via 0x09a20d28@null
+  0x00bce1ed  gkmovehigh_idle_0_0_180_ball                                            via 0x09a20de8@null
+  0x00bce20a  gkcatchslideback_f01_3_0_y02_135                                        via 0x09a20e30@null
+  0x00bce22b  nearDribble_01_1_dribble_bodyfake_0_0_to_3_3_000_y0_gabriel             via 0x09a20e80@null
+  0x00bce267  nearDribble_04_1_dribble_burst_2_4_f090_y0_oriul                        via 0x09a20f58@null
+  0x00bce298  dm_oop_lineup_f090_idle_0_1_walkside_090                                via 0x09a20fe0@null
+  0x00bce2c1  tacklefoot_parallel_far_0_0_045_act095                                  via 0x09a210d8@null
+  0x00bce2e8  trap_0_3_f090_y3_in_act064                                              via 0x09a21260@null
+  0x00bce303  dml_goal_celebrate_0054                                                 via 0x09a21630@null
+  0x00bce31b  dml_goal_celebrate_0064                                                 via 0x09a21660@null
+  0x00bce333  js_run_dodge_000_set01_4_4_000_df_sk01_act102                           via 0x09a21730@null
+  0x00bce361  dml_goal_celebrate_0133                                                 via 0x09a21810@null
+  0x00bce379  dml_goal_celebrate_0266                                                 via 0x09a21988@null
+  0x00bce391  StabilizerCam_idle_f060                                                 via 0x09a219e8@null
+  0x00bce3a9  dm_oop_pointing_f090_mid_delayside_1_1_L                                via 0x09a21b60@null
+  0x00bce3d2  dm_oop_waitpose_000_idle                                                via 0x09a21c38@null
+  0x00bce3eb  ActualBattle_191005_F006_t01_Gabriel                                    via 0x09a21d00@null
+  0x00bce410  dml_goal_celebrate_0092                                                 via 0x09a21d78@null
+  0x00bce428  dml_goal_celebrate_0225                                                 via 0x09a21de8@null
+  0x00bce440  dml_goal_celebrate_0265                                                 via 0x09a21e48@null
+  0x00bce458  F_PES_20251203_K06_002_yamamoto_02_Fcut001                              via 0x09a21f98@null
+  0x00bce483  ActualBattle_200127_F025_t03_Gabriel                                    via 0x09a22000@null
+  0x00bce4a8  F_PES_20251203_K07_001_yamamoto_02_Fcut001                              via 0x09a22008@null
+  0x00bce4d3  new_dribblerun_3_3_000_slide_045_in_ver7                                via 0x09a22040@null
+  0x00bce4fc  new_dribblerun_2_3_f180_y0_out_ver01                                    via 0x09a22130@null
+  0x00bce521  new_dribblerun_3_3_045_slide_045_sole_ver12                             via 0x09a222d0@null
+  0x00bce54d  new_dribblerun_3_4_f067_out_ver2                                        via 0x09a22488@null
+  0x00bce56e  enum_dummy58                                                            via 0x09a22528@null
+  0x00bce57b  new_dribblerun_4_4_f022_mid_out_ver1                                    via 0x09a22570@null
+  0x00bce5a0  new_back_1_3_parallel_timingstep_180                                    via 0x09a22680@null
+  0x00bce5c5  new_dribbleslide045_3_4_045_y0_in_ver21                                 via 0x09a22798@null
+  0x00bce5ed  new_back_2_2_run_180                                                    via 0x09a227c8@null
+  0x00bce602  enum_dummy72                                                            via 0x09a22b28@null
+  0x00bce60f  new_dribblerun_4_0_135_in                                               via 0x09a22b78@null
+  0x00bce629  new_dribblerun_4_0_180_in                                               via 0x09a22b88@null
+  0x00bce643  new_back_3_3_bend                                                       via 0x09a22c30@null
+  0x00bce655  new_idle                                                                via 0x09a22da0@null
+  0x00bce65e  new_idle_0_2_side_000_relax                                             via 0x09a22f68@null
+  0x00bce67a  new_idle_waitball                                                       via 0x09a23090@null
+  0x00bce68c  new_mid_delayslant_2_2                                                  via 0x09a23120@null
+  0x00bce6a3  new_near_delay_0_2_side_180                                             via 0x09a232a8@null
+  0x00bce6bf  new_near_run_2_0_090                                                    via 0x09a23318@null
+  0x00bce6d4  new_near_run_4_0_090                                                    via 0x09a23348@null
+  0x00bce6e9  new_parallel_4_4_v3                                                     via 0x09a23430@null
+  0x00bce6fd  new_run_2_3_run_045_feint_f045                                          via 0x09a236a8@null
+  0x00bce71c  new_run_2_4_090_press                                                   via 0x09a23708@null
+  0x00bce732  new_run_3_0_045_v2                                                      via 0x09a23740@null
+  0x00bce745  new_run_3_0_090_v2                                                      via 0x09a23758@null
+  0x00bce758  new_run_3_0_135                                                         via 0x09a23760@null
+  0x00bce768  new_run_3_1_walk_045                                                    via 0x09a23788@null
+  0x00bce77d  new_run_3_3_135                                                         via 0x09a23820@null
+  0x00bce78d  new_run_3_3_parallel_180                                                via 0x09a238a8@null
+  0x00bce7a6  new_run_4_0_090                                                         via 0x09a238d0@null
+  0x00bce7b6  new_walkback_1_2_run_f045                                               via 0x09a23da8@null
+  0x00bce7d0  new_walk_1_0_180_relax                                                  via 0x09a23e00@null
+  0x00bce7e7  new_walk_1_1                                                            via 0x09a23e08@null
+  0x00bce7f4  new_walk_1_1_walkback_180_warning                                       via 0x09a23e78@null
+  0x00bce816  enum_dummy145                                                           via 0x09a241a0@null
+  0x00bce824  LongVersion_180928_F004_t02_Gabriel_01                                  via 0x09a24290@null
+  0x00bce84b  enum_dummy166                                                           via 0x09a242e8@null
+  0x00bce859  LongVersion_200127_F001_t01_Gabriel                                     via 0x09a24390@null
+  0x00bce87d  LongVersion_200127_F002_t01_Ortega                                      via 0x09a243c0@null
+  0x00bce8a0  LongVersion_200127_F003_t01_Ortega                                      via 0x09a24400@null
+  0x00bce8c3  enum_dummy202                                                           via 0x09a24510@null
+  0x00bce8d1  dash_04_turn_4_4_parallel_135_act079                                    via 0x09a24a30@null
+  0x00bce8f6  dash_04_turn_4_4_parallel_180_act079                                    via 0x09a24a48@null
+  0x00bce91b  pull_ball_foot_3_0_000_kick                                             via 0x09a24d90@null
+  0x00bce937  ActualBattle_201124_F035_t01_act068_05                                  via 0x09a24fb0@null
+  0x00bce95e  enum_dummy297                                                           via 0x09a24fc8@null
+  0x00bce96c  dm_oop_angry_3_3_090_act071_03                                          via 0x09a25058@null
+  0x00bce98b  dm_oop_appeal_3_3_090_at135_act064                                      via 0x09a25118@null
+  0x00bce9ae  dm_oop_appeal_3_3_180_at135_act064                                      via 0x09a25138@null
+  0x00bce9d1  dm_oop_droop_1_3_090_act071_02                                          via 0x09a25160@null
+  0x00bce9f0  dm_oop_droop_3_3_180_act064_02                                          via 0x09a251a0@null
+  0x00bcea0f  dm_oop_praise_1_3_090_at090_act071                                      via 0x09a25200@null
+  0x00bcea32  dm_oop_praise_1_3_180_at090_act071                                      via 0x09a25230@null
+  0x00bcea55  LongVersion_201123_F001_t01_act068_01                                   via 0x09a25370@null
+  0x00bcea7b  enum_dummy350                                                           via 0x09a25488@null
+  0x00bcea89  enum_dummy355                                                           via 0x09a25508@null
+  0x00bcea97  LongVersion_201123_F025_t01_act071_01                                   via 0x09a255c8@null
+  0x00bceabd  LongVersion_201123_F027_t01_act071_02                                   via 0x09a25618@null
+  0x00bceae3  enum_dummy394                                                           via 0x09a25818@null
+  0x00bceaf1  ShortVersion_201123_F022_t01_act068_01                                  via 0x09a25878@null
+  0x00bceb18  autoMove_00_01_gkmovemid_FrontBackLoop_step_Angle5_2_2                  via 0x09a25ac8@null
+  0x00bceb4f  NEARKEEPER_04_02_gkmovemid_1_1_BODYTURN_SLANT                           via 0x09a25d38@null
+  0x00bceb7d  autoMove_11_bodyangle_rolling_slow_3_3_Front_to_Back_mid                via 0x09a25de8@null
+  0x00bcebb6  enum_dummy465                                                           via 0x09a25e10@null
+  0x00bcebc4  enum_dummy508                                                           via 0x09a25f68@null
+  0x00bcebd2  enum_dummy510                                                           via 0x09a25f78@null
+  0x00bcebe0  enum_dummy526                                                           via 0x09a25ff8@null
+  0x00bcebee  enum_dummy540                                                           via 0x09a26068@null
+  0x00bcebfc  enum_dummy565                                                           via 0x09a26130@null
+  0x00bcec0a  enum_dummy566                                                           via 0x09a26138@null
+  0x00bcec18  enum_dummy621                                                           via 0x09a26380@null
+  0x00bcec26  enum_dummy646                                                           via 0x09a26480@null
+  0x00bcec34  block_neardelayside_2_0_y00_180_act071                                  via 0x09a26510@null,0x09a50c88@null
+  0x00bcec5b  defenseMove_01_parallel_4_3_neardelayback_act071                        via 0x09a26600@null
+  0x00bcec8c  passGetMove_01_run_2_3_090_act071                                       via 0x09a26608@null
+  0x00bcecae  gkrise_faceup_0_3_060                                                   via 0x09a266c8@null
+  0x00bcecc4  /Game/Assets/character/DemoFace/SK_%s_Face.SK_%s_Face                   via 0x0690ae80@FUN_0690a634
+  0x00bcecfa  /Game/Assets/character/Shoes/SK_s%04d_Shoes.SK_s%04d_Shoes              via 0x0690b304@FUN_0690b294
+  0x00bced35  base_d_card_ikari                                                       via 0x09a268e0@null
+  0x00bced47  base_d_nikoyaka                                                         via 0x09a269c0@null
+  0x00bced57  base_kuisibari_hard_metoji                                              via 0x09a26aa0@null
+  0x00bced72  ef23_persuade                                                           via 0x09a26c08@null
+  0x00bced80  neut_brwup_breth_around_fast_in                                         via 0x09a26f28@null
+  0x00bceda0  neut_mho_eyo                                                            via 0x09a26fd0@null
+  0x00bcedad  pose_smile_laugh_L_01                                                   via 0x09a272a8@null
+  0x00bcedc3  sorrow_falldown_01                                                      via 0x09a276c8@null
+  0x00bcedd6  add_miken_yose                                                          via 0x069114ec@FUN_06910c74,0x06911638@FUN_06910c74,0x09a277c8@null
+  0x00bcede5  d_handshake_1_2                                                         via 0x09a27958@null
+  0x00bcedf5  pl_open_half_4                                                          via 0x09a27a98@null
+  0x00bcee04  p_pc_typing_1_3                                                         via 0x09a27af0@null
+  0x00bcee14  u_sign_shaka_2                                                          via 0x09a27c60@null
+  0x00bcee43  cpk_dat/common/etc/uniform/team/                                        via 0x0692f9b4@FUN_0692f914,0x0692d43c@FUN_0692d38c,0x0692d23c@FUN_0692d174
+  0x00bcee68  badge%02d                                                               via 0x06923ec4@FUN_06922f9c,0x06923f00@FUN_06922f9c,0x06923f8c@FUN_06922f9c
+  0x00bcee72  data error                                                              via 0x09885c00@null
+  0x00bcee7d  easy handle already used in multi handle                                via 0x06958dcc@FUN_06958d84
+  0x00bceea6  shutdown -> %d, done=%d                                                 via 0x06962dd8@FUN_06962c4c,0x0695efa0@FUN_0695edf0
+  0x00bceebe  data_pending                                                            via 0x06962f60@FUN_06962f00
+  0x00bceecb  Content-Length:                                                         via 0x0696e2e4@FUN_0696e268,0x0696d358@FUN_0696ce54,0x0696d0b0@FUN_0696ce54
+  0x00bceedb  includesubdomains                                                       via 0x0696a450@FUN_0696a338
+  0x00bceeed  %256s "%64[^"]"                                                         via 0x0696ac68@FUN_0696ab44
+  0x00bceefd  Basic                                                                   via 0x0696c65c@FUN_0696c5e4,0x0696c568@FUN_0696c360
+  0x00bcef03  %s:%s                                                                   via 0x07efd51c@FUN_07efd404,0x080e3058@FUN_080e2f3c,0x080e3088@FUN_080e2f3c
+  0x00bcef09  Malformatted trailing header, skipping trailer                          via 0x069729cc@FUN_069725dc
+  0x00bcef38  http_chunk, added last chunk with trailers from client -> %d            via 0x06972904@FUN_069725dc
+  0x00bcef75  PENDING handle timeout                                                  via 0x06979af0@FUN_06979928
+  0x00bcef8c  Connection timed out after %ld milliseconds                             via 0x0697ad40@FUN_0697acb0
+  0x00bcefb8  SOCKS5 sub-negotiation response                                         via 0x0698775c@FUN_06986f54
+  0x00bcefd8  SOCKS4 connection to %s not supported                                   via 0x06987730@FUN_06986f54
+  0x00bcf016  User-Agent: %s                                                          via 0x06989f18@FUN_06989cb0
+  0x00bcf027  Connected 2nd connection to %s port %u                                  via 0x0698b578@FUN_0698b53c
+  0x00bcf04e  file                                                                    via 0x07eee7dc@FUN_07eee66c,0x07eeda78@FUN_07eed8f8,0x06992d08@FUN_0699295c
+  0x00bcf063  Too long MQTT topic                                                     via 0x069908dc@FUN_069907f4,0x06990570@FUN_06990454
+  0x00bcf077  cf_shutdown -> %d, done=%d                                              via 0x06995ee8@FUN_06995e4c
+  0x00bcf092  SSL: Unable to read issuer cert (%s)                                    via 0x0699a0b4@FUN_0699918c
+  0x00bcf0b7  TLSv1.2                                                                 via 0x080fed34@FUN_080fecac,0x080fc174@FUN_080fc0d8,0x09951400@null
+  0x00bcf0bf  error reading PKCS12 file '%s'                                          via 0x06998d2c@FUN_0699888c
+  0x00bcf0de  Serial Number                                                           via 0x06999484@FUN_0699918c
+  0x00bcf0ec  SSL: certificate subject name '%s' does not match target hostname '%s'  via 0x0699a9a0@FUN_0699918c
+  0x00bcf133  ListenerWorkerUE %u                                                     via 0x069a1d68@FUN_069a1d04
+  0x00bcf147  BGM_ORG_GIMMICK_MATCH_02                                                via 0x069b6c78@FUN_069b6a80
+  0x00bcf2e7  F_RightCam_spawn                                                        via 0x069d5014@FUN_069d4cf4,0x069d5034@FUN_069d4cf4,0x069d5054@FUN_069d4cf4
+  0x00bcf2f8  L_CornerCam_spawn                                                       via 0x069d51b4@FUN_069d4cf4,0x069d51d4@FUN_069d4cf4,0x069d51f4@FUN_069d4cf4
+  0x00bcf30a  L_mic_2R                                                                via 0x069d57d4@FUN_069d4cf4,0x069d57fc@FUN_069d4cf4,0x069d5824@FUN_069d4cf4
+  0x00bcf313  debugKickAngle                                                          via 0x069d8c98@FUN_069d829c
+  0x00bcf322  gounnderprob                                                            via 0x069d91c0@FUN_069d829c,0x069d91e0@FUN_069d829c,0x069d91fc@FUN_069d829c
+  0x00bcf32f  stopSpeed                                                               via 0x069d997c@FUN_069d829c
+  0x00bcf339  subValue100percent                                                      via 0x069dcbc4@FUN_069dbbe8
+  0x00bcf34c  objectData                                                              via 0x069eaba8@FUN_069ea388,0x069eabd4@FUN_069ea388,0x069eac08@FUN_069ea388
+  0x00bcf357  paraMinSpeedRate                                                        via 0x069e32d8@FUN_069e2e24
+  0x00bcf368  decMaxSpeedR                                                            via 0x069e3864@FUN_069e36b0
+  0x00bcf375  rootAccWeight                                                           via 0x069e3a50@FUN_069e36b0
+  0x00bcf383  trapStopThinkStrongerFoot                                               via 0x069e462c@FUN_069e3e70
+  0x00bcf39d  normal_dy                                                               via 0x069e54cc@FUN_069e4950,0x069e54ec@FUN_069e4950,0x069e550c@FUN_069e4950
+  0x00bcf3a7  ballRouteAdjustMoveFrame                                                via 0x069e629c@FUN_069e5fb8
+  0x00bcf3c0  passgetSpeedRate                                                        via 0x069e6a44@FUN_069e5fb8
+  0x00bcf3d1  searchTest2                                                             via 0x069e6be4@FUN_069e5fb8
+  0x00bcf3dd  stickTest1                                                              via 0x069e6c00@FUN_069e5fb8
+  0x00bcf3e8  ballControlWeekFootDownLimit                                            via 0x069e73bc@FUN_069e7148
+  0x00bcf405  dashOfRun                                                               via 0x069e75f4@FUN_069e7148
+  0x00bcf40f  stopTrapStopTurnAngle                                                   via 0x069e7b20@FUN_069e7148
+  0x00bcf425  startSugorokuKind                                                       via 0x069eb954@FUN_069eb91c
+  0x00bcf437  offenceZposiAdjustDist                                                  via 0x069ed22c@FUN_069ebfb4
+  0x00bcf44e  player_count_height                                                     via 0x069ed2b8@FUN_069ebfb4
+  0x00bcf462  HAnmWC                                                                  via 0x06a12890@FUN_06a12868,0x06a12704@FUN_06a126d8,0x06a12748@FUN_06a126d8
+  0x00bcf469  cpk_dat/                                                                via 0x06a25b0c@FUN_06a25ac8,0x06a25c60@FUN_06a25bdc
+  0x00bcf472  demo/mob/                                                               via 0x06a25ed0@FUN_06a25db4,0x06a25eec@FUN_06a25db4
+  0x00bcf47c  skel.frig                                                               via 0x06a2af94@FUN_06a2aeb0
+  0x00bcf489  IsAnyDemoSequenceLoop %d %s                                             via 0x06a75f8c@FUN_06a75e68
+  0x00bcf4a5  PlayDemoSequenceWithOffset %d %s %s                                     via 0x06a760ec@FUN_06a76050
+  0x00bcf4c9  G:\PES22HC\Dev-600Series\Source\Shared\pes\Game\GameMode\GameModeMatch  via 0x06a8c370@FUN_06a8c1d4
+  0x00bcf521  Def_Game_Non_Parameter_Assert                                           via 0x06ab62e8@FUN_06ab6074,0x06ab62c8@FUN_06ab6074,0x06ab62a0@FUN_06ab6074
+  0x00bcf53f  match_online                                                            via 0x06ac5af4@FUN_06ac57b8,0x0812f728@FUN_0812f694,0x0812f870@FUN_0812f768
+  0x00bcf54c  es-EA                                                                   via 0x0988ce20@null
+  0x00bcf555  CameraPersonListener                                                    via 0x06b02780@FUN_06b02000
+  0x00bcf56a  myclub                                                                  via 0x06b05aa4@FUN_06b059d0
+  0x00bcf571  acl_pes                                                                 via 0x06b05b68@FUN_06b059d0
+  0x00bcf579  acl_f                                                                   via 0x06b05ba4@FUN_06b059d0
+  0x00bcf57f  MatchBeginListener                                                      via 0x06b9b01c@FUN_06b9aff0
+  0x00bcf592  [TIMEUP] m_timeUpForceMySideTimer clear                                 via 0x06c050e4@FUN_06c04a5c
+  0x00bcf5bb  cpk_dat/common/anime/Mbinfo/bin/NoballMotionInfo.bin                    via 0x09893020@null
+  0x00bcf5f0  cpk_dat/common/anime/Matching/bin/dribbleMatching                       via 0x06dee6ec@FUN_06dee270,0x06dee62c@FUN_06dee270,0x06dee56c@FUN_06dee270
+  0x00bcf622  SetMotion %s(m:%d), startTime: %1.6f, playbackSpeed: %1.6f, duration:   via 0x06e0a0a4@FUN_06e09f80
+  0x00bcf684  [trap_check] adjust ok                                                  via 0x06e63298@FUN_06e62b84,0x06e5f98c@FUN_06e5f278
+  0x00bcf69c  demo_injury_pain_3_1                                                    via 0x09a500c8@null
+  0x00bcf6b1  dm_oop_beckon_090_parallel_2_2_parallel                                 via 0x09a50200@null
+  0x00bcf6d9  demo_pfm_jumpguts_0_0_r                                                 via 0x09a50330@null
+  0x00bcf6f1  demo_pfm_slidekneeguts_0_0_l                                            via 0x09a50348@null
+  0x00bcf70e  puntkick_front_0_0_nearline                                             via 0x09a50508@null
+  0x00bcf72a  throw_side_0_0_release                                                  via 0x09a50628@null
+  0x00bcf741  throw_side_3_0_cancel                                                   via 0x09a50638@null
+  0x00bcf757  throw_under_3_0_near                                                    via 0x09a50668@null
+  0x00bcf76c  seamless_catch_3_3_y7                                                   via 0x09a508e8@null
+  0x00bcf782  seamless_carry_ball_move_0_3                                            via 0x09a50960@null
+  0x00bcf79f  blockfront_0_0_y04                                                      via 0x09a50a78@null
+  0x00bcf7b2  blockfront_3_0_y00                                                      via 0x09a50b60@null
+  0x00bcf7c5  blockside_0_0_y00                                                       via 0x09a50b90@null
+  0x00bcf7d7  fall_lowbody_2_0_sliding_high_l                                         via 0x09a50d10@null
+  0x00bcf7f7  fall_lowbody_3_0_v4_l                                                   via 0x09a50d90@null
+  0x00bcf80d  fall_lowbody_4_0_v5_r                                                   via 0x09a50de8@null
+  0x00bcf823  stagger_ballhit_belly_3_3                                               via 0x09a50fb8@null
+  0x00bcf83d  goalturn_comeon_2_4                                                     via 0x09a51138@null
+  0x00bcf851  demo_gk_glad_14                                                         via 0x09a513c0@null
+  0x00bcf861  demo_miss_3_1_droop_045                                                 via 0x09a516e0@null
+  0x00bcf879  demo_miss_3_1_face_090                                                  via 0x09a51728@null
+  0x00bcf890  demo_miss_0_0_handOnKnee                                                via 0x09a517d8@null
+  0x00bcf8a9  demo_miss_1_1_side                                                      via 0x09a517e8@null
+  0x00bcf8bc  demo_miss_facedown_135_3                                                via 0x09a51858@null
+  0x00bcf8d5  demo_droop_hurry_7                                                      via 0x09a51950@null
+  0x00bcf8e8  demo_droop_hurry_14                                                     via 0x09a51988@null
+  0x00bcf8fc  demo_appeal_2_1_045                                                     via 0x09a51a20@null
+  0x00bcf910  demo_appeal_hurry_4                                                     via 0x09a51a98@null
+  0x00bcf924  demo_praise_0_1_at045_1                                                 via 0x09a51bf8@null
+  0x00bcf93c  demo_gk_angry_12                                                        via 0x09a51c48@null
+  0x00bcf94d  demo_praise_hurry_7                                                     via 0x09a51ca0@null
+  0x00bcf961  TimeUp_1_1_Grad_0_5                                                     via 0x09a51dc0@null
+  0x00bcf975  HalfEnd_0_1_Droop_0_1                                                   via 0x09a51ea0@null
+  0x00bcf98b  dodge_ball_2_0_slide_back_mid                                           via 0x09a51fe0@null
+  0x00bcf9a9  bodyfake_0_3_l                                                          via 0x09a520b8@null
+  0x00bcf9b8  bodyfake000_0_0_r                                                       via 0x09a520d0@null
+  0x00bcf9ca  doubletouch_3_3_r                                                       via 0x09a52120@null
+  0x00bcf9dc  kickfeint_0_3_y0_r                                                      via 0x09a52300@null
+  0x00bcf9ef  roulette_0_3_l                                                          via 0x09a52490@null
+  0x00bcf9fe  rouletteribery_0_3_l                                                    via 0x09a524b0@null
+  0x00bcfa13  slideelastico_0_3_l                                                     via 0x09a52640@null
+  0x00bcfa27  headclear_0_0_y4_shed_r                                                 via 0x09a52718@null
+  0x00bcfa3f  feint_overrun_0_0_000_y0_l                                              via 0x09a527a0@null
+  0x00bcfa5a  fk_long_3_0_instep_gerrard                                              via 0x09a528b8@null
+  0x00bcfa75  fk_long_3_0_inside_coutinho                                             via 0x09a528e8@null
+  0x00bcfa91  gkrise_sideways_0_0_r_hand                                              via 0x09a52a50@null
+  0x00bcfaac  gkrise_sideways_sitAngry_l                                              via 0x09a52b18@null
+  0x00bcfac7  js_variation_idle_0_0_000_y00_tacklefoot_passcut                        via 0x09a52e40@null
+  0x00bcfaf8  headfar_3_0_y6_r                                                        via 0x09a530b8@null
+  0x00bcfb09  headside_0_0_y6_f                                                       via 0x09a53148@null
+  0x00bcfb1b  headside_0_0_y4_clear_f                                                 via 0x09a53170@null
+  0x00bcfb33  head_3_0_y9_shoulder_f                                                  via 0x09a531d0@null
+  0x00bcfb4a  head_3_0_y6_chest_f                                                     via 0x09a531f8@null
+  0x00bcfb5e  kick_long_0_0_infront_y0_late_f                                         via 0x09a53270@null
+  0x00bcfb7e  kick_mid_3_0_inside_y1_r                                                via 0x09a53420@null
+  0x00bcfb97  kick_short_0_0_inside_y2_f                                              via 0x09a53490@null
+  0x00bcfbb2  kick_short_0_0_inside_y0_jostle_f                                       via 0x09a53560@null
+  0x00bcfbd4  kick_long_0_0_instep_y0                                                 via 0x09a53618@null
+  0x00bcfbec  kick_long_3_0_instep_y0                                                 via 0x09a53640@null
+  0x00bcfc04  kick_long_0_0_instep_y4_late_f                                          via 0x09a53690@null
+  0x00bcfc23  kick_short_0_0_sole_y0_jostle                                           via 0x09a538b8@null
+  0x00bcfc41  kick_long_3_0_inside_y0_curve_max                                       via 0x09a53930@null
+  0x00bcfc63  kick_mid_3_0_outside_y0_lob_scoop                                       via 0x09a539e0@null
+  0x00bcfc85  kick_short_3_0_inside_doubletouch_y0                                    via 0x09a53a48@null
+  0x00bcfcaa  kick_mid_3_0_y0_charge                                                  via 0x09a53ce8@null
+  0x00bcfcc1  kick_mid_0_0_y0_stepback                                                via 0x09a53d10@null
+  0x00bcfcda  over_taken_float                                                        via 0x09a53eb0@null
+  0x00bcfceb  tackle_4_0_mid_parallel_v4                                              via 0x09a54200@null
+  0x00bcfd06  slidingshort_3_0_l                                                      via 0x09a54258@null
+  0x00bcfd19  trap_0_3_y0_near                                                        via 0x09a54410@null
+  0x00bcfd2a  trap_0_3_y3_in                                                          via 0x09a54470@null
+  0x00bcfd39  trap_3_3_y2_in                                                          via 0x09a54530@null
+  0x00bcfd48  trap_0_3_y0_inaxisback_angle                                            via 0x09a54600@null
+  0x00bcfd65  trap_3_3_y0_accordion_f090                                              via 0x09a547d0@null
+  0x00bcfd80  trap_0_0_y6_in_side                                                     via 0x09a54820@null
+  0x00bcfd94  trapchase_0_0_y0_sole                                                   via 0x09a54868@null
+  0x00bcfdaa  trapchase_3_0_y1_far                                                    via 0x09a549a0@null
+  0x00bcfdbf  trapchase_2_3_y0_sole_skill                                             via 0x09a549c0@null
+  0x00bcfddb  trapchase_3_3_y0_in_near                                                via 0x09a54a30@null
+  0x00bcfdf4  trapchase_3_3_y5_breast                                                 via 0x09a54b00@null
+  0x00bcfe0c  trapchase_0_3_y0_guard_out                                              via 0x09a54c08@null
+  0x00bcfe27  trapchase_4_3_y6_instep                                                 via 0x09a54c50@null
+  0x00bcfe3f  trapchase_2_3_y2_instep                                                 via 0x09a54c60@null
+  0x00bcfe57  dribble_deprived_2_0_030                                                via 0x09a54cb8@null
+  0x00bcfe70  trapfast_3_3_y2                                                         via 0x09a54da8@null
+  0x00bcfe80  traplift_0_0_y2                                                         via 0x09a54ec0@null
+  0x00bcfe90  traplift_0_0_y4_thigh_side                                              via 0x09a54ed0@null
+  0x00bcfeab  traplift_0_3_y6_chapeu_out                                              via 0x09a54f38@null
+  0x00bcfec6  trapside_l_0_0_y0_in_far_angle                                          via 0x09a54fe0@null
+  0x00bcfee5  trapside_l_3_3_y3_in_mid                                                via 0x09a55240@null
+  0x00bcfefe  trapside_r_0_3_y1_out                                                   via 0x09a552f8@null
+  0x00bcff14  trapside_r_3_3_y0_out_far                                               via 0x09a55340@null
+  0x00bcff2e  trapside_r_4_4_y0_out_near                                              via 0x09a55448@null
+  0x00bcff49  trapside_r_4_4_y6_out_far                                               via 0x09a55498@null
+  0x00bcff63  demo_gk_glad_lie_12                                                     via 0x09a55738@null
+  0x00bcff77  demo_miss_3_1_bendback_045_3                                            via 0x09a558e0@null
+  0x00bcff94  STEP_GOALEVENT_INIT                                                     via 0x06ea988c@FUN_06ea97fc,0x06ea8178@FUN_06ea80dc
+  0x00bcffa9  RetryAuto_FORCED_FALLDOWN_HEAD_BONE_pno%d_%.2f                          via 0x06ecf9f0@FUN_06ecf478
+  0x00bcfff7  *****GOALDEMO_MOVELAYER***** layer Use One                              via 0x06f742d0@FUN_06f74220
+  0x00bd0023  [Command] ControlMode [%s] (cross & pass get & near playPoint)          via 0x06fe0eac@FUN_06fdfc24
+  0x00bd0063  [Command] Change ControlMode by gage used [%s] (gage used %s)           via 0x06fe12f0@FUN_06fe1108
+  0x00bd00a2  [Command] KEEP MODE KICK INPUT ENABLE (NG : over taken anime)           via 0x06fede28@FUN_06fedcf8
+  0x00bd00e1  [ballPerson]m_initLevel=%d                                              via 0x070a7e8c@FUN_070a7d94
+  0x00bd00fe  m_teamStyle                                                             via 0x070cb9c4@FUN_070cb9c0
+  0x00bd0110  NG[wait timer %d                                                        via 0x0711fcbc@FUN_0711fa60
+  0x00bd0122  THINK OK                                                                via 0x0711fef0@FUN_0711fa60
+  0x00bd012c  [ANIME_ACTION_KIND_THROWIN_LOOP] targetBall                             via 0x071b4120@FUN_071b3a18
+  0x00bd02a5  EXHIBITION                                                              via 0x07655ffc@FUN_07655fb4
+  0x00bd02ea  MATCH_LEVEL_SUPERSTAR                                                   via 0x0734b2c4@FUN_0734b22c,0x0734fccc@FUN_0734fc34,0x07336fb0@FUN_07336f18
+  0x00bd0300  BallPersonStaticMesh_04                                                 via 0x07367e40@FUN_07367dc0
+  0x00bd0318  cpk_dat/common/match/gimmick_replay/gimmick_replay_01.rep               via 0x0737cef4@FUN_0737c9c4
+  0x00bd0352  cpk_dat/common/match/tutorial_replay/tutorial_replay_matchup_04.rep     via 0x0737cd98@FUN_0737c9c4
+  0x00bd0396  cpk_dat/common/match/tutorial_replay/tutorial_replay_matchup_05.trep    via 0x0737cdc4@FUN_0737c9c4
+  0x00bd03db  match::ReplayObjectListener                                             via 0x07390420@FUN_073903f0
+  0x00bd03f7  GamePlanTsak                                                            via 0x0739ffe4@FUN_0739ffd4
+  0x00bd0404  CmdSetEventGameplan                                                     via 0x074b0fa8@FUN_074b0f58,0x073a1340@FUN_073a132c,0x07b14f84@FUN_07b14f2c
+  0x00bd0418  CmdSetAnalystAdviceList                                                 via 0x073af89c@FUN_073af864,0x09a5b958@null
+  0x00bd0430  DebugCommandExecuter                                                    via 0x073c2270@FUN_073c2250
+  0x00bd04ce  LobbyRoomList                                                           via 0x0740cda8@FUN_0740cd90
+  0x00bd04dc  MatchResultTimeUpDemo                                                   via 0x07419878@FUN_07419860
+  0x00bd04f2  MenuMatchSettings                                                       via 0x07429d7c@FUN_07429d64
+  0x00bd0504  MatchPassPlayerList                                                     via 0x07436008@FUN_07435ff0
+  0x00bd0518  MenuMyClubAcquireableBingoList                                          via 0x0743f324@FUN_0743f30c
+  0x00bd0537  MenuMyClubOverwriteBingoList                                            via 0x074412d0@FUN_074412b8
+  0x00bd0554  MyClubEntryMobileTeamSelect                                             via 0x0747b224@FUN_0747b20c
+  0x00bd0570  ISDispCareerplanAllocateTypeSelectView                                  via 0x0749da30@FUN_0749d9f0
+  0x00bd0597  CanPopupPushNotificationPermission                                      via 0x074ab834@FUN_074ab7ac
+  0x00bd05ba  GetDirectAlertProgressText                                              via 0x074aba44@FUN_074ab7ac
+  0x00bd05d5  QMyClubTestVoid                                                         via 0x074ad1d0@FUN_074ad1a0
+  0x00bd05e5  EditAlertBody                                                           via 0x074af9d4@FUN_074af868
+  0x00bd05f3  PersonalizeSetting                                                      via 0x074c756c@FUN_074c7554
+  0x00bd0606  ChoiceKey                                                               via 0x074ce800@FUN_074ce7b4
+  0x00bd0610  FameSettingView                                                         via 0x074d9dd4@FUN_074d9dbc
+  0x00bd0620  IsNeedRedrawForResult                                                   via 0x074df03c@FUN_074deba4
+  0x00bd0636  Redraw                                                                  via 0x074e152c@FUN_074e1500,0x074e06cc@FUN_074e0664
+  0x00bd063d  ConfirmAge                                                              via 0x074e2210@FUN_074e21c8
+  0x00bd0648  PageTitle                                                               via 0x074e2adc@FUN_074e2ac0
+  0x00bd0652  PeriodSubTitle                                                          via 0x074e2b80@FUN_074e2ac0
+  0x00bd0661  EnablePeriod                                                            via 0x074e2ff4@FUN_074e2e98
+  0x00bd066e  HistoryCol1Row                                                          via 0x074e3208@FUN_074e2e98
+  0x00bd067d  TopModeSelect                                                           via 0x074ecf18@FUN_074ecf08
+  0x00bd068b  UserCompeMatchLobby                                                     via 0x074fb5f0@FUN_074fb5d8
+  0x00bd069f  MyTeamPlayer_1                                                          via 0x098c9978@null
+  0x00bd06ae  Coop_3                                                                  via 0x098c9a38@null
+  0x00bd06b5  Stadium_1                                                               via 0x098c9b68@null
+  0x00bd06bf  {"kind":                                                                via 0x0754b9bc@FUN_0754b8fc
+  0x00bd06c8  CmdSetFavoritePlayer                                                    via 0x07b8e2a0@FUN_07b8e240,0x09a5a6f8@null
+  0x00bd06dd  CmdGetUserCompeCurrentEntryInfo                                         via 0x09a5ae18@null
+  0x00bd06fd  CmdSetEventLeave                                                        via 0x07b11a84@FUN_07b1192c,0x09a5af20@null
+  0x00bd070e  CmdSetMyclubEntryInfo                                                   via 0x0793a1e8@FUN_0793a1b0,0x09a5b400@null
+  0x00bd0724  CmdJoinGameMode                                                         via 0x09a5b9d0@null
+  0x00bd0734  CmdLeaveGameMode                                                        via 0x09a5ba00@null
+  0x00bd0745  CmdCheckGameResult                                                      via 0x07b725a0@FUN_07b724d8,0x07b4b2bc@FUN_07b4b1dc,0x09a5bd90@null
+  0x00bd0758  oldrating                                                               via 0x0755fc70@FUN_0755fbc0,0x0755fc88@FUN_0755fbc0
+  0x00bd0762  key_member_Id                                                           via 0x078d14c8@FUN_078cf1bc,0x078ced68@FUN_078ce4b4,0x07580790@FUN_07580744
+  0x00bd0770  achieved_mission_id_list                                                via 0x07591198@FUN_07591058
+  0x00bd0789  mission_number                                                          via 0x07591e58@FUN_07591e10,0x07591e70@FUN_07591e10
+  0x00bd0798  event_end_time                                                          via 0x07600230@FUN_075fff10,0x07600248@FUN_075fff10,0x078f7a00@FUN_078f7904
+  0x00bd07a7  ip_addr                                                                 via 0x077e8d28@FUN_077e8bf0,0x077e192c@FUN_077e17d4,0x07596264@FUN_0759614c
+  0x00bd07af  liveupdate_version                                                      via 0x075ad32c@FUN_075ad200,0x075ad344@FUN_075ad200,0x075a35d4@FUN_075a3454
+  0x00bd07c2  not_available_player_id_list                                            via 0x075a889c@FUN_075a886c
+  0x00bd07df  is_repeat_after_cleared                                                 via 0x075a8a58@FUN_075a886c,0x075a8a70@FUN_075a886c
+  0x00bd07f7  life                                                                    via 0x075c2170@FUN_075c2158,0x075c2188@FUN_075c2158
+  0x00bd07fc  license_out_player_list                                                 via 0x075c94c4@FUN_075c9270
+  0x00bd0814  is_limit_matching_time                                                  via 0x075ef0c8@FUN_075eee30,0x075ef0e0@FUN_075eee30
+  0x00bd082b  matching_interval_sec                                                   via 0x075ef1d0@FUN_075eee30,0x075ef1e8@FUN_075eee30
+  0x00bd0841  enable_list                                                             via 0x075f357c@FUN_075f34b8
+  0x00bd084d  time_of_high_score                                                      via 0x075f4bcc@FUN_075f4aa8,0x075f4be4@FUN_075f4aa8
+  0x00bd0860  age_category                                                            via 0x075f69b0@FUN_075f6898,0x075f69c8@FUN_075f6898,0x07775cd8@FUN_07774e0c
+  0x00bd086d  eula_url_list                                                           via 0x075fa3c8@FUN_075f9d10,0x075f96e0@FUN_075f93bc,0x07600cb8@FUN_075fff10
+  0x00bd087b  ml_event_match_result                                                   via 0x075fbe08@FUN_075fba84,0x075fbe20@FUN_075fba84,0x075fd42c@FUN_075fc908
+  0x00bd0891  panel_close_time                                                        via 0x0760633c@FUN_076060a0,0x07606354@FUN_076060a0
+  0x00bd08a2  proto_opt                                                               via 0x0777fb10@FUN_0777fa54,0x0777fb28@FUN_0777fa54,0x076107c4@FUN_076107ac
+  0x00bd08ac  lose                                                                    via 0x077f6da8@FUN_077f415c,0x07610b04@FUN_076109dc,0x07610b1c@FUN_076109dc
+  0x00bd08b1  is_promoted                                                             via 0x0761405c@FUN_07613990,0x07614074@FUN_07613990,0x07615374@FUN_076149a4
+  0x00bd08bd  start_dash_login_bonus_list                                             via 0x07617110@FUN_07616f48
+  0x00bd08d9  DATA_PARAMETER_COOL                                                     via 0x0762d5c8@FUN_0762c750
+  0x00bd08ed  DATA_PARAMETER_S_HEADER                                                 via 0x0762da3c@FUN_0762c750
+  0x00bd0905  DATA_PARAMETER_S_HIGH_PUNT_KICK                                         via 0x0762df38@FUN_0762c750
+  0x00bd0925  DATA_PARAMETER_S_THROUGH_PASS                                           via 0x0762e014@FUN_0762c750
+  0x00bd0943  DATA_PARAMETER_S_BREAK_SPRINT                                           via 0x0762e408@FUN_0762c750
+  0x00bd0961  DATA_PARAMETER_S_DECISIVE_PASS                                          via 0x0762e568@FUN_0762c750
+  0x00bd0980  PLAY_STYLE_FIRST_DEFENDER                                               via 0x0764bca8@FUN_0764bc9c
+  0x00bd099a  SKILL_CARD_MIDDLE_SHOT                                                  via 0x0764c744@FUN_0764c6fc,0x098cadd0@null
+  0x00bd09b1  SKILL_CARD_GAME_CHANGING_PASS                                           via 0x0764cb1c@FUN_0764cb10,0x098caed0@null
+  0x00bd09cf  SKILL_CARD_DECISIVE_PASS                                                via 0x0764cbac@FUN_0764cba0,0x098caf00@null
+  0x00bd09e8  HIGHLIGHT                                                               via 0x0764fb08@FUN_0764fabc
+  0x00bd09f2  TARGET_INVITATION                                                       via 0x07651db4@FUN_07651d6c
+  0x00bd0a04  LEAGUE_COM_CUSTOM                                                       via 0x076559a4@FUN_07655960
+  0x00bd0a16  LOBBY_MYCLUB                                                            via 0x076565e4@FUN_07656598
+  0x00bd0a23  TIME_ZONE_TYPE_DAY                                                      via 0x076576ac@FUN_07657668
+  0x00bd0a36  BOX_AGENT                                                               via 0x0765aabc@FUN_0765aa74
+  0x00bd0a40  REDEEM_CODE                                                             via 0x0765d14c@FUN_0765d100,0x0770cf68@_INIT_10795
+  0x00bd0a4c  AGENT_NONE                                                              via 0x0765d1b8@FUN_0765d174
+  0x00bd0a57  FAIL_EXPIRED                                                            via 0x0765d5ac@FUN_0765d560
+  0x00bd0a64  FAILED_BREAKDOWN                                                        via 0x0765d608@FUN_0765d5c8
+  0x00bd0a75  IMPOSSIBLE                                                              via 0x0765de0c@FUN_0765ddc0
+  0x00bd0a80  LEAGUE_ONLY                                                             via 0x079bbf90@FUN_079bbc6c,0x079ba780@FUN_079ba6a0,0x079bcd84@FUN_079bc6ec
+  0x00bd0a8c  DISTRIBUTION                                                            via 0x07664604@FUN_076645b8
+  0x00bd0a99  PROMOTE_DIV_FOUR_CUSTOM_LEAGUE                                          via 0x0763a68c@FUN_0763a28c
+  0x00bd0ab8  GET_PLAYER_BY_STANDARD_PLAYER_TICKET                                    via 0x0763bae0@FUN_0763a28c
+  0x00bd0add  ASSIST_CUSTOM_EVENT_THEME                                               via 0x0763bfcc@FUN_0763a28c
+  0x00bd0af7  WIN_CUSTOM_EVENT_COOP_PVP                                               via 0x0763c3d8@FUN_0763a28c
+  0x00bd0b11  PROMOTE_DIV_ONE_CUSTOM_LEAGUE_ALL                                       via 0x0763cee0@FUN_0763a28c
+  0x00bd0b33  CRAFT_BOOSTER                                                           via 0x0763d8bc@FUN_0763a28c
+  0x00bd0b41  GOAL_HATTRICK_STANDARD_COM                                              via 0x0763db34@FUN_0763a28c
+  0x00bd0b5c  RECRUIT_PLAY_ANY_MATCH                                                  via 0x0763e7d0@FUN_0763a28c
+  0x00bd0b73  NOT_RECEIVED                                                            via 0x07665b24@FUN_07665ad8
+  0x00bd0b80  TEAMSTRENGTH                                                            via 0x076671c8@FUN_0766717c
+  0x00bd0b8d  COLLABO_KIND_NONE                                                       via 0x07667904@FUN_076678c4,0x0781f5ac@FUN_0781f494
+  0x00bd0b9f  MOVE_SPEED_UP                                                           via 0x07668018@FUN_07667fd4
+  0x00bd0bad  ERR_ONLINE_PRIVILEGE                                                    via 0x076453dc@FUN_07644eb8,0x07c1ecbc@FUN_07c1e234,0x07c1ede8@FUN_07c1e234
+  0x00bd0bc2  reward_id                                                               via 0x0768e0c0@FUN_0768df80,0x0768df04@FUN_0768de90
+  0x00bd0bcc  ThroughFly                                                              via 0x076cd684@FUN_076cd3f4
+  0x00bd0bd7  birthday                                                                via 0x079f0c90@FUN_079f0bc0,0x07707ec4@FUN_07707db8
+  0x00bd0be0  is_opt_out_needed                                                       via 0x07709a28@FUN_07709308,0x07708f28@FUN_07708a6c,0x07708f40@FUN_07708a6c
+  0x00bd0bf2  CMD_GET_CAMPAIGN_LIST                                                   via 0x07712f58@FUN_07712ea8,0x07712bbc@FUN_07712b38,0x099052f0@null
+  0x00bd0c08  is_need_info_url                                                        via 0x07735b54@FUN_07734e24,0x07734dd4@FUN_07734c14
+  0x00bd0c19  is_withdrawn_konamiid                                                   via 0x07790e40@FUN_0779084c,0x0779030c@FUN_0778ff04,0x07790324@FUN_0778ff04
+  0x00bd0c2f  CmdGetLivedata.php                                                      via 0x07744fdc@FUN_07744ee8,0x0774489c@FUN_077447e0
+  0x00bd0c42  member                                                                  via 0x077f56b0@FUN_077f415c,0x077f56fc@FUN_077f415c,0x077f5748@FUN_077f415c
+  0x00bd0c49  CMD_GET_RANKING                                                         via 0x07776064@FUN_07775fb4,0x07774a00@FUN_077749a0,0x0990a450@null
+  0x00bd0c59  use_setting_multi_formation                                             via 0x077dc0e8@FUN_077d620c,0x077d5644@FUN_077d455c,0x077a07dc@FUN_0779a8f4
+  0x00bd0c75  breakdown_present_id                                                    via 0x077bb1d0@FUN_077bb060,0x077bafb4@FUN_077baf04
+  0x00bd0c8a  CmdRecvPresent.php                                                      via 0x077bb660@FUN_077bb56c,0x077baec4@FUN_077bae08
+  0x00bd0c9d  CmdRequestParentalPermission.php                                        via 0x077c2c18@FUN_077c2b38,0x077c27a0@FUN_077c26f4
+  0x00bd0cbe  CmdSetNewslist.php                                                      via 0x077ed59c@FUN_077ed4a8,0x077ed204@FUN_077ed148
+  0x00bd0cd1  control_rate_HOME                                                       via 0x077f4a24@FUN_077f415c
+  0x00bd0ce3  ability_base                                                            via 0x077f5a80@FUN_077f415c
+  0x00bd0cf0  match_team_play_data                                                    via 0x077f9cfc@FUN_077f9a80,0x077f9a30@FUN_077f999c
+  0x00bd0d05  is_eula_agree_flow_passed                                               via 0x07805b90@FUN_078031d4,0x07803174@FUN_07802c9c
+  0x00bd0d1f  is_low_image_quality_setting                                            via 0x07814394@FUN_0781126c,0x07810fd8@FUN_078108fc
+  0x00bd0d3c  match_list                                                              via 0x07996f00@FUN_07996e9c,0x07829178@FUN_078290bc
+  0x00bd0d47  event_ranking_log                                                       via 0x0782b508@FUN_0782b468,0x0782b520@FUN_0782b468
+  0x00bd0d59  ml_event_episode_list                                                   via 0x078615cc@FUN_07861514
+  0x00bd0d6f  level_point_list                                                        via 0x0798c434@FUN_0798bbcc,0x0798fa5c@FUN_0798eddc,0x0787c40c@FUN_0787c1b0
+  0x00bd0d80  assist_player_id                                                        via 0x0787920c@FUN_07879140,0x07879224@FUN_07879140
+  0x00bd0d91  CMD_IS_FIRST_LEAGUE                                                     via 0x078a3980@FUN_078a3908,0x078a40c4@FUN_078a4010,0x0990d588@null
+  0x00bd0da5  CMD_SKIP_LEAGUE_DIVISION                                                via 0x078a8ca8@FUN_078a8bf0,0x078a86f4@FUN_078a8684,0x09915520@null
+  0x00bd0dbe  room_info                                                               via 0x078c2cf8@FUN_078c2c38,0x078bdb08@FUN_078bda68,0x078bdb20@FUN_078bda68
+  0x00bd0dc8  enable_room_kind                                                        via 0x078c04b0@FUN_078bf578,0x078bf114@FUN_078beeec
+  0x00bd0dd9  is_need_password                                                        via 0x078c6a38@FUN_078c6268,0x078c5db4@FUN_078c5c5c
+  0x00bd0dea  CMD_KICK_ROOM_USER                                                      via 0x078ca168@FUN_078ca0b4,0x078c9b88@FUN_078c9b0c,0x0990d990@null
+  0x00bd0dfd  CMD_SET_MYCLUB_COOP_FIXED_SQUAD                                         via 0x078d2ac0@FUN_078d2a08,0x078ce41c@FUN_078ce3ac,0x09912dc0@null
+  0x00bd0e1d  CmdSetRoomSettings.php                                                  via 0x078da0e0@FUN_078d9fe0,0x078d6360@FUN_078d6284
+  0x00bd0e34  CmdSetRoomUserEntrySide.php                                             via 0x078dbe1c@FUN_078dbd70,0x078dc7d0@FUN_078dc6f0
+  0x00bd0e50  CMD_DELETE_MYCLUB_SKILL                                                 via 0x078f1de8@FUN_078f1d30,0x078f16f8@FUN_078f1688,0x09903f70@null
+  0x00bd0e68  CmdGetMyclubStandardDraftGameplayerlist.php                             via 0x078fdab8@FUN_078fda0c,0x07900a14@FUN_07900934
+  0x00bd0e94  CMD_GET_MYCLUB_WAREHOUSE_PLAYERLIST                                     via 0x0791dc84@FUN_0791dbcc,0x0791da6c@FUN_0791d9fc,0x09909b50@null
+  0x00bd0eb8  lost_gp                                                                 via 0x0792d628@FUN_0792d528,0x0792d640@FUN_0792d528
+  0x00bd0ec0  agent_id:                                                               via 0x07965148@FUN_079645e8
+  0x00bd0eca  is_success                                                              via 0x07973b64@FUN_07973b18,0x07973b7c@FUN_07973b18,0x07973828@FUN_07973790
+  0x00bd0ed5  ability_training_result                                                 via 0x07976544@FUN_07976220,0x0797655c@FUN_07976220
+  0x00bd0eed  voted_target                                                            via 0x07984028@FUN_07983ed4,0x079843d8@FUN_07984078,0x0797e830@FUN_0797e6f4
+  0x00bd0efa  voting_ends_date                                                        via 0x0797ea04@FUN_0797e6f4,0x0797ea1c@FUN_0797e6f4
+  0x00bd0f0b  is_get_reward                                                           via 0x079826ec@FUN_07982630,0x07982704@FUN_07982630,0x07984cc0@FUN_07984c04
+  0x00bd0f19  user_side                                                               via 0x0798bcec@FUN_0798bbcc,0x0798bd04@FUN_0798bbcc
+  0x00bd0f23  mission                                                                 via 0x0798c148@FUN_0798bbcc,0x0798c160@FUN_0798bbcc,0x0798f7f8@FUN_0798eddc
+  0x00bd0f2b  is_success_mission                                                      via 0x0798c660@FUN_0798bbcc,0x0798c678@FUN_0798bbcc,0x0798fe60@FUN_0798eddc
+  0x00bd0f3e  assist_ranking                                                          via 0x0798ca68@FUN_0798bbcc,0x07990404@FUN_0798eddc
+  0x00bd0f4d  top_goal_player_id                                                      via 0x07995368@FUN_0799501c,0x07994ef0@FUN_07994cc8,0x07994f08@FUN_07994cc8
+  0x00bd0f60  CMD_SET_STRIKE_ARENA_PLAYER                                             via 0x079a146c@FUN_079a13b4,0x079a1130@FUN_079a10c0,0x09914920@null
+  0x00bd0f7c  CmdGetUserCompeServerParam.php                                          via 0x079c8cac@FUN_079c8bcc,0x079c8aa8@FUN_079c89fc
+  0x00bd0f9b  retry_sec                                                               via 0x079f1684@FUN_079f1534,0x079f169c@FUN_079f1534
+  0x00bd0fa5  CMD_GET_KID_UPDATE_COUNTRY_URL                                          via 0x07a1a340@FUN_07a1a288,0x07a19d6c@FUN_07a19cfc,0x09907498@null
+  0x00bd0fc4  Settings/UserInfo/MenuCompetitionRecord                                 via 0x09a5c708@null
+  0x00bd0fec  Coin_07                                                                 via 0x098fb210@null
+  0x00bd0ff4  targetAppVersion                                                        via 0x07a3db24@FUN_07a3da50
+  0x00bd1009  OBJECT                                                                  via 0x07aba9fc@FUN_07aba7d4,0x09931368@null,0x09930a50@null
+  0x00bd1010  tag_leaveRoom                                                           via 0x07b1b01c@FUN_07b1afd4,0x07b1af80@FUN_07b1af38,0x07b1aeec@FUN_07b1ae48
+  0x00bd1097  MultiplaySession daemon is NULL                                         via 0x07b563fc@FUN_07b559a8,0x07b4f750@FUN_07b4f68c,0x07b4f534@FUN_07b4f478
+  0x00bd10b7  Revison check TIMEOUT                                                   via 0x07b56214@FUN_07b559a8
+  0x00bd10de  is_enabled_at_match_polling                                             via 0x07b6ce10@FUN_07b6cc10
+  0x00bd10fa  ERR_POSSESSION_FULL                                                     via 0x09901c80@null
+  0x00bd110e  ERR_DIFFERENT_CLIENT_VERSION                                            via 0x099039d8@null
+  0x00bd112b  CMD_SAVE_RECEIPT                                                        via 0x07e9e8a0@FUN_07e9e7f8,0x07e9e060@FUN_07e9dfe0,0x0990f058@null
+  0x00bd113c  /banner/advertise/020017/020017.png                                     via 0x07b7d980@FUN_07b7d640
+  0x00bd1160  joinSessionResetConfirmAlert                                            via 0x07b8f54c@FUN_07b8f4f4
+  0x00bd117d  %s_b08                                                                  via 0x07bb652c@FUN_07bb5f4c,0x07bb4b64@FUN_07bb43ec
+  0x00bd1184  0000_m01_%d_%s                                                          via 0x07bb585c@FUN_07bb4f34,0x07bb58c4@FUN_07bb4f34
+  0x00bd1193  DippingShot                                                             via 0x099180a0@null,0x09918ad8@null
+  0x00bd119f  Marking                                                                 via 0x099183e8@null,0x09918c28@null
+  0x00bd11a7  G:\PES22HC\Dev-600Series\Source\Shared\pes\Game\Online\OnlineSystem\Ap  via 0x07c0772c@FUN_07c0766c,0x07c0778c@FUN_07c0766c
+  0x00bd120e  pes-custom-encrypt                                                      via 0x07ecad64@_INIT_11490,0x07ec024c@_INIT_11483,0x07c39120@_INIT_11438
+  0x00bd1221  verify                                                                  via 0x07c215d4@FUN_07c214f8
+  0x00bd1228  HttpClientImpl2                                                         via 0x07c3db88@FUN_07c3db7c
+  0x00bd1238  P2P_LOW_LEVEL                                                           via 0x07cfc048@FUN_07cfb88c,0x07cfb090@FUN_07cf9ecc,0x07cf9d48@FUN_07cf9b14
+  0x00bd1246  InputDelayBufferSizeStandardValueRecentBasicStatisticsMaxSize           via 0x07d000c8@FUN_07cffca4
+  0x00bd1284  QueueReducesInMatchActiveMarginCoefficient                              via 0x07d01398@FUN_07d00c50
+  0x00bd12af  AsymmetricInputDelayTurnDisconnectedModeEnable                          via 0x07d0499c@FUN_07d03878
+  0x00bd12de  DoesBlockSocketError                                                    via 0x07d054c4@FUN_07d05398
+  0x00bd12f3  ChangeoverPeerReceiveIdleTimeMsThreshold                                via 0x07d05ce0@FUN_07d05844
+  0x00bd131c  DcTestPingTimeoutMs                                                     via 0x07d0640c@FUN_07d05844
+  0x00bd1330  DcTestNumPing                                                           via 0x07d06518@FUN_07d05844
+  0x00bd133e  MultiplaySessionDaemonStatisticsIoBufferSize                            via 0x07d06bac@FUN_07d05844
+  0x00bd136b  WebSocketClientConnectRetryIntervalMs                                   via 0x07d06c88@FUN_07d05844
+  0x00bd1391  DcTestWebSocketClientEnableIgnoreUnknownCa                              via 0x07d06e18@FUN_07d05844
+  0x00bd13bc  MultiplaySessionWatchdogTimerTimeoutUs                                  via 0x07d07934@FUN_07d076c0
+  0x00bd13e3  AccessLineTesterPrivateNetworkQualityPoorThreshold                      via 0x07d07eb4@FUN_07d076c0
+  0x00bd1416  ChannelTransferMode                                                     via 0x07d0a9b8@FUN_07d0a95c
+  0x00bd142a  FecQueueParityEncoderRedundancy                                         via 0x07d0ac10@FUN_07d0a95c
+  0x00bd144a  ChannelSchedulerInterruptEnable                                         via 0x07d0ad6c@FUN_07d0a95c
+  0x00bd146a  EnableDisplayConceptArrange                                             via 0x07d0b758@FUN_07d0ae34
+  0x00bd1486  NoMoveOperationTimeoutMs                                                via 0x07d0b968@FUN_07d0ae34
+  0x00bd149f  NtlApiThread                                                            via 0x07ddc180@FUN_07ddc0f8,0x07e1e530@FUN_07e1e4e0
+  0x00bd14ac  %s%d                                                                    via 0x08bebd04@criFsDecodeDevice_Initialize,0x07de379c@FUN_07de3718
+  0x00bd14b1  REFLECTED_FROM                                                          via 0x07df97b0@FUN_07df86f0,0x07debe00@FUN_07debc10
+  0x00bd14c0  TERM                                                                    via 0x07df8d24@FUN_07df86f0,0x07debd7c@FUN_07debc10,0x09a5cfa8@null
+  0x00bd14c5  TRANSPORT                                                               via 0x09921b28@null,0x09921c48@null,0x09921d68@null
+  0x00bd14e8  MappingTestIA                                                           via 0x07dede98@FUN_07deddbc
+  0x00bd14f6  urn:schemas-upnp-org:service:WANIPConnection:1                          via 0x07e02fd0@FUN_07e02fa4,0x07e02fe0@FUN_07e02fa4,0x09a5cd78@null
+  0x00bd1525  modelNumber                                                             via 0x07e0568c@FUN_07e05378
+  0x00bd153c  ctxType                                                                 via 0x07e16e50@FUN_07e16a5c
+  0x00bd1544  ${"t":%d,"c":"%s","p":%d,"r":"%s","o":%d}                               via 0x07e17c94@FUN_07e16a5c
+  0x00bd156f  ALLOC_TURN_PERMISSION_BINDING_ABORTED                                   via 0x07e16134@FUN_07e15d60
+  0x00bd1595  PEER_STUN                                                               via 0x07e17ac8@FUN_07e16a5c
+  0x00bd159f  REMOVE                                                                  via 0x07e17c5c@FUN_07e16a5c
+  0x00bd15a6  recieve_timeout_factor                                                  via 0x07e2dfcc@FUN_07e2db30
+  0x00bd15bd  enable_sce_http2_error_reason_no_error_handling                         via 0x07e3f420@FUN_07e3f1c4
+  0x00bd15ed  IPADDRV6                                                                via 0x07e5bdd4@FUN_07e5bc34,0x07e5a4ac@FUN_07e5a1ec,0x07e48e70@FUN_07e4724c
+  0x00bd15f6  SEND_COMMAND_DROP_COUNT_BURST_L1_MCACTIVE                               via 0x07e5c2c0@FUN_07e5bc34,0x07e4c094@FUN_07e4724c
+  0x00bd1620  SELF_AUTOMOVE_COUNT_BURST_L3                                            via 0x07e5c330@FUN_07e5bc34,0x07e4c1c8@FUN_07e4724c
+  0x00bd163d  IP_ADDRESS_UDP_END_TEST                                                 via 0x07e5c98c@FUN_07e5bc34,0x07e4e1a8@FUN_07e4724c
+  0x00bd1655  MEMORY_PHYSICAL_PEAK_USED_KiB_                                          via 0x07e5ca14@FUN_07e5bc34,0x07e4e518@FUN_07e4724c
+  0x00bd1674  TURN_QUALITY_RTT_EWMA                                                   via 0x07e5cab4@FUN_07e5bc34,0x07e4ed60@FUN_07e4724c
+  0x00bd168a  SEND_TO_NET_INFO_MAX_SEND_ATTEMPT_INTERVAL                              via 0x07e5ceb4@FUN_07e5bc34,0x07e4fb8c@FUN_07e4724c
+  0x00bd16b5  APP_YIELD_STATS_INACTIVITY_TIME_MS                                      via 0x07e5daa4@FUN_07e5bc34,0x07e57de8@FUN_07e54c40,0x07e57e08@FUN_07e54c40
+  0x00bd16d8  BPS_SEND_                                                               via 0x07e5dac4@FUN_07e5bc34,0x07e58168@FUN_07e54c40,0x07e57fcc@FUN_07e54c40
+  0x00bd16e2  RX_LOSS_RATE_MEAN                                                       via 0x07e5c668@FUN_07e5bc34,0x07e5de48@FUN_07e5dd74
+  0x00bd16f4  Not Implement                                                           via 0x07e73488@FUN_07e73298,0x07e6ef28@FUN_07e6ed90
+  0x00bd1702  <unsupported field>                                                     via 0x07e7bf28@FUN_07e7beb4,0x07e7bd20@FUN_07e7bc94,0x07e7bbdc@FUN_07e7bb5c
+  0x00bd1716  getQuantity                                                             via 0x07e79b14@FUN_07e79a94,0x07e795ec@FUN_07e793fc
+  0x00bd1722  getInventory                                                            via 0x07e7b0bc@FUN_07e7af98
+  0x00bd172f  xb1_store_id                                                            via 0x07e881d0@FUN_07e873b8,0x07e881e8@FUN_07e873b8
+  0x00bd173c  application_user_name                                                   via 0x07ea3240@FUN_07ea31a0,0x07ea3258@FUN_07ea31a0
+  0x00bd1752  CmdSendAuthorizationCode                                                via 0x07ea513c@_INIT_11472
+  0x00bd176b  CmdGetTurnAddressData                                                   via 0x07ea517c@_INIT_11472
+  0x00bd1781  CmdSendAdjustParam                                                      via 0x07eb777c@FUN_07eb76ac,0x07ea5268@_INIT_11472
+  0x00bd1794  LINK_DOWN                                                               via 0x07ec406c@FUN_07ec3f04,0x09928680@null
+  0x00bd17a2  grpc.max_connection_age_grace_ms                                        via 0x07edadf0@_INIT_11498,0x07f95f2c@FUN_07f95da4
+  0x00bd17c3  grpc.max_metadata_size                                                  via 0x07edb4a8@_INIT_11498,0x07f268e8@FUN_07f26250,0x07f26c14@FUN_07f26250
+  0x00bd17da  grpc.enable_retries                                                     via 0x07edb944@_INIT_11498,0x07f51e38@FUN_07f51dd8
+  0x00bd17ee  grpc.channel_pooling_domain                                             via 0x07edbb7c@_INIT_11498
+  0x00bd180a  pick_first                                                              via 0x07edd498@FUN_07edd1d8,0x07f5870c@FUN_07f57fb8
+  0x00bd1815  queue_pluck                                                             via 0x07eec194@_INIT_11500,0x07edd598@FUN_07edd1d8
+  0x00bd1821  pos < interceptors_.size()                                              via 0x07ee0548@FUN_07ee04c0,0x07ee0618@FUN_07ee04c0,0x07ee7694@FUN_07ee75d8
+  0x00bd183c  No payload                                                              via 0x07ee1a74@FUN_07ee1954
+  0x00bd1847  !started_                                                               via 0x07ee49fc@FUN_07ee48f4,0x07fbe980@FUN_07fbe8e0
+  0x00bd1851  GRPC_SLICE_LENGTH(slice_) <= INT_MAX                                    via 0x07ee6d8c@FUN_07ee6bec
+  0x00bd1876  Illegal value '%s' specified for environment variable '%s'              via 0x07ee867c@FUN_07ee85bc,0x07ee8558@FUN_07ee8494
+  0x00bd18b1  cq_end_op_for_pluck(cq=%p, tag=%p, error=%s, done=%p, done_arg=%p, sto  via 0x07eeafc4@FUN_07eead54
+  0x00bd1900  pthread_cond_broadcast(cv) == 0                                         via 0x07eec648@FUN_07eec61c
+  0x00bd1920  BACKUP_POLLER:%p shutdown                                               via 0x07ef405c@FUN_07ef3ea0
+  0x00bd193a  G:\PES22HC\Dev-600Series\Source\Shared\basic\ext\grpc\grpc\src\core\li  via 0x07ef61d0@FUN_07ef606c,0x07ef61b0@FUN_07ef606c,0x07ef602c@FUN_07ef5ed4
+  0x00bd199a  GRPC_SLICE_LENGTH(slice) == n                                           via 0x07ef6fa8@FUN_07ef6c84,0x07ef6c6c@FUN_07ef69b4
+  0x00bd19b8  state_ == ALIVE                                                         via 0x07efee38@FUN_07efeae0,0x07efe678@FUN_07efe1c0,0x07f7eee0@FUN_07f7ed98
+  0x00bd19d7  SEND_MESSAGE(flag and length unknown, already orphaned)                 via 0x07f0a8d8@FUN_07f0a710
+  0x00bd1a0f  Auth context missing from client auth filter args                       via 0x07f11a14@FUN_07f11970
+  0x00bd1a41  prop->name != nullptr                                                   via 0x07f12964@FUN_07f12798
+  0x00bd1a57  grpc_channel_create_registered_call(channel=%p, parent_call=%p, propag  via 0x07f18390@FUN_07f181c0
+  0x00bd1b2d  op->payload->recv_initial_metadata.recv_flags == nullptr                via 0x07f19134@FUN_07f190c0
+  0x00bd1b66  Metadata keys cannot be larger than UINT32_MAX                          via 0x07f1cf88@FUN_07f1cf48
+  0x00bd1b95  Authentication metadata processing failed.                              via 0x07f1eee0@FUN_07f1edd8
+  0x00bd1bc0  Frame protector creation failed                                         via 0x07f1f9dc@FUN_07f1f874
+  0x00bd1be0  elem->filter == &grpc_lame_filter                                       via 0x07f22630@FUN_07f22480
+  0x00bd1c02  lame client channel                                                     via 0x07f22280@FUN_07f221f0,0x07f222c4@FUN_07f221f0,0x07f22190@FUN_07f2213c
+  0x00bd1c16  Request is marked Cacheable but not all data is available.  Falling ba  via 0x07f22e70@FUN_07f22ac8
+  0x00bd1c67  s->unprocessed_incoming_frames_buffer.length == 0                       via 0x07f2a920@FUN_07f2a730
+  0x00bd1c99  bdp[%s]:sched acc=%ld est=%ld                                           via 0x07f27074@FUN_07f26fcc
+  0x00bd1cb7  Attempt to make hpack table %d bytes when max is %d bytes               via 0x07f30ce0@FUN_07f30c80
+  0x00bd1cf1  GRPC_SLICE_LENGTH(debug_data) < UINT32_MAX - 4 - 4                      via 0x07f36a4c@FUN_07f36814
+  0x00bd1d24  p->parsing_frame == nullptr                                             via 0x07f396d8@FUN_07f39120
+  0x00bd1d40  t_->qbuf.count == 0                                                     via 0x07f3a820@FUN_07f398e8
+  0x00bd1d54  %s: Ping delayed [%p]: already pinging                                  via 0x07f3a860@FUN_07f398e8
+  0x00bd1d7b  settings frames must be a multiple of six bytes                         via 0x07f3ae18@FUN_07f3ad80
+  0x00bd1dab  Expected SETTINGS frame as the first frame, got frame type %d           via 0x07f3bf40@FUN_07f3bc80
+  0x00bd1de9  parsing initial_metadata                                                via 0x07f3cbbc@FUN_07f3c740
+  0x00bd1e02  field:retryThrottling error:Type should be object                       via 0x07f41d88@FUN_07f413c4
+  0x00bd1e34  field:retryThrottling field:maxTokens error:Not found                   via 0x07f42a08@FUN_07f413c4
+  0x00bd1e6a  G:\PES22HC\Dev-600Series\Source\Shared\basic\ext\grpc\grpc\src\core\ex  via 0x07f4570c@FUN_07f45500,0x07f456d8@FUN_07f45500,0x07f4563c@FUN_07f45500
+  0x00bd1edf  ALREADY_EXISTS                                                          via 0x07fb8a48@_INIT_11538,0x07f459a8@FUN_07f4591c,0x0992af88@null
+  0x00bd1eee  G:\PES22HC\Dev-600Series\Source\Shared\basic\ext\grpc\grpc\src\core\ex  via 0x07f463b8@FUN_07f4632c,0x07f46304@FUN_07f46270,0x07f46248@FUN_07f46130
+  0x00bd1f62  Connect failed: %s                                                      via 0x07f4a468@FUN_07f4a3a0
+  0x00bd1f75  invalid ipv4 address: '%s'                                              via 0x07f4cb2c@FUN_07f4ca04
+  0x00bd1f90  grpc.subchannel_pool                                                    via 0x07f4d258@FUN_07f4d24c,0x07f4d23c@FUN_07f4d234
+  0x00bd1fa5  health check call failed; will retry after backoff                      via 0x07f4decc@FUN_07f4de1c
+  0x00bd1fd8  HealthCheckClient %p: restarting health check call                      via 0x07f4d4f4@FUN_07f4d450
+  0x00bd200b  completed                                                               via 0x07f54c4c@FUN_07f546ec
+  0x00bd2015  chand=%p: resolver returned invalid service config. Continuing to use   via 0x07f580b0@FUN_07f57fb8
+  0x00bd2074  run_poller                                                              via 0x07f5a398@FUN_07f5a35c
+  0x00bd207f  !grpclb_policy->shutting_down_                                          via 0x07f6473c@FUN_07f6446c
+  0x00bd209e  [cdslb %p] received CDS update from xds client                          via 0x07f68934@FUN_07f6862c
+  0x00bd20cd  G:\PES22HC\Dev-600Series\Source\Shared\basic\ext\grpc\grpc\src\core\ex  via 0x07f6dfa0@FUN_07f6de94
+  0x00bd2146  certificate_type                                                        via 0x07f81550@FUN_07f81518,0x07f80984@FUN_07f80918,0x07f715c0@FUN_07f71534
+  0x00bd2157  Could not add root certificate to ssl context.                          via 0x07f71c28@FUN_07f71a88
+  0x00bd2186  Corruption detected.                                                    via 0x07f73e04@FUN_07f73d2c
+  0x00bd219b  Invalid unauthenticated peer.                                           via 0x07f76348@FUN_07f76064
+  0x00bd21b9  Invalid nullptr arguments to zero-copy grpc unprotect.                  via 0x07f77fec@FUN_07f77e90
+  0x00bd21f0  Failed to process frame.                                                via 0x07f7c154@FUN_07f7bf14
+  0x00bd2209  Bad frame length (should be at least %zu, and at most %zu)              via 0x07f7d05c@FUN_07f7cf38
+  0x00bd2250  Backend                                                                 via 0x07f80558@FUN_07f80468
+  0x00bd2258  %s is done.                                                             via 0x07f8129c@FUN_07f80cd8
+  0x00bd2264  Invalid frame size.                                                     via 0x07f81e44@FUN_07f81cb8
+  0x00bd2278  G:\PES22HC\Dev-600Series\Source\Shared\basic\ext\grpc\grpc\src\core\ex  via 0x07f83610@FUN_07f83480,0x07f835a0@FUN_07f83480,0x07f8252c@FUN_07f823d0
+  0x00bd22e6  "config" field is not an object                                         via 0x07f879ec@FUN_07f87924
+  0x00bd2306  duplicate "config" field                                                via 0x07f87ad8@FUN_07f87924
+  0x00bd231f  "id" field is not a string                                              via 0x07f86ca0@FUN_07f86714
+  0x00bd233a  field:edsServiceName error:Duplicate entry                              via 0x07f89f90@FUN_07f89adc
+  0x00bd2365  [%s %p] subchannel list %p index %lu of %lu (subchannel %p): canceling  via 0x07f921ec@FUN_07f920a4,0x07f90f0c@FUN_07f90e6c,0x07f90c44@FUN_07f90604
+  0x00bd23c4  G:\PES22HC\Dev-600Series\Source\Shared\basic\ext\grpc\grpc\src\core\ex  via 0x07f95150@FUN_07f95064,0x07f94e5c@FUN_07f94e2c
+  0x00bd2440  (client idle filter) timer has started                                  via 0x07f95be4@FUN_07f958bc,0x07f95778@FUN_07f95670
+  0x00bd2467  field:maxResponseMessageBytes error:should be of type number            via 0x07f96d8c@FUN_07f96994
+  0x00bd24a4  grpc-c++/                                                               via 0x07f98a14@FUN_07f989a4
+  0x00bd24ae  watch_completion_error                                                  via 0x07f9ab74@FUN_07f9a924
+  0x00bd24c5  SetUInt32                                                               via 0x07fc80b8@FUN_07fc8070,0x07fc80e0@FUN_07fc8070,0x07fc8158@FUN_07fc8070
+  0x00bd24cf  SetRepeatedUInt32                                                       via 0x07fc84b8@FUN_07fc846c,0x07fc84e0@FUN_07fc846c,0x07fc8558@FUN_07fc846c
+  0x00bd24e1  AddUInt32                                                               via 0x07fc8624@FUN_07fc85dc,0x07fc864c@FUN_07fc85dc,0x07fc86c4@FUN_07fc85dc
+  0x00bd24eb  AddUInt64                                                               via 0x07fc8ec8@FUN_07fc8e80,0x07fc8ef0@FUN_07fc8e80,0x07fc8f68@FUN_07fc8e80
+  0x00bd24f5  SetRepeatedString                                                       via 0x07fcaf4c@FUN_07fcaf00,0x07fcaf74@FUN_07fcaf00,0x07fcafec@FUN_07fcaf00
+  0x00bd2507  Can't get here: failed to get default value as string                   via 0x07fd65cc@FUN_07fd6440
+  0x00bd253d  ", which is not imported by "                                           via 0x07fdf2a0@FUN_07fdf1ec
+  0x00bd255b  " not previously defined in symbols_by_name_, but was defined in symbo  via 0x07fe094c@FUN_07fe0820
+  0x00bd25cc  " is already defined.                                                   via 0x07fe0ae8@FUN_07fe0820
+  0x00bd25e2  Unrecognized syntax:                                                    via 0x07fe1c0c@FUN_07fe1a7c
+  0x00bd25f8  Reserved numbers must be positive integers.                             via 0x07fe3774@FUN_07fe3394
+  0x00bd2624  Enum value in map must define 0 as the first value.                     via 0x07fedca4@FUN_07feda1c
+  0x00bd2658  .foo = value".                                                          via 0x07ff0560@FUN_07ff0454
+  0x00bd2667  Invalid wire type for CPPTYPE_INT64:                                    via 0x07ff0244@FUN_07ff017c
+  0x00bd268d  CHECK failed: original_uninterpreted_options_field != NULL:             via 0x07fe2c08@FUN_07fe1a7c
+  0x00bd26ca  G:\PES22HC\Dev-600Series\Source\Shared\basic\ext\grpc\grpc\third_party  via 0x08024b64@FUN_08024850,0x0802510c@FUN_08024e60
+  0x00bd273b  MapValueRef::SetBoolValue                                               via 0x08024118@FUN_0802405c
+  0x00bd2755  Should not reach here.                                                  via 0x08028bdc@FUN_08028924
+  0x00bd276c  G:\PES22HC\Dev-600Series\Source\Shared\basic\ext\grpc\grpc\third_party  via 0x0803af90@FUN_0803ae68,0x0803ebe4@FUN_0803e9f4,0x0803c974@FUN_0803c934
+  0x00bd27df  Non-repeated field "                                                    via 0x080387f8@FUN_08037f48
+  0x00bd27f4  Already saw decimal point or exponent; can't have another one.          via 0x080404e4@FUN_080400d4
+  0x00bd2833  End-of-file inside block comment.                                       via 0x080409f4@FUN_08040634
+  0x00bd2855   Tokenizer::ParseFloat() passed text that could not have been tokenize  via 0x08041598@FUN_080414b4
+  0x00bd28ae  %s %2d %02d:%02d:%02d %d%s                                              via 0x080466d0@FUN_080465dc
+  0x00bd28c9  UTCTIME                                                                 via 0x09931378@null,0x09930ad8@null
+  0x00bd28d1  FORMAT                                                                  via 0x099315e8@null
+  0x00bd28d8  , path=                                                                 via 0x08061234@FUN_08060fa0
+  0x00bd28e0  SECG/WTLS curve over a 131 bit binary field                             via 0x099318d0@null
+  0x00bd290c  X9.62 curve over a 368 bit binary field                                 via 0x09931c90@null
+  0x00bd2934  X9_62_CURVE                                                             via 0x09932920@null
+  0x00bd2940  SSL routines                                                            via 0x09a5e668@null
+  0x00bd294d  BIO lib                                                                 via 0x09a5e428@null
+  0x00bd2958  seed:                                                                   via 0x08083234@FUN_08083078
+  0x00bd295e  int_dhx942_dh                                                           via 0x099348d8@null
+  0x00bd296c  Polynomial:                                                             via 0x080855ac@FUN_080852b8
+  0x00bd2978  bnrand_range                                                            via 0x09935c70@null
+  0x00bd2985  BN_bn2hex                                                               via 0x09935ce0@null
+  0x00bd298f  BN_rand                                                                 via 0x09935f00@null
+  0x00bd2997  pkey_dh_derive                                                          via 0x09936240@null
+  0x00bd29a6  check pubkey too large                                                  via 0x099362e0@null
+  0x00bd29bd  aes_ocb_cipher                                                          via 0x09936470@null
+  0x00bd29cc  EVP_CIPHER_param_to_asn1                                                via 0x099365d0@null
+  0x00bd29e5  EVP_MD_CTX_copy_ex                                                      via 0x09936650@null
+  0x00bd29f8  EVP_PKEY_paramgen                                                       via 0x099368f0@null
+  0x00bd2a0a  invalid fips mode                                                       via 0x09936c80@null
+  0x00bd2a1c  unknown cipher                                                          via 0x09936e30@null
+  0x00bd2a2b  unknown option                                                          via 0x09936e50@null,0x0994ea10@null
+  0x00bd2a3a  asn1_ex_c2i                                                             via 0x09937090@null
+  0x00bd2a46  do_tcreate                                                              via 0x09937480@null
+  0x00bd2a51  PKCS5_pbkdf2_set                                                        via 0x099375a0@null
+  0x00bd2a62  illegal padding                                                         via 0x09937940@null
+  0x00bd2a72  time not ascii format                                                   via 0x09937c70@null
+  0x00bd2a88  CONF_dump_fp                                                            via 0x09937dd0@null
+  0x00bd2a95  process_include                                                         via 0x09937f10@null
+  0x00bd2aa5  d2i_ECPKParameters                                                      via 0x099382a0@null
+  0x00bd2ab8  EC_GROUP_set_generator                                                  via 0x099388b0@null
+  0x00bd2acf  EC_POINT_cmp                                                            via 0x09938a10@null
+  0x00bd2adc  validate_ecx_derive                                                     via 0x09938d50@null
+  0x00bd2af0  d2i ecpkparameters failure                                              via 0x09938df0@null
+  0x00bd2b0b  mem_write                                                               via 0x099394e0@null
+  0x00bd2b15  malformed host or service                                               via 0x09939630@null
+  0x00bd2b2f  name translation failed                                                 via 0x09939a50@null
+  0x00bd2b47  failed to set pool                                                      via 0x09939b60@null
+  0x00bd2b5a  AES-128-CBC                                                             via 0x0809cc44@FUN_0809cba4,0x0809cc58@FUN_0809cba4,0x0993ebf8@null
+  0x00bd2b66  ARIA-192-CBC                                                            via 0x0809ceac@FUN_0809cba4,0x0809cec0@FUN_0809cba4,0x099451d8@null
+  0x00bd2b73  missing message digest                                                  via 0x0993a7e8@null
+  0x00bd2b8a  pbeWithMD2AndDES-CBC                                                    via 0x0993abf0@null
+  0x00bd2ba3  DES-OFB                                                                 via 0x0993b188@null
+  0x00bd2bab  unstructuredName                                                        via 0x0993b228@null,0x0993b230@null
+  0x00bd2bbc  dsaEncryption                                                           via 0x0993bca8@null
+  0x00bd2bca  id-smime-cti                                                            via 0x0993c8f8@null,0x0993c900@null
+  0x00bd2bd7  id-smime-aa-ets-certValues                                              via 0x0993cf10@null,0x0993cf18@null
+  0x00bd2bf6  id-cmc-identification                                                   via 0x0993ddc0@null,0x0993ddc8@null
+  0x00bd2c0c  OCSP No Check                                                           via 0x0993e430@null
+  0x00bd2c1a  Extended OCSP Status                                                    via 0x0993e4a8@null
+  0x00bd2c2f  domain                                                                  via 0x0993e7c0@null
+  0x00bd2c36  Subject Information Access                                              via 0x0993e8b8@null
+  0x00bd2c51  pilotAttributeType                                                      via 0x0993eef0@null,0x0993eef8@null
+  0x00bd2c64  mail                                                                    via 0x0993f260@null
+  0x00bd2c69  documentTitle                                                           via 0x0993f3c8@null,0x0993f3d0@null
+  0x00bd2c77  setct-CapRevResData                                                     via 0x09940048@null,0x09940050@null
+  0x00bd2c8b  setct-BatchAdminReqTBE                                                  via 0x09940700@null,0x09940708@null
+  0x00bd2ca2  setAttr-Cert                                                            via 0x09940b60@null,0x09940b68@null
+  0x00bd2caf  AES-128-CFB1                                                            via 0x09941010@null
+  0x00bd2cbc  aes-192-cfb1                                                            via 0x09941040@null
+  0x00bd2cc9  sect193r2                                                               via 0x09941bc8@null,0x09941bd0@null
+  0x00bd2cd3  sect571k1                                                               via 0x09941d08@null,0x09941d10@null
+  0x00bd2cdd  wap-wsg-idm-ecid-wtls6                                                  via 0x09941df8@null,0x09941e00@null
+  0x00bd2cf4  X509v3 Policy Mappings                                                  via 0x09941f40@null
+  0x00bd2d0b  CAMELLIA-192-CBC                                                        via 0x09942000@null
+  0x00bd2d1c  certificateIssuer                                                       via 0x099422f8@null
+  0x00bd2d2e  id-GostR3410-2001DH                                                     via 0x09942a28@null
+  0x00bd2d42  id-Gost28147-89-CryptoPro-RIC-1-ParamSet                                via 0x09942c30@null,0x09942c38@null
+  0x00bd2d6b  id-GostR3410-94-CryptoPro-XchC-ParamSet                                 via 0x09942d70@null,0x09942d78@null
+  0x00bd2d93  brainpoolP256t1                                                         via 0x09943b80@null,0x09943b88@null
+  0x00bd2da3  ct_precert_scts                                                         via 0x09943f18@null
+  0x00bd2db3  id-tc26                                                                 via 0x099442b0@null,0x099442b8@null
+  0x00bd2dbb  id-tc26-signwithdigest-gost3410-2012-512                                via 0x09944490@null
+  0x00bd2de4  GOST R 34.10-2012 (512 bit) ParamSet A                                  via 0x09944678@null
+  0x00bd2e0b  grasshopper-ecb                                                         via 0x099448a0@null,0x099448a8@null
+  0x00bd2e1b  ipsecIKE                                                                via 0x09944a30@null
+  0x00bd2e24  KxSRP                                                                   via 0x09944da0@null
+  0x00bd2e2a  AuthGOST01                                                              via 0x09944e90@null
+  0x00bd2e35  ARIA-256-CTR                                                            via 0x09945318@null
+  0x00bd2e42  ARIA-192-CFB1                                                           via 0x09945368@null
+  0x00bd2e50  countryCode3n                                                           via 0x09945500@null
+  0x00bd2e5e  sha3-512                                                                via 0x09945640@null
+  0x00bd2e67  DSTU Gost 28147-2009 key wrap                                           via 0x09945f00@null
+  0x00bd2e85  id-tc26-cipher-gostr3412-2015-magma-ctracpkm                            via 0x099461f0@null,0x099461f8@null
+  0x00bd2eb2  unsupported key components                                              via 0x09946bf8@null
+  0x00bd2ecd  ENCRYPTED PRIVATE KEY                                                   via 0x080b0c40@FUN_080b0bbc,0x080ae410@FUN_080ae1c0
+  0x00bd2ee3  DH PARAMETERS                                                           via 0x080b0e38@FUN_080b0e08,0x080ae320@FUN_080ae1c0
+  0x00bd2ef1  PKCS12_AUTHSAFES                                                        via 0x09946fb8@null,0x09946ff8@null
+  0x00bd2f02  PKCS12_key_gen_asc                                                      via 0x09947318@null
+  0x00bd2f15  mac verify failure                                                      via 0x09947538@null
+  0x00bd2f28  PKCS7_DIGEST                                                            via 0x09947e90@null
+  0x00bd2f35  PKCS7_ATTR_SIGN                                                         via 0x09947ef0@null
+  0x00bd2f45  reseed error                                                            via 0x09948a00@null
+  0x00bd2f52  Exponent:                                                               via 0x080bc304@FUN_080bc1b0
+  0x00bd2f5c  prime2:                                                                 via 0x080bc364@FUN_080bc1b0
+  0x00bd2f64  sha1 (default)                                                          via 0x080bc684@FUN_080bc560
+  0x00bd2f73  Mask Algorithm:                                                         via 0x080bc6c8@FUN_080bc560
+  0x00bd2f84  rsa_cms_decrypt                                                         via 0x099492e8@null
+  0x00bd2f94  rsa_ossl_private_decrypt                                                via 0x099493c8@null
+  0x00bd2fad  invalid message length                                                  via 0x09949798@null
+  0x00bd2fc4  invalid oaep parameters                                                 via 0x099497c8@null
+  0x00bd2fdc  mgf1 digest not allowed                                                 via 0x09949888@null
+  0x00bd2ff4  x931                                                                    via 0x080c2280@FUN_080c20ac
+  0x00bd2ff9  ambiguous content type                                                  via 0x0994a130@null
+  0x00bd3010  UI_dup_error_string                                                     via 0x0994a390@null
+  0x00bd3024  common ok and cancel characters                                         via 0x0994a460@null
+  0x00bd3044  unknown ttyget errno value                                              via 0x0994a510@null
+  0x00bd305f  X509_load_cert_crl_file                                                 via 0x0994a740@null
+  0x00bd3077  X509_STORE_add_cert                                                     via 0x0994a8a0@null
+  0x00bd308b  X509_TRUST_set                                                          via 0x0994a940@null
+  0x00bd309a  X509_VERIFY_PARAM_new                                                   via 0x0994a960@null
+  0x00bd30b0  akid mismatch                                                           via 0x0994a980@null
+  0x00bd30be  crl already delta                                                       via 0x0994a9e0@null
+  0x00bd30d0  wrong type                                                              via 0x0994abd0@null
+  0x00bd3126  revocationDate                                                          via 0x0994aee0@null
+  0x00bd3135  revoked                                                                 via 0x0994b030@null
+  0x00bd313d  X509_EXTENSION                                                          via 0x0994b248@null
+  0x00bd314c  u.range                                                                 via 0x0994bd40@null
+  0x00bd3154  organization                                                            via 0x080dc458@FUN_080dc220,0x0994c178@null
+  0x00bd3161  relativename                                                            via 0x080dd7a4@FUN_080dd764
+  0x00bd316e  %*sOnly CA Certificates                                                 via 0x080dd590@FUN_080dd528
+  0x00bd3187  nonRepudiation                                                          via 0x09a5edd8@null
+  0x00bd3196  excludedSubtrees                                                        via 0x0994da68@null
+  0x00bd31a7  permitted                                                               via 0x080e0fdc@FUN_080e0f60
+  0x00bd31b5  nssslserver                                                             via 0x09a5f028@null
+  0x00bd31c1  SXNET_get_id_ulong                                                      via 0x0994e420@null
+  0x00bd31d4  v2i_POLICY_MAPPINGS                                                     via 0x0994e520@null
+  0x00bd31e8  incorrect policy syntax tag                                             via 0x0994e750@null
+  0x00bd3204  invalid syntax                                                          via 0x0994e8a0@null
+  0x00bd3213  policy path length                                                      via 0x0994e980@null
+  0x00bd3226  NULL-SHA                                                                via 0x09a5f1b0@null
+  0x00bd322f  TLS_RSA_WITH_AES_256_CBC_SHA                                            via 0x09a5f348@null
+  0x00bd324c  TLS_DHE_DSS_WITH_AES_256_CBC_SHA256                                     via 0x09a5f618@null
+  0x00bd3270  DHE-RSA-AES128-CCM                                                      via 0x09a5fa70@null
+  0x00bd3283  DHE-RSA-AES256-CCM8                                                     via 0x09a5fc00@null
+  0x00bd3297  PSK-AES256-CCM                                                          via 0x09a5fca0@null
+  0x00bd32a6  TLS_ECDHE_ECDSA_WITH_AES_128_CCM                                        via 0x09a5fed8@null
+  0x00bd32c7  TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA                                      via 0x09a60158@null
+  0x00bd32ea  TLS_RSA_PSK_WITH_AES_256_CBC_SHA                                        via 0x09a607e8@null
+  0x00bd330b  ARIA256-GCM-SHA384                                                      via 0x09a61370@null
+  0x00bd331e  Verify error:                                                           via 0x080f59f8@FUN_080f569c
+  0x00bd332c  SUITEB128ONLY                                                           via 0x080f6b84@FUN_080f6b34
+  0x00bd333a  kRSAPSK                                                                 via 0x099501e0@null
+  0x00bd3342  kSRP                                                                    via 0x099502d0@null
+  0x00bd3347  EDH-DSS-DES-CBC3-SHA                                                    via 0x09951590@null
+  0x00bd335c  construct_ca_names                                                      via 0x099516d8@null
+  0x00bd336f  custom_ext_parse                                                        via 0x09951768@null
+  0x00bd3380  nss_keylog_int                                                          via 0x099519c8@null
+  0x00bd338f  ssl3_read_n                                                             via 0x09951c58@null
+  0x00bd339b  SSL_CTX_set_ct_validation_callback                                      via 0x09951f48@null
+  0x00bd33be  ssl_get_new_session                                                     via 0x099520e8@null
+  0x00bd33d2  tls13_generate_secret                                                   via 0x099525b8@null
+  0x00bd33e8  tls_construct_ctos_maxfragmentlen                                       via 0x099528a8@null
+  0x00bd340a  tls_construct_next_proto                                                via 0x09952a38@null
+  0x00bd3423  tls_construct_stoc_ec_pt_formats                                        via 0x09952ae8@null
+  0x00bd3444  tls_get_message_header                                                  via 0x09952c18@null
+  0x00bd345b  tls_parse_ctos_post_handshake_auth                                      via 0x09952cd8@null
+  0x00bd347e  tls_parse_ctos_psk                                                      via 0x09952ce8@null
+  0x00bd3491  tls_parse_ctos_status_request                                           via 0x09952d68@null
+  0x00bd34af  tls_process_client_hello                                                via 0x09952f98@null
+  0x00bd34c8  ca md too weak                                                          via 0x09953438@null
+  0x00bd34d7  context not dane enabled                                                via 0x09953528@null
+  0x00bd34f0  duplicate compression id                                                via 0x09953698@null
+  0x00bd3509  exceeds max fragment size                                               via 0x09953718@null
+  0x00bd3523  invalid serverinfo data                                                 via 0x09953908@null
+  0x00bd353b  not server                                                              via 0x09953ab8@null
+  0x00bd3546  no cookie callback set                                                  via 0x09953b68@null
+  0x00bd355d  no renegotiation                                                        via 0x081019ec@FUN_081018a4,0x09953bc8@null
+  0x00bd356e  pem name bad prefix                                                     via 0x09953d08@null
+  0x00bd3582  request pending                                                         via 0x09953e08@null
+  0x00bd3592  ssl library has no ciphers                                              via 0x09954028@null
+  0x00bd35ad  still in init                                                           via 0x099540c8@null
+  0x00bd35bb  tlsv1 alert user cancelled                                              via 0x099541b8@null
+  0x00bd35d6  tlsv1 certificate unobtainable                                          via 0x099541e8@null
+  0x00bd35f5  , cmd=                                                                  via 0x080fd620@FUN_080fd408
+  0x00bd35fc  EmptyFragments                                                          via 0x09954c90@null
+  0x00bd360b  PrioritizeChaCha                                                        via 0x09954d98@null
+  0x00bd3643  protocol version                                                        via 0x081019bc@FUN_081018a4
+  0x00bd3654  ecdsa_secp384r1_sha384                                                  via 0x09955740@null
+  0x00bd366b  Training/TrainingMatchInitPre                                           via 0x09a61f58@null
+  0x00bd3689  Match/PkOrder/MatchPostPkOrder                                          via 0x09a622a0@null
+  0x00bd36a8  Match/Sugoroku/SugorokuClearEnd                                         via 0x09a622e8@null
+  0x00bd36c8  MyClub/MyTeam/ProcessPlayerInherit                                      via 0x09a62588@null
+  0x00bd36eb  Online/EvCompe/TourPvp/ProcEvCompeMatchInit                             via 0x09a62a20@null
+  0x00bd3717  Online/EvCompe/Coop/ProcEvCompeEventEnter                               via 0x09a62b88@null
+  0x00bd3741  Online/EvCompe/MlEvent/ProcMlEventRoot                                  via 0x09a62ea0@null
+  0x00bd3768  Online/EvCompe/MlEvent/ProcMlEventRestart                               via 0x09a62ee8@null
+  0x00bd3792  Online/MatchPass/ProcMatchPassInit                                      via 0x09a63158@null
+  0x00bd37b5  Settings/UserInfo/ProcessUserDetailFromRanking                          via 0x09a633f8@null
+  0x00bd37e4  language_select                                                         via 0x081264e4@FUN_081261c0
+  0x00bd37f4  path_to_glory_demo                                                      via 0x0812dcb0@FUN_0812d9d0
+  0x00bd3807  CmdSetSugoroku.php                                                      via 0x081312e8@FUN_0813122c,0x08131af0@FUN_081319fc
+  0x00bd381a  before_go_around_num                                                    via 0x08131c3c@FUN_08131b48,0x08131c54@FUN_08131b48
+  0x00bd382f  team_select_authentic                                                   via 0x0814273c@FUN_081423c0
+  0x00bd3845  TaskMlEventLife                                                         via 0x08146890@FUN_0814684c
+  0x00bd3855  ExecuteConsoleCommand "ke ParkourPlayerManager_C LoadPlayers"           via 0x08168a3c@FUN_08167cbc
+  0x00bd3893  SaveDownload0DeleteTask                                                 via 0x08179a54@FUN_08179a30
+  0x00bd38ae  Def_Sound_Commentary_Language_Enable                                    via 0x08183d08@FUN_08183cec
+  0x00bd38d3  A1_BT0_02                                                               via 0x0818642c@FUN_081863a8,0x0996b3e8@null
+  0x00bd38e5  SA_C_NMB_E43                                                            via 0x099674e8@null
+  0x00bd38f2  SA_C_NMB_E87                                                            via 0x09967648@null
+  0x00bd38ff  SA_C_NMB31                                                              via 0x099677a8@null
+  0x00bd390a  SA_C_NMB44                                                              via 0x09967810@null
+  0x00bd3915  SA_C_NMB75                                                              via 0x09967908@null
+  0x00bd3920  MinorVersion                                                            via 0x0818e578@FUN_0818e4c8
+  0x00bd392d  Chant                                                                   via 0x0818ec88@FUN_0818ebe8
+  0x00bd3933  SA_TSU                                                                  via 0x09968060@null,0x0996b3d8@null
+  0x00bd393a  SetPrivateFlagForConfigMessageBoard                                     via 0x099685a8@null
+  0x00bd395e  CheckBallKeep                                                           via 0x09968818@null
+  0x00bd396c  CheckMatchResultDetail                                                  via 0x099689b0@null
+  0x00bd3983  CheckScoresDetail                                                       via 0x099689f8@null
+  0x00bd3995  CheckDifferenceScores                                                   via 0x09968a28@null
+  0x00bd39ab  CheckConditionForFoul                                                   via 0x09968b18@null
+  0x00bd39c1  CheckRatioStatsDataNumOtherKind                                         via 0x09968f50@null
+  0x00bd39e1  CheckStatsDataNumForPlayer                                              via 0x09968f80@null
+  0x00bd39fc  CheckFoulKindDetail                                                     via 0x09969100@null
+  0x00bd3a10  CheckDistEnemyGK                                                        via 0x09969688@null
+  0x00bd3a21  CheckConditionPassSdConfig                                              via 0x099699e8@null
+  0x00bd3a3c  TargetSideForSound                                                      via 0x09969fc8@null
+  0x00bd3a4f  ImportanceMatchKind                                                     via 0x0996a038@null
+  0x00bd3a63  LooseBallVariousData                                                    via 0x0996a248@null
+  0x00bd3a78  RestartStep                                                             via 0x0996a258@null
+  0x00bd3c72  A1_TEAMVS2                                                              via 0x0996b2f8@null
+  0x00bd3c7d  BGM_CALL_ENTER                                                          via 0x0996b4d0@null
+  0x00bd3c8c  BGM_CALL_COMPETITIONS_ANTHEM                                            via 0x0996b4f0@null
+  0x00bd3ca9  SEQ_STOP                                                                via 0x0996b530@null
+  0x00bd3cb2  DEMO_SCENE_CHANGE                                                       via 0x081d8f04@FUN_081d8d94
+  0x00bd3cc4  SCALE_C                                                                 via 0x081d9008@FUN_081d8d94
+  0x00bd3ccc  Neutral                                                                 via 0x081f7de8@FUN_081f7d44,0x081dddf4@FUN_081ddc58
+  0x00bd3cd4  Stadium                                                                 via 0x081de2c4@FUN_081de284
+  0x00bd3cdc  Def_Sound_Sys_Preset_Volume_ITS_Stadium_Music                           via 0x081f84e8@FUN_081f82b0
+  0x00bd3d0a  Def_Sound_Sys_Preset_Volume_TV_On_The_Field                             via 0x081f8638@FUN_081f82b0
+  0x00bd3d36  Himno                                                                   via 0x0996bcf0@null,0x0996bd00@null,0x0996bd10@null
+  0x00bd3d3c  IsCMPUpdateEnd                                                          via 0x0822a014@FUN_08229fdc
+  0x00bd3d4b  openAppList                                                             via 0x0822b3a0@FUN_0822b30c
+  0x00bd3d57  dt270                                                                   via 0x0822eab4@FUN_0822e9ec,0x0996c410@null,0x0996c630@null
+  0x00bd3d5d  dt540                                                                   via 0x0822eae4@FUN_0822e9ec,0x0996c460@null,0x0996c680@null
+  0x00bd3d63  sendEventTutorialComp                                                   via 0x0823aba4@FUN_0823ab6c
+  0x00bd3d8d  Def_System_PESVERSION_FAKE_VALUE                                        via 0x0824a47c@FUN_0824a454
+  0x00bd3dc3  Attempted to initialize AssetPackManager again.                         via 0x082fd7ac@Init
+  0x00bd3df3  ____Z                                                                   via 0x08309fd4@__cxa_demangle
+  0x00bd3dfb  typename                                                                via 0x08317ab0@FUN_08317a4c
+  0x00bd3e05  (anonymous namespace)::itanium_demangle::AbstractManglingParser<(anony  via 0x083174cc@FUN_08317018,0x08317560@FUN_083174fc,0x08316150@FUN_08315a94
+  0x00bd3fa3  out/llvm-project/libcxxabi/src/demangle/StringView.h                    via 0x083128d0@FUN_08312634
+  0x00bd3fe6   volatile                                                               via 0x0831ea14@FUN_0831e778,0x0831f0b8@FUN_0831efcc,0x0831caf0@FUN_0831c83c
+  0x00bd3ff0  long double                                                             via 0x0830be88@FUN_0830b0f0
+  0x00bd3ffc  mutex lock failed                                                       via 0x0833bcd0@lock,0x0833beb8@~timed_mutex,0x0833bf50@lock
+  0x00bd400e  generic                                                                 via 0x08345580@FUN_08345578,0x0999b600@null
+  0x00bd406f  left-brace                                                              via 0x09974a70@null
+  0x00bd407a  G:\RenderPlat\Engine\Source\ThirdParty\PhysX3\PhysX_3.4\Source\compile  via 0x0839b1cc@buildObjectFromData
+  0x00bd4100  Inserting object failed: Object type not supported for buildObjectFrom  via 0x0839b1d0@buildObjectFromData
+  0x00bd414c  static const char *physx::shdfnd::ReflectionAllocator<physx::PxActor *  via 0x083ab900@recreate,0x083ab9f0@growAndPushBack
+  0x00bd41b6  PxAggregate: can't add actor to aggregate, actor already belongs to an  via 0x083ae2d8@addActor
+  0x00bd4207  PxRigidActor::release: Actor is part of a pruning structure, pruning s  via 0x083c0ae0@release,0x083bed30@release,0x083b3ea4@release
+  0x00bd4266  PxScene::addActor(): Actor already assigned to a scene. Call will be i  via 0x083c27fc@addActor
+  0x00bd42b4  PxScene::collide: collide() called illegally! If it isn't the first fr  via 0x083c6e5c@collide
+  0x00bd438b  getVisualizationParameter: param is not an enum.                        via 0x083c7fc8@getVisualizationParameter
+  0x00bd43bc  PxScene::setCCDMaxPasses() not allowed while simulation is running. Ca  via 0x083c5f78@setCCDMaxPasses
+  0x00bd4416  static const char *physx::shdfnd::ReflectionAllocator<physx::PxDebugLi  via 0x083cdf00@recreate,0x083ce010@growAndPushBack
+  0x00bd4484  Call to PxCloth::setMotionConstraintConfig() not allowed while simulat  via 0x083de48c@setMotionConstraintConfig
+  0x00bd44da  Call to PxCloth::getFrictionCoefficient() not allowed while simulation  via 0x083dfa6c@getFrictionCoefficient
+  0x00bd452d  Call to PxCloth::setWakeCounter() not allowed while simulation is runn  via 0x083e0b10@setWakeCounter
+  0x00bd4578  Call to PxCloth::wakeUp() not allowed while simulation is running.      via 0x083e0be8@wakeUp
+  0x00bd45bb  Pt::Batcher::collPrep                                                   via 0x0841ce40@Batcher
+  0x00bd45d1  PrunerStructure::build: Provided actor has no scene query shape!        via 0x0843af6c@build
+  0x00bd4612  static const char *physx::shdfnd::ReflectionAllocator<physx::Sq::AABBT  via 0x0844b94c@insert,0x0844a9f0@splitLeafNode,0x0844e154@growAndPushBack
+  0x00bd4690  static const char *physx::shdfnd::ReflectionAllocator<physx::IG::EdgeI  via 0x08460778@recreate
+  0x00bd4708  static const char *physx::shdfnd::ReflectionAllocator<physx::Sc::Trigg  via 0x08471100@grow,0x08471000@growAndPushBack,0x0847490c@growAndPushBack
+  0x00bd478c  Filtering: eCALLBACK set but no filter callback defined.                via 0x0846ac44@runFilter
+  0x00bd4824  ScScene.updateBodiesAndShapes                                           via 0x08499258@Scene
+  0x00bd4842  static const char *physx::shdfnd::ReflectionAllocator<physx::Sc::Artic  via 0x0849e680@addArticulationJoint
+  0x00bd48ca  G:\RenderPlat\Engine\Source\ThirdParty\PhysX3\PxShared\src\task\src\Ta  via 0x084b66fc@createTaskManager,0x084b6d70@dispatchTask,0x084b6d30@dispatchTask
+  0x00bd491e  PxsContext.postCCDAdvance                                               via 0x084b7c8c@PxsCCDContext
+  0x00bd4938  MBP::addRegion: max number of regions reached.                          via 0x084c3704@addRegion
+  0x00bd4967  G:\RenderPlat\Engine\Source\ThirdParty\PhysX3\PhysX_3.4\Source\Simulat  via 0x084eb0d0@addCollisionSphere,0x084eb310@addCollisionPlane,0x084eb694@addCollisionCapsule
+  0x00bd49d4  Dropping collision plane due to 32 plane limit                          via 0x084eb314@addCollisionPlane
+  0x00bd4a03  eDISABLE_PREPROCESSING                                                  via 0x09a64eb0@null,0x09a65230@null
+  0x00bd4a1a  OwnerClient                                                             via 0x0851baac@PxActorGeneratedInfo,0x0851bd0c@PxRigidActorGeneratedInfo,0x0851c0cc@PxRigidBodyGeneratedInfo
+  0x00bd4a26  MassSpaceInertiaTensor                                                  via 0x0851c21c@PxRigidBodyGeneratedInfo
+  0x00bd4a3d  RigidBodyFlags                                                          via 0x085a50f8@operator(),0x0851c2a0@PxRigidBodyGeneratedInfo
+  0x00bd4a4c  TwistLimitContactDistance                                               via 0x0851d158@PxArticulationJointGeneratedInfo
+  0x00bd4a66  ContactOffset                                                           via 0x0851f630@PxParticleBaseGeneratedInfo,0x0851ed70@PxClothGeneratedInfo,0x0851de38@PxShapeGeneratedInfo
+  0x00bd4a74  ParticleReadDataFlags                                                   via 0x085679e8@objectToFileImpl,0x08568364@fileToObject,0x08565988@objectToFileImpl
+  0x00bd4a8a  RigidActors                                                             via 0x0851fb00@PxPruningStructureGeneratedInfo
+  0x00bd4a96  ClothInterCollisionDistance                                             via 0x08520a2c@PxSceneGeneratedInfo,0x08520a04@PxSceneGeneratedInfo
+  0x00bd4ab2  MaxNbDynamicShapes                                                      via 0x08521284@PxSceneLimitsGeneratedInfo
+  0x00bd4ac5  MaxNbBroadPhaseOverlaps                                                 via 0x08521308@PxSceneLimitsGeneratedInfo
+  0x00bd4add  NpActor                                                                 via 0x08543320@PxGetPhysicsBinaryMetaData,0x0853f614@getBinaryMetaData
+  0x00bd4ae5  NpMaterial                                                              via 0x08549e84@PxRegisterPhysicsSerializers,0x085433dc@PxGetPhysicsBinaryMetaData,0x08543414@PxGetPhysicsBinaryMetaData
+  0x00bd4b03  Sc::ClothFabricCore                                                     via 0x085463e8@getBinaryMetaData
+  0x00bd4b17  column0                                                                 via 0x086baa08@create,0x086baabc@create
+  0x00bd4ba0  PxArticulationRef                                                       via 0x0856c460@objectToFileImpl,0x0856c4a0@objectToFileImpl,0x0856c948@fileToObject
+  0x00bd4bb2  eVELOCITY_BUFFER                                                        via 0x09a65940@null
+  0x00bd4bc3  eREST_OFFSET_BUFFER                                                     via 0x09a65950@null
+  0x00bd4bd7  PxSphereGeometry                                                        via 0x085ad430@parseShape<physx::Sn::RepXVisitorReaderBase<physx::PxArticulationLink>>,0x085a5d34@parseShape<physx::Sn::RepXVisitorReader<physx::PxRigidDynamic>>,0x0859ef50@parseShape<physx::Sn::RepXVisitorReaderBase<physx::PxRigidStatic>>
+  0x00bd4be8  PxShapeRef                                                              via 0x085acba8@readShapesProperty<physx::Sn::RepXVisitorReaderBase<physx::PxArticulationLink>,physx::PxArticulationLink>,0x085acd54@readShapesProperty<physx::Sn::RepXVisitorReaderBase<physx::PxArticulationLink>,physx::PxArticulationLink>,0x085a1074@handleShapes<physx::Sn::RepXVisitorWriterBase<physx::PxRigidDynamic>>
+  0x00bd4bf3  eENABLE_CCD_FRICTION                                                    via 0x09a656c0@null
+  0x00bd4c08  eDISABLE_STRONG_FRICTION                                                via 0x09a65750@null
+  0x00bd4c21  PxSerialization::createCollectionFromBinary: External references neede  via 0x085b2628@createCollectionFromBinary
+  0x00bd4c93  PxBinaryConverter: Buffer contains data version (%x-%d) is incompatibl  via 0x085b7364@convert
+  0x00bd4d18  static const char *physx::shdfnd::ReflectionAllocator<physx::Sn::MetaD  via 0x085ba720@loadMetaData
+  0x00bd4d88  static const char *physx::shdfnd::ReflectionAllocator<physx::Gu::Heigh  via 0x085c6b20@createHeightField,0x085c6c0c@createHeightField
+  0x00bd4e32  MaterialIndicesStruct                                                   via 0x085cb368@getBinaryMetaData
+  0x00bd4e48  PxGeometryType::Enum                                                    via 0x085cb564@getBinaryMetaData
+  0x00bd4e6f  G:\RenderPlat\Engine\Source\ThirdParty\PhysX3\PhysX_3.4\Source\PhysXVe  via 0x086c507c@allocate,0x086c51a0@create
+  0x00bd4f24  PxCloseVehicleSDK called with different PxSerializationRegistry instan  via 0x086ca31c@PxCloseVehicleSDK
+  0x00bd4f84  eDIFF_TYPE_OPEN_4WD                                                     via 0x086f9098@operator(),0x09a66278@null,0x09a66568@null
+  0x00bd4f98  G:\RenderPlat\Engine\Source\ThirdParty\PhysX3\PhysX_3.4\Source\PhysXVe  via 0x086e39bc@fileToObject,0x086e519c@fileToObject,0x086e6084@fileToObject
+  0x00bd5003  suspJounce                                                              via 0x08713f8c@setupWheelGraph
+  0x00bd500e  RecipRadius                                                             via 0x087153a8@PxVehicleWheelDataGeneratedInfo
+  0x00bd501a  TireRestLoadsArray                                                      via 0x08715b08@PxVehicleWheels4SimDataGeneratedInfo
+  0x00bd502d  AnalogInput                                                             via 0x087164f8@PxVehicleDriveDynDataGeneratedInfo
+  0x00bd503c  Pacific/Chatham                                                         via 0x08725720@uprv_tzname_64,0x09983040@null
+  0x00bd5050  AKDT                                                                    via 0x09983758@null
+  0x00bd5055  ucnv_load                                                               via 0x09983858@null
+  0x00bd505f  swaplfnl                                                                via 0x08733f20@FUN_08733e48
+  0x00bd5068  utf16le                                                                 via 0x09983bf0@null
+  0x00bd50e9  ar_LY                                                                   via 0x0998c098@null
+  0x00bd50ef  arn_CL                                                                  via 0x0998c138@null
+  0x00bd50f6  ckb_Arab_IQ                                                             via 0x0998c368@null
+  0x00bd5102  cy_GB                                                                   via 0x0998c3c8@null
+  0x00bd5108  de_AT                                                                   via 0x0998c408@null
+  0x00bd510e  en_BZ                                                                   via 0x0998c4d8@null
+  0x00bd5114  hi_IN                                                                   via 0x0998cbd8@null
+  0x00bd511a  hr_HR                                                                   via 0x0998cc68@null
+  0x00bd5120  kk_KZ                                                                   via 0x0998cf38@null
+  0x00bd5126  no_NO                                                                   via 0x0998d348@null
+  0x00bd512c  quz_PE                                                                  via 0x0998d558@null
+  0x00bd5133  sma_NO                                                                  via 0x0998d768@null
+  0x00bd513a  ti_ER                                                                   via 0x0998d9d8@null
+  0x00bd5140  yo_NG                                                                   via 0x0998dca8@null
+  0x00bd5146  sgn-se                                                                  via 0x09991920@null
+  0x00bd514d  zh-wuu                                                                  via 0x09991990@null
+  0x00bd5160  U_MISPLACED_CURSOR_OFFSET                                               via 0x099938b0@null
+  0x00bd517a  U_MULTIPLE_PERMILL_SYMBOLS                                              via 0x099939a8@null
+  0x00bd5195  U_UNSUPPORTED_ATTRIBUTE                                                 via 0x099939d8@null
+  0x00bd51ad  month-format-except-narrow                                              via 0x0880eea0@initializeData,0x099948a8@null
+  0x00bd51c8  month-standalone-except-narrow                                          via 0x0880eed0@initializeData,0x099948c8@null
+  0x00bd51e7  others                                                                  via 0x08880950@getReorderCode
+  0x00bd51ee  territory                                                               via 0x088d32fc@put
+  0x00bd51f8  square-yard                                                             via 0x0999a900@null
+  0x00bd5204  liter-per-kilometer                                                     via 0x0999a950@null
+
+==============================================================================
+B. LITERALS REFERENCED AT EACH KNOWN SITE
+==============================================================================
+
+  site ELF 0x07b23164 / dump 0x07ecad64  ->  1 literal(s)
+      0x00bd120e  pes-custom-encrypt                                                      @ _INIT_11490
+
+  site ELF 0x07b2eb78 / dump 0x07ec024c  ->  1 literal(s)
+      0x00bd120e  pes-custom-encrypt                                                      @ _INIT_11483
+
+  site ELF 0x07b34d18 / dump 0x07c39120  ->  1 literal(s)
+      0x00bd120e  pes-custom-encrypt                                                      @ _INIT_11438
+
+  site ELF 0x07b35cf4 / dump 0x07c36ba8  ->  1 literal(s)
+      0x00bd120e  pes-custom-encrypt                                                      @ _INIT_11436
+
+  site ELF 0x07b36ba8 / dump 0x07c35cf4  ->  1 literal(s)
+      0x00bd120e  pes-custom-encrypt                                                      @ _INIT_11435
+
+  site ELF 0x07b39120 / dump 0x07c34d18  ->  1 literal(s)
+      0x00bd120e  pes-custom-encrypt                                                      @ _INIT_11434
+
+  site ELF 0x07ec024c / dump 0x07c2eb78  ->  1 literal(s)
+      0x00bd120e  pes-custom-encrypt                                                      @ _INIT_11432
+
+  site ELF 0x07ecad64 / dump 0x07c23164  ->  1 literal(s)
+      0x00bd120e  pes-custom-encrypt                                                      @ _INIT_11426
+
+==============================================================================
+C. FUNCTIONS WHOSE XREF SPAN COVERS A KNOWN SITE  (9)
+==============================================================================
+
+--- null   span 0x0111b264 .. 0x09a6a3f0   (88798 literals)
+      0x0111b264  0x02966168  *$@)
+      0x0111cafc  0x0298d3e0  H H9
+      0x0111cb04  0x0298d400  H H9H
+      0x0112448c  0x02a5aeb4  *$@)
+      0x011244f4  0x02a5b24c  *$@)
+      0x011255fc  0x02a8f22c  *$@)
+      0x011267dc  0x02ab7868  HpG9
+      0x01126a44  0x02ac09f8  *$@)
+      0x01126b14  0x02ac1290  *$@)
+      0x01126be4  0x02ac1b1c  *$@)
+      0x01127ee4  0x02ae7588  *$@)
+      0x01138454  0x02bfba10  *$@)
+      0x01138774  0x02c01224  *$@)
+      0x01138814  0x02c01c14  *$@)
+      0x01138884  0x02c0204c  *$@)
+      0x01193dac  0x03045244  (pA9
+      0x0119daf4  0x031d63b8  (@@Q
+      0x011a7724  0x033a83e0  (@@9
+      0x011c9dec  0x039b97b8  *$@)
+      0x07f1814c  0x00aedf1d  G:\PES22HC\Dev-600Series\Source\Shared\basic\ext\grpc\grpc\src\core\li
+      0x07f18154  0x00b011b4  grpc_channel_register_call(channel=%p, method=%s, host=%s, reserved=%p
+      0x07f1818c  0x00adaa3c  !reserved
+      0x08c76a10  0x00d07c2a  bLooping
+      0x08c76e48  0x00bfc245  /Script/SoundMod
+      0x08c76e78  0x00c48269  SoundMod
+      0x08c76f30  0x00b059d1  SoundModAssetPtr
+      0x08c784f8  0x00bfc256  EFileMediaOutputPixelFormat::B8G8R8A8
+      0x08c78508  0x00c0f6f1  EFileMediaOutputPixelFormat::FloatRGBA
+      0x08c78528  0x00c81840  EFileMediaOutputPixelFormat
+      0x08c78568  0x00b3d81f  WriteOptions
+      0x08c78598  0x00b63db1  FilePath
+      0x08c785c8  0x00be94a5  BaseFileName
+      0x08c785f0  0x00be94b2  bOverrideDesiredSize
+      0x08c78628  0x00b059e2  DesiredSize
+      0x08c78658  0x00c229cd  bOverridePixelFormat
+      0x08c78690  0x00cbbd11  UnderlyingType
+      0x08c786b8  0x00ce1610  DesiredPixelFormat
+      0x08c787a8  0x00be94c7  MediaCaptureStateChangedSignature__DelegateSignature
+      0x08c787e0  0x00c5b1c1  EMediaCaptureCroppingType::None
+      0x08c787f0  0x00af291f  EMediaCaptureCroppingType::Center
+      0x08c78800  0x00c5b1e1  EMediaCaptureCroppingType::TopLeft
+      0x08c78810  0x00c6e0e3  EMediaCaptureCroppingType::Custom
+      0x08c78830  0x00c48272  EMediaCaptureCroppingType
+      0x08c78860  0x00cceae7  EMediaCaptureState::Error
+      0x08c78870  0x00c4828c  EMediaCaptureState::Capturing
+      0x08c78880  0x00ce1623  EMediaCaptureState::Preparing
+      0x08c78890  0x00c8185c  EMediaCaptureState::StopRequested
+      0x08c788a0  0x00cceb01  EMediaCaptureState::Stopped
+      0x08c788c0  0x00bb0d74  EMediaCaptureState
+      0x08c78920  0x00ca866e  Crop
+      0x08c78950  0x00ca8673  CustomCapturePoint
+      0x08c78980  0x00c3578d  bResizeSourceBuffer
+      0x08c789b8  0x00c5b204  bSkipFrameWhenRunningExpensiveTasks
+      0x08c78a30  0x00bb0d87  MediaCaptureOptions
+      0x08c78ae0  0x00b2aa16  CaptureOptions
+      0x08c78b10  0x00af294d  ReturnValue
+      0x08c78b68  0x00cbbd20  CaptureActiveSceneViewport
+      0x08c78ba0  0x00b89fa4  RenderTarget
+      0x08c78c60  0x00bb0d9b  CaptureTextureRenderTarget2D
+      0x08c78ce0  0x00cceb1d  GetDesiredPixelFormat
+      0x08c78d60  0x00c946c5  GetDesiredSize
+      0x08c78e18  0x00d07c48  GetState
+      0x08c78e50  0x00bb0db8  InMediaOutput
+      0x08c78e98  0x00bd6889  SetMediaOutput
+      0x08c78ed0  0x00c482aa  bAllowPendingFrameToBeProcess
+      0x08c78f20  0x00af2941  StopCapture
+      0x08c78fe0  0x00ab87e1  UpdateTextureRenderTarget2D
+      0x08c790a8  0x00c229e2  OnStateChanged
+      0x08c790d8  0x00b63dba  MediaOutput
+      0x08c79108  0x00bb0dc6  CapturingRenderTarget
+      0x08c79310  0x00c5b228  /Script/MediaIOCore
+      0x08c79330  0x00acbf49  EMediaIOReferenceType::FreeRun
+      0x08c79340  0x00cf4942  EMediaIOReferenceType::External
+      0x08c79350  0x00c0f718  EMediaIOReferenceType::Input
+      0x08c79370  0x00ce1641  EMediaIOReferenceType
+      0x08c793a0  0x00b3d82c  EMediaIOOutputType::Fill
+      0x08c793b0  0x00c946d4  EMediaIOOutputType::FillAndKey
+      0x08c793d0  0x00c357a1  EMediaIOOutputType
+      0x08c79400  0x00af2959  EMediaIOInputType::Fill
+      0x08c79410  0x00d07c51  EMediaIOInputType::FillAndKey
+      ... 1 more in this function not printed
+
+--- _INIT_11426   span 0x07c23164 .. 0x07c23164   (1 literals)
+      0x07c23164  0x00bd120e  pes-custom-encrypt
+
+--- _INIT_11432   span 0x07c2eb78 .. 0x07c2eb78   (1 literals)
+      0x07c2eb78  0x00bd120e  pes-custom-encrypt
+
+--- _INIT_11434   span 0x07c34d18 .. 0x07c34d18   (1 literals)
+      0x07c34d18  0x00bd120e  pes-custom-encrypt
+
+--- _INIT_11435   span 0x07c35cf4 .. 0x07c35cf4   (1 literals)
+      0x07c35cf4  0x00bd120e  pes-custom-encrypt
+
+--- _INIT_11436   span 0x07c36ba8 .. 0x07c36ba8   (1 literals)
+      0x07c36ba8  0x00bd120e  pes-custom-encrypt
+
+--- _INIT_11438   span 0x07c39120 .. 0x07c39120   (1 literals)
+      0x07c39120  0x00bd120e  pes-custom-encrypt
+
+--- _INIT_11483   span 0x07ec024c .. 0x07ec024c   (1 literals)
+      0x07ec024c  0x00bd120e  pes-custom-encrypt
+
+--- _INIT_11490   span 0x07ecad64 .. 0x07ecad64   (1 literals)
+      0x07ecad64  0x00bd120e  pes-custom-encrypt
+
+
+==============================================================================
+E. STRING XREFS IN THE GATE WINDOWS, GROUPED BY FUNCTION SYMBOL
+==============================================================================
+
+--- window gate/sign region  dump 0x07c18000 .. 0x07c44000  : 60 symbol(s)
+
+  _INIT_11422   span 0x07c1b5c0 .. 0x07c1ba6c   (7 literal refs)
+      0x07c1b5c0  0x00ac69fa  online_user_id_data.dat
+      0x07c1b61c  0x00aed35e  UserInfoData.dat
+      0x07c1b790  0x00b7205e  prev_leave_foreground_time
+      0x07c1b7c0  0x00be3be2  privacy_agreement_renewed
+      0x07c1b8f0  0x00d157aa  _?(\w*)$
+
+  FUN_07c1bba0   span 0x07c1bbb0 .. 0x07c1bbb0   (1 literal refs)
+      0x07c1bbb0  0x00c8f165  PlatformAuthTask
+
+  FUN_07c1bf44   span 0x07c1bf54 .. 0x07c1bf54   (1 literal refs)
+      0x07c1bf54  0x00c7be43  PlatformAuthTaskImpl
+
+  FUN_07c1c938   span 0x07c1c9d4 .. 0x07c1c9d4   (1 literal refs)
+      0x07c1c9d4  0x00d807e8  ERR_RESULT_OUTOFRANGE
+
+  FUN_07c1caec   span 0x07c1cb38 .. 0x07c1cb38   (1 literal refs)
+      0x07c1cb38  0x00c2fe53  ERR_CONNECT_SERVICE
+
+  FUN_07c1cd58   span 0x07c1cd94 .. 0x07c1cee4   (5 literal refs)
+      0x07c1cd94  0x00b00136  ERR_TIMEOUT
+      0x07c1cde8  0x00b4addc  ERR_ONLINE
+      0x07c1ce3c  0x00ad954d  ERR_LINKDOWN
+      0x07c1ce90  0x00c687bf  ERR_SERVICE_UNAVAIL
+      0x07c1cee4  0x00c43288  ERR_GATEWAY_TIMEOUT
+
+  FUN_07c1cf34   span 0x07c1d140 .. 0x07c1d420   (4 literal refs)
+      0x07c1d140  0x00b3859f  ERR_PLATFORM_SERVICE
+      0x07c1d19c  0x00b25cf7  ERR_DIFFERENT_DATAVERSION
+
+  FUN_07c1dc68   span 0x07c1dcf8 .. 0x07c1dda8   (3 literal refs)
+      0x07c1dcf8  0x00ad955a  ERR_CONGESTION
+      0x07c1dd7c  0x00c2fe53  ERR_CONNECT_SERVICE
+      0x07c1dda8  0x00c687bf  ERR_SERVICE_UNAVAIL
+
+  FUN_07c1e03c   span 0x07c1e084 .. 0x07c1e084   (1 literal refs)
+      0x07c1e084  0x00b5e812  FatalError:
+
+  FUN_07c1e134   span 0x07c1e15c .. 0x07c1e204   (3 literal refs)
+      0x07c1e15c  0x00b3859f  ERR_PLATFORM_SERVICE
+      0x07c1e1bc  0x00b4ade7  ERR_SIGNEDOUT
+      0x07c1e204  0x00bd0bad  ERR_ONLINE_PRIVILEGE
+
+  FUN_07c1e234   span 0x07c1e3fc .. 0x07c1ede8   (10 literal refs)
+      0x07c1e3fc  0x00ad954d  ERR_LINKDOWN
+      0x07c1e434  0x00b25d6a  GetCommonInfoTask
+      0x07c1e614  0x00b72079  SERVER_UNAVAIL
+      0x07c1e968  0x00b4ade7  ERR_SIGNEDOUT
+      0x07c1eb2c  0x00b9765d  ERR_FATAL
+      0x07c1ecbc  0x00bd0bad  ERR_ONLINE_PRIVILEGE
+      0x07c1eccc  0x00b3859f  ERR_PLATFORM_SERVICE
+
+  FUN_07c214f8   span 0x07c215d4 .. 0x07c215d4   (1 literal refs)
+      0x07c215d4  0x00bd1221  verify
+
+  FUN_07c22060   span 0x07c22394 .. 0x07c22450   (2 literal refs)
+      0x07c22394  0x00cc99f1  JSON_PARSE_ERROR
+      0x07c22450  0x00b718bb  ERR_SERVERNOTREADY
+
+  _INIT_11426   span 0x07c23164 .. 0x07c23164   (1 literal refs)
+      0x07c23164  0x00bd120e  pes-custom-encrypt
+
+  FUN_07c249b4   span 0x07c24a08 .. 0x07c24a08   (1 literal refs)
+      0x07c24a08  0x00c30595  CMDDeserializer
+
+  FUN_07c25708   span 0x07c25744 .. 0x07c25744   (1 literal refs)
+      0x07c25744  0x00cef17c  %s is finished
+
+  _INIT_11430   span 0x07c2682c .. 0x07c268ec   (9 literal refs)
+      0x07c2682c  0x00c0aa03  "user_name":"
+      0x07c2683c  0x00c8f176  m_userName
+      0x07c26880  0x00aed36f  "team_name_short":"
+      0x07c268a0  0x00cc8efd  m_teamNameShort
+      0x07c268ac  0x00cdc686  "team_name":"
+      0x07c268c8  0x00cbfaea  m_teamName
+      0x07c268e0  0x00b25d7c  stadium_name
+      0x07c268e0  0x00c0aa11  "stadium_name":"
+      0x07c268ec  0x00c8f181  m_stadiumName
+
+  FUN_07c2ab40   span 0x07c2addc .. 0x07c2ae38   (2 literal refs)
+      0x07c2addc  0x00cc99f1  JSON_PARSE_ERROR
+      0x07c2ae38  0x00b718bb  ERR_SERVERNOTREADY
+
+  FUN_07c2b028   span 0x07c2b040 .. 0x07c2b040   (1 literal refs)
+      0x07c2b040  0x00abc995  UserInfo
+
+  FUN_07c2e5fc   span 0x07c2e77c .. 0x07c2e794   (3 literal refs)
+      0x07c2e77c  0x00c8f18f  dec1
+      0x07c2e788  0x00c68e02  dec0
+      0x07c2e794  0x00bf7169  dec2
+
+  _INIT_11432   span 0x07c2eb78 .. 0x07c2eb78   (1 literal refs)
+      0x07c2eb78  0x00bd120e  pes-custom-encrypt
+
+  _INIT_11433   span 0x07c343dc .. 0x07c343dc   (1 literal refs)
+      0x07c343dc  0x00cb644d  https?\://([^/]+)[/$]?([^/]+)?[/$]?
+
+  _INIT_11434   span 0x07c34d18 .. 0x07c34d18   (1 literal refs)
+      0x07c34d18  0x00bd120e  pes-custom-encrypt
+
+  _INIT_11435   span 0x07c35cf4 .. 0x07c35cf4   (1 literal refs)
+      0x07c35cf4  0x00bd120e  pes-custom-encrypt
+
+  _INIT_11436   span 0x07c36ba8 .. 0x07c36ba8   (1 literal refs)
+      0x07c36ba8  0x00bd120e  pes-custom-encrypt
+
+  FUN_07c36ec8   span 0x07c37380 .. 0x07c37584   (3 literal refs)
+      0x07c37380  0x00af282f  event
+      0x07c373bc  0x00c2e53d  retry
+
+  _INIT_11437   span 0x07c37fd4 .. 0x07c37fd4   (1 literal refs)
+      0x07c37fd4  0x00c8f194  (event|data|id|retry): ?(.+)
+
+  FUN_07c38a44   span 0x07c38aa4 .. 0x07c38db8   (2 literal refs)
+      0x07c38aa4  0x00c8f1b1  Xrq-RtAF_91MAE82
+      0x07c38db8  0x00cb6471  sign=
+
+  _INIT_11438   span 0x07c39120 .. 0x07c39120   (1 literal refs)
+      0x07c39120  0x00bd120e  pes-custom-encrypt
+
+  FUN_07c391d0   span 0x07c391d4 .. 0x07c391d4   (1 literal refs)
+      0x07c391d4  0x00ada3c7  SHA256
+
+  FUN_07c39dd4   span 0x07c39e0c .. 0x07c39e0c   (1 literal refs)
+      0x07c39e0c  0x00bd73b7  Close
+
+  FUN_07c3a09c   span 0x07c3a120 .. 0x07c3a18c   (2 literal refs)
+      0x07c3a120  0x00b64b74  android/app/NativeActivity
+      0x07c3a18c  0x00c6efdf  loadClass
+
+  FUN_07c3a28c   span 0x07c3a384 .. 0x07c3a384   (1 literal refs)
+      0x07c3a384  0x00c305a5  SetRequest
+
+  FUN_07c3a3bc   span 0x07c3a4ec .. 0x07c3a54c   (2 literal refs)
+      0x07c3a4ec  0x00c305a5  SetRequest
+      0x07c3a54c  0x00b97e55  SetRequestMemory
+
+  FUN_07c3a684   span 0x07c3a6b4 .. 0x07c3a95c   (12 literal refs)
+      0x07c3a6b4  0x00aed39b  SetUserAgent
+      0x07c3a720  0x00ada3ce  SetContentType
+      0x07c3a764  0x00bab607  application/octet-stream
+      0x07c3a764  0x00cef18c  application/x-www-form-urlencoded
+      0x07c3a7ac  0x00c0aa22  SetConnectTimeoutMsec
+      0x07c3a7b4  0x00be9379  (I)V
+      0x07c3a7d8  0x00c305b0  SetReadTimeoutMsec
+      0x07c3a814  0x00bab5ce  AddRequestHeader
+      0x07c3a820  0x00bab5df  (Ljava/lang/String;Ljava/lang/String;)V
+      0x07c3a944  0x00bf716e  SendRequest
+      0x07c3a95c  0x00b72088  SendRequestNull
+
+  FUN_07c3a994   span 0x07c3a9b4 .. 0x07c3a9bc   (2 literal refs)
+      0x07c3a9b4  0x00bf716e  SendRequest
+      0x07c3a9bc  0x00ada3dd  (Ljava/lang/String;ZLjava/lang/String;[BZ)I
+
+  FUN_07c3ab0c   span 0x07c3ab58 .. 0x07c3b21c   (18 literal refs)
+      0x07c3ab58  0x00bfe039  Cancel
+      0x07c3ab90  0x00b4b4ca  GetResponseProtocol
+      0x07c3abfc  0x00b72098  ReceiveJClassNull
+      0x07c3acb4  0x00c558a6  GetStatusCode
+      0x07c3acf4  0x00ca2b2a  GetContentLength
+      0x07c3ad24  0x00bf717a  GetReceivedDataLength
+      0x07c3ad58  0x00af74b2  IsEnd
+      0x07c3ad90  0x00c5e6db  IsError
+      0x07c3addc  0x00b97e66  GetLastError
+      0x07c3ae34  0x00d023db  GetRequestReceiveTime
+      0x07c3aea4  0x00ca2b3b  GetReceivedData
+      0x07c3aeb0  0x00b132d4  ()[B
+      0x07c3afb8  0x00ca2b4b  GetContentEncoding
+      0x07c3b0b4  0x00c438f3  GetLastErrorExceptionStr
+      0x07c3b21c  0x00bbe904  RecvMemory
+
+  FUN_07c3b2c8   span 0x07c3b2f0 .. 0x07c3b2f0   (1 literal refs)
+      0x07c3b2f0  0x00bd73b7  Close
+
+  FUN_07c3b4f4   span 0x07c3b504 .. 0x07c3b5c0   (5 literal refs)
+      0x07c3b504  0x00c1d449  jp/konami/android/common/HttpImpl
+      0x07c3b554  0x00cb6477  httpObjNull
+      0x07c3b564  0x00cc9a02  ExecuteFindClass
+      0x07c3b5a8  0x00aed383  CreateSessionJClassNull
+      0x07c3b5c0  0x00ccea0f  (Z)V
+
+  FUN_07c3b6a4   span 0x07c3b704 .. 0x07c3b704   (1 literal refs)
+      0x07c3b704  0x00ca2b2a  GetContentLength
+
+  FUN_07c3b75c   span 0x07c3b7bc .. 0x07c3b7bc   (1 literal refs)
+      0x07c3b7bc  0x00bf717a  GetReceivedDataLength
+
+  FUN_07c3bcc0   span 0x07c3bcf8 .. 0x07c3bcf8   (1 literal refs)
+      0x07c3bcf8  0x00bd73b7  Close
+
+  FUN_07c3c018   span 0x07c3c09c .. 0x07c3c09c   (1 literal refs)
+      0x07c3c09c  0x00b64b74  android/app/NativeActivity
+
+  FUN_07c3c208   span 0x07c3c300 .. 0x07c3c300   (1 literal refs)
+      0x07c3c300  0x00c305a5  SetRequest
+
+  FUN_07c3c338   span 0x07c3c468 .. 0x07c3c4c8   (2 literal refs)
+      0x07c3c468  0x00c305a5  SetRequest
+      0x07c3c4c8  0x00b97e55  SetRequestMemory
+
+  FUN_07c3c6d0   span 0x07c3c714 .. 0x07c3c720   (2 literal refs)
+      0x07c3c714  0x00bab622  SetFileParam
+      0x07c3c720  0x00b720aa  (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Stri
+
+  FUN_07c3c9b8   span 0x07c3c9e8 .. 0x07c3cc9c   (9 literal refs)
+      0x07c3c9e8  0x00aed39b  SetUserAgent
+      0x07c3ca54  0x00ada3ce  SetContentType
+      0x07c3ca98  0x00bab607  application/octet-stream
+      0x07c3ca98  0x00cef18c  application/x-www-form-urlencoded
+      0x07c3cad4  0x00c0aa22  SetConnectTimeoutMsec
+      0x07c3cae0  0x00be9379  (I)V
+      0x07c3cb14  0x00bab5ce  AddRequestHeader
+      0x07c3cc84  0x00bf716e  SendRequest
+      0x07c3cc9c  0x00b72088  SendRequestNull
+
+  FUN_07c3ccd4   span 0x07c3cd04 .. 0x07c3cde8   (3 literal refs)
+      0x07c3cd04  0x00bf716e  SendRequest
+      0x07c3cd0c  0x00c8f1c2  (Landroid/content/Context;Ljava/lang/String;ZLjava/lang/String;[BZZ)I
+      0x07c3cde8  0x00bbe90f  jp/konami/android/common/Cronet
+
+  FUN_07c3cebc   span 0x07c3cf08 .. 0x07c3d5cc   (19 literal refs)
+      0x07c3cf08  0x00bfe039  Cancel
+      0x07c3cf40  0x00ac6a12  IsSuccessed
+      0x07c3cf78  0x00ca2b2a  GetContentLength
+      0x07c3cfac  0x00bf717a  GetReceivedDataLength
+      0x07c3d008  0x00b97e66  GetLastError
+      0x07c3d08c  0x00b4b4ca  GetResponseProtocol
+      0x07c3d0dc  0x00b720f8  http/1.0
+      0x07c3d0fc  0x00d023db  GetRequestReceiveTime
+      0x07c3d15c  0x00ca2b3b  GetReceivedData
+      0x07c3d168  0x00b132d4  ()[B
+      0x07c3d270  0x00ca2b4b  GetContentEncoding
+      0x07c3d2c0  0x00ac6a1e  gzip
+      0x07c3d388  0x00c438f3  GetLastErrorExceptionStr
+      0x07c3d50c  0x00c0aa38  http/1.1
+      0x07c3d548  0x00bbe904  RecvMemory
+      0x07c3d570  0x00d157b3  quic
+      0x07c3d5cc  0x00c558a6  GetStatusCode
+
+  FUN_07c3d604   span 0x07c3d62c .. 0x07c3d62c   (1 literal refs)
+      0x07c3d62c  0x00bd73b7  Close
+
+  FUN_07c3d830   span 0x07c3d864 .. 0x07c3d864   (1 literal refs)
+      0x07c3d864  0x00b80701  dummy
+
+  FUN_07c3d924   span 0x07c3d934 .. 0x07c3d9d8   (4 literal refs)
+      0x07c3d934  0x00bbe90f  jp/konami/android/common/Cronet
+      0x07c3d984  0x00cb6477  httpObjNull
+      0x07c3d994  0x00cc9a02  ExecuteFindClass
+      0x07c3d9d8  0x00aed383  CreateSessionJClassNull
+
+  FUN_07c3db7c   span 0x07c3db88 .. 0x07c3db88   (1 literal refs)
+      0x07c3db88  0x00bd1228  HttpClientImpl2
+
+  FUN_07c3e00c   span 0x07c3e040 .. 0x07c3e040   (1 literal refs)
+      0x07c3e040  0x00b80701  dummy
+
+  FUN_07c3e100   span 0x07c3e134 .. 0x07c3e318   (7 literal refs)
+      0x07c3e134  0x00bfe039  Cancel
+      0x07c3e170  0x00c558a6  GetStatusCode
+      0x07c3e1a4  0x00bf717a  GetReceivedDataLength
+      0x07c3e1dc  0x00af74b2  IsEnd
+      0x07c3e218  0x00c5e6db  IsError
+      0x07c3e2d8  0x00d023db  GetRequestReceiveTime
+
+  FUN_07c3e3d8   span 0x07c3e598 .. 0x07c3e598   (1 literal refs)
+      0x07c3e598  0x00b720aa  (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Stri
+
+  FUN_07c3e768   span 0x07c3e778 .. 0x07c3e778   (1 literal refs)
+      0x07c3e778  0x00c305c3  jp/konami/android/common/HttpDownloadImpl
+
+  FUN_07c3e86c   span 0x07c3e87c .. 0x07c3e87c   (1 literal refs)
+      0x07c3e87c  0x00cef1b0  HttpDownloadClientImpl
+
+  FUN_07c3e90c   span 0x07c3e92c .. 0x07c3e934   (2 literal refs)
+      0x07c3e92c  0x00ca2b5e  SendRequestSync
+      0x07c3e934  0x00ada3dd  (Ljava/lang/String;ZLjava/lang/String;[BZ)I
+
+  FUN_07c3ea90   span 0x07c3eac4 .. 0x07c3eac4   (1 literal refs)
+      0x07c3eac4  0x00cc9a13  MatchesManager
+
+--- window second cluster  dump 0x07eb8000 .. 0x07ed8000  : 51 symbol(s)
+
+  FUN_07eb82d8   span 0x07eb8370 .. 0x07eb8448   (3 literal refs)
+      0x07eb8370  0x00bf7745  invitation_task
+      0x07eb83a4  0x00c7c398  use_http_command
+      0x07eb8448  0x00be40ca  WatchRoomInvitationTask
+
+  FUN_07eb8af4   span 0x07eb8b48 .. 0x07eb8b48   (1 literal refs)
+      0x07eb8b48  0x00bf7732  CmdWatchInvitation
+
+  FUN_07eb8cc4   span 0x07eb8d14 .. 0x07eb8e08   (2 literal refs)
+      0x07eb8d14  0x00c7bd00  CmdUnsubscribeGrpc
+      0x07eb8e08  0x00d14fef  CMD_WATCH_INVITATION
+
+  _INIT_11481   span 0x07eb916c .. 0x07eb91dc   (4 literal refs)
+      0x07eb916c  0x00bab0ff  CMD_GET_MAINMENU_INFO
+      0x07eb918c  0x00d1536c  CMD_SET_EVENT_ENTER
+      0x07eb91b8  0x00cb614d  CMD_GET_LEAGUE_INFO
+      0x07eb91dc  0x00ceef59  CMD_SET_SEASON_ENTER
+
+  FUN_07eb9534   span 0x07eb95b4 .. 0x07eb9600   (2 literal refs)
+      0x07eb95b4  0x00d14fef  CMD_WATCH_INVITATION
+      0x07eb9600  0x00ac7182  CmdWatchInvitation.php
+
+  FUN_07eb9724   span 0x07eb97d8 .. 0x07eb9824   (2 literal refs)
+      0x07eb97d8  0x00d14fef  CMD_WATCH_INVITATION
+      0x07eb9824  0x00ac7182  CmdWatchInvitation.php
+
+  FUN_07eb9880   span 0x07eb9920 .. 0x07eb9938   (2 literal refs)
+      0x07eb9920  0x00ca1acf  is_invited
+
+  FUN_07eba3f0   span 0x07eba42c .. 0x07eba42c   (1 literal refs)
+      0x07eba42c  0x00b5f0f5  PrivilegeChecker
+
+  FUN_07ebabcc   span 0x07ebac20 .. 0x07ebadd4   (6 literal refs)
+      0x07ebac20  0x00c30b06  SignInCheckTask
+      0x07ebac84  0x00b00d6e  OnlineServiceEligibilityCheckTask
+      0x07ebacd8  0x00b4b8eb  PaidServiceEligibilityCheckTask
+      0x07ebad34  0x00c6943b  MultiplayPrivilegeCheckTask
+      0x07ebad84  0x00ada8db  CommunicationPrivilegeCheckTask
+      0x07ebadd4  0x00cdcb42  UgmPrivilegeCheckTask
+
+  FUN_07ebae68   span 0x07ebae80 .. 0x07ebae80   (1 literal refs)
+      0x07ebae80  0x00aedbea  CrossPlatformPrivilegeCheckTask
+
+  FUN_07ebc254   span 0x07ebc2a4 .. 0x07ebc2a4   (1 literal refs)
+      0x07ebc2a4  0x00b52031  /dev/urandom
+
+  FUN_07ebc3bc   span 0x07ebc3f8 .. 0x07ebc408   (2 literal refs)
+      0x07ebc3f8  0x00b69874  0123456789abcdef
+
+  FUN_07ebd004   span 0x07ebd080 .. 0x07ebd080   (1 literal refs)
+      0x07ebd080  0x00d15d1d  on_sys_common_thread_pool
+
+  FUN_07ebd220   span 0x07ebd328 .. 0x07ebd328   (1 literal refs)
+      0x07ebd328  0x00ad9bb8  basic::Event
+
+  FUN_07ebd8d8   span 0x07ebd918 .. 0x07ebd918   (1 literal refs)
+      0x07ebd918  0x00cef17c  %s is finished
+
+  FUN_07ebe040   span 0x07ebe05c .. 0x07ebe05c   (1 literal refs)
+      0x07ebe05c  0x00b72614  utilconnectcheck
+
+  FUN_07ebf468   span 0x07ebf508 .. 0x07ebf630   (2 literal refs)
+      0x07ebf508  0x00b80701  dummy
+
+  FUN_07ebfb14   span 0x07ebfb9c .. 0x07ebfb9c   (1 literal refs)
+      0x07ebfb9c  0x00b5f106  r\d+
+
+  _INIT_11483   span 0x07ec024c .. 0x07ec024c   (1 literal refs)
+      0x07ec024c  0x00bd120e  pes-custom-encrypt
+
+  _INIT_11484   span 0x07ec27d0 .. 0x07ec27d0   (1 literal refs)
+      0x07ec27d0  0x00b2643e  cpk_dat/common/etc/cacert.pem
+
+  FUN_07ec2f20   span 0x07ec2f40 .. 0x07ec2f40   (1 literal refs)
+      0x07ec2f40  0x00b5f10b  UtilHashTask
+
+  FUN_07ec3f04   span 0x07ec3f18 .. 0x07ec40a8   (21 literal refs)
+      0x07ec3f18  0x00c43da4  10BASE_HALF
+      0x07ec3f2c  0x00ac7199  10BASE_FULL
+      0x07ec3f40  0x00b00d94  100BASE_HALF
+      0x07ec3f54  0x00b982e2  100BASE_FULL
+      0x07ec3f68  0x00b4b90b  1000BASE_HALF
+      0x07ec3f7c  0x00b1390f  1000BASE_FULL
+      0x07ec3f90  0x00c69457  WIRED
+      0x07ec3fa4  0x00b2645c  WIRELESS
+      0x07ec3fb8  0x00b982ef  MOBILE
+      0x07ec3fcc  0x00b72625  MOBILE_2G
+      0x07ec3fe0  0x00c55e62  MOBILE_3G
+      0x07ec3ff4  0x00c55e6c  MOBILE_4G
+      0x07ec4008  0x00c8f88a  MOBILE_5G
+      0x07ec401c  0x00cefc52  MOBILE_DUN
+      0x07ec4030  0x00c8f894  WIFI
+      0x07ec4044  0x00c43db0  WIMAX
+      0x07ec4058  0x00be40e2  BLUETOOTH
+      0x07ec406c  0x00bd1794  LINK_DOWN
+      0x07ec4080  0x00cefc61  TUNNEL
+      0x07ec4094  0x00c1da36  FIREWIRE
+      0x07ec40a8  0x00b07544  UNKNOWN
+
+  _INIT_11486   span 0x07ec46d4 .. 0x07ec4814   (6 literal refs)
+      0x07ec46d4  0x00b722ff  ACTIVENETWORK:WIFI
+      0x07ec4714  0x00cc9bdf  ACTIVENETWORK:CELLULAR
+      0x07ec4748  0x00c3076d  ACTIVENETWORK:ETHERNET
+      0x07ec4780  0x00b008b6  ACTIVENETWORK:UNKNOWN
+      0x07ec47e0  0x00cef4af  CELLULAR:OK
+      0x07ec4814  0x00b26083  ETHERNET:OK
+
+  _INIT_11487   span 0x07ec48dc .. 0x07ec4ba8   (8 literal refs)
+      0x07ec48dc  0x00b722ff  ACTIVENETWORK:WIFI
+      0x07ec491c  0x00cc9bdf  ACTIVENETWORK:CELLULAR
+      0x07ec4950  0x00c3076d  ACTIVENETWORK:ETHERNET
+      0x07ec4988  0x00b008b6  ACTIVENETWORK:UNKNOWN
+      0x07ec49e8  0x00cef4af  CELLULAR:OK
+      0x07ec4a1c  0x00b26083  ETHERNET:OK
+      0x07ec4b6c  0x00b4b919  CmdSetOnlineStats
+      0x07ec4ba8  0x00ac71a5  CmdSetOnlineMiniStats
+
+  FUN_07ec4be8   span 0x07ec4c50 .. 0x07ec4cf4   (2 literal refs)
+      0x07ec4c50  0x00ad9bb8  basic::Event
+      0x07ec4cf4  0x00c55e76  MultiStatsUploader
+
+  FUN_07ec53c4   span 0x07ec575c .. 0x07ec5e78   (12 literal refs)
+      0x07ec575c  0x00c69460  statistics
+      0x07ec5934  0x00c6946b  save_interval_msec
+      0x07ec5a40  0x00c0ae6b  enable_compress_string
+      0x07ec5a74  0x00c55e89  enable_indicator_stats
+      0x07ec5aa0  0x00b85419  enable_indicator_stats_for_answered
+      0x07ec5ab8  0x00b26468  enable_indicator_stats_for_all
+      0x07ec5ae8  0x00ada8fb  enable_indicator_stats_for_match_category
+      0x07ec5c40  0x00cdcb5c  enable_indicator_stats_for_event_id
+      0x07ec5d5c  0x00b982f6  enable_indicator_stats_for_game_mode
+      0x07ec5e78  0x00c7c3a9  enable_indicator_stats_for_abnormal_end_reason
+
+  FUN_07ec82d0   span 0x07ec83c8 .. 0x07ec83c8   (1 literal refs)
+      0x07ec83c8  0x00cdbc85  game_id
+
+  FUN_07ec92d4   span 0x07ec9354 .. 0x07ec93a4   (2 literal refs)
+      0x07ec9354  0x00bf70db  CMD_SET_ONLINE_STATS
+      0x07ec93a4  0x00c8f899  CmdSetOnlineStats.php
+
+  FUN_07ec942c   span 0x07ec9484 .. 0x07ec9528   (4 literal refs)
+      0x07ec9484  0x00aedc0a  conn_stats
+      0x07ec94b0  0x00cdbc85  game_id
+      0x07ec94ec  0x00b8543d  mini_conn_stats
+      0x07ec9528  0x00b8544d  conn_report
+
+  FUN_07ec9578   span 0x07ec95d0 .. 0x07ec9b10   (3 literal refs)
+      0x07ec95d0  0x00aedc0a  conn_stats
+      0x07ec98e8  0x00b8543d  mini_conn_stats
+      0x07ec9b10  0x00b8544d  conn_report
+
+  FUN_07ec9d7c   span 0x07ec9e30 .. 0x07ec9e80   (2 literal refs)
+      0x07ec9e30  0x00bf70db  CMD_SET_ONLINE_STATS
+      0x07ec9e80  0x00c8f899  CmdSetOnlineStats.php
+
+  _INIT_11490   span 0x07ecad64 .. 0x07ecad64   (1 literal refs)
+      0x07ecad64  0x00bd120e  pes-custom-encrypt
+
+  FUN_07ecb4c0   span 0x07ecb624 .. 0x07ecb6ac   (4 literal refs)
+      0x07ecb624  0x00b85459  %s_%s
+      0x07ecb62c  0x00aedc1e  OnSysData.dat
+      0x07ecb6ac  0x00aedc15  OnSysTmp
+
+  FUN_07ecbaa0   span 0x07ecbb44 .. 0x07ecbcd4   (5 literal refs)
+      0x07ecbb44  0x00b85459  %s_%s
+      0x07ecbb4c  0x00aedc1e  OnSysData.dat
+      0x07ecbb90  0x00aedc15  OnSysTmp
+
+  FUN_07ecbcf4   span 0x07ecbd54 .. 0x07ecbf18   (7 literal refs)
+      0x07ecbd54  0x00cc9ec9  multi_stats_wait_upload_flag
+      0x07ecbd8c  0x00b13921  match_id
+      0x07ecbde4  0x00ca32c9  peer_pid
+      0x07ecbe48  0x00b85459  %s_%s
+      0x07ecbe50  0x00aedc1e  OnSysData.dat
+      0x07ecbf18  0x00aedc15  OnSysTmp
+
+  FUN_07ecbfb8   span 0x07ecc010 .. 0x07ecc198   (9 literal refs)
+      0x07ecc010  0x00cc9ec9  multi_stats_wait_upload_flag
+      0x07ecc074  0x00b13921  match_id
+      0x07ecc160  0x00ca32c9  peer_pid
+
+  FUN_07ecc1e4   span 0x07ecc23c .. 0x07ecc23c   (1 literal refs)
+      0x07ecc23c  0x00cdcb80  multi_stats_data
+
+  FUN_07ecc290   span 0x07ecc2dc .. 0x07ecc314   (3 literal refs)
+      0x07ecc2dc  0x00cdcb80  multi_stats_data
+
+  FUN_07ece1fc   span 0x07ece268 .. 0x07ece268   (1 literal refs)
+      0x07ece268  0x00c0ae5c  CmdCheckString
+
+  FUN_07ed22b8   span 0x07ed234c .. 0x07ed2368   (2 literal refs)
+      0x07ed234c  0x00ada929  <SYSTEM>
+      0x07ed2368  0x00d0299e  %s%02d/%02d %02d:%02d:%02d (%s)
+
+  FUN_07ed23d0   span 0x07ed2458 .. 0x07ed2458   (1 literal refs)
+      0x07ed2458  0x00b00da5  %4d-%02d-%02dT%02d:%02d:%02dZ
+
+  FUN_07ed6a84   span 0x07ed6b64 .. 0x07ed6b64   (1 literal refs)
+      0x07ed6b64  0x00cc9ee6  accept_background_times
+
+  FUN_07ed7260   span 0x07ed7298 .. 0x07ed7298   (1 literal refs)
+      0x07ed7298  0x00baa54d  1.2.8
+
+  FUN_07ed736c   span 0x07ed7384 .. 0x07ed73b8   (3 literal refs)
+      0x07ed7384  0x00cb6c16  jp/konami/android/common/BroadcastPermitter
+      0x07ed73b0  0x00b38c53  EnableBroadcasting
+      0x07ed73b8  0x00cf56f6  (Landroid/content/Context;)V
+
+  FUN_07ed73f0   span 0x07ed7408 .. 0x07ed743c   (3 literal refs)
+      0x07ed7408  0x00cb6c16  jp/konami/android/common/BroadcastPermitter
+      0x07ed7434  0x00c43db6  DisableBroadcasting
+      0x07ed743c  0x00cf56f6  (Landroid/content/Context;)V
+
+  FUN_07ed7474   span 0x07ed749c .. 0x07ed74bc   (2 literal refs)
+      0x07ed749c  0x00be40ec  jp/konami/GetDeviceHash
+      0x07ed74bc  0x00b9e362  <init>
+
+  FUN_07ed7530   span 0x07ed7580 .. 0x07ed77d8   (8 literal refs)
+      0x07ed7580  0x00beb029  invalid
+      0x07ed761c  0x00be40ec  jp/konami/GetDeviceHash
+      0x07ed7640  0x00d029be  getHashedWidevineId
+
+  FUN_07ed7a18   span 0x07ed7a78 .. 0x07ed7aa4   (3 literal refs)
+      0x07ed7a78  0x00be40ec  jp/konami/GetDeviceHash
+      0x07ed7a9c  0x00cefbb2  getPackageName
+      0x07ed7aa4  0x00b9e334  (Landroid/content/Context;)Ljava/lang/String;
+
+  FUN_07ed7b90   span 0x07ed7c1c .. 0x07ed7d6c   (9 literal refs)
+      0x07ed7c1c  0x00b64b74  android/app/NativeActivity
+      0x07ed7c34  0x00b2b779  getClassLoader
+      0x07ed7c3c  0x00b3e76a  ()Ljava/lang/ClassLoader;
+      0x07ed7c6c  0x00c2391d  java/lang/ClassLoader
+      0x07ed7c88  0x00c6efdf  loadClass
+      0x07ed7c90  0x00c5bedb  (Ljava/lang/String;)Ljava/lang/Class;
+      0x07ed7cb0  0x00c6e04c  com/epicgames/ue4/GameActivity
+      0x07ed7d64  0x00aedc2c  getConnectionType
+      0x07ed7d6c  0x00b9d29c  ()Ljava/lang/String;
+
+  FUN_07ed7e54   span 0x07ed7e6c .. 0x07ed7e84   (2 literal refs)
+      0x07ed7e6c  0x00c6947e  jp/konami/android/common/GetRooting
+      0x07ed7e84  0x00cb6c42  isDeviceRooted
+
+  FUN_07ed7f04   span 0x07ed7f9c .. 0x07ed7fc0   (3 literal refs)
+      0x07ed7f9c  0x00ac71bb  jp/konami/android/common/GetWifiManager
+      0x07ed7fb8  0x00c1da3f  getRssi
+      0x07ed7fc0  0x00c1da47  (Landroid/content/Context;)I
+==============================================================================
+D. CRYPTO/KEY-SHAPED LITERALS ANYWHERE IN THE DUMP  (4133)
+==============================================================================
+  0x00ab8ecb  Values_Key                                                              via 0x08d03bb8@null
+  0x00ab9959  PaddingTop_Loose                                                        via 0x030d31fc@FUN_030d301c,0x030d2bb8@FUN_030d2ae0
+  0x00ab9a05  Text_KeyPlayer_Position                                                 via 0x0336f444@FUN_0336eee0,0x03115bd4@FUN_03115620
+  0x00ab9aef  PaddingTop_None                                                         via 0x03193174@FUN_0319307c,0x031911a4@FUN_03190d00
+  0x00abb28e  IsPadReleased                                                           via 0x09148b58@null
+  0x00abb304  DebugPushKeyPads                                                        via 0x09150910@null
+  0x00abb355  HumanTagsToBindingTags_Key                                              via 0x09155b58@null
+  0x00abb5db  OnPadEventTouch                                                         via 0x0917d938@null
+  0x00abbfaa  homePad                                                                 via 0x09209328@null
+  0x00abc4e1  keyPlayerOrderNo                                                        via 0x0922f728@null
+  0x00abcf4c  EPlayEnvDefencePadType::PLAY_ENV_DEFENCE_PAD_TYPE_MATCHUP               via 0x0928fba0@null
+  0x00abd043  GetDefencePadType                                                       via 0x09291080@null
+  0x00abd1b1  EMenuBtnConfigClassicBtnType::BP_VPAD_BTN_CONFIG_CLASSIC_BTN_TYPE_STIC  via 0x092a5db0@null
+  0x00abd1f9  EMenuVpadBtnKind::BP_VPAD_BTN_KIND_DF_MATCHUP                           via 0x092a5f50@null
+  0x00abdfa1  m_cachedAnimations_Key                                                  via 0x09329f10@null,0x0932a168@null,0x0932a3c0@null
+  0x00abe069  EPadKeyStateEnum::PAD_KEY_STATE_CLICKED                                 via 0x09336630@null
+  0x00abe091  EPadKeyStateEnum                                                        via 0x09336690@null,0x09336698@null
+  0x00abe0ba  SetActivePadCancel                                                      via 0x0933f208@null
+  0x00abe0cd  SetActivePadL1                                                          via 0x0933f3a0@null
+  0x00abe0dc  SetActivePadLeft                                                        via 0x0933f538@null
+  0x00abe1bb  EPadType::PURE_ACCEPT                                                   via 0x0934a8b8@null
+  0x00abe1eb  keys                                                                    via 0x0934ba10@null,0x0934ba38@null
+  0x00abe4d0  AnyKey                                                                  via 0x04649910@_INIT_4670
+  0x00abe4ef  Gamepad_RightX                                                          via 0x0467a884@_INIT_4676,0x0464b340@_INIT_4670
+  0x00abe4fe  Gamepad_LeftStick_Up                                                    via 0x0467aa94@_INIT_4676,0x0464b760@_INIT_4670
+  0x00abe54d  ValveIndex_Right_Trackpad_Right                                         via 0x0464dc10@_INIT_4670
+  0x00abe677  Menu.SToolBarComboButtonBlock.Padding                                   via 0x046e37b4@FUN_046d6af8
+  0x00abe69d  /Docking/Tab_Shape                                                      via 0x046e6acc@FUN_046d6af8,0x046e6b2c@FUN_046d6af8,0x046e6b8c@FUN_046d6af8
+  0x00abe78d  ESlateDebuggingInputEvent::KeyUp                                        via 0x09385240@null
+  0x00abe912  CreateShaderResourceView_RenderThread_IB                                via 0x049f151c@FUN_049f14fc,0x049f15b0@FUN_049f14fc
+  0x00abec0e  EARFaceBlendShape::JawOpen                                              via 0x093d87b8@null
+  0x00abec29  EARFaceBlendShape::CheekPuff                                            via 0x093d8988@null
+  0x00abec46  EARFaceBlendShape::NoseSneerRight                                       via 0x093d89c8@null
+  0x00abece3  EHandKeypoint::RingDistal                                               via 0x093e2ba0@null
+  0x00abef83  EMovieSceneKeyInterpolation::Linear                                     via 0x094250c0@null
+  0x00abeff0  MovieSceneEvaluationFieldEntityKey                                      via 0x0942b9f0@null
+  0x00abf0a8  NodeNameToIndexMapping_Key                                              via 0x0943e538@null
+  0x00abf59a  EVirtualKeyboardType::Email                                             via 0x094aedf0@null
+  0x00abfce3  GraphAssetPlayerInformation_Key                                         via 0x09608a68@null
+  0x00abfd2b  bStartAtSecondKey                                                       via 0x0960c6d0@null
+  0x00ac0279  SetDynamicShadowDistanceStationaryLight                                 via 0x096662c8@null
+  0x00ac050b  LMPT_NoPadding                                                          via 0x09676158@null
+  0x00ac084d  InputAxisHandlerDynamicSignature__DelegateSignature                     via 0x096a0498@null
+  0x00ac0952  GetKey                                                                  via 0x096b1700@null
+  0x00ac0ba9  LeftPad                                                                 via 0x096e6010@null
+  0x00ac0cca  CastDynamicShadows                                                      via 0x09706fe0@null
+  0x00ac0ce6  CustomLODMapping_Key                                                    via 0x0970a5f0@null
+  0x00ac139c  ERendererStencilMask::ERSM_128                                          via 0x09767330@null
+  0x00ac1447  bReceiveMobileCSMShadows                                                via 0x0976e788@null
+  0x00ac156d  bForwardShading                                                         via 0x09774528@null
+  0x00ac15d4  bSupportAllShaderPermutations                                           via 0x09775bb0@null
+  0x00ac16b2  EReflectedAndRefractedRayTracedShadows                                  via 0x0977bcb8@null,0x0977bcc0@null
+  0x00ac1a03  SetCastCapsuleIndirectShadow                                            via 0x0979d728@null
+  0x00ac1c90  InputKey                                                                via 0x097b25d8@null
+  0x00ac1dc1  Shape                                                                   via 0x069a9504@FUN_069a94b8,0x069a9698@FUN_069a9544,0x097c4900@null
+  0x00ac1e5e  ETexturePowerOfTwoSetting::PadToPowerOfTwo                              via 0x097cb320@null
+  0x00ac1e99  TEXTUREGROUP_Shadowmap                                                  via 0x097cb680@null
+  0x00ac2097  SHAHashData                                                             via 0x097e6888@null
+  0x00ac25ad  BlackboardKeyA                                                          via 0x09867068@null,0x09867458@null
+  0x00ac2cc5  feint_shakefoot_0_0_000_twice_quick                                     via 0x09a19720@null
+  0x00ac6226  MATERIAL_KEY_PLAYER_005                                                 via 0x076506d8@FUN_076506cc
+  0x00ac720d  G:\PES22HC\Dev-600Series\Source\Shared\basic\ext\grpc\grpc\src\core\li  via 0x07eeefbc@FUN_07eeee54,0x07eeee08@FUN_07eee66c,0x07eeee28@FUN_07eee66c
+  0x00ac73ef  G:\PES22HC\Dev-600Series\Source\Shared\basic\ext\grpc\grpc\src\core\li  via 0x07f14098@FUN_07f13fac,0x07f1417c@FUN_07f13fac,0x07f1414c@FUN_07f13fac
+  0x00ac7529  G:\PES22HC\Dev-600Series\Source\Shared\basic\ext\grpc\grpc\src\core\li  via 0x07f1e16c@FUN_07f1e0ac,0x07f1e144@FUN_07f1e0ac,0x07f1e034@FUN_07f1debc
+  0x00ac75a9  Handshake read failed                                                   via 0x07f20490@FUN_07f20448
+  0x00ac75bf  G:\PES22HC\Dev-600Series\Source\Shared\basic\ext\grpc\grpc\src\core\li  via 0x07f21ad8@FUN_07f21a1c,0x07f21780@FUN_07f2171c,0x07f21984@FUN_07f2171c
+  0x00ac762d  G:\PES22HC\Dev-600Series\Source\Shared\basic\ext\grpc\grpc\src\core\ex  via 0x07f23b28@FUN_07f23a74,0x07f23cf4@FUN_07f23a74,0x07f230f4@FUN_07f22f78
+  0x00ac771a  G:\PES22HC\Dev-600Series\Source\Shared\basic\ext\grpc\grpc\src\core\ex  via 0x07f3b9d4@FUN_07f3b7cc,0x07f3b930@FUN_07f3b7cc,0x07f3b780@FUN_07f3b718
+  0x00ac78a4  handshake_manager %p: handshaking complete -- scheduling on_handshake_  via 0x07f5e294@FUN_07f5dfd4
+  0x00ac79db  Handshaker creation failed with error %s.                               via 0x07f70af4@FUN_07f70a98,0x07f75558@FUN_07f754f8
+  0x00ac7a05  ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-  via 0x09a5dbc0@null
+  0x00ac7aa2  handshaker->interested_parties != nullptr                               via 0x07f77a0c@FUN_07f77778
+  0x00ac7acc  Invalid key and/or nonce and/or tag length are provided at AEAD crypte  via 0x07f79f78@FUN_07f79f20
+  0x00ac7b30  Rekeying failed.                                                        via 0x07f7a844@FUN_07f7a6d0
+  0x00ac7e3c  MapKey::GetInt32Value                                                   via 0x0801f090@FUN_0801efa8
+  0x00ac7fda  EVP_PKEY_get0_RSA                                                       via 0x09936830@null
+  0x00ac7fec  EVP_PKEY_set1_engine                                                    via 0x09936930@null
+  0x00ac8001  expecting an rsa key                                                    via 0x09936bc0@null
+  0x00ac8016  expecting a dh key                                                      via 0x09936bd0@null
+  0x00ac80aa  pkey_hmac_init                                                          via 0x099381f0@null
+  0x00ac80ca  eckey_type2param                                                        via 0x099383e0@null
+  0x00ac820d  pkey_tls1_prf_init                                                      via 0x0993a788@null
+  0x00ac8232  subjectKeyIdentifier                                                    via 0x0993b750@null
+  0x00ac8247  extendedKeyUsage                                                        via 0x0993be30@null
+  0x00ac82c1  id-smime-aa-smimeEncryptCerts                                           via 0x0993cd80@null,0x0993cd88@null
+  0x00ac831f  id-it-encKeyPairTypes                                                   via 0x0993d960@null,0x0993d968@null
+  0x00ac8390  ecdsa-with-SHA1                                                         via 0x0993eb80@null,0x0993eb88@null
+  0x00ac83a0  AES-256-OFB                                                             via 0x0993ed60@null
+  0x00ac846e  camellia-128-ecb                                                        via 0x09942058@null
+  0x00ac847f  HMAC-SHA1                                                               via 0x09942488@null
+  0x00ac84cc  camellia-256-gcm                                                        via 0x099441f0@null
+  0x00ac84dd  HMAC GOST 34.11-2012 512 bit                                            via 0x09944510@null
+  0x00ac8507  blake2s256                                                              via 0x09944fb0@null
+  0x00ac8512  ecdsa_with_SHA3-512                                                     via 0x099458c0@null
+  0x00ac852c  sm4-cbc                                                                 via 0x09945bb8@null
+  0x00ac853c  GOST R 34.10-2012 (256 bit) ParamSet A                                  via 0x09945de8@null
+  0x00ac85f1  PKCS12_gen_mac                                                          via 0x099472c8@null
+  0x00ac8609  PKCS7_find_digest                                                       via 0x099482e0@null
+  0x00ac861b  PKCS7_RECIP_INFO_set                                                    via 0x09948300@null
+  0x00ac8630  PKCS7_simple_smimecap                                                   via 0x099483a0@null
+  0x00ac868b  RSAPublicKey                                                            via 0x099490f8@null
+  0x00ac86aa  RSA_padding_add_X931                                                    via 0x09949488@null
+  0x00ac86bf  RSA_padding_check_X931                                                  via 0x099494f8@null
+  0x00ac87ef  Key Encipherment                                                        via 0x09a5ede8@null
+  0x00ac889b  no public key                                                           via 0x0994e930@null
+  0x00ac88a9  TLS_DHE_DSS_WITH_AES_128_CBC_SHA                                        via 0x09a5f258@null
+  0x00ac88ca  TLS_PSK_DHE_WITH_AES_256_CCM_8                                          via 0x09a5fe88@null
+  0x00ac88e9  ECDHE-ECDSA-AES128-CCM8                                                 via 0x09a5ff70@null
+  0x00ac8901  ECDHE-RSA-AES256-SHA                                                    via 0x09a601a0@null
+  0x00ac8916  TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384                                   via 0x09a60518@null
+  0x00ac893c  DHE-PSK-AES256-CBC-SHA                                                  via 0x09a60740@null
+  0x00ac8953  TLS_PSK_WITH_NULL_SHA256                                                via 0x09a60ab8@null
+  0x00ac896c  TLS_RSA_PSK_WITH_ARIA_256_GCM_SHA384                                    via 0x09a617d8@null
+  0x00ac89a2  master_key                                                              via 0x0994fb88@null
+  0x00ac8b32  unable to find public key parameters                                    via 0x09954298@null
+  0x00ac8bde  rsa_pss_pss_sha256                                                      via 0x099558a8@null
+  0x00ac8bf1  rsa_pss_pss_sha512                                                      via 0x099558f8@null
+  0x00ac8c04  CLIENT_HANDSHAKE_TRAFFIC_SECRET                                         via 0x0811edd0@FUN_0811ea20
+  0x00ac9717  PxRigidActor::detachShape: Actor is part of a pruning structure, pruni  via 0x083c08cc@detachShape,0x083bde08@detachShape,0x083b6ef0@detachShape
+  0x00ac9bc8  static const char *physx::shdfnd::ReflectionAllocator<physx::Sc::Parti  via 0x084f2df0@growAndPushBack
+  0x00ac9cc6  static const char *physx::shdfnd::ReflectionAllocator<physx::PxShape *  via 0x084f580c@recreate,0x0857ee98@recreate,0x08534f8c@recreate
+  0x00ac9d30  static const char *physx::shdfnd::ReflectionAllocator<physx::Ext::Shar  via 0x084fd4f4@tryAcceptJobToLocalQueue,0x084fcbe4@SharedQueueEntryPool,0x084fcf70@submitTask
+  0x00aca046  G:\RenderPlat\Engine\Source\ThirdParty\PhysX3\PxShared\src\pvd\src\PxP  via 0x086b01d0@createProfileZone,0x086af094@createProfileZone,0x086af3d0@createProfileZoneManager
+  0x00aca498  U_SORT_KEY_TOO_SHORT_WARNING                                            via 0x09993848@null
+  0x00acaa40  pre_padding                                                             via 0x08aa1a1c@FUN_08aa192c,0x08aa1a38@FUN_08aa192c,0x08aa1cc4@FUN_08aa1bec
+  0x00acae71  W2013112803:Data hierarchy overflow.                                    via 0x08b2efa4@criAtomExCue_PlayType
+  0x00acbcdd  [ERROR] criVsd_M2tsSplitCreate() failed. Could not allocate decrypt bu  via 0x08c0ff2c@criVsd_M2tsSplitCreate
+  0x00acbe47  AndroidThunkJava_ShowVirtualKeyboardInput                               via 0x0292ae70@FUN_0292ac68
+  0x00acbe71  AndroidThunkJava_HideVirtualKeyboardInput                               via 0x0292aecc@FUN_0292ac68
+  0x00acbebf  AndroidThunkJava_HasMetaDataKey                                         via 0x0292b544@FUN_0292b518
+  0x00acc3e5  EPesTrancePadAxisNo::PAD_AXIS_RT                                        via 0x08cdfa60@null
+  0x00acc406  EPesTrancePadAxisNo::PAD_AXIS_MAX                                       via 0x08cdfa70@null
+  0x00acca27  NetworkThreadProperties_Key                                             via 0x08d92808@null
+  0x00accad7  /Script/AnimationSharing                                                via 0x08da8de0@null
+  0x00accaf0  SharingSkeleton                                                         via 0x08da9800@null
+  0x00accc8c  G:/PES22HC/Dev-600Series/UProject/PesMobile/Source/PesShared/Game/Matc  via 0x0307fe2c@FUN_0307fdd4
+  0x00acde2f  G:/PES22HC/Dev-600Series/UProject/PesMobile/Source/PesShared/Widget/Me  via 0x03b83b38@FUN_03b83ae4
+  0x00acdeaa  G:/PES22HC/Dev-600Series/UProject/PesMobile/Source/PesShared/Widget/Me  via 0x03be342c@FUN_03be2788
+  0x00ace0b1  m_shadow_compo                                                          via 0x090fc0c0@null
+  0x00ace3c4  GetSharedLevelStreaming                                                 via 0x09120ce0@null
+  0x00ace7cc  ShowSoftwareKeyboard                                                    via 0x0914b910@null
+  0x00ace80c  EPseudoShadowFlags::QuadBlobShadow                                      via 0x0914d858@null
+  0x00ace9a1  m_shadow_board_mesh                                                     via 0x09166fa0@null
+  0x00aceeed  sharedCardWidgetMap                                                     via 0x091d3f28@null,0x091d3f80@null
+  0x00acef1f  CallbackCloseRewardKeyView                                              via 0x091d5f40@null
+  0x00acff7d  EPlayEnvDefencePadType                                                  via 0x0928fbd0@null,0x0928fbd8@null
+  0x00ad0006  vPadMovementAreaType                                                    via 0x092901f0@null
+  0x00ad001b  SetDefencePadType                                                       via 0x092923d0@null
+  0x00ad0065  DataKey                                                                 via 0x09297ed0@null,0x09297fb8@null,0x092980b8@null
+  0x00ad0094  EMenuBtnConfigClassicBtnType::BP_VPAD_BTN_CONFIG_CLASSIC_BTN_TYPE_3     via 0x092a5da0@null
+  ... 3983 more not printed

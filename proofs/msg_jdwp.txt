@@ -1,0 +1,27 @@
+jdwp_gate_hook: read the plaintext over JDWP, the transport frida-server lacks
+
+frida-server fails on this image because it injects by ptrace, and ptrace is
+exactly what aborts: "Aborted (core dumped)" on 17.19.0 and on 16.7.19, on
+spawn and on attach alike. No amount of yama or capability tuning changes that,
+so the instrumentation route has to change transport rather than version.
+
+frida-jdwp-loader loads the gadget over the app's JDWP debug socket instead, and
+the APK already ships android:debuggable=true, so the single prerequisite is
+already met. It needs no root and no repackaging, and in script interaction mode
+it runs autonomously inside the process with no listening port and no
+frida-server, publishing through __android_log_write where adb logcat can read
+it.
+
+The hook targets three things. SecretKeySpec.getEncoded yields the AES key at
+the moment it is handed over. Cipher.doFinal gives input and output lengths as a
+cross-check on it. And HttpImpl.SendRequest is the one that matters: the
+decompiled signature is SendRequest(uri, useGzip, cookie, data, isPost), so its
+byte array argument is the form-urlencoded plaintext BEFORE useGzip and BEFORE
+the cipher. Every overload is wrapped defensively because the exact parameter
+types are unknown, and each dump prints both text and hex.
+
+grab_gate_plaintext.sh is the no-dependency fallback for the same goal. It dumps
+the ART heap to the device, greps for the gzip magic there rather than pulling
+512MB across adb, and pulls only the kilobytes around each hit. The first
+attempt at this died because the whole region was moved to the host and then
+scanned there, and because the regions sat outside the paths step 06 uploads.

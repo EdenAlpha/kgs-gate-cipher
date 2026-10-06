@@ -1,0 +1,9 @@
+cmd: exec bash -c true; echo H2; sleep 55; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo flows=$(grep -c "^### " /tmp/kgs/flows.log); echo cpu=$(adb -s 127.0.0.1:5555 shell top -b -n 1 -m 3 2>/dev/null | grep -i pesam | awk "{print \$9}")
+at: 08:23:55
+$ bash -c true; echo H2; sleep 55; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo flows=$(grep -c "^### " /tmp/kgs/flows.log); echo cpu=$(adb -s 127.0.0.1:5555 shell top -b -n 1 -m 3 2>/dev/null | grep -i pesam | awk "{print \$9}")
+H2
+flows=54
+cpu=314
+rc=0
+gamepid: 18731
+flows: 54

@@ -1,0 +1,589 @@
+PT_LOAD off=0x0 va=0x0 filesz=0x28253b0  (va-off=0x0)
+PT_LOAD off=0x28253c0 va=0x28293c0 filesz=0x6347d80  (va-off=0x4000)
+PT_LOAD off=0x8b6d140 va=0x8b75140 filesz=0xd8db80  (va-off=0x8000)
+PT_LOAD off=0x98facc0 va=0x9906cc0 filesz=0x63d84  (va-off=0xc000)
+seed  file=0xb8f1b1 elfva=0xb8f1b1 dumpva=0xc8f1b1
+sign= file=0xbb6471 elfva=0xbb6471 dumpva=0xcb6471
+hdr   file=0xad120e elfva=0xad120e dumpva=0xbd120e
+ghidra -> elf delta: 0x-100000
+function: dumpva 0x7c38a44 -> elfva 0x7b38a44 -> file 0x7b34a44
+instructions: 576
+
+VA           OP       ARGS                                    
+----------------------------------------------------------------------------------------------------
+7b38a44      stp      x29, x30, [sp, #-0x60]!                 
+7b38a48      stp      x28, x27, [sp, #0x10]                   
+7b38a4c      stp      x26, x25, [sp, #0x20]                   
+7b38a50      stp      x24, x23, [sp, #0x30]                   
+7b38a54      stp      x22, x21, [sp, #0x40]                   
+7b38a58      stp      x20, x19, [sp, #0x50]                   
+7b38a5c      mov      x29, sp                                 
+7b38a60      sub      sp, sp, #1, lsl #12                     
+7b38a64      sub      sp, sp, #0x5c0                          
+7b38a68      str      x1, [sp]                                
+7b38a6c      mrs      x8, tpidr_el0                           
+7b38a70      str      x8, [sp, #0x10]                         
+7b38a74      mov      w9, #0x20                               
+7b38a78      ldr      x8, [x8, #0x28]                         
+7b38a7c      mov      w21, #0x8965                            
+7b38a80      mov      w20, w2                                 
+7b38a84      mov      x19, x0                                 
+7b38a88      add      x23, sp, #0x180                         
+7b38a8c      movk     w21, #0x6c07, lsl #16                   
+7b38a90      stur     x8, [x29, #-0x10]                       
+7b38a94      adrp     x8, #0xb8f000                             -> page 0xb8f000
+7b38a98      add      x8, x8, #0x1b1                            -> SEED "Xrq-RtAF_91MAE82"
+7b38a9c      str      xzr, [sp, #0x60]                        
+7b38aa0      strb     w9, [sp, #0x50]                         
+7b38aa4      ldr      q0, [x8]                                
+7b38aa8      add      x8, sp, #0x50                             -> va 0xb8f050
+7b38aac      orr      x25, x8, #1                             
+7b38ab0      stur     q0, [sp, #0x51]                         
+7b38ab4      bl       #0x2f1ec94                                -> CALL va 0x2f1ec94
+7b38ab8      mov      x24, x0                                 
+7b38abc      mov      w8, #0x1571                             
+7b38ac0      mov      w9, #1                                  
+7b38ac4      add      x10, sp, #0x200                           -> va 0xb8f200
+7b38ac8      stur     w24, [x29, #-0x18]                      
+7b38acc      str      x8, [sp, #0x200]                        
+7b38ad0      lsr      x11, x8, #0x1e                          
+7b38ad4      eor      w8, w11, w8                             
+7b38ad8      madd     w8, w8, w21, w9                         
+7b38adc      str      x8, [x10, x9, lsl #3]                   
+7b38ae0      add      x9, x9, #1                                -> va 0xb8f001
+7b38ae4      cmp      x9, #0x270                              
+7b38ae8      b.ne     #0x7b38ad0                              
+7b38aec      adrp     x10, #0xa52000                            -> page 0xa52000
+7b38af0      add      x10, x10, #0x31                           -> va 0xa52031
+7b38af4      mov      w9, #0x646e                             
+7b38af8      mov      w8, #0x18                               
+7b38afc      movk     w9, #0x6d6f, lsl #16                    
+7b38b00      add      x0, sp, #0x180                            -> va 0xa52180
+7b38b04      ldr      x10, [x10]                              
+7b38b08      add      x1, sp, #0x68                             -> va 0xa52068
+7b38b0c      strb     w8, [sp, #0x68]                         
+7b38b10      stur     w9, [sp, #0x71]                         
+7b38b14      stur     x10, [sp, #0x69]                        
+7b38b18      strb     wzr, [sp, #0x75]                        
+7b38b1c      bl       #0x8b38a10                                -> CALL va 0x8b38a10
+7b38b20      ldrb     w8, [sp, #0x68]                         
+7b38b24      tbz      w8, #0, #0x7b38b30                      
+7b38b28      ldr      x0, [sp, #0x78]                           -> va 0xa52078
+7b38b2c      bl       #0x8b352c0                                -> CALL va 0x8b352c0
+7b38b30      add      x0, sp, #0x180                            -> va 0xa52180
+7b38b34      str      w20, [sp, #0xc]                         
+7b38b38      bl       #0x8b38a20                                -> CALL va 0x8b38a20
+7b38b3c      mov      w8, w0                                  
+7b38b40      mov      w9, #1                                  
+7b38b44      add      x10, sp, #0x200                           -> va 0xa52200
+7b38b48      str      x8, [sp, #0x200]                        
+7b38b4c      lsr      x11, x8, #0x1e                          
+7b38b50      eor      w8, w11, w8                             
+7b38b54      madd     w8, w8, w21, w9                         
+7b38b58      str      x8, [x10, x9, lsl #3]                   
+7b38b5c      add      x9, x9, #1                                -> va 0xa52001
+7b38b60      cmp      x9, #0x270                              
+7b38b64      b.ne     #0x7b38b4c                              
+7b38b68      add      x0, sp, #0x180                            -> va 0xa52180
+7b38b6c      str      xzr, [sp, #0x1580]                      
+7b38b70      bl       #0x8b38a30                                -> CALL va 0x8b38a30
+7b38b74      adrp     x8, #0xc20000                             -> page 0xc20000
+7b38b78      add      x0, sp, #0x48                             -> va 0xc20048
+7b38b7c      add      x1, sp, #0x200                            -> va 0xc20200
+7b38b80      add      x2, sp, #0x48                             -> va 0xc20048
+7b38b84      ldr      d0, [x8, #0x2d0]                          -> va 0xc202d0
+7b38b88      str      d0, [sp, #0x48]                         
+7b38b8c      bl       #0x7420858                                -> CALL va 0x7420858
+7b38b90      add      x8, sp, #0x68                             -> va 0xc20068
+7b38b94      adrp     x28, #0x8cc7000                           -> page 0x8cc7000
+7b38b98      add      x28, x28, #0x790                          -> va 0x8cc7790
+7b38b9c      adrp     x9, #0x8cc7000                            -> page 0x8cc7000
+7b38ba0      add      x9, x9, #0x880                            -> va 0x8cc7880
+7b38ba4      add      x21, x8, #0x80                            -> va 0x8cc7080
+7b38ba8      add      x22, x8, #0x18                            -> va 0x8cc7018
+7b38bac      mov      w26, w0                                 
+7b38bb0      add      x20, x28, #0x28                           -> va 0x8cc7028
+7b38bb4      add      x10, x9, #0x28                            -> va 0x8cc7028
+7b38bb8      stur     w0, [x29, #-0x14]                       
+7b38bbc      mov      x0, x21                                 
+7b38bc0      mov      x1, x22                                 
+7b38bc4      add      x27, x8, #0x10                            -> va 0x8cc7010
+7b38bc8      stp      xzr, x20, [sp, #0x70]                   
+7b38bcc      str      x10, [sp, #0xe8]                        
+7b38bd0      str      x9, [sp, #0x68]                         
+7b38bd4      bl       #0x8b38590                                -> CALL va 0x8b38590
+7b38bd8      mov      w8, #-1                                 
+7b38bdc      add      x9, x28, #0x50                            -> va 0x8cc7050
+7b38be0      mov      x0, x22                                 
+7b38be4      str      xzr, [sp, #0x170]                       
+7b38be8      str      x28, [sp, #0x68]                        
+7b38bec      str      w8, [sp, #0x178]                        
+7b38bf0      str      x9, [sp, #0xe8]                         
+7b38bf4      str      x20, [sp, #0x78]                        
+7b38bf8      bl       #0x8b385a0                                -> CALL va 0x8b385a0
+7b38bfc      adrp     x8, #0x8cc7000                            -> page 0x8cc7000
+7b38c00      add      x8, x8, #0x918                            -> va 0x8cc7918
+7b38c04      movi     v0.2d, #0000000000000000                
+7b38c08      adrp     x9, #0x8cc7000                            -> page 0x8cc7000
+7b38c0c      add      x9, x9, #0x6b0                            -> va 0x8cc76b0
+7b38c10      add      x11, sp, #0x68                            -> va 0x8cc7068
+7b38c14      str      x8, [sp, #0x80]                         
+7b38c18      mov      w8, #0x18                               
+7b38c1c      add      x10, x9, #0x50                            -> va 0x8cc7050
+7b38c20      mov      x0, x27                                 
+7b38c24      mov      x1, x25                                 
+7b38c28      mov      w2, #0x10                               
+7b38c2c      str      w8, [sp, #0xe0]                         
+7b38c30      add      x8, x9, #0x28                             -> va 0x8cc7028
+7b38c34      stur     q0, [x11, #0x58]                        
+7b38c38      stur     q0, [x11, #0x68]                        
+7b38c3c      str      x10, [sp, #0xe8]                        
+7b38c40      str      x9, [sp, #0x68]                         
+7b38c44      str      x8, [sp, #0x78]                         
+7b38c48      bl       #0x2f2e26c                                -> CALL va 0x2f2e26c
+7b38c4c      adrp     x1, #0xbb5000                             -> page 0xbb5000
+7b38c50      add      x1, x1, #0x3ec                            -> va 0xbb53ec
+7b38c54      mov      w2, #1                                  
+7b38c58      bl       #0x2f2e26c                                -> CALL va 0x2f2e26c
+7b38c5c      eor      w1, w26, w24                            
+7b38c60      bl       #0x8b3ac10                                -> CALL va 0x8b3ac10
+7b38c64      adrp     x8, #0x98de000                            -> page 0x98de000
+7b38c68      mov      w9, #0x20                               
+7b38c6c      movi     v0.2d, #0000000000000000                
+7b38c70      mov      x0, x22                                 
+7b38c74      add      x20, sp, #0x30                            -> va 0x98de030
+7b38c78      ldr      x8, [x8, #0xc28]                          -> va 0x98dec28
+7b38c7c      str      w9, [sp, #0x188]                        
+7b38c80      str      wzr, [sp, #0x1fc]                       
+7b38c84      stur     q0, [x23, #0xc]                         
+7b38c88      add      x8, x8, #0x10                             -> va 0x98de010
+7b38c8c      stur     q0, [x23, #0x1c]                        
+7b38c90      stur     q0, [x23, #0x2c]                        
+7b38c94      stur     q0, [x23, #0x3c]                        
+7b38c98      str      x8, [sp, #0x180]                        
+7b38c9c      add      x8, sp, #0x30                             -> va 0x98de030
+7b38ca0      stur     q0, [x23, #0x4c]                        
+7b38ca4      stur     q0, [x23, #0x5c]                        
+7b38ca8      stur     q0, [x23, #0x6c]                        
+7b38cac      bl       #0x31b542c                                -> CALL va 0x31b542c
+7b38cb0      ldrb     w8, [sp, #0x30]                         
+7b38cb4      mov      x0, x22                                 
+7b38cb8      ldr      x9, [sp, #0x40]                           -> va 0x98de040
+7b38cbc      orr      x10, x20, #1                            
+7b38cc0      tst      w8, #1                                  
+7b38cc4      add      x8, sp, #0x18                             -> va 0x98de018
+7b38cc8      csel     x24, x10, x9, eq                        
+7b38ccc      bl       #0x31b542c                                -> CALL va 0x31b542c
+7b38cd0      ldrb     w8, [sp, #0x18]                         
+7b38cd4      add      x0, sp, #0x180                            -> va 0x98de180
+7b38cd8      ldr      w9, [sp, #0x20]                           -> va 0x98de020
+7b38cdc      sub      x5, x29, #0x38                          
+7b38ce0      ldr      w20, [sp, #0xc]                           -> va 0x98de00c
+7b38ce4      mov      x3, x24                                 
+7b38ce8      lsr      x10, x8, #1                             
+7b38cec      tst      w8, #1                                  
+7b38cf0      csel     w4, w10, w9, eq                         
+7b38cf4      ldr      x1, [sp]                                
+7b38cf8      mov      w2, w20                                 
+7b38cfc      bl       #0x7b39a28                                -> CALL va 0x7b39a28
+7b38d00      ldrb     w8, [sp, #0x18]                         
+7b38d04      tbnz     w8, #0, #0x7b38d20                      
+7b38d08      ldrb     w8, [sp, #0x30]                         
+7b38d0c      tbnz     w8, #0, #0x7b38d30                      
+7b38d10      ldrb     w8, [x19]                               
+7b38d14      tbnz     w8, #0, #0x7b38d40                      
+7b38d18      strh     wzr, [x19]                              
+7b38d1c      b        #0x7b38d4c                              
+7b38d20      ldr      x0, [sp, #0x28]                           -> va 0x98de028
+7b38d24      bl       #0x2efa56c                                -> CALL va 0x2efa56c
+7b38d28      ldrb     w8, [sp, #0x30]                         
+7b38d2c      tbz      w8, #0, #0x7b38d10                      
+7b38d30      ldr      x0, [sp, #0x40]                           -> va 0x98de040
+7b38d34      bl       #0x2efa56c                                -> CALL va 0x2efa56c
+7b38d38      ldrb     w8, [x19]                               
+7b38d3c      tbz      w8, #0, #0x7b38d18                      
+7b38d40      ldr      x8, [x19, #0x10]                          -> va 0x98de010
+7b38d44      strb     wzr, [x8]                               
+7b38d48      str      xzr, [x19, #8]                          
+7b38d4c      mov      w0, w20                                 
+7b38d50      bl       #0x74b8d24                                -> CALL va 0x74b8d24
+7b38d54      add      x24, x0, #1                               -> va 0x98de001
+7b38d58      mov      x23, x0                                 
+7b38d5c      mov      x0, x24                                 
+7b38d60      bl       #0x8b35680                                -> CALL va 0x8b35680
+7b38d64      mov      x25, x0                                 
+7b38d68      mov      w0, #0x20                               
+7b38d6c      bl       #0x8b35260                                -> CALL va 0x8b35260
+7b38d70      adrp     x8, #0x981a000                            -> page 0x981a000
+7b38d74      add      x8, x8, #0xc48                            -> va 0x981ac48
+7b38d78      mov      x20, x0                                 
+7b38d7c      mov      x26, x0                                 
+7b38d80      stp      xzr, x25, [x0, #0x10]                   
+7b38d84      mov      w1, wzr                                 
+7b38d88      str      x8, [x0]                                
+7b38d8c      mov      x0, x25                                 
+7b38d90      mov      x2, x24                                 
+7b38d94      str      xzr, [x26, #8]!                         
+7b38d98      bl       #0x8b35360                                -> CALL va 0x8b35360
+7b38d9c      sub      x0, x29, #0x38                          
+7b38da0      mov      w1, #0x28                               
+7b38da4      mov      x2, x25                                 
+7b38da8      mov      x3, x23                                 
+7b38dac      mov      w4, #1                                  
+7b38db0      bl       #0x74b8d5c                                -> CALL va 0x74b8d5c
+7b38db4      adrp     x1, #0xbb6000                             -> page 0xbb6000
+7b38db8      add      x1, x1, #0x471                            -> "sign="
+7b38dbc      mov      x0, x19                                 
+7b38dc0      mov      w2, #5                                  
+7b38dc4      bl       #0x2f15088                                -> CALL va 0x2f15088
+7b38dc8      mov      x0, x25                                 
+7b38dcc      bl       #0x8b35330                                -> CALL va 0x8b35330
+7b38dd0      mov      x2, x0                                  
+7b38dd4      mov      x0, x19                                 
+7b38dd8      mov      x1, x25                                 
+7b38ddc      bl       #0x2f15088                                -> CALL va 0x2f15088
+7b38de0      adrp     x1, #0xa1d000                             -> page 0xa1d000
+7b38de4      add      x1, x1, #0x8a3                            -> va 0xa1d8a3
+7b38de8      mov      x0, x19                                 
+7b38dec      mov      w2, #1                                  
+7b38df0      bl       #0x2f15088                                -> CALL va 0x2f15088
+7b38df4      mov      x0, #-1                                 
+7b38df8      mov      x1, x26                                 
+7b38dfc      bl       #0x8b34ef0                                -> CALL va 0x8b34ef0
+7b38e00      cbnz     x0, #0x7b38e1c                          
+7b38e04      ldr      x8, [x20]                               
+7b38e08      mov      x0, x20                                 
+7b38e0c      ldr      x8, [x8, #0x10]                           -> va 0xa1d010
+7b38e10      blr      x8                                      
+7b38e14      mov      x0, x20                                 
+7b38e18      bl       #0x8b388f0                                -> CALL va 0x8b388f0
+7b38e1c      add      x11, x28, #0x28                           -> va 0xa1d028
+7b38e20      add      x9, x28, #0x50                            -> va 0xa1d050
+7b38e24      ldrb     w10, [sp, #0xc0]                        
+7b38e28      adrp     x8, #0x8cc7000                            -> page 0x8cc7000
+7b38e2c      add      x8, x8, #0x918                            -> va 0x8cc7918
+7b38e30      str      x28, [sp, #0x68]                        
+7b38e34      str      x9, [sp, #0xe8]                         
+7b38e38      stp      x11, x8, [sp, #0x78]                    
+7b38e3c      tbz      w10, #0, #0x7b38e48                     
+7b38e40      ldr      x0, [sp, #0xd0]                           -> va 0x8cc70d0
+7b38e44      bl       #0x2efa56c                                -> CALL va 0x2efa56c
+7b38e48      mov      x0, x22                                 
+7b38e4c      bl       #0x8b385c0                                -> CALL va 0x8b385c0
+7b38e50      adrp     x1, #0x8cc7000                            -> page 0x8cc7000
+7b38e54      add      x1, x1, #0x720                            -> va 0x8cc7720
+7b38e58      add      x0, sp, #0x68                             -> va 0x8cc7068
+7b38e5c      bl       #0x8b385d0                                -> CALL va 0x8b385d0
+7b38e60      mov      x0, x21                                 
+7b38e64      bl       #0x8b385e0                                -> CALL va 0x8b385e0
+7b38e68      ldrb     w8, [sp, #0x50]                         
+7b38e6c      tbz      w8, #0, #0x7b38e78                      
+7b38e70      ldr      x0, [sp, #0x60]                           -> va 0x8cc7060
+7b38e74      bl       #0x2efa56c                                -> CALL va 0x2efa56c
+7b38e78      ldr      x8, [sp, #0x10]                           -> va 0x8cc7010
+7b38e7c      ldr      x8, [x8, #0x28]                           -> va 0x8cc7028
+7b38e80      ldur     x9, [x29, #-0x10]                       
+7b38e84      cmp      x8, x9                                  
+7b38e88      b.ne     #0x7b38eb4                              
+7b38e8c      mov      w0, #1                                  
+7b38e90      add      sp, sp, #1, lsl #12                       -> va 0x8cc7012
+7b38e94      add      sp, sp, #0x5c0                            -> va 0x8cc75c0
+7b38e98      ldp      x20, x19, [sp, #0x50]                   
+7b38e9c      ldp      x22, x21, [sp, #0x40]                   
+7b38ea0      ldp      x24, x23, [sp, #0x30]                   
+7b38ea4      ldp      x26, x25, [sp, #0x20]                   
+7b38ea8      ldp      x28, x27, [sp, #0x10]                   
+7b38eac      ldp      x29, x30, [sp], #0x60                   
+7b38eb0      ret                                              
+7b38eb4      bl       #0x8b35290                                -> CALL va 0x8b35290
+7b38eb8      cmp      w0, #0xc                                
+7b38ebc      b.hi     #0x7b38ef4                              
+7b38ec0      mov      w8, w0                                  
+7b38ec4      adrp     x9, #0xc8e000                             -> page 0xc8e000
+7b38ec8      add      x9, x9, #0x981                            -> va 0xc8e981
+7b38ecc      adr      x10, #0x7b38edc                         
+7b38ed0      ldrb     w11, [x9, x8]                           
+7b38ed4      add      x10, x10, x11, lsl #2                     -> va 0xc8e002
+7b38ed8      br       x10                                     
+7b38edc      mov      w8, #1                                  
+7b38ee0      adrp     x9, #0xc8e000                             -> page 0xc8e000
+7b38ee4      add      x9, x9, #0x990                            -> va 0xc8e990
+7b38ee8      add      x8, x9, x8, lsl #3                        -> va 0xc8e003
+7b38eec      ldr      w0, [x8, #4]                              -> va 0xc8e004
+7b38ef0      ret                                              
+7b38ef4      mov      w0, wzr                                 
+7b38ef8      ret                                              
+7b38efc      mov      w8, #2                                  
+7b38f00      adrp     x9, #0xc8e000                             -> page 0xc8e000
+7b38f04      add      x9, x9, #0x990                            -> va 0xc8e990
+7b38f08      add      x8, x9, x8, lsl #3                        -> va 0xc8e003
+7b38f0c      ldr      w0, [x8, #4]                              -> va 0xc8e004
+7b38f10      ret                                              
+7b38f14      mov      w8, #3                                  
+7b38f18      adrp     x9, #0xc8e000                             -> page 0xc8e000
+7b38f1c      add      x9, x9, #0x990                            -> va 0xc8e990
+7b38f20      add      x8, x9, x8, lsl #3                        -> va 0xc8e003
+7b38f24      ldr      w0, [x8, #4]                              -> va 0xc8e004
+7b38f28      ret                                              
+7b38f2c      cmp      w1, #0x1f8                              
+7b38f30      mov      w8, #5                                  
+7b38f34      cinc     w8, w8, ne                              
+7b38f38      cmp      w1, #0x208                              
+7b38f3c      mov      w9, #4                                  
+7b38f40      csel     w0, w9, w8, eq                          
+7b38f44      ret                                              
+7b38f48      mov      w8, #5                                  
+7b38f4c      adrp     x9, #0xc8e000                             -> page 0xc8e000
+7b38f50      add      x9, x9, #0x990                            -> va 0xc8e990
+7b38f54      add      x8, x9, x8, lsl #3                        -> va 0xc8e003
+7b38f58      ldr      w0, [x8, #4]                              -> va 0xc8e004
+7b38f5c      ret                                              
+7b38f60      mov      w8, #6                                  
+7b38f64      adrp     x9, #0xc8e000                             -> page 0xc8e000
+7b38f68      add      x9, x9, #0x990                            -> va 0xc8e990
+7b38f6c      add      x8, x9, x8, lsl #3                        -> va 0xc8e003
+7b38f70      ldr      w0, [x8, #4]                              -> va 0xc8e004
+7b38f74      ret                                              
+7b38f78      mov      w8, #7                                  
+7b38f7c      adrp     x9, #0xc8e000                             -> page 0xc8e000
+7b38f80      add      x9, x9, #0x990                            -> va 0xc8e990
+7b38f84      add      x8, x9, x8, lsl #3                        -> va 0xc8e003
+7b38f88      ldr      w0, [x8, #4]                              -> va 0xc8e004
+7b38f8c      ret                                              
+7b38f90      mov      w8, #8                                  
+7b38f94      adrp     x9, #0xc8e000                             -> page 0xc8e000
+7b38f98      add      x9, x9, #0x990                            -> va 0xc8e990
+7b38f9c      add      x8, x9, x8, lsl #3                        -> va 0xc8e003
+7b38fa0      ldr      w0, [x8, #4]                              -> va 0xc8e004
+7b38fa4      ret                                              
+7b38fa8      mov      w8, #9                                  
+7b38fac      adrp     x9, #0xc8e000                             -> page 0xc8e000
+7b38fb0      add      x9, x9, #0x990                            -> va 0xc8e990
+7b38fb4      add      x8, x9, x8, lsl #3                        -> va 0xc8e003
+7b38fb8      ldr      w0, [x8, #4]                              -> va 0xc8e004
+7b38fbc      ret                                              
+7b38fc0      mov      w8, #0xa                                
+7b38fc4      adrp     x9, #0xc8e000                             -> page 0xc8e000
+7b38fc8      add      x9, x9, #0x990                            -> va 0xc8e990
+7b38fcc      add      x8, x9, x8, lsl #3                        -> va 0xc8e003
+7b38fd0      ldr      w0, [x8, #4]                              -> va 0xc8e004
+7b38fd4      ret                                              
+7b38fd8      mov      w8, #0xb                                
+7b38fdc      adrp     x9, #0xc8e000                             -> page 0xc8e000
+7b38fe0      add      x9, x9, #0x990                            -> va 0xc8e990
+7b38fe4      add      x8, x9, x8, lsl #3                        -> va 0xc8e003
+7b38fe8      ldr      w0, [x8, #4]                              -> va 0xc8e004
+7b38fec      ret                                              
+7b38ff0      mov      w8, #0xc                                
+7b38ff4      adrp     x9, #0xc8e000                             -> page 0xc8e000
+7b38ff8      add      x9, x9, #0x990                            -> va 0xc8e990
+7b38ffc      add      x8, x9, x8, lsl #3                        -> va 0xc8e003
+7b39000      ldr      w0, [x8, #4]                              -> va 0xc8e004
+7b39004      ret                                              
+7b39008      stp      x29, x30, [sp, #-0x20]!                 
+7b3900c      str      x19, [sp, #0x10]                        
+7b39010      mov      x29, sp                                 
+7b39014      mov      x19, x0                                 
+7b39018      bl       #0x8b38920                                -> CALL va 0x8b38920
+7b3901c      mov      x0, x19                                 
+7b39020      ldr      x19, [sp, #0x10]                          -> va 0xc8e010
+7b39024      ldp      x29, x30, [sp], #0x20                   
+7b39028      b        #0x8b352c0                              
+7b3902c      ldr      x0, [x0, #0x18]                           -> va 0xc8e018
+7b39030      cbz      x0, #0x7b39038                          
+7b39034      b        #0x8b356b0                              
+7b39038      ret                                              
+7b3903c      b        #0x8b352c0                              
+7b39040      stp      x29, x30, [sp, #-0x20]!                 
+7b39044      str      x19, [sp, #0x10]                        
+7b39048      mov      x29, sp                                 
+7b3904c      mov      x19, x0                                 
+7b39050      bl       #0x8b38920                                -> CALL va 0x8b38920
+7b39054      mov      x0, x19                                 
+7b39058      ldr      x19, [sp, #0x10]                          -> va 0xc8e010
+7b3905c      ldp      x29, x30, [sp], #0x20                   
+7b39060      b        #0x8b352c0                              
+7b39064      ldr      x0, [x0, #0x18]                           -> va 0xc8e018
+7b39068      cbz      x0, #0x7b39070                          
+7b3906c      b        #0x8b356b0                              
+7b39070      ret                                              
+7b39074      b        #0x8b352c0                              
+7b39078      stp      x29, x30, [sp, #-0x20]!                 
+7b3907c      str      x19, [sp, #0x10]                        
+7b39080      mov      x29, sp                                 
+7b39084      mov      x19, x0                                 
+7b39088      bl       #0x8b38920                                -> CALL va 0x8b38920
+7b3908c      mov      x0, x19                                 
+7b39090      ldr      x19, [sp, #0x10]                          -> va 0xc8e010
+7b39094      ldp      x29, x30, [sp], #0x20                   
+7b39098      b        #0x8b352c0                              
+7b3909c      ldr      x0, [x0, #0x18]                           -> va 0xc8e018
+7b390a0      cbz      x0, #0x7b390a8                          
+7b390a4      b        #0x8b356b0                              
+7b390a8      ret                                              
+7b390ac      b        #0x8b352c0                              
+7b390b0      stp      x29, x30, [sp, #-0x20]!                 
+7b390b4      str      x19, [sp, #0x10]                        
+7b390b8      mov      x29, sp                                 
+7b390bc      mov      x19, x0                                 
+7b390c0      bl       #0x8b38920                                -> CALL va 0x8b38920
+7b390c4      mov      x0, x19                                 
+7b390c8      ldr      x19, [sp, #0x10]                          -> va 0xc8e010
+7b390cc      ldp      x29, x30, [sp], #0x20                   
+7b390d0      b        #0x8b352c0                              
+7b390d4      ldr      x0, [x0, #0x18]                           -> va 0xc8e018
+7b390d8      cbz      x0, #0x7b390e0                          
+7b390dc      b        #0x8b356b0                              
+7b390e0      ret                                              
+7b390e4      b        #0x8b352c0                              
+7b390e8      stp      x29, x30, [sp, #-0x30]!                 
+7b390ec      str      x21, [sp, #0x10]                        
+7b390f0      stp      x20, x19, [sp, #0x20]                   
+7b390f4      mov      x29, sp                                 
+7b390f8      adrp     x9, #0xad1000                             -> page 0xad1000
+7b390fc      add      x9, x9, #0x20e                            -> "pes-custom-encrypt"
+7b39100      adrp     x19, #0xa4a9000                           -> page 0xa4a9000
+7b39104      add      x19, x19, #0xb30                          -> va 0xa4a9b30
+7b39108      adrp     x20, #0x2ef7000                           -> page 0x2ef7000
+7b3910c      add      x20, x20, #0xb54                          -> va 0x2ef7b54
+7b39110      adrp     x21, #0x8b75000                           -> page 0x8b75000
+7b39114      add      x21, x21, #0x140                          -> va 0x8b75140
+7b39118      mov      w8, #0x24                               
+7b3911c      mov      x1, x19                                 
+7b39120      ldr      q0, [x9]                                
+7b39124      mov      w9, #0x7470                             
+7b39128      mov      x0, x20                                 
+7b3912c      mov      x2, x21                                 
+7b39130      str      wzr, [x19]                              
+7b39134      str      xzr, [x19, #0x18]                       
+7b39138      strb     w8, [x1, #8]!                           
+7b3913c      stur     q0, [x19, #9]                           
+7b39140      sturh    w9, [x19, #0x19]                        
+7b39144      bl       #0x8b35240                                -> CALL va 0x8b35240
+7b39148      mov      w9, #0x4541                             
+7b3914c      mov      w8, #0xc                                
+7b39150      mov      x1, x19                                 
+7b39154      movk     w9, #0x3253, lsl #16                    
+7b39158      mov      w10, #0x3635                            
+7b3915c      mov      x0, x20                                 
+7b39160      mov      x2, x21                                 
+7b39164      stp      xzr, xzr, [x19, #0x28]                  
+7b39168      strb     w8, [x1, #0x20]!                        
+7b3916c      stur     w9, [x19, #0x21]                        
+7b39170      sturh    w10, [x19, #0x25]                       
+7b39174      strb     wzr, [x19, #0x27]                       
+7b39178      bl       #0x8b35240                                -> CALL va 0x8b35240
+7b3917c      mov      w8, #0x10                               
+7b39180      mov      x0, x20                                 
+7b39184      mov      x2, x21                                 
+7b39188      strb     w8, [x19, #0x38]!                       
+7b3918c      mov      x8, #0x6c62                             
+7b39190      mov      x1, x19                                 
+7b39194      movk     x8, #0x776f, lsl #16                    
+7b39198      stp      xzr, xzr, [x19, #8]                     
+7b3919c      movk     x8, #0x6966, lsl #32                    
+7b391a0      movk     x8, #0x6873, lsl #48                    
+7b391a4      stur     x8, [x19, #1]                           
+7b391a8      ldp      x20, x19, [sp, #0x20]                   
+7b391ac      ldr      x21, [sp, #0x10]                          -> va 0x8b75010
+7b391b0      ldp      x29, x30, [sp], #0x30                   
+7b391b4      b        #0x8b35240                              
+7b391b8      add      x0, x0, #0xc                              -> va 0x8b7500c
+7b391bc      b        #0x7b391ec                              
+7b391c0      add      x0, x0, #0xc                              -> va 0x8b7500c
+7b391c4      b        #0x7b3949c                              
+7b391c8      add      x0, x0, #0xc                              -> va 0x8b7500c
+7b391cc      b        #0x7b39228                              
+7b391d0      adrp     x0, #0x9da000                             -> page 0x9da000
+7b391d4      add      x0, x0, #0x3c7                            -> va 0x9da3c7
+7b391d8      ret                                              
+7b391dc      ldr      w0, [x0, #8]                              -> va 0x9da008
+7b391e0      ret                                              
+7b391e4      ret                                              
+7b391e8      b        #0x8b352c0                              
+7b391ec      cbz      x0, #0x7b39220                          
+7b391f0      adrp     x9, #0x72a000                             -> page 0x72a000
+7b391f4      adrp     x10, #0x72a000                            -> page 0x72a000
+7b391f8      movi     v0.2d, #0000000000000000                
+7b391fc      mov      x8, x0                                  
+7b39200      mov      w0, wzr                                 
+7b39204      ldr      q1, [x9, #0xbb0]                          -> va 0x72abb0
+7b39208      ldr      q2, [x10, #0xbc0]                         -> va 0x72abc0
+7b3920c      str      wzr, [x8, #0x28]                        
+7b39210      str      d0, [x8, #0x20]                         
+7b39214      stur     d0, [x8, #0x6c]                         
+7b39218      stp      q1, q2, [x8]                            
+7b3921c      ret                                              
+7b39220      mov      w0, #1                                  
+7b39224      ret                                              
+7b39228      stp      x29, x30, [sp, #-0x20]!                 
+7b3922c      stp      x20, x19, [sp, #0x10]                   
+7b39230      mov      x29, sp                                 
+7b39234      mov      x20, x0                                 
+7b39238      mov      w0, #1                                  
+7b3923c      cbz      x20, #0x7b39250                         
+7b39240      mov      x19, x1                                 
+7b39244      cbz      x1, #0x7b39250                          
+7b39248      ldr      w0, [x20, #0x70]                          -> va 0x72a070
+7b3924c      cbz      w0, #0x7b3925c                          
+7b39250      ldp      x20, x19, [sp, #0x10]                   
+7b39254      ldp      x29, x30, [sp], #0x20                   
+7b39258      ret                                              
+7b3925c      ldr      w8, [x20, #0x6c]                          -> va 0x72a06c
+7b39260      cbnz     w8, #0x7b3928c                          
+7b39264      mov      x0, x20                                 
+7b39268      bl       #0x7b393bc                                -> CALL va 0x7b393bc
+7b3926c      movi     v0.2d, #0000000000000000                
+7b39270      mov      w8, #1                                  
+7b39274      str      xzr, [x20, #0x20]                       
+7b39278      str      w8, [x20, #0x6c]                        
+7b3927c      stur     q0, [x20, #0x5c]                        
+7b39280      stur     q0, [x20, #0x4c]                        
+7b39284      stur     q0, [x20, #0x3c]                        
+7b39288      stur     q0, [x20, #0x2c]                        
+7b3928c      ldrb     w8, [x20, #3]                           
+7b39290      mov      w0, wzr                                 
+7b39294      strb     w8, [x19]                               
+7b39298      ldrh     w8, [x20, #2]                           
+7b3929c      strb     w8, [x19, #1]                           
+7b392a0      ldr      w8, [x20]                               
+7b392a4      lsr      w8, w8, #8                              
+7b392a8      strb     w8, [x19, #2]                           
+7b392ac      ldr      w8, [x20]                               
+7b392b0      strb     w8, [x19, #3]                           
+7b392b4      ldrb     w8, [x20, #7]                           
+7b392b8      strb     w8, [x19, #4]                           
+7b392bc      ldrh     w8, [x20, #6]                           
+7b392c0      strb     w8, [x19, #5]                           
+7b392c4      ldr      w8, [x20, #4]                             -> va 0x72a004
+7b392c8      lsr      w8, w8, #8                              
+7b392cc      strb     w8, [x19, #6]                           
+7b392d0      ldr      w8, [x20, #4]                             -> va 0x72a004
+7b392d4      strb     w8, [x19, #7]                           
+7b392d8      ldrb     w8, [x20, #0xb]                         
+7b392dc      strb     w8, [x19, #8]                           
+7b392e0      ldrh     w8, [x20, #0xa]                         
+7b392e4      strb     w8, [x19, #9]                           
+7b392e8      ldr      w8, [x20, #8]                             -> va 0x72a008
+7b392ec      lsr      w8, w8, #8                              
+7b392f0      strb     w8, [x19, #0xa]                         
+7b392f4      ldr      w8, [x20, #8]                             -> va 0x72a008
+7b392f8      strb     w8, [x19, #0xb]                         
+7b392fc      ldrb     w8, [x20, #0xf]                         
+7b39300      strb     w8, [x19, #0xc]                         
+7b39304      ldrh     w8, [x20, #0xe]                         
+7b39308      strb     w8, [x19, #0xd]                         
+7b3930c      ldr      w8, [x20, #0xc]                           -> va 0x72a00c
+7b39310      lsr      w8, w8, #8                              
+7b39314      strb     w8, [x19, #0xe]                         
+7b39318      ldr      w8, [x20, #0xc]                           -> va 0x72a00c
+7b3931c      strb     w8, [x19, #0xf]                         
+7b39320      ldrb     w8, [x20, #0x13]                        
+7b39324      strb     w8, [x19, #0x10]                        
+7b39328      ldrh     w8, [x20, #0x12]                        
+7b3932c      strb     w8, [x19, #0x11]                        
+7b39330      ldr      w8, [x20, #0x10]                          -> va 0x72a010
+7b39334      lsr      w8, w8, #8                              
+7b39338      strb     w8, [x19, #0x12]                        
+7b3933c      ldr      w8, [x20, #0x10]                          -> va 0x72a010
+7b39340      strb     w8, [x19, #0x13]                        

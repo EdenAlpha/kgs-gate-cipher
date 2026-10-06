@@ -1,0 +1,44 @@
+gate records: 42
+gate paths  : ['/pes22/gate/gate_CMD_CHECK_STRING.php', '/pes22/gate/gate_CMD_CREATE_USER.php', '/pes22/gate/gate_CMD_GET_AGE_GATE_REQUIREMENTS.php', '/pes22/gate/gate_CMD_GET_COUNTRY_LIST.php', '/pes22/gate/gate_CMD_GET_GAMERELAY_QUALITYCHECK_LIST.php', '/pes22/gate/gate_CMD_GET_KID_USER_AGE_KIND.php', '/pes22/gate/gate_CMD_GET_PRODUCT_LIST.php', '/pes22/gate/gate_CMD_GET_SERVER_ENV.php', '/pes22/gate/gate_CMD_GET_STADIUM_DATA.php', '/pes22/gate/gate_CMD_GET_SURVEY_INFO.php', '/pes22/gate/gate_CMD_SEND_ADJUST_PARAM.php', '/pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php', '/pes22/gate/gate_CMD_SET_TRACKRECORD.php']
+
+------------------------------------------------------------------------------
+REQ /pes22/gate/gate_CMD_GET_SERVER_ENV.php  176 bytes
+  first 48  f1f7d09fe3db7d2789060607c98fa601425b0d03644a5a5a4354288ef0c1b32886079501c9764eb23a2247c881e95c9d
+  first 48A ......}'........B[..dJZZCT(....(.....vN.:"G...\.
+  last 24   5402ea205efe2ea3d9e9d3e014775c9c95761968893e9468
+  mod8=0 mod16=0 distinct_bytes=126
+------------------------------------------------------------------------------
+RESP /pes22/gate/gate_CMD_GET_SERVER_ENV.php  2400 bytes
+  first 48  d3f57ff91701ae8f7b48af134e72bc871aafbc165b099c7b07b47dea17bf933b1c3287d8e1b6d1b3bf94bb33b426901f
+  first 48A ........{H..Nr......[..{..}....;.2.........3.&..
+  last 24   48e938e6d4ee6f702112eccbd8e9669005d136e1d4462bc5
+  mod8=0 mod16=0 distinct_bytes=256
+------------------------------------------------------------------------------
+REQ /pes22/gate/gate_CMD_GET_COUNTRY_LIST.php  144 bytes
+  first 48  87c28107c919dc8fdc1111ff1aff15d50a909f9d47fc9ddb6670f9ada7854a331af40f12cc3692e26269ad94d4ec57fb
+  first 48A ....................G...fp....J3.....6..bi....W.
+  last 24   2594dd1e5a8f5ba97a4137571be7adb08e60b5da424dd410
+  mod8=0 mod16=0 distinct_bytes=113
+------------------------------------------------------------------------------
+RESP /pes22/gate/gate_CMD_GET_COUNTRY_LIST.php  2352 bytes
+  first 48  4d0b6214f9a91a36582d33b0e8215b3e7b47a11ddb6d5c2204dbe9a2ef8db0bbf1bb8722d13b05ecfa535293acc10ad8
+  first 48A M.b....6X-3..![>{G...m\"...........".;...SR.....
+  last 24   87081743efaad9ccb153bccbdf16f944f9d7c273b845063d
+  mod8=0 mod16=0 distinct_bytes=256
+------------------------------------------------------------------------------
+REQ /pes22/gate/gate_CMD_GET_AGE_GATE_REQUIREMENTS.php  160 bytes
+  first 48  8988543cf760c73e24b28a771daaf0f4adb6db383d6b08ccc7b4441eb0977d38edb0624131219429141fc0dd6f7c51d6
+  first 48A ..T<.`.>$..w.......8=k....D...}8..bA1!.)....o|Q.
+  last 24   d81ee922585294245b28e16503785a89944d2b1e099c5775
+  mod8=0 mod16=0 distinct_bytes=120
+------------------------------------------------------------------------------
+RESP /pes22/gate/gate_CMD_GET_AGE_GATE_REQUIREMENTS.php  160 bytes
+  first 48  4f394ef412fb2aeeb0a37156bc0e8934aa9f15ebe84dc74219492e57902efc3fe50a1a928233e657e5a1bce1d79b3b66
+  first 48A O9N...*...qV...4.....M.B.I.W...?.....3.W......;f
+  last 24   7b57d693e20eeba8be871d309b0ef4460a2c174c3b265591
+  mod8=0 mod16=0 distinct_bytes=112
+
+bodies whose first 64 bytes are all printable: 0/42
+sizes: [96, 128, 144, 160, 176, 192, 224, 240, 288, 320, 464, 592, 608, 640, 1024, 2352, 2400, 7296, 12368]
+all %8==0 : True
+all %16==0: True

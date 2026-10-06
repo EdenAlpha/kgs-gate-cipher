@@ -1,0 +1,16 @@
+cmd: exec bash -c true; echo VO; adb -s 127.0.0.1:5555 shell input swipe 807 483 807 483 180; sleep 20; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== konami flows =="; grep -iE "konami|kgs" /tmp/kgs/flows.log 2>/dev/null | tail -12; echo "== mitm konami lines =="; grep -iE "konami" /tmp/kgs/mitm.log 2>/dev/null | tail -12; echo "== mitm recent =="; tail -6 /tmp/kgs/mitm.log 2>/dev/null
+at: 00:13:29
+$ bash -c true; echo VO; adb -s 127.0.0.1:5555 shell input swipe 807 483 807 483 180; sleep 20; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== konami flows =="; grep -iE "konami|kgs" /tmp/kgs/flows.log 2>/dev/null | tail -12; echo "== mitm konami lines =="; grep -iE "konami" /tmp/kgs/mitm.log 2>/dev/null | tail -12; echo "== mitm recent =="; tail -6 /tmp/kgs/mitm.log 2>/dev/null
+VO
+== konami flows ==
+ADDON-READY targets=konami.net,konami.jp
+== mitm konami lines ==
+== mitm recent ==
+[23:24:46.076][172.17.0.2:38046] server connect 172.217.119.4:443
+[23:24:46.077][172.17.0.2:38058] server connect 172.217.119.4:443
+[23:24:46.079][172.17.0.2:38062] server connect 172.217.119.4:443
+[23:24:46.080][172.17.0.2:38064] server connect 172.217.119.4:443
+[23:24:46.091][172.17.0.2:38046] Client TLS handshake failed. The client does not trust the proxy's certificate for geller-pa.googleapis.com (OpenSSL Error([('SSL routines', '', 'tls alert certificate unknown')]))
+[23:24:46.093][172.17.0.2:38058] Client TLS handshake failed. The client does not trust the proxy's certificate for geller-pa.googleapis.com (OpenSSL Error([('SSL routines', '', 'tls alert certificate unknown')]))rc=0
+gamepid: 6484
+flows: 0

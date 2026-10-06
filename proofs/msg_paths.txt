@@ -1,0 +1,22 @@
+captured paths: second live session, and compression ruled out by test
+
+14 distinct routes from a genuine Play install, 56 flows and 28 responses all
+200, including gate_CMD_GET_USER_EULA_INFO.php which was not previously
+recorded, and a real CREATE_USER exchange for User ID ASKH-124-394-950.
+
+The response bodies read as uniformly random bytes, and compression was tested
+rather than assumed, because mitm_addon.py has a documented Content-Encoding
+gzip defect and compressed JSON mimics ciphertext closely. No 1f 8b magic on
+any body, and zlib fails at every window width, so it is neither gzip nor
+deflate. It is also not an encoding, since base64 or hex would be almost
+entirely printable against a measured 38 percent.
+
+Records which layer is decrypted and which is not, so that a claim that the
+capture is not decrypted has to name a layer: the transport is fully decrypted,
+the payload is encrypted by the game before TLS ever sees it, and the CA cannot
+reach it.
+
+Also records what is deliberately not committed and why. The 65MB mitm file
+stays on the runner for retrieval from the run artifact, and the raw flows.log
+is withheld once the browser login runs, because the password would be
+plaintext inside it and the branches are public.

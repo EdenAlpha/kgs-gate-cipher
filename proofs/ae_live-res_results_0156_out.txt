@@ -1,0 +1,6 @@
+cmd: exec sudo docker exec redroid sh -c "input tap 665 1145; sleep 12; screencap -p /data/local/tmp/live_shot.png"
+at: 15:25:50
+$ sudo docker exec redroid sh -c "input tap 665 1145; sleep 12; screencap -p /data/local/tmp/live_shot.png"
+rc=0
+gamepid: 
+flows: 0

@@ -1,0 +1,10 @@
+cmd: exec bash -c true; echo WP; adb -s 127.0.0.1:5555 shell input swipe 639 575 639 575 150; sleep 12; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== flows =="; grep -c "^### " /tmp/kgs/flows.log 2>/dev/null; grep -oE "### RESP POST /pes22/[^ ]*" /tmp/kgs/flows.log 2>/dev/null | sort -u | wc -l
+at: 00:42:20
+$ bash -c true; echo WP; adb -s 127.0.0.1:5555 shell input swipe 639 575 639 575 150; sleep 12; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== flows =="; grep -c "^### " /tmp/kgs/flows.log 2>/dev/null; grep -oE "### RESP POST /pes22/[^ ]*" /tmp/kgs/flows.log 2>/dev/null | sort -u | wc -l
+WP
+== flows ==
+19
+17
+rc=0
+gamepid: 9664
+flows: 19

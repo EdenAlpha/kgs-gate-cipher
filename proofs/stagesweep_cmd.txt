@@ -1,0 +1,1 @@
+exec rm -rf /tmp/kgs/sw; mkdir -p /tmp/kgs/full/sweep; for d in $(ls -1d /tmp/kgs/sweep/cycle* 2>/dev/null | tail -12); do cp -r "$d" /tmp/kgs/full/sweep/; done; du -sh /tmp/kgs/full/sweep; ls -1 /tmp/kgs/full/sweep | wc -l; echo SWEEPSTAGED

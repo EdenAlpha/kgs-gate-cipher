@@ -1,0 +1,10 @@
+cmd: exec bash -c true; echo C7; W=/tmp/kgs; adb -s 127.0.0.1:5555 shell input tap 1137 678; sleep 35; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== flows =="; grep -c "^### " $W/flows.log; echo "== hosts =="; grep "^### " $W/flows.log | tail -10
+at: 07:31:08
+$ bash -c true; echo C7; W=/tmp/kgs; adb -s 127.0.0.1:5555 shell input tap 1137 678; sleep 35; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== flows =="; grep -c "^### " $W/flows.log; echo "== hosts =="; grep "^### " $W/flows.log | tail -10
+C7
+== flows ==
+0
+== hosts ==
+rc=1
+gamepid: 8404
+flows: 0

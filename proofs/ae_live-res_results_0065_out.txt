@@ -1,0 +1,7 @@
+cmd: exec bash -c true; echo PLAY5; adb -s 127.0.0.1:5555 shell input tap 360 538; sleep 3; adb -s 127.0.0.1:5555 shell input text "$PEERLINK_GPASS"; sleep 2; adb -s 127.0.0.1:5555 shell input keyevent 66; sleep 15; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+at: 20:52:45
+$ bash -c true; echo PLAY5; adb -s 127.0.0.1:5555 shell input tap 360 538; sleep 3; adb -s 127.0.0.1:5555 shell input text "$PEERLINK_GPASS"; sleep 2; adb -s 127.0.0.1:5555 shell input keyevent 66; sleep 15; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+PLAY5
+rc=0
+gamepid: 
+flows: 0

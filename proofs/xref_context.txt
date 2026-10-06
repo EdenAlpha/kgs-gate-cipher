@@ -1,0 +1,298 @@
+==============================================================================
+HEADER XREF 0x7b2eb78
+==============================================================================
+  function start : 0x7b2eb3c   (60 bytes before the xref)
+  instructions   : 95   (0x7b2eb3c .. 0x7b2ecb4)
+
+  --- calls ---
+  [str] 0x07b2eb54  -> 0x00ad120e  'pes-custom-encrypt'
+  [str] 0x07b2eb5c  -> 0x0a4a98e0  <bss/va 0xa4a98e0 not file-backed>
+  [str] 0x07b2eb64  -> 0x02ef7b54  <1 non-printable bytes> 08
+  [str] 0x07b2eb6c  -> 0x08b75140  <empty/zero at 0x8b75140>
+    0x07b2eb9c bl #0x8b35240   PLT: __cxa_atexit
+          setup: strb w8, [x1, #8]!; stur q0, [x19, #9]; sturh w9, [x19, #0x19]
+    0x07b2ebd0 bl #0x8b35240   PLT: __cxa_atexit
+          setup: stur w9, [x19, #0x21]; sturh w10, [x19, #0x25]; strb wzr, [x19, #0x27]
+  [str] 0x07b2ec14  -> 0x0981a788  <empty/zero at 0x981a788>
+  [str] 0x07b2ec28  -> 0x0981a7e8  <empty/zero at 0x981a7e8>
+  [str] 0x07b2ec4c  -> 0x0981a788  <empty/zero at 0x981a788>
+    0x07b2ec68 bl #0x8b34ef0
+          setup: cbz x20, #0x7b2eca0; add x1, x20, #8; mov x0, #-1
+    0x07b2ec7c blr x8
+          setup: ldr x8, [x20]; mov x0, x20; ldr x8, [x8, #0x10]
+    0x07b2ec84 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x20
+    0x07b2ec98 bl #0x8b34ef0
+          setup: cbz x20, #0x7b2eca0; add x1, x20, #8; mov x0, #-1
+
+  --- window around the xref ---
+    0x07b2eb3c  b       #0x8b352c0
+    0x07b2eb40  stp     x29, x30, [sp, #-0x30]!
+    0x07b2eb44  str     x21, [sp, #0x10]
+    0x07b2eb48  stp     x20, x19, [sp, #0x20]
+    0x07b2eb4c  mov     x29, sp
+    0x07b2eb50  adrp    x9, #0xad1000
+    0x07b2eb54  add     x9, x9, #0x20e
+    0x07b2eb58  adrp    x19, #0xa4a9000
+    0x07b2eb5c  add     x19, x19, #0x8e0
+    0x07b2eb60  adrp    x20, #0x2ef7000
+    0x07b2eb64  add     x20, x20, #0xb54
+    0x07b2eb68  adrp    x21, #0x8b75000
+    0x07b2eb6c  add     x21, x21, #0x140
+    0x07b2eb70  mov     w8, #0x24
+    0x07b2eb74  mov     x1, x19
+    0x07b2eb78  ldr     q0, [x9]   <== header string
+    0x07b2eb7c  mov     w9, #0x7470
+    0x07b2eb80  mov     x0, x20
+    0x07b2eb84  mov     x2, x21
+    0x07b2eb88  str     wzr, [x19]
+    0x07b2eb8c  str     xzr, [x19, #0x18]
+    0x07b2eb90  strb    w8, [x1, #8]!
+    0x07b2eb94  stur    q0, [x19, #9]
+    0x07b2eb98  sturh   w9, [x19, #0x19]
+    0x07b2eb9c  bl      #0x8b35240
+    0x07b2eba0  mov     w9, #0x4541
+    0x07b2eba4  mov     w8, #0xc
+    0x07b2eba8  mov     x1, x19
+    0x07b2ebac  movk    w9, #0x3253, lsl #16
+    0x07b2ebb0  mov     w10, #0x3635
+    0x07b2ebb4  mov     x0, x20
+    0x07b2ebb8  mov     x2, x21
+    0x07b2ebbc  stp     xzr, xzr, [x19, #0x28]
+    0x07b2ebc0  strb    w8, [x1, #0x20]!
+    0x07b2ebc4  stur    w9, [x19, #0x21]
+    0x07b2ebc8  sturh   w10, [x19, #0x25]
+    0x07b2ebcc  strb    wzr, [x19, #0x27]
+    0x07b2ebd0  bl      #0x8b35240
+    0x07b2ebd4  mov     w8, #0x10
+    0x07b2ebd8  mov     x0, x20
+
+==============================================================================
+HEADER XREF 0x7b34d18
+==============================================================================
+  function start : 0x7b34cdc   (60 bytes before the xref)
+  instructions   : 95   (0x7b34cdc .. 0x7b34e54)
+
+  --- calls ---
+  [str] 0x07b34cf4  -> 0x00ad120e  'pes-custom-encrypt'
+  [str] 0x07b34cfc  -> 0x0a4a9990  <bss/va 0xa4a9990 not file-backed>
+  [str] 0x07b34d04  -> 0x02ef7b54  <1 non-printable bytes> 08
+  [str] 0x07b34d0c  -> 0x08b75140  <empty/zero at 0x8b75140>
+    0x07b34d3c bl #0x8b35240   PLT: __cxa_atexit
+          setup: strb w8, [x1, #0x10]!; stur q0, [x19, #0x11]; sturh w9, [x19, #0x21]
+    0x07b34d70 bl #0x8b35240   PLT: __cxa_atexit
+          setup: stur w9, [x19, #0x29]; sturh w10, [x19, #0x2d]; strb wzr, [x19, #0x2f]
+    0x07b34dc8 bl #0x7b2ec10
+          setup: mov x29, sp; mov x19, x1; mov x21, x0
+  [str] 0x07b34dd8  -> 0x0981a998  <empty/zero at 0x981a998>
+    0x07b34dfc bl #0x8b35330   PLT: strlen
+          setup: ldrb w8, [x19]; cbz w8, #0x7b34e1c; mov x0, x19
+  [str] 0x07b34e44  -> 0x0981a998  <empty/zero at 0x981a998>
+    0x07b34e54 bl #0x2efa56c
+          setup: str x9, [x0]; tbz w8, #0, #0x7b34e58; ldr x0, [x19, #0x60]
+
+  --- window around the xref ---
+    0x07b34cdc  b       #0x8b352c0
+    0x07b34ce0  stp     x29, x30, [sp, #-0x30]!
+    0x07b34ce4  str     x21, [sp, #0x10]
+    0x07b34ce8  stp     x20, x19, [sp, #0x20]
+    0x07b34cec  mov     x29, sp
+    0x07b34cf0  adrp    x9, #0xad1000
+    0x07b34cf4  add     x9, x9, #0x20e
+    0x07b34cf8  adrp    x19, #0xa4a9000
+    0x07b34cfc  add     x19, x19, #0x990
+    0x07b34d00  adrp    x20, #0x2ef7000
+    0x07b34d04  add     x20, x20, #0xb54
+    0x07b34d08  adrp    x21, #0x8b75000
+    0x07b34d0c  add     x21, x21, #0x140
+    0x07b34d10  mov     w8, #0x24
+    0x07b34d14  mov     x1, x19
+    0x07b34d18  ldr     q0, [x9]   <== header string
+    0x07b34d1c  mov     w9, #0x7470
+    0x07b34d20  mov     x0, x20
+    0x07b34d24  mov     x2, x21
+    0x07b34d28  str     wzr, [x19]
+    0x07b34d2c  str     xzr, [x19, #0x20]
+    0x07b34d30  strb    w8, [x1, #0x10]!
+    0x07b34d34  stur    q0, [x19, #0x11]
+    0x07b34d38  sturh   w9, [x19, #0x21]
+    0x07b34d3c  bl      #0x8b35240
+    0x07b34d40  mov     w9, #0x4541
+    0x07b34d44  mov     w8, #0xc
+    0x07b34d48  mov     x1, x19
+    0x07b34d4c  movk    w9, #0x3253, lsl #16
+    0x07b34d50  mov     w10, #0x3635
+    0x07b34d54  mov     x0, x20
+    0x07b34d58  mov     x2, x21
+    0x07b34d5c  stp     xzr, xzr, [x19, #0x30]
+    0x07b34d60  strb    w8, [x1, #0x28]!
+    0x07b34d64  stur    w9, [x19, #0x29]
+    0x07b34d68  sturh   w10, [x19, #0x2d]
+    0x07b34d6c  strb    wzr, [x19, #0x2f]
+    0x07b34d70  bl      #0x8b35240
+    0x07b34d74  mov     w8, #0x10
+    0x07b34d78  mov     x0, x20
+
+==============================================================================
+HEADER XREF 0x7b35cf4
+==============================================================================
+  function start : 0x7b35be8   (268 bytes before the xref)
+  instructions   : 147   (0x7b35be8 .. 0x7b35e30)
+
+  --- calls ---
+  [str] 0x07b35bfc  -> 0x0981aa40  <empty/zero at 0x981aa40>
+    0x07b35c10 bl #0x74e6d70
+          setup: mov x19, x0; str x8, [x0]; mov x0, x20
+    0x07b35c28 bl #0x8b34ef0
+          setup: cbz x21, #0x7b35c30; add x1, x21, #8; mov x0, #-1
+    0x07b35c34 bl #0x74e6e74
+          setup: bl #0x8b34ef0; cbz x0, #0x7b35c64; mov x0, x20
+    0x07b35c48 bl #0x8b34ef0
+          setup: cbz x20, #0x7b35c50; add x1, x20, #8; mov x0, #-1
+    0x07b35c70 blr x8
+          setup: ldr x8, [x21]; mov x0, x21; ldr x8, [x8, #0x10]
+    0x07b35c78 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x21
+    0x07b35c80 bl #0x74e6e74
+          setup: mov x0, x21; bl #0x8b388f0; mov x0, x20
+    0x07b35c9c blr x8
+          setup: ldr x8, [x20]; mov x0, x20; ldr x8, [x8, #0x10]
+    0x07b35ca4 bl #0x8b388f0   PLT: _ZNSt6__ndk119__shared_weak_count14__release_weakEv
+          setup: ldr x8, [x8, #0x10]; blr x8; mov x0, x20
+  [str] 0x07b35cd0  -> 0x00ad120e  'pes-custom-encrypt'
+  [str] 0x07b35cd8  -> 0x0a4a9a08  <bss/va 0xa4a9a08 not file-backed>
+  [str] 0x07b35ce0  -> 0x02ef7b54  <1 non-printable bytes> 08
+  [str] 0x07b35ce8  -> 0x08b75140  <empty/zero at 0x8b75140>
+    0x07b35d18 bl #0x8b35240   PLT: __cxa_atexit
+          setup: strb w8, [x1, #0x18]!; stur q0, [x19, #0x19]; sturh w9, [x19, #0x29]
+    0x07b35d4c bl #0x8b35240   PLT: __cxa_atexit
+          setup: stur w9, [x19, #0x31]; sturh w10, [x19, #0x35]; strb wzr, [x19, #0x37]
+    0x07b35df4 bl #0x7dbc430
+          setup: stur xzr, [x29, #-0x28]; stp xzr, xzr, [sp, #0x18]; str xzr, [sp, #0x28]
+    0x07b35e04 bl #0x2efa56c
+          setup: ldrb w8, [sp, #0x18]; tbz w8, #0, #0x7b35e08; ldr x0, [sp, #0x28]
+    0x07b35e14 bl #0x7b2ef44
+          setup: ldr x0, [x20, #8]; cbz x0, #0x7b35e18; sub x1, x29, #0x38
+    0x07b35e24 bl #0x2efa56c
+          setup: ldurb w8, [x29, #-0x38]; tbz w8, #0, #0x7b35e28; ldur x0, [x29, #-0x28]
+    0x07b35e2c bl #0x7d269e8
+          setup: ldur x0, [x29, #-0x28]; bl #0x2efa56c; sub x8, x29, #0x38
+
+  --- window around the xref ---
+    0x07b35c94  mov     x0, x20
+    0x07b35c98  ldr     x8, [x8, #0x10]
+    0x07b35c9c  blr     x8
+    0x07b35ca0  mov     x0, x20
+    0x07b35ca4  bl      #0x8b388f0
+    0x07b35ca8  mov     x0, x19
+    0x07b35cac  ldp     x20, x19, [sp, #0x20]
+    0x07b35cb0  ldr     x21, [sp, #0x10]
+    0x07b35cb4  ldp     x29, x30, [sp], #0x30
+    0x07b35cb8  b       #0x8b352c0
+    0x07b35cbc  stp     x29, x30, [sp, #-0x30]!
+    0x07b35cc0  str     x21, [sp, #0x10]
+    0x07b35cc4  stp     x20, x19, [sp, #0x20]
+    0x07b35cc8  mov     x29, sp
+    0x07b35ccc  adrp    x9, #0xad1000
+    0x07b35cd0  add     x9, x9, #0x20e
+    0x07b35cd4  adrp    x19, #0xa4a9000
+    0x07b35cd8  add     x19, x19, #0xa08
+    0x07b35cdc  adrp    x20, #0x2ef7000
+    0x07b35ce0  add     x20, x20, #0xb54
+    0x07b35ce4  adrp    x21, #0x8b75000
+    0x07b35ce8  add     x21, x21, #0x140
+    0x07b35cec  mov     w8, #0x24
+    0x07b35cf0  mov     x1, x19
+    0x07b35cf4  ldr     q0, [x9]   <== header string
+    0x07b35cf8  mov     w9, #0x7470
+    0x07b35cfc  mov     x0, x20
+    0x07b35d00  mov     x2, x21
+    0x07b35d04  str     wzr, [x19]
+    0x07b35d08  str     xzr, [x19, #0x28]
+    0x07b35d0c  strb    w8, [x1, #0x18]!
+    0x07b35d10  stur    q0, [x19, #0x19]
+    0x07b35d14  sturh   w9, [x19, #0x29]
+    0x07b35d18  bl      #0x8b35240
+    0x07b35d1c  mov     w9, #0x4541
+    0x07b35d20  mov     w8, #0xc
+    0x07b35d24  mov     x1, x19
+    0x07b35d28  movk    w9, #0x3253, lsl #16
+    0x07b35d2c  mov     w10, #0x3635
+    0x07b35d30  mov     x0, x20
+    0x07b35d34  mov     x2, x21
+    0x07b35d38  stp     xzr, xzr, [x19, #0x38]
+    0x07b35d3c  strb    w8, [x1, #0x30]!
+    0x07b35d40  stur    w9, [x19, #0x31]
+    0x07b35d44  sturh   w10, [x19, #0x35]
+    0x07b35d48  strb    wzr, [x19, #0x37]
+    0x07b35d4c  bl      #0x8b35240
+    0x07b35d50  mov     w8, #0x10
+    0x07b35d54  mov     x0, x20
+
+==============================================================================
+HEADER XREF 0x7b36ba8
+==============================================================================
+  function start : 0x7b36b64   (68 bytes before the xref)
+  instructions   : 97   (0x7b36b64 .. 0x7b36ce4)
+
+  --- calls ---
+  [str] 0x07b36b84  -> 0x00ad120e  'pes-custom-encrypt'
+  [str] 0x07b36b8c  -> 0x0a4a9a98  <bss/va 0xa4a9a98 not file-backed>
+  [str] 0x07b36b94  -> 0x02ef7b54  <1 non-printable bytes> 08
+  [str] 0x07b36b9c  -> 0x08b75140  <empty/zero at 0x8b75140>
+    0x07b36bcc bl #0x8b35240   PLT: __cxa_atexit
+          setup: strb w8, [x1, #8]!; stur q0, [x19, #9]; sturh w9, [x19, #0x19]
+    0x07b36c00 bl #0x8b35240   PLT: __cxa_atexit
+          setup: stur w9, [x19, #0x21]; sturh w10, [x19, #0x25]; strb wzr, [x19, #0x27]
+    0x07b36c58 bl #0x7b2ec10
+          setup: mov x1, xzr; mov w2, wzr; mov x19, x0
+  [str] 0x07b36c60  -> 0x0981ab38  <empty/zero at 0x981ab38>
+  [str] 0x07b36ca0  -> 0x0981ab38  <empty/zero at 0x981ab38>
+    0x07b36cb0 bl #0x2efa56c
+          setup: str x9, [x0]; tbz w8, #0, #0x7b36cb4; ldr x0, [x19, #0x80]
+    0x07b36ce4 blr x8
+          setup: mov x0, x9; add x8, x8, #0x20; ldr x8, [x8]
+
+  --- window around the xref ---
+    0x07b36b64  b       #0x8b352c0
+    0x07b36b68  ldr     x0, [x0, #8]
+    0x07b36b6c  b       #0x7b36378
+    0x07b36b70  stp     x29, x30, [sp, #-0x30]!
+    0x07b36b74  str     x21, [sp, #0x10]
+    0x07b36b78  stp     x20, x19, [sp, #0x20]
+    0x07b36b7c  mov     x29, sp
+    0x07b36b80  adrp    x9, #0xad1000
+    0x07b36b84  add     x9, x9, #0x20e
+    0x07b36b88  adrp    x19, #0xa4a9000
+    0x07b36b8c  add     x19, x19, #0xa98
+    0x07b36b90  adrp    x20, #0x2ef7000
+    0x07b36b94  add     x20, x20, #0xb54
+    0x07b36b98  adrp    x21, #0x8b75000
+    0x07b36b9c  add     x21, x21, #0x140
+    0x07b36ba0  mov     w8, #0x24
+    0x07b36ba4  mov     x1, x19
+    0x07b36ba8  ldr     q0, [x9]   <== header string
+    0x07b36bac  mov     w9, #0x7470
+    0x07b36bb0  mov     x0, x20
+    0x07b36bb4  mov     x2, x21
+    0x07b36bb8  str     wzr, [x19]
+    0x07b36bbc  str     xzr, [x19, #0x18]
+    0x07b36bc0  strb    w8, [x1, #8]!
+    0x07b36bc4  stur    q0, [x19, #9]
+    0x07b36bc8  sturh   w9, [x19, #0x19]
+    0x07b36bcc  bl      #0x8b35240
+    0x07b36bd0  mov     w9, #0x4541
+    0x07b36bd4  mov     w8, #0xc
+    0x07b36bd8  mov     x1, x19
+    0x07b36bdc  movk    w9, #0x3253, lsl #16
+    0x07b36be0  mov     w10, #0x3635
+    0x07b36be4  mov     x0, x20
+    0x07b36be8  mov     x2, x21
+    0x07b36bec  stp     xzr, xzr, [x19, #0x28]
+    0x07b36bf0  strb    w8, [x1, #0x20]!
+    0x07b36bf4  stur    w9, [x19, #0x21]
+    0x07b36bf8  sturh   w10, [x19, #0x25]
+    0x07b36bfc  strb    wzr, [x19, #0x27]
+    0x07b36c00  bl      #0x8b35240
+    0x07b36c04  mov     w8, #0x10
+    0x07b36c08  mov     x0, x20

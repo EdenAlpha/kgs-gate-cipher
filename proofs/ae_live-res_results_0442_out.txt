@@ -1,0 +1,10 @@
+cmd: exec adb -s 127.0.0.1:5555 shell am force-stop com.aurora.store; adb -s 127.0.0.1:5555 shell am start -n com.aurora.store/.ComposeActivity; sleep 15; sudo docker exec redroid iptables -t nat -L OUTPUT -n -v | head -5
+at: 09:59:24
+$ adb -s 127.0.0.1:5555 shell am force-stop com.aurora.store; adb -s 127.0.0.1:5555 shell am start -n com.aurora.store/.ComposeActivity; sleep 15; sudo docker exec redroid iptables -t nat -L OUTPUT -n -v | head -5
+Starting: Intent { cmp=com.aurora.store/.ComposeActivity }
+Chain OUTPUT (policy ACCEPT 1 packets, 1228 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+    1    60 DNAT       tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp dpt:443 to:172.17.0.1:8080
+rc=0
+gamepid: 
+flows: 0

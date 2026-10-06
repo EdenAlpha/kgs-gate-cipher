@@ -1,0 +1,15 @@
+cmd: exec sudo docker exec redroid iptables -t nat -D OUTPUT -p tcp --dport 443 -j DNAT --to-destination 172.17.0.1:8080; echo del_rc=$?; sudo iptables -t nat -A PREROUTING -i docker0 -p tcp --dport 443 -j REDIRECT --to-port 8080; echo add_rc=$?; sudo iptables -t nat -L PREROUTING -n -v | head -8; sudo ss -tln 2>/dev/null | grep 8080
+at: 10:02:12
+$ sudo docker exec redroid iptables -t nat -D OUTPUT -p tcp --dport 443 -j DNAT --to-destination 172.17.0.1:8080; echo del_rc=$?; sudo iptables -t nat -A PREROUTING -i docker0 -p tcp --dport 443 -j REDIRECT --to-port 8080; echo add_rc=$?; sudo iptables -t nat -L PREROUTING -n -v | head -8; sudo ss -tln 2>/dev/null | grep 8080
+del_rc=0
+Warning: Extension REDIRECT revision 0 not supported, missing kernel module?
+iptables v1.8.10 (nf_tables):  RULE_APPEND failed (No such file or directory): rule in chain PREROUTING
+add_rc=4
+Chain PREROUTING (policy ACCEPT 144 packets, 60918 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+   34  2288 DOCKER     0    --  *      *       0.0.0.0/0            0.0.0.0/0            ADDRTYPE match dst-type LOCAL
+LISTEN 0      0            0.0.0.0:8080       0.0.0.0:*          
+LISTEN 0      0                  *:8080             *:*          
+rc=0
+gamepid: 
+flows: 0

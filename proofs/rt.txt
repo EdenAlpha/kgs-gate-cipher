@@ -1,0 +1,2 @@
+134217728 7f3c0000000-7f3c8000000 /data/app/~~/lib/arm64/libUE4.so 
+4096 7f0000-7f1000 [stack] 

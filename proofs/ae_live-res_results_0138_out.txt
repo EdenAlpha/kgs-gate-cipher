@@ -1,0 +1,30 @@
+cmd: exec bash -c true; echo UU; adb -s 127.0.0.1:5555 shell input tap 1139 677; sleep 10; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== app data size =="; adb -s 127.0.0.1:5555 shell su 0 du -sh /data/data/jp.konami.pesam 2>/dev/null; echo "== logcat =="; adb -s 127.0.0.1:5555 shell su 0 logcat -d -t 400 2>/dev/null | grep -iE "pad|asset|AssetManager|assetdelivery|konami|FATAL|ANR|Download" | tail -20
+at: 23:51:37
+$ bash -c true; echo UU; adb -s 127.0.0.1:5555 shell input tap 1139 677; sleep 10; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== app data size =="; adb -s 127.0.0.1:5555 shell su 0 du -sh /data/data/jp.konami.pesam 2>/dev/null; echo "== logcat =="; adb -s 127.0.0.1:5555 shell su 0 logcat -d -t 400 2>/dev/null | grep -iE "pad|asset|AssetManager|assetdelivery|konami|FATAL|ANR|Download" | tail -20
+UU
+== app data size ==
+1.9G	/data/data/jp.konami.pesam
+== logcat ==
+09-30 19:48:13.103  5642  5655 W JavaBinder: BinderProxy is being destroyed but the application did not call unlinkToDeath to unlink all of its death recipients beforehand.  Releasing leaked death recipient: com.google.android.play.core.assetpacks.internal.q
+09-30 19:48:13.103  5642  5655 W JavaBinder: BinderProxy is being destroyed but the application did not call unlinkToDeath to unlink all of its death recipients beforehand.  Releasing leaked death recipient: com.google.android.play.core.assetpacks.internal.q
+09-30 19:48:13.103  5642  5655 W JavaBinder: BinderProxy is being destroyed but the application did not call unlinkToDeath to unlink all of its death recipients beforehand.  Releasing leaked death recipient: com.google.android.play.core.assetpacks.internal.q
+09-30 19:48:13.103  5642  5655 W JavaBinder: BinderProxy is being destroyed but the application did not call unlinkToDeath to unlink all of its death recipients beforehand.  Releasing leaked death recipient: com.google.android.play.core.assetpacks.internal.q
+09-30 19:48:13.103  5642  5655 W JavaBinder: BinderProxy is being destroyed but the application did not call unlinkToDeath to unlink all of its death recipients beforehand.  Releasing leaked death recipient: com.google.android.play.core.assetpacks.internal.q
+09-30 19:48:13.103  5642  5655 W JavaBinder: BinderProxy is being destroyed but the application did not call unlinkToDeath to unlink all of its death recipients beforehand.  Releasing leaked death recipient: com.google.android.play.core.assetpacks.internal.q
+09-30 19:48:13.103  5642  5655 W JavaBinder: BinderProxy is being destroyed but the application did not call unlinkToDeath to unlink all of its death recipients beforehand.  Releasing leaked death recipient: com.google.android.play.core.assetpacks.internal.q
+09-30 19:48:13.103  5642  5655 W JavaBinder: BinderProxy is being destroyed but the application did not call unlinkToDeath to unlink all of its death recipients beforehand.  Releasing leaked death recipient: com.google.android.play.core.assetpacks.internal.q
+09-30 19:48:13.103  5642  5655 W JavaBinder: BinderProxy is being destroyed but the application did not call unlinkToDeath to unlink all of its death recipients beforehand.  Releasing leaked death recipient: com.google.android.play.core.assetpacks.internal.q
+09-30 19:48:13.103  5642  5655 W JavaBinder: BinderProxy is being destroyed but the application did not call unlinkToDeath to unlink all of its death recipients beforehand.  Releasing leaked death recipient: com.google.android.play.core.assetpacks.internal.q
+09-30 19:48:13.103  5642  5655 W JavaBinder: BinderProxy is being destroyed but the application did not call unlinkToDeath to unlink all of its death recipients beforehand.  Releasing leaked death recipient: com.google.android.play.core.assetpacks.internal.q
+09-30 19:48:13.103  5642  5655 W JavaBinder: BinderProxy is being destroyed but the application did not call unlinkToDeath to unlink all of its death recipients beforehand.  Releasing leaked death recipient: com.google.android.play.core.assetpacks.internal.q
+09-30 19:48:23.958   230  2271 I ImeTracker: jp.konami.pesam:69994ddf: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+09-30 19:48:23.958   230  2271 I ImeTracker: jp.konami.pesam:69994ddf: onCancelled at PHASE_SERVER_SHOULD_HIDE
+09-30 19:50:21.553   230   241 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~WK6jjI0XQSnlaMEMyo89ZA==/com.google.android.gms-RcJeWGnfTT_0Ehh06DE4Rg==/base.apk' with 1 weak references
+09-30 19:50:21.553   230   241 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~WK6jjI0XQSnlaMEMyo89ZA==/com.google.android.gms-RcJeWGnfTT_0Ehh06DE4Rg==/split_config.en.apk' with 1 weak references
+09-30 19:50:21.553   230   241 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~WK6jjI0XQSnlaMEMyo89ZA==/com.google.android.gms-RcJeWGnfTT_0Ehh06DE4Rg==/split_config.xhdpi.apk' with 1 weak references
+09-30 19:50:31.884  3931  6178 I Finsky  : [335] Removed 0 corrupted downloaded sessions.
+09-30 19:50:31.897   230  3855 W PackageConfigPersister: App-specific configuration not found for packageName: jp.konami.pesam and userId: 0
+09-30 19:50:32.017  3931  3931 I Finsky  : [2] No new splits to download.
+rc=0
+gamepid: 5642
+flows: 0

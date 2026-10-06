@@ -1,0 +1,22 @@
+fix(live/sweep.sh): dd quotes were eaten by adb -> 0 bytes every cycle
+
+adb joins its argv with spaces and does NOT re-quote, so the call
+
+    A shell su 0 sh -c "dd if=/proc/$pid/mem ..."
+
+reached the device as `sh -c dd` with no operands: dd read empty stdin,
+created no sw.bin, and adb pull failed. 5462 cycles, 0 regions, 0 bytes,
+0s each -- while `su 0 cat /proc/pid/maps` worked, because maps has no
+sh -c layer. dump_game_mem.py documents this exact trap and fixes it with
+embedded quotes; sweep.sh now does the same.
+
+Also fixed, same file:
+
+- truncated.log compared BYTES to PAGE COUNT, so every partial read looked
+  complete: a gap could have vanished silently (false green).
+- prune's `! -name HAS_MARKERS` never matched, because HAS_MARKERS is a
+  file INSIDE the dir, never the dir name. Login cycles rotated out with
+  ordinary ones. Flagged cycles now survive up to FLAGKEEP, with MAXGB
+  always winning.
+- device files removed with `su 0` on the device; the old `rm` ran on the
+  host and deleted nothing.

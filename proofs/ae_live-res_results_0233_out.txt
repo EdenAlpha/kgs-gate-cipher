@@ -1,0 +1,11 @@
+cmd: exec bash -c true; echo SV; echo "-- multitouch anywhere in feature xml --"; adb -s 127.0.0.1:5555 shell "grep -rl multitouch /system/etc/permissions/ /product/etc/permissions/ /vendor/etc/permissions/ 2>/dev/null"; echo "-- android.hardware features declared --"; adb -s 127.0.0.1:5555 shell "grep -rh \"feature name=\\\"android.hardware\" /system/etc/permissions/*.xml 2>/dev/null | head -40"
+at: 22:59:29
+$ bash -c true; echo SV; echo "-- multitouch anywhere in feature xml --"; adb -s 127.0.0.1:5555 shell "grep -rl multitouch /system/etc/permissions/ /product/etc/permissions/ /vendor/etc/permissions/ 2>/dev/null"; echo "-- android.hardware features declared --"; adb -s 127.0.0.1:5555 shell "grep -rh \"feature name=\\\"android.hardware\" /system/etc/permissions/*.xml 2>/dev/null | head -40"
+SV
+-- multitouch anywhere in feature xml --
+/vendor/etc/permissions/android.hardware.touchscreen.xml
+/vendor/etc/permissions/handheld_core_hardware.xml
+-- android.hardware features declared --
+rc=0
+gamepid: 
+flows: 0

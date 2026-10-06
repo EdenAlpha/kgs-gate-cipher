@@ -1,0 +1,92 @@
+searching backwards from 0x7b2e44c for a function prologue...
+  prologue found at 0x7b2e244 :  stp x29, x30, [sp, #-0x40]!
+caller spans 0x7b2e244 .. 0x7b2e4c8  (162 instructions shown)
+
+==============================================================================
+CALLS INSIDE THE CALLER  (0x7b2e244 .. )
+==============================================================================
+  0x07b2e274 -> 0x07b2d794
+        setup: mov x20, x1; mov x21, x0; add x22, x0, x8
+  0x07b2e394 -> 0x07dbc430
+        setup: str xzr, [sp, #0x38]; stp xzr, xzr, [sp, #0x10]; str xzr, [sp, #0x20]
+  0x07b2e3a4 -> 0x02efa56c
+        setup: ldrb w8, [sp, #0x10]; tbz w8, #0, #0x7b2e3a8; ldr x0, [sp, #0x20]
+  0x07b2e3b4 -> 0x07b2ef44
+        setup: ldr x0, [x20, #8]; cbz x0, #0x7b2e3b8; add x1, sp, #0x28
+  0x07b2e3c4 -> 0x02efa56c
+        setup: ldrb w8, [sp, #0x28]; tbz w8, #0, #0x7b2e3c8; ldr x0, [sp, #0x38]
+  0x07b2e3cc -> 0x074e6d70
+        setup: ldr x0, [sp, #0x38]; bl #0x2efa56c; add x0, x20, #0x18
+  0x07b2e3e0 -> 0x074e6b00
+        setup: mov x1, xzr; stp xzr, xzr, [sp, #0x10]; str xzr, [sp, #0x20]
+  0x07b2e3f8 -> 0x07b38268
+        setup: mov x0, x22; mov w1, w21; str wzr, [sp, #0xc]
+  0x07b2e448 -> 0x07b2ef88
+        setup: adrp x1, #0xa4a9000; add x1, x1, #0x8e8; add x2, x1, #0x18
+  0x07b2e450 -> 0x074e6d10
+        setup: add x2, x1, #0x18; bl #0x7b2ef88; add x0, sp, #0x28
+  0x07b2e45c -> 0x074e6d24
+        setup: bl #0x74e6d10; mov x21, x0; add x0, sp, #0x28
+  0x07b2e46c -> 0x07b38a44
+        setup: mov x2, x0; add x0, sp, #0x10; mov x1, x21
+  0x07b2e47c -> 0x074e6d10
+        setup: tbz w0, #0, #0x7b2e4f8; add x0, sp, #0x28; ldr x20, [x20, #8]
+  0x07b2e488 -> 0x074e6d24
+        setup: bl #0x74e6d10; mov x21, x0; add x0, sp, #0x28
+  0x07b2e4b8 -> 0x074e6e74
+        setup: blr x8; mov w23, w0; add x0, sp, #0x28
+  0x07b2e4c8 -> 0x02efa56c
+        setup: ldrb w8, [sp, #0x10]; tbz w8, #0, #0x7b2e4cc; ldr x0, [sp, #0x20]
+
+==============================================================================
+ALL INSTRUCTIONS AROUND THE SIGN-BUILDER CALL SITE
+==============================================================================
+  0x07b2e3ec  mov      x0, x22
+  0x07b2e3f0  mov      w1, w21
+  0x07b2e3f4  str      wzr, [sp, #0xc]
+  0x07b2e3f8  bl       #0x7b38268
+  0x07b2e3fc  mov      w23, wzr
+  0x07b2e400  tbz      w0, #0, #0x7b2e4b4
+  0x07b2e404  ldr      w8, [sp, #0xc]
+  0x07b2e408  cmp      w8, #1
+  0x07b2e40c  b.eq     #0x7b2e434
+  0x07b2e410  cbnz     w8, #0x7b2e44c
+  0x07b2e414  ldr      x0, [x20, #8]
+  0x07b2e418  cbz      x0, #0x7b2e44c
+  0x07b2e41c  adrp     x1, #0xa4a9000
+  0x07b2e420  add      x1, x1, #0x8e8
+  0x07b2e424  add      x2, x1, #0x30
+  0x07b2e428  b        #0x7b2e448
+  0x07b2e42c  mov      w23, wzr
+  0x07b2e430  b        #0x7b2e4cc
+  0x07b2e434  ldr      x0, [x20, #8]
+  0x07b2e438  cbz      x0, #0x7b2e44c
+  0x07b2e43c  adrp     x1, #0xa4a9000
+  0x07b2e440  add      x1, x1, #0x8e8
+  0x07b2e444  add      x2, x1, #0x18
+  0x07b2e448  bl       #0x7b2ef88
+  0x07b2e44c  add      x0, sp, #0x28  <== sign builder call
+  0x07b2e450  bl       #0x74e6d10
+  0x07b2e454  mov      x21, x0
+  0x07b2e458  add      x0, sp, #0x28
+  0x07b2e45c  bl       #0x74e6d24
+  0x07b2e460  mov      x2, x0
+  0x07b2e464  add      x0, sp, #0x10
+  0x07b2e468  mov      x1, x21
+  0x07b2e46c  bl       #0x7b38a44
+  0x07b2e470  tbz      w0, #0, #0x7b2e4f8
+  0x07b2e474  add      x0, sp, #0x28
+  0x07b2e478  ldr      x20, [x20, #8]
+  0x07b2e47c  bl       #0x74e6d10
+  0x07b2e480  mov      x21, x0
+  0x07b2e484  add      x0, sp, #0x28
+  0x07b2e488  bl       #0x74e6d24
+  0x07b2e48c  ldr      x8, [x20]
+  0x07b2e490  mov      x3, x0
+  0x07b2e494  add      x5, sp, #0x10
+  0x07b2e498  mov      x0, x20
+  0x07b2e49c  mov      x1, x19
+  0x07b2e4a0  mov      x2, x21
+  0x07b2e4a4  ldr      x8, [x8, #0x20]
+  0x07b2e4a8  mov      w4, #1
+  0x07b2e4ac  blr      x8

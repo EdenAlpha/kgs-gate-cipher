@@ -1,0 +1,26 @@
+cmd: exec bash -c true; echo T1; echo "== flows2 before =="; grep -c "^### " /tmp/kgs/flows2.log; adb -s 127.0.0.1:5555 shell am force-stop jp.konami.pesam; sleep 6; adb -s 127.0.0.1:5555 shell am start -n jp.konami.pesam/com.epicgames.ue4.SplashActivity >/dev/null 2>&1; echo "== relaunched, letting it log in =="; sleep 60; adb -s 127.0.0.1:5555 shell pidof jp.konami.pesam; echo "== flows2 after 60s =="; grep -c "^### " /tmp/kgs/flows2.log; echo "== new paths =="; grep -oE "### REQ POST /pes22/[^ ]*" /tmp/kgs/flows2.log | sort | uniq -c | tail -12; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+at: 01:39:41
+$ bash -c true; echo T1; echo "== flows2 before =="; grep -c "^### " /tmp/kgs/flows2.log; adb -s 127.0.0.1:5555 shell am force-stop jp.konami.pesam; sleep 6; adb -s 127.0.0.1:5555 shell am start -n jp.konami.pesam/com.epicgames.ue4.SplashActivity >/dev/null 2>&1; echo "== relaunched, letting it log in =="; sleep 60; adb -s 127.0.0.1:5555 shell pidof jp.konami.pesam; echo "== flows2 after 60s =="; grep -c "^### " /tmp/kgs/flows2.log; echo "== new paths =="; grep -oE "### REQ POST /pes22/[^ ]*" /tmp/kgs/flows2.log | sort | uniq -c | tail -12; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+T1
+== flows2 before ==
+80
+== relaunched, letting it log in ==
+81914
+== flows2 after 60s ==
+90
+== new paths ==
+      2 ### REQ POST /pes22/gate/gate_CMD_GET_MYCLUB_CONTRACT_INFO.php
+      1 ### REQ POST /pes22/gate/gate_CMD_GET_PRODUCT_LIST.php
+      2 ### REQ POST /pes22/gate/gate_CMD_GET_SERVER_ENV.php
+      1 ### REQ POST /pes22/gate/gate_CMD_GET_STADIUM_DATA.php
+      2 ### REQ POST /pes22/gate/gate_CMD_GET_USER_EULA_INFO.php
+      1 ### REQ POST /pes22/gate/gate_CMD_LOGIN.php
+      1 ### REQ POST /pes22/gate/gate_CMD_SEND_ANALYSIS_LOG.php
+      7 ### REQ POST /pes22/gate/gate_CMD_SET_GAMERELAY_QUALITY.php
+      6 ### REQ POST /pes22/gate/gate_CMD_SET_MENU_TRACKRECORD.php
+      2 ### REQ POST /pes22/gate/gate_CMD_SET_MYCLUB_SQUAD_INFO.php
+      1 ### REQ POST /pes22/gate/gate_CMD_SET_TRACKRECORD.php
+      1 ### REQ POST /pes22/gate/gate_CMD_USE_MYCLUB_AGENT.php
+rc=0
+gamepid: 81914
+flows: 22

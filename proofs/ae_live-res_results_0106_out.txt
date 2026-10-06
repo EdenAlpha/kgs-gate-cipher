@@ -1,0 +1,25 @@
+cmd: exec bash -c true; echo C1; nc -z 127.0.0.1 27042 && echo FRIDA_PORT_OPEN || echo FRIDA_PORT_CLOSED; SCRIPT=$(find /home/runner -name capture_insecure.js -path "*kgs-login*" 2>/dev/null | head -1); echo "script=$SCRIPT"; adb -s 127.0.0.1:5555 shell am force-stop jp.konami.pesam; sleep 3; adb -s 127.0.0.1:5555 shell rm -rf /data/local/tmp/kgs; adb -s 127.0.0.1:5555 shell mkdir -p /data/local/tmp/kgs; (cd /tmp/kgs && nohup setsid timeout 5400 frida -H 127.0.0.1:27042 -f jp.konami.pesam -l "$SCRIPT" --runtime=v8 > /tmp/kgs/frida.log 2>&1 < /dev/null &) ; sleep 50; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== frida log =="; tail -22 /tmp/kgs/frida.log
+at: 07:15:16
+$ bash -c true; echo C1; nc -z 127.0.0.1 27042 && echo FRIDA_PORT_OPEN || echo FRIDA_PORT_CLOSED; SCRIPT=$(find /home/runner -name capture_insecure.js -path "*kgs-login*" 2>/dev/null | head -1); echo "script=$SCRIPT"; adb -s 127.0.0.1:5555 shell am force-stop jp.konami.pesam; sleep 3; adb -s 127.0.0.1:5555 shell rm -rf /data/local/tmp/kgs; adb -s 127.0.0.1:5555 shell mkdir -p /data/local/tmp/kgs; (cd /tmp/kgs && nohup setsid timeout 5400 frida -H 127.0.0.1:27042 -f jp.konami.pesam -l "$SCRIPT" --runtime=v8 > /tmp/kgs/frida.log 2>&1 < /dev/null &) ; sleep 50; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== frida log =="; tail -22 /tmp/kgs/frida.log
+C1
+Connection to 127.0.0.1 27042 port [tcp/*] succeeded!
+FRIDA_PORT_OPEN
+script=/home/runner/work/peerlink-efootball-disconnects/peerlink-efootball-disconnects/kgs-login/scripts/capture_insecure.js
+== frida log ==
+     ____
+    / _  |   Frida 17.19.0 - A world-class dynamic instrumentation toolkit
+   | (_| |
+    > _  |   Commands:
+   /_/ |_|       help      -> Displays the help system
+   . . . .       object?   -> Display information about 'object'
+   . . . .       exit/quit -> Exit
+   . . . .
+   . . . .   Prefer a GUI? Luma is the official Frida app, with a live REPL,
+   . . . .   persistent sessions & collaboration. https://luma.frida.re/
+   . . . .
+   . . . .   Connected to 127.0.0.1:27042 (id=socket@127.0.0.1:27042)
+Spawning `jp.konami.pesam`...
+Failed to spawn: connection closed
+rc=0
+gamepid: 
+flows: 0

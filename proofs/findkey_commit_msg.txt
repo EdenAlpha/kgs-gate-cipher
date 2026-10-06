@@ -1,0 +1,19 @@
+fix(live/find_key.py): a truncated .gz must be skipped, not fatal
+
+The scan runs while the sweeper is still writing and pruning the same
+directory, so a region .gz can be read back half-written:
+
+    EOFError: Compressed file ended before the end-of-stream marker
+
+That killed the run with a traceback (rc=1) and no verdict at all, after
+pip + body-loading had already succeeded. A crash is not an answer.
+
+- gzip.decompress / write failures are now reported per file and skipped
+- a region pruned mid-scan is skipped instead of raising in the worker
+- the decompressed .unz copies are removed in a finally block, so a MATCH
+  no longer leaves 449 MB of scratch behind
+- `return rc` leftover after the try/finally is gone (would NameError)
+
+Re-proven locally: planted key at an unaligned offset still MATCHes and
+opens the body; absent key still gives NO MATCH (exit 2) with an honest
+9182-candidate count.

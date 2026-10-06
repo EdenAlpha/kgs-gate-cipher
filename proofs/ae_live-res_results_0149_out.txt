@@ -1,0 +1,23 @@
+cmd: exec bash -c true; echo SN; for kv in "ro.product.manufacturer Google" "ro.product.brand google" "ro.product.model Pixel 7" "ro.product.name panther" "ro.product.device panther" "ro.build.fingerprint google/panther/panther:14/AP2A.240805.005/11445699:user/release-keys"; do K=$(echo $kv | cut -d" " -f1); V=$(echo $kv | cut -d" " -f2-); adb -s 127.0.0.1:5555 shell su 0 setprop $K "$V"; done; adb -s 127.0.0.1:5555 shell getprop ro.product.model; adb -s 127.0.0.1:5555 shell getprop ro.product.brand; adb -s 127.0.0.1:5555 shell am force-stop com.android.vending; adb -s 127.0.0.1:5555 shell am force-stop com.google.android.gms; sleep 4; adb -s 127.0.0.1:5555 shell su 0 setprop ctl.restart zygote; sleep 25; adb -s 127.0.0.1:5555 shell am start -a android.intent.action.VIEW -d "market://details?id=jp.konami.pesam" 2>&1 | tail -1; sleep 14; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+at: 22:45:03
+$ bash -c true; echo SN; for kv in "ro.product.manufacturer Google" "ro.product.brand google" "ro.product.model Pixel 7" "ro.product.name panther" "ro.product.device panther" "ro.build.fingerprint google/panther/panther:14/AP2A.240805.005/11445699:user/release-keys"; do K=$(echo $kv | cut -d" " -f1); V=$(echo $kv | cut -d" " -f2-); adb -s 127.0.0.1:5555 shell su 0 setprop $K "$V"; done; adb -s 127.0.0.1:5555 shell getprop ro.product.model; adb -s 127.0.0.1:5555 shell getprop ro.product.brand; adb -s 127.0.0.1:5555 shell am force-stop com.android.vending; adb -s 127.0.0.1:5555 shell am force-stop com.google.android.gms; sleep 4; adb -s 127.0.0.1:5555 shell su 0 setprop ctl.restart zygote; sleep 25; adb -s 127.0.0.1:5555 shell am start -a android.intent.action.VIEW -d "market://details?id=jp.konami.pesam" 2>&1 | tail -1; sleep 14; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png
+SN
+Failed to set property 'ro.product.manufacturer' to 'Google'.
+See dmesg for error reason.
+Failed to set property 'ro.product.brand' to 'google'.
+See dmesg for error reason.
+usage: setprop NAME VALUE
+
+Sets an Android system property.
+Failed to set property 'ro.product.name' to 'panther'.
+See dmesg for error reason.
+Failed to set property 'ro.product.device' to 'panther'.
+See dmesg for error reason.
+Failed to set property 'ro.build.fingerprint' to 'google/panther/panther:14/AP2A.240805.005/11445699:user/release-keys'.
+See dmesg for error reason.
+redroid14_arm64_only
+redroid
+Starting: Intent { act=android.intent.action.VIEW dat=market://details/... }
+rc=0
+gamepid: 
+flows: 0

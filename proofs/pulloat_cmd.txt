@@ -1,0 +1,1 @@
+exec adb -s 127.0.0.1:5555 shell "su 0 sh -c \"tar -czf /sdcard/oat.tgz /data/app/~~wo-owJo4zCy1SaLCIhxbaQ==/jp.konami.pesam-wB8m6uKPjxvgFG7WPF4eaA==/oat\""; adb -s 127.0.0.1:5555 shell ls -la /sdcard/oat.tgz; adb -s 127.0.0.1:5555 pull /sdcard/oat.tgz /tmp/kgs/full/; ls -la /tmp/kgs/full/

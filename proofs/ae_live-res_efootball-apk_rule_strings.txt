@@ -1,0 +1,257 @@
+unique rule-ish strings: 256
+  0xaac7df   of the Protocol Buffer runtime library, but the installed version is 
+  0xb31775   of the Protocol Buffer runtime library, which is not compatible with the installed version (
+  0xbb71ec  !disconnected_
+  0x9ed7ed  ${"TimeoutMsec:":%d}
+  0xc161ef  %s: Keepalive watchdog fired. Closing transport.
+  0x1856a1  _ZN5physx2IG19SimpleIslandManager19setEdgeDisconnectedEj
+  0x182dd3  _ZN5physx2IG9IslandSim14disconnectEdgeERNS0_12EdgeInstanceEjRNS0_4NodeE
+  0x1b7c77  _ZN5physx3Ext15CpuWorkerThread9giveUpJobEv
+  0x21495c  _ZN5physx6pvdsdk12PvdMemClient17onPvdDisconnectedEv
+  0x2160f3  _ZN5physx6pvdsdk20PvdProfileZoneClient17onPvdDisconnectedEv
+  0x2137ca  _ZN5physx6pvdsdk25PvdDefaultSocketTransport10disconnectEv
+  0x213e58  _ZN5physx6pvdsdk7PvdImpl10disconnectEv
+  0x20cbad  _ZN5physx6shdfnd10SocketImpl10disconnectEv
+  0x20ce48  _ZN5physx6shdfnd6Socket10disconnectEv
+  0x1261b4  _ZN8playcore35kAssetPackState_installedVersionTagE
+  0x1264d2  _ZN8playcore40kAssetPackState_installedVersionTag_voidE
+  0x13c127  _ZNSt6__ndk16locale14__install_ctorERKS0_PNS0_5facetEl
+  0xabea2b  AccessLineTesterAutoTestReceiveIdleTimeMsThreshold
+  0x9c5d3c  AlertIgnoreInviteOnStreamingInstall
+  0xc02745  ALLOC_TURN_CHANNEL_BINDING_ABORTED
+  0xad156f  ALLOC_TURN_PERMISSION_BINDING_ABORTED
+  0xa13639  ALLOC_TURN_PORT_ABORTED
+  0xbe3c0a  AMovieManager::ClearAllDisconnectMovieData 
+  0x12c846  android_set_abort_message
+  0xafc1c0  AndroidThunkJava_GoogleClientDisconnect
+  0x9f2809  AndroidThunkJava_IsPackageInstalled
+  0xabe99f  AppYieldLowPriorityTimeoutMs
+  0xb0d1a8  ASSET_PACK_NOT_INSTALLED
+  0xaf9bcc  ASSET_PACK_UNRECOGNIZED_INSTALLATION
+  0xbef2ce  AsymmetricInputDelayTurnDelayDisconnect
+  0xad12af  AsymmetricInputDelayTurnDisconnectedModeEnable
+  0xae3c55  BackgroundTimeoutMs
+  0x9d5142  bCreateAllPlatformsInstall
+  0xae4a5b  chand->disconnect_error_.Load(MemoryOrder::RELAXED) == GRPC_ERROR_NONE
+  0xb31193  chand=%p: disconnect_with_error: %s
+  0xad12f3  ChangeoverPeerReceiveIdleTimeMsThreshold
+  0xb559db  ChangeoverToTurnReceiveIdleTimeMsThreshold
+  0xa79019  Clear DisconnectionMovieData URL:%s 
+  0x9bb130  ClearDisconnectionMovieData
+  0xa382d6  CMD_ABORT_USER_COMPE
+  0xa71fb0  CMD_HEARTBEAT_GRPC
+  0x9c6961  CMD_SEND_HEARTBEAT
+  0xa72049  CmdHeartbeatGrpc.php
+  0xa5e8c8  CmpNetworkIoCmpConnectionTimeoutMs
+  0xc158f2  CmpNetworkIoConnectionTimeoutMs
+  0xaf72c8  CommandLackInPlayTimeoutMs
+  0xb306fa  CommandLackTimeoutMs
+  0xb2e3e9  Connection disconnected
+  0xbc3ee3  ConnectionTimeout
+  0xae3c69  ConnectionTimeoutUs
+  0x2e3f62  cpkCore_SetMediaInstalledCpk
+  0xac6a22  CreateDirectDisconnectPadInstance
+  0x2e29b1  criFs_GetInstallerThreadPriority
+  0x114290  criFs_GetNumUsedInstallers
+  0x2e2aa6  criFs_SetInstallerThreadPriority
+  0x2e24eb  criFsInstaller_CalculateWorkSize
+  0x2e4e98  criFsInstaller_Copy
+  0x2e4eac  criFsInstaller_Create
+  0x2e4ec2  criFsInstaller_Destroy
+  0x2e250c  criFsInstaller_DestroyAll
+  0x2e4ed9  criFsInstaller_ExecuteMain
+  0x2e2526  criFsInstaller_Finalize
+  0x2e253e  criFsInstaller_GetNumUsedHandles
+  0x2e4ef4  criFsInstaller_GetProgress
+  0x2e4f0f  criFsInstaller_GetStatus
+  0x2e255f  criFsInstaller_Initialize
+  0x2e4f28  criFsInstaller_SetLoadPriority
+  0x2e4f47  criFsInstaller_SetWritePriority
+  0x2e4f67  criFsInstaller_Stop
+  0x2eb393  criNetStm_GetTimeoutMsec
+  0x2eb5d5  criNetStm_SetTimeoutMsec
+  0x2e91b3  criVsd_M2tsSplitSetTimeoutMsec
+  0xa7210b  CS_GIVE_UP_QUICKLY_LEVEL
+  0xb0c995  custom ext handler already installed
+  0xa97ea2  DcTestConnectionTimeoutMs
+  0xb55a26  DcTestForClientServerModeMaxRetryTimeoutMs
+  0xa386f5  DcTestForClientServerModeRetryTimeoutMs
+  0xa13403  DcTestPingConnectionTimeoutMs
+  0xad131c  DcTestPingTimeoutMs
+  0xc02482  DcTestRecvTimeoutMs
+  0xb7bf43  DcTestUdpStickyAddressLongTimeoutMs
+  0xa0083b  DcTestUdpStickyAddressShortTimeoutMs
+  0x9da6c8  DETECT_NAT_ABORTED
+  0xa496b9  disconnect
+  0xa98544  DISCONNECT:%s
+  0xb44686  Disconnected
+  0xbfa657  DisconnectMRMesh
+  0x9becca  DisconnectRemoteXRDevice
+  0x9ed463  DoNotGiveUpMode
+  0x9def39  E2008090307:Can not allocate writer handle. (Increase num_installers of CriFsConfig.)
+  0xa63978  E2008091055:CriFsInstaller is initialized twice.
+  0xa50377  E2008091152:CriFsInstaller is not initialized.
+  0xae8f1a  E2008091153:Can not allocate installer handle. (Increase max_installer of CriFsInstallerConfiguration.)
+  0xb47ebf  E2008091155:CriFsInstaller is not initialized.
+  0xa0559a  E2008091160:criFsInstaller is BUSY or ERROR.
+  0xb8134a  E2008091250:CriFsInstaller is not initialized.
+  0xbe125b  E2008091251:CriFsInstaller is not initialized.
+  0xab0988  E2008121102:CriFsInstaller is not initialized.
+  0x9c2110  EAndroidInstallLocation
+  0xc10b9c  EAndroidInstallLocation::Auto
+  0xbd7e1a  EAndroidInstallLocation::InternalOnly
+  0xa6d40f  EAndroidInstallLocation::PreferExternal
+  0xa92f52  EAndroidInstallLocation::Type
+  0xb3b909  EARServiceAvailability::SupportedInstalled
+  0xa8fef1  EARServiceAvailability::SupportedNotInstalled
+  0xaa32ef  EARServiceInstallRequestResult
+  0xa8febd  EARServiceInstallRequestResult::DeviceNotCompatible
+  0xadc2e9  EARServiceInstallRequestResult::FatalError
+  0xb9aa1e  EARServiceInstallRequestResult::Installed
+  0xadc2b0  EARServiceInstallRequestResult::UserDeclinedInstallation
+  0xb4b586  ECmnPauseIconType::GIVE_UP
+  0x9fa543  ENetworkFailure::ConnectionTimeout
+  0xbef0c1  ERR_CLIENT_SVRDISCONNECT
+  0xaab5c2  ERR_GIVE_UP
+  0xb30836  ERROR_DISCONNECTED
+  0xaccad4  ErrorDisconnected
+  0xba2c99  EstablishedConnectionTimeoutUs
+  0xa6a620  ETimedDataInputState::Disconnected
+  0xbf8d19  ETipsCategory::TIPS_CATEGORY_QUICK_GOAL_GIVEUP
+  0xa08477  EVipEndReason::NetworkDisconnect
+  0x9ed571  FinWaitTimeoutMs
+  0xaf7d13  FLOW_CONTROL_UNSTALLED_BY_SETTING
+  0xc02f41  FLOW_CONTROL_UNSTALLED_BY_UPDATE
+  0xb308de  ForceDisconnect:
+  0xb55c12  FREE_TURN_CHANNEL_BINDING_ABORTED
+  0xabec17  FREE_TURN_PERMISSION_BINDING_ABORTED
+  0xae3e02  FREE_TURN_PORT_ABORTED
+  0xae2b65  G:\PES22HC\Dev-600Series\Source\Shared\pes\Game\Match\Online\MatchOnlineWatchDog.cpp
+  0xb84e13  GetDirectDisconnectPadInstance
+  0xad3ab7  GIVEUP
+  0xa5ec11  giveup_byte_per_sec
+  0xb3091e  giveup_msec
+  0xb2e401  Got DISCONNECT
+  0x9edc65  grpc.client_idle_timeout_ms
+  0x995d3e8  grpc_abort_on_leaks
+  0x9c69dd  grpc_heartbeat_interval_msec
+  0x2cb4cf  HCAMixer_DisconnectDecoderFromMixer
+  0xafd0c6  HeartBeat
+  0xae61fb  heartbeat request already pending
+  0xc15792  heartbeat_interval_msec
+  0xa5eb46  HTTP_SESSION_ABORTED
+  0xa43a5c  InDisconnectedDelegate
+  0xaab840  InitializationInPlayTimeoutMs
+  0xbef429  InitializationTimeoutMs
+  0xa30b15  InstallARService
+  0xccee72  InstalledLocales
+  0xcc4095  installedVersionTag
+  0xb07ec9  installing subfilter for HTTP/1.1
+  0xb052bf  InstallLocation
+  0x9c208b  InstallTags
+  0x9c9281  InstallTimePak
+  0xa25980  intentional_give_up
+  0xc14ceb  is_enable_giveup
+  0xa53454  IsAdaptiveStreamingDisconnected
+  0xaa1372  IsAnnounceGiveUpWinner
+  0xbf8595  IsGiveUp
+  0xbbfaf5  IsGiveUpMatchEnd
+  0xb86994  isStreamingInstall
+  0xb0b4f3  keepalive watchdog timeout
+  0xb43a3f  KeyExcahngeRetransmissionTimeoutUs
+  0xa38772  KeyExchangeTimeoutUs
+  0xb8f38a  LinkTimeoutUs
+  0xb8f41e  LoadTimeoutMs
+  0xa25e5b  m_asymmetricInputDelayTurnDisconnectStatusEnable
+  0xb25c4c  m_itemListAll
+  0xb55cc1  MATCH_STOP_COUNT_BUF_EMPTY
+  0xba3056  MATCH_STOP_COUNT_BUF_EMPTY_BURST_L1
+  0xabed65  MATCH_STOP_COUNT_BUF_EMPTY_BURST_L1_MCACTIVE
+  0xabecf4  MATCH_STOP_COUNT_BUF_EMPTY_BURST_L2
+  0xa00b27  MATCH_STOP_COUNT_BUF_EMPTY_BURST_L2_MCACTIVE
+  0xaf7556  MATCH_STOP_COUNT_BUF_EMPTY_BURST_L3
+  0xc15b93  MATCH_STOP_COUNT_BUF_EMPTY_BURST_L3_MCACTIVE
+  0xabed18  MATCH_STOP_COUNT_BUF_EMPTY_BURST_L4
+  0xa00b54  MATCH_STOP_COUNT_BUF_EMPTY_BURST_L4_MCACTIVE
+  0xb0ac59  MATCH_STOP_COUNT_BUF_EMPTY_BURST_L5
+  0xa38a54  MATCH_STOP_COUNT_BUF_EMPTY_BURST_L5_MCACTIVE
+  0xbc9da2  MATCH_STOP_COUNT_BUF_EMPTY_MCACTIVE
+  0xa8524f  MATCH_STOP_COUNT_SELF_BUF_EMPTY
+  0xb0ac7d  MATCH_STOP_COUNT_SELF_BUF_EMPTY_BURST_L1
+  0xb8f619  MATCH_STOP_COUNT_SELF_BUF_EMPTY_BURST_L1_MCACTIVE
+  0xb8f5f0  MATCH_STOP_COUNT_SELF_BUF_EMPTY_BURST_L2
+  0xb1d84d  MATCH_STOP_COUNT_SELF_BUF_EMPTY_BURST_L2_MCACTIVE
+  0xabed3c  MATCH_STOP_COUNT_SELF_BUF_EMPTY_BURST_L3
+  0xb30997  MATCH_STOP_COUNT_SELF_BUF_EMPTY_BURST_L3_MCACTIVE
+  0xb43c66  MATCH_STOP_COUNT_SELF_BUF_EMPTY_BURST_L4
+  0xaf757a  MATCH_STOP_COUNT_SELF_BUF_EMPTY_BURST_L4_MCACTIVE
+  0x9c6f63  MATCH_STOP_COUNT_SELF_BUF_EMPTY_BURST_L5
+  0xabed92  MATCH_STOP_COUNT_SELF_BUF_EMPTY_BURST_L5_MCACTIVE
+  0x9c6f8c  MATCH_STOP_COUNT_SELF_BUF_EMPTY_MCACTIVE
+  0xb7c1ae  MATCH_STOP_MAX_ROLLING_COUNT_BUF_EMPTY_IV1_MCACTIVE
+  0xa4b785  MATCH_STOP_MAX_ROLLING_COUNT_BUF_EMPTY_IV2_MCACTIVE
+  0xc15bc0  MATCH_STOP_MAX_ROLLING_COUNT_BUF_EMPTY_IV3_MCACTIVE
+  0xb8f403  MatchAbortTimerCoefficient
+  0xa3871d  MultiplaySessionGameThreadWatchdogTimerTimeoutUs
+  0x9c6bdf  MultiplaySessionRecvThreadReceiveTimeoutUs
+  0xad13bc  MultiplaySessionWatchdogTimerTimeoutUs
+  0xbc9ac7  NameResolverTimeoutMs
+  0xb43991  NetworkIoConnectionTimeoutUs
+  0xbdc754  NetworkTesterInitializeTimeoutMs
+  0xb43a04  NetworkTesterPingTimeoutMs
+  0xad1486  NoMoveOperationTimeoutMs
+  0xb3070f  NoMoveOperationTimeoutMsForStrikeArena
+  0xa4aacd  NORMAL_GIVEUP
+  0xabea73  ObservePlaybackReadTimeoutMs
+  0xaab772  ObservePlaybackRecvMatchCommandTimeoutMs
+  0xb68fa5  ObserveRecordTimeoutMs
+  0xb437c2  Other user disconnected
+  0xa1deb1  OutInstallResult
+  0xa134ce  OutOfPlayTimeoutMs
+  0xbc9b3f  P2P_ADHOC_BLE_GIVE_UP_QUICKLY_LEVEL
+  0xbef38a  P2P_ADHOC_BTC_GIVE_UP_QUICKLY_LEVEL
+  0xabeac2  P2P_ADHOC_LAN_GIVE_UP_QUICKLY_LEVEL
+  0xa72124  P2P_ADHOC_UNKNOWN_GIVE_UP_QUICKLY_LEVEL
+  0xb55aa3  P2P_ADHOC_WIFIDIRECTLAN_GIVE_UP_QUICKLY_LEVEL
+  0xbc9a2e  P2P_GIVE_UP_QUICKLY_LEVEL
+  0xa02a91  peer does not accept heartbeats
+  0xb43a1f  PingRequestTimeoutUs
+  0x9dcd2b  PreInstall
+  0x9ddb9e  PxPvd::connect - recall connect! Should call disconnect before re-connect.
+  0x9c6fb5  RECEIVE_IDLE_TIME
+  0xb2af37  RecentlyDisconnectedTrackingTime
+  0xc05294  RequestReviewFlow error: Play Store app is either not installed or not the official version.
+  0xa19f66  Restore DisconnectionMovieData URL:%s, MovieTime:%lf 
+  0xa5eaab  RP_HEARTBEAT
+  0xad86d6  Save DisconnectionMovieData Pos:%d, Duration:%d MovieTime:%lf 
+  0xb66adc  server disconnected
+  0xada4fc  SetAnnounceGiveUpWinner
+  0xb0aa22  SetConnectTimeoutMsec
+  0xb305b0  SetReadTimeoutMsec
+  0xa402d9  SetTimeOutSec
+  0xaa3475  SetXRDisconnectDelegate
+  0xc02fb6  stalled_by_stream
+  0xb4459a  stalled_by_transport
+  0xaab9a3  START_UDP_HOLE_PUNCHING_ABORTED
+  0xb8f51c  STOP_UDP_HOLE_PUNCHING_ABORTED
+  0x9ef7fd  StrmInstall/StrmInstallPostMatch
+  0x9c8c3c  StrmInstall/StrmInstallPreMatch
+  0xa870a4  strmInstallMatchEnd
+  0xb8f50a  STUN_TEST_ABORTED
+  0xb0b87a  Subchannel disconnected
+  0x9ed663  SuspendTimeoutMs
+  0xa4b579  TcpFallbackTimeoutMs
+  0xb1df7b  This would usually cause a disconnection, but allowing it due tobroken HTTP2 implementations in the wild.
+  0xbef360  TimeWaitTimeoutMs
+  0xb66a97  Too old connection (%ld seconds idle), disconnect it
+  0x9eb1fa  Too old connection (%ld seconds since creation), disconnect it
+  0xa3914c  TRANSPORT_FLOW_CONTROL_UNSTALLED
+  0xaab670  TurnNetworkIoConnectionTimeoutMs
+  0xa84f6f  TurnNetworkIoDegradedByDisconnectEnable
+  0xb439ae  TurnNetworkIoTcpConnectionTimeoutMs
+  0x9ba5ef  UE FADE IMPL : %s call. change heartbeat:%d, %s, %d
+  0xa0755a  UpdateFadeWipeHeartbeat
+  0xb7237b  UpdateTimeOutMSec
+  0xa00a74  UPNP_PROCESS_ABORTED
+  0xa23a1c  WARNING: no socket in pollset, transfer may stall!
+  0xa5698f  XRDeviceOnDisconnectDelegate__DelegateSignature

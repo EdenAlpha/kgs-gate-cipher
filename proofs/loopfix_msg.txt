@@ -1,0 +1,24 @@
+fix(live/live_loop.sh): an exec round can no longer hang the whole session
+
+Observed twice on 2026-10-05: the loop stays alive and keeps pushing to
+live-res, but heartbeats freeze, status.txt stops changing, and no later
+command is ever executed. The run looks half-alive, which is why it read as
+"the channel is deaf" for 30 minutes.
+
+Cause: the `exec` verb runs `eval "$*" >> "$out" 2>&1`. Every command that
+starts a long-lived background child -- the relay, the mitm recorder, the
+memory sweeper -- does it with `nohup ... &`. That child inherits the
+redirect, so the file the redirection is waiting on never reaches EOF, and
+the eval never returns. run_cmd never finishes, the round never ends, and
+the main loop never reaches its next iteration, which is where commands are
+read and heartbeats are published. A single such command disables the
+control channel for the rest of the session, silently.
+
+Fix: send the eval's output to a separate file and cat it back afterwards,
+so the round's own bookkeeping (rc, gamepid, flows) always completes. The
+background child can hold that file open indefinitely without blocking the
+loop.
+
+This is what made the previous two runs look "stuck" rather than
+"stalled in one round": the evidence that would have named the cause
+(status.txt itself freezing) was exactly the thing that stopped publishing.

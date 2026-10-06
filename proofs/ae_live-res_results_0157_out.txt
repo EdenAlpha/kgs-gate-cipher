@@ -1,0 +1,16 @@
+cmd: exec bash -c true; echo C5; W=/tmp/kgs; bash kgs-login/scripts/setup_ca.sh redroid $W/ca 2>&1 | tail -4; H=$(cat $W/ca/ca.hash 2>/dev/null); echo "hash=$H"; adb -s 127.0.0.1:5555 shell su 0 mount --bind /system/etc/security/cacerts /apex/com.android.conscrypt/cacerts 2>&1 | tail -2; echo "apex certs: $(adb -s 127.0.0.1:5555 shell su 0 ls /apex/com.android.conscrypt/cacerts | wc -l)"; adb -s 127.0.0.1:5555 shell su 0 ls -l /apex/com.android.conscrypt/cacerts/$H.0 2>&1; sudo docker exec redroid sh -c "setprop ctl.restart zygote"; sleep 30; adb connect 127.0.0.1:5555 | tail -1; adb -s 127.0.0.1:5555 shell getprop sys.boot_completed
+at: 07:25:57
+$ bash -c true; echo C5; W=/tmp/kgs; bash kgs-login/scripts/setup_ca.sh redroid $W/ca 2>&1 | tail -4; H=$(cat $W/ca/ca.hash 2>/dev/null); echo "hash=$H"; adb -s 127.0.0.1:5555 shell su 0 mount --bind /system/etc/security/cacerts /apex/com.android.conscrypt/cacerts 2>&1 | tail -2; echo "apex certs: $(adb -s 127.0.0.1:5555 shell su 0 ls /apex/com.android.conscrypt/cacerts | wc -l)"; adb -s 127.0.0.1:5555 shell su 0 ls -l /apex/com.android.conscrypt/cacerts/$H.0 2>&1; sudo docker exec redroid sh -c "setprop ctl.restart zygote"; sleep 30; adb connect 127.0.0.1:5555 | tail -1; adb -s 127.0.0.1:5555 shell getprop sys.boot_completed
+C5
+ca-setup: system store is writable, installing
+ca-setup: INSTALLED into /system/etc/security/cacerts/928a8368.0
+-rw-r--r-- 1 root root 1155 2026-10-01 00:25 /system/etc/security/cacerts/928a8368.0
+ca-setup: RESULT: installed without remount
+hash=928a8368
+apex certs: 135
+-rw-r--r-- 1 root root 1155 2026-10-01 00:25 /apex/com.android.conscrypt/cacerts/928a8368.0
+already connected to 127.0.0.1:5555
+1
+rc=0
+gamepid: 
+flows: 0

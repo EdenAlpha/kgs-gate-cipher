@@ -1,0 +1,8 @@
+cmd: exec bash -c true; echo PLAY16; adb -s 127.0.0.1:5555 shell input tap 360 280; sleep 2; adb -s 127.0.0.1:5555 shell input keyevent 123; for i in $(seq 1 15); do adb -s 127.0.0.1:5555 shell input keyevent 67; done; sleep 1; adb -s 127.0.0.1:5555 shell uiautomator dump /sdcard/u3.xml >/dev/null 2>&1; adb -s 127.0.0.1:5555 shell cat /sdcard/u3.xml | grep -o "<node[^>]*ootp-pin[^>]*>" | head -1
+at: 21:36:33
+$ bash -c true; echo PLAY16; adb -s 127.0.0.1:5555 shell input tap 360 280; sleep 2; adb -s 127.0.0.1:5555 shell input keyevent 123; for i in $(seq 1 15); do adb -s 127.0.0.1:5555 shell input keyevent 67; done; sleep 1; adb -s 127.0.0.1:5555 shell uiautomator dump /sdcard/u3.xml >/dev/null 2>&1; adb -s 127.0.0.1:5555 shell cat /sdcard/u3.xml | grep -o "<node[^>]*ootp-pin[^>]*>" | head -1
+PLAY16
+<node NAF="true" index="0" text="" resource-id="ootp-pin" class="android.widget.EditText" package="com.google.android.gms" content-desc="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="true" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[52,228][668,334]" />
+rc=0
+gamepid: 
+flows: 0

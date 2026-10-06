@@ -1,0 +1,20 @@
+cmd: exec bash -c true; echo A9; adb -s 127.0.0.1:5555 shell input tap 360 781; sleep 25; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== dnat rules =="; sudo iptables-legacy -t nat -L PREROUTING -n | grep -c DNAT; echo "== installed? =="; adb -s 127.0.0.1:5555 shell pm path jp.konami.pesam
+at: 07:08:04
+$ bash -c true; echo A9; adb -s 127.0.0.1:5555 shell input tap 360 781; sleep 25; adb -s 127.0.0.1:5555 exec-out screencap -p > /tmp/live-res/screen.png; echo "== dnat rules =="; sudo iptables-legacy -t nat -L PREROUTING -n | grep -c DNAT; echo "== installed? =="; adb -s 127.0.0.1:5555 shell pm path jp.konami.pesam
+A9
+== dnat rules ==
+iptables v1.8.10 (legacy): can't initialize iptables table `nat': Table does not exist (do you need to insmod?)
+Perhaps iptables or your kernel needs to be upgraded.
+0
+== installed? ==
+package:/data/app/~~Q1GzS8ekEYA2811YTMf3Bw==/jp.konami.pesam-ZayU1K6tZgi_baIDGFlOXQ==/base.apk
+package:/data/app/~~Q1GzS8ekEYA2811YTMf3Bw==/jp.konami.pesam-ZayU1K6tZgi_baIDGFlOXQ==/split_config.arm64_v8a.apk
+package:/data/app/~~Q1GzS8ekEYA2811YTMf3Bw==/jp.konami.pesam-ZayU1K6tZgi_baIDGFlOXQ==/split_config.en.apk
+package:/data/app/~~Q1GzS8ekEYA2811YTMf3Bw==/jp.konami.pesam-ZayU1K6tZgi_baIDGFlOXQ==/split_config.xhdpi.apk
+package:/data/app/~~Q1GzS8ekEYA2811YTMf3Bw==/jp.konami.pesam-ZayU1K6tZgi_baIDGFlOXQ==/split_gpdeku.apk
+package:/data/app/~~Q1GzS8ekEYA2811YTMf3Bw==/jp.konami.pesam-ZayU1K6tZgi_baIDGFlOXQ==/split_gpdeku.config.arm64_v8a.apk
+package:/data/app/~~Q1GzS8ekEYA2811YTMf3Bw==/jp.konami.pesam-ZayU1K6tZgi_baIDGFlOXQ==/split_pad_it_0.apk
+package:/data/app/~~Q1GzS8ekEYA2811YTMf3Bw==/jp.konami.pesam-ZayU1K6tZgi_baIDGFlOXQ==/split_pad_it_1.apk
+rc=0
+gamepid: 
+flows: 0
