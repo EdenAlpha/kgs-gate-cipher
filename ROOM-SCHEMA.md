@@ -353,4 +353,82 @@ every `input error:` and returns **`session restart failed`**
 the validator's deliberate session gate blocks it. The next step is the
 replay at `client_version=6.1.0`, which is the state-changing execution.
 
+## RESOLVED: room created, `room_id = {"id": 3014779}`
+
+### Two preconditions were blocking the insert
+
+**1. `CMD_SET_GAMERELAY_QUALITY` must run first.** The app does this
+every time (16 captures) — it reads the region list, measures pings and
+writes them to the database:
+
+```
+CMD_SET_GAMERELAY_QUALITY
+  quality_list: [ {region, quality, last_update}, ... ]
+  46 entries, quality 9..270 (ms), one shared timestamp
+```
+
+**The two region lists are different and only one is accepted.**
+`CMD_GET_GAMERELAY_QUALITYCHECK_LIST` currently returns **63** *ping
+targets* (`asia-southeast3`, `GLOBAL`, `eu-central-1-ham-1a`, ...). Sending
+those to `SET_GAMERELAY_QUALITY` validates fine at 6.1.1 but fails at the
+database with `ERR_DATABASE`. Replaying the **captured 46 legacy region
+names** returns `NOERR`. The database has a fixed region table; the
+quality-check list is not it.
+
+### 2. `strike_arena_selected_info` — the missing root key
+
+The builder writes it (and *only* when the account's selection vector is
+non-empty):
+
+```
+0x7883850  ldr x27,[x19,#0x480] / ldr x8,[x19,#0x488] / cmp / b.eq -> skip
+0x7883860  'player_id'      0x7883868  'costume_id'
+0x7883870  'strike_arena_selected_info'
+loop (stride 0x10): root[...] -> push_back (0x2fccc54)
+```
+
+Shape and types, established empirically:
+
+```json
+"strike_arena_selected_info": [ { "player_id": 1, "costume_id": 0 } ]
+```
+
+Both are **int**. `player_id` as a *string* is rejected with `GKZX-`.
+With this key absent, `CMD_CREATEJOIN_ROOM` clears every `input error:`
+and then fails with `ERR_DATABASE` — exactly the signature of a NOT NULL
+column with no value supplied. Supplying it produced:
+
+```json
+{"room_id": {"id": 3014779}, "event_log": null,
+ "result": "NOERR", "msgid": "CMD_CREATEJOIN_ROOM"}
+```
+
+Values that made no difference (all still `ERR_DATABASE`):
+`event_id` 0/1, `name_tag` 0/1, `capacity`, `observer_capacity`,
+`guest_num_by_user`, `nat_type` 0/1, empty vs real-looking addresses, and
+`kind` in {`SINGLE`, `COOP_VS_IN_ROOM`} without the selection info.
+
+### Errcode reading at 6.1.0
+
+`EVDU-` = the insert/query found no row; `GKZX-` = input validation (silent
+at 6.1.0, verbose at 6.1.1); `OTZP-` = session gate; `NOERR` = created.
+
+### Caveats
+
+* `CMD_GET_USEABLE_TEAM_LIST` also returns `ERR_DATABASE` — but only
+  because it needs `list_type` (`BASE_TEAM_SELECT` in the capture) and
+  `event_id`. Missing args are reported as `EVDU-` here too, so `EVDU-`
+  does not by itself mean the database is broken. Health check: reads of
+  `CMD_GET_PRODUCT_LIST`, `CMD_GET_STADIUM_DATA`, `CMD_GET_MAINMENU_INFO`
+  and `CMD_GET_COUNTRY_LIST` all return `NOERR`.
+* `CMD_GET_ROOM_INFO` / `CMD_GET_GAME_SESSION` / `CMD_GET_MATCHING_RESULT`
+  return `EVDU-` for **every** `room_id`, including `[0]` and `[1]`, and
+  `CMD_GET_ROOM_LIST` returns `room_info: []` for every filter tried
+  (`is_see_more: "YES"`). These reads cannot currently be used to confirm
+  a room exists; the `NOERR` + `room_id` from the create is the
+  authoritative answer.
+* `nat_type` has no UENUM in the build — it is a plain int read from
+  `ctx+0x3f4` / `ctx+0x434`. `NATTYPE_PEER`, `RP_NAT_TYPE` and `natType`
+  in `.rodata` are stats/metric names, not enum members.
+
 
