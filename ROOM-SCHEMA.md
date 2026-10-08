@@ -261,4 +261,96 @@ not recoverable statically. Swept and rejected for `mode`:
 (`0x9ec77d`, `0xa5e481`, `0xa7128e`) and have not been tried against
 these checks.
 
+## RESOLVED: `CMD_CREATEJOIN_ROOM` input validation passes
+
+### The gate caches on `rqid` — this was hiding everything
+
+`rqid` must **increment per request**. Our `BASE` hardcodes
+`rqid: 100001`, so within a session every request after the first
+returns the *first* response verbatim. This is why the `out_of_range`
+echo stopped following the edited body and looked like a validator bug
+that wasn't one. Confirmed directly: same body, `rqid` 100001 → stale
+error; `rqid` 100002 → different, newer error.
+
+Most of the "self-inconsistent validator" evidence below was this, not
+the server.
+
+### Enums come from UENUM reflection strings, not guessing
+
+The build writes every enum out as text in `EEnumName::MEMBER` form in
+`.rodata`. Dumping and grouping them (`enum_refl.py`) gives the complete
+server vocabulary in one shot:
+
+| field | enum | accepted value |
+|---|---|---|
+| `core_settings.mode` | `ERoomMode` | `STRIKE_ARENA`, `CUSTOM`, `PRESET`, `CUSTOM_USER_COMPE`, `PRESET_USER_COMPE`, `CUSTOM_EVENT`, `STINGING`, `CUSTOM_OBSERVE`, `PRESET_OBSERVE` |
+| `core_settings.kind` | `ERoomKind` | `STRIKE_ARENA`, `SINGLE`, `STINGING`, `COOP_VS_IN_ROOM`, `COOP_VS_ANOTHER_ROOM` |
+| `core_settings.entry_restriction` | `ERoomEntryRestrictionType` | `NONE`, `PASSWORD`, `INVITE` |
+| `event_account_type` | `EEventAccountType` | `GAME_PLAYER`, `OBSERVER`, `COMMON_OBSERVER`, `RELAY_SERVER` |
+| `match_env.condition_home/away` | `EConditionType` | `CONDITION_RANDOM`, `_EXCELLENT`, `_GOOD`, `_NORMAL`, `_BAD`, `_TERRIBLE` |
+| `match_env.cpu_level` | `EMenuCpuLevel` | `EASY`, `VERYEASY`, `NORMAL`, `HARD`, `VERYHARD`, `HARDEST`, `LEGEND` |
+| `match_env.limitTime` | `ELimitTime` | `NOSET`, `SHORT`, `MIDDLE`, `LONG` |
+| `match_env.regulation` | `ERegulation` | `REGULATION_NORMAL`, `REGULATION_GOLDENGOAL` |
+
+**The wire uses the short member name.** `GAME_PLAYER`/`CPU_LEVEL_EASY`/
+`LIMIT_TIME_NOSET` (the full reflection spelling) are all rejected; the
+prefixless form is accepted. This is why `GAME_PLAYER` appeared to be a
+`mode` value — it is `EEventAccountType::GAME_PLAYER`, a different field
+in the same request.
+
+There are **two** condition vocabularies in the build
+(`CONDITION_TYPE_*` and `CONDITION_*`); only the plain `CONDITION_*` set
+is correct here.
+
+### Type map (as reported by the verbose validator)
+
+`core_settings`: `event_id`, `name_tag`, `capacity`,
+`observer_capacity`, `guest_num_by_user` are **int**; the rest are
+**string**.
+
+`match_env` types are inverted from the obvious reading:
+`cpu_level`, `exTime`, `limitTime` are **strings**;
+`ball_type`, `substitution`, `match_time` are **int**;
+`regulation`, `exSubstitution` are **string**.
+
+`nat_type` is an **int**.
+
+### The NAT fields are maps, not root-level keys
+
+This is the structural point the earlier guessing could not find, and it
+comes straight from the builder disassembly:
+
+```
+0x7883560..0x7883648   host_address, host_port, reflexive_address,
+                       reflexive_port, nat_type  -> sp+0x68
+0x7883654              root['address_ipv4'] = sp+0x68
+0x7883694..0x7883754   same five keys (from ctx+0x410..) -> sp+0x50
+0x7883760              root['address_ipv6'] = sp+0x50
+```
+
+So the correct request shape is:
+
+```json
+"address_ipv4": { "host_address": "", "host_port": 1,
+                  "reflexive_address": "", "reflexive_port": 1,
+                  "nat_type": 1 },
+"address_ipv6": { "host_address": "", "host_port": 1,
+                  "reflexive_address": "", "reflexive_port": 1,
+                  "nat_type": 1 },
+"platform_session_id_info": { "ps_session_id": "", "xb_session_id": "" }
+```
+
+Sending `host_address` etc. at the **root** is wrong: `address_ipv4`
+then fails `NTL_ADDRESS::checkType(): must be of type ?array` (it wants
+a map, and an empty one is rejected as `address_ipv4' is not nullable'`),
+and `host_address` reads as `null` because nothing supplies it.
+
+### Verdict
+
+A body assembled as above, posted at `client_version=6.1.1`, clears
+every `input error:` and returns **`session restart failed`**
+(`ERR_INVALID_SESSION`, `OTZP-`) — i.e. input validation passed and only
+the validator's deliberate session gate blocks it. The next step is the
+replay at `client_version=6.1.0`, which is the state-changing execution.
+
 
