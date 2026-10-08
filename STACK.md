@@ -330,6 +330,11 @@ Accepted `client_version` = {`6.1.0`, `6.1.1`} only; the rule is
 
 ## 9. Open
 
+0. **`nat_type` value semantics** — which bit/number means "NAT is open, go
+   direct" is not yet pinned down. See §10c.
+   **Class B is still unnamed** — see §10a. Resolving its vtable needs an APS2
+   `.rela.dyn` decoder (the relocation section is Android-packed, so slots read
+   as zero in the file).
 1. **No capture yet contains a room message.** `CMD_CREATEJOIN_ROOM`,
    `CMD_GET_ROOM_LIST`, `CMD_JOIN_ROOM` have never been seen on the wire.
    Both captures stop at the main menu / myClub.
@@ -339,3 +344,157 @@ Accepted `client_version` = {`6.1.0`, `6.1.1`} only; the rule is
 4. `a4/a5/a6` on the gate sender — documentation item only; see `proofs/xref_post.txt`.
 5. `info.service.konami.net/XWW020-E1/info/` returns **403 — stopped, not to
    be retried.**
+
+---
+
+## 10. Direct P2P vs TURN relay — how the client decides
+
+Measured from `libUE4.so` 11.1.0 (build in `game111/`). All addresses are VAs
+in that build. Section 9 items 0 and the class-B question live here.
+
+### 10a. The factory
+
+`createStrategy()` @ `0x7ced7f0`, in the TU whose `__FILE__` is
+`OnlineSystemMultiplaySession.h` (`0xaf747f`):
+
+```
+obj    = 0x82262d0()                 ; global 0xa5fb0a8, the Android app singleton
+mode   = 0x822886c()                 ; *(u8*)obj      (setMode() writes this byte)
+list   = 0x7e0afcc() -> 0x7e23478()  ; global 0xa5d9d50, the TURN server list
+
+if (mode == 0x1b) {
+    v = getInt("direct_online_turn_mode")          ; 0x2f48f28
+    2 -> D,  1 -> C,  0 -> B,  else -> null
+} else {
+    if (list empty) -> A
+    v = getInt("turn_mode")                        ; 0x2f48f28
+    ; jump table 0xca4a86, bytes {0,11,0,18}, base 0x7ced894
+    0 -> D,  1 -> C,  2 -> D,  3 -> A,  >3 -> D
+}
+```
+
+### 10b. Neither setting key is ever written — so this is what ships
+
+The settings store is a `std::unordered_map<std::string, …>` at global
+`0x9baea68`. Its lazy init `0x2f48464` only stores `1` into the guard byte
+`0x9baea60` — **it inserts no entries**. `0x2f48f28(name, len)` is a `find`;
+on a miss it returns **0** (`0x2f49088: mov w21, wzr`).
+
+* `direct_online_turn_mode` — exactly **one** reference in the whole binary:
+  the getter, `0x7ced804`.
+* `turn_mode` — exactly **one**: the getter, `0x7ced860`.
+* Neither key exists in shipped data. `base.apk`,
+  `split_config.arm64_v8a.apk`, `split_pad_it_0.apk` → 0 hits. `gamedata.tgz`
+  streamed (gzip, 423 members) → 0 hits. There is no ini/json/cfg member at
+  all: 280 files are `.ucas`/`.pak` asset packs plus
+  `files/SaveData/SYSTEM/SYSTEM000`.
+
+Both lookups therefore return 0 on every device:
+
+| app state `mode` | TURN list | strategy |
+|---|---|---|
+| `0x1b` | not consulted | **B** |
+| anything else | empty | **A** |
+| anything else | non-empty | **D** |
+
+**Strategy C (relay-only) is unreachable in the shipped build.** It would need
+`direct_online_turn_mode == 1` or `turn_mode == 1`, and nothing writes either.
+
+### 10c. What the four strategies are
+
+Object size from the `operator new` in the factory; behaviour from a histogram
+of `bl` targets inside each class's code range.
+
+| class | code range | object | into TURN/STUN `0x7d80000-0x7d88000` | into NTL core `0x7db8000-0x7dc0000` | verdict |
+|---|---|---|---|---|---|
+| A | `0x7d34eb4-0x7d36610` | `0xbe0` | 0 | **28** | UDP hole punching through the NTL core. No TURN. |
+| B | `0x7d36610-0x7d36d80` | `0x2ce0` | 0 | 0 | No TURN, no NTL. Owns an ~11 kB context. |
+| C | `0x7d36d80-0x7d3a000` | `0xef0` | **25** | 0 | `…P2pFullMeshTurnOnly.cpp`. Relay only. |
+| D | `0x7d3a000-0x7d3b900` | `0xbc0` | 7 | 0 | `…P2pFullMeshWithTurn.cpp`. Direct + TURN fallback. |
+
+Only C and D carry a `__FILE__` string inside their own code. A and B carry no
+log/assert strings at all, so they cannot be named from a source path; every
+`OnlineSystemMultiplaySessionStrategy*.cpp` string in the binary is one of
+`WithTurn.cpp`, `TurnOnly.cpp`, `SessionStrategy\Session\OnlineSystemObserveSession.cpp`.
+A and B therefore come from `OnlineSystemMultiplaySession.cpp` / `.h`.
+
+The config-key families in the binary corroborate the split:
+`MultiplaySessionStrategyIoBufferSendSize`, `…IoBufferRecvSize`,
+`ChannelReceiveBufferLength`, `FecQueueParityEncoderMaxBufferLength` are the
+own-transport knobs B's 11 kB object would hold, while `TURN_QUALITY_*` and
+`LATENCY_TURN_*` belong to C/D. B's support module `0x7d0a000-0x7d20000` has
+only `Mobile`, `Android`, `,`, `status`, `success`, `fail`, `unknown` — a
+result-code vocabulary, not a protocol one. B also builds the literal pair
+`("0.0.0.0", 30000)` (`0xc2fc88` = `{0, 0x7530}`).
+
+### 10d. NAT classification is done on the client, before the room exists
+
+* RFC 5780 mapping/filtering tests: `MappingTestIA`…`MappingTestIG`,
+  `MappingTestII/III/IV`, `HairpingTest`. Driven by the state machine at
+  `0x7dcb9e0`, which dispatches on `[ctx+0x340] == [ctx+0x344]`
+  (completed-bitmask vs required-bitmask).
+* The composed result lives at `[ctx+0x31c]`; getter `0x7dc602c`. When it is 0
+  the getter falls back to the global `0xa5d7618`, which is **never written**
+  (one ADRP reference in the whole binary — the fallback read itself).
+* Composition `0x7dcc968…0x7dccb7c`: ORs `0x10`, `0x20/0x21/0x22/0x23`, `0x40`,
+  `0x44` or `0x4c`, `0x100`, `0x400000`, `0x800000` in from the per-test bits at
+  `[ctx+0x350]` and the bools at `[ctx+0x34c..0x34e]`. If the two primary
+  mapping bits are not both set it instead writes the **placeholder 2 or 3**
+  (`0x7dcc988…0x7dcc998`). So the low bits are a coarse class and the upper
+  bits are per-test capability flags.
+* The state vocabulary confirms the client runs the whole traversal itself:
+  `DETECT_NAT_{COMPLETE,ABORTED,ERROR}`, `STUN_TEST_{PROGRESS,COMPLETE,ERROR}`,
+  `START/KEEP/STOP_UDP_HOLE_PUNCHING_{PROGRESS,COMPLETE,ERROR}`,
+  `ALLOC_TURN_PORT_*`, `FREE_TURN_PORT_*`,
+  `ALLOC_TURN_CHANNEL_BINDING_*`, `START_SERVER_UDP_SESSION_COMPLETE`.
+  `TURN_CHANGEOVER_{REASON,TIME}` and `TURN_OFF_COMMUNICATE_COUNT` show that a
+  mid-session switch back to direct is implemented too.
+* Peer statuses: `NONE, INIT, TIMEOUT, UDHP, FORMALLY_TIMEOUT, RESTRAINED,
+  ALLOC_CHNL, ALLOC_PERM, ACCEPTABLE, FORMALLY_CONNECTED, CONNECTED, ABORTED,
+  BAD_ROUTE, G_TIMEOUT, CLASH`.
+* `RP_NAT_TYPE` (private STUN attribute `0x9097`) travels **peer to peer**, not
+  to the server: the parser at `0x7dd7c58` reads it as a 32-bit big-endian int
+  out of a peer's attribute list (`ldr w8,[x8,x22]; rev w6,w8; str w6,[x25]`).
+
+### 10e. Transport endpoint type (`[peer+0x1a8]`, switch `0x7debaa4`)
+
+`0x1 HOST_DIRECT`, `0x2 HOST_RELAY`, `0x100 PEER_HOST`, `0x200 PEER_REFLEXIVE`,
+`0x400 PEER_RELAYED`, `0x1000 PEER_STUN`, `0x2000 PEER_TURN`,
+`0x1000000 TARGET_CHAOS`, `0x2000000 TARGET_PEER`,
+`0x4000000 TARGET_STUN_SERVER`, `0x8000000 TARGET_TURN_SERVER`.
+
+### 10f. Full STUN / NTL attribute table
+
+Decoded from `0x7dcac34`, tables `0xca4eed` / `0xca4f18` / `0xca4f25`.
+Range rule: `w0 - 0x8020 <= 12`, `w0 - 0x9090 <= 13`, `cmp w0,#0x908f; b.gt`.
+
+Standard: `0x0001 MAPPED_ADDRESS` … `0x000d LIFETIME`, `0x0012 XOR_PEER_ADDRESS`,
+`0x0013 DATA`, `0x0014 REALM`, `0x0015 NONCE`, `0x0016 XOR_RELAYED_ADDRESS`,
+`0x0017 REQUESTED_ADDRESS_FAMILY`, `0x0018 EVEN_PORT`,
+`0x0019 REQUESTED_TRANSPORT`, `0x001a DONT_FRAGMENT`,
+`0x8020 XOR_MAPPED_ADDRESS_3489`, `0x8022 SOFTWARE`, `0x8023 ALTERNATE_SERVER`,
+`0x8028 FINGERPRINT`, `0x802B RESPONSE_ORIGIN`, `0x802C OTHER_ADDRESS`.
+
+Konami private `0x9090-0x909d`: `RP_P2P_HEADER`, `RP_RELIABILITY`,
+`RP_AMF_DATA`, `RP_JSON_DATA`, `RP_HOST_ADDRESS`, `RP_REFLEXIVE_ADDRESS`,
+`RP_RELAYED_ADDRESS`, **`RP_NAT_TYPE`**, `RP_SYNC_POINT`, `RP_ENTRY_IDX`,
+`RP_PEER_STATUS`, `RP_RAND_SEED`, `RP_RELIABILITY_ECHO`, `UHP_FINALIZE_RET`.
+Plus `0x9999 TERM`, `0xf000 ATTR_EXTENSION`.
+
+### 10g. Conclusion
+
+**Direct P2P is the shipped default.** Relay-only is unreachable and TURN shows
+up only as the fallback inside D. The one thing that can still push a match
+onto TURN is the client's *own* NAT mapping test failing — not a server
+instruction. This matches §8: our captured match never touches TURN.
+
+Open, in priority order:
+
+1. What `mode == 0x1b` is. Setter `0x822882c` (`strb w1,[x0]` plus a virtual
+   notify at vtable slot `0x4e`); 56 call sites, none passing a literal `0x1b`
+   — it arrives through the translation tables at `0xc40c24` / `0xca02a4`.
+2. Which `natType` value or flag means "open". §10d gives the composition, not
+   the read that decides.
+3. Class B's identity. Blocked on an APS2 `.rela.dyn` decoder — the
+   relocation section is Android-packed, so vtable slots read as zero in the
+   file.
