@@ -133,3 +133,57 @@ exist: `friend_summary_info_list`, `friend_detail_info_list`,
 Note that extra unknown keys are **tolerated** — `CMD_CHECK_MATCH_ENABLE`
 with seven additional injected keys still returned `NOERR` — so arg
 discovery is safe to do by addition.
+
+## Precondition (relay / P2P) schemas
+
+These are the commands the room-create chain depends on. All discovered
+with the same 6.1.1-validator method; bodies were kept invalid so nothing
+was executed.
+
+### `CMD_GET_TURN_SERVER_LIST` — CONFIRMED WORKING
+
+```json
+{ "turn_account_param": "", "turn_time_limit": 0 }
+```
+
+Returns `NOERR` with `turn_server_list` (each entry `zone`, `address`,
+`port`, `tls_port`) and `turn_account` (id, password, `origin` of the form
+`turns://pes20.turn.konami.com:5349`, plus a PEM `server_certificate` and
+its byte size).
+
+> **The `turn_account` credentials are live and deliberately not recorded
+> here.** They are session-bound and short-lived — the account id is a
+> unix timestamp. Do not commit them to a public repo.
+
+This confirms TURN is real, not a decoy: a live TURN relay on
+`turn.konami.com`, TLS port, and a real Konami server certificate issued
+to `CN=Konami`, validity 2019–2119.
+
+### `CMD_GET_GAME_SESSION`, `CMD_GET_MATCHING_RESULT`
+
+Both need `room_id` as an array:
+
+```json
+{ "room_id": ["0"] }
+```
+
+With it, both clear input validation and return `ERR_DATABASE` /
+`EVDU-` — i.e. well-formed, room simply does not exist. That is a
+**confirmed schema**, not a failure. `id` and `mode` are optional extras
+and change nothing at this stage.
+
+### `CMD_SET_GAMERELAY_QUALITY`
+
+Raises no input error, so it has no pre-session arg validation — it is
+session-gated.
+
+### `CMD_SEND_TURN_ADDRESS_DATA`
+
+Argument #2 is named `address` and must be a string. Argument #1 is not
+yet identified. **Not executed** — this is the first genuinely
+state-changing call (it writes the client's own TURN address to the
+server), so it needs explicit approval.
+
+Note that the validator reports *positional* argument numbers
+(`Argument #2 ($address)`), which do not always map 1:1 onto JSON keys.
+
