@@ -187,3 +187,78 @@ server), so it needs explicit approval.
 Note that the validator reports *positional* argument numbers
 (`Argument #2 ($address)`), which do not always map 1:1 onto JSON keys.
 
+## `CMD_CREATEJOIN_ROOM` — schema recovered, enum values unresolved
+
+The full request structure was read out of the builder's disassembly
+(11.1.0 `libUE4.so`, request builder `0x7882b8c`, root map at
+`context+0x281`). Two containers are built on the stack and grafted into
+the root under `core_settings` and `match_settings`:
+
+```json
+{
+  "core_settings": {
+    "mode": "GAME_PLAYER", "event_id": 0, "kind": "STRIKE_ARENA",
+    "name_tag": 0, "entry_restriction": "NO", "password": "",
+    "lang": "US", "capacity": 0, "observer_capacity": 0,
+    "guest_num_by_user": 0, "is_coop_vs_com_single": "NO"
+  },
+  "match_settings": {
+    "match_env": {
+      "condition_home": "", "condition_away": "", "cpu_level": 0,
+      "match_time": 0, "injury": "NO", "ball_type": "", "exTime": 0,
+      "pk": "NO", "substitution_times": 0, "substitution": "",
+      "exSubstitution": "", "limitTime": 0, "equalization": "NO",
+      "regulation": "", "can_use_mobile_controller": "NO"
+    }
+  },
+  "host_address": "", "host_port": 0, "reflexive_address": "",
+  "reflexive_port": 0, "nat_type": "", "address_ipv4": "",
+  "address_ipv6": "",
+  "platform_session_id_info": { "ps_session_id": "", "xb_session_id": "" },
+  "event_account_type": ""
+}
+```
+
+`player_id`, `costume_id` and `strike_arena_selected_info` are only sent
+when a squad list is non-empty, so they can be omitted.
+
+Types confirmed by the validator: `name_tag` and `capacity` are **int**;
+`mode`, `kind`, `entry_restriction`, `password`, `lang`,
+`is_coop_vs_com_single` are **string** — note this differs from
+`CMD_GET_ROOM_LIST`, where `name_tag` is a string.
+
+The NAT/P2P fields the user cares about are all here and unvalidated so
+far: `host_address`, `host_port`, `reflexive_address`, `reflexive_port`,
+`nat_type`, `address_ipv4`, `address_ipv6`.
+
+### Why the enum values are still unresolved
+
+The validator's enum errors are **self-inconsistent**, which defeats
+brute-forcing:
+
+* the same body returns `mode:out_of_range:GAME_PLAYER` on one call and
+  `entry_restriction:out_of_range:NO` on another — the checks run in
+  non-deterministic order, so two unknown enums cannot be solved one at
+  a time;
+* the error names one field but reports **another's value**: with
+  `entry_restriction="ANY"` fixed, a 40-combination `mode × entry`
+  matrix reported `mode:out_of_range:ANY` — i.e. the echoed value is
+  `entry_restriction`'s, not `mode`'s;
+* `mode="ANY"` echoes `ANY`, but `mode="STRIKE_ARENA"` echoes
+  `GAME_PLAYER`, so an unrecognised value falls back to a default.
+
+The only mode literal in the binary is `GAME_PLAYER` (`0xc2a1f0`), the
+default the builder itself uses, so the valid set is server-side only and
+not recoverable statically. Swept and rejected for `mode`:
+`STRIKE_ARENA`, `NORMAL`, `FRIEND_MATCH`, `FREE_MATCH`, `ANY`, `ZZZ`,
+`GAME_TEAM`, `COOP`, ints 0–5, `"0"`, `"1"`. For `entry_restriction`:
+`ANY`, `ALL`, `NONE`, `YES`, `FREE`, `OPEN`, `CLOSED`, `FRIEND_ONLY`,
+`FRIEND`, `INVITE_ONLY`, `INVITE`, `PASSWORD`, `RESTRICTED`, `PUBLIC`,
+`PRIVATE`, `MEMBER`, `SAME_PLATFORM`, `CROSS`, `NO_RESTRICTION`,
+`OPEN_ALL`.
+
+`room_mode`, `room_kind` and `entry_type` exist as separate key strings
+(`0x9ec77d`, `0xa5e481`, `0xa7128e`) and have not been tried against
+these checks.
+
+
