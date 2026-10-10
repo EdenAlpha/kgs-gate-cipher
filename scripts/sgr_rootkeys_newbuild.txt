@@ -1,0 +1,164 @@
+﻿=== x29-0xb8 ===
+   0x76d45c8  game_id
+   0x76d4604  abnormalend_reason
+   0x76d4640  is_problem
+   0x76d475c  user_network_status
+   0x76d4790  ex_flag
+   0x76d47cc  pk_flag
+   0x76d480c  error_code
+   0x76d4aa0  myteam_player_list
+   0x76d4da8  match_stat_side_info_list
+   0x76d4f00  achievement_progress_list
+   0x76d4f50  use_team_style
+   0x76d4f84  owngoal_user_list
+   0x76d4fd0  event_record
+   0x76d4ffc  restart_num
+   0x76d5028  control_style
+   0x76d5188  coop_score
+   0x76d51b4  behind_flag
+   0x76d5458  tour_pvp_bonus_result_list
+   0x76d5568  ml_event_match_bonus
+   0x76d5604  opp_gameplayer_id_list
+   0x76d564c  use_setting_multi_formation
+   distinct: abnormalend_reason, achievement_progress_list, behind_flag, control_style, coop_score, error_code, event_record, ex_flag, game_id, is_problem, match_stat_side_info_list, ml_event_match_bonus, myteam_player_list, opp_gameplayer_id_list, owngoal_user_list, pk_flag, restart_num, tour_pvp_bonus_result_list, use_setting_multi_formation, use_team_style, user_network_status
+
+=== x29-0xd0 ===
+   0x76d4688  is_stun_keep_alive_failed
+   0x76d46c4  is_network_blocked_disconn
+   0x76d4700  is_background_timeout
+   0x76d473c  is_background_at_match
+   distinct: is_background_at_match, is_background_timeout, is_network_blocked_disconn, is_stun_keep_alive_failed
+
+=== sp+0x100 ===
+   0x76d48c0  id
+   0x76d48ec  serial
+   0x76d541c  tour_pvp_bonus
+   0x76d543c  achieved_num
+   0x76d54d0  count
+   0x76d5550  golazo_info
+   distinct: achieved_num, count, golazo_info, id, serial, tour_pvp_bonus
+
+=== x29-0xe8 ===
+   0x76d490c  gameplayer_id
+   0x76d4930  rating
+   0x76d495c  play_time
+   0x76d4994  position
+   0x76d49cc  is_starting_member
+   0x76d4a00  is_join_game
+   0x76d4a28  oap
+   0x76d4a50  base_value
+   0x76d4a84  is_man_of_the_match
+   0x76d4ebc  achievement_id
+   0x76d4ee4  progress_num
+   0x76d5060  total
+   0x76d508c  shoot
+   0x76d50b8  pass
+   0x76d50e4  dribble
+   0x76d5110  offense_positioning
+   0x76d513c  duel
+   0x76d5168  defense_positioning
+   distinct: achievement_id, base_value, defense_positioning, dribble, duel, gameplayer_id, is_join_game, is_man_of_the_match, is_starting_member, oap, offense_positioning, pass, play_time, position, progress_num, rating, shoot, total
+
+=== x29-0xa0 ===
+   0x76d4b78  score
+   0x76d4ba4  ball_possession
+   0x76d4bd0  shots
+   0x76d4bfc  shots_on_goal
+   0x76d4c28  faul
+   0x76d4c54  faul_offside
+   0x76d4c80  corner_kick
+   0x76d4cac  free_kick
+   0x76d4cd8  pass_success_rate
+   0x76d4d04  cross
+   0x76d4d30  pass_cut
+   0x76d4d5c  tackle
+   0x76d4d88  save
+   0x76d55c0  id
+   0x76d55e8  serial
+   0x76d5818  gameplayer_id
+   0x76d5838  check_sum
+   0x76d5860  max_speed
+   0x76d5960  gameplayer_id
+   0x76d5980  check_sum
+   0x76d59a8  max_speed
+   distinct: ball_possession, check_sum, corner_kick, cross, faul, faul_offside, free_kick, gameplayer_id, id, max_speed, pass_cut, pass_success_rate, save, score, serial, shots, shots_on_goal, tackle
+
+=== sp+0xe8 ===
+   0x76d5370  label
+   0x76d539c  condition_num
+   0x76d53c8  point
+   0x76d5400  is_rare
+   0x76d5510  golazo_count_list
+   distinct: condition_num, golazo_count_list, is_rare, label, point
+
+=== ROOT ===
+   0x76d566c  match_result
+   0x76d5dcc  game_check_data
+   0x76d615c  analyst_set_game_result_info
+   distinct: analyst_set_game_result_info, game_check_data, match_result
+
+=== sp+0xd0 ===
+   0x76d569c  match_time_frame
+   0x76d56c8  match_time_tick
+   0x76d56f4  com_stop_info
+   0x76d5720  entry_check_data
+   0x76d574c  ball_move_max_speed
+   0x76d587c  gameplayer_parameter_check_data_list
+   0x76d59c4  opponent_gameplayer_parameter_check_data_list
+   0x76d5d3c  custom_stadium
+   0x76d5db4  golazo_info
+   distinct: ball_move_max_speed, com_stop_info, custom_stadium, entry_check_data, gameplayer_parameter_check_data_list, golazo_info, match_time_frame, match_time_tick, opponent_gameplayer_parameter_check_data_list
+
+=== sp+0xb8 ===
+   0x76d57d0  id
+   0x76d57fc  serial
+   0x76d5918  id
+   0x76d5944  serial
+   0x76d5a14  stadium_id
+   0x76d5a50  custom_stadium_name
+   0x76d5a7c  stadium_color1
+   0x76d5aa8  stadium_color2
+   0x76d5ad4  stadium_color3
+   0x76d5b00  stadium_color4
+   0x76d5b2c  goalnet_pattern
+   0x76d5b58  goalnet_color1
+   0x76d5b84  goalnet_color2
+   0x76d5bb0  pitch_pattern
+   0x76d5bdc  entrance_set
+   0x76d5c08  bill_set
+   0x76d5c3c  pitchside_objects
+   0x76d5c88  goal_effect1
+   0x76d5cb4  goal_effect2
+   0x76d5ce0  kickoff_effect
+   0x76d5d1c  has_invalid_assets
+   distinct: bill_set, custom_stadium_name, entrance_set, goal_effect1, goal_effect2, goalnet_color1, goalnet_color2, goalnet_pattern, has_invalid_assets, id, kickoff_effect, pitch_pattern, pitchside_objects, serial, stadium_color1, stadium_color2, stadium_color3, stadium_color4, stadium_id
+
+=== sp+0xa0 ===
+   0x76d5d74  golazo_count_list
+   distinct: golazo_count_list
+
+=== sp+0x88 ===
+   0x76d5e0c  match_json
+   0x76d5e48  advice_json
+   0x76d6108  advice_info_match
+   0x76d613c  is_invalid_advice
+   distinct: advice_info_match, advice_json, is_invalid_advice, match_json
+
+=== sp+0x70 ===
+   0x76d5e84  game_id
+   0x76d60cc  advice_info_list
+   distinct: advice_info_list, game_id
+
+=== sp+0x58 ===
+   0x76d5fac  advice_index
+   0x76d5fd4  analyst_advice_type
+   0x76d6050  gameplayer_id
+   0x76d6074  date
+   0x76d60ac  is_new
+   distinct: advice_index, analyst_advice_type, date, gameplayer_id, is_new
+
+=== sp+0x40 ===
+   0x76d6008  id
+   0x76d6030  serial
+   distinct: id, serial
+
